@@ -77,11 +77,20 @@
 <body>
 <header>
   <h1>Prompt Builder</h1>
-  <p>Answer a few guided questions, get a polished image prompt. 100% offline, zero cost.</p>
+  <p>Answer a few guided questions, get a polished prompt — for images or text. 100% offline, zero cost.</p>
 </header>
 <main>
 
   <section class="card">
+    <h2>What are you creating a prompt for?</h2>
+    <p class="hint">Image builds a prompt for image generators. Text builds a prompt you paste into any AI chat.</p>
+    <div class="seg" id="headSeg">
+      <button data-head="image" class="on">Image prompt</button>
+      <button data-head="text">Text prompt</button>
+    </div>
+  </section>
+
+  <section class="card" id="modeCard">
     <h2>Output mode</h2>
     <p class="hint">Natural language works in any image generator. Tool-specific adds tags &amp; parameters for a chosen tool.</p>
     <div class="seg" id="modeSeg">
@@ -94,7 +103,7 @@
     </div>
   </section>
 
-  <section class="card">
+  <section class="card" id="imageWizard">
     <div class="dots" id="dots"></div>
 
     <div class="step on" data-step="1">
@@ -158,6 +167,25 @@
     </div>
   </section>
 
+  <section class="card" id="textCard" style="display:none">
+    <h2>Text prompt</h2>
+    <p class="hint">Pick what the prompt is for, answer the guided questions, then copy the result into any AI chat.</p>
+    <div class="field">
+      <label>Prompt purpose</label>
+      <div class="chips" id="textHeadChips"></div>
+    </div>
+    <p class="hint" id="textHeadBlurb"></p>
+    <div id="textFields"></div>
+    <div class="field" style="margin-top:18px">
+      <label>Prompt style</label>
+      <div class="seg" id="textStyleSeg">
+        <button data-tstyle="conversational" class="on">Conversational</button>
+        <button data-tstyle="structured">Structured</button>
+      </div>
+      <p class="hint" style="margin:6px 0 0">Conversational reads like a natural request. Structured uses labeled sections (Role / Task / Requirements / Constraints) for tighter control.</p>
+    </div>
+  </section>
+
   <section class="card">
     <h2>Your prompt</h2>
     <p class="hint">Updates live as you pick options.</p>
@@ -185,7 +213,7 @@
   </section>
 
 </main>
-<footer>Prompt Builder v1 · image prompts · runs fully offline · no accounts, no APIs, no cost</footer>
+<footer>Prompt Builder v2 · image + text prompts · runs fully offline · no accounts, no APIs, no cost</footer>
 <script>
 'use strict';
 /* =====================================================================
@@ -336,6 +364,272 @@ const PB = (() => {
     return direct.concat(rest);
   }
 
+  /* ================= TEXT PROMPT HEADS =================
+     Data-driven: each head declares its guided fields; the UI renders
+     them generically and TEXT_BUILDERS assembles the prompt. */
+
+  const TEXT_HEADS = [
+    {
+      id: 'linkedin', label: 'LinkedIn Post',
+      blurb: 'Builds a prompt that drafts a LinkedIn-ready post in a natural, student-level voice.',
+      fields: [
+        { key: 'topic', label: 'Post topic', type: 'text', placeholder: 'e.g. what IAS 2 taught me about inventory write-downs' },
+        { key: 'pillar', label: 'Content pillar', type: 'chips', options: [
+          { id: 'fr', label: 'Financial Reporting' },
+          { id: 'audit', label: 'Auditing & Assurance' },
+          { id: 'tax', label: 'Taxation' },
+          { id: 'bia', label: 'Business Analysis' },
+          { id: 'journey', label: 'CA Journey' } ] },
+        { key: 'tone', label: 'Tone', type: 'chips', options: [
+          { id: 'pro', label: 'Professional & precise', prompt: 'professional and precise' },
+          { id: 'convo', label: 'Conversational', prompt: 'conversational, like explaining to a peer' },
+          { id: 'story', label: 'Story-driven', prompt: 'story-driven, opening with a real moment' },
+          { id: 'bold', label: 'Insightful & bold', prompt: 'insightful, with a clear point of view' } ] },
+        { key: 'length', label: 'Length', type: 'chips', options: [
+          { id: 'short', label: 'Short (~80 words)', prompt: 'about 80 words' },
+          { id: 'medium', label: 'Medium (~150 words)', prompt: 'about 150 words' },
+          { id: 'long', label: 'Long (~250 words)', prompt: 'about 250 words' } ] },
+        { key: 'structure', label: 'Structure', type: 'chips', options: [
+          { id: 'hit', label: 'Hook → Insight → Takeaway', prompt: 'a hook, then the insight, then a takeaway' },
+          { id: 'sl', label: 'Story → Lesson', prompt: 'a short story opening, then the lesson' },
+          { id: 'qat', label: 'Question → Analysis → CTA', prompt: 'an opening question, then analysis, then a call to action' } ] },
+        { key: 'cta', label: 'Ending', type: 'chips', options: [
+          { id: 'question', label: 'End with a question' },
+          { id: 'takeaway', label: 'End with a takeaway line' },
+          { id: 'none', label: 'No special ending' } ] },
+        { key: 'must', label: 'Must mention (optional)', type: 'text', placeholder: 'e.g. IFRS 15.35(a), exact standard wording' },
+      ],
+    },
+    {
+      id: 'study', label: 'Study Explainer',
+      blurb: 'Builds a prompt that gets a clear, exam-focused explanation of any topic.',
+      fields: [
+        { key: 'topic', label: 'Topic to explain', type: 'text', placeholder: 'e.g. input tax apportionment under section 73' },
+        { key: 'subject', label: 'Subject', type: 'chips', options: [
+          { id: 'tax', label: 'CAF-2 Taxation' },
+          { id: 'bia', label: 'CAF-7 BIA' },
+          { id: 'audit', label: 'CAF-8 Audit' },
+          { id: 'far', label: 'CAF-3 Fin. Reporting' },
+          { id: 'general', label: 'General' } ] },
+        { key: 'depth', label: 'Depth', type: 'chips', options: [
+          { id: 'quick', label: 'Quick revision' },
+          { id: 'solid', label: 'Solid understanding' },
+          { id: 'deep', label: 'Exam-deep' } ] },
+        { key: 'format', label: 'Format', type: 'chips', options: [
+          { id: 'bullets', label: 'Bullet summary' },
+          { id: 'steps', label: 'Step-by-step' },
+          { id: 'example', label: 'Worked example' },
+          { id: 'compare', label: 'Compare & contrast' },
+          { id: 'qa', label: 'Q&A drill' } ] },
+        { key: 'examq', label: 'Practice question', type: 'chips', options: [
+          { id: 'yes', label: 'End with one' },
+          { id: 'no', label: 'Skip it' } ] },
+      ],
+    },
+    {
+      id: 'email', label: 'Professional Email',
+      blurb: 'Builds a prompt that drafts a polished, correctly-toned email.',
+      fields: [
+        { key: 'purpose', label: 'Purpose of the email', type: 'text', placeholder: 'e.g. ask a firm about articleship openings for next year' },
+        { key: 'recipient', label: 'Recipient', type: 'chips', options: [
+          { id: 'recruiter', label: 'Recruiter / HR' },
+          { id: 'teacher', label: 'Teacher / Mentor' },
+          { id: 'client', label: 'Client' },
+          { id: 'colleague', label: 'Colleague' } ] },
+        { key: 'tone', label: 'Tone', type: 'chips', options: [
+          { id: 'formal', label: 'Formal', prompt: 'formal' },
+          { id: 'warm', label: 'Polite & warm', prompt: 'polite and warm' },
+          { id: 'direct', label: 'Concise & direct', prompt: 'concise and direct' } ] },
+        { key: 'length', label: 'Length', type: 'chips', options: [
+          { id: 'short', label: 'Short' },
+          { id: 'medium', label: 'Medium' } ] },
+        { key: 'points', label: 'Key points to cover', type: 'text', placeholder: 'one point per line (or comma-separated)' },
+      ],
+    },
+    {
+      id: 'general', label: 'General / Custom',
+      blurb: 'A flexible prompt for anything else — describe the goal, shape the output.',
+      fields: [
+        { key: 'goal', label: 'What should the AI help with?', type: 'text', placeholder: 'e.g. turn my rough notes into a study plan for the week' },
+        { key: 'audience', label: 'Who is the output for? (optional)', type: 'text', placeholder: 'e.g. a beginner, my manager, exam marker' },
+        { key: 'tone', label: 'Tone', type: 'chips', options: [
+          { id: 'pro', label: 'Professional', prompt: 'professional' },
+          { id: 'friendly', label: 'Friendly', prompt: 'friendly' },
+          { id: 'pers', label: 'Persuasive', prompt: 'persuasive' },
+          { id: 'neutral', label: 'Neutral', prompt: 'neutral and objective' },
+          { id: 'playful', label: 'Playful', prompt: 'playful' } ] },
+        { key: 'length', label: 'Length', type: 'chips', options: [
+          { id: 'short', label: 'Short', prompt: 'short' },
+          { id: 'medium', label: 'Medium', prompt: 'medium length' },
+          { id: 'long', label: 'Long', prompt: 'long and detailed' },
+          { id: 'free', label: 'No limit', prompt: 'whatever length fits best' } ] },
+        { key: 'format', label: 'Format', type: 'chips', options: [
+          { id: 'paras', label: 'Paragraphs', prompt: 'clear paragraphs' },
+          { id: 'bullets', label: 'Bullets', prompt: 'bullet points' },
+          { id: 'steps', label: 'Numbered steps', prompt: 'numbered steps' },
+          { id: 'table', label: 'Table', prompt: 'a table' },
+          { id: 'script', label: 'Script / dialogue', prompt: 'a script/dialogue' } ] },
+        { key: 'include', label: 'Must include (optional)', type: 'text', placeholder: 'e.g. a timeline, specific figures' },
+        { key: 'avoid', label: 'Avoid (optional)', type: 'text', placeholder: 'e.g. jargon, long introductions' },
+      ],
+    },
+  ];
+
+  const TEXT_DEFAULTS = {
+    linkedin: { topic: '', pillar: null, tone: 'pro', length: 'medium', structure: 'hit', cta: 'question', must: '' },
+    study:    { topic: '', subject: 'tax', depth: 'solid', format: 'bullets', examq: 'yes' },
+    email:    { purpose: '', recipient: 'recruiter', tone: 'formal', length: 'short', points: '' },
+    general:  { goal: '', audience: '', tone: 'pro', length: 'medium', format: 'paras', include: '', avoid: '' },
+  };
+
+  function tOpt(head, key, id) {
+    if (!head || !id) return null;
+    const fd = head.fields.find(x => x.key === key);
+    if (!fd || !fd.options) return null;
+    return fd.options.find(o => o.id === id) || null;
+  }
+
+  function buildLinkedin(f, head, style) {
+    const topic = (f.topic || '').trim() || '[your topic]';
+    const pillar = tOpt(head, 'pillar', f.pillar);
+    const tone = tOpt(head, 'tone', f.tone);
+    const length = tOpt(head, 'length', f.length);
+    const structure = tOpt(head, 'structure', f.structure);
+    const must = (f.must || '').trim();
+    const toneP = tone ? (tone.prompt || tone.label) : 'professional and clear';
+    const lengthP = length ? (length.prompt || length.label) : 'about 150 words';
+    const structP = structure ? (structure.prompt || structure.label) : 'a hook, then the insight, then a takeaway';
+    const ctaKey = f.cta || 'question';
+    if (style === 'structured') {
+      const lines = [
+        'Role: You are helping a CA Inter student (ICAP, Pakistan) draft a LinkedIn post. He is building professional credibility toward audit articleship.',
+        'Task: Write a LinkedIn post about: ' + topic,
+        'Context:' + (pillar ? ' Content pillar: ' + pillar.label + '.' : '') + ' Audience: accounting, audit and finance professionals and students.',
+        'Requirements:',
+        '- Tone: ' + toneP,
+        '- Length: ' + lengthP,
+        '- Structure: ' + structP,
+        '- ' + (ctaKey === 'takeaway' ? 'End with one crisp takeaway line' : ctaKey === 'none' ? 'No special ending required' : 'End with a question that invites comments'),
+      ];
+      if (must) lines.push('- Must mention: ' + must);
+      lines.push('- First person, natural human voice; no corporate cliches; minimal emojis');
+      lines.push('- Close with 3-5 relevant hashtags');
+      lines.push('Constraints:');
+      lines.push('- Never portray the author as a qualified CA; no invented experience, results or credentials');
+      lines.push('- Keep technical claims accurate and hedged; use exact standard references when citing them');
+      return lines.join('\n');
+    }
+    return 'Write a LinkedIn post about ' + topic + '.'
+      + (pillar ? ' This sits under ' + pillar.label + ' — keep it relevant to that theme.' : '')
+      + ' Tone: ' + toneP + '. Length: ' + lengthP + '.'
+      + ' Structure it as ' + structP + '.'
+      + (ctaKey === 'takeaway' ? ' End with one crisp takeaway line.' : ctaKey === 'none' ? '' : ' End with a question that invites comments.')
+      + (must ? ' Must mention: ' + must + '.' : '')
+      + ' Write in the first person with a natural, human voice — no corporate cliches and no emoji overload. Close with 3-5 relevant hashtags.'
+      + ' Important: I am a CA Inter student, not a qualified CA — keep it at a student\u2019s level and never invent experience or credentials.';
+  }
+
+  function buildStudy(f, head, style) {
+    const topic = (f.topic || '').trim() || '[your topic]';
+    const subject = tOpt(head, 'subject', f.subject);
+    const depthP = f.depth === 'quick' ? 'a quick revision' : f.depth === 'deep' ? 'exam-level depth' : 'a solid working understanding';
+    const formatP = f.format === 'steps' ? 'numbered steps' : f.format === 'example' ? 'a worked example with numbers'
+      : f.format === 'compare' ? 'a compare-and-contrast' : f.format === 'qa' ? 'a Q&A drill' : 'a crisp bullet summary';
+    const subjLabel = subject ? subject.label : 'the subject';
+    const examQ = (f.examq || 'yes') === 'yes';
+    if (style === 'structured') {
+      const lines = [
+        'Role: You are a patient tutor for a CA Inter student (ICAP, Pakistan).',
+        'Task: Explain: ' + topic,
+        'Context: Subject: ' + subjLabel + '. The student wants ' + depthP + '.',
+        'Requirements:',
+        '- Present it as ' + formatP,
+        '- Start with the plain-language intuition, then the technical treatment',
+        '- Use exact standard or provision references where they matter',
+        '- Flag the common exam pitfalls',
+      ];
+      if (examQ) lines.push('- End with one exam-style practice question and a brief model answer');
+      lines.push('Constraints:');
+      lines.push('- Do not invent standard paragraph numbers or tax rates; say when you are unsure');
+      lines.push('- Keep the explanation at syllabus level, not professional practice');
+      return lines.join('\n');
+    }
+    return 'Explain ' + topic + ' (' + subjLabel + ') to a CA Inter student. I want ' + depthP + '.'
+      + ' Present it as ' + formatP + '.'
+      + ' Start with the plain-language intuition, then the technical treatment — with exact standard or provision references where they matter — and flag the common exam pitfalls.'
+      + (examQ ? ' Finish with one exam-style practice question and a brief model answer.' : '');
+  }
+
+  function buildEmail(f, head, style) {
+    const purpose = (f.purpose || '').trim() || '[your purpose]';
+    const recipient = tOpt(head, 'recipient', f.recipient);
+    const tone = tOpt(head, 'tone', f.tone);
+    const toneP = tone ? (tone.prompt || tone.label) : 'formal';
+    const lengthP = f.length === 'medium' ? 'medium length' : 'short and to the point';
+    const points = (f.points || '').trim().split(/\n|,/).map(x => x.trim()).filter(Boolean).join('; ') || '[your key points]';
+    const recipLabel = recipient ? recipient.label : 'the recipient';
+    if (style === 'structured') {
+      return [
+        'Role: You are drafting a professional email.',
+        'Task: Write an email with this purpose: ' + purpose,
+        'Context: Recipient: ' + recipLabel + '.',
+        'Requirements:',
+        '- Tone: ' + toneP,
+        '- Length: ' + lengthP,
+        '- Cover these points: ' + points,
+        '- Include a clear subject line, an appropriate greeting and a professional sign-off',
+        'Constraints:',
+        '- No invented names, dates or commitments',
+      ].join('\n');
+    }
+    return 'Draft a professional email. Purpose: ' + purpose + '. Recipient: ' + recipLabel + '.'
+      + ' Tone: ' + toneP + '. Length: ' + lengthP + '.'
+      + ' It must cover these points: ' + points + '.'
+      + ' Include a clear subject line, an appropriate greeting, and a professional sign-off.';
+  }
+
+  function buildGeneral(f, head, style) {
+    const goal = (f.goal || '').trim() || '[describe what you want]';
+    const audience = (f.audience || '').trim() || 'a general audience';
+    const tone = tOpt(head, 'tone', f.tone);
+    const length = tOpt(head, 'length', f.length);
+    const format = tOpt(head, 'format', f.format);
+    const include = (f.include || '').trim();
+    const avoid = (f.avoid || '').trim();
+    const toneP = tone ? (tone.prompt || tone.label) : 'professional';
+    const lengthP = length ? (length.prompt || length.label) : 'medium length';
+    const formatP = format ? (format.prompt || format.label) : 'clear paragraphs';
+    if (style === 'structured') {
+      const lines = [
+        'Role: You are a helpful assistant.',
+        'Task: ' + goal,
+        'Context: Audience: ' + audience + '.',
+        'Requirements:',
+        '- Tone: ' + toneP,
+        '- Length: ' + lengthP,
+        '- Format: ' + formatP,
+      ];
+      if (include) lines.push('- Must include: ' + include);
+      if (avoid) lines.push('- Avoid: ' + avoid);
+      return lines.join('\n');
+    }
+    return 'Help me with this: ' + goal
+      + ' The output is for ' + audience + '.'
+      + ' Tone: ' + toneP + '. Length: ' + lengthP + '. Format: ' + formatP + '.'
+      + (include ? ' Must include: ' + include + '.' : '')
+      + (avoid ? ' Avoid: ' + avoid + '.' : '');
+  }
+
+  const TEXT_BUILDERS = { linkedin: buildLinkedin, study: buildStudy, email: buildEmail, general: buildGeneral };
+
+  function buildTextPrompt(s) {
+    const head = TEXT_HEADS.find(h => h.id === (s || {}).textHead) || TEXT_HEADS[0];
+    const saved = (s && s.text && s.text[head.id]) || {};
+    const f = Object.assign({}, TEXT_DEFAULTS[head.id], saved);
+    const style = (s && s.textStyle === 'structured') ? 'structured' : 'conversational';
+    return { main: TEXT_BUILDERS[head.id](f, head, style), negative: null, note: null };
+  }
+
   function blankState() {
     return {
       mode: 'natural',
@@ -351,6 +645,10 @@ const PB = (() => {
       detail: 'high',
       aspect: '16:9',
       negatives: [],
+      head: 'image',            // 'image' | 'text'
+      textHead: 'linkedin',
+      textStyle: 'conversational', // 'conversational' | 'structured'
+      text: JSON.parse(JSON.stringify(TEXT_DEFAULTS)),
     };
   }
 
@@ -423,6 +721,7 @@ const PB = (() => {
   return {
     CATEGORIES, STYLES, LIGHTING, CAMERA, PALETTES, MOODS, DETAIL,
     ASPECTS, NEGATIVES, TOOLS,
+    TEXT_HEADS, TEXT_DEFAULTS, buildTextPrompt,
     byId, stylesFor, blankState, buildPrompt,
   };
 })();
@@ -448,6 +747,18 @@ function chip(container, item, selected, onPick, badge) {
 function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); }
 
 function render() {
+  const isText = S.head === 'text';
+  // head switcher + section visibility
+  document.querySelectorAll('#headSeg button').forEach(b =>
+    b.classList.toggle('on', b.dataset.head === S.head));
+  $('modeCard').style.display = isText ? 'none' : 'block';
+  $('imageWizard').style.display = isText ? 'none' : 'block';
+  $('textCard').style.display = isText ? 'block' : 'none';
+  $('diceBtn').style.display = isText ? 'none' : '';
+  document.querySelectorAll('#textStyleSeg button').forEach(b =>
+    b.classList.toggle('on', b.dataset.tstyle === S.textStyle));
+  if (isText) { renderText(); return; }
+
   // mode + tool
   document.querySelectorAll('#modeSeg button').forEach(b =>
     b.classList.toggle('on', b.dataset.mode === S.mode));
@@ -515,8 +826,66 @@ function render() {
   updatePreview();
 }
 
+/* ---- text heads ---- */
+function textHeadDef() {
+  return PB.TEXT_HEADS.find(h => h.id === S.textHead) || PB.TEXT_HEADS[0];
+}
+function currentTextFields() {
+  const head = textHeadDef();
+  const saved = (S.text && S.text[head.id]) || {};
+  const out = {};
+  head.fields.forEach(fd => {
+    out[fd.key] = (fd.key in saved) ? saved[fd.key]
+      : (PB.TEXT_DEFAULTS[head.id] && fd.key in PB.TEXT_DEFAULTS[head.id] ? PB.TEXT_DEFAULTS[head.id][fd.key]
+      : (fd.type === 'text' ? '' : null));
+  });
+  return out;
+}
+function setTextField(key, value) {
+  S.text = S.text || {};
+  S.text[S.textHead] = S.text[S.textHead] || {};
+  S.text[S.textHead][key] = value;
+}
+function textTitle() {
+  const t = (S.text && S.text[S.textHead]) || {};
+  return ((t.topic || t.purpose || t.goal || '').trim().slice(0, 42)) || 'Untitled prompt';
+}
+function renderText() {
+  const hc = $('textHeadChips'); clear(hc);
+  PB.TEXT_HEADS.forEach(h => chip(hc, { id: h.id, label: h.label },
+    S.textHead === h.id, id => { S.textHead = id; render(); }));
+  const head = textHeadDef();
+  $('textHeadBlurb').textContent = head.blurb || '';
+  const wrap = $('textFields'); clear(wrap);
+  const f = currentTextFields();
+  head.fields.forEach(fd => {
+    const div = document.createElement('div'); div.className = 'field';
+    const lab = document.createElement('label'); lab.textContent = fd.label; div.appendChild(lab);
+    if (fd.type === 'text') {
+      const multiline = ['topic', 'purpose', 'goal', 'points'].includes(fd.key);
+      const inp = document.createElement(multiline ? 'textarea' : 'input');
+      if (multiline) inp.rows = 2; else inp.type = 'text';
+      inp.placeholder = fd.placeholder || '';
+      inp.value = f[fd.key] || '';
+      inp.addEventListener('input', e => { setTextField(fd.key, e.target.value); updatePreview(); });
+      div.appendChild(inp);
+    } else {
+      const c = document.createElement('div'); c.className = 'chips';
+      fd.options.forEach(o => chip(c, o, f[fd.key] === o.id,
+        id => { setTextField(fd.key, f[fd.key] === id ? null : id); render(); }));
+      div.appendChild(c);
+    }
+    wrap.appendChild(div);
+  });
+  updatePreview();
+}
+
+function currentResult() {
+  return S.head === 'text' ? PB.buildTextPrompt(S) : PB.buildPrompt(S);
+}
+
 function updatePreview() {
-  const r = PB.buildPrompt(S);
+  const r = currentResult();
   $('previewBox').textContent = r.main;
   const nb = $('negBox');
   if (r.negative) { nb.style.display = 'block'; nb.textContent = 'Negative: ' + r.negative; }
@@ -527,7 +896,7 @@ function updatePreview() {
 }
 
 function fullCopyText() {
-  const r = PB.buildPrompt(S);
+  const r = currentResult();
   return r.main + (r.negative ? '\n\nNegative prompt:\n' + r.negative : '');
 }
 function copyText(t, btn, okLabel) {
@@ -575,6 +944,10 @@ function renderLib() {
 }
 
 /* ---- events ---- */
+document.querySelectorAll('#headSeg button').forEach(b =>
+  b.onclick = () => { S.head = b.dataset.head; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+document.querySelectorAll('#textStyleSeg button').forEach(b =>
+  b.onclick = () => { S.textStyle = b.dataset.tstyle; render(); });
 document.querySelectorAll('#modeSeg button').forEach(b =>
   b.onclick = () => { S.mode = b.dataset.mode; render(); });
 $('toolSel').onchange = e => { S.tool = e.target.value; render(); };
@@ -584,9 +957,9 @@ $('backBtn').onclick = () => { if (step > 1) { step--; render(); } };
 $('nextBtn').onclick = () => { if (step < 4) { step++; render(); } else { window.scrollTo({ top: 0, behavior: 'smooth' }); } };
 $('copyBtn').onclick = e => copyText(fullCopyText(), e.target);
 $('saveBtn').onclick = e => {
-  const r = PB.buildPrompt(S);
+  const r = currentResult();
   const lib = getLib();
-  const name = (S.subject || '').trim().slice(0, 42) || 'Untitled prompt';
+  const name = S.head === 'text' ? textTitle() : ((S.subject || '').trim().slice(0, 42) || 'Untitled prompt');
   lib.push({ id: 'p' + Date.now(), ts: Date.now(), name,
              mode: S.mode, tool: S.tool, prompt: r.main, negative: r.negative,
              state: JSON.parse(JSON.stringify(S)) });
@@ -604,8 +977,16 @@ $('diceBtn').onclick = () => {
   step = 1; render();
 };
 $('resetBtn').onclick = () => {
-  const mode = S.mode, tool = S.tool;
-  Object.assign(S, PB.blankState()); S.mode = mode; S.tool = tool;
+  if (S.head === 'text') {
+    const defs = PB.TEXT_DEFAULTS[S.textHead] || {};
+    S.text = S.text || {};
+    S.text[S.textHead] = JSON.parse(JSON.stringify(defs));
+    render();
+    return;
+  }
+  const keep = { mode: S.mode, tool: S.tool, head: S.head, textHead: S.textHead, textStyle: S.textStyle, text: S.text };
+  Object.assign(S, PB.blankState());
+  Object.assign(S, keep);
   step = 1; render();
 };
 $('libSearch').addEventListener('input', renderLib);
