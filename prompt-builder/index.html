@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Builder — Image Prompts</title>
+<style>
+  :root {
+    --bg: #f6f7fb; --card: #ffffff; --ink: #1c2333; --muted: #6b7280;
+    --accent: #4f46e5; --accent-soft: #eef0ff; --border: #e5e7eb;
+    --good: #047857; --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: var(--bg); color: var(--ink); line-height: 1.5; }
+  header { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: #fff;
+           padding: 28px 20px; text-align: center; }
+  header h1 { margin: 0 0 6px; font-size: 1.6rem; }
+  header p { margin: 0; opacity: .85; font-size: .95rem; }
+  main { max-width: 880px; margin: 0 auto; padding: 16px 14px 60px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+          padding: 18px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+  .card h2 { margin: 0 0 4px; font-size: 1.1rem; }
+  .card .hint { color: var(--muted); font-size: .85rem; margin: 0 0 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { border: 1.5px solid var(--border); background: #fff; border-radius: 999px;
+          padding: 9px 15px; font-size: .9rem; cursor: pointer; transition: all .15s; }
+  .chip:hover { border-color: var(--accent); }
+  .chip.on { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  .chip .rec { font-size: .68rem; background: #fef3c7; color: #92400e; border-radius: 6px;
+               padding: 1px 6px; margin-left: 6px; font-weight: 700; }
+  .chip.on .rec { background: rgba(255,255,255,.25); color: #fff; }
+  .field { margin-bottom: 18px; }
+  .field:last-child { margin-bottom: 0; }
+  .field > label { display: block; font-weight: 700; margin-bottom: 8px; font-size: .95rem; }
+  .field > label small { font-weight: 400; color: var(--muted); }
+  textarea, input[type=text], select {
+    width: 100%; padding: 12px; font-size: 1rem; border: 1.5px solid var(--border);
+    border-radius: 10px; font-family: inherit; }
+  textarea:focus, input:focus, select:focus { outline: none; border-color: var(--accent); }
+  .seg { display: flex; background: var(--accent-soft); border-radius: 12px; padding: 4px; gap: 4px; }
+  .seg button { flex: 1; border: none; background: transparent; padding: 10px; border-radius: 9px;
+                font-size: .92rem; cursor: pointer; color: var(--ink); }
+  .seg button.on { background: #fff; font-weight: 700; box-shadow: 0 1px 4px rgba(0,0,0,.12); color: var(--accent); }
+  .dots { display: flex; gap: 8px; justify-content: center; margin-bottom: 16px; }
+  .dot { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+         background: #fff; border: 1.5px solid var(--border); font-weight: 700; font-size: .85rem; color: var(--muted);
+         cursor: pointer; font-family: inherit; padding: 0; }
+  .dot.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .dot.done { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .step { display: none; }
+  .step.on { display: block; animation: fade .2s; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; } }
+  .nav { display: flex; gap: 10px; margin-top: 16px; }
+  .btn { border: none; border-radius: 10px; padding: 12px 20px; font-size: .95rem; cursor: pointer; font-weight: 600; }
+  .btn-primary { background: var(--accent); color: #fff; flex: 1; }
+  .btn-ghost { background: #fff; border: 1.5px solid var(--border); color: var(--ink); }
+  .btn-sm { padding: 8px 14px; font-size: .85rem; }
+  #previewBox { background: #0f172a; color: #e2e8f0; border-radius: 10px; padding: 16px;
+                font-size: .95rem; white-space: pre-wrap; word-break: break-word; min-height: 90px; }
+  #negBox { background: #fef2f2; border: 1px solid #fecaca; color: #7f1d1d; border-radius: 10px;
+            padding: 12px 16px; font-size: .88rem; margin-top: 10px; display: none; white-space: pre-wrap; }
+  #noteBox { color: var(--muted); font-size: .83rem; margin-top: 10px; display: none; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .lib-item { border: 1px solid var(--border); border-radius: 10px; padding: 12px; margin-bottom: 10px; }
+  .lib-item .t { font-weight: 700; font-size: .92rem; margin-bottom: 4px; }
+  .lib-item .p { font-size: .83rem; color: var(--muted); margin-bottom: 8px;
+                 display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .lib-item .acts { display: flex; gap: 6px; flex-wrap: wrap; }
+  .empty { color: var(--muted); font-size: .9rem; text-align: center; padding: 18px; }
+  footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 20px; }
+  #customPaletteWrap { margin-top: 10px; display: none; }
+  #toolRow { margin-top: 12px; display: none; }
+  #toolRow.on { display: block; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Prompt Builder</h1>
+  <p>Answer a few guided questions, get a polished image prompt. 100% offline, zero cost.</p>
+</header>
+<main>
+
+  <section class="card">
+    <h2>Output mode</h2>
+    <p class="hint">Natural language works in any image generator. Tool-specific adds tags &amp; parameters for a chosen tool.</p>
+    <div class="seg" id="modeSeg">
+      <button data-mode="natural" class="on">Natural language</button>
+      <button data-mode="tool">Tool-specific</button>
+    </div>
+    <div id="toolRow">
+      <label for="toolSel" style="font-weight:700; font-size:.9rem; display:block; margin-bottom:6px;">Target tool</label>
+      <select id="toolSel"></select>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="dots" id="dots"></div>
+
+    <div class="step on" data-step="1">
+      <div class="field">
+        <label for="subject">What should the image show? <small>(free text — be specific)</small></label>
+        <textarea id="subject" rows="2" placeholder="e.g. an old fisherman mending nets at a harbor at dawn"></textarea>
+      </div>
+      <div class="field">
+        <label>Image type</label>
+        <div class="chips" id="catChips"></div>
+      </div>
+    </div>
+
+    <div class="step" data-step="2">
+      <div class="field">
+        <label>Style <small>(top picks suit your image type)</small></label>
+        <div class="chips" id="styleChips"></div>
+      </div>
+    </div>
+
+    <div class="step" data-step="3">
+      <div class="field">
+        <label>Lighting</label>
+        <div class="chips" id="lightChips"></div>
+      </div>
+      <div class="field">
+        <label>Camera / composition</label>
+        <div class="chips" id="camChips"></div>
+      </div>
+      <div class="field">
+        <label>Color palette</label>
+        <div class="chips" id="palChips"></div>
+        <div id="customPaletteWrap">
+          <input type="text" id="customPalette" placeholder="e.g. teal and burnt orange">
+        </div>
+      </div>
+      <div class="field">
+        <label>Mood</label>
+        <div class="chips" id="moodChips"></div>
+      </div>
+    </div>
+
+    <div class="step" data-step="4">
+      <div class="field">
+        <label>Detail level</label>
+        <div class="chips" id="detailChips"></div>
+      </div>
+      <div class="field">
+        <label>Aspect ratio</label>
+        <div class="chips" id="aspectChips"></div>
+      </div>
+      <div class="field">
+        <label>Avoid <small>(tap to exclude — becomes negative prompt / --no)</small></label>
+        <div class="chips" id="negChips"></div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <button class="btn btn-ghost" id="backBtn">← Back</button>
+      <button class="btn btn-primary" id="nextBtn">Next →</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Your prompt</h2>
+    <p class="hint">Updates live as you pick options.</p>
+    <div id="previewBox"></div>
+    <div id="negBox"></div>
+    <div id="noteBox"></div>
+    <div class="row">
+      <button class="btn btn-primary btn-sm" id="copyBtn">Copy prompt</button>
+      <button class="btn btn-ghost btn-sm" id="saveBtn">Save to library</button>
+      <button class="btn btn-ghost btn-sm" id="diceBtn">Surprise me</button>
+      <button class="btn btn-ghost btn-sm" id="resetBtn">Reset</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Prompt library</h2>
+    <p class="hint">Saved on this device only — nothing leaves your browser.</p>
+    <input type="text" id="libSearch" placeholder="Search saved prompts..." style="margin-bottom:12px;">
+    <div id="libList"></div>
+    <div class="row">
+      <button class="btn btn-ghost btn-sm" id="exportBtn">Export JSON</button>
+      <button class="btn btn-ghost btn-sm" id="importBtn">Import JSON</button>
+      <input type="file" id="importFile" accept="application/json" style="display:none;">
+    </div>
+  </section>
+
+</main>
+<footer>Prompt Builder v1 · image prompts · runs fully offline · no accounts, no APIs, no cost</footer>
+<script>
+'use strict';
+/* =====================================================================
+   Prompt Builder -- engine.js
+   Pure prompt-assembly logic. No DOM, no network, no dependencies.
+   Browser: <script src="engine.js"> exposes global PB.
+   Node: require('./engine.js') for unit testing.
+   ===================================================================== */
+
+const PB = (() => {
+
+  const CATEGORIES = [
+    { id: 'photo',        label: 'Photorealistic Photo',    icon: 'camera', natural: 'ultra-realistic photograph',             tags: 'photorealistic, ultra detailed photograph',             mjStyle: '--style raw' },
+    { id: 'cinematic',    label: 'Cinematic Film Still',    icon: 'clapper', natural: 'cinematic film still',                   tags: 'cinematic film still, film grain',                    mjStyle: '--style raw' },
+    { id: 'portrait',     label: 'Portrait',                icon: 'person', natural: 'striking portrait photograph',           tags: 'portrait photography, 85mm lens, sharp focus',        mjStyle: '--style raw' },
+    { id: 'product',      label: 'Product / Studio Shot',   icon: 'box',    natural: 'professional studio product photograph', tags: 'studio product photography, commercial shot',         mjStyle: '--style raw' },
+    { id: 'landscape',    label: 'Landscape / Nature',      icon: 'mountain', natural: 'breathtaking landscape photograph',    tags: 'landscape photography, epic scenery',                 mjStyle: '--style raw' },
+    { id: 'architecture', label: 'Architecture / Interior',icon: 'building', natural: 'architectural photograph',             tags: 'architectural photography, clean lines',              mjStyle: '--style raw' },
+    { id: 'illustration', label: 'Digital Illustration',    icon: 'art',    natural: 'detailed digital illustration',          tags: 'digital illustration, detailed artwork',              mjStyle: '' },
+    { id: 'anime',        label: 'Anime / Cartoon',         icon: 'sparkles', natural: 'vibrant anime illustration',            tags: 'anime style, vibrant, cel shaded',                    mjStyle: '--niji 6' },
+    { id: 'fantasy',      label: 'Fantasy / Sci-Fi Art',    icon: 'dragon', natural: 'epic fantasy concept art',               tags: 'fantasy concept art, epic, intricate',                mjStyle: '' },
+    { id: 'abstract',     label: 'Abstract / Geometric',    icon: 'shapes', natural: 'abstract geometric composition',         tags: 'abstract geometric art, balanced composition',       mjStyle: '' },
+    { id: 'scientific',   label: 'Scientific Diagram',      icon: 'flask',  natural: 'clean scientific technical diagram',     tags: 'scientific diagram, technical illustration, labeled', mjStyle: '' },
+    { id: 'logo',         label: 'Logo / Brand Mark',       icon: 'badge',  natural: 'minimalist vector logo design',          tags: 'minimalist vector logo, flat design, brand mark',     mjStyle: '' },
+  ];
+
+  const STYLES = [
+    { id: 'realistic',  label: 'Realistic',       natural: 'photorealistic',          tags: 'photorealistic, hyperrealistic',          cats: ['photo','portrait','product','landscape','architecture','cinematic'] },
+    { id: 'cinematic-s',label: 'Cinematic',       natural: 'cinematic',               tags: 'cinematic lighting, film still',          cats: ['photo','cinematic','portrait','fantasy','landscape'] },
+    { id: 'studio',     label: 'Studio Lighting', natural: 'professional studio light', tags: 'studio lighting, softbox, clean background', cats: ['photo','portrait','product'] },
+    { id: 'minimalist', label: 'Minimalist',      natural: 'clean and minimalist',    tags: 'minimalist, clean, simple, uncluttered',  cats: ['abstract','logo','illustration','product','architecture','scientific'] },
+    { id: 'vintage',    label: 'Vintage / Retro', natural: 'vintage retro',           tags: 'vintage, retro, film grain, nostalgic',   cats: ['photo','cinematic','portrait','illustration','landscape'] },
+    { id: 'cyberpunk',  label: 'Cyberpunk',       natural: 'neon cyberpunk',          tags: 'cyberpunk, neon lights, futuristic city', cats: ['fantasy','illustration','photo','cinematic','abstract'] },
+    { id: 'watercolor', label: 'Watercolor',      natural: 'soft watercolor',         tags: 'watercolor painting, soft washes',       cats: ['illustration','landscape','portrait','fantasy'] },
+    { id: 'oil',        label: 'Oil Painting',    natural: 'classical oil painting',  tags: 'oil painting, textured brushstrokes',    cats: ['illustration','portrait','landscape','fantasy'] },
+    { id: 'pixel',      label: 'Pixel Art',       natural: 'retro pixel art',         tags: 'pixel art, 16-bit, retro game',          cats: ['illustration','fantasy','abstract'] },
+    { id: 'flat',       label: 'Flat Vector',     natural: 'flat vector',             tags: 'flat vector illustration, clean shapes', cats: ['illustration','logo','abstract','scientific'] },
+    { id: 'blueprint',  label: 'Blueprint',       natural: 'engineering blueprint',   tags: 'blueprint style, technical drawing, white on blue', cats: ['scientific','architecture','abstract'] },
+    { id: 'isometric',  label: 'Isometric 3D',    natural: 'isometric 3D render',      tags: 'isometric 3d render, octane render',     cats: ['illustration','architecture','product','fantasy'] },
+    { id: 'double-exp', label: 'Double Exposure', natural: 'double exposure',         tags: 'double exposure, surreal blend',         cats: ['photo','portrait','abstract','fantasy'] },
+    { id: 'macro-style',label: 'Macro Detail',    natural: 'extreme macro detail',    tags: 'macro photography, extreme detail',     cats: ['photo','product','scientific'] },
+  ];
+
+  const LIGHTING = [
+    { id: 'golden',   label: 'Golden Hour',    natural: 'warm golden hour light',    tags: 'golden hour lighting, warm glow' },
+    { id: 'blue',     label: 'Blue Hour',      natural: 'cool blue hour light',      tags: 'blue hour, cool tones' },
+    { id: 'soft',     label: 'Soft Diffused',  natural: 'soft diffused lighting',    tags: 'soft diffused lighting' },
+    { id: 'midday',   label: 'Harsh Midday',   natural: 'harsh midday sun',          tags: 'harsh sunlight, strong shadows' },
+    { id: 'softbox',  label: 'Studio Softbox', natural: 'soft studio softbox light', tags: 'studio softbox lighting' },
+    { id: 'rim',      label: 'Rim Light',      natural: 'dramatic rim lighting',     tags: 'rim lighting, edge light' },
+    { id: 'neon',     label: 'Neon Glow',      natural: 'vibrant neon glow',         tags: 'neon lighting, glow' },
+    { id: 'candle',   label: 'Candlelight',    natural: 'warm flickering candlelight', tags: 'candlelight, warm flicker' },
+    { id: 'moon',     label: 'Moonlight',      natural: 'soft moonlight',            tags: 'moonlight, night' },
+    { id: 'overcast', label: 'Overcast',       natural: 'soft overcast daylight',    tags: 'overcast lighting, even tones' },
+    { id: 'chiaro',   label: 'Chiaroscuro',    natural: 'dramatic chiaroscuro light and shadow', tags: 'chiaroscuro, dramatic light and shadow' },
+    { id: 'backlit',  label: 'Backlit',        natural: 'strong backlight with lens flare', tags: 'backlit, lens flare' },
+  ];
+
+  const CAMERA = [
+    { id: 'eye',      label: 'Eye Level',         natural: 'eye-level shot',              tags: 'eye level shot' },
+    { id: 'low',      label: 'Low Angle',         natural: 'dramatic low-angle shot',     tags: 'low angle shot, dramatic' },
+    { id: 'high',     label: 'High Angle',        natural: 'high-angle shot',             tags: 'high angle shot' },
+    { id: 'aerial',   label: 'Aerial / Drone',    natural: 'sweeping aerial drone view',  tags: 'aerial view, drone photography' },
+    { id: 'closeup',  label: 'Close-Up',          natural: 'intimate close-up shot',      tags: 'close-up shot' },
+    { id: 'extreme',  label: 'Extreme Close-Up',  natural: 'extreme close-up on fine detail', tags: 'extreme close-up' },
+    { id: 'macro',    label: 'Macro',             natural: 'macro shot revealing tiny details', tags: 'macro photography' },
+    { id: 'wide',     label: 'Wide Angle',        natural: 'expansive wide-angle view',   tags: 'wide angle, expansive' },
+    { id: 'dutch',    label: 'Dutch Angle',       natural: 'tilted dutch-angle framing',  tags: 'dutch angle, tilted frame' },
+    { id: 'sym',      label: 'Symmetrical',       natural: 'perfectly symmetrical composition', tags: 'symmetrical composition, centered' },
+    { id: 'shoulder', label: 'Over-the-Shoulder', natural: 'over-the-shoulder perspective', tags: 'over the shoulder shot' },
+  ];
+
+  const PALETTES = [
+    { id: 'vibrant', label: 'Vibrant & Saturated', natural: 'vibrant and saturated', tags: 'vibrant colors, saturated' },
+    { id: 'pastel',  label: 'Soft Pastel',         natural: 'soft pastel',       tags: 'pastel colors, soft tones' },
+    { id: 'mono',    label: 'Black & White',       natural: 'stark black-and-white',   tags: 'black and white, monochrome' },
+    { id: 'warm',    label: 'Warm Tones',          natural: 'rich and warm',    tags: 'warm color palette' },
+    { id: 'cool',    label: 'Cool Tones',          natural: 'cool and calming',       tags: 'cool color palette' },
+    { id: 'earthy',  label: 'Earthy',              natural: 'natural earthy',        tags: 'earthy tones, natural palette' },
+    { id: 'neonpal', label: 'Neon',                natural: 'electric neon',      tags: 'neon color palette, electric' },
+    { id: 'duotone', label: 'Duotone',             natural: 'bold duotone',   tags: 'duotone, two-tone' },
+    { id: 'custom',  label: 'Custom...',           natural: '',                         tags: '' },
+  ];
+
+  const MOODS = [
+    { id: 'epic',      label: 'Epic',        natural: 'epic and awe-inspiring',   tags: 'epic, awe-inspiring' },
+    { id: 'serene',    label: 'Serene',      natural: 'serene and peaceful',      tags: 'serene, peaceful' },
+    { id: 'mystery',   label: 'Mysterious',  natural: 'mysterious and enigmatic', tags: 'mysterious, enigmatic' },
+    { id: 'joyful',    label: 'Joyful',      natural: 'joyful and uplifting',     tags: 'joyful, uplifting' },
+    { id: 'dramatic',  label: 'Dramatic',    natural: 'dramatic and intense',     tags: 'dramatic, intense' },
+    { id: 'nostalgic', label: 'Nostalgic',   natural: 'nostalgic and wistful',     tags: 'nostalgic, wistful' },
+    { id: 'futuristic',label: 'Futuristic',  natural: 'futuristic and sleek',      tags: 'futuristic, sleek' },
+    { id: 'cozy',      label: 'Cozy',        natural: 'cozy and inviting',         tags: 'cozy, inviting' },
+    { id: 'melancholy',label: 'Melancholic', natural: 'quietly melancholic',       tags: 'melancholic, contemplative' },
+    { id: 'powerful',  label: 'Powerful',    natural: 'bold and powerful',         tags: 'powerful, commanding' },
+  ];
+
+  const DETAIL = [
+    { id: 'concept',  label: 'Concept / Sketch', natural: 'loose concept-sketch quality',         tags: 'concept art, sketch quality' },
+    { id: 'standard', label: 'Standard',         natural: 'clean standard detail',                tags: 'detailed' },
+    { id: 'high',     label: 'Highly Detailed',  natural: 'richly detailed',                      tags: 'highly detailed, intricate details' },
+    { id: 'ultra',    label: 'Ultra Detailed',   natural: 'ultra-detailed with lifelike texture', tags: 'ultra detailed, intricate, 8k, sharp focus' },
+  ];
+
+  const ASPECTS = [
+    { id: '1:1',  label: '1:1 Square',      sdxl: '1024 x 1024' },
+    { id: '4:3',  label: '4:3 Classic',     sdxl: '1152 x 896' },
+    { id: '3:2',  label: '3:2 Photo',       sdxl: '1216 x 832' },
+    { id: '16:9', label: '16:9 Wide',       sdxl: '1344 x 768' },
+    { id: '21:9', label: '21:9 Ultra-wide', sdxl: '1536 x 640' },
+    { id: '9:16', label: '9:16 Vertical',   sdxl: '768 x 1344' },
+  ];
+
+  const NEGATIVES = [
+    { id: 'blurry',   label: 'Blurry',         tags: 'blurry, out of focus',                   mj: 'blurry' },
+    { id: 'lowq',     label: 'Low Quality',    tags: 'low quality, worst quality, jpeg artifacts', mj: 'low quality' },
+    { id: 'watermark',label: 'Watermark',      tags: 'watermark, signature, logo text',        mj: 'watermark, text' },
+    { id: 'text',     label: 'Text / Letters', tags: 'text, letters, words, captions',         mj: 'text, words' },
+    { id: 'hands',    label: 'Deformed Hands', tags: 'deformed hands, mutated hands',          mj: 'deformed hands' },
+    { id: 'fingers',  label: 'Extra Fingers',  tags: 'extra fingers, extra limbs, deformed anatomy', mj: 'extra fingers, deformed' },
+    { id: 'face',     label: 'Distorted Face', tags: 'distorted face, asymmetric face',        mj: 'distorted face' },
+    { id: 'oversat',  label: 'Oversaturated',  tags: 'oversaturated, harsh contrast',          mj: 'oversaturated' },
+    { id: 'noise',    label: 'Noise / Grain',  tags: 'noise, grain, artifacts',                mj: 'noise, grain' },
+    { id: 'cropped',  label: 'Badly Cropped',  tags: 'badly cropped, cut off, out of frame',   mj: 'cropped, cut off' },
+  ];
+
+  const SDXL_QUALITY_TAGS = 'masterpiece, best quality';
+
+  const TOOLS = [
+    { id: 'midjourney', label: 'Midjourney' },
+    { id: 'sdxl',       label: 'Stable Diffusion / SDXL' },
+    { id: 'flux',       label: 'Flux' },
+  ];
+
+  function byId(table, id) {
+    if (!id) return null;
+    return table.find(r => r.id === id) || null;
+  }
+  function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+  function art(word, capitalized) {
+    const a = /^[aeiou]/i.test(word || '') ? 'an' : 'a';
+    return capitalized ? cap(a) : a;
+  }
+  function stylesFor(categoryId) {
+    if (!categoryId) return STYLES.slice();
+    const direct = STYLES.filter(s => s.cats.includes(categoryId));
+    const rest = STYLES.filter(s => !s.cats.includes(categoryId));
+    return direct.concat(rest);
+  }
+
+  function blankState() {
+    return {
+      mode: 'natural',
+      tool: 'midjourney',
+      subject: '',
+      category: 'photo',
+      style: null,
+      lighting: null,
+      camera: null,
+      palette: null,
+      customPalette: '',
+      mood: null,
+      detail: 'high',
+      aspect: '16:9',
+      negatives: [],
+    };
+  }
+
+  function buildPrompt(s) {
+    const subject = (s.subject || '').trim() || '[your subject]';
+    const cat = byId(CATEGORIES, s.category) || CATEGORIES[0];
+    const style = byId(STYLES, s.style);
+    const lighting = byId(LIGHTING, s.lighting);
+    const camera = byId(CAMERA, s.camera);
+    const palette = s.palette === 'custom'
+      ? ((s.customPalette || '').trim() ? { natural: (s.customPalette || '').trim(), tags: (s.customPalette || '').trim() } : null)
+      : byId(PALETTES, s.palette);
+    const mood = byId(MOODS, s.mood);
+    const detail = byId(DETAIL, s.detail) || byId(DETAIL, 'high');
+    const aspect = byId(ASPECTS, s.aspect) || byId(ASPECTS, '16:9');
+    const negs = (s.negatives || []).map(id => byId(NEGATIVES, id)).filter(Boolean);
+
+    if (s.mode === 'natural') {
+      const parts = [
+        art(cat.natural, true) + ' ' + cat.natural + ' of ' + subject,
+        style ? 'in a ' + style.natural + ' style' : null,
+        lighting ? 'lit by ' + lighting.natural : null,
+        camera ? 'captured as an ' + camera.natural : null,
+        palette ? 'with a ' + palette.natural + ' color palette' : null,
+        mood ? 'evoking a ' + mood.natural + ' mood' : null,
+        detail.natural,
+      ].filter(Boolean);
+      return { main: cap(parts.join(', ')) + '.', negative: null, note: null };
+    }
+
+    const tool = s.tool || 'midjourney';
+
+    if (tool === 'midjourney') {
+      const bits = [subject, cat.tags, style ? style.tags : null, lighting ? lighting.tags : null,
+                    camera ? camera.tags : null, palette ? palette.tags : null,
+                    mood ? mood.tags : null, detail.tags].filter(Boolean);
+      let main = bits.join(', ');
+      main += ' --ar ' + aspect.id;
+      if (cat.mjStyle) main += ' ' + cat.mjStyle;
+      if (negs.length) main += ' --no ' + negs.map(n => n.mj).join(', ');
+      return { main, negative: null, note: 'Paste into Midjourney. Tweak --ar or add --chaos / --stylize as needed.' };
+    }
+
+    if (tool === 'sdxl') {
+      const bits = [SDXL_QUALITY_TAGS, subject, cat.tags, style ? style.tags : null,
+                    lighting ? lighting.tags : null, camera ? camera.tags : null,
+                    palette ? palette.tags : null, mood ? mood.tags : null, detail.tags].filter(Boolean);
+      return {
+        main: bits.join(', '),
+        negative: negs.length ? negs.map(n => n.tags).join(', ') : null,
+        note: 'Suggested settings: 28-35 steps, CFG 5-7, sampler DPM++ 2M Karras, size ' + aspect.sdxl + ' for ' + aspect.id + '.',
+      };
+    }
+
+    const desc = [
+      subject, 'as ' + art(cat.natural, false) + ' ' + cat.natural,
+      style ? 'in ' + style.natural + ' style' : null,
+      lighting ? 'with ' + lighting.natural : null,
+      camera ? camera.natural : null,
+      palette ? palette.natural + ' palette' : null,
+      mood ? mood.natural + ' mood' : null,
+    ].filter(Boolean).join(', ');
+    return {
+      main: cap(desc) + '. ' + cap(detail.tags) + ', aspect ratio ' + aspect.id + '.',
+      negative: null,
+      note: 'Flux follows descriptive language best -- keep the subject description rich and specific.',
+    };
+  }
+
+  return {
+    CATEGORIES, STYLES, LIGHTING, CAMERA, PALETTES, MOODS, DETAIL,
+    ASPECTS, NEGATIVES, TOOLS,
+    byId, stylesFor, blankState, buildPrompt,
+  };
+})();
+
+if (typeof module !== 'undefined' && module.exports) module.exports = PB;
+
+</script>
+<script>
+'use strict';
+/* UI wiring — state, rendering, preview, library (localStorage). */
+const S = PB.blankState();
+let step = 1;
+const $ = id => document.getElementById(id);
+const LIB_KEY = 'promptBuilder.library.v1';
+
+function chip(container, item, selected, onPick, badge) {
+  const b = document.createElement('button');
+  b.className = 'chip' + (selected ? ' on' : '');
+  b.innerHTML = item.label + (badge ? '<span class="rec">pick</span>' : '');
+  b.onclick = () => { onPick(item.id); };
+  container.appendChild(b);
+}
+function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+
+function render() {
+  // mode + tool
+  document.querySelectorAll('#modeSeg button').forEach(b =>
+    b.classList.toggle('on', b.dataset.mode === S.mode));
+  $('toolRow').classList.toggle('on', S.mode === 'tool');
+  $('toolSel').value = S.tool;
+
+  // dots
+  const dots = $('dots'); clear(dots);
+  for (let i = 1; i <= 4; i++) {
+    const d = document.createElement('button');
+    d.type = 'button';
+    d.className = 'dot' + (i === step ? ' on' : (i < step ? ' done' : ''));
+    d.textContent = i;
+    d.setAttribute('aria-label', 'Go to step ' + i);
+    d.onclick = () => { step = i; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    dots.appendChild(d);
+  }
+  document.querySelectorAll('.step').forEach(s =>
+    s.classList.toggle('on', +s.dataset.step === step));
+  $('backBtn').style.visibility = step === 1 ? 'hidden' : 'visible';
+  $('nextBtn').textContent = step === 4 ? '✓ Done' : 'Next →';
+
+  // step 1
+  if ($('subject').value !== S.subject) $('subject').value = S.subject;
+  const cats = $('catChips'); clear(cats);
+  PB.CATEGORIES.forEach(c => chip(cats, c, S.category === c.id, id => { S.category = id; render(); }));
+
+  // step 2 — styles, recommended first
+  const styles = $('styleChips'); clear(styles);
+  const ordered = PB.stylesFor(S.category);
+  const nRec = PB.STYLES.filter(x => x.cats.includes(S.category)).length;
+  ordered.forEach((st, i) => chip(styles, st, S.style === st.id,
+    id => { S.style = (S.style === id ? null : id); render(); }, i < nRec));
+
+  // step 3
+  const lights = $('lightChips'); clear(lights);
+  PB.LIGHTING.forEach(l => chip(lights, l, S.lighting === l.id,
+    id => { S.lighting = (S.lighting === id ? null : id); render(); }));
+  const cams = $('camChips'); clear(cams);
+  PB.CAMERA.forEach(c => chip(cams, c, S.camera === c.id,
+    id => { S.camera = (S.camera === id ? null : id); render(); }));
+  const pals = $('palChips'); clear(pals);
+  PB.PALETTES.forEach(p => chip(pals, p, S.palette === p.id,
+    id => { S.palette = (S.palette === id ? null : id); render(); }));
+  $('customPaletteWrap').style.display = S.palette === 'custom' ? 'block' : 'none';
+  if ($('customPalette').value !== S.customPalette) $('customPalette').value = S.customPalette;
+  const moods = $('moodChips'); clear(moods);
+  PB.MOODS.forEach(m => chip(moods, m, S.mood === m.id,
+    id => { S.mood = (S.mood === id ? null : id); render(); }));
+
+  // step 4
+  const det = $('detailChips'); clear(det);
+  PB.DETAIL.forEach(d => chip(det, d, S.detail === d.id, id => { S.detail = id; render(); }));
+  const asp = $('aspectChips'); clear(asp);
+  PB.ASPECTS.forEach(a => chip(asp, a, S.aspect === a.id, id => { S.aspect = id; render(); }));
+  const negs = $('negChips'); clear(negs);
+  PB.NEGATIVES.forEach(n => chip(negs, n, S.negatives.includes(n.id),
+    id => {
+      S.negatives = S.negatives.includes(id)
+        ? S.negatives.filter(x => x !== id)
+        : S.negatives.concat(id);
+      render();
+    }));
+
+  updatePreview();
+}
+
+function updatePreview() {
+  const r = PB.buildPrompt(S);
+  $('previewBox').textContent = r.main;
+  const nb = $('negBox');
+  if (r.negative) { nb.style.display = 'block'; nb.textContent = 'Negative: ' + r.negative; }
+  else nb.style.display = 'none';
+  const nt = $('noteBox');
+  if (r.note) { nt.style.display = 'block'; nt.textContent = r.note; }
+  else nt.style.display = 'none';
+}
+
+function fullCopyText() {
+  const r = PB.buildPrompt(S);
+  return r.main + (r.negative ? '\n\nNegative prompt:\n' + r.negative : '');
+}
+function copyText(t, btn, okLabel) {
+  const done = () => { const o = btn.textContent; btn.textContent = okLabel || 'Copied ✓';
+    setTimeout(() => btn.textContent = o, 1500); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(t).then(done).catch(() => fallback());
+  } else fallback();
+  function fallback() {
+    const ta = document.createElement('textarea');
+    ta.value = t; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); done(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+}
+
+/* ---- library ---- */
+function getLib() {
+  try { return JSON.parse(localStorage.getItem(LIB_KEY) || '[]'); }
+  catch (e) { return []; }
+}
+function setLib(l) { try { localStorage.setItem(LIB_KEY, JSON.stringify(l)); } catch (e) { /* sandboxed viewer: library just won't persist */ } }
+function renderLib() {
+  const q = ($('libSearch').value || '').toLowerCase();
+  const list = $('libList'); clear(list);
+  const items = getLib().filter(it =>
+    !q || (it.name + ' ' + it.prompt).toLowerCase().includes(q));
+  if (!items.length) { list.innerHTML = '<div class="empty">No saved prompts yet — build one above and hit “Save to library”.</div>'; return; }
+  items.slice().reverse().forEach(it => {
+    const d = document.createElement('div'); d.className = 'lib-item';
+    const t = document.createElement('div'); t.className = 't'; t.textContent = it.name;
+    const p = document.createElement('div'); p.className = 'p'; p.textContent = it.prompt;
+    const acts = document.createElement('div'); acts.className = 'acts';
+    const mk = (label, fn) => { const b = document.createElement('button');
+      b.className = 'btn btn-ghost btn-sm'; b.textContent = label; b.onclick = fn; acts.appendChild(b); };
+    mk('Load', () => {
+      const ns = JSON.parse(JSON.stringify(it.state));
+      Object.keys(ns).forEach(k => S[k] = ns[k]);
+      step = 1; render(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    mk('Copy', e => copyText(it.prompt + (it.negative ? '\n\nNegative prompt:\n' + it.negative : ''), e.target));
+    mk('Delete', () => { if (confirm('Delete this saved prompt?')) { setLib(getLib().filter(x => x.id !== it.id)); renderLib(); } });
+    d.appendChild(t); d.appendChild(p); d.appendChild(acts); list.appendChild(d);
+  });
+}
+
+/* ---- events ---- */
+document.querySelectorAll('#modeSeg button').forEach(b =>
+  b.onclick = () => { S.mode = b.dataset.mode; render(); });
+$('toolSel').onchange = e => { S.tool = e.target.value; render(); };
+$('subject').addEventListener('input', e => { S.subject = e.target.value; updatePreview(); });
+$('customPalette').addEventListener('input', e => { S.customPalette = e.target.value; updatePreview(); });
+$('backBtn').onclick = () => { if (step > 1) { step--; render(); } };
+$('nextBtn').onclick = () => { if (step < 4) { step++; render(); } else { window.scrollTo({ top: 0, behavior: 'smooth' }); } };
+$('copyBtn').onclick = e => copyText(fullCopyText(), e.target);
+$('saveBtn').onclick = e => {
+  const r = PB.buildPrompt(S);
+  const lib = getLib();
+  const name = (S.subject || '').trim().slice(0, 42) || 'Untitled prompt';
+  lib.push({ id: 'p' + Date.now(), ts: Date.now(), name,
+             mode: S.mode, tool: S.tool, prompt: r.main, negative: r.negative,
+             state: JSON.parse(JSON.stringify(S)) });
+  setLib(lib); renderLib();
+  const o = e.target.textContent; e.target.textContent = 'Saved ✓';
+  setTimeout(() => e.target.textContent = o, 1500);
+};
+$('diceBtn').onclick = () => {
+  const pick = arr => arr[Math.floor(Math.random() * arr.length)].id;
+  S.category = pick(PB.CATEGORIES);
+  S.style = pick(PB.stylesFor(S.category).slice(0, 6));
+  S.lighting = pick(PB.LIGHTING); S.camera = pick(PB.CAMERA);
+  S.palette = pick(PB.PALETTES.filter(p => p.id !== 'custom'));
+  S.mood = pick(PB.MOODS); S.detail = pick(PB.DETAIL); S.aspect = pick(PB.ASPECTS);
+  step = 1; render();
+};
+$('resetBtn').onclick = () => {
+  const mode = S.mode, tool = S.tool;
+  Object.assign(S, PB.blankState()); S.mode = mode; S.tool = tool;
+  step = 1; render();
+};
+$('libSearch').addEventListener('input', renderLib);
+$('exportBtn').onclick = () => {
+  const blob = new Blob([JSON.stringify(getLib(), null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'prompt-library.json'; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+};
+$('importBtn').onclick = () => $('importFile').click();
+$('importFile').onchange = e => {
+  const f = e.target.files[0]; if (!f) return;
+  const rd = new FileReader();
+  rd.onload = () => {
+    try {
+      const arr = JSON.parse(rd.result);
+      if (!Array.isArray(arr)) throw new Error('bad file');
+      setLib(getLib().concat(arr)); renderLib();
+    } catch (err) { alert('Could not import that file.'); }
+  };
+  rd.readAsText(f); e.target.value = '';
+};
+
+/* ---- init ---- */
+(function init() {
+  const ts = $('toolSel');
+  PB.TOOLS.forEach(t => { const o = document.createElement('option'); o.value = t.id; o.textContent = t.label; ts.appendChild(o); });
+  render(); renderLib();
+})();
+</script>
+</body>
+</html>
