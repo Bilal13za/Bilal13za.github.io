@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FS Study — Financial Statement Health &amp; Value</title>
+<style>
+:root{
+  --bg:#f4f5fa; --card:#ffffff; --ink:#1b2233; --muted:#687182;
+  --accent:#0e7490; --accent-soft:#e6f6fa;
+  --good:#16a34a; --warn:#d97706; --bad:#dc2626;
+  --line:#e5e7ef; --radius:14px;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+body{margin:0; background:var(--bg); color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size:16px; line-height:1.5;}
+.wrap{max-width:820px; margin:0 auto; padding:12px 14px 60px;}
+header.top{position:sticky; top:0; z-index:10; background:var(--bg);
+  padding:10px 14px; border-bottom:1px solid var(--line);
+  display:flex; align-items:center; gap:10px;}
+header.top .title{font-weight:700; font-size:18px;}
+header.top .sub{font-size:12px; color:var(--muted);}
+#homeBtn{border:1px solid var(--line); background:var(--card); border-radius:10px;
+  padding:8px 12px; font-size:15px; cursor:pointer; display:none;}
+h2{font-size:20px; margin:18px 4px 10px;}
+h3{font-size:16px; margin:16px 4px 8px; color:var(--ink);}
+.hint{color:var(--muted); font-size:14px; margin:0 4px 12px;}
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  padding:14px 16px; margin:10px 0; box-shadow:0 1px 3px rgba(20,30,60,.05);}
+.bigbtn{display:flex; gap:14px; align-items:center; width:100%; text-align:left;
+  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  padding:20px 18px; margin:12px 0; cursor:pointer; box-shadow:0 1px 3px rgba(20,30,60,.06);}
+.bigbtn:active{transform:scale(.99);}
+.bigbtn .emoji{font-size:36px;}
+.bigbtn .t{font-weight:700; font-size:19px;}
+.bigbtn .d{font-size:14px; color:var(--muted);}
+.bigbtn .go{margin-left:auto; font-size:22px; color:var(--accent);}
+.steps{display:flex; gap:6px; margin:8px 2px 4px;}
+.step{flex:1; text-align:center; font-size:13px; padding:8px 4px; border-radius:10px;
+  background:var(--card); border:1px solid var(--line); color:var(--muted); cursor:pointer;}
+.step.on{background:var(--accent); color:#fff; border-color:var(--accent); font-weight:700;}
+.chips{display:flex; gap:8px; overflow-x:auto; padding:4px 2px 10px;}
+.chip{flex:0 0 auto; border:1px solid var(--line); background:var(--card);
+  border-radius:999px; padding:8px 14px; font-size:14px; cursor:pointer;}
+.chip.on{background:var(--accent); color:#fff; border-color:var(--accent);}
+table.grid{width:100%; border-collapse:collapse; font-size:14px;}
+table.grid th, table.grid td{padding:8px 6px; border-bottom:1px solid var(--line); text-align:right;}
+table.grid th:first-child, table.grid td:first-child{text-align:left;}
+table.grid th{color:var(--muted); font-weight:600; font-size:13px;}
+.flag{display:inline-block; min-width:64px; text-align:center; font-size:12px; font-weight:700;
+  border-radius:999px; padding:3px 10px; color:#fff;}
+.flag.good{background:var(--good);} .flag.warn{background:var(--warn);} .flag.bad{background:var(--bad);}
+.flag.na{background:#9aa1b2;}
+.ratio{border:1px solid var(--line); border-radius:var(--radius); background:var(--card);
+  padding:12px 14px; margin:8px 0; cursor:pointer;}
+.ratio .row1{display:flex; align-items:baseline; gap:10px;}
+.ratio .lbl{font-weight:600; font-size:15px;}
+.ratio .val{margin-left:auto; font-size:20px; font-weight:700;}
+.ratio .mean{font-size:13px; color:var(--muted); margin-top:4px;}
+.ratio .detail{display:none; margin-top:10px; border-top:1px dashed var(--line); padding-top:10px;}
+.ratio.open .detail{display:block;}
+.ratio .formula{font-family:ui-monospace,monospace; font-size:13px; background:#f7f8fc;
+  border-radius:8px; padding:8px 10px; margin-bottom:8px;}
+.trendbar{display:flex; align-items:flex-end; gap:8px; height:64px; margin-top:6px;}
+.trendbar .bar{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:100%;}
+.trendbar .col{background:var(--accent); border-radius:4px 4px 0 0; width:70%; min-height:3px;}
+.trendbar .ylbl{font-size:11px; color:var(--muted); margin-top:3px;}
+.trendbar .yv{font-size:11px; font-weight:600;}
+.crit{display:flex; gap:10px; align-items:flex-start; padding:8px 0; border-bottom:1px solid var(--line); font-size:14px;}
+.crit:last-child{border-bottom:none;}
+.crit .s{font-weight:700; font-size:16px; width:24px; text-align:center; flex:0 0 auto;}
+.crit .s.y{color:var(--good);} .crit .s.n{color:var(--bad);} .crit .s.u{color:#9aa1b2;}
+.crit .det{color:var(--muted); font-size:13px;}
+textarea.csv{width:100%; min-height:150px; border:1px solid var(--line); border-radius:10px;
+  padding:10px; font-family:ui-monospace,monospace; font-size:13px;}
+.btn{display:inline-block; background:var(--accent); color:#fff; border:none; border-radius:10px;
+  padding:12px 20px; font-size:16px; font-weight:600; cursor:pointer; margin:8px 4px 8px 0;}
+.btn.sec{background:var(--card); color:var(--ink); border:1px solid var(--line);}
+select.map{width:100%; padding:8px; border:1px solid var(--line); border-radius:8px; font-size:14px;}
+.slider-row{margin:14px 0;}
+.slider-row label{display:flex; justify-content:space-between; font-weight:600; font-size:15px;}
+.slider-row input[type=range]{width:100%; margin-top:6px;}
+.slider-row .note{font-size:13px; color:var(--muted);}
+.sens{border-collapse:collapse; font-size:13px; margin:8px 0; width:100%;}
+.sens th, .sens td{border:1px solid var(--line); padding:6px 4px; text-align:center;}
+.sens th{background:#f7f8fc; color:var(--muted); font-size:12px;}
+.sens td.base{background:var(--accent-soft); font-weight:700;}
+.warnbox{background:#fff8e6; border:1px solid #f0d48a; border-radius:10px; padding:10px 14px;
+  font-size:14px; margin:10px 0;}
+.readout{background:var(--accent-soft); border-radius:var(--radius); padding:14px 16px;
+  font-size:15px; margin:12px 0;}
+.readout b{color:var(--accent);}
+.kv{display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--line); font-size:15px;}
+.kv:last-child{border-bottom:none;}
+.kv .k{color:var(--muted);} .kv .v{font-weight:700;}
+.foot{margin-top:26px; font-size:12px; color:var(--muted); text-align:center;}
+</style>
+</head>
+<body>
+<header class="top">
+  <button id="homeBtn" data-testid="home-btn">‹ Home</button>
+  <div><div class="title">📊 FS Study</div><div class="sub">Statement health &amp; value — 3 steps</div></div>
+</header>
+<div class="wrap">
+  <div class="steps" data-testid="steps">
+    <div class="step" data-testid="step-1" data-view="view-data">1 · Data</div>
+    <div class="step" data-testid="step-2" data-view="view-health">2 · Health</div>
+    <div class="step" data-testid="step-3" data-view="view-value">3 · Value</div>
+  </div>
+  <div id="view-data" data-testid="view-data"></div>
+  <div id="view-health" data-testid="view-health" style="display:none"></div>
+  <div id="view-value" data-testid="view-value" style="display:none"></div>
+  <div class="foot">Deterministic — every number shows its formula. Describes what the numbers show; never invents why.</div>
+</div>
+<script>
+"use strict";
+window.__fsSample = {"currency": "Rs million", "name": "SampleCo (fictional)", "note": "Fictional data for learning \u2014 not a real company.", "years": [{"cogs": 620, "current_assets": 420, "current_liabilities": 280, "equity": 700, "interest": 30, "inventory": 150, "label": "2022", "ocf": 120, "opex": 240, "retained_earnings": 360, "revenue": 1000, "tax": 32, "total_assets": 1500, "total_liabilities": 800}, {"cogs": 700, "current_assets": 480, "current_liabilities": 310, "equity": 800, "interest": 32, "inventory": 170, "label": "2023", "ocf": 150, "opex": 265, "retained_earnings": 440, "revenue": 1150, "tax": 44, "total_assets": 1650, "total_liabilities": 850}, {"cogs": 790, "current_assets": 560, "current_liabilities": 350, "equity": 930, "interest": 35, "inventory": 195, "label": "2024", "ocf": 185, "opex": 295, "retained_earnings": 520, "revenue": 1320, "tax": 58, "total_assets": 1850, "total_liabilities": 920}]};
+</script>
+<script>
+"use strict";
+/* ============================================================
+   FS Study — deterministic financial-statement health & value.
+   Formulas ported from ~/workspace/fs-analyzer/engine/
+   (ratios.py, dupont.py, piotroski.py, altman.py, modeling.py).
+   ============================================================ */
+
+// ---------- field model ----------
+const FIELDS = [
+  {id:"revenue",            label:"Revenue",              aliases:["sales","turnover"]},
+  {id:"cogs",               label:"Cost of sales",        aliases:["cost_of_sales","costofsales","cos"]},
+  {id:"opex",               label:"Operating expenses",   aliases:["operating_expenses","opex","overheads"]},
+  {id:"interest",           label:"Interest (finance costs)", aliases:["finance_costs","financecosts","interest_expense"]},
+  {id:"tax",                label:"Tax expense",          aliases:["tax_expense","taxexpense","income_tax"]},
+  {id:"current_assets",     label:"Current assets",       aliases:["currentassets"]},
+  {id:"inventory",          label:"Inventory",            aliases:["inventories","stock"]},
+  {id:"current_liabilities",label:"Current liabilities",  aliases:["currentliabilities"]},
+  {id:"total_assets",       label:"Total assets",         aliases:["totalassets"]},
+  {id:"total_liabilities",  label:"Total liabilities",    aliases:["totalliabilities"]},
+  {id:"equity",             label:"Total equity",         aliases:["total_equity","totalequity","shareholders_funds"]},
+  {id:"ocf",                label:"Operating cash flow",  aliases:["operating_cash_flow","operatingcashflow","cash_from_operations"]},
+  {id:"retained_earnings",  label:"Retained earnings (optional — needed for Altman Z'')",
+                            aliases:["retainedearnings","retained_earnings"], optional:true},
+];
+const FIELD_IDS = FIELDS.map(f=>f.id);
+
+function canonicalize(label){
+  const key = String(label||"").trim().toLowerCase().replace(/[\s\-]+/g,"_");
+  for(const f of FIELDS){
+    if(f.id===key) return f.id;
+    if(f.aliases.includes(key)) return f.id;
+  }
+  return null;
+}
+function num(v){
+  if(v===null||v===undefined) return null;
+  const s = String(v).trim().replace(/,/g,"").replace(/^Rs\s*/i,"");
+  if(s===""||s==="-"||/^n\/?a$/i.test(s)) return null;
+  let t=s;
+  if(t.startsWith("(")&&t.endsWith(")")) t="-"+t.slice(1,-1);
+  const n=Number(t);
+  return Number.isFinite(n)?n:null;
+}
+const r2 = v=>v==null?null:Math.round(v*100)/100;
+const r1 = v=>v==null?null:Math.round(v*10)/10;
+const pct = (a,b)=> (a==null||b==null||b===0)?null:r2(a/b*100);
+const divx = (a,b)=> (a==null||b==null||b===0)?null:r2(a/b);
+const days = (a,b)=> (a==null||b==null||b===0)?null:r1(a/b*365);
+
+// ---------- derived per-year figures ----------
+function derive(p){
+  const d={...p};
+  d.gp   = (d.revenue!=null&&d.cogs!=null)?d.revenue-d.cogs:null;
+  d.ebit = (d.gp!=null&&d.opex!=null)?d.gp-d.opex:null;      // operating profit = EBIT proxy
+  d.pbt  = (d.ebit!=null&&d.interest!=null)?d.ebit-d.interest:null;
+  d.pat  = (d.pbt!=null&&d.tax!=null)?d.pbt-d.tax:null;
+  d.ncl  = (d.total_liabilities!=null&&d.current_liabilities!=null)?d.total_liabilities-d.current_liabilities:null;
+  d.wc   = (d.current_assets!=null&&d.current_liabilities!=null)?d.current_assets-d.current_liabilities:null;
+  return d;
+}
+
+// ---------- ratios (ported from engine/ratios.py) ----------
+// band: [goodThreshold, warnThreshold]; invert=true means lower is better
+const RATIOS=[
+ {id:"gross_margin", label:"Gross profit margin", unit:"%", cat:"Profitability",
+  formula:"Gross profit ÷ Revenue × 100", bands:[35,20],
+  meaning:"Profit left from each rupee of sales after direct costs.",
+  calc:d=>pct(d.gp,d.revenue)},
+ {id:"net_margin", label:"Net profit margin", unit:"%", cat:"Profitability",
+  formula:"Profit after tax ÷ Revenue × 100", bands:[10,5],
+  meaning:"Bottom-line profit kept from each rupee of sales.",
+  calc:d=>pct(d.pat,d.revenue)},
+ {id:"operating_margin", label:"Operating profit margin", unit:"%", cat:"Profitability",
+  formula:"Operating profit ÷ Revenue × 100", bands:[15,8],
+  meaning:"Operating efficiency before financing and tax.",
+  calc:d=>pct(d.ebit,d.revenue)},
+ {id:"roe", label:"Return on equity", unit:"%", cat:"Profitability",
+  formula:"Profit after tax ÷ Equity × 100", bands:[15,8],
+  meaning:"Return earned for shareholders on their stake.",
+  calc:d=>pct(d.pat,d.equity)},
+ {id:"roa", label:"Return on assets", unit:"%", cat:"Profitability",
+  formula:"Profit after tax ÷ Total assets × 100", bands:[8,4],
+  meaning:"How hard the asset base works to make profit.",
+  calc:d=>pct(d.pat,d.total_assets)},
+ {id:"current_ratio", label:"Current ratio", unit:"x", cat:"Liquidity",
+  formula:"Current assets ÷ Current liabilities", bands:[1.5,1.0],
+  meaning:"Whether short-term bills can be paid from short-term assets.",
+  calc:d=>divx(d.current_assets,d.current_liabilities)},
+ {id:"quick_ratio", label:"Quick (acid-test) ratio", unit:"x", cat:"Liquidity",
+  formula:"(Current assets − Inventory) ÷ Current liabilities", bands:[1.0,0.7],
+  meaning:"Bill-paying ability without having to sell inventory.",
+  calc:d=>divx(d.current_assets-d.inventory,d.current_liabilities)},
+ {id:"gearing", label:"Gearing — debt / equity", unit:"%", cat:"Leverage",
+  formula:"Non-current liabilities ÷ Equity × 100", bands:[40,70], invert:true,
+  meaning:"How much of the funding is long-term debt vs equity.",
+  calc:d=>pct(d.ncl,d.equity)},
+ {id:"interest_cover", label:"Interest cover", unit:"x", cat:"Leverage",
+  formula:"Operating profit ÷ Interest", bands:[4,2],
+  meaning:"How many times operating profit covers the interest bill.",
+  calc:d=>divx(d.ebit,d.interest)},
+ {id:"asset_turnover", label:"Asset turnover", unit:"x", cat:"Efficiency",
+  formula:"Revenue ÷ Total assets", bands:[1.0,0.5],
+  meaning:"Sales squeezed out of each rupee of assets.",
+  calc:d=>divx(d.revenue,d.total_assets)},
+ {id:"ocf_to_pat", label:"Operating cash flow / profit", unit:"x", cat:"Cash",
+  formula:"Operating cash flow ÷ Profit after tax", bands:[1.0,0.7],
+  meaning:"Whether reported profit is backed by real cash.",
+  calc:d=>divx(d.ocf,d.pat)},
+];
+function flagFor(ratioId, value){
+  if(value==null) return "na";
+  const r=RATIOS.find(x=>x.id===ratioId);
+  const [g,w]=r.bands;
+  if(r.invert) return value<g?"good":(value<w?"warn":"bad");
+  return value>=g?"good":(value>=w?"warn":"bad");
+}
+function ratiosFor(p){
+  const d=derive(p), out={};
+  for(const r of RATIOS) out[r.id]={...r, value:r.calc(d)};
+  return out;
+}
+
+// ---------- DuPont 3-step (ported from engine/dupont.py) ----------
+function dupont(p){
+  const d=derive(p);
+  const nm=(d.pat!=null&&d.revenue)?d.pat/d.revenue:null;
+  const at=(d.revenue!=null&&d.total_assets)?d.revenue/d.total_assets:null;
+  const em=(d.total_assets!=null&&d.equity)?d.total_assets/d.equity:null;
+  const roeDirect=(d.pat!=null&&d.equity)?d.pat/d.equity:null;
+  let roeDupont=null, ok=null;
+  if(nm!=null&&at!=null&&em!=null){
+    roeDupont=nm*at*em;
+    if(roeDirect!=null) ok=Math.abs(roeDupont-roeDirect)<0.0001;
+  }
+  return {net_margin:nm, asset_turnover:at, equity_multiplier:em,
+          roe_dupont:roeDupont, roe_direct:roeDirect, identity_ok:ok};
+}
+
+// ---------- Piotroski F-score (ported from engine/piotroski.py) ----------
+// shares_outstanding is not collected -> that criterion is "unknown" (score out of 8 assessed)
+function piotroski(cur, prev){
+  const c=derive(cur), p=derive(prev);
+  const dv=(a,b)=>(a==null||b==null||b===0)?null:a/b;
+  const crit=[];
+  const add=(label,pass,detail)=>crit.push({label,pass,detail});
+  const roaC=dv(c.pat,c.total_assets), roaP=dv(p.pat,p.total_assets);
+  add("ROA > 0", roaC==null?null:roaC>0, "ROA = "+fmtPct(roaC));
+  add("Operating cash flow > 0", c.ocf==null?null:c.ocf>0, "OCF = "+fmtNum(c.ocf));
+  add("ROA higher than prior year", (roaC==null||roaP==null)?null:roaC>roaP,
+      "ROA "+fmtPct(roaP)+" → "+fmtPct(roaC));
+  add("Operating cash flow > profit after tax",
+      (c.ocf==null||c.pat==null)?null:c.ocf>c.pat,
+      "OCF "+fmtNum(c.ocf)+" vs PAT "+fmtNum(c.pat));
+  const levC=dv(c.ncl,c.total_assets), levP=dv(p.ncl,p.total_assets);
+  add("Long-term leverage lower than prior year",
+      (levC==null||levP==null)?null:levC<levP,
+      "NCL/TA "+fmtPct(levP)+" → "+fmtPct(levC));
+  const crC=dv(c.current_assets,c.current_liabilities), crP=dv(p.current_assets,p.current_liabilities);
+  add("Current ratio higher than prior year",
+      (crC==null||crP==null)?null:crC>crP,
+      "Current ratio "+fmtX(crP)+" → "+fmtX(crC));
+  add("No new shares issued", null, "shares data not collected — not assessed");
+  const gmC=dv(c.gp,c.revenue), gmP=dv(p.gp,p.revenue);
+  add("Gross margin higher than prior year",
+      (gmC==null||gmP==null)?null:gmC>gmP,
+      "Gross margin "+fmtPct(gmP)+" → "+fmtPct(gmC));
+  const atC=dv(c.revenue,c.total_assets), atP=dv(p.revenue,p.total_assets);
+  add("Asset turnover higher than prior year",
+      (atC==null||atP==null)?null:atC>atP,
+      "Asset turnover "+fmtX(atP)+" → "+fmtX(atC));
+  const score=crit.filter(x=>x.pass===true).length;
+  const assessed=crit.filter(x=>x.pass!==null).length;
+  const band = score>=7?"strong":(score>=3?"middling":"weak");
+  return {score, assessed, total:9, band, criteria:crit,
+          note:"Score out of "+assessed+" assessed criteria (shares data not collected)."};
+}
+
+// ---------- Altman Z'' (ported from engine/altman.py) ----------
+function altman(p){
+  const d=derive(p);
+  const r=(a,b)=>(a==null||b==null||b===0)?null:a/b;
+  const x1=r(d.wc,d.total_assets);
+  const x2=r(d.retained_earnings,d.total_assets);
+  const x3=r(d.ebit,d.total_assets);
+  const x4=r(d.equity,d.total_liabilities);
+  const comps={x1,x2,x3,x4};
+  const missing=Object.keys(comps).filter(k=>comps[k]==null);
+  if(missing.length) return {ok:false, reason:"needs: "+missing.join(", "), components:comps};
+  const z=6.56*x1+3.26*x2+6.72*x3+1.05*x4;
+  const score=r2(z);
+  const zone=score>2.60?"safe":(score>=1.10?"grey":"distress");
+  return {ok:true, score, zone, components:comps,
+          note:"Indicative distress screen only — not a prediction of failure."};
+}
+
+// ---------- formatting ----------
+function fmtPct(v){return v==null?"n/a":(r2(v*100).toLocaleString("en-US"))+"%";}
+function fmtX(v){return v==null?"n/a":r2(v).toLocaleString("en-US")+"x";}
+function fmtNum(v){return v==null?"n/a":Math.round(v).toLocaleString("en-US");}
+function fmtMoney(v){return v==null?"n/a":Number(r2(v)).toLocaleString("en-US");}
+
+// ---------- DCF (simplified port of engine/modeling.py) ----------
+// Assumptions are explicit and shown. FCFF = NOPAT − ΔWC, assuming capex ≈ D&A
+// (steady state) because capex/D&A are not collected.
+const DCF_DEFAULTS={growth:10, wacc:14, terminal:3, years:5};
+function dcfCalc(periods, asm){
+  const base=derive(periods[periods.length-1]);
+  const g=asm.growth/100, wacc=asm.wacc/100, gt=asm.terminal/100, n=asm.years;
+  const ebitMargin=(base.ebit!=null&&base.revenue)?base.ebit/base.revenue:null;
+  const taxRate=(base.tax!=null&&base.pbt&&base.pbt>0)?base.tax/base.pbt:null;
+  const wcRatio=(base.wc!=null&&base.revenue)?base.wc/base.revenue:null;
+  if(ebitMargin==null||taxRate==null||wcRatio==null||base.revenue==null)
+    return {ok:false, reason:"missing base figures (revenue/ebit/tax/working capital)"};
+  if(wacc<=gt) return {ok:false, reason:"WACC must exceed terminal growth for the Gordon model."};
+  let rev=base.revenue, wcPrev=base.wc;
+  const rows=[];
+  for(let t=1;t<=n;t++){
+    rev=rev*(1+g);
+    const ebit=rev*ebitMargin;
+    const nopat=ebit*(1-taxRate);
+    const wc=rev*wcRatio, dwc=wc-wcPrev; wcPrev=wc;
+    rows.push({year:t, revenue:r2(rev), ebit:r2(ebit), nopat:r2(nopat),
+               dwc:r2(dwc), fcff:r2(nopat-dwc)});
+  }
+  const disc=rows.map(r=>({year:r.year, df:r2(r.fcff/Math.pow(1+wacc,r.year))}));
+  const pvFcff=r2(disc.reduce((s,r)=>s+r.df,0));
+  const tv=rows[n-1].fcff*(1+gt)/(wacc-gt);
+  const pvTv=r2(tv/Math.pow(1+wacc,n));
+  const ev=r2(pvFcff+pvTv);
+  const debtProxy=base.total_liabilities;   // explicit proxy, stated in UI
+  const equity=debtProxy!=null?r2(ev-debtProxy):null;
+  const tvShare=ev?r2(pvTv/ev*100):null;
+  return {ok:true, rows, disc, pvFcff, tv:r2(tv), pvTv, ev, debtProxy,
+          equity, tvShare, base:{ebitMargin:r2(ebitMargin*100), taxRate:r2(taxRate*100),
+          wcRatio:r2(wcRatio*100), revenue0:r2(base.revenue)}};
+}
+function sensitivity(periods, wacc, gt){
+  const wVals=[wacc-4,wacc-2,wacc,wacc+2,wacc+4].map(v=>Math.max(v,0.5));
+  const gVals=[gt-2,gt-1,gt,gt+1,gt+2].map(v=>Math.max(v,0));
+  const cells=wVals.map(w=>gVals.map(gg=>{
+    if(w<=gg) return null;
+    const r=dcfCalc(periods,{growth:DCF_DEFAULTS.growth,wacc:w,terminal:gg,years:DCF_DEFAULTS.years});
+    return r.ok?r.equity:null;
+  }));
+  return {wVals, gVals, cells};
+}
+</script>
+<script>
+"use strict";
+/* ================= app ================= */
+const S = {
+  view:"view-data",
+  periods:null,          // [{label, ...fields}]
+  yearIdx:2,             // selected year in Health
+  asm:{...DCF_DEFAULTS}, // DCF assumptions
+  openRatio:null,        // tapped ratio id
+};
+
+function show(view){
+  S.view=view;
+  for(const v of ["view-data","view-health","view-value"])
+    document.getElementById(v).style.display = v===view?"block":"none";
+  document.getElementById("homeBtn").style.display = view==="view-data"?"none":"inline-block";
+  document.querySelectorAll(".step").forEach(el=>
+    el.classList.toggle("on", el.dataset.view===view));
+  if(view==="view-health") renderHealth();
+  if(view==="view-value") renderValue();
+  window.scrollTo(0,0);
+}
+document.getElementById("homeBtn").addEventListener("click",()=>show("view-data"));
+document.querySelectorAll(".step").forEach(el=>
+  el.addEventListener("click",()=>{
+    if(el.dataset.view!=="view-data" && !S.periods){
+      alert("Load data first — pick the sample company or paste/upload a CSV.");
+      return;
+    }
+    show(el.dataset.view);
+  }));
+
+// ---------- CSV parsing ----------
+function parseCSV(text){
+  const rows=[]; let row=[], cur="", q=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    if(q){
+      if(c==='"'){ if(text[i+1]==='"'){cur+='"';i++;} else q=false; }
+      else cur+=c;
+    }else if(c==='"') q=true;
+    else if(c===","){row.push(cur);cur="";}
+    else if(c==="\n"||c==="\r"){ if(cur!==""||row.length){row.push(cur);rows.push(row);row=[];cur="";}
+      if(c==="\r"&&text[i+1]==="\n")i++; }
+    else cur+=c;
+  }
+  if(cur!==""||row.length){row.push(cur);rows.push(row);}
+  return rows.filter(r=>r.some(c=>String(c).trim()!==""));
+}
+function guessYearLabel(v){ return String(v==null?"":v).trim()||"?"; }
+
+// ---------- Data view ----------
+function renderData(){
+  const el=document.getElementById("view-data");
+  el.innerHTML=`
+  <h2 data-testid="data-h">1 · Load financials</h2>
+  <p class="hint">Three years of 12 line items (+ retained earnings, optional). Everything else is computed from them.</p>
+  <button class="bigbtn" data-testid="btn-sample"><span class="emoji">🏢</span>
+    <span><span class="t">Use sample company</span><br>
+    <span class="d">Fictional 3-year statements — instant, nothing to type.</span></span>
+    <span class="go">›</span></button>
+  <button class="bigbtn" data-testid="btn-paste"><span class="emoji">📋</span>
+    <span><span class="t">Paste CSV</span><br>
+    <span class="d">Header row + one row per year. Auto-maps your column names.</span></span>
+    <span class="go">›</span></button>
+  <button class="bigbtn" data-testid="btn-upload"><span class="emoji">📁</span>
+    <span><span class="t">Upload CSV file</span><br>
+    <span class="d">Same format as paste. Stays in your browser — nothing uploaded.</span></span>
+    <span class="go">›</span></button>
+  <div id="csvZone"></div>
+  <div class="card" style="font-size:13px;color:var(--muted)">
+    <b>CSV format:</b> first row = column names (e.g. <i>year, revenue, cost of sales, …</i>),
+    then one row per year. Extra columns are ignored; missing optional fields just
+    disable the ratios that need them — nothing is guessed.
+  </div>`;
+  el.querySelector('[data-testid="btn-sample"]').addEventListener("click",()=>{
+    S.periods=window.__fsSample.years.map(y=>({label:y.label,...y}));
+    S.dataName=window.__fsSample.name;
+    S.yearIdx=S.periods.length-1;
+    show("view-health");
+  });
+  el.querySelector('[data-testid="btn-paste"]').addEventListener("click",()=>csvPasteUI());
+  el.querySelector('[data-testid="btn-upload"]').addEventListener("click",()=>{
+    const inp=document.createElement("input");
+    inp.type="file"; inp.accept=".csv,text/csv";
+    inp.addEventListener("change",()=>{
+      const f=inp.files[0]; if(!f) return;
+      const rd=new FileReader();
+      rd.onload=()=>csvMapUI(String(rd.result||""));
+      rd.readAsText(f);
+    });
+    inp.click();
+  });
+}
+function csvPasteUI(){
+  const z=document.getElementById("csvZone");
+  z.innerHTML=`<div class="card"><h3>Paste CSV</h3>
+    <textarea class="csv" data-testid="csv-text" placeholder="year,revenue,cost of sales,...&#10;2022,1000,620,..."></textarea><br>
+    <button class="btn" data-testid="csv-parse">Map columns</button></div>`;
+  z.querySelector('[data-testid="csv-parse"]').addEventListener("click",()=>{
+    csvMapUI(z.querySelector('[data-testid="csv-text"]').value);
+  });
+}
+function csvMapUI(text){
+  const rows=parseCSV(text);
+  const z=document.getElementById("csvZone");
+  if(rows.length<2){ z.innerHTML=`<div class="warnbox">Need a header row plus at least one year of data.</div>`; return; }
+  const header=rows[0], dataRows=rows.slice(1);
+  const mapped={};
+  header.forEach((h,i)=>{ const f=canonicalize(h); if(f&&!mapped[f]) mapped[f]=i; });
+  let opts=FIELDS.map(f=>{
+    const sel=[`<option value="">— not mapped —</option>`].concat(
+      header.map((h,i)=>`<option value="${i}"${mapped[f.id]===i?" selected":""}>${esc(h)}</option>`)).join("");
+    return `<tr><td>${esc(f.label)}${f.optional?' <span style="color:var(--muted)">(optional)</span>':""}</td>
+      <td><select class="map" data-field="${f.id}" data-testid="map-${f.id}">${sel}</select></td></tr>`;
+  }).join("");
+  // year label column: first unmapped column, or let user pick
+  const usedIdx=new Set(Object.values(mapped));
+  const freeCols=header.map((h,i)=>({h,i})).filter(c=>!usedIdx.has(c.i));
+  const yOpts=freeCols.map(c=>`<option value="${c.i}">${esc(c.h)}</option>`).join("");
+  z.innerHTML=`<div class="card"><h3>Map columns</h3>
+    <p class="hint">Check each line item points at the right column.</p>
+    <table class="grid"><tr><th>Line item</th><th>Column</th></tr>${opts}</table>
+    <p class="hint" style="margin-top:10px">Year labels come from:
+      <select class="map" data-testid="map-year" style="max-width:240px">${yOpts||'<option value="">(none)</option>'}</select></p>
+    <button class="btn" data-testid="csv-load">Load data</button>
+    <div id="csvErr"></div></div>`;
+  z.querySelector('[data-testid="csv-load"]').addEventListener("click",()=>{
+    const col={};
+    z.querySelectorAll("select.map[data-field]").forEach(s=>{ if(s.value!=="") col[s.dataset.field]=+s.value; });
+    const ySel=z.querySelector('[data-testid="map-year"]');
+    const yCol=ySel&&ySel.value!==""?+ySel.value:null;
+    const periods=dataRows.map(r=>{
+      const p={label:yCol!=null?guessYearLabel(r[yCol]):"?"};
+      for(const f of FIELD_IDS) p[f]=col[f]!=null?num(r[col[f]]):null;
+      return p;
+    }).filter(p=>FIELD_IDS.some(f=>p[f]!=null));
+    if(!periods.length){ z.querySelector("#csvErr").innerHTML=`<div class="warnbox">No usable rows found.</div>`; return; }
+    if(periods.length>5) periods.splice(0,periods.length-5); // keep latest 5 max
+    S.periods=periods; S.yearIdx=periods.length-1; S.dataName="Your CSV data";
+    const issues=sfpWarnings(periods);
+    show("view-health");
+    if(issues.length) setTimeout(()=>alert("Heads-up:\n"+issues.join("\n")),50);
+  });
+}
+function sfpWarnings(periods){
+  const out=[];
+  periods.forEach(p=>{
+    const ta=p.total_assets, tl=p.total_liabilities, eq=p.equity;
+    if(ta!=null&&tl!=null&&eq!=null&&tl+eq!==0){
+      const diff=Math.abs(ta-(tl+eq))/Math.abs(tl+eq)*100;
+      if(diff>0.5) out.push(`${p.label}: balance sheet doesn't balance (assets ${fmtNum(ta)} vs L+E ${fmtNum(tl+eq)}).`);
+    }
+  });
+  return out;
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+</script>
+<script>
+"use strict";
+/* ================= Health view ================= */
+const CATS=["Profitability","Liquidity","Leverage","Efficiency","Cash"];
+function ratioCard(r, values){
+  // values: [{label, value}] across years for trend
+  const flag=flagFor(r.id, r.value);
+  const flagTxt=flag==="na"?"n/a":flag;
+  const max=Math.max(...values.map(v=>v.value==null?0:Math.abs(v.value)),0.0001);
+  const bars=values.map(v=>{
+    const h=v.value==null?2:Math.max(6,Math.abs(v.value)/max*52);
+    return `<div class="bar"><div class="yv">${v.value==null?"–":v.value}</div>
+      <div class="col" style="height:${h}px"></div><div class="ylbl">${esc(v.label)}</div></div>`;
+  }).join("");
+  return `<div class="ratio${S.openRatio===r.id?" open":""}" data-testid="ratio-${r.id}" data-ratio="${r.id}">
+    <div class="row1"><span class="lbl">${esc(r.label)}</span>
+      <span class="val">${r.value==null?"n/a":r.value.toLocaleString("en-US")}${r.value==null?"":r.unit}</span>
+      <span class="flag ${flag}">${flagTxt}</span></div>
+    <div class="mean">${esc(r.meaning)}</div>
+    <div class="detail">
+      <div class="formula">${esc(r.formula)}</div>
+      <div class="trendbar">${bars}</div>
+      <div class="hint" style="margin:6px 0 0">Tap again to collapse.</div>
+    </div></div>`;
+}
+function renderHealth(){
+  const el=document.getElementById("view-health");
+  const P=S.periods, i=S.yearIdx, p=P[i];
+  const prev=i>0?P[i-1]:null;
+  const ratios=ratiosFor(p);
+  const allVals={};
+  for(const r of RATIOS) allVals[r.id]=P.map(q=>({label:q.label, value:ratiosFor(q)[r.id].value}));
+  const chips=P.map((q,k)=>`<button class="chip${k===i?" on":""}" data-testid="yr-${k}" data-y="${k}">${esc(q.label)}</button>`).join("");
+  let html=`<h2 data-testid="health-h">2 · Financial health</h2>
+    <p class="hint">${esc(S.dataName||"Your data")} — tap any ratio for its formula and trend.</p>
+    <div class="chips" data-testid="year-chips">${chips}</div>
+    <div data-testid="sfp-warn"></div>`;
+  for(const cat of CATS){
+    const rs=RATIOS.filter(r=>r.cat===cat);
+    html+=`<h3>${cat}</h3>`+rs.map(r=>ratioCard({...r,value:ratios[r.id].value},allVals[r.id])).join("");
+  }
+  // DuPont
+  const dp=dupont(p);
+  const dpOk=dp.identity_ok;
+  html+=`<h3>DuPont — what drives ROE?</h3><div class="card" data-testid="dupont">
+    <div style="font-size:15px">ROE = <b>net margin</b> × <b>asset turnover</b> × <b>equity multiplier</b></div>
+    <div class="kv"><span class="k">Net margin (PAT ÷ Revenue)</span><span class="v">${fmtPct(dp.net_margin)}</span></div>
+    <div class="kv"><span class="k">Asset turnover (Revenue ÷ Assets)</span><span class="v">${fmtX(dp.asset_turnover)}</span></div>
+    <div class="kv"><span class="k">Equity multiplier (Assets ÷ Equity)</span><span class="v">${fmtX(dp.equity_multiplier)}</span></div>
+    <div class="kv"><span class="k">ROE via DuPont</span><span class="v">${fmtPct(dp.roe_dupont)}</span></div>
+    <div class="hint" style="margin:8px 0 0">${dpOk===true?"✓ components multiply exactly to ROE":dpOk===false?"⚠ components don't reconcile — check inputs":"Not enough data for the full split."}</div></div>`;
+  // Piotroski
+  if(prev){
+    const fs=piotroski(p,prev);
+    const crit=fs.criteria.map(c=>`<div class="crit"><span class="s ${c.pass===true?"y":c.pass===false?"n":"u"}">${c.pass===true?"✓":c.pass===false?"✗":"?"}</span>
+      <span>${esc(c.label)}<br><span class="det">${esc(c.detail)}</span></span></div>`).join("");
+    const bandFlag=fs.score>=7?"good":fs.score>=3?"warn":"bad";
+    html+=`<h3>Piotroski F-score — financial strength signals</h3>
+      <div class="card" data-testid="piotroski">
+      <div class="row1" style="display:flex;align-items:baseline;gap:10px">
+        <span style="font-size:22px;font-weight:700">${fs.score} / ${fs.assessed}</span>
+        <span class="flag ${bandFlag}">${fs.band}</span></div>
+      <p class="hint" style="margin:8px 0">${esc(fs.note)} 7–8 strong · 3–6 middling · 0–2 weak.</p>${crit}</div>`;
+  } else {
+    html+=`<h3>Piotroski F-score</h3><div class="card"><p class="hint">Needs at least two years — it compares against the prior year.</p></div>`;
+  }
+  // Altman
+  const az=altman(p);
+  if(az.ok){
+    const zf=az.zone==="safe"?"good":az.zone==="grey"?"warn":"bad";
+    html+=`<h3>Altman Z'' — distress screen</h3><div class="card" data-testid="altman">
+      <div style="display:flex;align-items:baseline;gap:10px">
+      <span style="font-size:22px;font-weight:700">${az.score}</span>
+      <span class="flag ${zf}">${az.zone}</span></div>
+      <p class="hint" style="margin:8px 0">Z'' = 6.56·X1 + 3.26·X2 + 6.72·X3 + 1.05·X4.
+      X1 working capital/assets ${fmtX(az.components.x1)} · X2 retained earnings/assets ${fmtX(az.components.x2)} ·
+      X3 EBIT/assets ${fmtX(az.components.x3)} · X4 equity/liabilities ${fmtX(az.components.x4)}.</p>
+      <p class="hint">Zones: &gt;2.60 safe · 1.10–2.60 grey · &lt;1.10 distress. ${esc(az.note)}</p></div>`;
+  } else {
+    html+=`<h3>Altman Z'' — distress screen</h3><div class="card" data-testid="altman-na">
+      <p class="hint">Not computable — ${esc(az.reason)}. Add retained earnings in the Data step to unlock it.</p></div>`;
+  }
+  // narrative readout — describes what the numbers show, never why
+  html+=`<h3>What the numbers show</h3><div class="readout" data-testid="readout">${narrative(P,i)}</div>`;
+  el.innerHTML=html;
+  el.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{S.yearIdx=+c.dataset.y;renderHealth();}));
+  el.querySelectorAll(".ratio").forEach(r=>r.addEventListener("click",()=>{
+    S.openRatio=S.openRatio===r.dataset.ratio?null:r.dataset.ratio; renderHealth();
+  }));
+  const w=sfpWarnings([p]);
+  el.querySelector('[data-testid="sfp-warn"]').innerHTML=w.length?`<div class="warnbox">${esc(w[0])}</div>`:"";
+}
+// Describe movements only — never invent causes (narrative honesty rule).
+function narrative(P,i){
+  const p=P[i], prev=i>0?P[i-1]:null;
+  const r=ratiosFor(p), rp=prev?ratiosFor(prev):null;
+  const bits=[];
+  const d=(id)=>{const a=r[id].value,b=rp?rp[id].value:null;
+    if(a==null||b==null)return null;const ch=a-b;return {a,b,ch};};
+  const nm=d("net_margin"), roe=d("roe"), cr=d("current_ratio"), gr=d("gearing");
+  if(nm) bits.push(`Net margin is <b>${nm.a}%</b>${prev?` (${nm.ch>=0?"up":"down"} from ${nm.b}% in ${esc(prev.label)})`:""}.`);
+  if(roe) bits.push(`ROE is <b>${roe.a}%</b>${prev?` (${roe.ch>=0?"up":"down"} from ${roe.b}%)`:""}.`);
+  if(cr) bits.push(`Current ratio <b>${cr.a}x</b> — ${cr.a>=1.5?"comfortable short-term cover":cr.a>=1?"thin but positive cover":"current liabilities exceed current assets"}.`);
+  if(gr) bits.push(`Gearing <b>${gr.a}%</b> — ${gr.a<40?"lightly levered":gr.a<70?"moderately levered":"highly levered"}.`);
+  const dp=dupont(p);
+  if(dp.identity_ok){
+    const comps=[["net margin",dp.net_margin],["asset turnover",dp.asset_turnover],["equity multiplier",dp.equity_multiplier]];
+    comps.sort((a,b)=>b[1]-a[1]);
+    bits.push(`DuPont: ROE of <b>${fmtPct(dp.roe_direct)}</b> is the product of its three drivers — strongest contributor in level terms is <b>${comps[0][0]}</b>.`);
+  }
+  if(prev){
+    const fs=piotroski(p,prev);
+    bits.push(`Piotroski signals: <b>${fs.score}/${fs.assessed}</b> positive (${fs.band}).`);
+  }
+  if(!bits.length) bits.push("Not enough data yet for a readout.");
+  return bits.join(" ");
+}
+</script>
+<script>
+"use strict";
+/* ================= Value view ================= */
+function renderValue(){
+  const el=document.getElementById("view-value");
+  const P=S.periods, a=S.asm;
+  const r=dcfCalc(P,a);
+  let html=`<h2 data-testid="value-h">3 · What it's worth</h2>
+  <p class="hint">DCF on forecast free cash flow. Move the assumptions — everything recalculates instantly.</p>
+  <div class="card">
+    <div class="slider-row"><label>Forecast revenue growth <span data-testid="lbl-growth">${a.growth}%</span></label>
+      <input type="range" min="0" max="25" step="0.5" value="${a.growth}" data-testid="sl-growth" data-k="growth"></div>
+    <div class="slider-row"><label>WACC (discount rate) <span data-testid="lbl-wacc">${a.wacc}%</span></label>
+      <input type="range" min="5" max="25" step="0.5" value="${a.wacc}" data-testid="sl-wacc" data-k="wacc"></div>
+    <div class="slider-row"><label>Terminal growth <span data-testid="lbl-terminal">${a.terminal}%</span></label>
+      <input type="range" min="0" max="6" step="0.25" value="${a.terminal}" data-testid="sl-terminal" data-k="terminal"></div>
+  </div>
+  <div id="dcfOut"></div>`;
+  el.innerHTML=html;
+  el.querySelectorAll('input[type=range]').forEach(s=>s.addEventListener("input",()=>{
+    S.asm[s.dataset.k]=+s.value;
+    el.querySelector(`[data-testid="lbl-${s.dataset.k}"]`).textContent=s.value+"%";
+    renderDcfOut();
+  }));
+  renderDcfOut();
+}
+function renderDcfOut(){
+  const el=document.getElementById("dcfOut");
+  const P=S.periods, a=S.asm, r=dcfCalc(P,a);
+  if(!r.ok){ el.innerHTML=`<div class="warnbox">${esc(r.reason)}</div>`; return; }
+  const rows=r.rows.map(x=>`<tr><td>Year ${x.year}</td><td>${fmtMoney(x.revenue)}</td>
+    <td>${fmtMoney(x.ebit)}</td><td>${fmtMoney(x.nopat)}</td><td>${fmtMoney(x.dwc)}</td>
+    <td><b>${fmtMoney(x.fcff)}</b></td></tr>`).join("");
+  const sens=sensitivity(P,a.wacc,a.terminal);
+  const sensRows=sens.wVals.map((w,wi)=>`<tr><th>${w}%</th>`+
+    sens.gVals.map((g,gi)=>{
+      const v=sens.cells[wi][gi];
+      const base=wi===2&&gi===2;
+      return `<td class="${base?"base":""}" data-testid="sens-${wi}-${gi}">${v==null?"–":fmtMoney(v)}</td>`;
+    }).join("")+`</tr>`).join("");
+  const sensHead=`<tr><th>WACC ↓ · g →</th>`+sens.gVals.map(g=>`<th>${g}%</th>`).join("")+`</tr>`;
+  el.innerHTML=`
+  <h3>Free cash flow build</h3>
+  <div class="card" data-testid="fcff-table"><table class="grid">
+    <tr><th></th><th>Revenue</th><th>EBIT</th><th>NOPAT</th><th>ΔWC</th><th>FCFF</th></tr>${rows}</table>
+    <p class="hint" style="margin:8px 0 0">FCFF = NOPAT − Δ working capital. Capex is assumed ≈ depreciation (steady state) — stated, not hidden.</p></div>
+  <h3>DCF valuation</h3>
+  <div class="card" data-testid="dcf-summary">
+    <div class="kv"><span class="k">PV of forecast FCFF (5 yrs)</span><span class="v">${fmtMoney(r.pvFcff)}</span></div>
+    <div class="kv"><span class="k">Terminal value (Gordon)</span><span class="v">${fmtMoney(r.tv)}</span></div>
+    <div class="kv"><span class="k">PV of terminal value</span><span class="v">${fmtMoney(r.pvTv)}</span></div>
+    <div class="kv"><span class="k"><b>Enterprise value</b></span><span class="v" data-testid="ev">${fmtMoney(r.ev)}</span></div>
+    <div class="kv"><span class="k">Less: debt proxy (total liabilities)</span><span class="v">${fmtMoney(r.debtProxy)}</span></div>
+    <div class="kv"><span class="k"><b>Indicative equity value</b></span><span class="v" data-testid="eqval">${fmtMoney(r.equity)}</span></div>
+    <p class="hint" style="margin:8px 0 0">Terminal value is <b>${r.tvShare}%</b> of enterprise value —
+    ${r.tvShare>70?"most of the value sits beyond the forecast — treat with care":r.tvShare>50?"about half the value is in the long term":"most value comes from the forecast years"}.</p></div>
+  <h3>Sensitivity — equity value</h3>
+  <div class="card"><div style="overflow-x:auto"><table class="sens" data-testid="sens-table">${sensHead}${sensRows}</table></div>
+    <p class="hint" style="margin:8px 0 0">Each cell re-runs the full DCF. Highlighted cell = your current assumptions.</p></div>
+  <h3>Assumptions (all explicit)</h3>
+  <div class="card" style="font-size:14px" data-testid="assumptions">
+    <div class="kv"><span class="k">EBIT margin held at</span><span class="v">${r.base.ebitMargin}% (latest year)</span></div>
+    <div class="kv"><span class="k">Tax rate</span><span class="v">${r.base.taxRate}% (latest effective rate)</span></div>
+    <div class="kv"><span class="k">Working capital</span><span class="v">${r.base.wcRatio}% of revenue (latest year)</span></div>
+    <div class="kv"><span class="k">Capex vs depreciation</span><span class="v">assumed equal (steady state)</span></div>
+    <div class="kv"><span class="k">Forecast horizon</span><span class="v">5 years</span></div>
+    <div class="kv"><span class="k">Debt proxy</span><span class="v">total liabilities (book)</span></div>
+  </div>
+  <div class="readout" data-testid="value-readout">${valueNarrative(r,a)}</div>`;
+}
+function valueNarrative(r,a){
+  const bits=[];
+  bits.push(`At <b>${a.growth}%</b> growth, <b>${a.wacc}%</b> WACC and <b>${a.terminal}%</b> terminal growth, enterprise value is <b>${fmtMoney(r.ev)}</b>.`);
+  bits.push(`The terminal value contributes <b>${r.tvShare}%</b> of that — the valuation is ${r.tvShare>70?"driven mainly by what happens after year 5":"balanced across the forecast and beyond"}.`);
+  bits.push(`After the debt proxy, indicative equity value is <b>${fmtMoney(r.equity)}</b>. Move the WACC slider to feel how sensitive this is — that sensitivity table is the real lesson.`);
+  return bits.join(" ");
+}
+
+// ---------- init ----------
+renderData();
+show("view-data");
+window.__fsStudy={
+  S, FIELDS, ratiosFor, dupont, piotroski, altman, dcfCalc, sensitivity,
+  parseCSV, canonicalize, derive, flagFor,
+  loadSample(){ S.periods=window.__fsSample.years.map(y=>({label:y.label,...y}));
+    S.dataName=window.__fsSample.name; S.yearIdx=S.periods.length-1; },
+};
+</script>
+</body>
+</html>
