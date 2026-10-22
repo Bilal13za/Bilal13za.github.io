@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scraper Studio Web — table extractor for market data</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#ffffff; --ink:#1c2330; --muted:#687182;
+          --line:#e3e6eb; --accent:#1f6feb; --accent-d:#1859c4; --ok:#1a7f37; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+         background:var(--bg); color:var(--ink); line-height:1.5; }
+  header { background:#101828; color:#fff; padding:18px 20px; }
+  header h1 { margin:0 0 4px; font-size:20px; }
+  header p { margin:0; color:#b8c0cc; font-size:13px; }
+  main { max-width:960px; margin:0 auto; padding:16px 14px 60px; }
+  section.card { background:var(--card); border:1px solid var(--line);
+                 border-radius:10px; padding:16px; margin:14px 0; }
+  section.card h2 { margin:0 0 4px; font-size:16px; }
+  section.card h2 .step { display:inline-block; background:var(--accent); color:#fff;
+      font-size:12px; border-radius:20px; padding:2px 10px; margin-right:8px;
+      vertical-align:2px; }
+  .hint { color:var(--muted); font-size:13px; margin:4px 0 10px; }
+  textarea { width:100%; min-height:120px; font-family:ui-monospace,Consolas,monospace;
+             font-size:12px; border:1px solid var(--line); border-radius:8px; padding:10px; }
+  button { background:var(--accent); color:#fff; border:0; border-radius:8px;
+           padding:10px 16px; font-size:14px; cursor:pointer; margin:6px 6px 6px 0; }
+  button:hover { background:var(--accent-d); }
+  button.ghost { background:#fff; color:var(--ink); border:1px solid var(--line); }
+  button.ghost:hover { background:#f0f2f5; }
+  button:disabled { opacity:.45; cursor:default; }
+  .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  input[type=text], select { border:1px solid var(--line); border-radius:8px;
+      padding:9px 10px; font-size:14px; }
+  input[type=text] { min-width:200px; }
+  .table-card { border:1px solid var(--line); border-radius:8px; padding:10px 12px;
+      margin:8px 0; cursor:pointer; }
+  .table-card:hover { border-color:var(--accent); }
+  .table-card.sel { border:2px solid var(--accent); background:#f0f6ff; }
+  .table-card b { font-size:14px; }
+  .table-card .meta { color:var(--muted); font-size:12px; }
+  .tblwrap { overflow-x:auto; margin-top:10px; border:1px solid var(--line);
+             border-radius:8px; }
+  table.prev { border-collapse:collapse; width:100%; font-size:12px; }
+  table.prev th, table.prev td { border:1px solid var(--line); padding:6px 8px;
+      text-align:left; white-space:nowrap; }
+  table.prev th { background:#f0f2f5; }
+  .colrow { display:flex; gap:8px; align-items:center; padding:8px 0;
+      border-bottom:1px dashed var(--line); flex-wrap:wrap; }
+  .colrow .orig { color:var(--muted); font-size:12px; min-width:110px; }
+  .colrow input[type=text] { padding:6px 8px; font-size:13px; min-width:140px; }
+  .colrow select { padding:6px 8px; font-size:13px; }
+  pre.code { background:#101828; color:#d6deeb; padding:14px; border-radius:8px;
+      overflow-x:auto; font-size:12px; }
+  .pill { display:inline-block; background:#eef4ff; color:var(--accent-d);
+      border-radius:20px; padding:2px 10px; font-size:12px; margin:2px 4px 2px 0; }
+  .pageitem { border:1px solid var(--line); border-radius:8px; padding:8px 12px;
+      margin:6px 0; font-size:13px; display:flex; justify-content:space-between;
+      align-items:center; }
+  #toast { position:fixed; bottom:18px; left:50%; transform:translateX(-50%);
+      background:#101828; color:#fff; padding:10px 18px; border-radius:8px;
+      font-size:13px; display:none; z-index:99; }
+  .kbd { background:#eef0f3; border:1px solid #d5d9e0; border-radius:4px;
+      padding:1px 6px; font-family:ui-monospace,monospace; font-size:12px; }
+  details.help { margin-top:10px; font-size:13px; color:var(--muted); }
+  details.help summary { cursor:pointer; color:var(--accent-d); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Scraper Studio Web</h1>
+  <p>Turn any market-data page into a clean spreadsheet — no installs, works offline after first load.</p>
+</header>
+<main>
+
+<section class="card" id="s1">
+  <h2><span class="step">1</span>Get the page</h2>
+  <p class="hint">Browsers can't fetch other sites directly, so bring the page to the app:
+  open the market-data page, press <span class="kbd">Ctrl</span>+<span class="kbd">U</span>
+  (or type <span class="kbd">view-source:</span> before the address on your phone),
+  copy everything, paste below. Or load a saved <span class="kbd">.html</span> file.</p>
+  <textarea id="htmlIn" placeholder="Paste the page's HTML source here…"></textarea>
+  <div class="row">
+    <button id="parseBtn">Detect tables</button>
+    <button class="ghost" id="demoBtn">Try demo market data</button>
+    <label class="ghost" style="border:1px solid var(--line);border-radius:8px;padding:10px 16px;font-size:14px;cursor:pointer;margin:6px 6px 6px 0;">
+      Load .html file <input type="file" id="fileIn" accept=".html,.htm,text/html" style="display:none">
+    </label>
+    <button class="ghost" id="clearBtn">Clear</button>
+  </div>
+  <details class="help"><summary>Where do I get market-data pages?</summary>
+    <p>Any PSX/broker page with a prices table works. The app never sends the page
+    anywhere — everything happens on your device. Tip: pages that load data with
+    JavaScript may show empty tables in view-source; in that case use your browser's
+    "Save page" first, then load the saved file.</p>
+  </details>
+</section>
+
+<section class="card" id="s2" hidden>
+  <h2><span class="step">2</span>Pick the table</h2>
+  <p class="hint" id="tblCount"></p>
+  <div id="tblList"></div>
+  <div class="tblwrap" id="prevWrap" hidden>
+    <table class="prev"><thead><tr id="prevHead"></tr></thead>
+    <tbody id="prevBody"></tbody></table>
+  </div>
+  <p class="hint" id="prevNote"></p>
+</section>
+
+<section class="card" id="s3" hidden>
+  <h2><span class="step">3</span>Clean the columns</h2>
+  <p class="hint">Rename, hide, or set the type. Number columns get commas, <span class="kbd">%</span>
+  and <span class="kbd">( )</span> negatives cleaned so Excel sees real numbers.</p>
+  <div id="colList"></div>
+</section>
+
+<section class="card" id="s4" hidden>
+  <h2><span class="step">4</span>More pages <span style="font-weight:normal;color:var(--muted);font-size:13px;">(optional)</span></h2>
+  <p class="hint">Paginated listing? Paste each extra page's HTML — the app grabs the same
+  table from every page and stacks the rows.</p>
+  <div id="pageList"></div>
+  <div class="row">
+    <button class="ghost" id="addPageBtn">+ Add another page</button>
+  </div>
+  <div id="addPageBox" hidden>
+    <textarea id="htmlIn2" placeholder="Paste the next page's HTML source here…"></textarea>
+    <div class="row"><button id="appendBtn">Append this page's rows</button></div>
+  </div>
+</section>
+
+<section class="card" id="s5" hidden>
+  <h2><span class="step">5</span>Export</h2>
+  <p class="hint" id="rowCount"></p>
+  <div class="row">
+    <button id="csvBtn">Download CSV</button>
+    <button class="ghost" id="tsvBtn">Copy for Excel (TSV)</button>
+  </div>
+</section>
+
+<section class="card" id="s6" hidden>
+  <h2><span class="step">6</span>Python code <span style="font-weight:normal;color:var(--muted);font-size:13px;">(optional)</span></h2>
+  <p class="hint">The equivalent scraper script, in case you ever want to automate it.
+  Type the page's address so the script knows where to fetch from.</p>
+  <div class="row">
+    <input type="text" id="urlIn" placeholder="https://example.com/market-prices" style="flex:1">
+    <button class="ghost" id="codeBtn">Generate</button>
+    <button class="ghost" id="copyCodeBtn">Copy</button>
+  </div>
+  <pre class="code" id="codeOut"># Your generated script will appear here.</pre>
+</section>
+
+<section class="card" id="s7" hidden>
+  <h2><span class="step">7</span>Save this setup</h2>
+  <p class="hint">Save the table choice + column setup as a named recipe (kept in this browser).</p>
+  <div class="row">
+    <input type="text" id="recipeName" placeholder="e.g. KSE daily prices">
+    <button class="ghost" id="saveRecipeBtn">Save recipe</button>
+  </div>
+  <div id="recipeList"></div>
+</section>
+
+</main>
+<div id="toast"></div>
+<script>
+"use strict";
+/* ================= Engine (no DOM dependencies except DOMParser) ================= */
+const SS = (() => {
+  // Parse HTML, return top-level tables only (nested tables excluded).
+  function parseTables(html) {
+    const doc = new DOMParser().parseFromString(html || "", "text/html");
+    const all = Array.from(doc.querySelectorAll("table"));
+    const tops = all.filter(t => !(t.parentElement && t.parentElement.closest("table")));
+    return tops.map((t, i) => describeTable(t, i));
+  }
+
+  function rowCells(tr) {
+    const cells = [];
+    const list = tr.cells ? Array.from(tr.cells) : Array.from(tr.querySelectorAll("th,td"));
+    for (const c of list) {
+      const span = Math.max(1, parseInt(c.getAttribute("colspan") || "1", 10) || 1);
+      const text = (c.textContent || "").trim().replace(/\s+/g, " ");
+      for (let k = 0; k < span; k++) cells.push(text);
+    }
+    return cells;
+  }
+
+  // Rows belonging to THIS table (excludes thead rows handled separately,
+  // and rows of any nested table).
+  function bodyRows(table, thead) {
+    return Array.from(table.querySelectorAll("tr")).filter(tr => {
+      if (tr.closest("table") !== table) return false;
+      if (thead && tr.closest("thead")) return false;
+      return true;
+    });
+  }
+
+  function describeTable(table, index) {
+    const thead = table.querySelector("thead");
+    let headers = null, headerFrom = "";
+    let rows = bodyRows(table, thead);
+    let dataRows = rows.map(rowCells);
+    if (thead) {
+      const hrs = Array.from(thead.querySelectorAll("tr"));
+      if (hrs.length) { headers = rowCells(hrs[hrs.length - 1]); headerFrom = "thead"; }
+    }
+    if (!headers && dataRows.length) {
+      const firstCells = rows[0].querySelectorAll("th");
+      if (firstCells.length) { headers = dataRows[0]; dataRows = dataRows.slice(1); headerFrom = "first row (<th>)"; }
+    }
+    const width = Math.max(headers ? headers.length : 0,
+                           ...dataRows.map(r => r.length), 0);
+    const pad = r => { const c = r.slice(); while (c.length < width) c.push(""); return c.slice(0, width); };
+    if (!headers) { headers = Array.from({length: width}, (_, i) => "Column " + (i + 1)); headerFrom = "generated"; }
+    else headers = pad(headers);
+    dataRows = dataRows.map(pad).filter(r => r.some(c => c !== ""));
+    return { index, headers, rows: dataRows, headerFrom,
+             nrows: dataRows.length, ncols: width };
+  }
+
+  // Extract one table's data (headers + rows) by index.
+  function extractTable(html, index) {
+    const t = parseTables(html).find(t => t.index === index);
+    if (!t) return null;
+    return { headers: t.headers.slice(), rows: t.rows.map(r => r.slice()), headerFrom: t.headerFrom };
+  }
+
+  // Clean one value per declared type.
+  function cleanValue(v, type) {
+    const s = String(v == null ? "" : v);
+    if (type === "number") return cleanNumber(s);
+    return s.trim();
+  }
+  function cleanNumber(s) {
+    let t = s.trim();
+    if (!t) return "";
+    let neg = false;
+    if (/^\(.*\)$/.test(t)) { neg = true; t = t.slice(1, -1).trim(); }
+    t = t.replace(/^(Rs\.?|PKR|PKRs\.?|\$|€|£)\s*/i, "").replace(/\s*(Rs\.?|PKR|PKRs\.?)$/i, "");
+    t = t.replace(/[,\s%]/g, "");
+    if (/^[+-]?(\d+(\.\d+)?|\.\d+)$/.test(t)) {
+      const n = parseFloat(t);
+      const v = neg ? -n : n;
+      return String(Object.is(v, -0) ? 0 : v);
+    }
+    return s.trim(); // not actually numeric: leave untouched, never invent
+  }
+
+  function applyColumns(table, cols) {
+    // cols: [{orig, name, visible, type, i}] — i = index into table.headers
+    const keep = cols.filter(c => c.visible);
+    const headers = keep.map(c => c.name || c.orig);
+    const rows = table.rows.map(r => keep.map(c => cleanValue(r[c.i], c.type)));
+    return { headers, rows };
+  }
+
+  function csvCell(s) {
+    s = String(s);
+    return (/[",\n\r]/.test(s)) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }
+  function toCSV(headers, rows) {
+    const lines = [headers.map(csvCell).join(",")];
+    for (const r of rows) lines.push(r.map(csvCell).join(","));
+    return lines.join("\r\n");
+  }
+  function toTSV(headers, rows) {
+    const cell = s => String(s).replace(/\t/g, " ").replace(/\r?\n/g, " ");
+    const lines = [headers.map(cell).join("\t")];
+    for (const r of rows) lines.push(r.map(cell).join("\t"));
+    return lines.join("\n");
+  }
+
+  // Deterministic Python equivalent (requests + beautifulsoup4 + pandas).
+  function genPython(o) {
+    const url = o.url && o.url.trim() ? o.url.trim() : "https://example.com/market-prices";
+    const ti = o.tableIndex;
+    const ren = o.columns.filter(c => c.visible && c.name && c.name !== c.orig)
+      .map(c => `    ${JSON.stringify(c.orig)}: ${JSON.stringify(c.name)},`).join("\n");
+    const num = o.columns.filter(c => c.visible && c.type === "number").map(c => JSON.stringify(c.name || c.orig)).join(", ");
+    const keep = o.columns.filter(c => c.visible).map(c => JSON.stringify(c.orig)).join(", ");
+    return `# Auto-generated by Scraper Studio Web (single-file, offline).
+# pip install requests beautifulsoup4 pandas lxml
+import re
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
+
+URL = ${JSON.stringify(url)}
+TABLE_INDEX = ${ti}  # the table you picked (0-based, top-level tables only)
+
+HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ScraperStudio/1.0"}
+r = requests.get(URL, headers=HEADERS, timeout=20)
+r.raise_for_status()
+
+soup = BeautifulSoup(r.text, "lxml")
+tops = [t for t in soup.find_all("table") if not t.find_parent("table")]
+table = tops[TABLE_INDEX]
+
+def cells(tr):
+    out = []
+    for c in tr.find_all(["th", "td"]):
+        span = int(c.get("colspan", 1) or 1)
+        txt = re.sub(r"\\s+", " ", c.get_text()).strip()
+        out.extend([txt] * span)
+    return out
+
+thead = table.find("thead")
+if thead and thead.find("tr"):
+    headers = cells(thead.find_all("tr")[-1])
+    data_trs = [tr for tr in table.find_all("tr") if not tr.find_parent("thead")]
+else:
+    all_trs = table.find_all("tr")
+    first = cells(all_trs[0]) if all_trs else []
+    if all_trs and all_trs[0].find("th"):
+        headers, data_trs = first, all_trs[1:]
+    else:
+        headers, data_trs = None, all_trs
+
+rows = [cells(tr) for tr in data_trs]
+width = max([len(headers or [])] + [len(r) for r in rows] + [0])
+if not headers:
+    headers = [f"Column {i+1}" for i in range(width)]
+headers = (headers + [""] * width)[:width]
+rows = [(r + [""] * width)[:width] for r in rows if any(x.strip() for x in r)]
+
+df = pd.DataFrame(rows, columns=headers)
+df = df[[${keep}]]
+${ren ? "df = df.rename(columns={\n" + ren + "\n})" : "# (no renames)"}
+for col in [${num}]:
+    df[col] = (df[col].astype(str).str.strip()
+               .str.replace(r"^\\((.*)\\)$", r"-\\1", regex=True)
+               .str.replace(r"[,%\\s]", "", regex=True)
+               .str.replace(r"^(Rs\\.?|PKR|\\$)", "", regex=True))
+    df[col] = pd.to_numeric(df[col], errors="coerce")
+
+df.to_csv("market_data.csv", index=False)
+print(df.head(10).to_string(index=False))
+print(f"\\nSaved {len(df)} rows x {len(df.columns)} cols -> market_data.csv")`;
+  }
+
+  return { parseTables, extractTable, cleanValue, cleanNumber,
+           applyColumns, toCSV, toTSV, genPython };
+})();
+/* ================= UI ================= */
+const $ = id => document.getElementById(id);
+const state = { pages: [], tableIndex: 0, columns: [] };
+
+function toast(msg) {
+  const t = $("toast"); t.textContent = msg; t.style.display = "block";
+  clearTimeout(t._h); t._h = setTimeout(() => t.style.display = "none", 2200);
+}
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+function currentTable() {
+  const p0 = state.pages[0]; if (!p0) return null;
+  return p0.tables.find(t => t.index === state.tableIndex) || null;
+}
+function combinedData() {
+  const t0 = currentTable(); if (!t0) return null;
+  const headers = t0.headers.slice(), rows = [], skipped = [];
+  state.pages.forEach((p, pi) => {
+    const t = p.tables.find(t => t.index === state.tableIndex);
+    if (!t) { skipped.push(pi + 1); return; }
+    const w = headers.length;
+    t.rows.forEach(r => { const c = r.slice(0, w); while (c.length < w) c.push(""); rows.push(c); });
+  });
+  return { headers, rows, skipped };
+}
+function initColumns(headers) {
+  state.columns = headers.map((h, i) => ({ orig: h, name: h, visible: true, type: "text", i }));
+}
+function result() {
+  const d = combinedData(); if (!d) return null;
+  return SS.applyColumns(d, state.columns);
+}
+
+function renderTables() {
+  const p0 = state.pages[0];
+  $("tblCount").textContent = p0.tables.length
+    ? p0.tables.length + " tables found on page 1. Pick the one with your data."
+    : "No <table> elements found. Try view-source of the page (not the rendered view).";
+  $("tblList").innerHTML = p0.tables.map(t =>
+    `<div class="table-card${t.index === state.tableIndex ? " sel" : ""}" data-i="${t.index}" role="button" tabindex="0">
+       <b>Table ${t.index + 1}</b>
+       <span class="meta"> — ${t.nrows} rows × ${t.ncols} cols · headers: ${esc(t.headerFrom)}</span><br>
+       <span class="meta">${esc(t.headers.slice(0, 4).join(" | "))}${t.headers.length > 4 ? " | …" : ""}</span>
+     </div>`).join("");
+  document.querySelectorAll(".table-card").forEach(el => {
+    const pick = () => { state.tableIndex = +el.dataset.i;
+      const t = currentTable(); initColumns(t.headers); renderAll(); };
+    el.addEventListener("click", pick);
+    el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") pick(); });
+  });
+}
+function renderPreview() {
+  const r = result();
+  const showSecs = ["s3", "s4", "s5", "s6", "s7"];
+  if (!r) { showSecs.forEach(s => $(s).hidden = true); $("prevWrap").hidden = true; return; }
+  showSecs.forEach(s => $(s).hidden = false);
+  $("prevHead").innerHTML = r.headers.map(h => `<th>${esc(h)}</th>`).join("");
+  $("prevBody").innerHTML = r.rows.slice(0, 15).map(row =>
+    `<tr>${row.map(c => `<td>${esc(c)}</td>`).join("")}</tr>`).join("");
+  $("prevWrap").hidden = false;
+  $("prevNote").textContent = `Showing ${Math.min(15, r.rows.length)} of ${r.rows.length} rows` +
+    (combinedData().skipped.length ? ` · page(s) ${combinedData().skipped.join(", ")} had no Table ${state.tableIndex + 1}, skipped` : "") + ".";
+  $("rowCount").textContent = `${r.rows.length} rows × ${r.headers.length} columns ready across ${state.pages.length} page(s).`;
+}
+function renderColumns() {
+  $("colList").innerHTML = state.columns.map((c) =>
+    `<div class="colrow">
+       <span class="orig" title="Original header">${esc(c.orig) || "(blank)"}</span>
+       <input type="text" data-i="${c.i}" data-f="name" value="${esc(c.name)}" aria-label="Rename column">
+       <select data-i="${c.i}" data-f="type" aria-label="Column type">
+         ${["text", "number", "date"].map(t => `<option value="${t}"${c.type === t ? " selected" : ""}>${t[0].toUpperCase() + t.slice(1)}</option>`).join("")}
+       </select>
+       <label><input type="checkbox" data-i="${c.i}" data-f="visible"${c.visible ? " checked" : ""}> keep</label>
+     </div>`).join("");
+  $("colList").querySelectorAll("input,select").forEach(el => {
+    el.addEventListener("change", () => {
+      const c = state.columns.find(x => x.i === +el.dataset.i), f = el.dataset.f;
+      if (!c) return;
+      c[f] = (f === "visible") ? el.checked : el.value;
+      renderPreview();
+    });
+  });
+}
+function renderPages() {
+  $("pageList").innerHTML = state.pages.map((p, i) => {
+    const t = p.tables.find(t => t.index === state.tableIndex);
+    return `<div class="pageitem"><span>Page ${i + 1} — ${t ? t.nrows + " rows" : "no matching table"}</span>
+      ${i > 0 ? `<button class="ghost" data-p="${i}" style="margin:0;padding:4px 10px;">Remove</button>` : `<span class="pill">base</span>`}</div>`;
+  }).join("");
+  $("pageList").querySelectorAll("button[data-p]").forEach(b =>
+    b.addEventListener("click", () => { state.pages.splice(+b.dataset.p, 1); renderAll(); }));
+}
+function renderRecipes() {
+  let recs = {};
+  try { recs = JSON.parse(localStorage.getItem("ssw_recipes") || "{}"); } catch (e) {}
+  const names = Object.keys(recs);
+  $("recipeList").innerHTML = names.length ? names.map(n =>
+    `<div class="pageitem"><span>${esc(n)}</span><span>
+      <button class="ghost" data-r="${esc(n)}" data-a="load" style="margin:0 4px 0 0;padding:4px 10px;">Load</button>
+      <button class="ghost" data-r="${esc(n)}" data-a="del" style="margin:0;padding:4px 10px;">Delete</button>
+    </span></div>`).join("") : `<p class="hint">No saved recipes yet.</p>`;
+  $("recipeList").querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+    let all = {}; try { all = JSON.parse(localStorage.getItem("ssw_recipes") || "{}"); } catch (e) {}
+    const n = b.dataset.r;
+    if (b.dataset.a === "del") { delete all[n]; }
+    else {
+      const r = all[n], t = currentTable();
+      if (!t) { toast("Parse a page first, then load the recipe"); return; }
+      if (!r || r.tableIndex !== state.tableIndex) { toast("Recipe was saved for a different table"); return; }
+      const mapped = [];
+      for (const sc of r.columns) {
+        const i = t.headers.indexOf(sc.orig);
+        if (i >= 0) mapped.push({ orig: sc.orig, name: sc.name, visible: sc.visible, type: sc.type, i });
+      }
+      t.headers.forEach((h, i) => {
+        if (!mapped.some(m => m.i === i)) mapped.push({ orig: h, name: h, visible: true, type: "text", i });
+      });
+      mapped.sort((a, b) => a.i - b.i);
+      if (!mapped.length) { toast("No matching columns on this page"); return; }
+      state.columns = mapped;
+      renderAll(); toast("Recipe loaded");
+      return;
+    }
+    try { localStorage.setItem("ssw_recipes", JSON.stringify(all)); } catch (e) {}
+    renderRecipes();
+  }));
+}
+function renderAll() { renderTables(); renderColumns(); renderPages(); renderPreview(); renderRecipes(); }
+
+function parseFirst(html) {
+  const tables = SS.parseTables(html);
+  if (!tables.length) { toast("No tables found in that HTML"); return false; }
+  state.pages = [{ html, tables }];
+  state.tableIndex = 0;
+  initColumns(tables[0].headers);
+  $("s2").hidden = false;
+  renderAll();
+  toast(tables.length + " table(s) detected");
+  return true;
+}
+
+$("parseBtn").addEventListener("click", () => {
+  const html = $("htmlIn").value;
+  if (!html.trim()) { toast("Paste some HTML first"); return; }
+  parseFirst(html);
+});
+$("clearBtn").addEventListener("click", () => {
+  $("htmlIn").value = ""; state.pages = []; state.columns = [];
+  ["s2","s3","s4","s5","s6","s7"].forEach(s => $(s).hidden = true);
+});
+$("fileIn").addEventListener("change", e => {
+  const f = e.target.files[0]; if (!f) return;
+  const rd = new FileReader();
+  rd.onload = () => { $("htmlIn").value = String(rd.result || ""); parseFirst($("htmlIn").value); };
+  rd.readAsText(f);
+});
+$("demoBtn").addEventListener("click", () => { $("htmlIn").value = DEMO_HTML; parseFirst(DEMO_HTML); });
+
+$("addPageBtn").addEventListener("click", () => { $("addPageBox").hidden = false; $("htmlIn2").focus(); });
+$("appendBtn").addEventListener("click", () => {
+  const html = $("htmlIn2").value;
+  if (!html.trim()) { toast("Paste the page's HTML first"); return; }
+  const tables = SS.parseTables(html);
+  const t = tables.find(t => t.index === state.tableIndex);
+  if (!t) { toast(`Table ${state.tableIndex + 1} not found on that page`); return; }
+  state.pages.push({ html, tables });
+  $("htmlIn2").value = ""; $("addPageBox").hidden = true;
+  renderAll(); toast("Page added");
+});
+
+function download(name, text, mime) {
+  const blob = new Blob([text], { type: mime });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+$("csvBtn").addEventListener("click", () => {
+  const r = result(); if (!r) return;
+  download("market_data.csv", SS.toCSV(r.headers, r.rows), "text/csv;charset=utf-8");
+  toast("CSV downloaded");
+});
+$("tsvBtn").addEventListener("click", async () => {
+  const r = result(); if (!r) return;
+  const tsv = SS.toTSV(r.headers, r.rows);
+  try { await navigator.clipboard.writeText(tsv); toast("Copied — paste into Excel"); }
+  catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = tsv; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); toast("Copied — paste into Excel"); }
+    catch (e2) { toast("Copy failed — use Download CSV"); }
+    ta.remove();
+  }
+});
+$("codeBtn").addEventListener("click", () => {
+  $("codeOut").textContent = SS.genPython({ url: $("urlIn").value, tableIndex: state.tableIndex, columns: state.columns });
+});
+$("copyCodeBtn").addEventListener("click", async () => {
+  const t = $("codeOut").textContent;
+  try { await navigator.clipboard.writeText(t); toast("Code copied"); }
+  catch (e) { toast("Copy failed in this viewer"); }
+});
+$("saveRecipeBtn").addEventListener("click", () => {
+  const n = $("recipeName").value.trim();
+  if (!n) { toast("Name the recipe first"); return; }
+  let all = {}; try { all = JSON.parse(localStorage.getItem("ssw_recipes") || "{}"); } catch (e) {}
+  try { localStorage.setItem("ssw_recipes", JSON.stringify(all)); } catch (e) {}
+  all[n] = { tableIndex: state.tableIndex, columns: state.columns.map(c => ({...c})) };
+  try { localStorage.setItem("ssw_recipes", JSON.stringify(all)); toast("Recipe saved"); }
+  catch (e) { toast("Couldn't save (storage blocked)"); return; }
+  $("recipeName").value = "";
+  renderRecipes();
+});
+
+const DEMO_HTML = `<html><body>
+<p>KSE daily prices - demo</p>
+<table><thead><tr><th>Symbol</th><th>Open</th><th>High</th><th>Low</th><th>Close</th><th>Volume</th><th>Change %</th></tr></thead><tbody>
+<tr><td>PRL</td><td>412.50</td><td>431.55</td><td>410.20</td><td>429.80</td><td>12,450,300</td><td>+4.61%</td></tr>
+<tr><td>PSO</td><td>318.00</td><td>322.75</td><td>316.40</td><td>321.20</td><td>3,210,450</td><td>+1.01%</td></tr>
+<tr><td>OGDC</td><td>245.30</td><td>248.10</td><td>244.00</td><td>247.35</td><td>5,678,900</td><td>+0.84%</td></tr>
+<tr><td>PPL</td><td>189.75</td><td>192.40</td><td>188.90</td><td>191.30</td><td>2,345,600</td><td>+0.82%</td></tr>
+<tr><td>NRL</td><td>502.10</td><td>508.00</td><td>500.50</td><td>506.65</td><td>876,400</td><td>+0.91%</td></tr>
+<tr><td>MARI</td><td>1,845.00</td><td>1,852.25</td><td>1,820.00</td><td>1,829.90</td><td>412,750</td><td>-0.82%</td></tr>
+<tr><td>POL</td><td>672.30</td><td>675.00</td><td>668.20</td><td>669.40</td><td>298,300</td><td>-1.03%</td></tr>
+<tr><td>ATRL</td><td>890.00</td><td>896.50</td><td>888.75</td><td>894.00</td><td>156,200</td><td>+0.45%</td></tr>
+</tbody></table>
+<table><tr><td>nav</td><td>home | markets | contact</td></tr></table>
+</body></html>`;
+/* init: show saved recipes even before anything is parsed */
+(function init() {
+  let recs = {};
+  try { recs = JSON.parse(localStorage.getItem("ssw_recipes") || "{}"); } catch (e) {}
+  if (Object.keys(recs).length) { $("s7").hidden = false; renderRecipes(); }
+})();
+</script>
+</body>
+</html>
