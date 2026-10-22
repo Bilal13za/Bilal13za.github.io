@@ -52,6 +52,13 @@ table.grid th{color:var(--muted); font-weight:600; font-size:13px;}
   border-radius:999px; padding:3px 10px; color:#fff;}
 .flag.good{background:var(--good);} .flag.warn{background:var(--warn);} .flag.bad{background:var(--bad);}
 .flag.na{background:#9aa1b2;}
+h4{font-size:13px; margin:16px 4px 6px; color:var(--muted);
+  text-transform:uppercase; letter-spacing:.5px;}
+.dchip{display:inline-block; font-size:12px; font-weight:700; border-radius:999px;
+  padding:3px 10px; margin:2px 6px 2px 0; color:#fff; white-space:nowrap;}
+.dchip.good{background:var(--good);} .dchip.warn{background:var(--warn);}
+.dchip.bad{background:var(--bad);} .dchip.na{background:#9aa1b2;}
+.cmpcols{margin-top:6px;}
 .ratio{border:1px solid var(--line); border-radius:var(--radius); background:var(--card);
   padding:12px 14px; margin:8px 0; cursor:pointer;}
 .ratio .row1{display:flex; align-items:baseline; gap:10px;}
@@ -548,6 +555,122 @@ function ratioCard(r, values){
       <div class="hint" style="margin:6px 0 0">Tap again to collapse.</div>
     </div></div>`;
 }
+// ---------- period comparison (latest vs prior, prior vs before) ----------
+// Economic direction semantics for line items: is "up" good, bad, or ambiguous?
+const ITEM_SEMANTICS={
+  revenue:"good", cogs:"bad", opex:"bad", interest:"bad", tax:"bad",
+  current_assets:"good", inventory:"warn",
+  current_liabilities:"bad", total_assets:"good", total_liabilities:"bad",
+  equity:"good", ocf:"good",
+};
+const CMP_FIELDS=FIELDS.filter(f=>!f.optional);
+function deltaInfo(cur,prev){
+  if(cur==null||prev==null) return null;
+  const abs=r2(cur-prev);
+  return {abs, pct:prev===0?null:r2(abs/prev*100), dir:abs>0?1:abs<0?-1:0};
+}
+// sem: "good" (up is favourable) | "bad" (up is adverse) | "warn" (ambiguous)
+function semClass(sem,dir){
+  if(dir===0) return "na";
+  if(sem==="warn") return "warn";
+  return (dir>0)===(sem==="good")?"good":"bad";
+}
+function signedMoney(v){return (v>0?"+":"")+fmtMoney(v);}
+function moneyChip(label,d,sem){
+  if(!d) return `<span class="dchip na">${esc(label)} · n/a</span>`;
+  if(d.dir===0) return `<span class="dchip na">${esc(label)} · — no change</span>`;
+  const arrow=d.dir>0?"▲":"▼";
+  const pctTxt=d.pct==null?"":` (${d.pct>0?"+":""}${d.pct}%)`;
+  return `<span class="dchip ${semClass(sem,d.dir)}">${esc(label)} ${arrow} ${signedMoney(d.abs)}${pctTxt}</span>`;
+}
+function ratioChip(label,d,r){
+  if(!d) return `<span class="dchip na">${esc(label)} · n/a</span>`;
+  if(d.dir===0) return `<span class="dchip na">${esc(label)} · — no change</span>`;
+  const arrow=d.dir>0?"▲":"▼";
+  const mag=(d.abs>0?"+":"")+d.abs+(r.unit==="%"?"pp":r.unit);
+  return `<span class="dchip ${semClass(r.invert?"bad":"good",d.dir)}">${esc(label)} ${arrow} ${mag}</span>`;
+}
+function itemSentence(f,d,la,lb,va,vb){
+  if(!d) return null;
+  const sem=ITEM_SEMANTICS[f.id];
+  const verb=d.dir>0?"rose":d.dir<0?"fell":"was unchanged";
+  const judge=d.dir===0?"no change to note."
+    :sem==="warn"?"direction alone is ambiguous."
+    :((d.dir>0)===(sem==="good"))?"a favourable move.":"an adverse move.";
+  const pctTxt=d.pct==null?"":` (${d.pct>0?"+":""}${d.pct}%)`;
+  return `${f.label} ${verb} from ${fmtMoney(va)} (${esc(la)}) to ${fmtMoney(vb)} (${esc(lb)}): ${signedMoney(d.abs)}${pctTxt} — ${judge}`;
+}
+function itemExplain(f,d1,d2,labs,vals,cogsD1){
+  const bits=[];
+  const s1=itemSentence(f,d1,labs[0],labs[1],vals[0],vals[1]);
+  if(s1)bits.push(s1);
+  if(d2&&labs[2]!=null){
+    const s2=itemSentence(f,d2,labs[2],labs[0],vals[2],vals[0]);
+    if(s2)bits.push(s2);
+  }
+  // descriptive cross-check only: revenue growth vs cost-of-sales growth
+  if(f.id==="revenue"&&d1&&d1.pct!=null&&cogsD1&&cogsD1.pct!=null){
+    if(cogsD1.pct>d1.pct)bits.push(`Cost of sales grew faster (+${cogsD1.pct}%) than revenue (+${d1.pct}%) — margins are being squeezed.`);
+    else if(d1.pct>cogsD1.pct)bits.push(`Revenue grew faster (+${d1.pct}%) than cost of sales (+${cogsD1.pct}%) — margins have room to breathe.`);
+  }
+  return bits.join(" ");
+}
+function ratioSentence(r,d,la,lb,va,vb){
+  if(!d) return null;
+  const sem=r.invert?"bad":"good";
+  const verb=d.dir>0?"rose":d.dir<0?"fell":"was unchanged";
+  const judge=d.dir===0?"essentially unchanged."
+    :((d.dir>0)===(sem==="good"))?"an improvement.":"a weakening.";
+  const disp=v=>v==null?"n/a":(r.unit==="%"?r2(v)+"%":r2(v)+r.unit);
+  const mag=(d.abs>0?"+":"")+d.abs+(r.unit==="%"?"pp":r.unit);
+  return `${r.label} ${verb} from ${disp(va)} (${esc(la)}) to ${disp(vb)} (${esc(lb)}): ${mag} — ${judge}`;
+}
+function compareSection(P){
+  const n=P.length;
+  if(n<2){
+    return `<h3>📊 Period comparison</h3><div class="card" data-testid="cmp-note">
+      <p class="hint">Add another year — or quarter — of data to unlock period comparisons.</p></div>`;
+  }
+  const L=P[n-1], M=P[n-2], E=n>=3?P[n-3]:null;
+  const lab1=`${L.label} vs ${M.label}`, lab2=E?`${M.label} vs ${E.label}`:null;
+  let html=`<h3 data-testid="cmp-section">📊 Period comparison</h3>
+    <p class="hint">Latest ${n>=3?"three":"two"} periods, side by side. Works the same for years or quarters —
+    green is economically favourable, red is adverse, amber is ambiguous. Tap any row for the story.</p>
+    <h4>Line items</h4>`;
+  const cogsD1=deltaInfo(L.cogs,M.cogs);
+  for(const f of CMP_FIELDS){
+    const d1=deltaInfo(L[f.id],M[f.id]);
+    const d2=E?deltaInfo(M[f.id],E[f.id]):null;
+    const sem=ITEM_SEMANTICS[f.id];
+    const chips=moneyChip(lab1,d1,sem)+(d2?moneyChip(lab2,d2,sem):"");
+    const expl=itemExplain(f,d1,d2,[M.label,L.label,E&&E.label],[M[f.id],L[f.id],E&&E[f.id]],cogsD1);
+    const id="cmp-item-"+f.id;
+    html+=`<div class="ratio${S.openRatio===id?" open":""}" data-testid="${id}" data-ratio="${id}">
+      <div class="row1"><span class="lbl">${esc(f.label)}</span>
+      <span class="val">${L[f.id]==null?"n/a":fmtMoney(L[f.id])}</span></div>
+      <div class="mean"><div class="cmpcols">${chips}</div></div>
+      <div class="detail"><div class="hint" style="margin:0">${expl||"Not enough data."}</div>
+      <div class="hint" style="margin:6px 0 0">Tap again to collapse.</div></div></div>`;
+  }
+  html+=`<h4>Ratios — change in percentage points</h4>`;
+  const rL=ratiosFor(L), rM=ratiosFor(M), rE=E?ratiosFor(E):null;
+  for(const r of RATIOS){
+    const a=rL[r.id].value, b=rM[r.id].value, c=rE?rE[r.id].value:null;
+    const d1=deltaInfo(a,b), d2=rE?deltaInfo(b,c):null;
+    const chips=ratioChip(lab1,d1,r)+(d2?ratioChip(lab2,d2,r):"");
+    const bits=[];
+    const s1=ratioSentence(r,d1,M.label,L.label,b,a); if(s1)bits.push(s1);
+    if(d2){const s2=ratioSentence(r,d2,E.label,M.label,c,b); if(s2)bits.push(s2);}
+    const id="cmp-ratio-"+r.id;
+    html+=`<div class="ratio${S.openRatio===id?" open":""}" data-testid="${id}" data-ratio="${id}">
+      <div class="row1"><span class="lbl">${esc(r.label)}</span>
+      <span class="val">${a==null?"n/a":a.toLocaleString("en-US")+r.unit}</span></div>
+      <div class="mean"><div class="cmpcols">${chips}</div></div>
+      <div class="detail"><div class="hint" style="margin:0">${bits.join(" ")||"Not enough data."}</div>
+      <div class="hint" style="margin:6px 0 0">Tap again to collapse.</div></div></div>`;
+  }
+  return html;
+}
 function renderHealth(){
   const el=document.getElementById("view-health");
   const P=S.periods, i=S.yearIdx, p=P[i];
@@ -564,6 +687,8 @@ function renderHealth(){
     const rs=RATIOS.filter(r=>r.cat===cat);
     html+=`<h3>${cat}</h3>`+rs.map(r=>ratioCard({...r,value:ratios[r.id].value},allVals[r.id])).join("");
   }
+  // Period comparison (latest vs prior, prior vs before) — generic over years/quarters
+  html+=compareSection(P);
   // DuPont
   const dp=dupont(p);
   const dpOk=dp.identity_ok;
