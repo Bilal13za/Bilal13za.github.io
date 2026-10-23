@@ -361,7 +361,9 @@
     "what_not_to_do",
     "related_ids",
     "verification_status",
-    "source_ref"
+    "source_ref",
+    "fs_impacts",
+    "journal_entries"
    ]
   }
  },

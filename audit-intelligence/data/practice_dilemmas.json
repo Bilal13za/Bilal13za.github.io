@@ -11,7 +11,9 @@
   "what_not_to_do": "Do not sign 'as a favour'. Do not backdate your sign-off. Do not assume the manager's verbal assurance transfers responsibility — it does not.",
   "related_ids": "[\"KR-ETH-P1\", \"ISA-230\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"No direct financial-statement impact \\u2014 the failure is in audit evidence, not the client's books.\", \"Indirect risk: a material misstatement in the balance the paper supports goes undetected (audit risk, not an accounting error).\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "PD-TRN-02",
@@ -25,7 +27,9 @@
   "what_not_to_do": "Do not backdate. Do not let anyone else backdate on your behalf.",
   "related_ids": "[\"KR-ETH-P1\", \"ISA-230\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"No financial-statement impact.\", \"Backdating affects inspection and QCR conclusions about the audit file, not the client's numbers.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "PD-TRN-03",
@@ -39,7 +43,9 @@
   "what_not_to_do": "Do not under-book to 'be a team player'. Chronic under-booking also masks understaffing that endangers audit quality.",
   "related_ids": "[\"KR-ETH-P1\", \"KR-ETH-P2\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"The audit firm's own financial statements: accrued staff costs understated, profit for the period overstated.\", \"Engagement budgets built on false hours misstate profitability and drive chronic understaffing.\"]",
+  "journal_entries": "[{\"debit\": \"Staff costs \\u2014 salaries / overtime\", \"credit\": \"Accrued payroll\", \"narration\": \"To record actual overtime worked (amounts per timesheet).\"}]"
  },
  {
   "id": "PD-TRN-04",
@@ -53,7 +59,9 @@
   "what_not_to_do": "Do not do the bookkeeping 'off the books'. Self-review threats cannot be managed by secrecy.",
   "related_ids": "[\"KR-ETH-P4A\", \"KR-ETH-P3\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"Self-review threat made concrete: errors you introduce as bookkeeper flow straight into the client's financial statements.\", \"Example: revenue expenditure miscoded as capital overstates PPE and understates expenses (and overstates profit).\"]",
+  "journal_entries": "[{\"debit\": \"Repairs and maintenance (profit or loss)\", \"credit\": \"Plant and equipment\", \"narration\": \"Illustrative correction if revenue expenditure was capitalised.\"}]"
  },
  {
   "id": "PD-TRN-05",
@@ -67,7 +75,9 @@
   "what_not_to_do": "Do not let findings disappear verbally. 'Trivial' is a documented judgement, not a conversation.",
   "related_ids": "[\"ISA-450\", \"FP-OVR-01\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"Trade and other payables understated by Rs 800,000 (completeness assertion).\", \"Related purchases/expenses understated \\u2014 profit for the year overstated by Rs 800,000 (accuracy).\", \"Individually below materiality, but in aggregate with the other waived items it may become material (ISA 450).\"]",
+  "journal_entries": "[{\"debit\": \"Purchases / relevant expense \\u2014 Rs 800,000\", \"credit\": \"Trade payables \\u2014 Rs 800,000\", \"narration\": \"To record the omitted supplier invoice.\"}]"
  },
  {
   "id": "PD-MGT-01",
@@ -81,7 +91,9 @@
   "what_not_to_do": "Do not work around the limitation silently, and do not accept verbal summaries in place of the records.",
   "related_ids": "[\"KR-CA2017-248\", \"ISA-500\", \"R-FRD-001\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"No determinable financial-statement impact \\u2014 that is precisely the problem: without access the auditor cannot obtain evidence.\", \"The consequence is a scope limitation and a modified audit opinion (ISA 705), not an FS adjustment.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "PD-MGT-02",
@@ -95,7 +107,9 @@
   "what_not_to_do": "Do not accept 'because everyone does'. Do not accept first and disclose later.",
   "related_ids": "[\"KR-ETH-P4A\", \"KR-ETH-P1\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"No direct financial-statement impact.\", \"The threat is to objectivity: an indebted auditor may let real misstatements go unchallenged.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "PD-MGT-03",
@@ -109,7 +123,9 @@
   "what_not_to_do": "Do not accept an estimate because challenging it is uncomfortable or slow. 'Last year accepted it' is not a procedure.",
   "related_ids": "[\"ISA-540R\", \"P-FRD-003\", \"R-FRP-002\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"Loss allowance understated \\u2192 trade receivables overstated (valuation assertion).\", \"Impairment loss understated \\u2192 profit for the year overstated.\", \"Balance-sheet covenants tied to net assets / current ratio may be breached on corrected figures.\"]",
+  "journal_entries": "[{\"debit\": \"Impairment loss on trade receivables (profit or loss)\", \"credit\": \"Loss allowance (contra-asset)\", \"narration\": \"To recognise the supportable expected credit loss.\"}]"
  },
  {
   "id": "PD-MGT-04",
@@ -123,7 +139,9 @@
   "what_not_to_do": "Do not agree to defer. Do not tip off the suspected individuals before the partner decides the approach.",
   "related_ids": "[\"ISA-240\", \"FP-PRC-01\", \"P-FRD-006\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"If the purchases are fictitious: expenses and trade payables overstated; possible cash misappropriation behind them.\", \"If genuine but uncontrolled: occurrence/completeness risk across procurement.\", \"Concealed related-party involvement would also breach IAS 24 disclosure requirements.\"]",
+  "journal_entries": "[{\"debit\": \"Trade payables\", \"credit\": \"Purchases / expenses\", \"narration\": \"Illustrative reversal if the payments prove fictitious \\u2014 facts-dependent.\"}]"
  },
  {
   "id": "PD-MGT-05",
@@ -137,7 +155,9 @@
   "what_not_to_do": "Do not soften findings, skip procedures, or adjust materiality to 'help'. A clean opinion under pressure is worthless and dangerous.",
   "related_ids": "[\"KR-ETH-P4A\", \"ISA-700R\", \"R-FRD-004\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"No direct financial-statement impact from the pressure itself.\", \"The danger: a pressured auditor softens findings, leaving real misstatements (e.g. understated provisions) uncorrected in the FS.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "PD-TCW-01",
@@ -151,7 +171,9 @@
   "what_not_to_do": "Do not negotiate the opinion. Do not keep the approach confidential from your partner.",
   "related_ids": "[\"KR-ETH-P4A\", \"ISA-260R\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"No direct financial-statement impact.\", \"Risk that TCWG pressure produces uncorrected material misstatements and a wrongly unmodified opinion.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "PD-TCW-02",
@@ -165,7 +187,9 @@
   "what_not_to_do": "Do not accept private assurances as a substitute for disclosure. Do not let sympathy for the business override the reporting duty.",
   "related_ids": "[\"ISA-570R\", \"ISA-260R\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"Primarily a disclosure matter: a material uncertainty requires disclosure under IAS 1 \\u2014 the numbers may be right but the FS are still misstated without it.\", \"If the going-concern basis itself is inappropriate, the whole basis changes: assets to realisable values, all liabilities current.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "PD-TCW-03",
@@ -179,7 +203,9 @@
   "what_not_to_do": "Do not agree to verbal-only communication of matters the standards require in writing.",
   "related_ids": "[\"ISA-260R\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"No financial-statement impact \\u2014 this is a communication requirement (ISA 265).\", \"Unremediated significant deficiencies may cause misstatements in future periods.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "PD-REG-01",
@@ -193,7 +219,9 @@
   "what_not_to_do": "Do not alter the file to 'fix' findings dishonestly. Do not dismiss findings without analysis.",
   "related_ids": "[\"KR-ETH-P1\", \"PD-TRN-02\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"No financial-statement impact \\u2014 a quality-management finding about the audit file, remediated through the firm's system of quality management.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "PD-REG-02",
@@ -207,6 +235,8 @@
   "what_not_to_do": "Do not destroy, conceal or withhold documents from a lawful regulator request. Do not follow the client's instruction against the law.",
   "related_ids": "[\"KR-ETH-P1\", \"KR-CA2017-248\"]",
   "verification_status": "internal_review",
-  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)"
+  "source_ref": "CA Audit Intelligence Database — practice dilemmas (2026-10-23)",
+  "fs_impacts": "[\"No direct financial-statement impact from cooperating with the regulator.\", \"The underlying investigation may separately lead to restatements \\u2014 a different matter from the disclosure decision.\"]",
+  "journal_entries": "[]"
  }
 ]

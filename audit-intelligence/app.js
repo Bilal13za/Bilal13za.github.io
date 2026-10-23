@@ -359,6 +359,11 @@ function sectionsFor(type,row){
     sec("Situation",row.situation); sec("Principles at stake",row.principles_at_stake);
     sec("What the Code says",row.code_reference); list("Red flags",row.red_flags);
     sec("What to do",row.what_to_do); sec("What NOT to do",row.what_not_to_do);
+    list("Financial statement impact",row.fs_impacts);
+    try{const je=JSON.parse(row.journal_entries||"[]");
+      if(je.length) S.push(`<h2>Illustrative entries</h2><div class="entries">${
+        je.map(e=>`<div class="entry"><div class="eline"><span class="tag dr">Dr</span> ${esc(e.debit)}</div><div class="eline"><span class="tag cr">Cr</span> ${esc(e.credit)}</div>${e.narration?`<div class="narr">${esc(e.narration)}</div>`:""}</div>`).join("")
+      }</div><p class="fine">Illustrative only — amounts and accounts follow the scenario; adapt to the actual case.</p>`);}catch(e){}
   }
   else if(type==="knowledge"){
     sec("Summary",row.description); sec("Practical application",row.practical_application); sec("Limitations",row.limitations);
