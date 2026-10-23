@@ -5,9 +5,8 @@ const $$ = (s, el) => Array.from((el || document).querySelectorAll(s));
 const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
 /* ---------- data ---------- */
-const TABLES = ["questions_a","questions_b","observations","cards","mistake_guides","generated","topic_notes","topic_summaries","syllabus","manifest"];
+const BASE_TABLES = ["observations","cards","mistake_guides","generated","topic_notes","topic_summaries","syllabus"];
 const DB = {};
-const Q_TABLES = ["questions_a","questions_b"]; // merged into DB.questions on load
 const TYPES = {
   question:   {table:"questions",      label:"Question"},
   observation:{table:"observations",   label:"Examiner note"},
@@ -26,7 +25,7 @@ const titleOf = (type, row) => {
   return row.id;
 };
 const bodyOf = (type, row) => {
-  if (type === "question") return [row.summary, (row.command_words||[]).join(" "), (row.topic_tags||[]).join(" ")].join(" ");
+  if (type === "question") return [row.summary, row.verbatim||"", (row.command_words||[]).join(" "), (row.topic_tags||[]).join(" ")].join(" ");
   if (type === "observation") return [row.observation, row.what_went_wrong||"", row.stronger_answer||""].join(" ");
   if (type === "card") return row.front + " " + row.back;
   if (type === "guide") return [row.title, row.description||"", row.why||""].join(" ");
@@ -123,8 +122,10 @@ function md(src){
 
 /* ---------- local progress store ---------- */
 const LS = "biaWeb.v1";
-let S = {attempted:{}, checks:{}, sm2:{}};
+let S = {attempted:{}, checks:{}, sm2:{}, mocks:{active:null, history:[]}};
 try { const raw = localStorage.getItem(LS); if(raw) S = Object.assign(S, JSON.parse(raw)); } catch(e){}
+if(!S.mocks || typeof S.mocks !== "object") S.mocks = {active:null, history:[]};
+if(!Array.isArray(S.mocks.history)) S.mocks.history = [];
 const save = () => { try{ localStorage.setItem(LS, JSON.stringify(S)); }catch(e){} };
 
 /* SM-2 */
@@ -216,8 +217,8 @@ function vHome(){
   each one mapped to current-syllabus topics; removed topics are excluded from practice.</div>
   <div class="trust">
     <h2>How to trust this site</h2>
-    <p>Every item is labeled by origin. Nothing here is verbatim ICAP wording — questions and
-    examiner notes are paraphrased summaries for study; the desktop app holds the full local archive.</p>
+    <p>Every item is labeled by origin. Question wording is verbatim from the official papers;
+    examiner notes and study content are paraphrased summaries; the desktop app holds the full local archive.</p>
     <div class="legend">
       <span class="badge b-auth">● CAF-7 BIA — current syllabus</span>
       <span class="badge b-pred">● CAF-6 MFA — predecessor, mapped</span>
@@ -330,7 +331,7 @@ function vQuestions(params){
   const opt = (v,t,sel)=>`<option value="${esc(v)}"${v===sel?" selected":""}>${esc(t)}</option>`;
   app().innerHTML = `
   <h2 class="page-title">Question bank</h2>
-  <p class="page-sub">${list.length} questions · paraphrased summaries — the desktop app holds the full archive.</p>
+  <p class="page-sub">${list.length} questions · official wording on each question page.</p>
   <form class="filters" id="qf" aria-label="Filter questions">
     <label>Session <select class="fselect" name="session">${opt("","All sessions")}${sessions.map(s=>opt(s,s)).join("")}</select></label>
     <label>Area <select class="fselect" name="area">${opt("","All areas")}${["A","B","C","D"].map(a=>opt(a,"Area "+a)).join("")}</select></label>
@@ -377,6 +378,8 @@ function vQuestion(id){
     <dt>Topics</dt><dd>${(q.topic_tags||[]).map(esc).join(", ")||"—"}</dd>
     <dt>Difficulty</dt><dd>${esc(q.difficulty)} <span class="src">(estimate — ${esc(q.difficulty_basis)})</span></dd>
   </dl></div>
+  ${q.verbatim?`<div class="section-head"><h2>Official question wording</h2><p><span class="badge b-auth">● verbatim — ICAP past paper</span></p></div>
+  <div class="prose verbatim">${md(q.verbatim)}</div>`:""}
   ${traps.length?`<div class="section-head"><h2>⚠️ Trap briefing</h2><p>what examiners saw go wrong on related questions</p></div>
   <ul class="results">${traps.map(o=>`<li class="result">
     <p class="snip" style="margin-top:0">${esc(o.observation)}</p>
@@ -392,8 +395,9 @@ function vQuestion(id){
   </div>
   ${related.length?`<div class="section-head"><h2>Related questions</h2></div>
   <div class="card-grid">${related.map(r=>`<a class="card" href="#/q/${esc(r.id)}"><span class="k">Q${esc(r.number)} · ${esc(r.session)}</span><h3>${esc((r.summary||"").slice(0,80))}…</h3><span class="count">${r.marks==null?"?":r.marks} marks</span></a>`).join("")}</div>`:""}
-  <div class="notice"><strong>Study note:</strong> summaries here are paraphrased — no verbatim ICAP wording is published on this site.
-  Attempt the question first, then check yourself against the official suggested answer in your own materials.</div>`;
+  <div class="notice"><strong>Data note:</strong> the question wording above is verbatim from the official paper.
+  Trap briefings and examiner notes are paraphrased. Attempt the question first, then check yourself
+  against the official suggested answer in your own materials.</div>`;
   document.title = `Q${q.number} ${q.session} — BIA Intelligence`;
   $$("#ckl input").forEach(cb=>cb.addEventListener("change",()=>{
     const d = S.checks[id]||[];
@@ -593,11 +597,11 @@ function vAbout(){
   </ul>
   <h2>Known limitations</h2>
   <ul class="about-list">
-    <li><strong>Paraphrase only.</strong> No verbatim ICAP question, suggested-answer, examiner-comment or study-text wording is published on this public site, by copyright. Summaries are faithful but not quotations.</li>
+    <li><strong>Data policy.</strong> Question wording is verbatim from the official papers (past papers are public on ICAP's own site). Suggested answers, examiner comments and study text are paraphrased only — they sit behind ICAP's student login and are never published verbatim here.</li>
     <li><strong>Only two sessions under the BIA name.</strong> Trend patterns lean on predecessor papers through the delta mapping; treat them as indicative, never as predictions.</li>
     <li><strong>Generated practice questions</strong> are the project's own — clearly labeled, never presented as past papers.</li>
     <li><strong>Difficulty ratings are estimates</strong>, refined only by your own attempt data in the desktop app.</li>
-    <li><strong>The desktop Streamlit app</strong> adds timed mocks, the deterministic answer-evaluation engine, performance analytics and the study planner — this site is the portable companion.</li>
+    <li><strong>The desktop Streamlit app</strong> adds the deterministic answer-evaluation engine, performance analytics and the study planner — this site is the portable companion.</li>
   </ul>
   <div class="notice"><strong>Student-level framing:</strong> this companion explains and connects; it never poses as a
   qualified accountant's judgement or a substitute for the official ICAP study text.</div>
@@ -629,8 +633,202 @@ function vSearch(q0){
   let t; $("#q").addEventListener("input",()=>{clearTimeout(t);t=setTimeout(()=>{const v=$("#q").value.trim();if(v&&v!==q)location.hash="#/search?q="+encodeURIComponent(v);},700);});
 }
 
+/* ---------- views: mocks ---------- */
+const MOCK_DEFAULT_MIN = 195; // 3h15 incl. reading time, like the real exam
+let mockTimer = null, mockIdx = 0;
+function clearMockTimer(){ if(mockTimer){ clearInterval(mockTimer); mockTimer = null; } }
+
+function mockSessions(){
+  const seen = {};
+  for(const q of DB.questions||[]){
+    if(q.excluded || !q.session_order || q.session_order > 9) continue;
+    if(!seen[q.session]) seen[q.session] = {session:q.session, order:q.session_order, scheme:q.scheme, ids:[], marks:0};
+    seen[q.session].ids.push(q.id);
+    if(typeof q.marks === "number") seen[q.session].marks += q.marks;
+  }
+  return Object.values(seen).sort((a,b)=>a.order-b.order);
+}
+function mockQuestions(session){
+  return (DB.questions||[])
+    .filter(q=>q.session===session && !q.excluded)
+    .sort((a,b)=>{
+      const na=parseInt(a.qnum,10), nb=parseInt(b.qnum,10);
+      if(na!==nb) return (isNaN(na)?99:na)-(isNaN(nb)?99:nb);
+      return String(a.number).localeCompare(String(b.number));
+    });
+}
+function vMocks(){
+  setNav("mocks");
+  const sessions = mockSessions();
+  const hist = (S.mocks&&S.mocks.history)||[];
+  const active = S.mocks&&S.mocks.active;
+  app().innerHTML = `
+  <h2 class="page-title">Mock exams</h2>
+  <p class="page-sub">Full past papers under exam conditions — ${MOCK_DEFAULT_MIN} minutes (3h15 including reading time), like the real paper. Answers autosave on this device.</p>
+  ${active?`<div class="notice"><strong>Mock in progress:</strong> ${esc(active.session)} — <a href="#/mocks/run">resume</a> · <button class="btn btn-ghost" id="mockAbandon" style="padding:6px 12px">abandon</button></div>`:""}
+  <div class="card-grid">
+    ${sessions.map(s=>`
+    <div class="card">
+      <span class="k">${esc(s.session)} · ${esc(s.scheme)}</span>
+      <h3>${s.ids.length} questions · ${s.marks} marks</h3>
+      <p>Sections A and B, in paper order.</p>
+      <div class="actions" style="margin-top:12px"><a class="btn btn-primary" href="#/mocks/${encodeURIComponent(s.session)}/setup">Start mock</a></div>
+    </div>`).join("")}
+  </div>
+  ${hist.length?`<div class="section-head"><h2>Past mocks</h2><p>self-scored against checklists</p></div>
+  <ul class="results">${hist.slice().reverse().map(h=>`<li class="result">
+    <p style="margin:0"><strong>${esc(h.session)}</strong> — ${esc(new Date(h.date).toLocaleDateString())} · ${h.durationMin} min · self-score <strong>${h.total}/${h.maxTotal}</strong></p>
+  </li>`).join("")}</ul>`:""}
+  <div class="notice"><strong>Honest scoring:</strong> mocks are self-marked against checklists — not examiner marking. Use them for timing, stamina and technique.</div>`;
+  document.title = "Mock exams — BIA Intelligence";
+  const ab = $("#mockAbandon");
+  if(ab) ab.addEventListener("click",()=>{ S.mocks.active=null; save(); vMocks(); });
+}
+function vMockSetup(sessEnc){
+  setNav("mocks");
+  const session = decodeURIComponent(sessEnc||"");
+  const qs = mockQuestions(session);
+  if(!qs.length){ location.hash="#/mocks"; return; }
+  const marks = qs.reduce((t,q)=>t+(typeof q.marks==="number"?q.marks:0),0);
+  app().innerHTML = `
+  <p class="crumb"><a href="#/mocks">Mocks</a> › ${esc(session)}</p>
+  <h2 class="page-title">${esc(session)} — mock setup</h2>
+  <p class="page-sub">${qs.length} questions · ${marks} marks · Sections A and B in paper order.</p>
+  <ul class="results">
+    ${qs.map(q=>`<li class="result"><p style="margin:0"><strong>Q${esc(q.number)}</strong> — ${q.marks==null?"?":q.marks} marks <span class="badge b-type">Section ${esc(q.section||"?")}</span></p></li>`).join("")}
+  </ul>
+  <form id="mockForm" class="mock-setup">
+    <label class="mock-alabel" for="mockDur">Duration (minutes)</label>
+    <input type="number" id="mockDur" min="1" max="600" value="${MOCK_DEFAULT_MIN}" inputmode="numeric">
+    <p class="src">The real exam is ${MOCK_DEFAULT_MIN} minutes (3h15 including reading time).</p>
+    <button class="btn btn-primary" type="submit">Start the clock</button>
+  </form>`;
+  document.title = `Mock setup — ${session} — BIA Intelligence`;
+  $("#mockForm").addEventListener("submit",e=>{
+    e.preventDefault();
+    const dur = Math.max(1, Math.min(600, +$("#mockDur").value || MOCK_DEFAULT_MIN));
+    const now = Date.now();
+    S.mocks = S.mocks || {active:null, history:[]};
+    S.mocks.active = {id:"mock-"+now, session, durationMin:dur, startedAt:now,
+                      endsAt:now+dur*60000, order:qs.map(q=>q.id), answers:{}, warned:{}};
+    save();
+    location.hash = "#/mocks/run";
+  });
+}
+function vMockRun(){
+  setNav("mocks");
+  const m = S.mocks && S.mocks.active;
+  if(!m){ location.hash="#/mocks"; return; }
+  const qs = m.order.map(qById).filter(Boolean);
+  if(!qs.length){ location.hash="#/mocks"; return; }
+  mockIdx = 0;
+  app().innerHTML = `
+  <div class="mockbar" role="region" aria-label="Mock exam controls">
+    <div class="mock-timer"><span id="mockClock" aria-hidden="true">--:--</span><span class="src">${esc(m.session)}</span></div>
+    <div class="mock-nav" role="group" aria-label="Question navigator" id="mockNav"></div>
+    <button class="btn btn-primary" id="mockFinish">Finish &amp; review</button>
+  </div>
+  <p id="mockWarn" class="sr-only" aria-live="polite"></p>
+  <div id="mockQ"></div>`;
+  const renderNav = ()=>{
+    $("#mockNav").innerHTML = qs.map((q,i)=>{
+      const ans = (m.answers[q.id]||"").trim();
+      return `<button data-jump="${i}" class="${i===mockIdx?"cur":""}" aria-label="Go to question ${esc(q.number)}${ans?" (answered)":""}">Q${esc(q.number)}${ans?'<i aria-hidden="true">●</i>':""}</button>`;
+    }).join("");
+    $$("#mockNav button").forEach(b=>b.addEventListener("click",()=>{ mockIdx=+b.dataset.jump; renderQ(); renderNav(); }));
+  };
+  const renderQ = ()=>{
+    const q = qs[mockIdx];
+    $("#mockQ").innerHTML = `
+    <p class="crumb">Section ${esc(q.section||"?")} · Question ${mockIdx+1} of ${qs.length}</p>
+    <div class="record-head">
+      <div class="badges">${qBadges(q)}</div>
+      <h1>Q${esc(q.number)}</h1>
+    </div>
+    ${q.verbatim?`<div class="prose verbatim">${md(q.verbatim)}</div>`:`<p class="page-sub">${esc(q.summary||"")}</p>`}
+    <label class="mock-alabel" for="mockAnswer">Your answer</label>
+    <textarea id="mockAnswer" rows="12" placeholder="Write your answer here — it saves automatically as you type.">${esc(m.answers[q.id]||"")}</textarea>
+    <div class="actions">
+      <button class="btn btn-ghost" id="mockPrev"${mockIdx===0?" disabled":""}>← Previous</button>
+      <button class="btn btn-ghost" id="mockNext"${mockIdx===qs.length-1?" disabled":""}>Next →</button>
+    </div>`;
+    document.title = `Q${q.number} — mock ${m.session} — BIA Intelligence`;
+    let deb = null;
+    $("#mockAnswer").addEventListener("input",e=>{
+      clearTimeout(deb);
+      deb = setTimeout(()=>{ m.answers[q.id]=e.target.value; save(); renderNav(); },500);
+    });
+    $("#mockPrev").addEventListener("click",()=>{ if(mockIdx>0){ mockIdx--; renderQ(); renderNav(); window.scrollTo(0,0); } });
+    $("#mockNext").addEventListener("click",()=>{ if(mockIdx<qs.length-1){ mockIdx++; renderQ(); renderNav(); window.scrollTo(0,0); } });
+  };
+  const fmt = ms => { ms=Math.max(0,ms); const s=Math.floor(ms/1000);
+    return Math.floor(s/60)+":"+String(s%60).padStart(2,"0"); };
+  const tick = ()=>{
+    const clock = $("#mockClock");
+    if(!clock){ clearMockTimer(); return; }
+    const rem = m.endsAt - Date.now();
+    clock.textContent = fmt(rem);
+    for(const t of [30,10,5]){
+      if(rem <= t*60000 && rem > 0 && !(m.warned&&m.warned[t])){
+        m.warned = m.warned||{}; m.warned[t] = true; save();
+        $("#mockWarn").textContent = t+" minutes remaining.";
+      }
+    }
+    if(rem <= 0){ $("#mockWarn").textContent = "Time is up — submitting your mock."; finishMock(); }
+  };
+  const finishMock = ()=>{ clearMockTimer(); location.hash = "#/mocks/review"; };
+  renderNav(); renderQ(); tick();
+  clearMockTimer();
+  mockTimer = setInterval(tick,1000);
+  $("#mockFinish").addEventListener("click",finishMock);
+}
+function vMockReview(){
+  setNav("mocks");
+  const m = S.mocks && S.mocks.active;
+  if(!m){ location.hash="#/mocks"; return; }
+  const qs = m.order.map(qById).filter(Boolean);
+  const maxTotal = qs.reduce((t,q)=>t+(typeof q.marks==="number"?q.marks:0),0);
+  let sec = "";
+  app().innerHTML = `
+  <p class="crumb"><a href="#/mocks">Mocks</a> › Review</p>
+  <h2 class="page-title">${esc(m.session)} — self-marking review</h2>
+  <p class="page-sub">Go through each answer with its checklist, then give yourself a mark. Be strict — examiners are.</p>
+  <div class="notice"><strong>Honest scoring:</strong> this is self-marking against checklists, not examiner marking. Compare with the official suggested answer in your own materials.</div>
+  <form id="reviewForm">
+  ${qs.map(q=>{
+    const h = q.section!==sec ? `<div class="section-head"><h2>Section ${esc(q.section||"?")}</h2></div>` : "";
+    sec = q.section;
+    return `${h}<section class="review-q" aria-label="Question ${esc(q.number)} review">
+    <h3>Q${esc(q.number)} <span class="src">(${q.marks==null?"?":q.marks} marks)</span></h3>
+    <details><summary>Show official question wording</summary><div class="prose verbatim">${q.verbatim?md(q.verbatim):"<p>"+esc(q.summary||"")+"</p>"}</div></details>
+    <h4>Your answer</h4>
+    <div class="prose your-answer">${(m.answers[q.id]||"").trim()?md(m.answers[q.id]):'<p class="src">Not answered.</p>'}</div>
+    <h4>Self-marking checklist</h4>
+    <ul class="checklist review-ckl">${(q.checklist||[]).map(c=>`<li><span>${esc(c)}</span></li>`).join("")}</ul>
+    <label class="mock-alabel">Your self-score (0–${q.marks==null?"?":q.marks})
+      <input type="number" class="review-score" data-qid="${esc(q.id)}" min="0"${typeof q.marks==="number"?` max="${q.marks}"`:""} step="1" inputmode="numeric">
+    </label>
+  </section>`;}).join("")}
+  <div class="actions"><button class="btn btn-primary" type="submit">Save mock result</button></div>
+  </form>`;
+  document.title = `Review — mock ${m.session} — BIA Intelligence`;
+  $("#reviewForm").addEventListener("submit",e=>{
+    e.preventDefault();
+    const scores = {}; let total = 0;
+    $$(".review-score").forEach(inp=>{
+      const v = inp.value==="" ? 0 : Math.max(0, +inp.value||0);
+      scores[inp.dataset.qid] = v; total += v;
+    });
+    S.mocks.history.push({id:m.id, session:m.session, date:Date.now(),
+      durationMin:m.durationMin, scores, total, maxTotal});
+    S.mocks.active = null; save();
+    location.hash = "#/mocks";
+  });
+}
+
 /* ---------- router ---------- */
 function route(){
+  clearMockTimer();
   const h = location.hash || "#/";
   const noHash = h.slice(2);
   const qi = noHash.indexOf("?");
@@ -644,6 +842,12 @@ function route(){
   else if(seg0==="examiner") vExaminer(params);
   else if(seg0==="g" && path[1]) vGuide(path[1]);
   else if(seg0==="revision") path[1]==="cards" ? vCards(params) : vRevision(params);
+  else if(seg0==="mocks"){
+    if(path[1]==="run") vMockRun();
+    else if(path[1]==="review") vMockReview();
+    else if(path[2]==="setup" && path[1]) vMockSetup(path[1]);
+    else vMocks();
+  }
   else if(seg0==="about") vAbout();
   else if(seg0==="search") vSearch(params.get("q")||"");
   else vHome();
@@ -653,12 +857,22 @@ function route(){
 /* ---------- boot ---------- */
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
-  let done=0;
-  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023a").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
-    .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/TABLES.length*100)+"%";count.textContent=done+" / "+TABLES.length+" collections";}));
-  try{ await Promise.all(jobs); }
+  let done=0, total=1;
+  const load=t=>fetch("data/"+t+".json?v=20261023b").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+    .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/total*100)+"%";count.textContent=done+" / "+total+" collections";});
+  try{
+    const mresp = await fetch("data/manifest.json?v=20261023b");
+    if(!mresp.ok) throw new Error("manifest "+mresp.status);
+    DB.manifest = await mresp.json();
+    const shards = (DB.manifest&&DB.manifest.question_shards)||["questions_a","questions_b"];
+    const tables = [...shards, ...BASE_TABLES];
+    total = tables.length + 1; done = 1;
+    fill.style.width=Math.round(done/total*100)+"%";count.textContent=done+" / "+total+" collections";
+    await Promise.all(tables.map(load));
+  }
   catch(e){ count.textContent="Failed to load data: "+e.message; return; }
-  DB.questions = [...(DB.questions_a||[]), ...(DB.questions_b||[])];
+  DB.questions = [];
+  for(const s of (DB.manifest.question_shards||[])) DB.questions.push(...(DB[s]||[]));
   buildIndex();
   $("#loader").classList.add("done");
   setTimeout(()=>$("#loader").remove(),500);
