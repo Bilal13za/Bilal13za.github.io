@@ -80,14 +80,28 @@ footer{max-width:920px;margin:0 auto;padding:1.5rem 1rem 2.5rem;color:var(--mute
   body{font-size:15px}
   .solution table{font-size:.8rem}
 }
+
+.chip.hard{background:#fee2e2;color:#b91c1c}
+.chip.med{background:#fef3c7;color:#92400e}
+.chip.std{background:#dcfce7;color:#15803d}
+.chip.file{background:#e0e7ff;color:#3730a3}
+.tests{font-weight:600;margin-bottom:.55rem}
+.before{background:var(--warn-bg);border-left:4px solid var(--warn-bd);border-radius:0 8px 8px 0;
+  padding:.65rem .85rem;margin:.7rem 0;font-size:.9rem}
+.before ul{margin:.4rem 0 .2rem;padding-left:1.2rem}
+.before li{margin-bottom:.35rem}
+.check-note{font-size:.85rem;color:var(--muted);margin-bottom:.5rem}
+.check-item{display:flex;gap:.6rem;align-items:flex-start;padding:.5rem .15rem;
+  border-bottom:1px solid var(--line);font-size:.92rem;cursor:pointer}
+.check-item input{margin-top:.28rem;width:1.05rem;height:1.05rem;accent-color:var(--accent);flex:0 0 auto;cursor:pointer}
 </style>
 </head>
 <body>
 <header class="top">
   <h1>CAF-6 Corporate Reporting — Practice Lab</h1>
-  <div class="sub">22 exam-style questions · model solutions with mistake zones · do's &amp; don'ts</div>
+  <div class="sub">63 past-paper questions · examiner-guided checklists · do's &amp; don'ts</div>
   <div class="progress-wrap">
-    <div class="progress-meta"><span data-testid="progress-text">0 / 22 done</span><span>progress saves on this device</span></div>
+    <div class="progress-meta"><span data-testid="progress-text">0 / 63 done</span><span>progress saves on this device</span></div>
     <div class="progress-bar"><div class="progress-fill" data-testid="progress-fill"></div></div>
   </div>
   <nav class="tabs">
@@ -103,7 +117,7 @@ footer{max-width:920px;margin:0 auto;padding:1.5rem 1rem 2.5rem;color:var(--mute
       <h2 data-testid="q-title"></h2>
       <div class="meta" data-testid="q-meta"></div>
       <div class="scenario" data-testid="q-scenario"></div>
-      <button class="reveal" data-testid="reveal-btn">Reveal model solution</button>
+      <button class="reveal" data-testid="reveal-btn">Reveal marking checklist</button>
       <div class="solution" data-testid="solution"></div>
       <div class="done-row">
         <input type="checkbox" data-testid="done-check" id="doneCheck">
@@ -123,496 +137,75 @@ footer{max-width:920px;margin:0 auto;padding:1.5rem 1rem 2.5rem;color:var(--mute
     <div data-testid="dd-list"></div>
   </section>
 </main>
-<footer>Original practice material written for personal study. Trains the skills examiners test — consolidation, tax, leases, revenue, disclosures, ethics — with the recurring mistake patterns built in as warning zones.</footer>
+<footer>Past-paper references for personal study. Attempt each question from your own paper files and check against ICAP's suggested answers. Session, question, marks and pass rates per ICAP examiner comments.</footer>
 <script>
 "use strict";
-var CHAPTERS = ["Consolidation","Associates","IAS 12 Tax","IFRS 9","IFRS 16 Leases","IFRS 15 Revenue","IAS 38 Intangibles","IAS 37 Provisions","IFRS 8 Segments","IAS 10 Events","IAS 21 FX","IAS 8 Errors","Companies Act","Ethics","IAS 33 EPS","IAS 36 Impairment","IAS 16 PPE","IAS 24 & IAS 40"];
+var CHAPTERS = ["Consolidation", "Associates", "IAS 12 Tax", "IFRS 9", "IFRS 16 Leases", "IFRS 15 Revenue", "IAS 38 Intangibles", "IAS 37 Provisions", "IFRS 8 Segments", "IAS 10 Events", "IAS 21 FX", "IAS 8 Errors", "Companies Act", "Ethics", "IAS 33 EPS", "IAS 36 Impairment", "IAS 16 PPE", "IAS 24 & IAS 40", "MCQs"];
 
 var QUESTIONS = [
-{
-id:"consol-a", chapter:"Consolidation",
-title:"The 80% Acquisition",
-marks:12, time:"22 min",
-scenario:`<p>Parent P acquired <strong>80%</strong> of Sub S on <strong>1 January 2024</strong>.</p>
-<p>Consideration transferred: Rs.420 cash plus 60,000 P shares issued when their fair value was Rs.3 each (Rs.180). The fair value of the non-controlling interest at acquisition was Rs.150.</p>
-<p>S's net assets at acquisition: Rs.600 (carrying amount) plus fair value uplifts — land Rs.60 and inventory Rs.40.</p>
-<p>During 2024: goodwill was impaired by 20%; S earned post-acquisition retained profit of Rs.120; P sold goods to S and Rs.60 of those goods remain in S's closing inventory (P's margin is 25% on cost); the Rs.40 inventory fair-value uplift was sold during the year. P's own retained earnings are Rs.500.</p>
-<p><strong>Required:</strong> (a) the goodwill working, (b) the NCI at 31 December 2024, (c) group retained earnings with the parent/NCI attribution.</p>`,
-solution:`
-<h3>Step 1 — Net assets at acquisition (W1)</h3>
-<ol><li>Carrying amount Rs.600 + land uplift Rs.60 + inventory uplift Rs.40 = <strong>Rs.700</strong>.</li></ol>
-<h3>Step 2 — Goodwill (W2)</h3>
-<ol><li>Consideration Rs.600 (420 + 180) + NCI at fair value Rs.150 − net assets Rs.700 = <strong>Rs.50</strong>.</li>
-<li>Impairment 20% × 50 = Rs.10 → goodwill carried at <strong>Rs.40</strong>. The impairment is charged through operating expenses.</li></ol>
-<h3>Step 3 — Unrealised profit (W3)</h3>
-<ol><li>Margin is 25% <em>on cost</em>, so profit inside the Rs.60 inventory = 60 × 25/125 = <strong>Rs.12</strong>.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the margin base.</strong> 25% on <em>cost</em> means the Rs.60 selling price contains 25/125 profit (Rs.12), not 25% × 60 = Rs.15. Examiners plant "on cost" vs "on sales" deliberately — convert before multiplying.</div>
-<h3>Step 4 — NCI at year-end</h3>
-<ol><li>NCI = 150 + 20% × (post-acquisition profit 120 − URP 12 − goodwill impairment 10) = 150 + 19.6 = <strong>Rs.169.6</strong>.</li>
-<li>NCI takes its 20% share of the goodwill impairment <em>because</em> NCI was measured at fair value (full goodwill method).</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the attribution.</strong> Deduct the URP and the NCI's share of goodwill impairment <em>inside</em> the NCI working, then apply the 20%. The single most repeated mark-loser is skipping this working entirely.</div>
-<h3>Step 5 — Group retained earnings</h3>
-<ol><li>P's own Rs.500 + 80% × (120 − 12 − 10) = 500 + 78.4 = <strong>Rs.578.4</strong>.</li>
-<li>The Rs.40 inventory uplift was sold in the year: nil remains on the SFP — but show it as consumed in the workings so the trail is complete.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the consumed uplift.</strong> A fair-value uplift that has been sold leaves no SFP balance, yet examiners check that you traced it. Write "uplift Rs.40 sold in year — nil remaining" rather than silently dropping it.</div>
-<p class="lens"><strong>Examiner's lens:</strong> numbered workings (W1, W2, W3) referenced on the face statements, and the parent/NCI split presented as the balancing figure.</p>`
-},
-{
-id:"consol-b", chapter:"Consolidation",
-title:"The Mid-Year Takeover",
-marks:14, time:"25 min",
-scenario:`<p>Parent P acquired <strong>75%</strong> of Sub S on <strong>1 July 2024</strong> (year-end 31 December 2024). S's profits accrue evenly through the year.</p>
-<p>P: revenue Rs.1,000, cost of sales Rs.600. S (full year): revenue Rs.600, cost of sales Rs.360, profit Rs.200.</p>
-<p>Intra-group: S sold goods of Rs.80 to P (all after acquisition); Rs.50 of those goods remain in P's closing inventory, and S's margin on them was 20% on sales. P also holds a <strong>30%</strong> associate acquired 1 January 2024: the associate's post-acquisition profit is Rs.60, P received a Rs.5 dividend, and goods P sold to the associate (Rs.30 still in its inventory, P's margin 25% on cost) are unsold.</p>
-<p><strong>Required:</strong> consolidated revenue and cost of sales workings, and the associate's contribution to group profit.</p>`,
-solution:`
-<h3>Step 1 — Time-apportion S (acquired 1 July)</h3>
-<ol><li>S post-acquisition revenue = 600 × 6/12 = <strong>Rs.300</strong>; post-acquisition cost of sales = 360 × 6/12 = <strong>Rs.180</strong>.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — no time-apportionment.</strong> Consolidating S's full-year Rs.600/360 is the classic fail on mid-year acquisitions. Every S line is halved before anything else happens.</div>
-<h3>Step 2 — Consolidated revenue</h3>
-<ol><li>1,000 + 300 − intra-group sales 80 = <strong>Rs.1,220</strong>.</li></ol>
-<h3>Step 3 — Cost of sales working</h3>
-<ol><li>600 + 180 − 80 (intra-group purchases) + URP 10 = <strong>Rs.710</strong>.</li>
-<li>URP: S sold to P, margin 20% <em>on sales</em>, inventory Rs.50 → 50 × 20% = <strong>Rs.10</strong>.</li></ol>
-<h3>Step 4 — Associate (equity method)</h3>
-<ol><li>Share of profit: 30% × 60 = Rs.18.</li>
-<li>URP on P's sale to the associate: 30 × 25/125 = Rs.6 × 30% = <strong>Rs.1.8</strong> deducted → contribution <strong>Rs.16.2</strong>.</li>
-<li>The Rs.5 dividend: <span class="journal">Dr Cash 5 / Cr Investment in associate 5</span> — it reduces the carrying amount, never touches profit or loss.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — dividend to P&L.</strong> Dividends from an associate are a return <em>of</em> investment, not a return <em>on</em> it. Crediting dividend income is an instant mark-loss.</div>
-<p class="lens"><strong>Examiner's lens:</strong> time-apportioned S lines, URP added back into cost of sales, and the associate handled purely through the equity method.</p>`
-},
-{
-id:"assoc", chapter:"Associates",
-title:"Eighteen Percent and a Board Seat",
-marks:8, time:"14 min",
-scenario:`<p>Company H acquired <strong>18%</strong> of Company T for Rs.200. H appoints one director to T's five-person board, and H is T's largest single customer, buying 40% of T's output under a long-term supply agreement.</p>
-<p>In the first year after acquisition, T reported profit of Rs.100 and paid total dividends of Rs.33, of which H received Rs.6.</p>
-<p><strong>Required:</strong> (a) determine the correct accounting treatment for H's investment, with reasons; (b) compute its carrying amount at year-end.</p>`,
-solution:`
-<h3>Step 1 — Classification: associate, not a simple investment</h3>
-<ol><li>20% is only a <em>presumption</em>, rebuttable both ways. Here H has <strong>significant influence</strong>: board representation plus material transactions (40% of output) are two of the standard indicators.</li>
-<li>Therefore T is an <strong>associate</strong> → IAS 28 equity method (not IFRS 9).</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the 20% rule of thumb.</strong> Examiners deliberately set holdings below 20% with influence indicators attached. "18%, therefore no associate" is the planted wrong answer — always test the indicators.</div>
-<h3>Step 2 — Equity method carrying amount</h3>
-<ol><li>Cost Rs.200 + share of profit (18% × 100 = Rs.18) − dividend received Rs.6 = <strong>Rs.212</strong>.</li></ol>
-<p class="lens"><strong>Examiner's lens:</strong> the classification reasoning earns the first marks — name the indicators, then apply the equity method mechanically.</p>`
-},
-{
-id:"ias12-a", chapter:"IAS 12 Tax",
-title:"The Rate Change",
-marks:12, time:"20 min",
-scenario:`<p>Company K has an opening deferred tax liability of Rs.90, recognised when the tax rate was 30%. During the year a new rate of <strong>35%</strong> was enacted.</p>
-<p>At year-end: plant carrying amount Rs.1,200 (tax base Rs.800); a warranty provision of Rs.60 (tax base nil). Profit before tax is Rs.500. Permanent differences: non-deductible fines Rs.20. A prior-year under-provision of Rs.4 was identified.</p>
-<p><strong>Required:</strong> (a) the deferred tax table and movement for the year; (b) the tax reconciliation.</p>`,
-solution:`
-<h3>Step 1 — Deferred tax table (at the enacted 35%)</h3>
-<table><tr><th>Item</th><th>Carrying</th><th>Tax base</th><th>Temp. diff.</th><th>DTL/(DTA)</th></tr>
-<tr><td>Plant</td><td>1,200</td><td>800</td><td>400</td><td>140</td></tr>
-<tr><td>Warranty provision</td><td>60</td><td>0</td><td>(60)</td><td>(21)</td></tr>
-<tr><td><strong>Closing DTL</strong></td><td></td><td></td><td></td><td><strong>119</strong></td></tr></table>
-<ol><li>Movement: 119 − 90 = <strong>Rs.29</strong> deferred tax charge.</li></ol>
-<h3>Step 2 — Split the movement</h3>
-<ol><li>Opening temporary differences = 90 ÷ 30% = Rs.300. Rate-change effect = 300 × (35% − 30%) = <strong>Rs.15</strong> — shown as its <em>own line</em> in the reconciliation.</li>
-<li>Remaining Rs.14 relates to current-year movements.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the buried rate change.</strong> Recomputing opening temporary differences at the new rate and burying the Rs.15 inside "other" lines is a documented recurring error. It gets a dedicated line, always.</div>
-<h3>Step 3 — Tax reconciliation</h3>
-<table><tr><th></th><th>Rs.</th></tr>
-<tr><td>Profit before tax × 35%</td><td>175</td></tr>
-<tr><td>Permanent differences (fines 20 × 35%)</td><td>7</td></tr>
-<tr><td>Effect of change in tax rate</td><td>15</td></tr>
-<tr><td>Prior-year under-provision</td><td>4</td></tr>
-<tr><td><strong>Total tax expense</strong></td><td><strong>201</strong></td></tr></table>
-<div class="mz"><strong>⚠️ Mistake zone — the wrong base.</strong> The 5% change applies to the <em>opening temporary differences</em> (Rs.300), not to profit before tax or the closing position. 300 × 5% = 15 — check: 175 + 7 + 15 + 4 = 201, which foots.</div>
-<p class="lens"><strong>Examiner's lens:</strong> the reconciliation must foot to total tax expense, and the rate-change line must be separately visible.</p>`
-},
-{
-id:"ias12-b", chapter:"IAS 12 Tax",
-title:"The Leased Machine",
-marks:8, time:"14 min",
-scenario:`<p>Company L leases a machine. At year-end the right-of-use asset is carried at <strong>Rs.240</strong> (this includes Rs.12 of initial direct costs capitalised into the asset) and the lease liability at <strong>Rs.228</strong>. For tax purposes, lease rentals are deductible when paid, so the tax base of both the asset and the liability is nil. The tax rate is 30%.</p>
-<p><strong>Required:</strong> compute the deferred tax position on the lease and show how it is presented.</p>`,
-solution:`
-<h3>Step 1 — Temporary differences</h3>
-<table><tr><th>Item</th><th>Carrying</th><th>Tax base</th><th>Temp. diff.</th><th>DTL/(DTA) @30%</th></tr>
-<tr><td>Right-of-use asset</td><td>240</td><td>0</td><td>240</td><td>72 DTL</td></tr>
-<tr><td>Lease liability</td><td>228</td><td>0</td><td>(228)</td><td>(68.4) DTA</td></tr></table>
-<ol><li>Present the <strong>Rs.72 DTL and the Rs.68.4 DTA separately</strong> — gross presentation, even though the net is only Rs.3.6.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — netting.</strong> Offsetting the two into a single Rs.3.6 line is the documented error. The asset and the liability are separate temporary differences and are presented separately.</div>
-<h3>Step 2 — Initial direct costs</h3>
-<ol><li>The Rs.12 is inside the Rs.240 carrying amount for accounting but was expensed for tax — that <em>creates</em> part of the temporary difference. It stays in.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — "tax-deductible, so exclude it."</strong> Examiners report candidates stripping the Rs.12 out of the ROU asset (giving a wrong DTL of Rs.68.4). Deductibility for tax is exactly <em>why</em> the tax base is nil — the cost belongs in the carrying amount.</div>
-<p class="lens"><strong>Examiner's lens:</strong> two separate lines, correct carrying amounts, and the initial direct costs left where they belong.</p>`
-},
-{
-id:"ifrs9", chapter:"IFRS 9",
-title:"Classify, Label, Provide",
-marks:8, time:"14 min",
-scenario:`<p>Company M holds three financial items at year-end:</p>
-<p>(a) A 5% stake in a listed company, bought for short-term trading. Fair value gain in the year: Rs.30.<br>
-(b) An 8% stake in another listed company, with an <strong>irrevocable FVOCI election</strong> made at initial recognition. Fair value gain in the year: Rs.45.<br>
-(c) Trade receivables of Rs.2,000. The expected credit loss rate is 3%.</p>
-<p><strong>Required:</strong> state the classification of each item, show where each effect is recognised (P&amp;L or OCI), and give the impairment journal.</p>`,
-solution:`
-<h3>Step 1 — Classification and destination</h3>
-<table><tr><th>Item</th><th>Classification</th><th>Rs. effect → destination</th></tr>
-<tr><td>(a) 5% trading stake</td><td>FVPL (held for trading)</td><td>Gain 30 → <strong>P&amp;L</strong></td></tr>
-<tr><td>(b) 8% stake, FVOCI election</td><td>FVOCI (irrevocable election)</td><td>Gain 45 → <strong>OCI</strong></td></tr>
-<tr><td>(c) Receivables ECL</td><td>Amortised cost</td><td>Loss 60 → <strong>P&amp;L</strong></td></tr></table>
-<div class="mz"><strong>⚠️ Mistake zone — no destination stated.</strong> Workings that compute the gains but never say P&amp;L or OCI score near zero on classification questions — the requirement asks for the destination expressly, so label every line.</div>
-<h3>Step 2 — ECL journal</h3>
-<p>Allowance = 2,000 × 3% = Rs.60:</p>
-<p class="journal">Dr Impairment loss (P&amp;L) 60
-    Cr Loss allowance (receivables) 60</p>
-<div class="mz"><strong>⚠️ Mistake zone — the omitted ECL.</strong> The basic expected-credit-loss recognition is now examinable and is frequently left out entirely. One journal, two lines — don't leave it on the table.</div>
-<p class="lens"><strong>Examiner's lens:</strong> each effect explicitly routed to P&amp;L or OCI, plus the ECL journal actually written.</p>`
-},
-{
-id:"ifrs16-a", chapter:"IFRS 16 Leases",
-title:"The Five-Year Lease",
-marks:10, time:"18 min",
-scenario:`<p>On 1 January, Lessee N signs a 5-year lease with annual payments of <strong>Rs.200</strong> in arrears. The interest rate implicit in the lease is not known to N; N's incremental borrowing rate is <strong>8%</strong>. There is no purchase option. Initial direct costs are Rs.20 and the present value of the decommissioning obligation is Rs.30.</p>
-<p><strong>Required:</strong> (a) the initial measurement of the lease liability and right-of-use asset; (b) the year-1 and year-2 amortisation schedule; (c) the annual depreciation charge.</p>`,
-solution:`
-<h3>Step 1 — Initial measurement</h3>
-<ol><li>Annuity factor (8%, 5 years) = 3.9927. Lease liability = 200 × 3.9927 = <strong>Rs.799</strong> (rounded).</li>
-<li>Right-of-use asset = 799 + 20 (initial direct costs) + 30 (decommissioning) = <strong>Rs.849</strong>.</li></ol>
-<h3>Step 2 — Amortisation schedule (constant 8%)</h3>
-<table><tr><th>Year</th><th>Opening</th><th>Interest 8%</th><th>Payment</th><th>Closing</th></tr>
-<tr><td>1</td><td>799.0</td><td>63.9</td><td>(200)</td><td>662.9</td></tr>
-<tr><td>2</td><td>662.9</td><td>53.0</td><td>(200)</td><td>515.9</td></tr>
-<tr><td>3</td><td>515.9</td><td>41.3</td><td>(200)</td><td>357.2</td></tr>
-<tr><td>4</td><td>357.2</td><td>28.6</td><td>(200)</td><td>185.8</td></tr>
-<tr><td>5</td><td>185.8</td><td>14.9</td><td>(200)</td><td>~0</td></tr></table>
-<ol><li>Check: total interest = 201.7 ≈ payments 1,000 − liability 799. The schedule foots.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the escalating rate.</strong> A rate that "rises each year" appears in wrong answers every session. The discount rate is fixed at inception — 8% in every row, no exceptions.</div>
-<h3>Step 3 — Depreciation</h3>
-<ol><li>No purchase option and no transfer of ownership → depreciate over the <strong>lease term</strong>: 849 ÷ 5 = <strong>Rs.169.8</strong> per year.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the wrong life.</strong> Depreciating over the asset's 8-year useful life (a planted distractor) understates the charge. Useful life applies only with a reasonably certain purchase option or ownership transfer.</div>
-<p class="lens"><strong>Examiner's lens:</strong> a complete ROU build-up, a schedule that foots to zero, and depreciation over the lease term.</p>`
-},
-{
-id:"ifrs16-b", chapter:"IFRS 16 Leases",
-title:"The Wrong Rate",
-marks:10, time:"18 min",
-scenario:`<p>Lessee O recorded a 4-year lease (annual payments Rs.150 in arrears) using a discount rate of <strong>12%</strong>. You discover the implicit rate was never known to O, and O's incremental borrowing rate at commencement was actually <strong>9%</strong>. The recorded figures for year 1 are: lease liability Rs.455.6, interest expense Rs.54.7, ROU depreciation Rs.113.9 (straight-line over 4 years).</p>
-<p><strong>Required:</strong> compute the correct figures and give the correcting journals (year 1 only).</p>`,
-solution:`
-<h3>Step 1 — Spot the rate (do this first)</h3>
-<ol><li>Implicit rate unknown → the <strong>incremental borrowing rate (9%)</strong> must be used. The 12% is simply wrong — and one wrong rate poisons the liability, the ROU asset, the interest, and the depreciation together.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — missing the tripwire.</strong> Most candidates in correction questions never question the original rate. Verifying the rate is step zero; everything downstream depends on it.</div>
-<h3>Step 2 — Recorded vs correct</h3>
-<table><tr><th></th><th>Recorded (12%)</th><th>Correct (9%)</th><th>Difference</th></tr>
-<tr><td>Liability (PV)</td><td>150 × 3.0373 = 455.6</td><td>150 × 3.2397 = 486.0</td><td>understated 30.4</td></tr>
-<tr><td>Year-1 interest</td><td>455.6 × 12% = 54.7</td><td>486.0 × 9% = 43.7</td><td>overstated 11.0</td></tr>
-<tr><td>Year-1 depreciation</td><td>455.6 ÷ 4 = 113.9</td><td>486.0 ÷ 4 = 121.5</td><td>understated 7.6</td></tr></table>
-<h3>Step 3 — Correcting journals (not fresh journals)</h3>
-<p class="journal">Dr Right-of-use asset 30.4
-    Cr Lease liability 30.4
-Dr Lease liability 11.0
-    Cr Finance costs 11.0
-Dr Depreciation expense 7.6
-    Cr Accumulated depreciation 7.6</p>
-<div class="mz"><strong>⚠️ Mistake zone — fresh journals instead of corrections.</strong> Writing the lease "as if nothing was recorded" earns almost nothing. The requirement is the <em>difference</em> between recorded and correct — correct each line separately.</div>
-<p class="lens"><strong>Examiner's lens:</strong> rate verified first, a recorded-vs-correct comparison table, then journals for the differences only.</p>`
-},
-{
-id:"ifrs15-a", chapter:"IFRS 15 Revenue",
-title:"The Bundled Contract",
-marks:12, time:"20 min",
-scenario:`<p>Company P signs a contract for <strong>Rs.900</strong> (cash received upfront) covering: equipment (stand-alone selling price Rs.700), installation (SSP Rs.150), and a 2-year maintenance plan (SSP Rs.350).</p>
-<p>During year 1, the equipment is delivered and installation is completed. One year of maintenance is performed.</p>
-<p><strong>Required:</strong> allocate the transaction price, give the journals, and state the revenue recognised in year 1 — with a timing reason for each entry.</p>`,
-solution:`
-<h3>Step 1 — Identify distinct performance obligations</h3>
-<ol><li>Three distinct POs: equipment, installation, maintenance. Maintenance bundled with a sale is <strong>usually distinct</strong> — the customer benefits from it separately.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — bundling.</strong> Recognising the full Rs.900 against "the contract" is the classic error. Split first, allocate second.</div>
-<h3>Step 2 — Allocate by relative stand-alone prices</h3>
-<ol><li>Total SSP = 700 + 150 + 350 = Rs.1,200.</li>
-<li>Equipment: 900 × 700/1,200 = <strong>Rs.525</strong>; installation: 900 × 150/1,200 = <strong>Rs.112.5</strong>; maintenance: 900 × 350/1,200 = <strong>Rs.262.5</strong>. Check: 525 + 112.5 + 262.5 = 900. ✓</li></ol>
-<h3>Step 3 — Journals with timing reasons</h3>
-<p class="journal">Dr Cash 900
-    Cr Contract liability 900
-  (cash received before any PO is satisfied)</p>
-<p class="journal">Dr Contract liability 637.5
-    Cr Revenue 637.5
-  (equipment 525 + installation 112.5: control transferred on delivery and on completion of installation)</p>
-<p class="journal">Dr Contract liability 131.25
-    Cr Revenue 131.25
-  (maintenance 262.5 ÷ 2: recognised over time as the service is performed; year 1 = one year)</p>
-<div class="mz"><strong>⚠️ Mistake zone — bare journals.</strong> Entries without the "control transferred when…" narrative lose marks even when the numbers are right. Every timing call needs its one-line reason.</div>
-<p class="lens"><strong>Examiner's lens:</strong> distinct POs identified, SSP allocation that foots, and each journal carrying its timing justification.</p>`
-},
-{
-id:"ifrs15-b", chapter:"IFRS 15 Revenue",
-title:"The Modified Service Contract",
-marks:8, time:"14 min",
-scenario:`<p>Company Q has a 2-year cleaning-services contract for <strong>Rs.480</strong>, recognised evenly over time (Rs.240 per year).</p>
-<p>At the start of year 2, the customer adds a <strong>distinct</strong> 2-year security service priced at its stand-alone price of Rs.200.</p>
-<p><strong>Required:</strong> compute the revenue recognised in year 2 and explain the treatment of the modification.</p>`,
-solution:`
-<h3>Step 1 — Classify the modification</h3>
-<ol><li>The added service is <strong>distinct</strong> and priced at its stand-alone selling price → it is accounted for as a <strong>separate contract</strong>, prospectively. No catch-up to year 1.</li></ol>
-<h3>Step 2 — Year-2 revenue</h3>
-<ol><li>Original contract year 2: Rs.240.</li>
-<li>New contract: Rs.200 over 2 years (years 2–3) → year 2: Rs.100.</li>
-<li>Total year-2 revenue = 240 + 100 = <strong>Rs.340</strong>. The remaining Rs.100 stays as a contract liability.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — revenue recognised too early.</strong> Booking the Rs.200 at the modification date is the planted error. A distinct, separately-priced addition is recognised <em>as performed</em> — prospectively, never upfront.</div>
-<p class="lens"><strong>Examiner's lens:</strong> the "distinct + stand-alone price = separate contract" test stated, then applied prospectively.</p>`
-},
-{
-id:"ias38", chapter:"IAS 38 Intangibles",
-title:"Research, Development, and the Website",
-marks:10, time:"16 min",
-scenario:`<p>Company R is developing a new product and building a website:</p>
-<p>• Research phase (January–June): Rs.120.<br>
-• All six capitalisation criteria were first met on <strong>1 July</strong>; development costs July–December: Rs.180.<br>
-• The product was available for use on <strong>1 October</strong>; useful life 5 years, no residual value.<br>
-• Website cost Rs.40: the site is purely for <strong>advertising</strong> the product.</p>
-<p><strong>Required:</strong> state the accounting treatment of each item and the intangible asset's carrying amount at 31 December.</p>`,
-solution:`
-<h3>Step 1 — Research vs development cut-off</h3>
-<ol><li>January–June Rs.120: <strong>research → expense</strong>. The criteria were not met.</li>
-<li>July–December Rs.180: criteria met from 1 July → <strong>capitalise Rs.180</strong>. Nothing before 1 July is resurrected.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the wrong period.</strong> Capitalising from January (Rs.300) is the recurring error. The capitalisation clock starts on the date the criteria are <em>met</em> — 1 July here, not a day earlier.</div>
-<h3>Step 2 — Amortisation</h3>
-<ol><li>Amortisation starts when <em>available for use</em> (1 October), not when capitalisation started: 180 × 3/60 = <strong>Rs.9</strong>.</li></ol>
-<h3>Step 3 — The website</h3>
-<ol><li>An advertising-only website generates no probable future economic benefit beyond promotion → <strong>expense the Rs.40</strong> (it cannot be capitalised).</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the advertising website.</strong> "A website is an intangible asset, so capitalise it" fails the purpose test. Promotional sites are expensed; only sites that take orders / generate direct revenue can be capitalised.</div>
-<h3>Step 4 — Carrying amount</h3>
-<ol><li>180 − 9 = <strong>Rs.171</strong> at 31 December.</li></ol>
-<p class="lens"><strong>Examiner's lens:</strong> the 1 July cut-off stated and applied, the website purpose-tested, amortisation from availability.</p>`
-},
-{
-id:"ias37", chapter:"IAS 37 Provisions",
-title:"The Onerous Lease and the Restructure",
-marks:10, time:"16 min",
-scenario:`<p>Company S faces three issues at year-end:</p>
-<p>(a) A leased warehouse has <strong>2 years remaining</strong> at Rs.100 per year, unavoidable. It can be sublet for Rs.30 per year.<br>
-(b) The board has announced a restructuring with total expected costs of Rs.200 — but Rs.50 of this is staff retraining and future operating losses.<br>
-(c) S acquired a business during the year with contingent consideration of Rs.40 payable if profit targets are met.</p>
-<p><strong>Required:</strong> state the provision (if any) for each, with reasons.</p>`,
-solution:`
-<h3>Step 1 — The lease: onerous contract</h3>
-<ol><li>Unavoidable costs (2 × 100 = 200) exceed the economic benefits (2 × 30 = 60) → the lease is <strong>onerous</strong>.</li>
-<li>Provide for the lower of cost of fulfilling vs penalties for non-fulfilment: 200 − 60 = <strong>Rs.140</strong>.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — missing the onerous contract.</strong> Candidates see "a lease" and move on. The test is mechanical: unavoidable costs vs benefits — when costs win, provide.</div>
-<h3>Step 2 — The restructuring: avoidable costs excluded</h3>
-<ol><li>Provide <strong>Rs.150 only</strong> (200 − 50). Retraining and future operating losses are avoidable — no present obligation exists for them, so no provision.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — providing for avoidable costs.</strong> "The board announced it, so provide everything" is wrong. A provision needs a present obligation from a past event; future operating costs never qualify.</div>
-<h3>Step 3 — Contingent consideration</h3>
-<ol><li>This belongs to <strong>IFRS 3</strong> (measured at fair value as part of the business combination) — <strong>not</strong> IAS 37.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the wrong standard.</strong> Analysing contingent consideration under IAS 37's "present obligation" framework is a documented error. Acquisitions live in IFRS 3.</div>
-<p class="lens"><strong>Examiner's lens:</strong> unavoidable-vs-avoidable discipline, and the IFRS 3 boundary respected.</p>`
-},
-{
-id:"ifrs8", chapter:"IFRS 8 Segments",
-title:"Who Is Reportable?",
-marks:8, time:"14 min",
-scenario:`<p>Company T has four operating segments (Rs.000):</p>
-<table style="border-collapse:collapse;width:100%;font-size:.88rem;margin:.5rem 0">
-<tr><th style="border:1px solid #e5e7eb;padding:.35rem;text-align:left;background:#f1f5f9">Segment</th><th style="border:1px solid #e5e7eb;padding:.35rem;text-align:right;background:#f1f5f9">Revenue</th><th style="border:1px solid #e5e7eb;padding:.35rem;text-align:right;background:#f1f5f9">Profit/(loss)</th><th style="border:1px solid #e5e7eb;padding:.35rem;text-align:right;background:#f1f5f9">Assets</th></tr>
-<tr><td style="border:1px solid #e5e7eb;padding:.35rem">A</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">500</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">60</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">400</td></tr>
-<tr><td style="border:1px solid #e5e7eb;padding:.35rem">B</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">300</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">40</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">250</td></tr>
-<tr><td style="border:1px solid #e5e7eb;padding:.35rem">C</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">120</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">(15)</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">100</td></tr>
-<tr><td style="border:1px solid #e5e7eb;padding:.35rem">D</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">80</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">5</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">60</td></tr></table>
-<p>Customer X accounts for Rs.150 of segment A's revenue.</p>
-<p><strong>Required:</strong> identify the reportable segments, apply the 75% revenue test, and state any major-customer disclosure.</p>`,
-solution:`
-<h3>Step 1 — The 10% thresholds</h3>
-<ol><li>Total revenue = 1,000 → threshold 100. Total profit of <em>profitable</em> segments = 105 → threshold 10.5 (use absolute values for the loss). Total assets = 810 → threshold 81.</li>
-<li><strong>A</strong>: passes all three. <strong>B</strong>: passes all three. <strong>C</strong>: revenue 120 ✓, |loss| 15 > 10.5 ✓, assets 100 ✓ → reportable. <strong>D</strong>: fails all → not reportable.</li></ol>
-<h3>Step 2 — The 75% test</h3>
-<ol><li>Reportable revenue = 500 + 300 + 120 = 920 → 92% of 1,000 ≥ 75%. <strong>No additional segments needed.</strong></li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — misapplying the 75% test.</strong> Candidates either add segment D "to be safe" or claim more segments are needed when the test is already met. The test is a floor check: at or above 75%, you stop.</div>
-<h3>Step 3 — Major customer</h3>
-<ol><li>Customer X = 150 ≥ 10% of total revenue (100) → <strong>disclose</strong>: the fact of the dependency, the amount, and the segment (A) it relates to.</li></ol>
-<p class="lens"><strong>Examiner's lens:</strong> each threshold tested explicitly, the 75% check done and stopped at, and the major-customer disclosure not forgotten.</p>`
-},
-{
-id:"ias10", chapter:"IAS 10 Events",
-title:"After the Year-End",
-marks:6, time:"10 min",
-scenario:`<p>Company U's year-end is <strong>31 December</strong>. Before the financial statements are authorised, four events occur:</p>
-<p>(a) 15 January: an inventory valuation confirms net realisable value was below cost <em>at 31 December</em>.<br>
-(b) 20 January: a fire destroys the main warehouse (fully insured).<br>
-(c) 10 February: a major customer goes into liquidation; the receivable was already doubtful at year-end.<br>
-(d) 25 January: the board declares a final dividend.</p>
-<p><strong>Required:</strong> classify each event as adjusting or non-adjusting, with the treatment.</p>`,
-solution:`
-<h3>The one test</h3>
-<ol><li>Ask only: <strong>did the condition exist at the reporting date?</strong></li></ol>
-<h3>Classification</h3>
-<table><tr><th>Event</th><th>Type</th><th>Treatment</th></tr>
-<tr><td>(a) Inventory NRV evidence</td><td><strong>Adjusting</strong></td><td>Write inventory down — the condition existed at 31 Dec; this is evidence of it</td></tr>
-<tr><td>(b) Fire</td><td><strong>Non-adjusting</strong></td><td>Do not adjust; disclose nature and financial effect (insurance recovery)</td></tr>
-<tr><td>(c) Customer liquidation</td><td><strong>Adjusting</strong></td><td>Increase the doubtful-debt allowance — confirms the year-end condition</td></tr>
-<tr><td>(d) Dividend declared</td><td><strong>Non-adjusting</strong></td><td>No liability at 31 Dec; disclose the dividend</td></tr></table>
-<div class="mz"><strong>⚠️ Mistake zone — classifying by drama, not by date.</strong> A fire feels "material" so candidates adjust for it; a dividend feels routine so they miss the disclosure. Materiality is irrelevant to the test — only whether the condition existed at 31 December.</div>
-<p class="lens"><strong>Examiner's lens:</strong> the "condition at reporting date" test stated once, then applied consistently to all four.</p>`
-},
-{
-id:"ias21", chapter:"IAS 21 FX",
-title:"The Advance and the Machine",
-marks:8, time:"14 min",
-scenario:`<p>Company V (functional currency Rs.):</p>
-<p>• <strong>1 October:</strong> pays an advance of USD 10,000 for a machine. Spot rate: Rs.280/USD.<br>
-• <strong>1 December:</strong> the machine arrives; invoice USD 40,000. Spot rate: Rs.285/USD.<br>
-• <strong>31 December</strong> (year-end): spot rate Rs.290/USD. The USD 30,000 balance is unpaid.</p>
-<p><strong>Required:</strong> compute the machine's cost, the year-end payable, and the exchange difference.</p>`,
-solution:`
-<h3>Step 1 — The advance is non-monetary</h3>
-<ol><li>Advance paid 1 Oct: 10,000 × 280 = <strong>Rs.2,800,000</strong>. It is <em>non-monetary</em> (it will become a machine, not cash) → it stays at the <strong>historical rate forever</strong>.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — retranslating the advance.</strong> Re-measuring the Rs.2.8m at the 285 or 290 rate is the documented error. Non-monetary items are never retranslated.</div>
-<h3>Step 2 — Machine cost</h3>
-<ol><li>Invoice USD 40,000 @ 285 (1 Dec) = Rs.11,400,000, but Rs.2,800,000 was already paid at 280.</li>
-<li>Machine cost = 2,800,000 + (30,000 × 285 = 8,550,000) = <strong>Rs.11,350,000</strong>.</li></ol>
-<h3>Step 3 — Year-end payable (monetary → retranslate)</h3>
-<ol><li>Payable at 31 Dec: 30,000 × 290 = <strong>Rs.8,700,000</strong>.</li>
-<li>Exchange loss = 8,700,000 − 8,550,000 = <strong>Rs.150,000</strong> to profit or loss.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the single rate.</strong> Using one rate (say 290) for the advance, the invoice, and the payable collapses the whole question. Split it: historical rate for the non-monetary advance, transaction rate for initial recognition, closing rate for the monetary payable.</div>
-<p class="lens"><strong>Examiner's lens:</strong> the monetary/non-monetary split made explicit before any number is translated.</p>`
-},
-{
-id:"ias8", chapter:"IAS 8 Errors",
-title:"The Prior-Year Error",
-marks:10, time:"16 min",
-scenario:`<p>Company W discovers that 2024 depreciation was understated by <strong>Rs.60</strong> due to a spreadsheet error (a prior-period error, not a change in estimate). The tax rate is 30%. 2024 profit as previously reported was Rs.500.</p>
-<p><strong>Required:</strong> show (a) the correction-of-error note, (b) the effect on the 2024 profit, (c) the retained earnings extract with comparatives.</p>`,
-solution:`
-<h3>Step 1 — Correction-of-error note</h3>
-<ol><li>"During the year it was discovered that 2024 depreciation was understated by Rs.60 due to a spreadsheet error. The error has been corrected by <strong>retrospective restatement</strong>."</li></ol>
-<h3>Step 2 — Effect on 2024</h3>
-<ol><li>Additional depreciation Rs.60 → profit down Rs.60; tax effect: deferred tax asset Rs.18 (60 × 30%).</li>
-<li>2024 profit <strong>restated</strong>: 500 − 42 = <strong>Rs.458</strong> (net of tax: 60 × 70% = 42).</li></ol>
-<h3>Step 3 — Retained earnings extract</h3>
-<table><tr><th></th><th>Rs.</th></tr>
-<tr><td>Retained earnings as previously reported (31 Dec 2024)</td><td>X</td></tr>
-<tr><td>Effect of correction of error (net of tax)</td><td>(42)</td></tr>
-<tr><td><strong>Retained earnings — restated</strong></td><td><strong>X − 42</strong></td></tr>
-<tr><td>Deferred tax asset recognised</td><td>18</td></tr></table>
-<div class="mz"><strong>⚠️ Mistake zone — the missing label.</strong> Restating the numbers but omitting the word <strong>"restated"</strong> on every affected line is a standalone mark-loser. The label itself carries marks — put it on the P&amp;L, the SFP lines, and the extract.</div>
-<p class="lens"><strong>Examiner's lens:</strong> note first, dual-year effects shown, and "restated" labelled everywhere it appears.</p>`
-},
-{
-id:"cosact", chapter:"Companies Act",
-title:"The Share Capital Note",
-marks:8, time:"14 min",
-scenario:`<p>Company X's records show:</p>
-<p>• Authorised: 1,000,000 ordinary shares of Rs.10 each.<br>
-• Issued: 400,000 shares fully paid in cash; 100,000 shares issued against plant and machinery; 200,000 shares issued as fully paid bonus shares.<br>
-• Share premium: Rs.500,000 (arising on 50,000 shares issued at Rs.20 each). General reserve: Rs.1,000,000. Unappropriated profit: Rs.2,300,000.<br>
-• Ordinary shares carry one vote each, rank equally for dividends, and rank behind creditors on winding up.</p>
-<p><strong>Required:</strong> prepare the share capital and reserves note.</p>`,
-solution:`
-<h3>The note (prepared, not described)</h3>
-<p><strong>Note X — Share capital</strong></p>
-<table><tr><th></th><th>Rs.</th></tr>
-<tr><td><strong>Authorised:</strong> 1,000,000 ordinary shares of Rs.10 each</td><td>10,000,000</td></tr>
-<tr><td><strong>Issued, subscribed and paid-up:</strong></td><td></td></tr>
-<tr><td>400,000 ordinary shares fully paid in cash</td><td>4,000,000</td></tr>
-<tr><td>100,000 ordinary shares issued for consideration other than cash (Note X.1)</td><td>1,000,000</td></tr>
-<tr><td>200,000 ordinary shares issued as fully paid bonus shares</td><td>2,000,000</td></tr>
-<tr><td></td><td><strong>7,000,000</strong></td></tr></table>
-<p><strong>X.1</strong> The 100,000 shares were issued against plant and machinery acquired during the year.<br>
-<strong>X.2</strong> Rights: one vote per share; equal dividend rights; residual claim on winding up after creditors.</p>
-<p><strong>Reserves:</strong> Capital — share premium Rs.500,000 (50,000 shares × Rs.10 premium). Revenue — general reserve Rs.1,000,000; unappropriated profit Rs.2,300,000.</p>
-<div class="mz"><strong>⚠️ Mistake zone — describing instead of preparing.</strong> Writing "the Fourth Schedule requires disclosure of…" instead of the note itself is why this question averages ~20%. Examiners want the formal note, with numbers in it.</div>
-<div class="mz"><strong>⚠️ Mistake zone — the missing authorised capital.</strong> Starting the note at "issued, subscribed and paid-up" and omitting the authorised line is the second classic fail. Authorised comes first, always.</div>
-<p class="lens"><strong>Examiner's lens:</strong> a real note — authorised first, the three-way split of issued capital, numbered sub-notes, then reserves.</p>`
-},
-{
-id:"ethics", chapter:"Ethics",
-title:"The Pushed Adjustment",
-marks:8, time:"14 min",
-scenario:`<p>You are a junior accountant. The finance director instructs you to <strong>capitalise Rs.25 of routine repair costs</strong> as "improvements" so the company meets its profit target for a loan covenant. When you hesitate, he says your probation review is next month.</p>
-<p><strong>Required:</strong> (a) identify any breaches of fundamental principles by the finance director, explaining <em>how</em> each is breached; (b) identify the threats to <em>your</em> compliance; (c) state the safeguards available to you, in order.</p>`,
-solution:`
-<h3>Part 1 — The finance director's breach</h3>
-<ol><li><strong>Professional competence and due care</strong> (one line: act diligently in accordance with applicable standards): deliberately misclassifying repairs as improvements violates IAS 16's recognition criteria — a competent professional would expense them. <em>This</em> is the tested principle.</li>
-<li><strong>Integrity</strong> (be straightforward and honest): knowingly misstating profit to satisfy a covenant is dishonest reporting.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — answering only on integrity.</strong> The documented trap is defaulting to integrity for every ethics scenario. Here the marking centres on <strong>professional competence and due care</strong> — naming the principle without explaining <em>how</em> the facts breach it earns almost nothing either way.</div>
-<h3>Part 2 — Threats to your compliance</h3>
-<ol><li><strong>Intimidation threat:</strong> the probation-review remark pressures you to comply.</li>
-<li><strong>Self-interest threat:</strong> your own job security biases you toward obeying.</li></ol>
-<h3>Part 3 — Safeguards, escalating</h3>
-<ol><li>Discuss with the finance director and persuade him to correct the treatment.</li>
-<li>If refused, escalate to higher authority (CEO / audit committee).</li>
-<li>Consult the company's ethics and whistleblowing policies.</li>
-<li>Refuse to be associated with the misstated financial statements.</li>
-<li>Resign as a last resort.</li></ol>
-<p class="lens"><strong>Examiner's lens:</strong> breach-explanation (not just identification), threats from <em>your</em> perspective, and safeguards in escalating order.</p>`
-},
-{
-id:"ias33", chapter:"IAS 33 EPS",
-title:"Bonus Issue and Options",
-marks:8, time:"14 min",
-scenario:`<p>Company Y reports profit attributable to ordinary shareholders of <strong>Rs.1,200,000</strong> for the year.</p>
-<p>2,000,000 ordinary shares were in issue throughout the year. On <strong>1 September</strong>, Y made a <strong>1-for-2 bonus issue</strong>.</p>
-<p>Y also has 200,000 share options outstanding all year, exercisable at Rs.6 when the average market price was Rs.10.</p>
-<p><strong>Required:</strong> compute basic and diluted EPS.</p>`,
-solution:`
-<h3>Step 1 — Basic EPS (restate for the bonus issue)</h3>
-<ol><li>A bonus issue is restated <strong>retrospectively</strong> — as if the new shares always existed: 2,000,000 × 3/2 = <strong>3,000,000</strong> weighted average shares.</li>
-<li>Basic EPS = 1,200,000 ÷ 3,000,000 = <strong>Rs.0.40</strong>.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — no restatement.</strong> Time-apportioning the bonus shares (2,000,000 × 8/12 + 3,000,000 × 4/12) treats a bonus issue like a cash issue. Bonus issues carry no new resources, so the whole year — and the comparatives — are restated.</div>
-<h3>Step 2 — Diluted EPS</h3>
-<ol><li>Bonus element in the options: 200,000 × (1 − 6/10) = <strong>80,000</strong> shares.</li>
-<li>Diluted shares = 3,000,000 + 80,000 = 3,080,000 → diluted EPS = 1,200,000 ÷ 3,080,000 = <strong>Rs.0.39</strong>.</li>
-<li>Present basic and diluted with equal prominence; restate the comparative EPS.</li></ol>
-<p class="lens"><strong>Examiner's lens:</strong> the retrospective restatement stated as a rule, then the options' bonus element computed — not the other way round.</p>`
-},
-{
-id:"ias36", chapter:"IAS 36 Impairment",
-title:"The CGU Test",
-marks:8, time:"14 min",
-scenario:`<p>Cash-generating unit Z has a carrying amount of <strong>Rs.560</strong>: goodwill Rs.100, plant Rs.400, patents Rs.60. Its recoverable amount is <strong>Rs.480</strong>.</p>
-<p><strong>Required:</strong> (a) perform the impairment test and allocate the loss; (b) state how the allocation would differ if the recoverable amount were Rs.410 instead.</p>`,
-solution:`
-<h3>Step 1 — The test</h3>
-<ol><li>Carrying 560 > recoverable 480 → impairment loss <strong>Rs.80</strong>.</li></ol>
-<h3>Step 2 — Allocate: goodwill first</h3>
-<ol><li>The full Rs.80 is allocated to <strong>goodwill</strong> (100 → 20). Plant and patents are untouched.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — pro-rating first.</strong> Spreading the loss across all assets, or skipping the test because "goodwill covers it", are both wrong. Goodwill absorbs impairment <em>before</em> any other asset.</div>
-<h3>Step 3 — If recoverable were Rs.410</h3>
-<ol><li>Loss = 150. Goodwill takes the first 100 → nil. Remaining 50 is pro-rated over plant and patents: plant 400/460 × 50 = <strong>43.5</strong>, patents 60/460 × 50 = <strong>6.5</strong> (each floored at its own recoverable amount).</li></ol>
-<p class="lens"><strong>Examiner's lens:</strong> the test performed (not assumed), goodwill first, pro-rata only for the remainder.</p>`
-},
-{
-id:"ias16", chapter:"IAS 16 PPE",
-title:"Revaluation and the Overhaul",
-marks:8, time:"14 min",
-scenario:`<p>Machine M cost Rs.500 with a 10-year useful life and no residual value. After 4 years of use (carrying amount Rs.300), it is revalued to <strong>Rs.420</strong>. Engineers reassess the remaining useful life at <strong>7 years</strong> following a major overhaul.</p>
-<p>During the overhaul, the old engine (carrying amount Rs.30) was replaced with a new engine costing Rs.80.</p>
-<p><strong>Required:</strong> show the revaluation, the new depreciation charge, and the engine replacement.</p>`,
-solution:`
-<h3>Step 1 — Revaluation</h3>
-<ol><li>Carrying 300 → fair value 420: revaluation surplus <strong>Rs.120</strong> to other comprehensive income (accumulated in equity).</li></ol>
-<h3>Step 2 — New depreciation</h3>
-<ol><li>Depreciate the revalued amount over the <strong>reassessed</strong> remaining life: 420 ÷ 7 = <strong>Rs.60</strong> per year.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — the old life.</strong> Using the original remaining life (10 − 4 = 6 years → Rs.70) ignores the engineers' reassessment. After a revaluation, the depreciation base <em>and</em> the life are both refreshed.</div>
-<h3>Step 3 — Component replacement</h3>
-<ol><li>Derecognise the old engine: <span class="journal">Dr Loss on disposal (P&amp;L) 30
-    Cr Plant and machinery 30</span></li>
-<li>Capitalise the new engine (Rs.80) as part of the machine — but note it was replaced <em>after</em> the revaluation point used above; in practice the Rs.80 is added to the revalued carrying amount going forward.</li></ol>
-<p class="lens"><strong>Examiner's lens:</strong> surplus to OCI, depreciation on the reassessed life, and the old component derecognised rather than left inside the asset.</p>`
-},
-{
-id:"ias24-40", chapter:"IAS 24 & IAS 40",
-title:"The Group Property",
-marks:8, time:"14 min",
-scenario:`<p>Parent P owns an office building and rents it to its 70%-owned subsidiary S for Rs.120 per year (Rs.10 outstanding at year-end). The building's fair value moved from Rs.1,000 to Rs.1,100 during the year.</p>
-<p><strong>Required:</strong> (a) state the correct property treatment in P's <em>separate</em> and in the <em>consolidated</em> financial statements; (b) state the related-party disclosures required.</p>`,
-solution:`
-<h3>Step 1 — Classification differs by set of statements</h3>
-<ol><li><strong>Separate financial statements:</strong> the building is rented out → <strong>investment property</strong>; P uses the fair value model: gain of Rs.100 (1,100 − 1,000) to <strong>profit or loss</strong>, rental income Rs.120 to profit or loss.</li>
-<li><strong>Consolidated financial statements:</strong> the group occupies its own building → <strong>owner-occupied (PPE)</strong>. No fair value gain is recognised on consolidation; the property stays at cost less depreciation.</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — one model everywhere.</strong> Applying the fair value model in the consolidated statements (and booking the Rs.100 gain there) is the documented error. The classification follows <em>use by the reporting entity</em> — and the group uses it itself.</div>
-<h3>Step 2 — Related-party disclosures (IAS 24)</h3>
-<ol><li>S is a related party (subsidiary). Disclose: the nature of the relationship, rental income of Rs.120, the terms of the lease, and the Rs.10 outstanding balance (terms and whether secured).</li></ol>
-<div class="mz"><strong>⚠️ Mistake zone — disclosure omissions.</strong> Stating "rent charged to subsidiary Rs.120" without the relationship, terms, and outstanding balance leaves most of the disclosure marks behind.</div>
-<p class="lens"><strong>Examiner's lens:</strong> separate-vs-consolidated treatment distinguished, and a complete disclosure package — relationship, amounts, terms, balances.</p>`
-}
+{"id": "consol-spring2025-q9", "chapter": "Consolidation", "session": "Spring 2025", "qno": "Q9", "marks": 17, "pass": 47, "diff": "Medium", "diffCls": "med", "topic": "IFRS 10 / IFRS 3", "tests": "Consolidated statements: NCI measurement and attribution, unrealised profit, inventory fair-value uplift", "file": "★ Paper + answers on file", "before": ["Eliminate unrealised profit on the intra-group margin — convert on-cost to on-sales before multiplying.", "Trace inventory fair-value uplifts into cost of sales when the goods are sold.", "Show the parent/NCI attribution as the balancing figure — skipping it is the most repeated mark-loser.", "Number every working (W1, W2…) — unlabelled workings lose the trail marks."], "checklist": ["Workings numbered W1, W2… and referenced on the face statements", "Goodwill: consideration + NCI at fair value − fair value of net assets; impairment charged and split", "Unrealised profit eliminated on the intra-group margin (on-cost converted to on-sales)", "Inventory fair-value uplift traced into cost of sales when sold", "Parent/NCI profit attribution shown as the balancing figure", "Mid-year subsidiary time-apportioned; associate on equity method; contingent consideration under IFRS 3 at fair value"]},
+{"id": "consol-autumn2024-q7", "chapter": "Consolidation", "session": "Autumn 2024", "qno": "Q7", "marks": 16, "pass": 23, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 10 / IFRS 3", "tests": "IFRS 3 contingent consideration vs IAS 37 — the classification boundary", "file": "★ Paper + answers on file", "before": ["Trace inventory fair-value uplifts into cost of sales when the goods are sold.", "Contingent consideration is IFRS 3 at fair value — don't force it into IAS 37.", "Number every working (W1, W2…) — unlabelled workings lose the trail marks.", "Eliminate unrealised profit on the intra-group margin — convert on-cost to on-sales before multiplying."], "checklist": ["Workings numbered W1, W2… and referenced on the face statements", "Goodwill: consideration + NCI at fair value − fair value of net assets; impairment charged and split", "Unrealised profit eliminated on the intra-group margin (on-cost converted to on-sales)", "Inventory fair-value uplift traced into cost of sales when sold", "Parent/NCI profit attribution shown as the balancing figure", "Mid-year subsidiary time-apportioned; associate on equity method; contingent consideration under IFRS 3 at fair value"]},
+{"id": "consol-autumn2024-q1", "chapter": "Consolidation", "session": "Autumn 2024", "qno": "Q1", "marks": 10, "pass": 61, "diff": "Standard", "diffCls": "std", "topic": "IFRS 10 / IFRS 3", "tests": "Consolidation combined with IAS 38 intangibles", "file": "★ Paper + answers on file", "before": ["Number every working (W1, W2…) — unlabelled workings lose the trail marks.", "Trace inventory fair-value uplifts into cost of sales when the goods are sold.", "Time-apportion a mid-year subsidiary's results before anything else happens.", "Eliminate unrealised profit on the intra-group margin — convert on-cost to on-sales before multiplying."], "checklist": ["Workings numbered W1, W2… and referenced on the face statements", "Goodwill: consideration + NCI at fair value − fair value of net assets; impairment charged and split", "Unrealised profit eliminated on the intra-group margin (on-cost converted to on-sales)", "Inventory fair-value uplift traced into cost of sales when sold", "Parent/NCI profit attribution shown as the balancing figure", "Mid-year subsidiary time-apportioned; associate on equity method; contingent consideration under IFRS 3 at fair value"]},
+{"id": "consol-autumn2024-q2", "chapter": "Consolidation", "session": "Autumn 2024", "qno": "Q2", "marks": 10, "pass": 70, "diff": "Standard", "diffCls": "std", "topic": "IFRS 10 / IFRS 3", "tests": "Consolidation principles — theory", "file": "★ Paper + answers on file", "before": ["Number every working (W1, W2…) — unlabelled workings lose the trail marks.", "Eliminate unrealised profit on the intra-group margin — convert on-cost to on-sales before multiplying.", "Trace inventory fair-value uplifts into cost of sales when the goods are sold.", "Show the parent/NCI attribution as the balancing figure — skipping it is the most repeated mark-loser."], "checklist": ["Workings numbered W1, W2… and referenced on the face statements", "Goodwill: consideration + NCI at fair value − fair value of net assets; impairment charged and split", "Unrealised profit eliminated on the intra-group margin (on-cost converted to on-sales)", "Inventory fair-value uplift traced into cost of sales when sold", "Parent/NCI profit attribution shown as the balancing figure", "Mid-year subsidiary time-apportioned; associate on equity method; contingent consideration under IFRS 3 at fair value"]},
+{"id": "consol-spring2022-q8", "chapter": "Consolidation", "session": "Spring 2022", "qno": "Q8", "marks": 18, "pass": 38, "diff": "Medium", "diffCls": "med", "topic": "IFRS 10 / IFRS 3", "tests": "Goodwill, NCI, and deferred/contingent consideration", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Trace inventory fair-value uplifts into cost of sales when the goods are sold.", "Show the parent/NCI attribution as the balancing figure — skipping it is the most repeated mark-loser.", "Number every working (W1, W2…) — unlabelled workings lose the trail marks.", "Eliminate unrealised profit on the intra-group margin — convert on-cost to on-sales before multiplying."], "checklist": ["Workings numbered W1, W2… and referenced on the face statements", "Goodwill: consideration + NCI at fair value − fair value of net assets; impairment charged and split", "Unrealised profit eliminated on the intra-group margin (on-cost converted to on-sales)", "Inventory fair-value uplift traced into cost of sales when sold", "Parent/NCI profit attribution shown as the balancing figure", "Mid-year subsidiary time-apportioned; associate on equity method; contingent consideration under IFRS 3 at fair value"]},
+{"id": "consol-autumn2019-q6", "chapter": "Consolidation", "session": "Autumn 2019", "qno": "Q6", "marks": 20, "pass": 22, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 10 / IFRS 3", "tests": "Full consolidated statement of profit or loss and OCI", "file": "Source the paper yourself", "before": ["Eliminate unrealised profit on the intra-group margin — convert on-cost to on-sales before multiplying.", "Show the parent/NCI attribution as the balancing figure — skipping it is the most repeated mark-loser.", "Time-apportion a mid-year subsidiary's results before anything else happens.", "Associate dividends reduce the investment — they never touch profit or loss."], "checklist": ["Workings numbered W1, W2… and referenced on the face statements", "Goodwill: consideration + NCI at fair value − fair value of net assets; impairment charged and split", "Unrealised profit eliminated on the intra-group margin (on-cost converted to on-sales)", "Inventory fair-value uplift traced into cost of sales when sold", "Parent/NCI profit attribution shown as the balancing figure", "Mid-year subsidiary time-apportioned; associate on equity method; contingent consideration under IFRS 3 at fair value"]},
+{"id": "assoc-autumn2025-q3", "chapter": "Associates", "session": "Autumn 2025", "qno": "Q3", "marks": 8, "pass": 15, "diff": "Hard", "diffCls": "hard", "topic": "IAS 28", "tests": "Associate accounting — the hardest associate outing on record", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Equity method: take the share of post-acquisition profit, not the full-year profit.", "State which set of statements you are in — separate and consolidated treatments differ.", "Classify first: significant influence (associate) vs control vs a simple investment — the classification decides the method.", "Deduct the holding-% share of unrealised profit on unsold intra-group inventory."], "checklist": ["Classification stated with reasons: associate vs subsidiary vs simple investment", "Equity method: share of post-acquisition profit taken", "Unrealised profit on intra-group inventory deducted at the holding %", "Dividends received reduce the carrying amount — not profit or loss", "Separate vs consolidated treatment distinguished where asked"]},
+{"id": "assoc-spring2025-q9", "chapter": "Associates", "session": "Spring 2025", "qno": "Q9", "marks": 17, "pass": 47, "diff": "Medium", "diffCls": "med", "topic": "IAS 28", "tests": "Equity method inside a consolidation", "file": "★ Paper + answers on file", "before": ["Deduct the holding-% share of unrealised profit on unsold intra-group inventory.", "Classify first: significant influence (associate) vs control vs a simple investment — the classification decides the method.", "Equity method: take the share of post-acquisition profit, not the full-year profit.", "Dividends received reduce the carrying amount — never profit or loss."], "checklist": ["Classification stated with reasons: associate vs subsidiary vs simple investment", "Equity method: share of post-acquisition profit taken", "Unrealised profit on intra-group inventory deducted at the holding %", "Dividends received reduce the carrying amount — not profit or loss", "Separate vs consolidated treatment distinguished where asked"]},
+{"id": "assoc-spring2022-q3", "chapter": "Associates", "session": "Spring 2022", "qno": "Q3", "marks": 7, "pass": 14, "diff": "Hard", "diffCls": "hard", "topic": "IAS 28", "tests": "Significant-influence classification trap", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Dividends received reduce the carrying amount — never profit or loss.", "Classify first: significant influence (associate) vs control vs a simple investment — the classification decides the method.", "Equity method: take the share of post-acquisition profit, not the full-year profit.", "Deduct the holding-% share of unrealised profit on unsold intra-group inventory."], "checklist": ["Classification stated with reasons: associate vs subsidiary vs simple investment", "Equity method: share of post-acquisition profit taken", "Unrealised profit on intra-group inventory deducted at the holding %", "Dividends received reduce the carrying amount — not profit or loss", "Separate vs consolidated treatment distinguished where asked"]},
+{"id": "assoc-spring2024-q1", "chapter": "Associates", "session": "Spring 2024", "qno": "Q1", "marks": 8, "pass": null, "diff": null, "diffCls": null, "topic": "IAS 28", "tests": "IAS 28 vs IFRS 9 — the classification boundary", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Classify first: significant influence (associate) vs control vs a simple investment — the classification decides the method.", "Equity method: take the share of post-acquisition profit, not the full-year profit.", "Deduct the holding-% share of unrealised profit on unsold intra-group inventory.", "Dividends received reduce the carrying amount — never profit or loss."], "checklist": ["Classification stated with reasons: associate vs subsidiary vs simple investment", "Equity method: share of post-acquisition profit taken", "Unrealised profit on intra-group inventory deducted at the holding %", "Dividends received reduce the carrying amount — not profit or loss", "Separate vs consolidated treatment distinguished where asked"]},
+{"id": "ias12-spring2025-q8", "chapter": "IAS 12 Tax", "session": "Spring 2025", "qno": "Q8", "marks": 18, "pass": 31, "diff": "Medium", "diffCls": "med", "topic": "IAS 12", "tests": "Tax note and reconciliation: rate change, leases, financing component", "file": "★ Paper + answers on file", "before": ["Build the deferred-tax table per item: carrying amount vs tax base at the enacted rate.", "Hunt for hidden temporary differences: financing components, bond carrying vs tax bases.", "Put the rate-change effect on its own reconciliation line — never buried, never on the wrong base.", "Show the ROU-asset DTL and the lease-liability DTA as separate lines — do not net them."], "checklist": ["Current-tax working built from accounting profit with add-backs and deductions", "Deferred-tax table per item: carrying amount vs tax base at the enacted rate", "Rate-change effect on its own reconciliation line", "ROU-asset DTL and lease-liability DTA shown separately — not netted", "Reconciliation foots to the total tax expense; movement signs checked"]},
+{"id": "ias12-autumn2024-q8", "chapter": "IAS 12 Tax", "session": "Autumn 2024", "qno": "Q8", "marks": 18, "pass": 14, "diff": "Hard", "diffCls": "hard", "topic": "IAS 12", "tests": "IAS 21 + IAS 12 combined, with disclosure notes", "file": "★ Paper + answers on file", "before": ["Check the sign on the deferred-tax movement — charge vs credit.", "Put the rate-change effect on its own reconciliation line — never buried, never on the wrong base.", "Build the deferred-tax table per item: carrying amount vs tax base at the enacted rate.", "Show the ROU-asset DTL and the lease-liability DTA as separate lines — do not net them."], "checklist": ["Current-tax working built from accounting profit with add-backs and deductions", "Deferred-tax table per item: carrying amount vs tax base at the enacted rate", "Rate-change effect on its own reconciliation line", "ROU-asset DTL and lease-liability DTA shown separately — not netted", "Reconciliation foots to the total tax expense; movement signs checked"]},
+{"id": "ias12-spring2023-q9", "chapter": "IAS 12 Tax", "session": "Spring 2023", "qno": "Q9", "marks": 15, "pass": 34, "diff": "Medium", "diffCls": "med", "topic": "IAS 12", "tests": "Deferred tax on fair-value gains and revaluation", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Show the ROU-asset DTL and the lease-liability DTA as separate lines — do not net them.", "Build the deferred-tax table per item: carrying amount vs tax base at the enacted rate.", "Put the rate-change effect on its own reconciliation line — never buried, never on the wrong base.", "Initial direct costs sit inside the ROU carrying amount — they create a temporary difference."], "checklist": ["Current-tax working built from accounting profit with add-backs and deductions", "Deferred-tax table per item: carrying amount vs tax base at the enacted rate", "Rate-change effect on its own reconciliation line", "ROU-asset DTL and lease-liability DTA shown separately — not netted", "Reconciliation foots to the total tax expense; movement signs checked"]},
+{"id": "ias12-autumn2021-q7", "chapter": "IAS 12 Tax", "session": "Autumn 2021", "qno": "Q7", "marks": null, "pass": 42, "diff": "Medium", "diffCls": "med", "topic": "IAS 12", "tests": "Current tax, deferred tax, rate changes, reconciliation", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Put the rate-change effect on its own reconciliation line — never buried, never on the wrong base.", "Show the ROU-asset DTL and the lease-liability DTA as separate lines — do not net them.", "Build the deferred-tax table per item: carrying amount vs tax base at the enacted rate.", "Initial direct costs sit inside the ROU carrying amount — they create a temporary difference."], "checklist": ["Current-tax working built from accounting profit with add-backs and deductions", "Deferred-tax table per item: carrying amount vs tax base at the enacted rate", "Rate-change effect on its own reconciliation line", "ROU-asset DTL and lease-liability DTA shown separately — not netted", "Reconciliation foots to the total tax expense; movement signs checked"]},
+{"id": "ifrs9-autumn2024-q4", "chapter": "IFRS 9", "session": "Autumn 2024", "qno": "Q4", "marks": 4, "pass": 20, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 9", "tests": "Classification and presentation — P&L vs OCI labelling", "file": "★ Paper + answers on file", "before": ["Label every effect P&L or OCI exactly as the requirement asks — workings without a destination score badly.", "Classify each instrument first and state its measurement basis.", "Document the FVOCI election wherever you take it.", "Recognise the ECL allowance on the right basis (12-month vs lifetime) with the journal."], "checklist": ["Each instrument classified with its measurement basis stated", "Every effect labelled P&L or OCI as required", "FVOCI election documented where taken", "ECL allowance recognised on the right basis with the journal", "Prior errors fixed with correcting entries"]},
+{"id": "ifrs9-autumn2025-q2", "chapter": "IFRS 9", "session": "Autumn 2025", "qno": "Q2", "marks": 7, "pass": 34, "diff": "Medium", "diffCls": "med", "topic": "IFRS 9", "tests": "FVPL vs FVOCI election for equity investments", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Classify each instrument first and state its measurement basis.", "Label every effect P&L or OCI exactly as the requirement asks — workings without a destination score badly.", "Fix prior-period errors with correcting entries — not a fresh set of journals.", "Document the FVOCI election wherever you take it."], "checklist": ["Each instrument classified with its measurement basis stated", "Every effect labelled P&L or OCI as required", "FVOCI election documented where taken", "ECL allowance recognised on the right basis with the journal", "Prior errors fixed with correcting entries"]},
+{"id": "ifrs9-spring2023-q1", "chapter": "IFRS 9", "session": "Spring 2023", "qno": "Q1", "marks": 8, "pass": 54, "diff": "Medium", "diffCls": "med", "topic": "IFRS 9", "tests": "FVOCI including amortised cost vs fair value", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Fix prior-period errors with correcting entries — not a fresh set of journals.", "Classify each instrument first and state its measurement basis.", "Label every effect P&L or OCI exactly as the requirement asks — workings without a destination score badly.", "Document the FVOCI election wherever you take it."], "checklist": ["Each instrument classified with its measurement basis stated", "Every effect labelled P&L or OCI as required", "FVOCI election documented where taken", "ECL allowance recognised on the right basis with the journal", "Prior errors fixed with correcting entries"]},
+{"id": "ifrs9-autumn2022-q5", "chapter": "IFRS 9", "session": "Autumn 2022", "qno": "Q5", "marks": null, "pass": 22, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 9", "tests": "Investments with correcting journals", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Fix prior-period errors with correcting entries — not a fresh set of journals.", "Classify each instrument first and state its measurement basis.", "Label every effect P&L or OCI exactly as the requirement asks — workings without a destination score badly.", "Document the FVOCI election wherever you take it."], "checklist": ["Each instrument classified with its measurement basis stated", "Every effect labelled P&L or OCI as required", "FVOCI election documented where taken", "ECL allowance recognised on the right basis with the journal", "Prior errors fixed with correcting entries"]},
+{"id": "ifrs16-spring2025-q4", "chapter": "IFRS 16 Leases", "session": "Spring 2025", "qno": "Q4", "marks": 10, "pass": 35, "diff": "Medium", "diffCls": "med", "topic": "IFRS 16", "tests": "Correction-style: spot the wrong discount rate", "file": "★ Paper + answers on file", "before": ["Depreciate over the lease term — or the useful life if purchase is reasonably certain.", "Verify the discount rate before anything else — one wrong rate poisons every number that follows.", "Get the lease term right: penalties and reasonably-certain options change it.", "Correction questions: compare recorded vs correct, then book correcting journals for the differences only."], "checklist": ["Discount rate verified first and held constant every period", "Lease term reflects penalties and reasonably-certain options", "Liability PV includes guaranteed residuals and certain purchase options", "ROU asset fully built: liability + initial direct costs − reimbursements + decommissioning", "Depreciation life matches the term (or useful life if purchase is certain)", "Corrections compare recorded vs correct; differences journalised"]},
+{"id": "ifrs16-autumn2024-q5", "chapter": "IFRS 16 Leases", "session": "Autumn 2024", "qno": "Q5", "marks": 10, "pass": 64, "diff": "Standard", "diffCls": "std", "topic": "IFRS 16", "tests": "Lease term, penalties, and a constant discount rate", "file": "★ Paper + answers on file", "before": ["Verify the discount rate before anything else — one wrong rate poisons every number that follows.", "Hold the rate constant in every period — never escalate it year by year.", "Get the lease term right: penalties and reasonably-certain options change it.", "Depreciate over the lease term — or the useful life if purchase is reasonably certain."], "checklist": ["Discount rate verified first and held constant every period", "Lease term reflects penalties and reasonably-certain options", "Liability PV includes guaranteed residuals and certain purchase options", "ROU asset fully built: liability + initial direct costs − reimbursements + decommissioning", "Depreciation life matches the term (or useful life if purchase is certain)", "Corrections compare recorded vs correct; differences journalised"]},
+{"id": "ifrs16-spring2022-q9", "chapter": "IFRS 16 Leases", "session": "Spring 2022", "qno": "Q9", "marks": 15, "pass": 25, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 16", "tests": "Termination option and initial direct costs", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Verify the discount rate before anything else — one wrong rate poisons every number that follows.", "Hold the rate constant in every period — never escalate it year by year.", "Get the lease term right: penalties and reasonably-certain options change it.", "Build the ROU asset fully: liability + initial direct costs − reimbursements + decommissioning present value."], "checklist": ["Discount rate verified first and held constant every period", "Lease term reflects penalties and reasonably-certain options", "Liability PV includes guaranteed residuals and certain purchase options", "ROU asset fully built: liability + initial direct costs − reimbursements + decommissioning", "Depreciation life matches the term (or useful life if purchase is certain)", "Corrections compare recorded vs correct; differences journalised"]},
+{"id": "ifrs16-autumn2021-q6", "chapter": "IFRS 16 Leases", "session": "Autumn 2021", "qno": "Q6", "marks": null, "pass": 17, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 16", "tests": "Lessor and manufacturer-dealer accounting", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Get the lease term right: penalties and reasonably-certain options change it.", "Verify the discount rate before anything else — one wrong rate poisons every number that follows.", "Hold the rate constant in every period — never escalate it year by year.", "Build the ROU asset fully: liability + initial direct costs − reimbursements + decommissioning present value."], "checklist": ["Discount rate verified first and held constant every period", "Lease term reflects penalties and reasonably-certain options", "Liability PV includes guaranteed residuals and certain purchase options", "ROU asset fully built: liability + initial direct costs − reimbursements + decommissioning", "Depreciation life matches the term (or useful life if purchase is certain)", "Corrections compare recorded vs correct; differences journalised"]},
+{"id": "ifrs15-autumn2022-q8", "chapter": "IFRS 15 Revenue", "session": "Autumn 2022", "qno": "Q8", "marks": null, "pass": 13, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 15", "tests": "Contract modifications and distinct performance obligations", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Identify the distinct performance obligations before touching any numbers.", "Allocate the transaction price by relative stand-alone selling prices.", "Recompute the transaction price after a contract modification; treat it as a new or adjusted contract.", "Every journal needs its timing reason — control transferred when? Bare journals lose marks."], "checklist": ["Distinct performance obligations identified first", "Price allocated by relative stand-alone selling prices", "Each journal carries its timing reason (control transferred when…)", "Contract liability recognised for cash received before satisfaction", "Modifications handled as new or adjusted contracts correctly"]},
+{"id": "ifrs15-autumn2025-q7", "chapter": "IFRS 15 Revenue", "session": "Autumn 2025", "qno": "Q7", "marks": 16, "pass": 24, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 15", "tests": "Material rights and discount options", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Every journal needs its timing reason — control transferred when? Bare journals lose marks.", "Allocate the transaction price by relative stand-alone selling prices.", "Costs of obtaining a contract: capitalise only if recoverable, then amortise.", "Identify the distinct performance obligations before touching any numbers."], "checklist": ["Distinct performance obligations identified first", "Price allocated by relative stand-alone selling prices", "Each journal carries its timing reason (control transferred when…)", "Contract liability recognised for cash received before satisfaction", "Modifications handled as new or adjusted contracts correctly"]},
+{"id": "ifrs15-spring2022-q2", "chapter": "IFRS 15 Revenue", "session": "Spring 2022", "qno": "Q2", "marks": 9, "pass": 10, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 15", "tests": "Point-in-time vs over-time recognition; costs of obtaining a contract", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Identify the distinct performance obligations before touching any numbers.", "Allocate the transaction price by relative stand-alone selling prices.", "Every journal needs its timing reason — control transferred when? Bare journals lose marks.", "Recompute the transaction price after a contract modification; treat it as a new or adjusted contract."], "checklist": ["Distinct performance obligations identified first", "Price allocated by relative stand-alone selling prices", "Each journal carries its timing reason (control transferred when…)", "Contract liability recognised for cash received before satisfaction", "Modifications handled as new or adjusted contracts correctly"]},
+{"id": "ifrs15-autumn2024-q9", "chapter": "IFRS 15 Revenue", "session": "Autumn 2024", "qno": "Q9", "marks": 16, "pass": 63, "diff": "Standard", "diffCls": "std", "topic": "IFRS 15", "tests": "Revenue journals with full explanations", "file": "★ Paper + answers on file", "before": ["Every journal needs its timing reason — control transferred when? Bare journals lose marks.", "Identify the distinct performance obligations before touching any numbers.", "Allocate the transaction price by relative stand-alone selling prices.", "Recompute the transaction price after a contract modification; treat it as a new or adjusted contract."], "checklist": ["Distinct performance obligations identified first", "Price allocated by relative stand-alone selling prices", "Each journal carries its timing reason (control transferred when…)", "Contract liability recognised for cash received before satisfaction", "Modifications handled as new or adjusted contracts correctly"]},
+{"id": "ias38-spring2025-q1", "chapter": "IAS 38 Intangibles", "session": "Spring 2025", "qno": "Q1", "marks": 8, "pass": 46, "diff": "Medium", "diffCls": "med", "topic": "IAS 38", "tests": "Amortisation lives, renewal costs, residual values", "file": "★ Paper + answers on file", "before": ["Amortise from availability for use, over the required useful life and residual value.", "Verify the capitalisation amount before recording the asset.", "Date the research-to-development cut-off precisely — only post-criteria costs may be capitalised.", "An advertising-only website is expensed (SIC 32) — never capitalised."], "checklist": ["Research/development cut-off dated; only post-criteria costs capitalised", "Amortisation from availability, over the required life and residual", "Advertising website costs expensed — never capitalised", "Capitalisation amount verified before recording", "Measurement model applied consistently"]},
+{"id": "ias38-autumn2023-q9", "chapter": "IAS 38 Intangibles", "session": "Autumn 2023", "qno": "Q9", "marks": null, "pass": 7, "diff": "Hard", "diffCls": "hard", "topic": "IAS 38", "tests": "Intangibles + PPE + prior-period error combined", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Amortise from availability for use, over the required useful life and residual value.", "Verify the capitalisation amount before recording the asset.", "Date the research-to-development cut-off precisely — only post-criteria costs may be capitalised.", "An advertising-only website is expensed (SIC 32) — never capitalised."], "checklist": ["Research/development cut-off dated; only post-criteria costs capitalised", "Amortisation from availability, over the required life and residual", "Advertising website costs expensed — never capitalised", "Capitalisation amount verified before recording", "Measurement model applied consistently"]},
+{"id": "ias38-spring2024-q4", "chapter": "IAS 38 Intangibles", "session": "Spring 2024", "qno": "Q4", "marks": 9, "pass": null, "diff": null, "diffCls": null, "topic": "IAS 38", "tests": "Research vs development; pilot plant", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Date the research-to-development cut-off precisely — only post-criteria costs may be capitalised.", "Amortise from availability for use, over the required useful life and residual value.", "An advertising-only website is expensed (SIC 32) — never capitalised.", "Verify the capitalisation amount before recording the asset."], "checklist": ["Research/development cut-off dated; only post-criteria costs capitalised", "Amortisation from availability, over the required life and residual", "Advertising website costs expensed — never capitalised", "Capitalisation amount verified before recording", "Measurement model applied consistently"]},
+{"id": "ias38-autumn2022-q2", "chapter": "IAS 38 Intangibles", "session": "Autumn 2022", "qno": "Q2", "marks": null, "pass": 66, "diff": "Standard", "diffCls": "std", "topic": "IAS 38", "tests": "Website costs and advertising", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Amortise from availability for use, over the required useful life and residual value.", "An advertising-only website is expensed (SIC 32) — never capitalised.", "Verify the capitalisation amount before recording the asset.", "Date the research-to-development cut-off precisely — only post-criteria costs may be capitalised."], "checklist": ["Research/development cut-off dated; only post-criteria costs capitalised", "Amortisation from availability, over the required life and residual", "Advertising website costs expensed — never capitalised", "Capitalisation amount verified before recording", "Measurement model applied consistently"]},
+{"id": "ias37-autumn2024-q7", "chapter": "IAS 37 Provisions", "session": "Autumn 2024", "qno": "Q7", "marks": 16, "pass": 23, "diff": "Hard", "diffCls": "hard", "topic": "IAS 37", "tests": "IFRS 3 vs IAS 37 boundary question", "file": "★ Paper + answers on file", "before": ["Contingent consideration belongs to IFRS 3 at fair value — not to IAS 37.", "Provide only for present obligations from past events; disclose the rest.", "Give reasons for every treatment — thin explanations cap your marks.", "Restructuring provisions cover only direct, unavoidable costs — never future operating losses."], "checklist": ["Contingent consideration kept under IFRS 3 at fair value", "Provisions only for present obligations from past events", "Restructuring limited to direct unavoidable costs", "Onerous contracts identified and measured correctly", "Contingent items disclosed not provided; reasons given throughout"]},
+{"id": "ias37-spring2025-q7", "chapter": "IAS 37 Provisions", "session": "Spring 2025", "qno": "Q7", "marks": 15, "pass": 52, "diff": "Medium", "diffCls": "med", "topic": "IAS 37", "tests": "Provision vs disclosure; impairment test", "file": "★ Paper + answers on file", "before": ["Provide only for present obligations from past events; disclose the rest.", "Contingent consideration belongs to IFRS 3 at fair value — not to IAS 37.", "Restructuring provisions cover only direct, unavoidable costs — never future operating losses.", "Spot the onerous contract: provide the lower of fulfilment cost and penalty."], "checklist": ["Contingent consideration kept under IFRS 3 at fair value", "Provisions only for present obligations from past events", "Restructuring limited to direct unavoidable costs", "Onerous contracts identified and measured correctly", "Contingent items disclosed not provided; reasons given throughout"]},
+{"id": "ias37-autumn2021-q8", "chapter": "IAS 37 Provisions", "session": "Autumn 2021", "qno": "Q8", "marks": null, "pass": 20, "diff": "Hard", "diffCls": "hard", "topic": "IAS 37", "tests": "Events after the period with provisions vs avoidable costs", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Restructuring provisions cover only direct, unavoidable costs — never future operating losses.", "Give reasons for every treatment — thin explanations cap your marks.", "Contingent consideration belongs to IFRS 3 at fair value — not to IAS 37.", "Provide only for present obligations from past events; disclose the rest."], "checklist": ["Contingent consideration kept under IFRS 3 at fair value", "Provisions only for present obligations from past events", "Restructuring limited to direct unavoidable costs", "Onerous contracts identified and measured correctly", "Contingent items disclosed not provided; reasons given throughout"]},
+{"id": "ias37-spring2023-q4", "chapter": "IAS 37 Provisions", "session": "Spring 2023", "qno": "Q4", "marks": 9, "pass": 33, "diff": "Medium", "diffCls": "med", "topic": "IAS 37", "tests": "Decommissioning provision", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Provide only for present obligations from past events; disclose the rest.", "Contingent consideration belongs to IFRS 3 at fair value — not to IAS 37.", "Restructuring provisions cover only direct, unavoidable costs — never future operating losses.", "Spot the onerous contract: provide the lower of fulfilment cost and penalty."], "checklist": ["Contingent consideration kept under IFRS 3 at fair value", "Provisions only for present obligations from past events", "Restructuring limited to direct unavoidable costs", "Onerous contracts identified and measured correctly", "Contingent items disclosed not provided; reasons given throughout"]},
+{"id": "ifrs8-spring2025-q3", "chapter": "IFRS 8 Segments", "session": "Spring 2025", "qno": "Q3", "marks": 8, "pass": 49, "diff": "Medium", "diffCls": "med", "topic": "IFRS 8", "tests": "The 75% test and major-customer disclosure", "file": "★ Paper + answers on file", "before": ["Run the 75% revenue test — keep adding segments until it is covered.", "Disclose major customers at 10%+ of revenue — the rule most candidates miss.", "Apply the 10% quantitative thresholds (revenue, profit, assets) mechanically.", "Measure segment profit exactly as reported to the chief operating decision maker."], "checklist": ["10% quantitative thresholds applied (revenue, profit, assets)", "75% revenue test run; segments added until covered", "Major customers at 10%+ disclosed", "Segment profit as reported to the chief operating decision maker", "Segment totals reconciled to the entity figures"]},
+{"id": "ifrs8-autumn2023-q2", "chapter": "IFRS 8 Segments", "session": "Autumn 2023", "qno": "Q2", "marks": null, "pass": 62, "diff": "Standard", "diffCls": "std", "topic": "IFRS 8", "tests": "Standard segment application", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Run the 75% revenue test — keep adding segments until it is covered.", "Apply the 10% quantitative thresholds (revenue, profit, assets) mechanically.", "Disclose major customers at 10%+ of revenue — the rule most candidates miss.", "Measure segment profit exactly as reported to the chief operating decision maker."], "checklist": ["10% quantitative thresholds applied (revenue, profit, assets)", "75% revenue test run; segments added until covered", "Major customers at 10%+ disclosed", "Segment profit as reported to the chief operating decision maker", "Segment totals reconciled to the entity figures"]},
+{"id": "ifrs8-spring2021-q6", "chapter": "IFRS 8 Segments", "session": "Spring 2021", "qno": "Q6", "marks": 20, "pass": 15, "diff": "Hard", "diffCls": "hard", "topic": "IFRS 8", "tests": "Presentation with segments combined", "file": "Source the paper yourself", "before": ["Apply the 10% quantitative thresholds (revenue, profit, assets) mechanically.", "Run the 75% revenue test — keep adding segments until it is covered.", "Disclose major customers at 10%+ of revenue — the rule most candidates miss.", "Measure segment profit exactly as reported to the chief operating decision maker."], "checklist": ["10% quantitative thresholds applied (revenue, profit, assets)", "75% revenue test run; segments added until covered", "Major customers at 10%+ disclosed", "Segment profit as reported to the chief operating decision maker", "Segment totals reconciled to the entity figures"]},
+{"id": "ias10-autumn2021-q8", "chapter": "IAS 10 Events", "session": "Autumn 2021", "qno": "Q8", "marks": null, "pass": 20, "diff": "Hard", "diffCls": "hard", "topic": "IAS 10", "tests": "Adjusting vs non-adjusting, with provisions", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Attempt every sub-part — each carries easy classification marks.", "Classify each event adjusting vs non-adjusting — and say why.", "Adjust the numbers only for adjusting events.", "Disclose non-adjusting events: nature plus an estimate of the effect."], "checklist": ["Each event classified adjusting vs non-adjusting with reasons", "Numbers adjusted only for adjusting events", "Non-adjusting events disclosed with nature and estimate", "Post-year-end dividends not recognised as a liability", "Every sub-part attempted"]},
+{"id": "ias10-spring2021-q2", "chapter": "IAS 10 Events", "session": "Spring 2021", "qno": "Q2", "marks": 8, "pass": 13, "diff": "Hard", "diffCls": "hard", "topic": "IAS 10", "tests": "Events with tax-rate change and FX", "file": "Source the paper yourself", "before": ["Attempt every sub-part — each carries easy classification marks.", "Classify each event adjusting vs non-adjusting — and say why.", "Adjust the numbers only for adjusting events.", "Disclose non-adjusting events: nature plus an estimate of the effect."], "checklist": ["Each event classified adjusting vs non-adjusting with reasons", "Numbers adjusted only for adjusting events", "Non-adjusting events disclosed with nature and estimate", "Post-year-end dividends not recognised as a liability", "Every sub-part attempted"]},
+{"id": "ias10-autumn2025-q5", "chapter": "IAS 10 Events", "session": "Autumn 2025", "qno": "Q5", "marks": 8, "pass": 47, "diff": "Medium", "diffCls": "med", "topic": "IAS 10", "tests": "Events after the period with provisions", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Attempt every sub-part — each carries easy classification marks.", "Classify each event adjusting vs non-adjusting — and say why.", "Adjust the numbers only for adjusting events.", "Disclose non-adjusting events: nature plus an estimate of the effect."], "checklist": ["Each event classified adjusting vs non-adjusting with reasons", "Numbers adjusted only for adjusting events", "Non-adjusting events disclosed with nature and estimate", "Post-year-end dividends not recognised as a liability", "Every sub-part attempted"]},
+{"id": "ias21-autumn2024-q8", "chapter": "IAS 21 FX", "session": "Autumn 2024", "qno": "Q8", "marks": 18, "pass": 14, "diff": "Hard", "diffCls": "hard", "topic": "IAS 21", "tests": "Split FX rates with deferred tax and notes", "file": "★ Paper + answers on file", "before": ["Prepare the disclosure notes the requirement asks for — don't skip them.", "Trace the exchange effect through to retained earnings / unappropriated profit.", "Recognise initially at the spot rate on the transaction date.", "Retranslate monetary items at the closing rate — and only monetary items."], "checklist": ["Initial recognition at the transaction-date spot rate", "Monetary items retranslated at the closing rate only", "Non-monetary items and advances kept at the historical rate", "Exchange differences to P&L (or OCI where they qualify)", "Effect traced to retained earnings; disclosure notes prepared"]},
+{"id": "ias21-autumn2022-q4", "chapter": "IAS 21 FX", "session": "Autumn 2022", "qno": "Q4", "marks": null, "pass": 37, "diff": "Medium", "diffCls": "med", "topic": "IAS 21", "tests": "Monetary vs non-monetary — the advance trap", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Retranslate monetary items at the closing rate — and only monetary items.", "Non-monetary items, including advances paid, stay at the historical rate.", "Recognise initially at the spot rate on the transaction date.", "Trace the exchange effect through to retained earnings / unappropriated profit."], "checklist": ["Initial recognition at the transaction-date spot rate", "Monetary items retranslated at the closing rate only", "Non-monetary items and advances kept at the historical rate", "Exchange differences to P&L (or OCI where they qualify)", "Effect traced to retained earnings; disclosure notes prepared"]},
+{"id": "ias21-autumn2019-q1", "chapter": "IAS 21 FX", "session": "Autumn 2019", "qno": "Q1", "marks": 8, "pass": 85, "diff": "Standard", "diffCls": "std", "topic": "IAS 21", "tests": "Foreign currency transactions baseline", "file": "Source the paper yourself", "before": ["Non-monetary items, including advances paid, stay at the historical rate.", "Retranslate monetary items at the closing rate — and only monetary items.", "Recognise initially at the spot rate on the transaction date.", "Trace the exchange effect through to retained earnings / unappropriated profit."], "checklist": ["Initial recognition at the transaction-date spot rate", "Monetary items retranslated at the closing rate only", "Non-monetary items and advances kept at the historical rate", "Exchange differences to P&L (or OCI where they qualify)", "Effect traced to retained earnings; disclosure notes prepared"]},
+{"id": "ias8-autumn2023-q9", "chapter": "IAS 8 Errors", "session": "Autumn 2023", "qno": "Q9", "marks": null, "pass": 7, "diff": "Hard", "diffCls": "hard", "topic": "IAS 8", "tests": "Correction of error inside a combined question", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Show the effect on both profit or loss and the SFP for each comparative year.", "Open with the correction-of-error note stating the nature of the error.", "Restate the comparatives — a prior-period error is never a current-year fix.", "Label every restated line 'restated' — the label itself carries marks."], "checklist": ["Comparatives restated — never a current-year fix", "Every restated line labelled 'restated'", "P&L and SFP effects shown for each comparative year", "Retained earnings: previously reported → correction → restated", "Correction-of-error note states the nature of the error"]},
+{"id": "ias8-autumn2021-q2", "chapter": "IAS 8 Errors", "session": "Autumn 2021", "qno": "Q2", "marks": null, "pass": 40, "diff": "Medium", "diffCls": "med", "topic": "IAS 8", "tests": "Prior-period error: P&L and SFP effects", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Show the effect on both profit or loss and the SFP for each comparative year.", "Retained earnings extract: previously reported → correction → restated.", "Restate the comparatives — a prior-period error is never a current-year fix.", "Label every restated line 'restated' — the label itself carries marks."], "checklist": ["Comparatives restated — never a current-year fix", "Every restated line labelled 'restated'", "P&L and SFP effects shown for each comparative year", "Retained earnings: previously reported → correction → restated", "Correction-of-error note states the nature of the error"]},
+{"id": "ias8-autumn2016-q4", "chapter": "IAS 8 Errors", "session": "Autumn 2016", "qno": "Q4", "marks": 18, "pass": null, "diff": null, "diffCls": null, "topic": "IAS 8", "tests": "Full correction-of-error note and retained earnings extract", "file": "Source the paper yourself", "before": ["Restate the comparatives — a prior-period error is never a current-year fix.", "Label every restated line 'restated' — the label itself carries marks.", "Show the effect on both profit or loss and the SFP for each comparative year.", "Retained earnings extract: previously reported → correction → restated."], "checklist": ["Comparatives restated — never a current-year fix", "Every restated line labelled 'restated'", "P&L and SFP effects shown for each comparative year", "Retained earnings: previously reported → correction → restated", "Correction-of-error note states the nature of the error"]},
+{"id": "cosact-spring2025-q2", "chapter": "Companies Act", "session": "Spring 2025", "qno": "Q2", "marks": 6, "pass": 32, "diff": "Medium", "diffCls": "med", "topic": "Companies Act 2017", "tests": "Prepare the share-capital note", "file": "★ Paper + answers on file", "before": ["Prepare the formal note — never describe disclosure requirements instead.", "Start with authorised capital: number of shares × class.", "Follow with capital reserves then revenue reserves, stating any distribution restrictions.", "Split issued/subscribed/paid-up three ways: cash, non-cash consideration, bonus."], "checklist": ["Authorised capital stated first (shares × class)", "Issued/subscribed/paid-up split: cash, non-cash, bonus", "Sub-notes: non-cash consideration and share rights", "Capital reserves then revenue reserves, restrictions stated", "A prepared note — not a description of requirements"]},
+{"id": "cosact-spring2024-q2", "chapter": "Companies Act", "session": "Spring 2024", "qno": "Q2", "marks": 7, "pass": null, "diff": null, "diffCls": null, "topic": "Companies Act 2017", "tests": "Fourth Schedule: auditors' remuneration note", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Prepare the formal note — never describe disclosure requirements instead.", "Start with authorised capital: number of shares × class.", "Split issued/subscribed/paid-up three ways: cash, non-cash consideration, bonus.", "Add the numbered sub-notes: nature of non-cash consideration and share rights."], "checklist": ["Authorised capital stated first (shares × class)", "Issued/subscribed/paid-up split: cash, non-cash, bonus", "Sub-notes: non-cash consideration and share rights", "Capital reserves then revenue reserves, restrictions stated", "A prepared note — not a description of requirements"]},
+{"id": "cosact-spring2023-q5", "chapter": "Companies Act", "session": "Spring 2023", "qno": "Q5", "marks": 6, "pass": 27, "diff": "Hard", "diffCls": "hard", "topic": "Companies Act 2017", "tests": "Fixed-asset disclosures, Fourth Schedule", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Prepare the formal note — never describe disclosure requirements instead.", "Start with authorised capital: number of shares × class.", "Split issued/subscribed/paid-up three ways: cash, non-cash consideration, bonus.", "Add the numbered sub-notes: nature of non-cash consideration and share rights."], "checklist": ["Authorised capital stated first (shares × class)", "Issued/subscribed/paid-up split: cash, non-cash, bonus", "Sub-notes: non-cash consideration and share rights", "Capital reserves then revenue reserves, restrictions stated", "A prepared note — not a description of requirements"]},
+{"id": "ethics-spring2023-q2", "chapter": "Ethics", "session": "Spring 2023", "qno": "Q2", "marks": 8, "pass": 46, "diff": "Medium", "diffCls": "med", "topic": "Code of Ethics", "tests": "Principles, threats and safeguards", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Name each principle potentially breached — then explain HOW the facts breach it. The explanation is where the marks sit.", "Check which principle is really examined — often professional competence and due care, not integrity.", "Name each threat, define it, and apply it from the subordinate's perspective.", "Safeguards in escalating order: persuade → escalate → policies → refuse → resign."], "checklist": ["Each principle potentially breached named and defined", "Facts applied to explain HOW the breach occurs", "Threats named, defined, applied from the subordinate's view", "Safeguards escalate: persuade → escalate → policies → refuse → resign", "The correct principle tested (often competence and due care)"]},
+{"id": "ethics-spring2022-q2", "chapter": "Ethics", "session": "Spring 2022", "qno": "Q2", "marks": 9, "pass": 10, "diff": "Hard", "diffCls": "hard", "topic": "Code of Ethics", "tests": "Ethics paired with revenue recognition", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Check which principle is really examined — often professional competence and due care, not integrity.", "Link every point to the scenario — bare standard extracts earn little.", "Name each principle potentially breached — then explain HOW the facts breach it. The explanation is where the marks sit.", "Name each threat, define it, and apply it from the subordinate's perspective."], "checklist": ["Each principle potentially breached named and defined", "Facts applied to explain HOW the breach occurs", "Threats named, defined, applied from the subordinate's view", "Safeguards escalate: persuade → escalate → policies → refuse → resign", "The correct principle tested (often competence and due care)"]},
+{"id": "ethics-spring2019-q4", "chapter": "Ethics", "session": "Spring 2019", "qno": "Q4", "marks": 9, "pass": null, "diff": null, "diffCls": null, "topic": "Code of Ethics", "tests": "Principles and threats faced", "file": "Source the paper yourself", "before": ["Name each principle potentially breached — then explain HOW the facts breach it. The explanation is where the marks sit.", "Check which principle is really examined — often professional competence and due care, not integrity.", "Name each threat, define it, and apply it from the subordinate's perspective.", "Safeguards in escalating order: persuade → escalate → policies → refuse → resign."], "checklist": ["Each principle potentially breached named and defined", "Facts applied to explain HOW the breach occurs", "Threats named, defined, applied from the subordinate's view", "Safeguards escalate: persuade → escalate → policies → refuse → resign", "The correct principle tested (often competence and due care)"]},
+{"id": "ias33-spring2017-q1", "chapter": "IAS 33 EPS", "session": "Spring 2017", "qno": "Q1", "marks": 10, "pass": null, "diff": null, "diffCls": null, "topic": "IAS 33", "tests": "EPS — format reference (stale era)", "file": "Source the paper yourself", "before": ["Use profit attributable to ordinary shareholders — not total profit.", "Restate the share count retrospectively for bonus issues.", "Rights issues: compute the bonus element before the weighted average.", "Dilution via the treasury-stock method for options and warrants."], "checklist": ["Profit attributable to ordinary shareholders used", "Share count restated retrospectively for the bonus issue", "Rights-issue bonus element computed", "Options/warrants diluted via the treasury-stock method", "Basic and diluted shown with equal prominence"]},
+{"id": "ias36-spring2025-q7", "chapter": "IAS 36 Impairment", "session": "Spring 2025", "qno": "Q7", "marks": 15, "pass": 52, "diff": "Medium", "diffCls": "med", "topic": "IAS 36", "tests": "Impairment test inside a provisions question", "file": "★ Paper + answers on file", "before": ["Run the impairment test — skipping it when indicators exist is the documented fail.", "Set the CGU at the smallest independent-cash-flow level.", "Allocate corporate assets and goodwill on a reasonable basis.", "Recoverable amount is the higher of fair value less costs and value in use."], "checklist": ["Impairment test performed — not skipped", "CGU set at the smallest independent-cash-flow level", "Corporate assets and goodwill allocated reasonably", "Recoverable amount = higher of FVLCD and value in use", "Loss to goodwill first, then pro-rata above floors"]},
+{"id": "ias36-autumn2020-q6", "chapter": "IAS 36 Impairment", "session": "Autumn 2020", "qno": "Q6", "marks": null, "pass": 17, "diff": "Hard", "diffCls": "hard", "topic": "IAS 36", "tests": "Intangibles, borrowing costs and impairment combined", "file": "Source the paper yourself", "before": ["Run the impairment test — skipping it when indicators exist is the documented fail.", "Set the CGU at the smallest independent-cash-flow level.", "Allocate corporate assets and goodwill on a reasonable basis.", "Recoverable amount is the higher of fair value less costs and value in use."], "checklist": ["Impairment test performed — not skipped", "CGU set at the smallest independent-cash-flow level", "Corporate assets and goodwill allocated reasonably", "Recoverable amount = higher of FVLCD and value in use", "Loss to goodwill first, then pro-rata above floors"]},
+{"id": "ias16-spring2023-q4", "chapter": "IAS 16 PPE", "session": "Spring 2023", "qno": "Q4", "marks": 9, "pass": 33, "diff": "Medium", "diffCls": "med", "topic": "IAS 16", "tests": "Revaluation model", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Identify the measurement model before computing anything.", "Route decommissioning through IAS 37/IFRIC 1, not as a period expense.", "Recompute depreciation on the correct remaining life and residual after revaluation.", "Depreciate significant components separately over their own lives."], "checklist": ["Measurement model identified up front", "Depreciation on the post-revaluation life and residual", "Significant components depreciated separately", "Revaluation gains/losses routed correctly (OCI vs P&L)", "Decommissioning via IAS 37/IFRIC 1"]},
+{"id": "ias16-autumn2022-q2", "chapter": "IAS 16 PPE", "session": "Autumn 2022", "qno": "Q2", "marks": null, "pass": 66, "diff": "Standard", "diffCls": "std", "topic": "IAS 16", "tests": "Depreciation, useful lives, residual values", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Recompute depreciation on the correct remaining life and residual after revaluation.", "Identify the measurement model before computing anything.", "Capitalise only qualifying costs — test each addition.", "Depreciate significant components separately over their own lives."], "checklist": ["Measurement model identified up front", "Depreciation on the post-revaluation life and residual", "Significant components depreciated separately", "Revaluation gains/losses routed correctly (OCI vs P&L)", "Decommissioning via IAS 37/IFRIC 1"]},
+{"id": "ias16-spring2022-q1", "chapter": "IAS 16 PPE", "session": "Spring 2022", "qno": "Q1", "marks": 8, "pass": 49, "diff": "Medium", "diffCls": "med", "topic": "IAS 16", "tests": "Revaluation with decommissioning (IFRIC 1)", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Recompute depreciation on the correct remaining life and residual after revaluation.", "Identify the measurement model before computing anything.", "Depreciate significant components separately over their own lives.", "Capitalise only qualifying costs — test each addition."], "checklist": ["Measurement model identified up front", "Depreciation on the post-revaluation life and residual", "Significant components depreciated separately", "Revaluation gains/losses routed correctly (OCI vs P&L)", "Decommissioning via IAS 37/IFRIC 1"]},
+{"id": "ias2440-autumn2023-q4", "chapter": "IAS 24 & IAS 40", "session": "Autumn 2023", "qno": "Q4", "marks": null, "pass": 30, "diff": "Medium", "diffCls": "med", "topic": "IAS 24 / IAS 40", "tests": "Related-party disclosures — the only standalone outing", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Even a partial disclosure package earns marks where most candidates score zero.", "Disclose the relationship, the transactions, their terms, and outstanding balances — the full package.", "Group-occupied property is PPE on consolidation — not investment property.", "Apply the chosen property model consistently; fair-value moves go to profit or loss."], "checklist": ["Related-party relationship, transactions, terms and balances disclosed", "Group-occupied property treated as PPE on consolidation", "Property model applied consistently; FV moves to P&L", "Partial disclosures attempted — they still earn marks", "Contingent consideration changes to consolidated reserves"]},
+{"id": "ias2440-autumn2022-q7", "chapter": "IAS 24 & IAS 40", "session": "Autumn 2022", "qno": "Q7", "marks": null, "pass": 47, "diff": "Medium", "diffCls": "med", "topic": "IAS 24 / IAS 40", "tests": "Group-occupied property on consolidation", "file": "Suggested answers on file — pull the paper from the student portal", "before": ["Take fair-value increases in contingent consideration against consolidated reserves.", "Group-occupied property is PPE on consolidation — not investment property.", "Apply the chosen property model consistently; fair-value moves go to profit or loss.", "Disclose the relationship, the transactions, their terms, and outstanding balances — the full package."], "checklist": ["Related-party relationship, transactions, terms and balances disclosed", "Group-occupied property treated as PPE on consolidation", "Property model applied consistently; FV moves to P&L", "Partial disclosures attempted — they still earn marks", "Contingent consideration changes to consolidated reserves"]},
+{"id": "ias2440-autumn2020-q7", "chapter": "IAS 24 & IAS 40", "session": "Autumn 2020", "qno": "Q7", "marks": null, "pass": 23, "diff": "Hard", "diffCls": "hard", "topic": "IAS 24 / IAS 40", "tests": "Investment property with prior-period error", "file": "Source the paper yourself", "before": ["Disclose the relationship, the transactions, their terms, and outstanding balances — the full package.", "Even a partial disclosure package earns marks where most candidates score zero.", "Group-occupied property is PPE on consolidation — not investment property.", "Apply the chosen property model consistently; fair-value moves go to profit or loss."], "checklist": ["Related-party relationship, transactions, terms and balances disclosed", "Group-occupied property treated as PPE on consolidation", "Property model applied consistently; FV moves to P&L", "Partial disclosures attempted — they still earn marks", "Contingent consideration changes to consolidated reserves"]},
+{"id": "mcq-spring2025-q6", "chapter": "MCQs", "session": "Spring 2025", "qno": "Q6", "marks": 10, "pass": 90, "diff": "Standard", "diffCls": "std", "topic": "Mixed", "tests": "Mixed MCQs — technique practice", "file": "★ Paper + answers on file", "before": ["Write the serial number of the correct option only.", "Never reproduce the option wording.", "Eliminate distractors using the standard's rule, then commit.", "Time-box each MCQ — bank the easy marks and move on."], "checklist": ["Serial number of the correct option only", "No option wording reproduced", "Distractors eliminated by the standard's rule", "Each MCQ time-boxed — move on"]},
+{"id": "mcq-autumn2024-q6", "chapter": "MCQs", "session": "Autumn 2024", "qno": "Q6", "marks": 10, "pass": 64, "diff": "Standard", "diffCls": "std", "topic": "Mixed", "tests": "Mixed MCQs — technique practice", "file": "★ Paper + answers on file", "before": ["Write the serial number of the correct option only.", "Never reproduce the option wording.", "Eliminate distractors using the standard's rule, then commit.", "Time-box each MCQ — bank the easy marks and move on."], "checklist": ["Serial number of the correct option only", "No option wording reproduced", "Distractors eliminated by the standard's rule", "Each MCQ time-boxed — move on"]}
 ];
 
 var DODONT = [
@@ -641,8 +234,8 @@ var DODONT = [
 ];
 
 var store = {
-  get: function(){ try{ return JSON.parse(localStorage.getItem("caf6practice.done.v1")||"{}"); }catch(e){ return {}; } },
-  set: function(d){ try{ localStorage.setItem("caf6practice.done.v1", JSON.stringify(d)); }catch(e){} }
+  get: function(){ try{ return JSON.parse(localStorage.getItem("caf6practice.done.v2")||"{}"); }catch(e){ return {}; } },
+  set: function(d){ try{ localStorage.setItem("caf6practice.done.v2", JSON.stringify(d)); }catch(e){} }
 };
 
 var state = { view:"practice", chapter:0, qIndex:0, ddTopic:"All" };
@@ -673,17 +266,18 @@ function renderQuestion(){
   if(state.qIndex >= list.length) state.qIndex = 0;
   var item = list[state.qIndex], q = item.q;
   document.querySelector('[data-testid="q-chap"]').textContent = q.chapter;
-  document.querySelector('[data-testid="q-title"]').textContent = q.title;
+  document.querySelector('[data-testid="q-title"]').textContent = q.session + " \u2014 " + q.qno + (q.marks ? " \u00b7 " + q.marks + " marks" : "");
   var meta = document.querySelector('[data-testid="q-meta"]');
   meta.innerHTML = "";
-  [["Suggested marks: "+q.marks],["Time: "+q.time]].forEach(function(t){
-    var s=document.createElement("span"); s.className="chip"; s.textContent=t[0]; meta.appendChild(s);
+  [[q.topic,"chip"],[q.diff,"chip "+q.diffCls],[q.file,"chip file"]].forEach(function(t){
+    if(!t[0]) return;
+    var s=document.createElement("span"); s.className=t[1]; s.textContent=t[0]; meta.appendChild(s);
   });
-  document.querySelector('[data-testid="q-scenario"]').innerHTML = q.scenario;
+  document.querySelector('[data-testid="q-scenario"]').innerHTML = '<p class="tests"><strong>What this tests:</strong> '+q.tests+'</p>'+'<div class="before"><strong>\u26a0\ufe0f Before you attempt</strong><ul><li>'+q.before.join('</li><li>')+'</li></ul></div>';
   var sol = document.querySelector('[data-testid="solution"]');
-  sol.innerHTML = q.solution; sol.classList.remove("open");
+  sol.innerHTML = '<p class="check-note">Attempt the question from your paper file, then tick each line as you verify it against the suggested answer.</p>'+q.checklist.map(function(c){return '<label class="check-item"><input type="checkbox"><span>'+c+'</span></label>';}).join(""); sol.classList.remove("open");
   var btn = document.querySelector('[data-testid="reveal-btn"]');
-  btn.textContent = "Reveal model solution"; btn.style.display = "";
+  btn.textContent = "Reveal marking checklist"; btn.style.display = "";
   var chk = document.querySelector('[data-testid="done-check"]');
   chk.checked = !!done[q.id];
   document.querySelector('[data-testid="prev-btn"]').disabled = (item.i===0);
@@ -726,7 +320,7 @@ document.querySelector('[data-testid="tab-dodont"]').onclick = function(){ setVi
 document.querySelector('[data-testid="reveal-btn"]').onclick = function(){
   var sol = document.querySelector('[data-testid="solution"]');
   var open = sol.classList.toggle("open");
-  this.textContent = open ? "Hide model solution" : "Reveal model solution";
+  this.textContent = open ? "Hide marking checklist" : "Reveal marking checklist";
 };
 document.querySelector('[data-testid="done-check"]').onchange = function(){
   var list = qsInChapter(state.chapter);
