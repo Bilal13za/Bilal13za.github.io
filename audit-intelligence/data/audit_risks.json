@@ -10,7 +10,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with transaction volume, the number of automatic bank transactions, and where the preparer handles cash. The presence of this factor does NOT prove that a misstatement exists - it is a control deficiency creating detection risk, and the balance must be tested.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Cash and cash equivalents misstated.\", \"Unrecorded bank charges and standing orders mean expenses and liabilities are understated.\", \"Stale reconciling items can conceal fraud through the bank account.\"]",
+  "journal_entries": "[{\"debit\": \"Bank charges (profit or loss)\", \"credit\": \"Cash at bank\", \"narration\": \"To record unrecorded bank charges found on reconciliation.\"}]"
  },
  {
   "id": "R-CSH-002",
@@ -23,7 +25,9 @@
   "fraud_related": 1,
   "inherent_risk_factors": "Risk increases with payment volumes, electronic payment files, and weak beneficiary controls. Unusual payments are indicators to investigate; they do NOT prove that fraud has occurred.\n\nSignificance: Significant risk",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Cash misappropriated (existence assertion).\", \"Expenses overstated or misclassified to conceal the payments.\"]",
+  "journal_entries": "[{\"debit\": \"Loss on fraud / receivable from perpetrator\", \"credit\": \"Cash at bank\", \"narration\": \"To record the diverted payment; recovery recognised separately when virtually certain.\"}]"
  },
  {
   "id": "R-CSH-003",
@@ -36,7 +40,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with the value of transfers in the cut-off window and with pressure to present a strong liquidity position. The factor creates cut-off risk to be tested; it does NOT prove the cash balance is misstated.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Cash overstated through double-counted transfers in transit.\", \"Liquidity position misleadingly presented.\"]",
+  "journal_entries": "[{\"debit\": \"Cash at bank \\u2014 paying account\", \"credit\": \"Cash in transit\", \"narration\": \"To eliminate the double-counted transfer so it is recognised once, in the right account.\"}]"
  },
  {
   "id": "R-CSH-004",
@@ -49,7 +55,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with the volume of cash handled and the number of people with access. The absence of verification does NOT prove any shortage exists - existence must be tested directly.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Cash overstated; losses concealed within the balance.\", \"A weak cash control environment signals wider control issues.\"]",
+  "journal_entries": "[{\"debit\": \"Cash shortages / loss (profit or loss)\", \"credit\": \"Cash on hand\", \"narration\": \"To record the unexplained cash shortage.\"}]"
  },
  {
   "id": "R-FRD-001",
@@ -62,7 +70,9 @@
   "fraud_related": 1,
   "inherent_risk_factors": "Fraud risk indicators, including those in this library, are red flags that require investigation. They do NOT prove that fraud has occurred, and most indicators have innocent explanations. The auditor's response is extended procedures and scepticism, not accusation.\n\nSignificance: Significant risk",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Any line can be misstated \\u2014 revenue, expenses, assets or liabilities \\u2014 through fictitious or reclassified journals.\", \"Results shifted between periods; the audit trail obscured.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "R-FRD-002",
@@ -75,7 +85,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Fraud risk indicators are red flags that require investigation. They do NOT prove that fraud has occurred, and most indicators have innocent explanations. The auditor's response is extended procedures and scepticism, not accusation.\n\nSignificance: Significant risk",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Assets overstated \\u2014 diverted assets still carried, or fictitious assets recorded.\", \"Expenses inflated to absorb the diversion; losses unrecorded.\"]",
+  "journal_entries": "[{\"debit\": \"Loss on misappropriation (profit or loss)\", \"credit\": \"Relevant asset (e.g. inventory, cash)\", \"narration\": \"To write off the diverted asset once quantified.\"}]"
  },
  {
   "id": "R-FRD-003",
@@ -88,7 +100,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Fraud risk indicators are red flags that require investigation. They do NOT prove that fraud has occurred, and most indicators have innocent explanations. The auditor's response is extended procedures and scepticism, not accusation.\n\nSignificance: Significant risk",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Revenue and trade receivables overstated; profit inflated.\", \"Subsequent periods correspondingly understated when the premature amounts reverse.\"]",
+  "journal_entries": "[{\"debit\": \"Revenue\", \"credit\": \"Trade receivables\", \"narration\": \"To reverse fictitious or prematurely recognised sales.\"}]"
  },
  {
   "id": "R-FRD-004",
@@ -101,7 +115,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Fraud risk indicators are red flags that require investigation. They do NOT prove that fraud has occurred, and most indicators have innocent explanations. An optimistic estimate is not evidence of dishonest intent; only a pattern, combined with other evidence, warrants escalation.\n\nSignificance: Significant risk",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Carrying amounts misstated \\u2014 provisions understated, impairments avoided, fair values inflated.\", \"Profit smoothed or inflated across periods.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "R-FRP-001",
@@ -114,7 +130,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with the volume of manual journals, the extent of period-end adjustment, and the seniority of those posting. An unsupported journal is an exception - a failure of evidence - and a cluster of unsupported period-end journals is a suspected fraud indicator. Neither proves that a misstatement exists; each must be investigated on its own evidence, and fraud must never be concluded from the absence of support alone.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Balances and transaction totals misstated by invalid or inaccurate journals.\", \"The statements may reflect management's desired outcome rather than underlying performance.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "R-FRP-002",
@@ -127,7 +145,9 @@
   "fraud_related": 1,
   "inherent_risk_factors": "The factor describes opportunity, not occurrence: the ability to override does not prove that override has happened. Throughout the work the auditor must distinguish the risk factor (opportunity exists), the identified risk (override could cause material misstatement), a suspected fraud indicator (something actually looks wrong), and confirmed fraud (proven). A failed test in this area raises the assessed risk; it does not by itself prove fraud.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Material misstatement anywhere in the financial statements \\u2014 fictitious journals, biased estimates, concealed transactions.\", \"Normal controls provide no protection against override.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "R-FRP-003",
@@ -140,7 +160,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with structural complexity and with the volume of transactions lacking obvious commercial logic. The missing identification process is a control deficiency; any particular undisclosed transaction is a potential misstatement to be investigated. The presence of this factor does not prove that undisclosed related-party transactions exist.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Related-party disclosures incomplete or misleading (IAS 24).\", \"Transactions may be measured on terms that do not reflect their substance.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "R-FRP-004",
@@ -153,7 +175,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Estimation uncertainty is inherent in provisions; the risk here is the absence of the support and challenge that would keep estimates honest. An unsupported assumption is a deficiency in evidence, not proof the provision is wrong - the auditor must develop an independent expectation. The presence of this factor does not prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Liabilities materially misstated \\u2014 profit, net assets and key ratios all affected.\", \"Estimation uncertainty undisclosed (IAS 37); a one-sided pattern of assumptions is itself a fraud risk factor.\"]",
+  "journal_entries": "[{\"debit\": \"Relevant expense (profit or loss)\", \"credit\": \"Provision\", \"narration\": \"To recognise the supportable provision amount.\"}]"
  },
  {
   "id": "R-FRP-005",
@@ -166,7 +190,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "An omitted disclosure does not affect any account balance, which is why the risk is easily overlooked. The factor is a control gap in the reporting process; whether any particular omission is material requires judgment. The presence of this factor does not prove that required disclosures are missing.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"The statements taken as a whole may be misleading despite accurate primary statements.\", \"No numeric entry \\u2014 this is a disclosure matter (IAS 1, IFRS 7, IAS 24 and others).\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "R-TEL-001",
@@ -179,7 +205,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Decommissioning measurement is inherently judgmental and the number of sites magnifies small per-site errors. The presence of this factor does NOT prove that a misstatement exists.\n\nSignificance: Significant risk",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Decommissioning provision understated or missing \\u2014 liabilities understated.\", \"PPE understated where the capitalised retirement cost is omitted, with depreciation understated in turn.\"]",
+  "journal_entries": "[{\"debit\": \"Property, plant and equipment \\u2014 decommissioning asset\", \"credit\": \"Decommissioning provision\", \"narration\": \"To recognise the asset-retirement cost and the corresponding provision (IAS 37 / IAS 16).\"}]"
  },
  {
   "id": "R-TEL-002",
@@ -192,7 +220,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Complexity and volume magnify small systematic allocation errors. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Revenue overstated in early periods and understated later (IFRS 15).\", \"Equipment and service revenue misclassified between lines.\"]",
+  "journal_entries": "[{\"debit\": \"Revenue \\u2014 equipment\", \"credit\": \"Revenue \\u2014 services / contract liability\", \"narration\": \"To reallocate consideration to performance obligations satisfied over time.\"}]"
  },
  {
   "id": "R-TEL-003",
@@ -205,7 +235,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Automation concentrates risk in configuration rather than individual transactions. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Revenue materially misstated in either direction from rating or tariff errors.\", \"Receivables and deferred revenue affected in the same direction.\"]",
+  "journal_entries": "[{\"debit\": \"Trade receivables\", \"credit\": \"Revenue\", \"narration\": \"To correct systematic under-billing (reverse for over-billing).\"}]"
  },
  {
   "id": "R-MFG-001",
@@ -218,7 +250,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Judgment concentrates in the rate-setting and capacity assumptions. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Work in progress overstated with cost of sales correspondingly understated \\u2014 or the reverse where rates lag actual costs.\", \"Gross margin distorted.\"]",
+  "journal_entries": "[{\"debit\": \"Cost of sales\", \"credit\": \"Work in progress\", \"narration\": \"To correct over-absorbed overheads (direction depends on findings).\"}]"
  },
  {
   "id": "R-MFG-002",
@@ -231,7 +265,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "The variance pattern is evidence to investigate, not a conclusion. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Inventory misstated where standards no longer reflect actual costs.\", \"Cost of sales absorbs unexplained variances.\"]",
+  "journal_entries": "[{\"debit\": \"Cost of sales\", \"credit\": \"Inventory\", \"narration\": \"To expense abnormal variances rather than burying them in inventory.\"}]"
  },
  {
   "id": "R-MFG-003",
@@ -244,7 +280,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Estimation uncertainty is the core risk, highest for new products. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Warranty provision understated (completeness).\", \"Expenses understated in the period of sale \\u2014 the matching principle is violated.\"]",
+  "journal_entries": "[{\"debit\": \"Warranty expense (profit or loss)\", \"credit\": \"Warranty provision\", \"narration\": \"To recognise the expected warranty cost of goods sold in the period.\"}]"
  },
  {
   "id": "R-RTL-001",
@@ -257,7 +295,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Volume provides cover for small, repeated diversions. The presence of this factor does NOT prove that a misstatement or theft exists.\n\nSignificance: Significant risk",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Revenue understated \\u2014 skimmed sales are never recorded; cash understated with them.\", \"Shrinkage losses unrecorded until the count.\"]",
+  "journal_entries": "[{\"debit\": \"Loss on cash shortage (profit or loss)\", \"credit\": \"Cash\", \"narration\": \"To record skimmed takings identified; the revenue was never recorded.\"}]"
  },
  {
   "id": "R-RTL-002",
@@ -270,7 +310,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Rebates reward optimism: the estimate almost always favours the retailer. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Other income and rebate receivables overstated \\u2014 recognised in the wrong period.\"]",
+  "journal_entries": "[{\"debit\": \"Other income \\u2014 supplier rebates\", \"credit\": \"Rebate receivable\", \"narration\": \"To reverse rebates recognised before the conditions were met.\"}]"
  },
  {
   "id": "R-RTL-003",
@@ -283,7 +325,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Breakage is estimated, not observed, at the reporting date. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Deferred revenue understated; revenue overstated in the current period (IFRS 15).\"]",
+  "journal_entries": "[{\"debit\": \"Revenue\", \"credit\": \"Deferred revenue \\u2014 gift cards / loyalty points\", \"narration\": \"To defer revenue for unredeemed cards and points.\"}]"
  },
  {
   "id": "R-BNK-001",
@@ -296,7 +340,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Model risk and staging judgment dominate. The presence of this factor does NOT prove that a misstatement exists.\n\nSignificance: Significant risk",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Loans and advances overstated \\u2014 carrying amount before a proper loss allowance.\", \"Impairment charge understated, so profit for the year is overstated.\", \"Credit-risk sensitivity disclosures inadequate (IFRS 7).\"]",
+  "journal_entries": "[{\"debit\": \"Impairment loss on loans and advances (profit or loss)\", \"credit\": \"Loss allowance\", \"narration\": \"To recognise the supportable expected credit loss.\"}]"
  },
  {
   "id": "R-BNK-002",
@@ -309,7 +355,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "The policy boundary for suspension is the key judgment. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Interest income overstated \\u2014 IFRS 9 requires interest on credit-impaired (Stage 3) loans on the net carrying amount, not gross.\", \"Loan receivables overstated to the extent accrued interest is unprovided.\"]",
+  "journal_entries": "[{\"debit\": \"Interest income\", \"credit\": \"Loans and advances \\u2014 accrued interest\", \"narration\": \"To reverse interest accrued beyond the supportable amount on non-performing loans.\"}]"
  },
  {
   "id": "R-BNK-003",
@@ -322,7 +370,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Model complexity is the risk multiplier. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Financial assets/liabilities misstated between amortised cost, FVOCI and FVTPL.\", \"Gains or losses recognised in the wrong period or the wrong section (profit or loss vs OCI).\"]",
+  "journal_entries": "[{\"debit\": \"Financial asset \\u2014 correct category\", \"credit\": \"Financial asset \\u2014 wrong category\", \"narration\": \"Illustrative reclassification; remeasurement follows the correct category.\"}]"
  },
  {
   "id": "R-INV-001",
@@ -335,7 +385,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with the portability and resale value of inventory, the number of people with access, and the absence of perpetual records. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Inventory overstated where theft, damage or loss is not recorded (existence).\", \"Records disagree with physical quantities; losses misclassified or omitted.\"]",
+  "journal_entries": "[{\"debit\": \"Inventory shrinkage / loss (profit or loss)\", \"credit\": \"Inventory\", \"narration\": \"To record theft, damage or otherwise unrecorded loss.\"}]"
  },
  {
   "id": "R-PAY-001",
@@ -348,7 +400,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with payroll size, staff turnover and electronic bulk payments. The presence of this factor does NOT prove that a misstatement exists - it identifies a possibility the auditor must test, not a finding.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Payroll costs and related liabilities overstated; cash diverted to unauthorised recipients.\", \"Statutory deductions on ghost pay create compliance exposure.\"]",
+  "journal_entries": "[{\"debit\": \"Cash / receivable from perpetrator\", \"credit\": \"Payroll expense\", \"narration\": \"To reverse ghost-employee payments; recovery pursued separately.\"}]"
  },
  {
   "id": "R-PAY-002",
@@ -361,7 +415,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases where one person has end-to-end control and where payments are released without review. The factor describes a control deficiency that creates opportunity; it does NOT prove that fraud or misstatement has occurred.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Payroll expense overstated; cash diverted; manipulated bank details misdirect legitimate pay.\"]",
+  "journal_entries": "[{\"debit\": \"Cash / receivable from perpetrator\", \"credit\": \"Payroll expense\", \"narration\": \"To reverse fictitious or manipulated payroll payments.\"}]"
  },
  {
   "id": "R-PAY-003",
@@ -374,7 +430,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases where overtime is material, paid at premium rates, and self-reported. The absence of approval does NOT prove any claim was inflated - each claim must be tested.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Payroll costs overstated through inflated or fictitious overtime.\"]",
+  "journal_entries": "[{\"debit\": \"Receivable from employee / cash\", \"credit\": \"Payroll expense\", \"narration\": \"To recover or reverse fraudulent overtime (facts-dependent).\"}]"
  },
  {
   "id": "R-PAY-004",
@@ -387,7 +445,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with manual processing, frequent rate changes and complex deductions. Identifying this factor means calculation accuracy must be tested; it does NOT prove that any specific payment is wrong.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Wages expense misstated; statutory liabilities (tax, social security) misstated with compliance consequences.\"]",
+  "journal_entries": "[{\"debit\": \"Wages and salaries (profit or loss)\", \"credit\": \"Tax payable / social security payable\", \"narration\": \"To correct under-accrued statutory deductions (direction per findings).\"}]"
  },
  {
   "id": "R-PPE-001",
@@ -400,7 +460,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with the volume of expenditure near the capitalisation boundary, the complexity of the asset base, and where performance measures reward reported profit. The presence of this factor does not prove that a misstatement exists; it identifies where the auditor should direct attention and professional skepticism.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Property, plant and equipment overstated.\", \"Profit for the period overstated because expenses are understated; future depreciation charges will be overstated.\"]",
+  "journal_entries": "[{\"debit\": \"Repairs and maintenance (profit or loss)\", \"credit\": \"Property, plant and equipment\", \"narration\": \"To expense repairs wrongly capitalised.\"}]"
  },
  {
   "id": "R-PPE-002",
@@ -413,7 +475,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with the age and technological sensitivity of the asset base and where small changes in lives have a material effect on profit. The presence of this factor does not prove that a misstatement exists; the current parameters may still happen to be reasonable, which is what the auditor must evaluate.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Depreciation charge for the period misstated; carrying amount does not reflect consumption of economic benefits.\", \"Changes in estimate applied retrospectively instead of prospectively (IAS 8).\"]",
+  "journal_entries": "[{\"debit\": \"Depreciation expense (profit or loss)\", \"credit\": \"Accumulated depreciation\", \"narration\": \"To correct the depreciation charge; estimate changes apply prospectively.\"}]"
  },
  {
   "id": "R-PPE-003",
@@ -426,7 +490,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with the volume of disposals, the number of sites, and the physical portability of assets. The presence of this factor does not prove that a misstatement exists; it is a control deficiency that creates the opportunity for overstatement, which the auditor must test for.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"PPE overstated by the net book value of assets that no longer exist.\", \"Gains or losses on disposal misstated or omitted; depreciation continues on gone assets.\"]",
+  "journal_entries": "[{\"debit\": \"Cash / receivable (proceeds); Loss on disposal (profit or loss)\", \"credit\": \"Property, plant and equipment (cost); Accumulated depreciation\", \"narration\": \"To derecognise the disposed asset and record the disposal.\"}]"
  },
  {
   "id": "R-PPE-004",
@@ -439,7 +505,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases where assets are exposed to technological change, market downturns or restructuring, and where cash-generating units are defined broadly enough to mask underperforming assets. The presence of this factor does not prove that a misstatement exists; no impairment may in fact be required, but that conclusion must be evidenced, not assumed.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Carrying amount exceeds recoverable amount \\u2014 assets and profit overstated.\", \"Disclosures about impairment judgements and recognised losses omitted (IAS 36).\"]",
+  "journal_entries": "[{\"debit\": \"Impairment loss (profit or loss)\", \"credit\": \"Property, plant and equipment / accumulated impairment\", \"narration\": \"To write the asset down to its recoverable amount.\"}]"
  },
  {
   "id": "R-PPE-005",
@@ -452,7 +520,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with the scale of replacement and overhaul programmes and where assets were never componentised. The presence of this factor does not prove that a misstatement exists; some replacements may be correctly treated, which the auditor verifies rather than assumes.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"PPE overstated by the carrying amount of replaced components (existence).\", \"Future depreciation overstated.\"]",
+  "journal_entries": "[{\"debit\": \"Loss on replacement / accumulated depreciation\", \"credit\": \"Property, plant and equipment \\u2014 replaced component\", \"narration\": \"To derecognise the replaced component.\"}]"
  },
  {
   "id": "R-PUR-001",
@@ -465,7 +535,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with purchase volumes, manual approval processes and weak segregation of duties. An unmatched invoice is an exception to investigate, not a confirmed misstatement. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Purchases and trade payables overstated; cash lost on payments for goods never received.\"]",
+  "journal_entries": "[{\"debit\": \"Trade payables\", \"credit\": \"Purchases\", \"narration\": \"To reverse purchases recorded for goods not received.\"}]"
  },
  {
   "id": "R-PUR-002",
@@ -478,7 +550,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Completeness of liabilities is inherently harder to test than existence, because the auditor looks for what is missing. The search for unrecorded liabilities is the standard response. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Trade payables and purchases understated (completeness); the next period correspondingly overstated.\", \"Incomplete liabilities distort going-concern and covenant assessments.\"]",
+  "journal_entries": "[{\"debit\": \"Purchases / inventory (as applicable)\", \"credit\": \"Trade payables\", \"narration\": \"To accrue the unrecorded liability for goods or services received.\"}]"
  },
  {
   "id": "R-PUR-003",
@@ -491,7 +565,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "This is both a control deficiency and a fraud opportunity. A change-log exception is a control deviation, not proof of fraud. The presence of this factor does NOT prove that a misstatement exists or that fraud has occurred.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Cash misappropriated through diverted payments; purchases overstated with fictitious invoices.\", \"Payable balances owed to non-existent suppliers.\"]",
+  "journal_entries": "[{\"debit\": \"Trade payables\", \"credit\": \"Purchases\", \"narration\": \"To reverse fictitious supplier invoices.\"}]"
  },
  {
   "id": "R-PUR-004",
@@ -504,7 +580,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with invoice volumes and decentralised processing. A duplicated invoice number is an exception requiring investigation - it may be a genuine reissued invoice from the supplier rather than a double recording. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Purchases and payables overstated; duplicate cash payments requiring recovery.\"]",
+  "journal_entries": "[{\"debit\": \"Trade payables\", \"credit\": \"Purchases\", \"narration\": \"To reverse the duplicate invoice; the duplicate payment is recovered via supplier credit or cash.\"}]"
  },
  {
   "id": "R-PUR-005",
@@ -517,7 +595,9 @@
   "fraud_related": 1,
   "inherent_risk_factors": "Cut-off testing in both directions is the standard response. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Purchases and payables misstated at the reporting date (cut-off); monthly trends distorted.\", \"Knock-on effects on inventory and cost of sales.\"]",
+  "journal_entries": "[{\"debit\": \"Purchases / inventory\", \"credit\": \"Trade payables\", \"narration\": \"To correct cut-off \\u2014 direction depends on whether goods were received pre- or post-year-end.\"}]"
  },
  {
   "id": "R-REV-001",
@@ -530,7 +610,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases where recognition criteria are complex or judgemental, where dispatch and billing systems are not integrated, and where management faces pressure to meet targets. The presence of this factor does NOT prove that a misstatement exists; it identifies where the auditor should direct testing.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Revenue and trade receivables overstated in the current period, understated in a later one (cut-off).\", \"Where deliberate, concealment through side agreements or backdated documents.\"]",
+  "journal_entries": "[{\"debit\": \"Revenue\", \"credit\": \"Trade receivables\", \"narration\": \"To reverse revenue recognised before the performance obligation was satisfied.\"}]"
  },
  {
   "id": "R-REV-002",
@@ -543,7 +625,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases with period-end dispatch volumes and manual billing processes. Late recording is often error rather than fraud, but a systematic pattern warrants the same scepticism as premature recognition. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Revenue and receivables understated this period, overstated in the next; analytical expectations distorted.\", \"Related tax liabilities understated.\"]",
+  "journal_entries": "[{\"debit\": \"Trade receivables\", \"credit\": \"Revenue\", \"narration\": \"To record revenue earned but not yet recorded at year-end.\"}]"
  },
  {
   "id": "R-REV-003",
@@ -556,7 +640,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Risk increases where billing staff can raise invoices without independent dispatch confirmation and where credit control is weak. The absence of dispatch evidence for a sample item is an exception to investigate, not a confirmed misstatement. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Revenue and trade receivables overstated; ageing balances that will never be collected.\", \"In deliberate cases, concealment of misappropriated cash.\"]",
+  "journal_entries": "[{\"debit\": \"Revenue\", \"credit\": \"Trade receivables\", \"narration\": \"To reverse fictitious sales.\"}]"
  },
  {
   "id": "R-REV-004",
@@ -569,7 +655,9 @@
   "fraud_related": 1,
   "inherent_risk_factors": "Fraud risk factors are incentives and pressures, opportunities and rationalisations. Incentives alone do not create misstatement; the auditor assesses whether opportunity and rationalisation are also present. The presence of this factor does NOT prove that a misstatement exists and does NOT establish fraud.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Revenue misstated in either direction depending on the target mechanics.\", \"Related receivables, cut-off and disclosures all affected; concealment behaviours undermine other audit evidence.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "R-REV-005",
@@ -582,7 +670,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": "Professional scepticism is essential: the auditor must understand the business rationale and obtain evidence of substance, not rely on management's description. The presence of this factor does NOT prove that a misstatement exists.",
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "fs_impacts": "[\"Revenue, receivables or related balances misstated through unusual year-end transactions.\", \"Disclosures incomplete where the nature of the transactions is obscured.\"]",
+  "journal_entries": "[]"
  },
  {
   "id": "R-INVST-001",
@@ -595,7 +685,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": null,
   "verification_status": "internal_review",
-  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)",
+  "fs_impacts": "[\"Unquoted investments overstated at unsupported valuations.\", \"Fair value gains overstated in profit or loss or OCI, depending on classification.\"]",
+  "journal_entries": "[{\"debit\": \"Fair value loss (profit or loss / OCI per classification)\", \"credit\": \"Investments\", \"narration\": \"To write the investment to its supportable fair value.\"}]"
  },
  {
   "id": "R-INVST-002",
@@ -608,7 +700,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": null,
   "verification_status": "internal_review",
-  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)",
+  "fs_impacts": "[\"Investments overstated; the impairment loss omitted, so profit is overstated.\"]",
+  "journal_entries": "[{\"debit\": \"Impairment loss (profit or loss)\", \"credit\": \"Investments / loss allowance\", \"narration\": \"To recognise the impairment of the investment.\"}]"
  },
  {
   "id": "R-INVST-003",
@@ -621,7 +715,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": null,
   "verification_status": "internal_review",
-  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)",
+  "fs_impacts": "[\"Wrong measurement basis applied \\u2014 amortised cost vs FVTPL vs FVOCI.\", \"Gains and losses reported in the wrong section of the performance statement.\"]",
+  "journal_entries": "[{\"debit\": \"Investment \\u2014 correct category\", \"credit\": \"Investment \\u2014 wrong category\", \"narration\": \"Illustrative reclassification, with remeasurement per the correct basis.\"}]"
  },
  {
   "id": "R-BOR-001",
@@ -634,7 +730,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": null,
   "verification_status": "internal_review",
-  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)",
+  "fs_impacts": "[\"Borrowings understated (completeness); finance costs understated with them.\", \"Gearing ratios understated \\u2014 covenant and going-concern assessments unreliable.\"]",
+  "journal_entries": "[{\"debit\": \"Cash / relevant asset financed\", \"credit\": \"Borrowings\", \"narration\": \"To record the omitted facility, accruing related finance cost separately.\"}]"
  },
  {
   "id": "R-BOR-002",
@@ -647,7 +745,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": null,
   "verification_status": "internal_review",
-  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)",
+  "fs_impacts": "[\"A covenant breach can make borrowings repayable on demand \\u2014 reclassify from non-current to current liabilities (IAS 1).\", \"Required disclosures omitted; the going-concern assessment is affected.\"]",
+  "journal_entries": "[{\"debit\": \"Borrowings \\u2014 non-current\", \"credit\": \"Borrowings \\u2014 current\", \"narration\": \"To reclassify where a breach at year-end makes the loan repayable on demand.\"}]"
  },
  {
   "id": "R-BOR-003",
@@ -660,7 +760,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": null,
   "verification_status": "internal_review",
-  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)",
+  "fs_impacts": "[\"Borrowings misstated; effective interest misallocated between periods.\", \"Transaction costs and fees incorrectly expensed or capitalised.\"]",
+  "journal_entries": "[{\"debit\": \"Finance costs \\u2014 effective interest\", \"credit\": \"Borrowings\", \"narration\": \"Illustrative catch-up of the amortised-cost measurement.\"}]"
  },
  {
   "id": "R-TAX-001",
@@ -673,7 +775,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": null,
   "verification_status": "internal_review",
-  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)",
+  "fs_impacts": "[\"Tax liabilities understated where uncertain positions are not provided for.\", \"Tax uncertainty disclosures omitted (IAS 12 / IFRIC 23).\"]",
+  "journal_entries": "[{\"debit\": \"Income tax expense (profit or loss)\", \"credit\": \"Current tax payable / provision for uncertain tax positions\", \"narration\": \"To provide for the uncertain tax position.\"}]"
  },
  {
   "id": "R-TAX-002",
@@ -686,7 +790,9 @@
   "fraud_related": 0,
   "inherent_risk_factors": null,
   "verification_status": "internal_review",
-  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)",
+  "fs_impacts": "[\"Deferred tax asset overstated without convincing evidence of future taxable profits.\", \"Tax credit overstated, so profit for the year is overstated.\"]",
+  "journal_entries": "[{\"debit\": \"Income tax expense (profit or loss)\", \"credit\": \"Deferred tax asset\", \"narration\": \"To derecognise the unsupported deferred tax asset.\"}]"
  },
  {
   "id": "R-TAX-003",
@@ -699,6 +805,8 @@
   "fraud_related": 0,
   "inherent_risk_factors": null,
   "verification_status": "internal_review",
-  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)",
+  "fs_impacts": "[\"Current tax charge and the payable misstated in either direction.\"]",
+  "journal_entries": "[{\"debit\": \"Income tax expense (profit or loss)\", \"credit\": \"Current tax payable\", \"narration\": \"To correct the current tax charge (direction per findings).\"}]"
  }
 ]

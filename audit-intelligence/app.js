@@ -336,11 +336,19 @@ function metaRows(type,row){
   if(row.last_verified)add("Last verified",esc(row.last_verified));
   return M.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${v}</dd>`).join("");
 }
+function entriesBlock(row){
+  try{const je=JSON.parse(row.journal_entries||"[]");
+    if(!je.length) return "";
+    return `<h2>Illustrative entries</h2><div class="entries">${
+      je.map(e=>`<div class="entry"><div class="eline"><span class="tag dr">Dr</span> ${esc(e.debit)}</div><div class="eline"><span class="tag cr">Cr</span> ${esc(e.credit)}</div>${e.narration?`<div class="narr">${esc(e.narration)}</div>`:""}</div>`).join("")
+    }</div><p class="fine">Illustrative only — amounts and accounts follow the scenario; adapt to the actual case.</p>`;}catch(e){return "";}
+}
 function sectionsFor(type,row){
   const S=[];
   const sec=(h,v)=>{if(v)S.push(`<h2>${h}</h2><p>${esc(v).replace(/\n\n/g,"</p><p>")}</p>`);};
   const list=(h,arr)=>{try{const a=JSON.parse(arr||"[]");if(a.length)S.push(`<h2>${h}</h2><ul>${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`);}catch(e){}};
-  if(type==="risk"){ sec("Description",row.description); sec("Causes",row.causes); sec("Misstatement scenario",row.misstatement_scenario); }
+  if(type==="risk"){ sec("Description",row.description); sec("Causes",row.causes); sec("Misstatement scenario",row.misstatement_scenario);
+    list("Financial statement impact",row.fs_impacts); S.push(entriesBlock(row)); }
   else if(type==="procedure"){ sec("Description",row.description); }
   else if(type==="industry"){
     sec("Business model",row.business_model); sec("Common accounting issues",row.common_accounting_issues);
@@ -359,11 +367,7 @@ function sectionsFor(type,row){
     sec("Situation",row.situation); sec("Principles at stake",row.principles_at_stake);
     sec("What the Code says",row.code_reference); list("Red flags",row.red_flags);
     sec("What to do",row.what_to_do); sec("What NOT to do",row.what_not_to_do);
-    list("Financial statement impact",row.fs_impacts);
-    try{const je=JSON.parse(row.journal_entries||"[]");
-      if(je.length) S.push(`<h2>Illustrative entries</h2><div class="entries">${
-        je.map(e=>`<div class="entry"><div class="eline"><span class="tag dr">Dr</span> ${esc(e.debit)}</div><div class="eline"><span class="tag cr">Cr</span> ${esc(e.credit)}</div>${e.narration?`<div class="narr">${esc(e.narration)}</div>`:""}</div>`).join("")
-      }</div><p class="fine">Illustrative only — amounts and accounts follow the scenario; adapt to the actual case.</p>`);}catch(e){}
+    list("Financial statement impact",row.fs_impacts); S.push(entriesBlock(row));
   }
   else if(type==="knowledge"){
     sec("Summary",row.description); sec("Practical application",row.practical_application); sec("Limitations",row.limitations);

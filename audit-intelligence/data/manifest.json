@@ -33,7 +33,9 @@
     "fraud_related",
     "inherent_risk_factors",
     "verification_status",
-    "source_ref"
+    "source_ref",
+    "fs_impacts",
+    "journal_entries"
    ]
   },
   "risk_factors": {
