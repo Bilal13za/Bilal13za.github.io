@@ -1,0 +1,2415 @@
+[
+ {
+  "id": "BIA-Q-2025S-06",
+  "session": "Spring 2025",
+  "session_order": 6,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "6",
+  "qnum": "6",
+  "section": "B",
+  "marks": 15,
+  "type": "constructed",
+  "command_words": [
+   "evaluate"
+  ],
+  "topic_tags": [
+   "C.3"
+  ],
+  "summary": "Evaluate a solar-farm investment with NPV and recommend whether to proceed.",
+  "verbatim": "Q.6 The functional currency of Zaristan is ZR.\nGreat Future Enterprise (GFE) is evaluating a solar farm project that will sell electricity to\nthe national grid. With the government support through subsidies and incentives, GFE aims\nto strengthen its position in the renewable energy sector while assessing the project’s financial\nfeasibility. The following information has been gathered in respect of the solar farm project:\n(i)  The project requires an initial investment of ZR 200 million , with ZR 150 million\nallocated for solar panels and ZR 50 million for other infrastructure.\n(ii)  The solar farm is expected to produce and sell 8,000 MWh  in the first year, with an\nanticipated annual efficiency decline by 2% due to general panel degradation. To\ncounteract, GFE plans to invest an additional ZR 25 million at the start of the fourth\nyear to restore the efficiency back to 8,000 MWh.\n(iii)  The solar panels will have a useful life beyond the project’s duration. At the end of\nYear 5, their residual value will be 50% of their initial cost, while all other equipment\nwill have zero residual value.\n(iv)  Electricity will be sold at ZR 10,000 per MWh, with prices increasing by 8% annually.\n(v)  The annual operations and maintenance cost is estimated at ZR 20 million, increasing\nby 6% annually.\n(vi)  Depreciation will be charged at 40% per annum using the reducing balance method for\ntax purposes.\n(vii)  An initial working capital investment of ZR 30 million is required, and 80% of it will\nbe recovered at the end of Year 5.\n(viii)  ZR 10 million was spent on feasibility studies and site surveys last year. Additionally,\na permit fee of ZR 5 million must be paid immediately to the government.\n(ix)  The project will earn 1 carbon credit per MWh, which can be sold at ZR 2,000 per\ncredit. Carbon credit prices are likely to increase by 5% annually.\n(x)  GFE qualifies for a government subsidy of ZR 50 million, to be received after one full\nyear of successful operation.\n(xi)  This project qualifies for a two-year tax holiday, after which a standard tax rate of 30%\napplies. Taxes are payable in the year they arise, and tax losses cannot be carried\nforward.\n(xii)  GFE’s cost of capital is 18%.\nRequired:\nUsing the net present value method, evaluate whether GFE should proceed  with the solar\nproject. Assume all cash flows occur at year-end unless stated otherwise. (15)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025S-017",
+   "BIA-OBS-2025S-018"
+  ],
+  "checklist": [
+   "Stated a clear conclusion or recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified each point with specific scenario facts",
+   "Addressed risks, limitations or counter-arguments"
+  ],
+  "source": "Spring 2025, Q6"
+ },
+ {
+  "id": "BIA-Q-2025S-07a",
+  "session": "Spring 2025",
+  "session_order": 6,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "7a",
+  "qnum": "7",
+  "section": "B",
+  "marks": 7,
+  "type": "constructed",
+  "command_words": [
+   "compute"
+  ],
+  "topic_tags": [
+   "B.2"
+  ],
+  "summary": "Compute the WACC of the existing business from given capital-structure data.",
+  "verbatim": "(a) Compute XYZ’s weighted average cost of capital (WACC) for the existing business. (07)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025S-019",
+   "BIA-OBS-2025S-020",
+   "BIA-OBS-2025S-021"
+  ],
+  "checklist": [
+   "Showed workings step by step",
+   "Stated any assumptions made",
+   "Gave the final figure with units",
+   "Commented on what the result means for the decision"
+  ],
+  "source": "Spring 2025, Q7a"
+ },
+ {
+  "id": "BIA-Q-2025S-07b",
+  "session": "Spring 2025",
+  "session_order": 6,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "7b",
+  "qnum": "7",
+  "section": "B",
+  "marks": 7,
+  "type": "constructed",
+  "command_words": [
+   "calculate"
+  ],
+  "topic_tags": [
+   "B.2"
+  ],
+  "summary": "Calculate the effect of a new convertible-debenture investment on WACC.",
+  "verbatim": "(b) Calculate the impact of the new investment on XYZ’s WACC. (07)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025S-019",
+   "BIA-OBS-2025S-020",
+   "BIA-OBS-2025S-021"
+  ],
+  "checklist": [
+   "Showed workings step by step",
+   "Stated any assumptions made",
+   "Gave the final figure with units",
+   "Commented on what the result means for the decision"
+  ],
+  "source": "Spring 2025, Q7b"
+ },
+ {
+  "id": "BIA-Q-2025S-08",
+  "session": "Spring 2025",
+  "session_order": 6,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "8",
+  "qnum": "8",
+  "section": "B",
+  "marks": 15,
+  "type": "constructed",
+  "command_words": [
+   "prepare"
+  ],
+  "topic_tags": [
+   "C.1"
+  ],
+  "summary": "Prepare a budgeted profit and loss account for a theme park's first year.",
+  "verbatim": "Q.8 WildWave Resorts Limited has recently constructed a fully equipped theme park, including\nan adventure park named WildLand and a water park named WaveLand, at a cost of\nRs. 2.2 billion, including capital expenditures of Rs. 2.0 billion. It also feature s a theatre for\nlive shows, known as WildWave Arena. The following information and projections are\nprovided for the first year of operations:\nTheme Park (WaveLand and WildLand)\nThe standard ticket price for the theme park is Rs. 2,000 per person, while a VIP ticket (which\nincludes a Fast Pass) costs Rs. 3,000 per person. It is estimated that 20% of visitors will opt\nfor the VIP ticket. Tickets for WaveLand and WildLand must be purchased separately.\nWildLand is expected to receive approximately 20,000 visitors per month . However, it will\nremain closed for maintenance in March and September. WaveLand  is expected to attract\n30,000 visitors per month from March to November but will remain closed during winter.\nVisitors are likely to come in groups, such as families or friends, with an average group size\nof four people. Moreover, the estimated average spending on food and beverages per group is\nRs. 5,000.\nTheatre (WildWave Arena)\nThe theatre charges Rs. 500 for a standard ticket and Rs. 1,000 for a VIP ticket. It has a seating\ncapacity of 500, with 100 seats reserved for VIP ticketholders. Each new theatre show will\nrun for five weeks, with an expected occupancy rate of 70% for standard seats and 50% for\nVIP seats. On weekdays, there will be two shows per day, while on weekends (Saturday and\nSunday), three shows per day will be scheduled. The theatre will operate for 40 weeks per\nyear, after taking into account closures during Ramadan, Muharram, and maintenance\nperiods.\nThe average spending per theatre visitor on food and beverages is expected to be Rs. 300.\nAdditional information:\nRevenue-related information\nApproximately 35% of all visitors to WildWave  Resorts, including those attending the\ntheatre, are expected to purchase merchandise such as souvenirs, T -shirts, and toys, with an\naverage spending of Rs. 1,000 per visitor.\nCost-related information\nThe direct cost of food and beverages is estimated to be 50% of the related revenue, while the\ncost of merchandise is projected at 60% of the related revenue. The production cost of each\nnew theatre show, which includes related salaries, utilities and other expenses, is estimated at\nRs. 4 million. Operating costs, including salaries, utilities, maintenance, and other expenses,\nare estimated at Rs. 520 million for the first year. The marketing and advertising budget for\nthe first year is projected at Rs. 30 million.\nThe resort is funded equally by debt and equity, with the debt portion carrying an interest rate\nof 15% per annum. All assets will be depreciated at a rate of 20% per annum using the\nreducing balance method. Profits will be subject to a 30% tax rate.\nRequired:\nPrepare the budgeted profit and loss account for the first year ending 28 February 2026. (15)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025S-022",
+   "BIA-OBS-2025S-023",
+   "BIA-OBS-2025S-024"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Spring 2025, Q8"
+ },
+ {
+  "id": "BIA-Q-2025A-01a",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1a",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.2"
+  ],
+  "summary": "Classify a taxi service's customer loss after a ride-hailing app's launch.",
+  "verbatim": "(i)  A traditional taxi service loses 35% of its customers within 18 months after the launch\nof an app-based ride-hailing competitor. This situation is an example of:\n(a) Cyclical competition (b) Technological disruption\n(c) Regulatory failure (d) Price war (01)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1a"
+ },
+ {
+  "id": "BIA-Q-2025A-01b",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1b",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.1"
+  ],
+  "summary": "Classify a regulatory employment mandate under PESTEL.",
+  "verbatim": "(ii)  A food delivery platform experiences unexpected losses after a provincial government\nmandates formal employment contracts for all riders, effectively prohibiting freelance\ndelivery work. Under PESTEL, this is best categorized as:\n(a) Environmental policy (b) Political intervention\n(c) Social pressure (d) Technological limitation (01)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1b"
+ },
+ {
+  "id": "BIA-Q-2025A-01c",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1c",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [],
+  "summary": "Identify the preventive control reducing unauthorized-access risk.",
+  "verbatim": "(iii)  Which of the following is an example of a preventive control that reduces the risk of\nunauthorized access?\n(a) Daily reconciliation (b) Firewall restrictions\n(c) Intrusion log reports (d) Transaction audit trail (01)",
+  "excluded": true,
+  "exclusion_reason": "Removed from 2025 syllabus: 2021 A.b.2 (adequacy of manual and technology-based data systems, processes and controls) has no 2025 equivalent.",
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1c"
+ },
+ {
+  "id": "BIA-Q-2025A-01d",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1d",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [],
+  "summary": "Diagnose the primary ICT failure behind inconsistent reporting data.",
+  "verbatim": "(iv)  A logistics firm deployed a new enterprise information system integrating warehouse,\ninventory, and delivery tracking. However, regional branches continue using legacy\nspreadsheets for reporting, leading to data discrepancies between operational records\nand executive dashboards.\nWhich of the following best explains the primary Information and Com munication\nTechnologies (ICT) failure in this scenario?\n(a) Inadequate encryption protocols during data transmission\n(b) Lack of user access controls in the new system\n(c) Poor ICT governance leading to non-standardized data practices\n(d) Overinvestment in communication hardware without cloud backup (01)",
+  "excluded": true,
+  "exclusion_reason": "Removed from 2025 syllabus: 2021 A.b.2 (adequacy of manual and technology-based data systems, processes and controls) has no 2025 equivalent. Also maps to 2021 A.b.3 (apply ICT); no direct 2025 equivalent.",
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1d"
+ },
+ {
+  "id": "BIA-Q-2025A-01e",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1e",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.c.1"
+  ],
+  "summary": "Identify the first AAA-model step when asked to backdate an invoice.",
+  "verbatim": "(v)  Under the AAA model, what should an accountant do first when asked to backdate an\ninvoice to meet a sales target?\n(a) Consider alternative courses of action\n(b) Identify the stakeholders involved\n(c) Recognize that an ethical issue exists\n(d) Make a decision and act on it (01)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1e"
+ },
+ {
+  "id": "BIA-Q-2025A-01f",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1f",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [],
+  "summary": "Define the system giving in-depth advice on a specific field.",
+  "verbatim": "(vi)  A system that provides in-depth information, advice and recommendations on matters\nrelated to a specific field is known as:\n(a) Expert System (b) Decision Support System\n(c) Enterprise Resource Planning (d) Executive Information System (01)",
+  "excluded": true,
+  "exclusion_reason": "Removed from 2025 syllabus: 2021 A.b.2 (adequacy of manual and technology-based data systems, processes and controls) has no 2025 equivalent.",
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1f"
+ },
+ {
+  "id": "BIA-Q-2025A-01g",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1g",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "C.2"
+  ],
+  "summary": "Identify the primary purpose of lenders' financial-statement analysis.",
+  "verbatim": "(vii)  Lenders analyse a company’s financial statements primarily to help them:\n(a) assess the risk and creditworthiness of financing the company\n(b) provide a record of the company’s historical profitability\n(c) outline the company’s future growth plans and investment projects\n(d) show how efficiently the company manages its operations  (01)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1g"
+ },
+ {
+  "id": "BIA-Q-2025A-01h",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1h",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Identify the incorrect statement about an interest-rate option buyer.",
+  "verbatim": "(viii)  Which of the following statements is NOT correct about an interest rate option for the\noption buyer?\n(a) An interest rate option grants the buyer the right, but not the obligation, to deal\nat an agreed interest rate at a future maturity date\n(b) A call option is the right to receive interest at the specified rate, guaranteeing a\nmaximum rate of interest\n(c) A put option is the right to pay interest at the specified rate, guaranteeing a\nminimum rate of interest\n(d) A call option is the right to pay interest at the specified rate, guaranteeing a\nminimum rate of interest (01)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1h"
+ },
+ {
+  "id": "BIA-Q-2025A-01i",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1i",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.1"
+  ],
+  "summary": "Identify how a lower-rated company can borrow like a higher-rated one.",
+  "verbatim": "(ix)  How can a company with a lower credit rating obtain financing at a rate similar to that\nof a higher rated company?\n(a) By issuing corporate bonds directly to the market\n(b) By securing financing through asset securitization of its AA-rated receivables\n(c) By taking on bank loans at floating interest rates, instead of fixed rates\n(d) By increasing dividend pay-outs to attract more investors (01)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1i"
+ },
+ {
+  "id": "BIA-Q-2025A-01j",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1j",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Select the most appropriate statement about pure and speculative risk management.",
+  "verbatim": "(x)  Which of the following statements is the most appropriate regarding risk management?\n(a) Both pure and speculative risks can usually be insured\n(b) Pure risks are often managed through internal controls or insurance, while\nspeculative risks must be accepted as part of profit-making\n(c) Speculative risks can be avoided through better forecasting, while pure risks\ncannot be avoided\n(d) Speculative risks only arise in financial markets, whereas pure risks exist only in\noperational areas (01)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1j"
+ },
+ {
+  "id": "BIA-Q-2025A-01k",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1k",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1.5,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.1"
+  ],
+  "summary": "Identify the incorrect statements about fixed and floating charges.",
+  "verbatim": "(xi)  Consider the following statements:\n(I) A floating charge prevents the borrower from selling inventory in the normal\ncourse of business.\n(II) A fixed charge is typically attached to non-current assets.\n(III) A fixed charge provides the lender with stronger protection than a floating charge.\nWhich of the above statements is/are NOT correct with respect to fixed and floating\ncharges?\n(a) I only (b) II only\n(c) I and III only (d) II and III only (1.5)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1k"
+ },
+ {
+  "id": "BIA-Q-2025A-01l",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1l",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1.5,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [],
+  "summary": "Spot the general-IT-control weakness undermining application controls.",
+  "verbatim": "(xii)  Consider the following statements:\n(I) The payroll application automatically flags duplicate entries.\n(II) Employees retain system access for six months after leaving the entity  because\nuser IDs are not deactivated.\n(III) Access to the financial reporting system requires both a password and a\nsecond-factor token.\nWhich of the above statements most clearly illustrates a weakness in general IT controls\nthat could undermine the effectiveness of application controls in a financial reporting\nsystem?\n(a) I and III only (b) II only\n(c) III only (d) I and II only (1.5)",
+  "excluded": true,
+  "exclusion_reason": "Removed from 2025 syllabus: 2021 A.b.2 (adequacy of manual and technology-based data systems, processes and controls) has no 2025 equivalent.",
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1l"
+ },
+ {
+  "id": "BIA-Q-2025A-01m",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "1m",
+  "qnum": "1",
+  "section": "A",
+  "marks": 2,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "C.2"
+  ],
+  "summary": "Compute the cash operating cycle from credit sales, purchases and balances.",
+  "verbatim": "(xiii)  A company reports the following information for the year (assume 360 days):\nRs. in million  Rs. in million\nAnnual credit sales 720 Average debtors 90\nCost of sales 360 Average inventory 60\nAnnual credit purchases 300 Average creditors 30\nWhat is the company’s Cash Operating Cycle?\n(a) 21 days  (b) 51 days  (c) 69 days  (d) 141 days (02)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-002"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2025, Q1m"
+ },
+ {
+  "id": "BIA-Q-2025A-02a-i",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "2a-i",
+  "qnum": "2",
+  "section": "A",
+  "marks": 8,
+  "type": "constructed",
+  "command_words": [
+   "explain",
+   "identify"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Explain and identify threshold resources versus unique resources.",
+  "verbatim": "(a) For CM, explain and identify:\n(i) threshold resources and unique resources",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-003",
+   "BIA-OBS-2025A-004"
+  ],
+  "checklist": [
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement",
+   "Named the correct item(s) from the scenario",
+   "Said why each qualifies, briefly"
+  ],
+  "source": "Autumn 2025, Q2a-i"
+ },
+ {
+  "id": "BIA-Q-2025A-02a-ii",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "2a-ii",
+  "qnum": "2",
+  "section": "A",
+  "marks": null,
+  "type": "constructed",
+  "command_words": [
+   "explain",
+   "identify"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Explain and identify threshold competencies versus core competencies.",
+  "verbatim": "(a) For CM, explain and identify:\n(ii) threshold competencies and core competencies (08)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Unrated",
+  "difficulty_basis": "marks not stated on the paper",
+  "trap_briefing": [
+   "BIA-OBS-2025A-003",
+   "BIA-OBS-2025A-004"
+  ],
+  "checklist": [
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement",
+   "Named the correct item(s) from the scenario",
+   "Said why each qualifies, briefly"
+  ],
+  "source": "Autumn 2025, Q2a-ii"
+ },
+ {
+  "id": "BIA-Q-2025A-02b",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "2b",
+  "qnum": "2",
+  "section": "A",
+  "marks": 2,
+  "type": "constructed",
+  "command_words": [
+   "explain"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Explain features of sustainable core competencies and link them to the identified competencies.",
+  "verbatim": "(b) Briefly e xplain the characteristics of sustainable  core competencies and relate these\ncharacteristics to the core competencies identified in (a)(ii) above. (02)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-003",
+   "BIA-OBS-2025A-004"
+  ],
+  "checklist": [
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement"
+  ],
+  "source": "Autumn 2025, Q2b"
+ },
+ {
+  "id": "BIA-Q-2025A-02c",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "2c",
+  "qnum": "2",
+  "section": "A",
+  "marks": 2,
+  "type": "constructed",
+  "command_words": [
+   "advise",
+   "justify"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Advise whether to license proprietary technology to competitors, with justification.",
+  "verbatim": "(c) Advise CM on whether it should license its proprietary battery technology to\ncompetitors to earn additional profit. Justify your recommendation. (02)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-003",
+   "BIA-OBS-2025A-004"
+  ],
+  "checklist": [
+   "Gave reasons for the conclusion, not just the conclusion",
+   "Tied each reason to scenario evidence",
+   "Considered the strongest counter-point"
+  ],
+  "source": "Autumn 2025, Q2c"
+ },
+ {
+  "id": "BIA-Q-2025A-03",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "3",
+  "qnum": "3",
+  "section": "A",
+  "marks": 6,
+  "type": "constructed",
+  "command_words": [
+   "analyze",
+   "advise"
+  ],
+  "topic_tags": [
+   "A.c.1"
+  ],
+  "summary": "Apply Tucker's model to a screening tool's rural rollout and advise whether to proceed.",
+  "verbatim": "Q.3 MediScan Labs, a diagnostics technology company, has developed an AI-based software tool\nthat pre-screens X-rays and flags potentially cancerous cases. The tool has undergone rigorous\nvalidation and is certified in both the European Union and Pakistan, demonstrating a proven\naccuracy rate of 92%.\nMediScan plans to deploy the tool in rural hospitals across Pakistan as soon as possible. The\nrollout plan includes training paramedical staff to operate the tool and provide patient\ncounselling.\nMediScan has arranged operational training for staff, believing that no further instruction is\nneeded since the results are ‘easy to understand’. The company is concerned that offering\nadditional training such as patient communication, error handling, etc. would delay the\nrollout plan.\nRequired:\nUsing the Tucker 5 -Question Model, analyse the above situation and advise whether\nMediScan should proceed with the rollout as planned. (06)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-005",
+   "BIA-OBS-2025A-006"
+  ],
+  "checklist": [
+   "Identified the relevant issues from the scenario",
+   "Explained the significance of each issue, not just listed it",
+   "Linked causes to consequences",
+   "Used scenario facts rather than textbook generalities"
+  ],
+  "source": "Autumn 2025, Q3"
+ },
+ {
+  "id": "BIA-Q-2025A-04a",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "4a",
+  "qnum": "4",
+  "section": "A",
+  "marks": 3,
+  "type": "constructed",
+  "command_words": [
+   "identify",
+   "explain"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Identify and explain the product life-cycle stages shown by a consumer-electronics case.",
+  "verbatim": "(a) Identify and explain the stages of the product lifecycle demonstrated in the above\nsituation. (03)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-007",
+   "BIA-OBS-2025A-008"
+  ],
+  "checklist": [
+   "Named the correct item(s) from the scenario",
+   "Said why each qualifies, briefly",
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement"
+  ],
+  "source": "Autumn 2025, Q4a"
+ },
+ {
+  "id": "BIA-Q-2025A-04b",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "4b",
+  "qnum": "4",
+  "section": "A",
+  "marks": 7,
+  "type": "constructed",
+  "command_words": [
+   "highlight",
+   "recommend"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "For each stage, note two relevant costs and suggest a marketing strategy.",
+  "verbatim": "(b) For each stage identified in (a), highlight two relevant costs incurred and recommend\nan appropriate marketing strategy. (07)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-007",
+   "BIA-OBS-2025A-008"
+  ],
+  "checklist": [
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts",
+   "Addressed risks and limitations of the recommendation"
+  ],
+  "source": "Autumn 2025, Q4b"
+ },
+ {
+  "id": "BIA-Q-2025A-05",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "5",
+  "qnum": "5",
+  "section": "B",
+  "marks": 15,
+  "type": "constructed",
+  "command_words": [
+   "prepare"
+  ],
+  "topic_tags": [
+   "C.1"
+  ],
+  "summary": "Prepare a cash budget for an online retailer for the quarter ending 30 November 2025.",
+  "verbatim": "Q.5 TrendTote (TT)  is an online retailer of branded handbags, selling exclusively through its\ne-commerce website. Orders are shipped to Karachi, Lahore and Islamabad via a courier\ncompany. The following information is available in this respect:\n(i)  The modes of payment and their respective share of total sales are as follows:\nPayment Method % of Sales\nCash on delivery (COD) 40%\nCredit card 60%\n(ii)  20% of credit card sales are high -value items requiring customization. These are\ndispatched 10 days after payment. All other items are dispatched immediately and are\ndelivered the same day.\n(iii)  Month wise details of sales value and sales orders are as follows:\nMonth Sales value (Rs.) No. of sales order\nAugust 2025 – Actual 4,800,000 410\nSeptember 2025 – Projected 5,200,000 420\nOctober 2025 – Projected 5,600,000 450\nNovember 2025 – Projected  5,100,000 460\nDecember 2025 – Projected  6,200,000 500\n(iv)  The courier service charges Rs. 350 per order.\n(v)  COD amounts collected by the courier are remitted 5 days after delivery. However,\ncourier charges are deducted on monthly basis from the first payment due in the\nfollowing month.\n(vi)  Credit card payments are credited by the bank 5 days after the sale.\n(vii)  All handbags are sold at cost plus 25%.\n(viii)  High-value items are purchased upon receipt of orders. Inventory of regular handbags\nis maintained at 30% of the next month’s projected sales. 45% of the purchases are paid\nin the same month, while the balance are paid in the following month.\n(ix)  Annual selling and administrative expenses amount to Rs. 8.6 million, including\nRs. 0.9 million in depreciation. These expenses are paid in the same month in which\nthey are incurred.\n(x)  The cash and bank balance on 31 August 2025 was Rs. 1,250,000.\n(xi)  Purchases of handbags in August 2025 amounted to Rs. 3,600,000.\n(xii)  Sales and purchases occur evenly throughout the month unless stated otherwise.\n(xiii)  It can be assumed that high value orders numbers are 10% of the total order numbers.\nAll high value orders in August 2025 were delivered in the same month.\nRequired:\nPrepare a cash budget for TT for the quarter ending 30 November 2025.  (15)\nNotes:  Month-wise break-down is not required.\n Assume 30 days per month for calculation purposes.",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-009",
+   "BIA-OBS-2025A-010",
+   "BIA-OBS-2025A-011"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Autumn 2025, Q5"
+ },
+ {
+  "id": "BIA-Q-2025A-06",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "6",
+  "qnum": "6",
+  "section": "B",
+  "marks": 12,
+  "type": "constructed",
+  "command_words": [
+   "construct",
+   "determine",
+   "recommend"
+  ],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Build money-market hedges for two currency exposures and judge their benefit.",
+  "verbatim": "Q.6 Al-Meezan Textile Ltd. (AMTL), a Pakistan-based exporter and importer of premium fabrics\nand accessories, is exposed to fluctuations in the exchange rate of Euro (EUR) due to its\nforeign currency receivables and payables. The details of company’s exposures are as follows:\n  Receivable: EUR 300,000 due in 3 months from a European customer\n  Payable: EUR 500,000 due in 6 months to a European supplier\nTo manage this currency risk, the treasury department has gathered the following market\ndata:\nInterest Rates (Annualized)\nEUR PKR\nDeposit 3.80% 9.25%\nBorrow 4.80% 11.75%\nCurrent and Forecasted Exchange Rates (PKR/EUR)\nPeriod Bid Ask\nCurrent spot 321.00 322.00\nExpected 3-month spot 327.00 328.25\nExpected 6-month spot 330.00 331.50\nRequired:\nConstruct money market hedge for each of the foreign currency exposures separately and\ndetermine the ir effective exchange rate s. Recommend whether each hedge would be\nbeneficial for AMTL. (12)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-012",
+   "BIA-OBS-2025A-013"
+  ],
+  "checklist": [
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts",
+   "Addressed risks and limitations of the recommendation"
+  ],
+  "source": "Autumn 2025, Q6"
+ },
+ {
+  "id": "BIA-Q-2025A-07a",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "7a",
+  "qnum": "7",
+  "section": "B",
+  "marks": 7,
+  "type": "constructed",
+  "command_words": [
+   "compute"
+  ],
+  "topic_tags": [
+   "B.2"
+  ],
+  "summary": "Compute the WACC of the existing listed business.",
+  "verbatim": "(a) Compute ML’s weighted average cost of capital (WACC) of the existing business. (07)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-014",
+   "BIA-OBS-2025A-015"
+  ],
+  "checklist": [
+   "Showed workings step by step",
+   "Stated any assumptions made",
+   "Gave the final figure with units",
+   "Commented on what the result means for the decision"
+  ],
+  "source": "Autumn 2025, Q7a"
+ },
+ {
+  "id": "BIA-Q-2025A-07b",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "7b",
+  "qnum": "7",
+  "section": "B",
+  "marks": 6,
+  "type": "constructed",
+  "command_words": [
+   "recommend"
+  ],
+  "topic_tags": [
+   "B.2"
+  ],
+  "summary": "Recommend between convertible bonds and a rights issue for new financing.",
+  "verbatim": "(b) Recommend which of the two financing options should ML prefer for the new\ninvestment. (Show necessary computations) (06)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-014",
+   "BIA-OBS-2025A-015"
+  ],
+  "checklist": [
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts",
+   "Addressed risks and limitations of the recommendation"
+  ],
+  "source": "Autumn 2025, Q7b"
+ },
+ {
+  "id": "BIA-Q-2025A-08",
+  "session": "Autumn 2025",
+  "session_order": 7,
+  "scheme": "CAF-6 MFA (predecessor)",
+  "predecessor": true,
+  "number": "8",
+  "qnum": "8",
+  "section": "B",
+  "marks": 17,
+  "type": "constructed",
+  "command_words": [
+   "recommend"
+  ],
+  "topic_tags": [
+   "C.3"
+  ],
+  "summary": "Use NPV to choose between two mutually exclusive investment projects.",
+  "verbatim": "Q.8 Alpha Tools Limited (ATL), a mid -sized manufacturer of power tools, is evaluating two\nmutually exclusive investment projects intended to enhance long -term profitability. Both\nprojects require an initial investment of Rs. 10 million. Howe ver, due to capital constraints,\nATL can only select one of these projects.\nProject A: Automation Upgrade\nThis project focuses on modernizing ATL’s production system for a tool model T21 through\nadvanced automation technology. Implementation will take one year, after which cost\nefficiencies will begin. The following information is available in respect of this projects:\n(i)  At present, ATL produces 100,000 units per year, with expected growth of 10%\nannually.\n(ii)  The current variable cost is Rs. 180  per unit , which  is expected to increase by 5%\nannually. After implementation, this variable cost would reduce by 25%.\n(iii)  In addition to savings in variable costs, the project would reduce ATL’s working capital\nneeds by Rs. 1.5 million (at current prices) due to streamlined operations, available\nimmediately after implementation.\n(iv)  The annual recurring maintenance cost of the system would be Rs. 0.5 million (at\ncurrent prices).\n(v)  The project would operate for four years after implementation, with no residual value\nat the end of its life. Tax depreciation will be calculated using the reducing balance\nmethod, with 50% applied in the first year and 25% per year thereafter.\n(vi)  For this project, ATL plans to repurpose an existing warehouse, which would otherwise\nbe available for rental at Rs. 0.8 million (at current prices) per year.\nProject B: Market Expansion Initiative\nThis growth -driven initiative aims to increase ATL’s market share and sales volume of a\npower tool model K44. The following additional information is available regarding this\nproject:\n(i)  Rs. 5 million would be used to purchase new equipment with a useful life of five years,\nwhile the remaining Rs. 5 million would fund a comprehensive marketing and\nadvertising campaign.\n(ii)  ATL currently sells 200,000 units per year, which is expected to increase by 5% . After\nimplementation, sales units are projected to increase at a rate of 17% annually.\n(iii)  The current and post implementation contribution margin is Rs. 80 per unit (at current\nprices). It is projected to increase by 7% per year.\n(iv)  To support ongoing market visibility, ATL would  also incur a recurring annual\nmarketing expense of Rs. 1 million (at current prices).\n(v)  This initiative will also require an additional working capital of Rs. 0.75 million (at\ncurrent prices) per annum, out of which 75% will be released at the end of the project.\n(vi)  Tax depreciation will be calculated using the reducing balance method at 25% and the\ndepreciable assets will have a salvage value of 20% of its original cost.\nAdditional information:\nATL uses a discount rate of 12% for capital budgeting decisions and applies a corporate tax\nrate of 30%. Tax is payable in the year in which the liability arises . Unless explicitly stated\notherwise, the general rate of inflation is assumed to be 9% per year. All cash flows are\nassumed to occur at the end of each year unless specified otherwise.\nRequired:\nUsing the net present value method, recommend which project ATL should undertake. (17)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2025A-016",
+   "BIA-OBS-2025A-017",
+   "BIA-OBS-2025A-018"
+  ],
+  "checklist": [
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts",
+   "Addressed risks and limitations of the recommendation"
+  ],
+  "source": "Autumn 2025, Q8"
+ },
+ {
+  "id": "BIA-Q-2026S-01i",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1i",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.2"
+  ],
+  "summary": "Name the defining technological trait of blockchain from the given distributed-ledger case.",
+  "verbatim": "(i)  A logistics company adopts blockchain technology to record shipment transactions on a distributed\nledger. These transactions are validated through network consensus and once recorded, cannot be\naltered or deleted. This system operates without reliance on a central authority. The primary\ntechnological feature of blockchain illustrated in this situation is:\n(a) Encryption-based control of user access to transaction data\n(b) Centralised storage and processing of transaction records\n(c) Decentralisation combined with immutability of transaction records\n(d) Automation of transactions through high-speed data processing  (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2023S-007",
+   "BIA-OBS-2024A-008",
+   "BIA-OBS-2024A-009"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Spring 2026, Q1i"
+ },
+ {
+  "id": "BIA-Q-2026S-01ii",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1ii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.4"
+  ],
+  "summary": "Pick the dominant competitive force where buyers switch easily and products are near-identical.",
+  "verbatim": "(ii)  A company operates in a market where customers can easily switch suppliers, competing companies\noffer largely similar products, and price competition is intense. The most significant competitive force\naffecting the company is:\n(a) Threat of new entrants (b) Bargaining power of customers\n(c) Bargaining power of suppliers (d) Threat of substitute products (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-013",
+   "BIA-OBS-2022S-014",
+   "BIA-OBS-2022S-015"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Spring 2026, Q1ii"
+ },
+ {
+  "id": "BIA-Q-2026S-01iii",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1iii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.1"
+  ],
+  "summary": "Assess the Shariah status of charging and recognising a late-payment penalty under an Ijarah lease.",
+  "verbatim": "(iii)  An Islamic bank leases machinery to a client under an Ijarah contract. The lessee delays the rental\npayments and the bank charges a late payment penalty and records it as its income. From a Shariah\nperspective, how is this treatment of the penalty viewed?\n(a) It is not permissible because any amount collected in excess of outstanding debt is considered\nas riba\n(b) It is permissible if agreed in the contract\n(c) It is permissible because rental payments becomes a debt once due\n(d) It is permissible if the penalty amount is small (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Spring 2026, Q1iii"
+ },
+ {
+  "id": "BIA-Q-2026S-01iv",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1iv",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.1"
+  ],
+  "summary": "Classify a central bank's signalled liquidity rule under PESTEL factors.",
+  "verbatim": "(iv)  A central bank hints that from next year, all digital lenders must maintain a minimum liquidity\nreserve to continue operating. Although the requirement has not yet been enacted into law, this news\nimmediately influences investor confidence. Under PESTEL analysis, which factor best classifies this\ndevelopment?\n(a) Technological factor, because it affects digital lending platforms\n(b) Legal factor, because it will eventually impose compliance obligations on firms\n(c) Economic factor, because it influences market confidence and capital availability\n(d) Political factor, because it reflects a policy stance of a public authority (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022A-004",
+   "BIA-OBS-2022A-005",
+   "BIA-OBS-2023S-013"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Spring 2026, Q1iv"
+ },
+ {
+  "id": "BIA-Q-2026S-01v",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1v",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.4"
+  ],
+  "summary": "Identify the most intensified competitive force in a high-fixed-cost, overcapacity industry.",
+  "verbatim": "(v)  An industry is characterised by high fixed costs, low variable costs, largely undifferentiated products,\nand excess production capacity across firms. Which competitive force is most intensified under these\ncharacteristics?\n(a) Threat of new entrants (b) Bargaining power of suppliers\n(c) Threat of substitute products (d) Rivalry among existing competitors (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-013",
+   "BIA-OBS-2022S-014",
+   "BIA-OBS-2022S-015"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Spring 2026, Q1v"
+ },
+ {
+  "id": "BIA-Q-2026S-01vi",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1vi",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Classify a high-growth, high-relative-share product in the BCG matrix.",
+  "verbatim": "(vi)  Delta Electronics has a product line that operates in a market growing at 18% annually. Delta holds\na 30% market share, while the largest competitor holds 25%. Given that 10% is considered as the\nmidpoint for market growth in the BCG Matrix, this product is best classified as:\n(a) Cash Cow (b) Star\n(c) Question Mark (d) Dog (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Spring 2026, Q1vi"
+ },
+ {
+  "id": "BIA-Q-2026S-01vii",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1vii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.1"
+  ],
+  "summary": "State who bears a Mudarabah loss absent negligence or misconduct.",
+  "verbatim": "(vii)  In a Mudarabah contract, if a loss occurs due to normal business risks and not because of negligence\nor misconduct, who bears the financial loss?\n(a) The Rabb-ul-Maal only\n(b) The Mudarib only\n(c) Both Mudarib and Rabb-ul-Maal share the loss equally\n(d) The loss is shared according to the pre-agreed profit-sharing ratio (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Spring 2026, Q1vii"
+ },
+ {
+  "id": "BIA-Q-2026S-01viii",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1viii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Spot the case where a unique resource becomes a mere threshold resource.",
+  "verbatim": "(viii)  Which of the following situations most clearly demonstrates the loss of a unique resource, causing it\nto become a threshold resource?\n(a) A patented production process expires, allowing competitors to legally adopt similar methods\n(b) A company loses its operating licence due to regulatory non-compliance\n(c) A firm upgrades its standard IT systems to align with industry best practice\n(d) A competitor enters the market using lower-cost labour (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Spring 2026, Q1viii"
+ },
+ {
+  "id": "BIA-Q-2026S-01ix",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1ix",
+  "qnum": "1",
+  "section": "A",
+  "marks": 2,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Compute the cash settlement on a 3v9 forward rate agreement hedging deposits.",
+  "verbatim": "(ix)  A company entered into a 3 v 9 Forward Rate Agreement (FRA) with a bank for a notional principal\nof Rs. 5 million at 12.4% per annum to hedge its future deposits. If the KIBOR is 13.2% per annum\nat the end of the third month, what will be the settlement amount?\n(a) Rs. 18,765 payable by the bank  (b) Rs. 20,000 payable by the bank\n(c) Rs. 18,765 payable by the company  (d) Rs. 20,000 payable by the company  (02 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-020",
+   "BIA-OBS-2022A-022",
+   "BIA-OBS-2022A-023"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Spring 2026, Q1ix"
+ },
+ {
+  "id": "BIA-Q-2026S-02a",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "2a",
+  "qnum": "2",
+  "section": "A",
+  "marks": 4,
+  "type": "constructed",
+  "command_words": [
+   "Classify"
+  ],
+  "topic_tags": [
+   "D.1",
+   "D.3"
+  ],
+  "summary": "Sort the positive and negative sustainability matters in the case under the ESG framework.",
+  "verbatim": "(a) Classify the sustainability-related matters, both positive and negative, in the scenario under the ESG\nframework.                                                                                                                                     (04 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2026S-005",
+   "BIA-OBS-2026S-006",
+   "BIA-OBS-2026S-007"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Spring 2026, Q2a"
+ },
+ {
+  "id": "BIA-Q-2026S-02b",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "2b",
+  "qnum": "2",
+  "section": "A",
+  "marks": 4,
+  "type": "constructed",
+  "command_words": [
+   "Discuss"
+  ],
+  "topic_tags": [
+   "D.3"
+  ],
+  "summary": "Debate whether the firm's 'fully sustainable' branding is fair or an instance of greenwashing.",
+  "verbatim": "(b) Discuss whether NWL’s claim of being a ‘100% Sustainable Fashion Brand’ is justified, or whether it\nrepresents an instance of greenwashing.                                                                                       (04 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2026S-005",
+   "BIA-OBS-2026S-006",
+   "BIA-OBS-2026S-007"
+  ],
+  "checklist": [
+   "Covered more than one side of the issue",
+   "Applied each point to the scenario",
+   "Reached a reasoned conclusion"
+  ],
+  "source": "Spring 2026, Q2b"
+ },
+ {
+  "id": "BIA-Q-2026S-02c",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "2c",
+  "qnum": "2",
+  "section": "A",
+  "marks": 3,
+  "type": "constructed",
+  "command_words": [
+   "Explain",
+   "Recommend"
+  ],
+  "topic_tags": [
+   "D.1",
+   "D.3"
+  ],
+  "summary": "Explain why sustainability matters for the firm and propose actions to align with a recognised ESG framework.",
+  "verbatim": "(c) Explain the importance of sustainability to NWL and recommend appropriate actions to better align\nto a recognized sustainability framework.                                                                                    (03 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2026S-005",
+   "BIA-OBS-2026S-006",
+   "BIA-OBS-2026S-007"
+  ],
+  "checklist": [
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement",
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts"
+  ],
+  "source": "Spring 2026, Q2c"
+ },
+ {
+  "id": "BIA-Q-2026S-03a",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "3a",
+  "qnum": "3",
+  "section": "A",
+  "marks": 7,
+  "type": "constructed",
+  "command_words": [
+   "Conduct"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Draw up a SWOT analysis for a pharmaceutical cold-chain logistics company.",
+  "verbatim": "(a) Conduct a SWOT analysis of MLPL based on the information provided.                                (07 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Spring 2026, Q3a"
+ },
+ {
+  "id": "BIA-Q-2026S-03b",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "3b",
+  "qnum": "3",
+  "section": "A",
+  "marks": 3,
+  "type": "constructed",
+  "command_words": [
+   "Explain"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Show how each identified threat could be countered using the firm's relevant strengths.",
+  "verbatim": "(b) Using your answer in (a), explain how the strengths of MLPL could be used to address each of the\nthreats identified.  You should clearly link each threat to the relevant strength.                             (03 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement"
+  ],
+  "source": "Spring 2026, Q3b"
+ },
+ {
+  "id": "BIA-Q-2026S-04a",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "4a",
+  "qnum": "4",
+  "section": "A",
+  "marks": 4,
+  "type": "constructed",
+  "command_words": [
+   "Identify"
+  ],
+  "topic_tags": [
+   "A.b.2"
+  ],
+  "summary": "Identify the primary value-chain activities of a batch-production manufacturer.",
+  "verbatim": "(a) Identify the primary value chain activities of AquaHeat.  (04 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2026S-010",
+   "BIA-OBS-2026S-011"
+  ],
+  "checklist": [
+   "Named the correct item(s) from the scenario",
+   "Said why each qualifies, briefly"
+  ],
+  "source": "Spring 2026, Q4a"
+ },
+ {
+  "id": "BIA-Q-2026S-04b",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "4b",
+  "qnum": "4",
+  "section": "A",
+  "marks": 7,
+  "type": "constructed",
+  "command_words": [
+   "Recommend"
+  ],
+  "topic_tags": [
+   "A.b.2"
+  ],
+  "summary": "Choose the best of three options for shortening the operating cycle, with reasons.",
+  "verbatim": "(b) Recommend the most appropriate option to management for improving the operating cycle.\nYour answer should include clear reasons for the recommendation.                                                  (07 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2026S-010",
+   "BIA-OBS-2026S-011"
+  ],
+  "checklist": [
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts",
+   "Addressed risks and limitations of the recommendation"
+  ],
+  "source": "Spring 2026, Q4b"
+ },
+ {
+  "id": "BIA-Q-2026S-05",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "5",
+  "qnum": "5",
+  "section": "A",
+  "marks": 6,
+  "type": "constructed",
+  "command_words": [
+   "Evaluate"
+  ],
+  "topic_tags": [
+   "A.c.1"
+  ],
+  "summary": "Apply Tucker's five-question ethical model to a labelling non-compliance disclosure decision.",
+  "verbatim": "QUESTION 5\nAlphaMed (Pvt.) Ltd manufactures medicines for government hospitals. An internal compliance review\nrevealed that a recently supplied batch of medicine does not comply with updated regulatory labelling\nrequirements. However, the medicines are clinically safe and no adverse effects have been reported.\nThe regulatory authority is currently unaware of the non-compliance. Disclosing the non-compliance would\nrequire a product recall, resulting in a significant financial loss for the company. If the matter is not disclosed,\nthe company’s profits will remain unaffected. Management maintains that, in li ght of the substantial\nfinancial impact, disclosure would not be in company’s best interest.\nRequired:\nUsing the Tucker 5-Question model, evaluate whether the non-compliance should be disclosed.     (06 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-008",
+   "BIA-OBS-2022S-009",
+   "BIA-OBS-2022A-006"
+  ],
+  "checklist": [
+   "Stated a clear conclusion or recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified each point with specific scenario facts",
+   "Addressed risks, limitations or counter-arguments"
+  ],
+  "source": "Spring 2026, Q5"
+ },
+ {
+  "id": "BIA-Q-2026S-06a",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "6a",
+  "qnum": "6",
+  "section": "A",
+  "marks": 5,
+  "type": "constructed",
+  "command_words": [
+   "Calculate"
+  ],
+  "topic_tags": [
+   "B.2"
+  ],
+  "summary": "Calculate the current weighted average cost of capital from the given capital data.",
+  "verbatim": "(a) Calculate GBL’s current weighted average cost of capital (WACC).                                       (05 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-017",
+   "BIA-OBS-2022S-018",
+   "BIA-OBS-2022S-019"
+  ],
+  "checklist": [
+   "Showed workings step by step",
+   "Stated any assumptions made",
+   "Gave the final figure with units",
+   "Commented on what the result means for the decision"
+  ],
+  "source": "Spring 2026, Q6a"
+ },
+ {
+  "id": "BIA-Q-2026S-06b",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "6b",
+  "qnum": "6",
+  "section": "A",
+  "marks": 8,
+  "type": "constructed",
+  "command_words": [
+   "Recommend"
+  ],
+  "topic_tags": [
+   "B.1",
+   "B.2"
+  ],
+  "summary": "Using the revised WACC, recommend between a rights issue and redeemable preference shares.",
+  "verbatim": "(b) Based on the revised WACC, recommend which financing option should be adopted for the proposed\ninvestment.                                                                                                                                     (08 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-017",
+   "BIA-OBS-2022S-018",
+   "BIA-OBS-2022S-019"
+  ],
+  "checklist": [
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts",
+   "Addressed risks and limitations of the recommendation"
+  ],
+  "source": "Spring 2026, Q6b"
+ },
+ {
+  "id": "BIA-Q-2026S-07",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "7",
+  "qnum": "7",
+  "section": "A",
+  "marks": 9,
+  "type": "constructed",
+  "command_words": [
+   "Advise",
+   "Justify"
+  ],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Advise on the best foreign-exchange hedge (futures, options, or none) using effective rates.",
+  "verbatim": "QUESTION 7\nAssume that the date today is 1 June 2026.\nStellar Textiles Ltd. (STL), a Pakistani exporter, expects to receive USD 1,5 00,000 from a European\ncustomer on 30 September 2026. STL is exposed to foreign exchange risk due to potential fluctuation in the\nPKR/USD exchange rate. Management is considering alternative hedging strategies to manage this\nexposure.\nMarket Data:\n  Spot exchange rate (1 June 2026): PKR 280 per USD\n  Currency futures:\nFuture Rate  (PKR/USD) Contract size Transaction cost  per contract\nSeptember 282.5 USD 50,000  Rs. 1,000\nOctober 283.0 USD 50,000  Rs. 1,000\n  Currency options:\nOption type Strike price  (PKR/USD) Contract  size Premium  per contract Exercise fee  per contract\nCall 285.0 USD 100,000 Rs. 55,000 Rs. 7,500\nPut 283.5 USD 100,000 Rs. 60,000 Rs. 7,500\n  Expected spot rate on 30 September 2026: PKR 282.75 per USD\nRequired:\nAdvise STL on the most appropriate hedging strategy for managing its foreign exchange exposure, including\na no-hedge strategy, and justify your recommendation based on effective exchange rates.              (09 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-020",
+   "BIA-OBS-2022A-022",
+   "BIA-OBS-2022A-023"
+  ],
+  "checklist": [
+   "Gave reasons for the conclusion, not just the conclusion",
+   "Tied each reason to scenario evidence",
+   "Considered the strongest counter-point"
+  ],
+  "source": "Spring 2026, Q7"
+ },
+ {
+  "id": "BIA-Q-2026S-08",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "8",
+  "qnum": "8",
+  "section": "A",
+  "marks": 15,
+  "type": "constructed",
+  "command_words": [
+   "Evaluate"
+  ],
+  "topic_tags": [
+   "C.3"
+  ],
+  "summary": "Use the net present value method to decide whether to launch the new product project.",
+  "verbatim": "QUESTION 8\nNovatech Industries (NTI) is considering the launch of a new battery product, SunVault, designed for the\ncommercial solar energy storage market. The following information has been compiled to support the\ninvestment appraisal of the proposed project:\n(i)  The project requires an initial capital investment of Rs. 250 million to establish the production facility.\nThis amount includes Rs. 15 million incurred last year on feasibility studies and prototype testing.\n(ii)  An initial working capital investment of Rs. 40 million is required at the start of the project, of which\n75% will be recovered at the end of Year 5.\n(iii)  The production facility has a maximum annual capacity of 9,000 units.  Expected demand in Year 1\nis 6,000 units, increasing thereafter at 12% per annum.\n(iv)  The selling price in Year 1 is Rs. 45,000 per unit, increasing at 8% per annum.  Variable production\ncosts are Rs. 30,000 per unit in Year 1, increasing at 6% per annum.\n(v)  Annual fixed operating costs related to this project are Rs. 20 million, increasing at 10% per annum.\n(vi)  NTI currently sells an existing battery product, PowerCell, generating a contribution  margin of\nRs. 12,000 per unit at current prices. The launch of SunVault is expected to reduce PowerCell sales by\n1,000 units per year, with the lost contribution margin increasing at 5% per annum throughout the\nproject’s life cycle.\n(vii)  The SunVault facility can generate additional rental income by leasing idle testing and calibration\nfacilities, amounting to Rs. 10 million in Year 1, increasing at 9% per annum.\n(viii)  Depreciation for tax purposes will be charged at 40% per annum on a reducing balance method. The\nproject qualifies for a three-year tax holiday, after which profits will be taxed at 30%. Taxes are payable\nin the year they arise, and tax losses during tax holiday cannot be carried forward.\n(ix)  The production facility will have a residual value of 40% of its original cost at the end of Year 5.\n(x)  NTI’s cost of capital is 18%, and unless stated otherwise, all cash flows occur at the end of each year.\nRequired:\nUsing the net present value method, evaluate whether NTI should proceed with the SunVault project.\n(15 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-027",
+   "BIA-OBS-2022S-028",
+   "BIA-OBS-2022S-029"
+  ],
+  "checklist": [
+   "Stated a clear conclusion or recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified each point with specific scenario facts",
+   "Addressed risks, limitations or counter-arguments"
+  ],
+  "source": "Spring 2026, Q8"
+ },
+ {
+  "id": "BIA-Q-2026S-09",
+  "session": "Spring 2026",
+  "session_order": 8,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "9",
+  "qnum": "9",
+  "section": "A",
+  "marks": 15,
+  "type": "constructed",
+  "command_words": [
+   "Compute"
+  ],
+  "topic_tags": [
+   "C.2"
+  ],
+  "summary": "Compute the revised working-capital requirement after the planned capacity expansion.",
+  "verbatim": "QUESTION 9\nSafeStep Footwear Limited (SFL) manufactures a popular brand of industrial safety shoes in Pakistan and\nis planning to expand its production facilities in order to meet the increasing market demand. Currently,\nSFL produces and sells 280,000 pairs of shoes per annum. The current cost and selling price per pair of shoes\nare as follows:\nParticulars Rupees\nSelling price (inclusive of 18% sales tax) 13,920\nRaw materials (inclusive of import duty)   3,750\nPacking material 420\nDirect labour cost 1,680\nVariable manufacturing overheads 720\nFixed manufacturing overheads 2,050\nVariable selling overheads 540\nFixed selling overheads 310\nFixed administrative overheads 460\nAdditional information:\n(i)  Raw materials are imported from foreign suppliers on 45-day credit term, with import duty of 10% of\nC&F value payable on arrival. Packing materials are purchased locally on 30-day credit term.\n(ii)  Direct labour are paid in the month they are incurred, while manufacturing, selling and administrative\noverheads are paid 30 days after incurrence. The production process takes 20 days; raw materials are\nissued at the start of the process , packing materials are added at the end, and conversion costs are\nincurred evenly throughout the process. On average, work-in-process is 50% complete.\n(iii)  Approximately 65% of sales are made for cash, while the remaining 35% are credit sales to corporate\ncustomers, which are normally settled after 90 days. Sales tax is payable 30 days after the sales.\n(iv)  To ensure uninterrupted production, SFL maintains inventories equivalent to 75 days of raw\nmaterials, 15 days of packing materials, and 30 days of finished goods. A minimum cash balance of\nRs. 3.20 million is maintained at all times.\n(v)  Total fixed manufacturing overheads include depreciation amounting to Rs. 80 million.\n(vi)  SFL’s current working capital requirement is estimated at Rs. 512.40 million.\nExpected changes due to expansion:\n(i)  Annual production and sales are expected to increase to 390,000 pairs.\n(ii)  Credit sales are expected to reduce to 25% of total sales.\n(iii)  Total fixed manufacturing overheads will increase by Rs. 85 million per  annum (inclusive of\ndepreciation of Rs. 20 million).\n(iv)  Additional sales promotion expenses of Rs. 21.60 million per annum will be incurred.\n(v)  The minimum cash balance requirement will increase to Rs. 4.75 million.\n(vi)  There is no change in total fixed selling and total fixed administrative overheads.\nRequired:\nCompute the revised working capital require ment arising from proposed expansion of production .\nAssume a 360-day year.                                                                                                                             (15 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-021",
+   "BIA-OBS-2022S-022",
+   "BIA-OBS-2022S-023"
+  ],
+  "checklist": [
+   "Showed workings step by step",
+   "Stated any assumptions made",
+   "Gave the final figure with units",
+   "Commented on what the result means for the decision"
+  ],
+  "source": "Spring 2026, Q9"
+ },
+ {
+  "id": "BIA-Q-2026A-01i",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1i",
+  "qnum": "1",
+  "section": "A",
+  "marks": 2,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.4"
+  ],
+  "summary": "Identify which institution group faces the greatest threat from a new specialist entrant.",
+  "verbatim": "(i)  A strategy consultant has mapped competitors in Pakistan ’s private education sector along two\nstrategic dimensions: geographic reach (local vs. national) and programme breadth (specialist vs.\ncomprehensive). The consultant identifies three strategic groups:\n▪  Group 1: Single-city institutions offering only professional accounting qualifications.\n▪  Group 2: National universities offering diverse undergraduate programmes across multiple cities.\n▪  Group 3: Local institutions offering a diverse range of programmes.\nA well-funded new entrant announces plans to establish a national network of campuses offering\nexclusively professional accounting qualifications.\nWhich type of institution is likely to face the greatest competitive threat from the new entrant?\n(a) A national university in Group 2, because both institutions operate nationally, despite their\nsubstantially different programme portfolio.\n(b) A local comprehensive institution in Group 3, because geographic expansion by the new\nentrant will eliminate the importance of differences in programme breadth.\n(c) Institutions in all three groups equally, because geographic reach and programme breadth have\nan equal influence on the intensity of competition.\n(d) A single-city professional accounting institution in Group 1, because the new entrant will offer\nthe same specialist qualifications and compete for the same target students in cities where their\noperations overlap.                                                                                                             (02 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-013",
+   "BIA-OBS-2022S-014",
+   "BIA-OBS-2022S-015"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2026, Q1i"
+ },
+ {
+  "id": "BIA-Q-2026A-01ii",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1ii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 2,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.2"
+  ],
+  "summary": "Approximate the cost of redeemable preference shares from given market data.",
+  "verbatim": "(ii)  A company has 10% redeemable preference shares in issue having a par value of Rs.  20 each. The\ncurrent cum -dividend market price of each preference share is Rs. 2 3. Preference shares are\nredeemable at par in four years’ time. The company’s corporate income tax rate is 30%.\nWhat is the approximate cost of the redeemable preference shares?\n(a) 5.6% (b) 5.9% (c) 8.5% (d) 10.0% (02 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-017",
+   "BIA-OBS-2022S-018",
+   "BIA-OBS-2022S-019"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2026, Q1ii"
+ },
+ {
+  "id": "BIA-Q-2026A-01iii",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1iii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1.5,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.2"
+  ],
+  "summary": "Classify a bank app upgrade versus a feature-phone fintech launch as disruptive or not.",
+  "verbatim": "(iii)  A Pakistani bank upgrades its existing mobile banking application by improving its user interface,\nadding biometric login and increasing transaction speed. At the same time, a fintech startup launches\na platform that allows unbanked rural customers to access microloans, savings accounts and\ninsurance entirely through a feature phone without internet access or a visit to a bank branch.\nWhich of the following options correctly classifies the two technological developments?\n(a) Both are disruptive.\n(b) The bank’s upgrade is non-disruptive, whereas the fintech platform is disruptive.\n(c) The bank’s upgrade is disruptive, whereas the fintech platform is non-disruptive.\n(d) Both are non-disruptive.                                                                                          (1.5 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2023S-007",
+   "BIA-OBS-2024A-008",
+   "BIA-OBS-2024A-009"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2026, Q1iii"
+ },
+ {
+  "id": "BIA-Q-2026A-01iv",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1iv",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1.5,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.4",
+   "C.2"
+  ],
+  "summary": "Identify the product life-cycle stage and explain the working-capital rise behind it.",
+  "verbatim": "(iv)  A consumer electronics company launched a foldable smartphone two years ago at a premium price.\nSince then, five additional manufacturers have entered the market, prices have begun to decline, and\ntotal sales are growing by 35% annually. The company’s finance director notes that working capital\nrequirements are increasing significantly as inventory and receivables ex pand to support the rapid\ngrowth in sales.\nWhich option correctly identifies the product life -cycle stage and explains the increase in working\ncapital requirements?\n(a) Growth stage; rapid sales growth increases the funds tied up in inventories and receivables.\n(b) Growth stage; increasing working capital indicates that sales growth is slowing and cash is\nbeing released from operations.\n(c) Maturity stage; rapid market expansion and the entry of new competitors cause working capital\nrequirements to increase.\n(d) Maturity stage; accelerating sales volumes require substantial additional investment in\ninventories and receivables.                                                                                              (1.5 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-013",
+   "BIA-OBS-2022S-014",
+   "BIA-OBS-2022S-015"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2026, Q1iv"
+ },
+ {
+  "id": "BIA-Q-2026A-01v",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1v",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.3"
+  ],
+  "summary": "Interpret what an equity beta of 1.4 implies about the share's market sensitivity.",
+  "verbatim": "(v)  A listed company has an equity beta of 1.4. This most likely indicates that:\n(a) the return on company’s shares is expected to be 40% higher than the market return each year.\n(b) the return on company’s shares is expected to be 40% more sensitive to market movements\nthan the returns on the market portfolio.\n(c) the company’s shares have 40% more unsystematic risk than the market portfolio.\n(d) the return on company’s shares will always outperform the market during periods of economic\nexpansion.                                                                                                                            (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-016",
+   "BIA-OBS-2023S-022"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2026, Q1v"
+ },
+ {
+  "id": "BIA-Q-2026A-01vi",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1vi",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.3"
+  ],
+  "summary": "State which risk type diversification across an index portfolio cannot reduce.",
+  "verbatim": "(vi)  An investor holds all 30 shares included in the KSE-30 Index in the same proportions as their weight\nin the index. Which type of risk cannot be substantially reduced through such diversification?\n(a) Systematic risk (b) Unsystematic risk\n(c) Concentration risk (d) Business risk (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-016",
+   "BIA-OBS-2023S-022"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2026, Q1vi"
+ },
+ {
+  "id": "BIA-Q-2026A-01vii",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1vii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.2"
+  ],
+  "summary": "Pick the lowest-yield security under a normal yield curve.",
+  "verbatim": "(vii)  Under a normal yield curve, which of the following securities would generally offer the lowest yield?\n(a) 15-year government bond (b) 10-year government bond\n(c) 12-month treasury bill (d) 6-month Treasury bill (01 mark)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-017",
+   "BIA-OBS-2022S-018",
+   "BIA-OBS-2022S-019"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Autumn 2026, Q1vii"
+ },
+ {
+  "id": "BIA-Q-2026A-02a",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "2a",
+  "qnum": "2",
+  "section": "A",
+  "marks": 10,
+  "type": "constructed",
+  "command_words": [
+   "Analyse"
+  ],
+  "topic_tags": [
+   "A.a.4"
+  ],
+  "summary": "Analyse a steel producer's competitive position with Porter's five forces, rating each force.",
+  "verbatim": "(a) Analyse SRML’s competitive position using Porter’s Five Forces framework. For each force, classify\nits intensity as High or Low and justify your classification using the information provided in the\nscenario.                                                                                                                                         (10 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-013",
+   "BIA-OBS-2022S-014",
+   "BIA-OBS-2022S-015"
+  ],
+  "checklist": [
+   "Identified the relevant issues from the scenario",
+   "Explained the significance of each issue, not just listed it",
+   "Linked causes to consequences",
+   "Used scenario facts rather than textbook generalities"
+  ],
+  "source": "Autumn 2026, Q2a"
+ },
+ {
+  "id": "BIA-Q-2026A-02b",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "2b",
+  "qnum": "2",
+  "section": "A",
+  "marks": 3,
+  "type": "constructed",
+  "command_words": [
+   "Explain",
+   "Identify"
+  ],
+  "topic_tags": [
+   "A.a.4"
+  ],
+  "summary": "Explain the above-average margins and name the external factor whose reversal would hurt most.",
+  "verbatim": "(b) Based on your analysis in part (a), explain why SRML consistently reports above -average operating\nmargins. Also, identify and explain the single external factor described in the scenario whose removal\nor reversal would most likely weaken SRML’s overall competitive position across the five forces.\n(03 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-013",
+   "BIA-OBS-2022S-014",
+   "BIA-OBS-2022S-015"
+  ],
+  "checklist": [
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement",
+   "Named the correct item(s) from the scenario",
+   "Said why each qualifies, briefly"
+  ],
+  "source": "Autumn 2026, Q2b"
+ },
+ {
+  "id": "BIA-Q-2026A-03a",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "3a",
+  "qnum": "3",
+  "section": "A",
+  "marks": 3,
+  "type": "constructed",
+  "command_words": [
+   "Classify"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Classify five products into BCG quadrants using given share and growth data.",
+  "verbatim": "(a) Classify each product in the appropriate quadrant of the BCG Matrix.                                     (03 marks)\n(Note: Market growth rate above 10% is considered high)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Autumn 2026, Q3a"
+ },
+ {
+  "id": "BIA-Q-2026A-03b",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "3b",
+  "qnum": "3",
+  "section": "A",
+  "marks": 4,
+  "type": "constructed",
+  "command_words": [
+   "Recommend"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Recommend an appropriate strategy for each BCG quadrant.",
+  "verbatim": "(b) Based solely on the BCG Matrix, recommend an appropriate strategy for each quadrant.      (04 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts",
+   "Addressed risks and limitations of the recommendation"
+  ],
+  "source": "Autumn 2026, Q3b"
+ },
+ {
+  "id": "BIA-Q-2026A-03c",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "3c",
+  "qnum": "3",
+  "section": "A",
+  "marks": 3,
+  "type": "constructed",
+  "command_words": [
+   "Identify",
+   "Explain"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Identify two products where the BCG-indicated strategy may misfit, given stated limitations.",
+  "verbatim": "(c) Identify and explain two products for which the strategy indicated in part (b) may not be appropriate\nin light of BCG Matrix limitations, and considering the additional information provided.      (03 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Named the correct item(s) from the scenario",
+   "Said why each qualifies, briefly",
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement"
+  ],
+  "source": "Autumn 2026, Q3c"
+ },
+ {
+  "id": "BIA-Q-2026A-04a",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "4a",
+  "qnum": "4",
+  "section": "A",
+  "marks": 4,
+  "type": "constructed",
+  "command_words": [
+   "Define",
+   "Explain"
+  ],
+  "topic_tags": [
+   "D.1",
+   "D.3"
+  ],
+  "summary": "Define sustainability reporting and give two internal and two external benefits.",
+  "verbatim": "(a) Define sustainability reporting and explain two internal benefits and two external benefits of\nsustainability reporting.                                                                                                                 (04 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2026S-005",
+   "BIA-OBS-2026S-006",
+   "BIA-OBS-2026S-007"
+  ],
+  "checklist": [
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement"
+  ],
+  "source": "Autumn 2026, Q4a"
+ },
+ {
+  "id": "BIA-Q-2026A-04b",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "4b",
+  "qnum": "4",
+  "section": "A",
+  "marks": 6,
+  "type": "constructed",
+  "command_words": [
+   "Discuss"
+  ],
+  "topic_tags": [
+   "D.2",
+   "D.3"
+  ],
+  "summary": "Discuss the three ESG pillars, giving two positive and two negative indicators per pillar.",
+  "verbatim": "(b) Briefly discuss the three pillars of the ESG framework. For each pillar, give two examples of positive\nindicators and two examples of negative indicators.                                                                   (06 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2026S-006",
+   "BIA-OBS-2026S-005",
+   "BIA-OBS-2026S-007"
+  ],
+  "checklist": [
+   "Covered more than one side of the issue",
+   "Applied each point to the scenario",
+   "Reached a reasoned conclusion"
+  ],
+  "source": "Autumn 2026, Q4b"
+ },
+ {
+  "id": "BIA-Q-2026A-05",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "5",
+  "qnum": "5",
+  "section": "A",
+  "marks": 10,
+  "type": "constructed",
+  "command_words": [
+   "Determine"
+  ],
+  "topic_tags": [
+   "A.c.1"
+  ],
+  "summary": "Apply the AAA ethical decision-making model to a subcontractor compliance dilemma.",
+  "verbatim": "QUESTION 5\nPrimeBuild Construction Ltd (PBCL) is a mid-sized construction company that has recently been awarded\na government contract worth Rs. 180 million to build a public school in a low-income district. The contract\nspecifies a strict completion deadline tied to the commencement of the academic year.\nDuring the procurement process, QuickBuild Associates  (QuickBuild) was selected for the work after\nsubmitting the lowest bid  for the structural subcontracting work. However, Mr. Tariq, PBCL’s Senior\nProcurement Manager, later discovered that QuickBuild’s structural engineers were not registered with the\nPakistan Engineering Council (PEC). Under the applicable legal and contractual requirements, structural\nengineering work on government projects must be performed by engineers registered with PEC.\nMr. Tariq reported the matter to PBCL’s COO, who instructed him to proceed with QuickBuild without\ndisclosing the engineers’ non -registration to the government client. The COO justified this instruction on\nthe following grounds:\n▪  QuickBuild has a strong record of successfully completing similar work;\n▪  Appointing another subcontractor at this stage would delay the project by approximately six weeks\nand expose PBCL to substantial financial penalties;\n▪  The PEC registration requirement is merely procedural, and the likelihood of the non -compliance\nbeing detected is low; and\n▪  Disclosing the matter would reflect adversely on PBCL’s procurement and due diligence procedures.\nMr. Tariq is not comfortable with the justification provided by the COO and is therefore seeking guidance\non the ethically appropriate course of action.\nRequired:\nDetermine the most appropriate course of action, using the following steps of the American Accounting\nAssociation’s (AAA) ethical decision-making model:\n▪  Identify all possible courses of action\n▪  Match norms and principles to each option\n▪  Assess consequences of each option\n▪  Make the decision (10 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-008",
+   "BIA-OBS-2022S-009",
+   "BIA-OBS-2022A-006"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Autumn 2026, Q5"
+ },
+ {
+  "id": "BIA-Q-2026A-06a",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "6a",
+  "qnum": "6",
+  "section": "A",
+  "marks": 5,
+  "type": "constructed",
+  "command_words": [
+   "Identify",
+   "Explain",
+   "Assess",
+   "Recommend"
+  ],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "For each of four treasury and credit proposals: name the risk, judge suitability, suggest better techniques.",
+  "verbatim": "(a) ABC Textiles Limited (ABC) exports finished textile products to Europe. ABC plans to purchase large\nquantities of cotton in the coming months. It finances part of its working capital through floating-rate\nbank borrowings and makes a significant proportion of its export sales on credit. To ensure\nuninterrupted operations, ABC also seeks to maintain adequate liquidity to meet its short -term\nobligations as they fall due.\nOne of the directors has proposed the following measures to manage ABC’s financial risks:\n▪  Purchase a currency call option to hedge expected export receipts.\n▪  Purchase a lender’s option to manage floating-rate bank borrowings.\n▪  Tighten the company’s credit approval procedures.\n▪  Arrange standing credit lines with commercial banks.\nRequired:\nFor each measure:\n(i) identify and explain the financial risk it is intended to manage; and\n(ii) assess its suitability and, where appropriate, recommend  a more suitable risk management\ntechnique.                                                                                                                              (05 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-020",
+   "BIA-OBS-2022A-022",
+   "BIA-OBS-2022A-023"
+  ],
+  "checklist": [
+   "Named the correct item(s) from the scenario",
+   "Said why each qualifies, briefly",
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement",
+   "Stated a clear recommendation"
+  ],
+  "source": "Autumn 2026, Q6a"
+ },
+ {
+  "id": "BIA-Q-2026A-06b",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "6b",
+  "qnum": "6",
+  "section": "A",
+  "marks": 5,
+  "type": "constructed",
+  "command_words": [
+   "Recommend"
+  ],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Decide whether to hedge export receipts with currency options, showing all computations.",
+  "verbatim": "(b) ABC expects to receive EUR 2 million from a European customer in three months’ time. To manage\nits foreign exchange exposure, the treasury department has obtained the following market information\non three-month currency options:\nExercise price (PKR per EUR) Premium per contract (PKR)\nCall options 315 600,000\nPut options 316 550,000\nEach option c ontract ( whether put or call ) covers EUR 250,000  and carries an exercise fee of\nPKR 20,000, payable only if the option is exercised.\nThe current spot exchange rate is PKR 316.80 per EUR, while the spot exchange rate in three months\nis expected to be PKR 314.20 per EUR.\nRequired:\nRecommend whether ABC should use currency options to hedge its foreign exchange exposure. Show\nall necessary computations.                                             (05 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-020",
+   "BIA-OBS-2022A-022",
+   "BIA-OBS-2022A-023"
+  ],
+  "checklist": [
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts",
+   "Addressed risks and limitations of the recommendation"
+  ],
+  "source": "Autumn 2026, Q6b"
+ }
+]
