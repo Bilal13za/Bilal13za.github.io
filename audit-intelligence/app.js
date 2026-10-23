@@ -16,7 +16,7 @@ const BYID = {};   // type -> Map(id -> row)
 const TYPES = {
   risk:{table:"audit_risks",label:"Risk",t:"title",b:["description"]},
   procedure:{table:"audit_procedures",label:"Procedure",t:"title",b:["description"]},
-  control:{table:"controls",label:"Control",t:"title",b:["description","test_of_controls"]},
+  control:{table:"controls",label:"Control",t:"title",b:["description","test_title","test_of_controls"]},
   evidence:{table:"evidence_types",label:"Evidence",t:"name",b:["description"]},
   assertion:{table:"assertions",label:"Assertion",t:"name",b:["description"]},
   area:{table:"audit_areas",label:"Audit area",t:"name",b:["description"]},
@@ -403,7 +403,8 @@ function sectionsFor(type,row){
   else if(type==="rule"){ sec("Rationale",row.rationale); }
   else if(type==="control"){
     sec("Description",row.description); sec("Control type",row.control_type);
-    sec("Test of controls",row.test_of_controls);
+    if(row.test_title||row.test_of_controls)
+      S.push(`<h2>Test of controls</h2>${row.test_title?`<p class="test-title">${esc(row.test_title)}</p>`:""}${row.test_of_controls?`<p>${esc(row.test_of_controls)}</p>`:""}`);
   }
   else { sec("Detail",bodyOf(type,row)); }
   return S.join("");
@@ -569,7 +570,7 @@ function vAbout(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0;
-  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023g").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023h").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/TABLES.length*100)+"%";count.textContent=done+" / "+TABLES.length+" collections";}));
   try{ await Promise.all(jobs); }
   catch(e){ count.textContent="Failed to load data: "+e.message; return; }

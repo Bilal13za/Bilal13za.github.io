@@ -59,7 +59,8 @@
     "audit_area_id",
     "verification_status",
     "source_ref",
-    "test_of_controls"
+    "test_of_controls",
+    "test_title"
    ]
   },
   "audit_procedures": {
