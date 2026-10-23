@@ -199,3 +199,8 @@ h2.page-title{font-size:clamp(28px,4.4vw,40px);margin:34px 0 8px}
 .tag.cr{background:#fdeaea;color:#a33232}
 .narr{color:var(--muted);font-style:italic;margin-top:6px;font-size:.88rem}
 .fine{color:var(--muted);font-size:.82rem}
+
+/* procedure steps: clear numbered list */
+ol.steps{margin:10px 0 18px 4px;padding-left:22px;display:grid;gap:8px}
+ol.steps li{padding-left:4px}
+ol.steps li::marker{font-weight:700;color:var(--gold-deep)}

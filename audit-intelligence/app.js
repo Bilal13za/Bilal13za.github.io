@@ -346,13 +346,33 @@ function entriesBlock(row){
       je.map(e=>`<div class="entry"><div class="eline"><span class="tag dr">Dr</span> ${esc(e.debit)}</div><div class="eline"><span class="tag cr">Cr</span> ${esc(e.credit)}</div>${e.narration?`<div class="narr">${esc(e.narration)}</div>`:""}</div>`).join("")
     }</div><p class="fine">Illustrative only — amounts and accounts follow the scenario; adapt to the actual case.</p>`;}catch(e){return "";}
 }
+/* procedure descriptions carry inline "Label:" sections — parse into headed
+   sections, with Steps rendered as a numbered list */
+const PROC_LABELS=["Objective","Technique","Steps","Population","Sampling notes","Expected result","Exception criteria","Follow-up"];
+function procSections(desc){
+  const re=new RegExp("^("+PROC_LABELS.join("|")+"):","gm");
+  let m,segs=[],last=0,cur=null;
+  while((m=re.exec(desc))){
+    if(cur!==null) segs.push([cur,desc.slice(last,m.index).trim()]);
+    cur=m[1]; last=m.index+m[0].length;
+  }
+  if(cur!==null) segs.push([cur,desc.slice(last).trim()]);
+  if(!segs.length) return `<h2>Description</h2><p>${esc(desc).replace(/\n\n/g,"</p><p>")}</p>`;
+  return segs.map(([h,v])=>{
+    if(h==="Steps"){
+      const items=v.split(/(?=\b\d{1,2}\.\s)/).map(s=>s.replace(/^\d{1,2}\.\s*/,"").trim()).filter(Boolean);
+      if(items.length>1) return `<h2>${h}</h2><ol class="steps">${items.map(i=>`<li>${esc(i)}</li>`).join("")}</ol>`;
+    }
+    return `<h2>${h}</h2><p>${esc(v).replace(/\n\n/g,"</p><p>")}</p>`;
+  }).join("");
+}
 function sectionsFor(type,row){
   const S=[];
   const sec=(h,v)=>{if(v)S.push(`<h2>${h}</h2><p>${esc(v).replace(/\n\n/g,"</p><p>")}</p>`);};
   const list=(h,arr)=>{try{const a=JSON.parse(arr||"[]");if(a.length)S.push(`<h2>${h}</h2><ul>${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`);}catch(e){}};
   if(type==="risk"){ sec("Description",row.description); sec("Causes",row.causes); sec("Misstatement scenario",row.misstatement_scenario);
     list("Financial statement impact",row.fs_impacts); S.push(entriesBlock(row)); }
-  else if(type==="procedure"){ sec("Description",row.description); }
+  else if(type==="procedure"){ S.push(procSections(row.description)); }
   else if(type==="industry"){
     sec("Business model",row.business_model); sec("Common accounting issues",row.common_accounting_issues);
     sec("Significant inherent risks",row.significant_inherent_risks); sec("Typical controls",row.typical_controls);
@@ -549,7 +569,7 @@ function vAbout(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0;
-  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023f").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023g").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/TABLES.length*100)+"%";count.textContent=done+" / "+TABLES.length+" collections";}));
   try{ await Promise.all(jobs); }
   catch(e){ count.textContent="Failed to load data: "+e.message; return; }
