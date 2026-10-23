@@ -367,9 +367,24 @@
     "fs_impacts",
     "journal_entries"
    ]
+  },
+  "analytical_procedures": {
+   "rows": 21,
+   "columns": [
+    "id",
+    "audit_area_id",
+    "area",
+    "title",
+    "detail",
+    "expected_relationship",
+    "investigation_threshold",
+    "follow_up",
+    "verification_status",
+    "source_ref"
+   ]
   }
  },
- "total_rows": 1998,
+ "total_rows": 2019,
  "exported": "2026-10-23",
  "notes": "Public web export. Excludes search_index and full source-document texts (see script header). knowledge_records ethics rows are structure summaries only."
 }

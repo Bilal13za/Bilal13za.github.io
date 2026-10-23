@@ -9,7 +9,7 @@ const TABLES = ["audit_areas","assertions","audit_risks","risk_factors","control
   "evidence_types","industries","standards","regulations","publishers","case_studies","fraud_patterns",
   "knowledge_records","audit_programmes","working_paper_templates","reasoning_rules","study_resources",
   "risk_assertion","risk_control","risk_procedure","factor_risk","industry_risk","case_study_risk",
-  "standard_procedure","procedure_evidence","known_limitations","practice_dilemmas"];
+  "standard_procedure","procedure_evidence","known_limitations","practice_dilemmas","analytical_procedures"];
 const DB = {};
 const BYID = {};   // type -> Map(id -> row)
 
@@ -32,6 +32,7 @@ const TYPES = {
   rule:{table:"reasoning_rules",label:"Reasoning rule",t:"name",b:["rationale"]},
   study:{table:"study_resources",label:"Study",t:"title",b:[]},
   dilemma:{table:"practice_dilemmas",label:"Dilemma",t:"title",b:["situation","principles_at_stake","what_to_do","what_not_to_do"]},
+  analytical:{table:"analytical_procedures",label:"Analytical procedure",t:"title",b:["detail","expected_relationship","investigation_threshold","follow_up"]},
 };
 const titleOf = (type,row)=>{const c=TYPES[type];return row[c.t]||row.title||row.name||row.id;};
 const bodyOf = (type,row)=>{const c=TYPES[type];return c.b.map(f=>row[f]).filter(Boolean).join("\n\n");};
@@ -168,9 +169,10 @@ function linksFor(type,id){
     const kr=(DB.knowledge_records||[]).find(r=>r.id===id);
     let sids=[]; try{ sids=JSON.parse(kr.standard_ids||"[]"); }catch(e){}
     link("Standards", sids.map(s=>({row:byId("standard").get(s),t:"standard",rid:s})));
+  } else if(type==="analytical"){
+    link("Standards", [{row:byId("standard").get("ISA-520"),t:"standard",rid:"ISA-520"}]);
   } else if(type==="dilemma"){
-    const dl=(DB.practice_dilemmas||[]).find(r=>r.id===id);
-    let rids=[]; try{rids=JSON.parse(dl.related_ids||"[]");}catch(e){}
+    const dl=(DB.practice_dilemmas||[]).find(r=>r.id===id);    let rids=[]; try{rids=JSON.parse(dl.related_ids||"[]");}catch(e){}
     link("Related records", rids.filter(rid=>ID2TYPE[rid]).map(rid=>{
       const t=ID2TYPE[rid]; const m=new Map(); for(const r of DB[TYPES[t].table]||[]) m.set(r.id,r);
       return {row:m.get(rid),t,rid};
@@ -221,6 +223,7 @@ const COLLECTIONS=[
   {k:"case",t:"Case studies",d:"Real audit failures — facts separated from allegations.",table:"case_studies"},
   {k:"fraud",t:"Fraud patterns",d:"How schemes work, red flags, how to detect them.",table:"fraud_patterns"},
   {k:"dilemma",t:"Dilemmas",d:"Ethical dilemmas for trainees, auditors, TCWG and regulators.",table:"practice_dilemmas"},
+  {k:"analytical",t:"Analytical procedures",d:"ISA 520 analytics: expectations, thresholds, follow-up.",table:"analytical_procedures"},
   {k:"knowledge",t:"Knowledge",d:"Companies Act provisions, ethics structure, tax index.",table:"knowledge_records"},
   {k:"programme",t:"Programmes",d:"Full audit programmes per cycle.",table:"audit_programmes"},
   {k:"template",t:"Templates",d:"Working-paper templates, ready to adapt.",table:"working_paper_templates"},
@@ -229,7 +232,7 @@ function vHome(){
   const counts=Object.fromEntries(COLLECTIONS.map(c=>[c.k,(DB[c.table]||[]).length]));
   const stats=[["audit_risks","risks","risk"],["audit_procedures","procedures","procedure"],["standards","standards","standard"],
     ["industries","industries","industry"],["case_studies","case studies","case"],["fraud_patterns","fraud patterns","fraud"],
-    ["practice_dilemmas","dilemmas","dilemma"]]
+    ["practice_dilemmas","dilemmas","dilemma"],["analytical_procedures","analytics","analytical"]]
     .map(([t,l,k])=>`<a class="stat" href="#/browse/${k}" aria-label="Browse ${l}"><b data-count="${DB[t].length}">0</b><span>${l}</span></a>`).join("");
   app.innerHTML=`
   <section class="hero" aria-labelledby="hero-h">
@@ -362,6 +365,10 @@ function sectionsFor(type,row){
   else if(type==="fraud"){
     sec("How it works",row.how_it_works); list("Red flags",row.red_flags);
     sec("Pressure",row.pressure); sec("Opportunity",row.opportunity); sec("Rationalization",row.rationalization);
+  }
+  else if(type==="analytical"){
+    sec("How to perform",row.detail); sec("Expected relationship",row.expected_relationship);
+    sec("Investigation threshold",row.investigation_threshold); sec("Follow-up",row.follow_up);
   }
   else if(type==="dilemma"){
     sec("Situation",row.situation); sec("Principles at stake",row.principles_at_stake);
@@ -538,7 +545,7 @@ function vAbout(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0;
-  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023d").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023e").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/TABLES.length*100)+"%";count.textContent=done+" / "+TABLES.length+" collections";}));
   try{ await Promise.all(jobs); }
   catch(e){ count.textContent="Failed to load data: "+e.message; return; }
