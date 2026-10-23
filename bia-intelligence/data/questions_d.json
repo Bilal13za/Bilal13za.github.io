@@ -1,0 +1,900 @@
+[
+ {
+  "id": "BIA-Q-2026A-07",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "7",
+  "qnum": "7",
+  "section": "A",
+  "marks": 14,
+  "type": "constructed",
+  "command_words": [
+   "Prepare"
+  ],
+  "topic_tags": [
+   "C.1"
+  ],
+  "summary": "Prepare a budgeted absorption-costing profit and loss statement, first finding the profit-maximising mix.",
+  "verbatim": "QUESTION 7\nHarvest Valley Foods Limited (HVF) manufactures two premium breakfast cereal products, Granola and\nMuesli. The company is preparing its budget for the year ending 31 August 2027. The following information\nis available:\nSales forecast prepared by the marketing department\nGranola Muesli\nForecast sales (units) 180,000 240,000\nSelling price (Rs. per unit) 900 600\nStandard production data per unit\nGranola Muesli\nIngredient A at Rs. 350 per kg 0.40 kg  0.25 kg\nIngredient B at Rs. 200 per kg 0.30 kg  0.40 kg\nPackaging Rs. 30 per unit Rs. 25 per unit\nDirect labour at Rs. 500 per hour 0.25 hour  0.2 hour\nMachine hour 0.20 hour 0.15 hour\nAdditional information:\n(i)  The available production capacity is  66,000 machine hours for the budget period. This capacity is\ninsufficient to satisfy the sales forecast prepared by the marketing department for both products.\nManagement intends to use the available production capacity to maximize HVF’s budgeted operating\nprofit.\n(ii)  Budgeted sales are expected to be made through the following sales channels:\nGranola Muesli\nRetail outlets 35% 30%\nSupermarkets 45% 50%\nOnline 20% 20%\n(iii)  Sales through supermarkets are subject to a trade discount of 8% on the selling price, while sales\nthrough online channel are subject to a discount of 5% on the selling price.\n(iv)  Variable manufacturing overhead is absorbed at Rs. 250 per machine hour.\n(v)  Budgeted fixed manufacturing overhead amounts to Rs. 26.4 million and is absorbed on the basis of\nmachine hours available during the budget period.\n(vi)  Advertising expenses relating to sales through retail outlets are budgeted at Rs. 8 million.\n(vii)  The estimated selling cost for online sales is Rs. 18 per unit.\n(viii)  Budgeted administrative expenses amount to Rs. 22 million.\n(ix)  There will be no opening and closing inventories of either product.\nRequired:\nUsing absorption costing method, prepare the budgeted statement of profit or loss of HVF for the year ending\n31 August 2027. Show all relevant workings, including the determination of the optimal sales mix.\n(14 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-024",
+   "BIA-OBS-2022S-025",
+   "BIA-OBS-2022S-026"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Autumn 2026, Q7"
+ },
+ {
+  "id": "BIA-Q-2026A-08",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "8",
+  "qnum": "8",
+  "section": "A",
+  "marks": 15,
+  "type": "constructed",
+  "command_words": [
+   "Evaluate",
+   "Recommend"
+  ],
+  "topic_tags": [
+   "C.3",
+   "KR10"
+  ],
+  "summary": "Use NPV to compare outsourced manufacturing against replacing the production line, then recommend.",
+  "verbatim": "QUESTION 8\nPrime Tissue Limited (PTL) manufactures premium facial tissues under its well -established brand and\ndistributes them through wholesalers and retail chains across Pakistan. In view of the age and declining\noperating efficiency of its existing production facility, management is reviewing the company ’s\nmanufacturing strategy for the next four years.\nManagement is considering the following mutually exclusive alternatives:\nOption 1: Enter into a take-or-pay manufacturing agreement with a specialist manufacturer.\nOption 2: Replace the existing production facility with a new automated production line.\nAnnual demand in Year 1 is expected to be 600,000 cartons and is forecast to increase by 10% per annum\nthereafter. The selling price in Year 1 is estimated at Rs. 4,800 per carton and is expected to increase by\n6% per annum.\nThe existing production facility has a written-down value of Rs. 30 million and can be sold immediately for\nRs. 45 million, irrespective of the option selected.\nOption 1: Take-or-pay manufacturing agreement\nUnder this option, PTL will outsource its entire production to a specialist manufacturer, Shamoon Tissue\nLimited (STL). A non-refundable contract implementation fee of Rs. 20 million will be payable immediately.\nUnder the agreement, PTL will be required to pay for a minimum of 700,000 cartons per annum, irrespective\nof the number of cartons actually purchased. Where the number of cartons purchased exceeds 700,000, PTL\nwill pay for the actual cartons purchased. STL will charge Rs. 3,200 per carton in Year 1.\nOption 2: New automated production line\nUnder this option, PTL will purchase and install a new automated production line immediately at a cost of\nRs. 210 million. The production line will have a maximum manufacturing capacity of 650,000 cartons per\nannum. To meet annual demand in excess of th is capacity, PTL will enter into a four -year capacity\nreservation agreement with a different specialist manufacturer, Lux Tissue Limited (LTL). A non-refundable\ncapacity reservation fee of Rs. 10 million will be payable immediately. Under the agreement, LTL will\nsupply only the number of cartons by which annual demand exceeds the manufacturing capacity of the new\nproduction line.\nLTL will charge Rs. 3,400 per carton in Year 1. The cash manufacturing cost of cartons produced by PTL\nis estimated at Rs. 2,900 per carton in Year 1. The production line is expected to have a residual value equal\nto 25% of its original cost at the end of Year 4.\nAdditional information\nUnless otherwise stated, all manufacturing and outsourcing costs are stated at Year 1 prices and are expected\nto increase by 5% annually. PTL operates in a Special Economic Zone and is exempt from corporate income\ntax. PTL depreciates plant and machinery using the reducing balance method at 40% per annum.\nPTL’s cost of capital is 15%. Unless otherwise stated, all cash flows occur at the end of each year.\nRequired:\nUsing the net present value (NPV) technique, evaluate each of the above options and recommend the option\nthat PTL should adopt.                                                                                                        (15 marks)\nNotes:  ▪ Ignore any working capital requirements.\n▪ For Option 1, ignore any inventory implications arising from the minimum 700,000-carton commitment\nwhere actual demand is below 700,000 cartons.",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-027",
+   "BIA-OBS-2022S-028",
+   "BIA-OBS-2022S-029"
+  ],
+  "checklist": [
+   "Stated a clear conclusion or recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified each point with specific scenario facts",
+   "Addressed risks, limitations or counter-arguments",
+   "Stated a clear recommendation",
+   "Justified with specific scenario facts"
+  ],
+  "source": "Autumn 2026, Q8"
+ },
+ {
+  "id": "BIA-Q-2026A-09",
+  "session": "Autumn 2026",
+  "session_order": 9,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "9",
+  "qnum": "9",
+  "section": "A",
+  "marks": 8,
+  "type": "constructed",
+  "command_words": [
+   "Recommend"
+  ],
+  "topic_tags": [
+   "B.1",
+   "B.2"
+  ],
+  "summary": "Using the dividend growth model, recommend between a rights issue and surplus-cash financing.",
+  "verbatim": "QUESTION 9\nNopa Pharmaceuticals Limited (NPL) is a listed company engaged in the manufacture and sale of\npharmaceutical products. Since incorporation, NPL has financed its operations entirely through equity.\nAs at 31 July 2026, NPL ha s ordinary share capital of Rs. 1,000 million, comprising ordinary shares of\nRs. 10 each.\nThe following information has been obtained from management and other relevant sources:\n(i)  The current ex-dividend market price of NPL’s ordinary shares is Rs. 98 per share.\n(ii)  NPL’s current cost of equity is 17.86% per annum.\n(iii)  Dividends are expected to grow at 5% per annum in perpetuity.\n(iv)  The applicable corporate tax rate is 30%.\nProposed expansion\nNPL is considering establishing a new manufacturing facility for a specialised range of pharmaceutical\nproducts requiring an investment of Rs. 900 million. The proposed project is expected to offer attractive\nlong-term growth opportunities.\nThe directors are evaluating the following alternatives.\nOption 1 – Financing through a rights issue\nThe entire investment will be financed through a rights issue at Rs. 60 per ordinary share. Under this option,\nthe dividend per share for the next financial year is expected to remain the same as the dividend declared\nfor the current financial year. Thereafter, dividends are expected to grow at 5.8% per annum in perpetuity.\nIf this option is exercised, the ex-right price of NPL’s ordinary shares is expected to be Rs. 93.\nOption 2 – Financing through surplus cash\nThe entire investment will be financed from surplus cash available with NPL . Under this option , the\ndividend per share for the next financial year is expected to be Rs. 3 lower than the dividend declared for\nthe current financial year. Thereafter, dividends are expected to grow at 6.8% per annum in perpetuity.\nIf this option is exercised, the current market price would remain the same.\nRequired:\nUsing the dividend growth model, recommend which financing option NPL should prefer for the proposed\ninvestment.                                                                                                                                               (08 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-017",
+   "BIA-OBS-2022S-018",
+   "BIA-OBS-2022S-019"
+  ],
+  "checklist": [
+   "Stated a clear recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified with specific scenario facts",
+   "Addressed risks and limitations of the recommendation"
+  ],
+  "source": "Autumn 2026, Q9"
+ },
+ {
+  "id": "BIA-Q-MODEL-01i",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1i",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "State the primary purpose of a resource audit.",
+  "verbatim": "(i)  Which of the following is the primary purpose of conducting a resource audit in an organization?\n(a) To comply with legal requirements for annual financial audits\n(b) To identify and assess all significant resources and their effective utilization\n(c) To determine the organization’s market position and level of competition\n(d) To forecast economic trends and prepare financial statements",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1i"
+ },
+ {
+  "id": "BIA-Q-MODEL-01ii",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1ii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.1"
+  ],
+  "summary": "Pick the item that is NOT a likely business consequence of poor law and order.",
+  "verbatim": "(ii)  Which of the following is NOT a likely consequence of a poor law and order situation on businesses?\n(a) Increased employee absenteeism (b) Lower security costs\n(c) Higher insurance premiums (d) Reduced investment",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022A-004",
+   "BIA-OBS-2022A-005",
+   "BIA-OBS-2023S-013"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1ii"
+ },
+ {
+  "id": "BIA-Q-MODEL-01iii",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1iii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Name the risk type managed by arranging credit lines and overdraft facilities.",
+  "verbatim": "(iii)  Companies arrange credit lines and overdraft facilities to manage:\n(a) the credit risk  (b) the liquidity risk\n(c) the market risk  (d) the speculative risk",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-020",
+   "BIA-OBS-2022A-022",
+   "BIA-OBS-2022A-023"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1iii"
+ },
+ {
+  "id": "BIA-Q-MODEL-01iv",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1iv",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.2"
+  ],
+  "summary": "Value a share using the dividend growth model from the given data.",
+  "verbatim": "(iv)  A company has recently paid a dividend of Rs. 6 per share, which is expected to grow by 9%\nper annum in the foreseeable future. The shareholders require an annual return of 19% and the next\nannual dividend will be paid in one year’s time. What would be the market value of each share?\n(a) Rs. 79.3 (b) Rs. 66.7 (c) Rs. 65.4 (d) Rs. 60.0",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-017",
+   "BIA-OBS-2022S-018",
+   "BIA-OBS-2022S-019"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1iv"
+ },
+ {
+  "id": "BIA-Q-MODEL-01v",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1v",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Select two examples of strategic (speculative) risks.",
+  "verbatim": "(v)  Which TWO of the following are examples of strategic or enterprise (speculative) risks?\n(a) Buying earthquake insurance for a property located in a seismic zone\n(b) Investing in a start-up company\n(c) Taking out a mortgage on a house\n(d) Developing a new product",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-020",
+   "BIA-OBS-2022A-022",
+   "BIA-OBS-2022A-023"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1v"
+ },
+ {
+  "id": "BIA-Q-MODEL-01vi",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1vi",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.1"
+  ],
+  "summary": "Identify the correct description of a deep-discounted bond.",
+  "verbatim": "(vi)  Which of the following best explains a deep-discounted bond?\n(a) A bond with a low coupon rate that adjusts annually\n(b) A bond with a low coupon rate that is sold at a significant discount to its fair value\n(c) A bond with a high coupon rate but sold at a significant discount to its fair value\n(d) A bond that is available in the market at a significant discount to its issue price",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1vi"
+ },
+ {
+  "id": "BIA-Q-MODEL-01vii",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1vii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.1"
+  ],
+  "summary": "Identify the correct distinction between a bonus issue and a rights issue.",
+  "verbatim": "(vii)  Which of the following is correct regarding a bonus issue and a rights issue?\n(a) A bonus issue involves the issuing of shares to existing shareholders , while a rights issue\ninvolves offering shares to the general public\n(b) A bonus issue increases the company’s assets, while a rights issue increases the number of\nshares in circulation\n(c) A bonus issue increases the number of shares in circulation, while a rights issue increases the\ncompany’s assets\n(d) A bonus issue requires the purchase of additional shares at a discount, while rights shares are\ngiven at a premium",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1vii"
+ },
+ {
+  "id": "BIA-Q-MODEL-01viii",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1viii",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Name the most fundamental step when setting up a structured risk-management process.",
+  "verbatim": "(viii)  The higher management is con sidering to implement a structured risk management process in the\norganization. Which of the following should be considered the most fundamental step?\n(a) Procuring tools for risk evaluation\n(b) Establishing a dedicated risk management department\n(c) Formulating a response to potential risk\n(d) Setting clear expectations about the importance of risk awareness and open dialogue",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-020",
+   "BIA-OBS-2022A-022",
+   "BIA-OBS-2022A-023"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1viii"
+ },
+ {
+  "id": "BIA-Q-MODEL-01ix",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1ix",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "A.a.1"
+  ],
+  "summary": "Classify reliance on online buyer ratings as a PESTEL social factor.",
+  "verbatim": "(ix)  Nowadays, consumers increasingly rely on ratings and reviews from previous buyers, especially\nthrough online means, when making purchasing decisions. This is an example of which social factor:\n(a) Attitudes and lifestyles (b) Demography\n(c) Law and order (d) Health",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022A-004",
+   "BIA-OBS-2022A-005",
+   "BIA-OBS-2023S-013"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1ix"
+ },
+ {
+  "id": "BIA-Q-MODEL-01x",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "1x",
+  "qnum": "1",
+  "section": "A",
+  "marks": 1,
+  "type": "MCQ",
+  "command_words": [],
+  "topic_tags": [
+   "B.1"
+  ],
+  "summary": "Identify the key difference between Ijarah and a conventional finance lease.",
+  "verbatim": "(x)  Which of the following is the difference between Ijarah and conventional finance lease?\n(a) In Ijarah, the lessor bears the risk of the asset, while  in a conventional lease, the lessee bears\nthe risk of the asset\n(b) In Ijarah, the lessor transfers the ownership, while  in a conventional lease, the lessor retains\nthe ownership\n(c) In Ijarah, any surcharge for delayed payments is credited to income, while  in a conventional\nlease, any such surcharge cannot be credited to income\n(d) In Ijarah, the rental amount can be variable, while in a conventional lease, the rental amount\nis fixed",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from question type and marks — not validated",
+  "trap_briefing": [],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked",
+   "Eliminated each distractor for a stated reason",
+   "Checked the exact scenario detail the question hinges on"
+  ],
+  "source": "Model paper, Q1x"
+ },
+ {
+  "id": "BIA-Q-MODEL-02a",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "2a",
+  "qnum": "2",
+  "section": "A",
+  "marks": 3,
+  "type": "constructed",
+  "command_words": [
+   "Advise"
+  ],
+  "topic_tags": [
+   "A.a.4"
+  ],
+  "summary": "Advise which electric-vehicle segment is the most viable opportunity, with reasons.",
+  "verbatim": "(a) Advise which segment presents the most viable business opportunity for Khalid. Also, provide reasons\nfor your answer.                                                                                                                             (03 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-013",
+   "BIA-OBS-2022S-014",
+   "BIA-OBS-2022S-015"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Model paper, Q2a"
+ },
+ {
+  "id": "BIA-Q-MODEL-02b",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "2b",
+  "qnum": "2",
+  "section": "A",
+  "marks": 11,
+  "type": "constructed",
+  "command_words": [
+   "List",
+   "Explain"
+  ],
+  "topic_tags": [
+   "A.a.4"
+  ],
+  "summary": "List three drivers of each Porter force and link each driver to the chosen segment.",
+  "verbatim": "(b) For each force, list three factors that influence its strength. Also, explain how each of these factors\nmight have impacted the strength of that particular force in your recommended segment in (a).\n(11 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-013",
+   "BIA-OBS-2022S-014",
+   "BIA-OBS-2022S-015"
+  ],
+  "checklist": [
+   "Explained the concept in your own words",
+   "Applied it to the scenario facts",
+   "Covered every part of the requirement"
+  ],
+  "source": "Model paper, Q2b"
+ },
+ {
+  "id": "BIA-Q-MODEL-03",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "3",
+  "qnum": "3",
+  "section": "A",
+  "marks": 6,
+  "type": "constructed",
+  "command_words": [
+   "Apply"
+  ],
+  "topic_tags": [
+   "A.c.1"
+  ],
+  "summary": "Apply Tucker's five-question ethical model to a resort-development scenario.",
+  "verbatim": "QUESTION 3\nNorthern Hotels Limited (NHL) is planning to build a new resort alongside a lake in Baboon Valley (Valley),\na remote area of Pakistan. Although the Valley is known for its scenic views, it is largely cut off from other\nareas of Pakistan due to its poor infrastructure. There is no sewerage system in the Valley , and all the bio-\nwaste created by the locals is put to organic use. People residing in the Valley have been living below the\npoverty line.\nNHL has obtained all the relevant government approvals. As part of the approval, NHL will build proper\nroad infrastructure leading to the resort. NHL has also been able to enter a deal for the land at a significantly\nlower market price.\nNHL expects to achi eve its objective of high profits due to very low operational costs , as the labour is\navailable in the Valley at a significantly reduced rate. On the other hand, the locals have also foresighted\nthat this will bring tourism to the area and will create greater earning opportunities.\nRequired:\nApply Tucker’s 5-question model to the above scenario.                                    (06 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-008",
+   "BIA-OBS-2022S-009",
+   "BIA-OBS-2022A-006"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Model paper, Q3"
+ },
+ {
+  "id": "BIA-Q-MODEL-04a",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "4a",
+  "qnum": "4",
+  "section": "A",
+  "marks": 6,
+  "type": "constructed",
+  "command_words": [
+   "Conduct"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Prepare a SWOT analysis for a language-learning mobile application.",
+  "verbatim": "(a) Conduct a SWOT analysis for IQRA.                                                                                          (06 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Model paper, Q4a"
+ },
+ {
+  "id": "BIA-Q-MODEL-04b",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "4b",
+  "qnum": "4",
+  "section": "A",
+  "marks": 4,
+  "type": "constructed",
+  "command_words": [
+   "Suggest"
+  ],
+  "topic_tags": [
+   "A.b.1"
+  ],
+  "summary": "Suggest how each identified threat could be tackled using the stated strengths.",
+  "verbatim": "(b) Based on your answer in (a) above, suggest how each identified threat could be tackled using the\nstrengths of IQRA. (Note: Clearly state the strengths used to answer the question)                       (04 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Easy",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-004",
+   "BIA-OBS-2022S-005",
+   "BIA-OBS-2022S-006"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Model paper, Q4b"
+ },
+ {
+  "id": "BIA-Q-MODEL-05a",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "5a",
+  "qnum": "5",
+  "section": "A",
+  "marks": 5,
+  "type": "constructed",
+  "command_words": [
+   "State",
+   "Identify"
+  ],
+  "topic_tags": [
+   "D.2",
+   "D.3"
+  ],
+  "summary": "State the triple-bottom-line concept and name two indicators per performance aspect.",
+  "verbatim": "(a) State briefly the concept of the Triple Bottom Line reporting system. Identify any two performance\nmeasurement indicators under each aspect of performance discussed in the Triple Bottom Line\nreporting system.                                                                                                                           (05 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2026S-006",
+   "BIA-OBS-2026S-005",
+   "BIA-OBS-2026S-007"
+  ],
+  "checklist": [
+   "Named the correct item(s) from the scenario",
+   "Said why each qualifies, briefly"
+  ],
+  "source": "Model paper, Q5a"
+ },
+ {
+  "id": "BIA-Q-MODEL-05b",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "5b",
+  "qnum": "5",
+  "section": "A",
+  "marks": 6,
+  "type": "constructed",
+  "command_words": [
+   "Classify"
+  ],
+  "topic_tags": [
+   "D.3"
+  ],
+  "summary": "Classify twelve given key performance indicators under the environmental, social and governance components.",
+  "verbatim": "(b) A fertiliser company is enhancing its sustainability practices and has identified the following\nKey Performance Indicators (KPIs) to measure its performance:\n(i)  Total water consumption in production per year\n(ii)  Percentage of board seats held by independent directors\n(iii)  Total hours contributed by employees to community and social initiatives\n(iv)  Proportion of energy sourced from renewable resources\n(v)  Number of health and safety incidents reported during the year\n(vi)  Percentage of women in the total workforce and at the executive/management level\n(vii)  Percentage of procurement spending on local suppliers\n(viii)  Average number of employee sick days per year\n(ix)  Ratio of median male salary to median female salary\n(x)  Total number of hours of employee training and professional development per year\n(xi)  Percentage of recycled raw materials used in production\n(xii)  Existence of a published Anti-Corruption Policy\nRequired:\nClassify each of the above KPIs under the Environmental, Social, and Governance components of the\nESG Framework.\n(06 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2026S-005",
+   "BIA-OBS-2026S-006",
+   "BIA-OBS-2026S-007"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Model paper, Q5b"
+ },
+ {
+  "id": "BIA-Q-MODEL-06",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "6",
+  "qnum": "6",
+  "section": "B",
+  "marks": 11,
+  "type": "constructed",
+  "command_words": [
+   "Determine"
+  ],
+  "topic_tags": [
+   "B.2"
+  ],
+  "summary": "Use the dividend valuation model to decide whether the company should take the investment.",
+  "verbatim": "QUESTION 6\nPlasto Plastic Limited (PPL) is an all-equity financed company. The following  information has been\nextracted from PPL’s financial statements as at 30 June 2023:\n(i)  PPL has ordinary share capital of Rs. 150 million with a face value of Rs. 10 per share.\n(ii)  On 30 June 2023, PPL paid an annual dividend of Rs. 25 per share.\n(iii)  PPL expects the next three annual dividend payments to be Rs. 25 per share. Thereafter, a\n3% per annum growth rate is expected in perpetuity.\n(iv)  The equity beta of PPL’s share is 0.8, and the average return on the stock market is 21%. The return\non government bonds is 12%.\nPPL is considering a new investment which would require an initial outlay of Rs. 600 million and is\nconsidering financing it with a 1 -for-3 rights issue. The following additional information is available\nregarding the new investment:\n(i)  The investment would enable PPL to increase the dividend to Rs. 26 per share on 30 June 2024, and\nall subsequent dividends would increase by 5% per annum in perpetuity.\n(ii)  The investment is riskier than the average of PPL’s existing investments and, therefore, the beta would\nincrease to 1.05.\nRequired:\nUsing the dividend valuation model, determine whether PPL should undertake the new investment.\n(11 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-017",
+   "BIA-OBS-2022S-018",
+   "BIA-OBS-2022S-019"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Model paper, Q6"
+ },
+ {
+  "id": "BIA-Q-MODEL-07a",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "7a",
+  "qnum": "7",
+  "section": "B",
+  "marks": 5,
+  "type": "constructed",
+  "command_words": [
+   "Determine",
+   "Calculate"
+  ],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Decide whether to exercise an interest-rate lender's option and compute the net effective rate.",
+  "verbatim": "(a) A corporate treasury plans to invest Rs. 50 million in a 6-month fixed deposit starting in three months.\nTo guard against unfavorable movements in interest rates, it has secured a lender’s option with a strike\nrate of 19.5% on the notional amount. The option expires in three months. The treasury paid an\nupfront premium of Rs. 250,000, and an additional transaction cost of Rs. 75,000 applies if the option\nis exercised.\nThe current and projected KIBOR rates are as follows:\n3-month KIBOR rate 6-month KIBOR rate\nCurrent 18.4% 19.8%\nProjected 18.7% 18.9%\nRequired:\nDetermine whether the option should be exercised. Also, calculate the net effective interest rate.\n(05 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-020",
+   "BIA-OBS-2022A-022",
+   "BIA-OBS-2022A-023"
+  ],
+  "checklist": [
+   "Showed workings step by step",
+   "Stated any assumptions made",
+   "Gave the final figure with units",
+   "Commented on what the result means for the decision"
+  ],
+  "source": "Model paper, Q7a"
+ },
+ {
+  "id": "BIA-Q-MODEL-07b",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "7b",
+  "qnum": "7",
+  "section": "B",
+  "marks": 5,
+  "type": "constructed",
+  "command_words": [
+   "Determine"
+  ],
+  "topic_tags": [
+   "B.4"
+  ],
+  "summary": "Decide whether to buy a currency option to hedge a euro payable, with computations.",
+  "verbatim": "(b) Assume that the date today is 1 March 2025.\nOn 1 March 2025, Tech Solutions (TS), a Pakistani technology company, signed an agreement with\na German software provider to purchase an AI-powered medical diagnostic system. The payment of\nEUR 4 million is due on 30 June 2025. To hedge against exchange rate fluctuations, TS is considering\na currency option. Each option covers EUR 0.4 million.\nThe current spot exchange rate is EUR 1 = PKR 290. The following June options are available, each\nwith a premium of PKR 0.6 million per option:\n▪  Call option with a strike price of PKR 295.\n▪  Put option with a strike price of PKR 298.\nTS predicts that the spot rate in June could range between PKR 296 and PKR 300 per EUR.\nRequired:\nDetermine whether the option should be purchased. (Show all necessary computations)            (05 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Moderate",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-020",
+   "BIA-OBS-2022A-022",
+   "BIA-OBS-2022A-023"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Model paper, Q7b"
+ },
+ {
+  "id": "BIA-Q-MODEL-08",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "8",
+  "qnum": "8",
+  "section": "B",
+  "marks": 12,
+  "type": "constructed",
+  "command_words": [
+   "Prepare"
+  ],
+  "topic_tags": [
+   "C.1"
+  ],
+  "summary": "Prepare a budgeted profit or loss statement for a firm adding a mini variant under capacity limits.",
+  "verbatim": "QUESTION 8\nMultan Star (MS) is engaged in the manufacturing and selling of a single product, K-100.\nThe management is in the process of preparing its budgeted profit or loss statement for the year ending\n31 August 2023. The following information is available in this respect:\nInformation for the year ended 31 August 2022\n(i)  Extracts from profit or loss statement:\nRs. in '000\nSales 90,000\nCost of goods sold:\nMaterial (36,000)\nLabour (25,000)\nManufacturing overheads (9,000)\nGross profit 20,000\nSelling and administration expenses (2,500)\nProfit before tax 17,500\n(ii)  During the year, MS operated at 80% of its machine production capacity. It manufactured and sold\n72,000 units of K-100. Each unit of K-100 requires 3 hours of machine time.\n(iii)  2.5 kg of material is required for the manufacturing of each unit of K-100.\n(iv)  Each unit of K-100 requires three labour hours. Labour is hired under a third-party contract according\nto which MS has to pay for a minimum of 250,000 labour hours . However, each hour exceeding\n250,000 hours would be paid at two times of standard labour rate per hour.\n(v)  20% of total manufacturing overheads are fixed. Variable manufacturing overheads are absorbed on\nthe basis of machine hours.\n(vi)  All selling and administration expenses are fixed.\n(vii)  There are no opening or closing stocks of raw material and finished goods.\nInformation and projections for the budget for the year ending 31 August 2023\n(i)  MS would introduce the mini version of K -100 under the name of K -50. The demand for K -50 is\nexpected to be 25,000 units. The selling price of K-50 would be Rs. 750 each.\n(ii)  The introduction of K -50 would not affect the existing demand for K -100. In  addition, MS has\nentered into a contract with a new customer for the supply of 10,000 units of K -100 at last year’s\nprevailing price.\n(iii)  Any constraint due to production capacity would be met by reducing the production of K -100.\nHowever, any shortfall in production of K -100 would be met by purchasing it from the market for\nRs. 1,200 per unit.\n(iv)  The selling price of K-100 (other than already contracted to supply) would increase by 12%.\n(v)  Each unit of K-50 would require 1 kg of material, 1.5 hours of machine and 1.5 hours of labour. The\nproduction of K-50 would result in an increase in selling and administration expenses by 20% other\nthan the inflation.\n(vi)  All expenses, unless otherwise specified, are subject to an inflation of 5%.\nRequired:\nPrepare a budgeted profit or loss statement for the year ending 31 August 2023.                                (12 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-024",
+   "BIA-OBS-2022S-025",
+   "BIA-OBS-2022S-026"
+  ],
+  "checklist": [
+   "Answered every part of the requirement",
+   "Used scenario facts as evidence",
+   "Structured the answer with headings",
+   "Checked the command word: did what it asked"
+  ],
+  "source": "Model paper, Q8"
+ },
+ {
+  "id": "BIA-Q-MODEL-09",
+  "session": "Model paper",
+  "session_order": 0,
+  "scheme": "CAF-7 BIA",
+  "predecessor": false,
+  "number": "9",
+  "qnum": "9",
+  "section": "B",
+  "marks": 16,
+  "type": "constructed",
+  "command_words": [
+   "Evaluate",
+   "Recommend"
+  ],
+  "topic_tags": [
+   "C.3",
+   "KR10"
+  ],
+  "summary": "Compare machine replacement against shutdown using NPV and recommend the better course.",
+  "verbatim": "QUESTION 9\nZaid Limited (ZL) launched a product called ‘Zing’ two years ago and prepared a five-year projection for it.\nIn the first year, Zing performed well and achieved all milestones. However, in the second year, the machine\nused for the production of Zing develo ped certain operational issues. While ZL was able to maintain the\nproduction of the originally estimated quantity, the quality of Zing was significantly affected, resulting in\nlost sales. ZL is now considering either  replacing the machine and continuing with Zing’s production or\ndiscontinuing Zing’s production.\nThe following information is available in this respect:\nOriginal estimates:\n(i)  ZL purchased an old machine costing Rs. 120 million for the production of Zing and had to incur an\noverhaul cost amounting to Rs. 25 million immediately , and another overhaul of the same amount\nwould have to be incurred at the end of the third year.\n(ii)  As per ZL’s policy, the machine was depreciated at a rate of 25% using the reducing balance method.\nIt was anticipated that the residual value of the machine would be equal to its written-down value at\nthe end of the project, i.e., the fifth year.\n(iii)  Initial investment in working capital was assessed at Rs. 20 million, with no further additions required\nin subsequent years. ZL anticipated that only 25% of this investment would be realized at the end of\nthe fifth year.\n(iv)  A warehouse was rented for a 5-year period at an annual rent of Rs. 5 million, subject to an annual\nincrease of 10%. Early termination of the agreement would incur a penalty equivalent to 6 months’\nrent.\n(v)  Production and sales were estimated at 40,000 units per annum f or all the years. However, in the\nsecond year, only 15,000 units were sold due to quality issues.\n(vi)  The sales price for the first year was Rs. 1,500 per unit, with an annual increase of 10%.\n(vii)  Variable costs were estimated at Rs. 650 per unit, with fixed costs (other than rent) associated with\nZing at Rs. 1.5 million per annum. Both costs were subject to a 7% annual increase.\n(viii)  The weighted average cost of capital is 18%.\n(ix)  ZL operates in a tax-free environment.\n(x)  All cash flows would arise at the end of the year, except where stated otherwise.\nOption 1: Replace the machine and continue with the production of Zing\n(i)  A Chinese supplier has offered ZL the opportunity to trade in the old machine for Rs. 60 million and\nupgrade to the latest machine for an additional investment of Rs. 100 million. This would help ZL in\nmaintaining the production of Zing at standard quality for the remaining period of the project. At the\nend of the project, ZL expects selling this upgraded machine with a 15% profit above its written down\nvalue.\n(ii)  ZL can negotiate a contract with an existing customer to sell the existing stock of Zing at 85% of the\nprice based on the original estimates.\n(iii)  The new machine is expected to reduce variable costs by 8% compared to the original estimates.\n(iv)  All other information would remain consistent with the original estimates.\nOption 2: Discontinue production of Zing\n(i)  Under this option, the existing stock of Zing would be sold at 80% of the price based on the original\nestimates.\n(ii)  The machine would be sold for Rs. 50 million on an ‘as is where is’ basis.\n(iii)  35% of the working capital would be realized.\n(iv)  All other information would remain consistent with the original estimates.\nRequired:\nEvaluate both options by using the net present value method. Recommend the best course of action for ZL\nto follow. (Net present value based on original estimates is not required)                                                  (16 marks)",
+  "excluded": false,
+  "exclusion_reason": null,
+  "difficulty": "Very difficult",
+  "difficulty_basis": "estimated from marks and question type — not validated",
+  "trap_briefing": [
+   "BIA-OBS-2022S-027",
+   "BIA-OBS-2022S-028",
+   "BIA-OBS-2022S-029"
+  ],
+  "checklist": [
+   "Stated a clear conclusion or recommendation",
+   "Compared the alternatives instead of only listing them",
+   "Justified each point with specific scenario facts",
+   "Addressed risks, limitations or counter-arguments",
+   "Stated a clear recommendation",
+   "Justified with specific scenario facts"
+  ],
+  "source": "Model paper, Q9"
+ }
+]
