@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BIA Intelligence — CAF-7 Business Insights and Analysis</title>
+<meta name="description" content="Interactive study companion for ICAP CAF-7 Business Insights and Analysis: past-paper question bank, examiner intelligence, syllabus browser, revision notes and flashcards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261023b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d2620'/%3E%3Cpath d='M8 22l6-12 4 7 6-11' stroke='%23c07f2e' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#app">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="#/" aria-label="BIA Intelligence home">
+      <span class="brand-mark" aria-hidden="true">⬢</span>
+      <span class="brand-text"><strong>BIA Intelligence</strong><small>CAF-7 study companion</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/syllabus" data-nav="syllabus">Syllabus</a>
+      <a href="#/questions" data-nav="questions">Questions</a>
+      <a href="#/mocks" data-nav="mocks">Mocks</a>
+      <a href="#/examiner" data-nav="examiner">Examiner</a>
+      <a href="#/revision" data-nav="revision">Revision</a>
+      <a href="#/about" data-nav="about">About</a>
+    </nav>
+    <button class="search-trigger" id="searchTrigger" aria-label="Open search (press /)">
+      <span aria-hidden="true">⌕</span><span class="st-label">Search</span><kbd>/</kbd>
+    </button>
+  </div>
+</header>
+<main id="app" class="wrap" tabindex="-1" aria-live="off"></main>
+<footer class="site-footer">
+  <div class="wrap footer-in">
+    <p><strong>BIA Intelligence</strong> — a personal study companion for ICAP CAF-7 Business Insights and Analysis.
+    Question wording is verbatim from ICAP's public past papers; suggested answers, examiner commentary and study text are paraphrased — never published verbatim here.</p>
+    <p class="foot-meta">Offline-first · No account · No tracking · Pre-2025 questions mapped from CAF-6 MFA via a documented syllabus delta</p>
+  </div>
+</footer>
+<div id="loader" class="loader" role="status" aria-live="polite">
+  <div class="loader-card">
+    <div class="loader-mark" aria-hidden="true">⬢</div>
+    <p>Loading study data…</p>
+    <div class="loader-bar"><span id="loaderFill"></span></div>
+    <p class="loader-count" id="loaderCount"></p>
+  </div>
+</div>
+<script src="app.js?v=20261023b"></script>
+</body>
+</html>
