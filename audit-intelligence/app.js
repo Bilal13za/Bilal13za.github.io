@@ -16,7 +16,7 @@ const BYID = {};   // type -> Map(id -> row)
 const TYPES = {
   risk:{table:"audit_risks",label:"Risk",t:"title",b:["description"]},
   procedure:{table:"audit_procedures",label:"Procedure",t:"title",b:["description"]},
-  control:{table:"controls",label:"Control",t:"title",b:["description"]},
+  control:{table:"controls",label:"Control",t:"title",b:["description","test_of_controls"]},
   evidence:{table:"evidence_types",label:"Evidence",t:"name",b:["description"]},
   assertion:{table:"assertions",label:"Assertion",t:"name",b:["description"]},
   area:{table:"audit_areas",label:"Audit area",t:"name",b:["description"]},
@@ -381,6 +381,10 @@ function sectionsFor(type,row){
   }
   else if(type==="regulation"){ sec("Summary",row.summary); sec("Applicability",row.applicability_notes); }
   else if(type==="rule"){ sec("Rationale",row.rationale); }
+  else if(type==="control"){
+    sec("Description",row.description); sec("Control type",row.control_type);
+    sec("Test of controls",row.test_of_controls);
+  }
   else { sec("Detail",bodyOf(type,row)); }
   return S.join("");
 }
@@ -545,7 +549,7 @@ function vAbout(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0;
-  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023e").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023f").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/TABLES.length*100)+"%";count.textContent=done+" / "+TABLES.length+" collections";}));
   try{ await Promise.all(jobs); }
   catch(e){ count.textContent="Failed to load data: "+e.message; return; }

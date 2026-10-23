@@ -6,7 +6,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select bank reconciliations for several months spread across the period. Inspect for preparer and independent reviewer sign-off, verify the reviewer is independent of cash handling, re-perform one reconciliation, and inspect the investigation of aged or unusual items."
  },
  {
   "id": "C-CSH-002",
@@ -15,7 +16,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the aged outstanding-items report at two dates. Verify items beyond the defined timeframe were investigated and cleared or written back with approval, and trace a sample of clearances to supporting evidence."
  },
  {
   "id": "C-CSH-003",
@@ -24,7 +26,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of new beneficiaries added during the period. Inspect verification evidence (business existence, bank account ownership) dated before the first payment, and verify no payment preceded verification."
  },
  {
   "id": "C-CSH-004",
@@ -33,7 +36,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of payments above the threshold. Inspect for dual authorisation and matched supporting documents, and verify the authorisers are independent of the payment requester. Verify the system enforces dual authorisation (inspect configuration or test with a controlled attempt)."
  },
  {
   "id": "C-CSH-005",
@@ -42,7 +46,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of inter-account transfers. Trace each to the transfer register and agree both the sending and receiving sides, and inspect the period-end matching performed before close."
  },
  {
   "id": "C-CSH-006",
@@ -51,7 +56,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the year-end listing of transfers in transit. Verify each item is recognised on only one side (not double-counted) and re-perform the cut-off check for the reporting date."
  },
  {
   "id": "C-CSH-007",
@@ -60,7 +66,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the records of surprise cash counts during the period. Verify the counts were unannounced and performed by someone independent of cash custody, verify differences were investigated and approved, and observe one count."
  },
  {
   "id": "C-CSH-008",
@@ -69,7 +76,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Observe cash handling: dual custody in operation and pre-numbered receipts issued. Select a sample of days and agree takings to bankings, verifying banking was prompt and intact."
  },
  {
   "id": "C-FRD-001",
@@ -78,7 +86,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of manual journals above the threshold. Inspect for independent approval before posting (signature or workflow timestamp) and verify the approver differs from the preparer."
  },
  {
   "id": "C-FRD-002",
@@ -87,7 +96,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the whistleblowing policy and evidence of its communication to staff. Inspect the log of reports, investigation records and reporting to those charged with governance, and confirm the reporting channel is operational."
  },
  {
   "id": "C-FRD-003",
@@ -96,7 +106,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of staff in covered roles. Verify periodic uninterrupted leave was taken per policy, verify duties were performed by others during the absence, and inspect rotation records where applicable."
  },
  {
   "id": "C-FRD-004",
@@ -105,7 +116,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select significant accounting estimates. Inspect the documented independent challenge, including the challenger's conclusions, and verify the challenger had no responsibility for preparing the estimate."
  },
  {
   "id": "C-FRD-005",
@@ -114,7 +126,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select material or unusual revenue transactions. Inspect evidence of review by a function independent of sales, including the dispatch and acceptance evidence inspected before revenue was recorded."
  },
  {
   "id": "C-FRP-001",
@@ -123,7 +136,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of manual journals above the threshold. Inspect supporting evidence and independent pre-posting approval, and verify segregation between preparer and approver."
  },
  {
   "id": "C-FRP-002",
@@ -132,7 +146,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the periodic reviews of the complete manual-journal listing. Verify the review covered the full population (sequential control), select unusual entries flagged and inspect the follow-up."
  },
  {
   "id": "C-FRP-003",
@@ -141,7 +156,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect audit committee minutes for review of significant judgements and unusual journals, and verify the concerns channel to those charged with governance exists and was communicated."
  },
  {
   "id": "C-FRP-004",
@@ -150,7 +166,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the privileged-access listing and verify access is restricted to those who need it. Inspect the reviews of privileged-action logs, and verify direct posting to closed periods is technically blocked (inspect configuration or test)."
  },
  {
   "id": "C-FRP-005",
@@ -159,7 +176,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the related-party register and verify it was updated for changes in directors, key management and significant shareholders during the period. Select a sample of declarations and agree them to the register."
  },
  {
   "id": "C-FRP-006",
@@ -168,7 +186,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of transactions above the threshold. Verify each was screened against the related-party register before approval, and for identified related-party transactions verify flagging for appropriate measurement and disclosure."
  },
  {
   "id": "C-FRP-007",
@@ -177,7 +196,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select provisions. Inspect the supporting evidence for key assumptions and the documented independent challenge performed before the financial statements were finalised."
  },
  {
   "id": "C-FRP-008",
@@ -186,7 +206,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the look-back comparison of prior estimates to actual outcomes. Verify systematic differences were investigated for bias and that conclusions were reported."
  },
  {
   "id": "C-FRP-009",
@@ -195,7 +216,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the completed disclosure checklist. Verify it reflects the applicable financial reporting framework and was independently reviewed by a technically competent person, and trace a sample of disclosures to the checklist."
  },
  {
   "id": "C-FRP-010",
@@ -204,7 +226,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select new, unusual or complex transactions during the period. Verify each had a documented disclosure assessment during the close process and that conclusions were reviewed."
  },
  {
   "id": "C-TEL-001-1",
@@ -213,7 +236,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the network site register and verify restoration and dismantling clauses are captured. Verify the annual reconciliation to the lease portfolio, and select sites to agree clauses to the underlying leases."
  },
  {
   "id": "C-TEL-001-2",
@@ -222,7 +246,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect management's review of the decommissioning provision model (cost estimates, timing, discount rate, unwinding) at the reporting date. Verify approval and re-perform key inputs."
  },
  {
   "id": "C-TEL-002-1",
@@ -231,7 +256,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select new tariff plans and bundle structures launched. Verify independent review and approval, including the stand-alone selling prices used for allocation, before launch."
  },
  {
   "id": "C-TEL-002-2",
@@ -240,7 +266,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the allocation-logic change log. Verify changes to allocation logic were restricted and logged, and re-perform the allocation for a sample of contracts."
  },
  {
   "id": "C-TEL-003-1",
@@ -249,7 +276,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select days and inspect the rating exception and rejection reports with review evidence. Select rejected usage records and verify investigation and reprocessing or resolution."
  },
  {
   "id": "C-TEL-003-2",
@@ -258,7 +286,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select tariff and rating configuration changes deployed. Verify testing in a non-production environment and independent approval before deployment."
  },
  {
   "id": "C-MFG-001-1",
@@ -267,7 +296,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the approved budgets supporting the overhead absorption rates. Verify rates were updated when budgets changed or capacity shifted materially, and re-perform the rate calculation for one period."
  },
  {
   "id": "C-MFG-001-2",
@@ -276,7 +306,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select months and inspect the identification of abnormal idle-capacity costs. Verify they were expensed rather than absorbed into inventory, and trace them to profit or loss."
  },
  {
   "id": "C-MFG-002-1",
@@ -285,7 +316,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select months and inspect the documented investigation of material cost variances. Where standards were updated, verify the update reflected a permanent cost change and was approved."
  },
  {
   "id": "C-MFG-003-1",
@@ -294,7 +326,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect warranty claims tracking by product cohort. Verify the provision model was updated for actual claim experience at the reporting date, and re-perform the model inputs for one cohort."
  },
  {
   "id": "C-RTL-001-1",
@@ -303,7 +336,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select days and inspect till reconciliations with independent review. Verify differences were investigated, and agree bankings to till records."
  },
  {
   "id": "C-RTL-001-2",
@@ -312,7 +346,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select voids, refunds and discounts. Verify supervisor authorisation with reason codes, and inspect the pattern review for unusual activity."
  },
  {
   "id": "C-RTL-002-1",
@@ -321,7 +356,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select rebate agreements. Verify documented terms and finance's review of the rebate schedule before income was recognised, and re-perform one rebate calculation."
  },
  {
   "id": "C-RTL-003-1",
@@ -330,7 +366,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select periods and inspect the reconciliation of gift card and loyalty liabilities between the POS/loyalty system and the general ledger. Verify breakage assumptions were approved, and re-perform the reconciliation."
  },
  {
   "id": "C-BNK-001-1",
@@ -339,7 +376,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the independent validation report on the ECL model. Select a sample of significant staging decisions and overlays; inspect the documented rationale and evidence of approval, and verify the approver is independent of the modelling team."
  },
  {
   "id": "C-BNK-002-1",
@@ -348,7 +386,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the system configuration for the automatic interest-suspension rule. Select a sample of loans meeting the defined non-performance criteria and verify interest accrual stopped; for any exception, inspect the documented approval."
  },
  {
   "id": "C-BNK-003-1",
@@ -357,7 +396,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of treasury valuations; inspect the independent price verification evidence and verify the reviewer is independent of the trading desk. Re-perform one IPV check."
  },
  {
   "id": "C-INV-001",
@@ -366,7 +406,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Observe physical access controls at the warehouse and high-value storage. Inspect the authorised-personnel list, verify access rights were reviewed periodically, and inspect access logs for anomalies."
  },
  {
   "id": "C-INV-002",
@@ -375,7 +416,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Attend or observe one physical count. Inspect count records for other periods, select differences between counted quantities and records, and verify investigation and approval before adjustment."
  },
  {
   "id": "C-PAY-001",
@@ -384,7 +426,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of leavers. Verify the HR leaver notification was on or before the last working day, and verify removal from the payroll master before the next pay run (no payment after leaving)."
  },
  {
   "id": "C-PAY-002",
@@ -393,7 +436,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select pay periods and inspect the independent reconciliation of payroll headcount to HR employment records. Verify differences were investigated, and re-perform one reconciliation."
  },
  {
   "id": "C-PAY-003",
@@ -402,7 +446,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of master changes (new starters, leavers, pay-rate and bank-detail changes). Inspect independent approval before effect, and verify no change took effect unapproved by comparing effective dates to approval dates."
  },
  {
   "id": "C-PAY-004",
@@ -411,7 +456,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect system access rights and verify no user holds both payroll-master-maintenance and payment-release rights. Inspect the periodic review of access rights."
  },
  {
   "id": "C-PAY-005",
@@ -420,7 +466,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of overtime claims. Inspect approval in advance (or promptly afterwards) by a supervisor independent of the claimant, and verify operational need was documented."
  },
  {
   "id": "C-PAY-006",
@@ -429,7 +476,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select months and inspect the overtime exception report with review evidence. Select unusual patterns flagged and verify investigation."
  },
  {
   "id": "C-PAY-007",
@@ -438,7 +486,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect updates to payroll rate, tax and deduction tables. Verify the source is authoritative and changes were independently reviewed before the pay run, and re-perform one employee's calculation."
  },
  {
   "id": "C-PAY-008",
@@ -447,7 +496,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select pay periods. Inspect the independent review of the payroll summary and its reconciliation to the general ledger, and verify differences were resolved before payments were released."
  },
  {
   "id": "C-PPE-001",
@@ -456,7 +506,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of capital additions. Inspect documented approval against the entity's capitalisation criteria before recognition, and verify the approver assessed the criteria (not just the budget)."
  },
  {
   "id": "C-PPE-002",
@@ -465,7 +516,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select periods and inspect finance's review of the repairs and maintenance accounts for capital items, and of capital additions for repairs items. Select items investigated and verify the conclusions."
  },
  {
   "id": "C-PPE-003",
@@ -474,7 +526,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the annual review of depreciation rates, methods, useful lives and residual values. Verify changes were approved with documented rationale, and verify estimate changes were applied prospectively."
  },
  {
   "id": "C-PPE-004",
@@ -483,7 +536,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the asset-master change log. Select changes to depreciation parameters and verify independent authorisation, and verify the log is complete (no unauthorised changes)."
  },
  {
   "id": "C-PPE-005",
@@ -492,7 +546,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of disposals. Inspect prior written authorisation and the completed disposal form, and verify the asset was removed from the register and the ledger."
  },
  {
   "id": "C-PPE-006",
@@ -501,7 +556,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Observe or inspect one physical verification of fixed assets. Verify the verifiers were independent of custody, select differences found and verify investigation and correction of the register."
  },
  {
   "id": "C-PPE-007",
@@ -510,7 +566,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the impairment-indicator assessment at the reporting date. Verify it covers each asset or cash-generating unit, and where no indicator was concluded verify the basis is documented."
  },
  {
   "id": "C-PPE-008",
@@ -519,7 +576,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select periods and inspect the monitoring of significant assets or cash-generating units against budgets and forecasts. Select adverse variances and verify investigation for impairment indicators."
  },
  {
   "id": "C-PPE-009",
@@ -528,7 +586,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select major maintenance and replacement work orders. Verify the replaced component was identified and routed to finance, and verify derecognition of the replaced part."
  },
  {
   "id": "C-PPE-010",
@@ -537,7 +596,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the fixed asset register for componentisation of significant assets. Select assets and verify major parts are recorded separately with their own useful lives."
  },
  {
   "id": "C-PUR-001",
@@ -546,7 +606,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of payments. Verify the invoice was matched to the purchase order and goods received note before approval for payment, and verify the matcher is independent of ordering and receiving."
  },
  {
   "id": "C-PUR-002",
@@ -555,7 +616,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select months and inspect the exception report of invoices approved without matching GRNs. Verify independent review each month, and select cleared items to verify follow-up."
  },
  {
   "id": "C-PUR-003",
@@ -564,7 +626,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the sequential control over goods received notes. At the period end, select unmatched GRNs and verify accrual as liabilities, and re-perform the unmatched-GRN listing."
  },
  {
   "id": "C-PUR-004",
@@ -573,7 +636,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select purchases around the period end. Verify recording by goods receipt date, and inspect the system posting rules or cut-off checklist that enforces it."
  },
  {
   "id": "C-PUR-005",
@@ -582,7 +646,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of supplier master additions and changes, including bank-detail changes. Inspect independent approval before effect, and verify no change took effect unapproved."
  },
  {
   "id": "C-PUR-006",
@@ -591,7 +656,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the periodic independent review of the supplier master file. Select duplicate, dormant or suspicious entries identified and verify resolution."
  },
  {
   "id": "C-PUR-007",
@@ -600,7 +666,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Test the duplicate-invoice control with a controlled attempt (or inspect system configuration and rejection logs). Verify duplicate invoice numbers for the same supplier are rejected or flagged and that the control operated during the period."
  },
  {
   "id": "C-PUR-008",
@@ -609,7 +676,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of paid invoices. Verify each is marked as paid and filed to prevent reprocessing (physical or systemic), and verify the marking cannot be removed without detection."
  },
  {
   "id": "C-PUR-009",
@@ -618,7 +686,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the completed period-end cut-off checklist. Select post-period invoices reviewed under it and verify pre-period receipts were captured in the correct period."
  },
  {
   "id": "C-PUR-010",
@@ -627,7 +696,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select supplier invoices recorded after the reporting date. Verify each was reviewed for goods received before year-end, and verify accruals were proposed where needed."
  },
  {
   "id": "C-REV-001",
@@ -636,7 +706,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of sales invoices. Verify matched evidence of delivery or performance exists dated before the invoice, and verify billing cannot be raised without it (or inspect the manual check performed)."
  },
  {
   "id": "C-REV-002",
@@ -645,7 +716,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the finance manager's independent review of revenue recorded in the final days of the period. Select credit notes issued shortly after period end and verify the original revenue met the recognition criteria."
  },
  {
   "id": "C-REV-003",
@@ -654,7 +726,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the sequential control over dispatch notes and the period-end reconciliation to sales invoices. Select unmatched dispatches and verify revenue accrual, and re-perform the reconciliation."
  },
  {
   "id": "C-REV-004",
@@ -663,7 +736,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select sales around the period end. Verify recording by dispatch or completion date, and inspect the billing-system enforcement or cut-off checklist."
  },
  {
   "id": "C-REV-005",
@@ -672,7 +746,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select a sample of credit sales. Verify the sales order, dispatch note and invoice were matched before the sale was released for billing."
  },
  {
   "id": "C-REV-006",
@@ -681,7 +756,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select weeks and inspect the exception report of invoices raised without matching dispatch evidence. Verify independent review and documented clearance of each item."
  },
  {
   "id": "C-REV-007",
@@ -690,7 +766,8 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect the minutes or records of the independent review of significant revenue judgements and incentive-linked target achievement. Verify challenge was documented, not just noted."
  },
  {
   "id": "C-REV-008",
@@ -699,7 +776,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select manual journal entries affecting revenue above the threshold. Inspect independent approval with supporting documentation before posting."
  },
  {
   "id": "C-REV-009",
@@ -708,7 +786,8 @@
   "control_type": "preventive",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Select non-routine and individually material transactions. Verify a documented business rationale and senior management authorisation exist dated before recording."
  },
  {
   "id": "C-REV-010",
@@ -717,6 +796,7 @@
   "control_type": "detective",
   "audit_area_id": null,
   "verification_status": "internal_review",
-  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
+  "test_of_controls": "Inspect finance's review of all material transactions recorded in the final days of the reporting period. Select transactions and verify the supporting contracts were inspected and conclusions documented."
  }
 ]
