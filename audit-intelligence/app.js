@@ -538,7 +538,7 @@ function vAbout(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0;
-  const jobs=TABLES.map(t=>fetch("data/"+t+".json").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023d").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/TABLES.length*100)+"%";count.textContent=done+" / "+TABLES.length+" collections";}));
   try{ await Promise.all(jobs); }
   catch(e){ count.textContent="Failed to load data: "+e.message; return; }
