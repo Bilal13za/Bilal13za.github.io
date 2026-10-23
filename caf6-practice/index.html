@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAF-6 Corporate Reporting — Practice Lab</title>
+<style>
+:root{
+  --ink:#1f2937; --muted:#6b7280; --bg:#f8fafc; --card:#ffffff;
+  --navy:#16294d; --accent:#0e7490; --accent-d:#0b5f76;
+  --warn-bg:#fff7e6; --warn-bd:#d97706; --good:#15803d; --bad:#b91c1c;
+  --line:#e5e7eb; --radius:10px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.55;font-size:16px}
+header.top{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;padding:.7rem 1rem}
+header.top h1{margin:0;font-size:1.05rem;font-weight:700}
+header.top .sub{font-size:.78rem;opacity:.75;margin-top:.1rem}
+.progress-wrap{margin-top:.55rem}
+.progress-meta{display:flex;justify-content:space-between;font-size:.78rem;opacity:.9;margin-bottom:.25rem}
+.progress-bar{height:8px;background:rgba(255,255,255,.22);border-radius:99px;overflow:hidden}
+.progress-fill{height:100%;width:0%;background:#34d399;border-radius:99px;transition:width .3s}
+nav.tabs{display:flex;gap:.4rem;margin-top:.65rem}
+nav.tabs button{flex:1;padding:.55rem;border:0;border-radius:8px;background:rgba(255,255,255,.14);
+  color:#fff;font-size:.9rem;font-weight:600;cursor:pointer}
+nav.tabs button.active{background:#fff;color:var(--navy)}
+main{max-width:920px;margin:0 auto;padding:1rem 1rem 4rem}
+.chapters{display:flex;gap:.4rem;overflow-x:auto;padding:.35rem 0 1rem;-webkit-overflow-scrolling:touch}
+.chapters button{flex:0 0 auto;padding:.42rem .7rem;border:1px solid var(--line);border-radius:99px;
+  background:var(--card);font-size:.8rem;cursor:pointer;color:var(--ink);white-space:nowrap}
+.chapters button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.1rem 1.1rem 1.2rem;margin-bottom:1rem;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.qcard .chap{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.qcard h2{margin:.25rem 0 .5rem;font-size:1.15rem}
+.meta{display:flex;gap:.45rem;flex-wrap:wrap;margin-bottom:.7rem}
+.chip{font-size:.75rem;background:#eef6f8;color:var(--accent-d);border-radius:99px;padding:.2rem .6rem;font-weight:600}
+.scenario{background:#f1f5f9;border-radius:8px;padding:.8rem .9rem;margin-bottom:.9rem;font-size:.95rem}
+.scenario p{margin:.4rem 0}
+.reveal{display:block;width:100%;padding:.65rem;border:0;border-radius:8px;background:var(--accent);
+  color:#fff;font-size:.95rem;font-weight:700;cursor:pointer}
+.reveal:hover{background:var(--accent-d)}
+.solution{display:none;margin-top:1rem;border-top:2px dashed var(--line);padding-top:1rem}
+.solution.open{display:block}
+.solution h3{font-size:1rem;margin:1.1rem 0 .4rem}
+.solution h3:first-child{margin-top:0}
+.solution ol{margin:.4rem 0 .8rem;padding-left:1.3rem}
+.solution ol li{margin-bottom:.45rem}
+.solution table{border-collapse:collapse;width:100%;margin:.6rem 0;font-size:.88rem}
+.solution th,.solution td{border:1px solid var(--line);padding:.4rem .55rem;text-align:right}
+.solution th:first-child,.solution td:first-child{text-align:left}
+.solution th{background:#f1f5f9}
+.journal{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86rem;
+  background:#0f2437;color:#e8f1f8;border-radius:8px;padding:.7rem .9rem;margin:.5rem 0;overflow-x:auto;white-space:pre}
+.mz{background:var(--warn-bg);border-left:4px solid var(--warn-bd);border-radius:0 8px 8px 0;
+  padding:.65rem .85rem;margin:.7rem 0;font-size:.9rem}
+.mz strong{color:#92400e}
+.lens{background:#ecfdf5;border-left:4px solid var(--good);border-radius:0 8px 8px 0;
+  padding:.65rem .85rem;margin:.9rem 0 .2rem;font-size:.9rem}
+.done-row{display:flex;align-items:center;gap:.55rem;margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--line)}
+.done-row input{width:1.15rem;height:1.15rem;accent-color:var(--good);cursor:pointer}
+.done-row label{font-size:.9rem;font-weight:600;cursor:pointer}
+.qnav{display:flex;gap:.5rem;margin:0 0 2rem}
+.qnav button{flex:1;padding:.6rem;border:1px solid var(--line);border-radius:8px;background:var(--card);
+  font-size:.9rem;font-weight:600;cursor:pointer}
+.qnav button:disabled{opacity:.4;cursor:default}
+/* Do / Don't */
+.dd-tools{display:flex;gap:.5rem;margin-bottom:1rem;align-items:center}
+.dd-tools select{padding:.5rem;border:1px solid var(--line);border-radius:8px;font-size:.9rem;background:var(--card)}
+.dd-count{font-size:.82rem;color:var(--muted)}
+.dd-row{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.6rem}
+.dd-cell{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.75rem .85rem;font-size:.88rem}
+.dd-cell.do{border-top:3px solid var(--good)}
+.dd-cell.dont{border-top:3px solid var(--bad)}
+.dd-cell .tag{font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.3rem}
+footer{max-width:920px;margin:0 auto;padding:1.5rem 1rem 2.5rem;color:var(--muted);font-size:.78rem}
+@media(max-width:560px){
+  .dd-row{grid-template-columns:1fr}
+  body{font-size:15px}
+  .solution table{font-size:.8rem}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>CAF-6 Corporate Reporting — Practice Lab</h1>
+  <div class="sub">22 exam-style questions · model solutions with mistake zones · do's &amp; don'ts</div>
+  <div class="progress-wrap">
+    <div class="progress-meta"><span data-testid="progress-text">0 / 22 done</span><span>progress saves on this device</span></div>
+    <div class="progress-bar"><div class="progress-fill" data-testid="progress-fill"></div></div>
+  </div>
+  <nav class="tabs">
+    <button data-testid="tab-practice" class="active">Practice questions</button>
+    <button data-testid="tab-dodont">Do's &amp; Don'ts</button>
+  </nav>
+</header>
+<main>
+  <section data-testid="view-practice">
+    <div class="chapters" data-testid="chapter-pills"></div>
+    <article class="qcard" data-testid="q-card">
+      <div class="chap" data-testid="q-chap"></div>
+      <h2 data-testid="q-title"></h2>
+      <div class="meta" data-testid="q-meta"></div>
+      <div class="scenario" data-testid="q-scenario"></div>
+      <button class="reveal" data-testid="reveal-btn">Reveal model solution</button>
+      <div class="solution" data-testid="solution"></div>
+      <div class="done-row">
+        <input type="checkbox" data-testid="done-check" id="doneCheck">
+        <label for="doneCheck">Mark as done</label>
+      </div>
+    </article>
+    <div class="qnav">
+      <button data-testid="prev-btn">← Previous</button>
+      <button data-testid="next-btn">Next →</button>
+    </div>
+  </section>
+  <section data-testid="view-dodont" style="display:none">
+    <div class="dd-tools">
+      <select data-testid="dd-filter" aria-label="Filter by topic"></select>
+      <span class="dd-count" data-testid="dd-count"></span>
+    </div>
+    <div data-testid="dd-list"></div>
+  </section>
+</main>
+<footer>Original practice material written for personal study. Trains the skills examiners test — consolidation, tax, leases, revenue, disclosures, ethics — with the recurring mistake patterns built in as warning zones.</footer>
+<script>
+"use strict";
+var CHAPTERS = ["Consolidation","Associates","IAS 12 Tax","IFRS 9","IFRS 16 Leases","IFRS 15 Revenue","IAS 38 Intangibles","IAS 37 Provisions","IFRS 8 Segments","IAS 10 Events","IAS 21 FX","IAS 8 Errors","Companies Act","Ethics","IAS 33 EPS","IAS 36 Impairment","IAS 16 PPE","IAS 24 & IAS 40"];
+
+var QUESTIONS = [
+{
+id:"consol-a", chapter:"Consolidation",
+title:"The 80% Acquisition",
+marks:12, time:"22 min",
+scenario:`<p>Parent P acquired <strong>80%</strong> of Sub S on <strong>1 January 2024</strong>.</p>
+<p>Consideration transferred: Rs.420 cash plus 60,000 P shares issued when their fair value was Rs.3 each (Rs.180). The fair value of the non-controlling interest at acquisition was Rs.150.</p>
+<p>S's net assets at acquisition: Rs.600 (carrying amount) plus fair value uplifts — land Rs.60 and inventory Rs.40.</p>
+<p>During 2024: goodwill was impaired by 20%; S earned post-acquisition retained profit of Rs.120; P sold goods to S and Rs.60 of those goods remain in S's closing inventory (P's margin is 25% on cost); the Rs.40 inventory fair-value uplift was sold during the year. P's own retained earnings are Rs.500.</p>
+<p><strong>Required:</strong> (a) the goodwill working, (b) the NCI at 31 December 2024, (c) group retained earnings with the parent/NCI attribution.</p>`,
+solution:`
+<h3>Step 1 — Net assets at acquisition (W1)</h3>
+<ol><li>Carrying amount Rs.600 + land uplift Rs.60 + inventory uplift Rs.40 = <strong>Rs.700</strong>.</li></ol>
+<h3>Step 2 — Goodwill (W2)</h3>
+<ol><li>Consideration Rs.600 (420 + 180) + NCI at fair value Rs.150 − net assets Rs.700 = <strong>Rs.50</strong>.</li>
+<li>Impairment 20% × 50 = Rs.10 → goodwill carried at <strong>Rs.40</strong>. The impairment is charged through operating expenses.</li></ol>
+<h3>Step 3 — Unrealised profit (W3)</h3>
+<ol><li>Margin is 25% <em>on cost</em>, so profit inside the Rs.60 inventory = 60 × 25/125 = <strong>Rs.12</strong>.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the margin base.</strong> 25% on <em>cost</em> means the Rs.60 selling price contains 25/125 profit (Rs.12), not 25% × 60 = Rs.15. Examiners plant "on cost" vs "on sales" deliberately — convert before multiplying.</div>
+<h3>Step 4 — NCI at year-end</h3>
+<ol><li>NCI = 150 + 20% × (post-acquisition profit 120 − URP 12 − goodwill impairment 10) = 150 + 19.6 = <strong>Rs.169.6</strong>.</li>
+<li>NCI takes its 20% share of the goodwill impairment <em>because</em> NCI was measured at fair value (full goodwill method).</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the attribution.</strong> Deduct the URP and the NCI's share of goodwill impairment <em>inside</em> the NCI working, then apply the 20%. The single most repeated mark-loser is skipping this working entirely.</div>
+<h3>Step 5 — Group retained earnings</h3>
+<ol><li>P's own Rs.500 + 80% × (120 − 12 − 10) = 500 + 78.4 = <strong>Rs.578.4</strong>.</li>
+<li>The Rs.40 inventory uplift was sold in the year: nil remains on the SFP — but show it as consumed in the workings so the trail is complete.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the consumed uplift.</strong> A fair-value uplift that has been sold leaves no SFP balance, yet examiners check that you traced it. Write "uplift Rs.40 sold in year — nil remaining" rather than silently dropping it.</div>
+<p class="lens"><strong>Examiner's lens:</strong> numbered workings (W1, W2, W3) referenced on the face statements, and the parent/NCI split presented as the balancing figure.</p>`
+},
+{
+id:"consol-b", chapter:"Consolidation",
+title:"The Mid-Year Takeover",
+marks:14, time:"25 min",
+scenario:`<p>Parent P acquired <strong>75%</strong> of Sub S on <strong>1 July 2024</strong> (year-end 31 December 2024). S's profits accrue evenly through the year.</p>
+<p>P: revenue Rs.1,000, cost of sales Rs.600. S (full year): revenue Rs.600, cost of sales Rs.360, profit Rs.200.</p>
+<p>Intra-group: S sold goods of Rs.80 to P (all after acquisition); Rs.50 of those goods remain in P's closing inventory, and S's margin on them was 20% on sales. P also holds a <strong>30%</strong> associate acquired 1 January 2024: the associate's post-acquisition profit is Rs.60, P received a Rs.5 dividend, and goods P sold to the associate (Rs.30 still in its inventory, P's margin 25% on cost) are unsold.</p>
+<p><strong>Required:</strong> consolidated revenue and cost of sales workings, and the associate's contribution to group profit.</p>`,
+solution:`
+<h3>Step 1 — Time-apportion S (acquired 1 July)</h3>
+<ol><li>S post-acquisition revenue = 600 × 6/12 = <strong>Rs.300</strong>; post-acquisition cost of sales = 360 × 6/12 = <strong>Rs.180</strong>.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — no time-apportionment.</strong> Consolidating S's full-year Rs.600/360 is the classic fail on mid-year acquisitions. Every S line is halved before anything else happens.</div>
+<h3>Step 2 — Consolidated revenue</h3>
+<ol><li>1,000 + 300 − intra-group sales 80 = <strong>Rs.1,220</strong>.</li></ol>
+<h3>Step 3 — Cost of sales working</h3>
+<ol><li>600 + 180 − 80 (intra-group purchases) + URP 10 = <strong>Rs.710</strong>.</li>
+<li>URP: S sold to P, margin 20% <em>on sales</em>, inventory Rs.50 → 50 × 20% = <strong>Rs.10</strong>.</li></ol>
+<h3>Step 4 — Associate (equity method)</h3>
+<ol><li>Share of profit: 30% × 60 = Rs.18.</li>
+<li>URP on P's sale to the associate: 30 × 25/125 = Rs.6 × 30% = <strong>Rs.1.8</strong> deducted → contribution <strong>Rs.16.2</strong>.</li>
+<li>The Rs.5 dividend: <span class="journal">Dr Cash 5 / Cr Investment in associate 5</span> — it reduces the carrying amount, never touches profit or loss.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — dividend to P&L.</strong> Dividends from an associate are a return <em>of</em> investment, not a return <em>on</em> it. Crediting dividend income is an instant mark-loss.</div>
+<p class="lens"><strong>Examiner's lens:</strong> time-apportioned S lines, URP added back into cost of sales, and the associate handled purely through the equity method.</p>`
+},
+{
+id:"assoc", chapter:"Associates",
+title:"Eighteen Percent and a Board Seat",
+marks:8, time:"14 min",
+scenario:`<p>Company H acquired <strong>18%</strong> of Company T for Rs.200. H appoints one director to T's five-person board, and H is T's largest single customer, buying 40% of T's output under a long-term supply agreement.</p>
+<p>In the first year after acquisition, T reported profit of Rs.100 and paid total dividends of Rs.33, of which H received Rs.6.</p>
+<p><strong>Required:</strong> (a) determine the correct accounting treatment for H's investment, with reasons; (b) compute its carrying amount at year-end.</p>`,
+solution:`
+<h3>Step 1 — Classification: associate, not a simple investment</h3>
+<ol><li>20% is only a <em>presumption</em>, rebuttable both ways. Here H has <strong>significant influence</strong>: board representation plus material transactions (40% of output) are two of the standard indicators.</li>
+<li>Therefore T is an <strong>associate</strong> → IAS 28 equity method (not IFRS 9).</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the 20% rule of thumb.</strong> Examiners deliberately set holdings below 20% with influence indicators attached. "18%, therefore no associate" is the planted wrong answer — always test the indicators.</div>
+<h3>Step 2 — Equity method carrying amount</h3>
+<ol><li>Cost Rs.200 + share of profit (18% × 100 = Rs.18) − dividend received Rs.6 = <strong>Rs.212</strong>.</li></ol>
+<p class="lens"><strong>Examiner's lens:</strong> the classification reasoning earns the first marks — name the indicators, then apply the equity method mechanically.</p>`
+},
+{
+id:"ias12-a", chapter:"IAS 12 Tax",
+title:"The Rate Change",
+marks:12, time:"20 min",
+scenario:`<p>Company K has an opening deferred tax liability of Rs.90, recognised when the tax rate was 30%. During the year a new rate of <strong>35%</strong> was enacted.</p>
+<p>At year-end: plant carrying amount Rs.1,200 (tax base Rs.800); a warranty provision of Rs.60 (tax base nil). Profit before tax is Rs.500. Permanent differences: non-deductible fines Rs.20. A prior-year under-provision of Rs.4 was identified.</p>
+<p><strong>Required:</strong> (a) the deferred tax table and movement for the year; (b) the tax reconciliation.</p>`,
+solution:`
+<h3>Step 1 — Deferred tax table (at the enacted 35%)</h3>
+<table><tr><th>Item</th><th>Carrying</th><th>Tax base</th><th>Temp. diff.</th><th>DTL/(DTA)</th></tr>
+<tr><td>Plant</td><td>1,200</td><td>800</td><td>400</td><td>140</td></tr>
+<tr><td>Warranty provision</td><td>60</td><td>0</td><td>(60)</td><td>(21)</td></tr>
+<tr><td><strong>Closing DTL</strong></td><td></td><td></td><td></td><td><strong>119</strong></td></tr></table>
+<ol><li>Movement: 119 − 90 = <strong>Rs.29</strong> deferred tax charge.</li></ol>
+<h3>Step 2 — Split the movement</h3>
+<ol><li>Opening temporary differences = 90 ÷ 30% = Rs.300. Rate-change effect = 300 × (35% − 30%) = <strong>Rs.15</strong> — shown as its <em>own line</em> in the reconciliation.</li>
+<li>Remaining Rs.14 relates to current-year movements.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the buried rate change.</strong> Recomputing opening temporary differences at the new rate and burying the Rs.15 inside "other" lines is a documented recurring error. It gets a dedicated line, always.</div>
+<h3>Step 3 — Tax reconciliation</h3>
+<table><tr><th></th><th>Rs.</th></tr>
+<tr><td>Profit before tax × 35%</td><td>175</td></tr>
+<tr><td>Permanent differences (fines 20 × 35%)</td><td>7</td></tr>
+<tr><td>Effect of change in tax rate</td><td>15</td></tr>
+<tr><td>Prior-year under-provision</td><td>4</td></tr>
+<tr><td><strong>Total tax expense</strong></td><td><strong>201</strong></td></tr></table>
+<div class="mz"><strong>⚠️ Mistake zone — the wrong base.</strong> The 5% change applies to the <em>opening temporary differences</em> (Rs.300), not to profit before tax or the closing position. 300 × 5% = 15 — check: 175 + 7 + 15 + 4 = 201, which foots.</div>
+<p class="lens"><strong>Examiner's lens:</strong> the reconciliation must foot to total tax expense, and the rate-change line must be separately visible.</p>`
+},
+{
+id:"ias12-b", chapter:"IAS 12 Tax",
+title:"The Leased Machine",
+marks:8, time:"14 min",
+scenario:`<p>Company L leases a machine. At year-end the right-of-use asset is carried at <strong>Rs.240</strong> (this includes Rs.12 of initial direct costs capitalised into the asset) and the lease liability at <strong>Rs.228</strong>. For tax purposes, lease rentals are deductible when paid, so the tax base of both the asset and the liability is nil. The tax rate is 30%.</p>
+<p><strong>Required:</strong> compute the deferred tax position on the lease and show how it is presented.</p>`,
+solution:`
+<h3>Step 1 — Temporary differences</h3>
+<table><tr><th>Item</th><th>Carrying</th><th>Tax base</th><th>Temp. diff.</th><th>DTL/(DTA) @30%</th></tr>
+<tr><td>Right-of-use asset</td><td>240</td><td>0</td><td>240</td><td>72 DTL</td></tr>
+<tr><td>Lease liability</td><td>228</td><td>0</td><td>(228)</td><td>(68.4) DTA</td></tr></table>
+<ol><li>Present the <strong>Rs.72 DTL and the Rs.68.4 DTA separately</strong> — gross presentation, even though the net is only Rs.3.6.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — netting.</strong> Offsetting the two into a single Rs.3.6 line is the documented error. The asset and the liability are separate temporary differences and are presented separately.</div>
+<h3>Step 2 — Initial direct costs</h3>
+<ol><li>The Rs.12 is inside the Rs.240 carrying amount for accounting but was expensed for tax — that <em>creates</em> part of the temporary difference. It stays in.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — "tax-deductible, so exclude it."</strong> Examiners report candidates stripping the Rs.12 out of the ROU asset (giving a wrong DTL of Rs.68.4). Deductibility for tax is exactly <em>why</em> the tax base is nil — the cost belongs in the carrying amount.</div>
+<p class="lens"><strong>Examiner's lens:</strong> two separate lines, correct carrying amounts, and the initial direct costs left where they belong.</p>`
+},
+{
+id:"ifrs9", chapter:"IFRS 9",
+title:"Classify, Label, Provide",
+marks:8, time:"14 min",
+scenario:`<p>Company M holds three financial items at year-end:</p>
+<p>(a) A 5% stake in a listed company, bought for short-term trading. Fair value gain in the year: Rs.30.<br>
+(b) An 8% stake in another listed company, with an <strong>irrevocable FVOCI election</strong> made at initial recognition. Fair value gain in the year: Rs.45.<br>
+(c) Trade receivables of Rs.2,000. The expected credit loss rate is 3%.</p>
+<p><strong>Required:</strong> state the classification of each item, show where each effect is recognised (P&amp;L or OCI), and give the impairment journal.</p>`,
+solution:`
+<h3>Step 1 — Classification and destination</h3>
+<table><tr><th>Item</th><th>Classification</th><th>Rs. effect → destination</th></tr>
+<tr><td>(a) 5% trading stake</td><td>FVPL (held for trading)</td><td>Gain 30 → <strong>P&amp;L</strong></td></tr>
+<tr><td>(b) 8% stake, FVOCI election</td><td>FVOCI (irrevocable election)</td><td>Gain 45 → <strong>OCI</strong></td></tr>
+<tr><td>(c) Receivables ECL</td><td>Amortised cost</td><td>Loss 60 → <strong>P&amp;L</strong></td></tr></table>
+<div class="mz"><strong>⚠️ Mistake zone — no destination stated.</strong> Workings that compute the gains but never say P&amp;L or OCI score near zero on classification questions — the requirement asks for the destination expressly, so label every line.</div>
+<h3>Step 2 — ECL journal</h3>
+<p>Allowance = 2,000 × 3% = Rs.60:</p>
+<p class="journal">Dr Impairment loss (P&amp;L) 60
+    Cr Loss allowance (receivables) 60</p>
+<div class="mz"><strong>⚠️ Mistake zone — the omitted ECL.</strong> The basic expected-credit-loss recognition is now examinable and is frequently left out entirely. One journal, two lines — don't leave it on the table.</div>
+<p class="lens"><strong>Examiner's lens:</strong> each effect explicitly routed to P&amp;L or OCI, plus the ECL journal actually written.</p>`
+},
+{
+id:"ifrs16-a", chapter:"IFRS 16 Leases",
+title:"The Five-Year Lease",
+marks:10, time:"18 min",
+scenario:`<p>On 1 January, Lessee N signs a 5-year lease with annual payments of <strong>Rs.200</strong> in arrears. The interest rate implicit in the lease is not known to N; N's incremental borrowing rate is <strong>8%</strong>. There is no purchase option. Initial direct costs are Rs.20 and the present value of the decommissioning obligation is Rs.30.</p>
+<p><strong>Required:</strong> (a) the initial measurement of the lease liability and right-of-use asset; (b) the year-1 and year-2 amortisation schedule; (c) the annual depreciation charge.</p>`,
+solution:`
+<h3>Step 1 — Initial measurement</h3>
+<ol><li>Annuity factor (8%, 5 years) = 3.9927. Lease liability = 200 × 3.9927 = <strong>Rs.799</strong> (rounded).</li>
+<li>Right-of-use asset = 799 + 20 (initial direct costs) + 30 (decommissioning) = <strong>Rs.849</strong>.</li></ol>
+<h3>Step 2 — Amortisation schedule (constant 8%)</h3>
+<table><tr><th>Year</th><th>Opening</th><th>Interest 8%</th><th>Payment</th><th>Closing</th></tr>
+<tr><td>1</td><td>799.0</td><td>63.9</td><td>(200)</td><td>662.9</td></tr>
+<tr><td>2</td><td>662.9</td><td>53.0</td><td>(200)</td><td>515.9</td></tr>
+<tr><td>3</td><td>515.9</td><td>41.3</td><td>(200)</td><td>357.2</td></tr>
+<tr><td>4</td><td>357.2</td><td>28.6</td><td>(200)</td><td>185.8</td></tr>
+<tr><td>5</td><td>185.8</td><td>14.9</td><td>(200)</td><td>~0</td></tr></table>
+<ol><li>Check: total interest = 201.7 ≈ payments 1,000 − liability 799. The schedule foots.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the escalating rate.</strong> A rate that "rises each year" appears in wrong answers every session. The discount rate is fixed at inception — 8% in every row, no exceptions.</div>
+<h3>Step 3 — Depreciation</h3>
+<ol><li>No purchase option and no transfer of ownership → depreciate over the <strong>lease term</strong>: 849 ÷ 5 = <strong>Rs.169.8</strong> per year.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the wrong life.</strong> Depreciating over the asset's 8-year useful life (a planted distractor) understates the charge. Useful life applies only with a reasonably certain purchase option or ownership transfer.</div>
+<p class="lens"><strong>Examiner's lens:</strong> a complete ROU build-up, a schedule that foots to zero, and depreciation over the lease term.</p>`
+},
+{
+id:"ifrs16-b", chapter:"IFRS 16 Leases",
+title:"The Wrong Rate",
+marks:10, time:"18 min",
+scenario:`<p>Lessee O recorded a 4-year lease (annual payments Rs.150 in arrears) using a discount rate of <strong>12%</strong>. You discover the implicit rate was never known to O, and O's incremental borrowing rate at commencement was actually <strong>9%</strong>. The recorded figures for year 1 are: lease liability Rs.455.6, interest expense Rs.54.7, ROU depreciation Rs.113.9 (straight-line over 4 years).</p>
+<p><strong>Required:</strong> compute the correct figures and give the correcting journals (year 1 only).</p>`,
+solution:`
+<h3>Step 1 — Spot the rate (do this first)</h3>
+<ol><li>Implicit rate unknown → the <strong>incremental borrowing rate (9%)</strong> must be used. The 12% is simply wrong — and one wrong rate poisons the liability, the ROU asset, the interest, and the depreciation together.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — missing the tripwire.</strong> Most candidates in correction questions never question the original rate. Verifying the rate is step zero; everything downstream depends on it.</div>
+<h3>Step 2 — Recorded vs correct</h3>
+<table><tr><th></th><th>Recorded (12%)</th><th>Correct (9%)</th><th>Difference</th></tr>
+<tr><td>Liability (PV)</td><td>150 × 3.0373 = 455.6</td><td>150 × 3.2397 = 486.0</td><td>understated 30.4</td></tr>
+<tr><td>Year-1 interest</td><td>455.6 × 12% = 54.7</td><td>486.0 × 9% = 43.7</td><td>overstated 11.0</td></tr>
+<tr><td>Year-1 depreciation</td><td>455.6 ÷ 4 = 113.9</td><td>486.0 ÷ 4 = 121.5</td><td>understated 7.6</td></tr></table>
+<h3>Step 3 — Correcting journals (not fresh journals)</h3>
+<p class="journal">Dr Right-of-use asset 30.4
+    Cr Lease liability 30.4
+Dr Lease liability 11.0
+    Cr Finance costs 11.0
+Dr Depreciation expense 7.6
+    Cr Accumulated depreciation 7.6</p>
+<div class="mz"><strong>⚠️ Mistake zone — fresh journals instead of corrections.</strong> Writing the lease "as if nothing was recorded" earns almost nothing. The requirement is the <em>difference</em> between recorded and correct — correct each line separately.</div>
+<p class="lens"><strong>Examiner's lens:</strong> rate verified first, a recorded-vs-correct comparison table, then journals for the differences only.</p>`
+},
+{
+id:"ifrs15-a", chapter:"IFRS 15 Revenue",
+title:"The Bundled Contract",
+marks:12, time:"20 min",
+scenario:`<p>Company P signs a contract for <strong>Rs.900</strong> (cash received upfront) covering: equipment (stand-alone selling price Rs.700), installation (SSP Rs.150), and a 2-year maintenance plan (SSP Rs.350).</p>
+<p>During year 1, the equipment is delivered and installation is completed. One year of maintenance is performed.</p>
+<p><strong>Required:</strong> allocate the transaction price, give the journals, and state the revenue recognised in year 1 — with a timing reason for each entry.</p>`,
+solution:`
+<h3>Step 1 — Identify distinct performance obligations</h3>
+<ol><li>Three distinct POs: equipment, installation, maintenance. Maintenance bundled with a sale is <strong>usually distinct</strong> — the customer benefits from it separately.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — bundling.</strong> Recognising the full Rs.900 against "the contract" is the classic error. Split first, allocate second.</div>
+<h3>Step 2 — Allocate by relative stand-alone prices</h3>
+<ol><li>Total SSP = 700 + 150 + 350 = Rs.1,200.</li>
+<li>Equipment: 900 × 700/1,200 = <strong>Rs.525</strong>; installation: 900 × 150/1,200 = <strong>Rs.112.5</strong>; maintenance: 900 × 350/1,200 = <strong>Rs.262.5</strong>. Check: 525 + 112.5 + 262.5 = 900. ✓</li></ol>
+<h3>Step 3 — Journals with timing reasons</h3>
+<p class="journal">Dr Cash 900
+    Cr Contract liability 900
+  (cash received before any PO is satisfied)</p>
+<p class="journal">Dr Contract liability 637.5
+    Cr Revenue 637.5
+  (equipment 525 + installation 112.5: control transferred on delivery and on completion of installation)</p>
+<p class="journal">Dr Contract liability 131.25
+    Cr Revenue 131.25
+  (maintenance 262.5 ÷ 2: recognised over time as the service is performed; year 1 = one year)</p>
+<div class="mz"><strong>⚠️ Mistake zone — bare journals.</strong> Entries without the "control transferred when…" narrative lose marks even when the numbers are right. Every timing call needs its one-line reason.</div>
+<p class="lens"><strong>Examiner's lens:</strong> distinct POs identified, SSP allocation that foots, and each journal carrying its timing justification.</p>`
+},
+{
+id:"ifrs15-b", chapter:"IFRS 15 Revenue",
+title:"The Modified Service Contract",
+marks:8, time:"14 min",
+scenario:`<p>Company Q has a 2-year cleaning-services contract for <strong>Rs.480</strong>, recognised evenly over time (Rs.240 per year).</p>
+<p>At the start of year 2, the customer adds a <strong>distinct</strong> 2-year security service priced at its stand-alone price of Rs.200.</p>
+<p><strong>Required:</strong> compute the revenue recognised in year 2 and explain the treatment of the modification.</p>`,
+solution:`
+<h3>Step 1 — Classify the modification</h3>
+<ol><li>The added service is <strong>distinct</strong> and priced at its stand-alone selling price → it is accounted for as a <strong>separate contract</strong>, prospectively. No catch-up to year 1.</li></ol>
+<h3>Step 2 — Year-2 revenue</h3>
+<ol><li>Original contract year 2: Rs.240.</li>
+<li>New contract: Rs.200 over 2 years (years 2–3) → year 2: Rs.100.</li>
+<li>Total year-2 revenue = 240 + 100 = <strong>Rs.340</strong>. The remaining Rs.100 stays as a contract liability.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — revenue recognised too early.</strong> Booking the Rs.200 at the modification date is the planted error. A distinct, separately-priced addition is recognised <em>as performed</em> — prospectively, never upfront.</div>
+<p class="lens"><strong>Examiner's lens:</strong> the "distinct + stand-alone price = separate contract" test stated, then applied prospectively.</p>`
+},
+{
+id:"ias38", chapter:"IAS 38 Intangibles",
+title:"Research, Development, and the Website",
+marks:10, time:"16 min",
+scenario:`<p>Company R is developing a new product and building a website:</p>
+<p>• Research phase (January–June): Rs.120.<br>
+• All six capitalisation criteria were first met on <strong>1 July</strong>; development costs July–December: Rs.180.<br>
+• The product was available for use on <strong>1 October</strong>; useful life 5 years, no residual value.<br>
+• Website cost Rs.40: the site is purely for <strong>advertising</strong> the product.</p>
+<p><strong>Required:</strong> state the accounting treatment of each item and the intangible asset's carrying amount at 31 December.</p>`,
+solution:`
+<h3>Step 1 — Research vs development cut-off</h3>
+<ol><li>January–June Rs.120: <strong>research → expense</strong>. The criteria were not met.</li>
+<li>July–December Rs.180: criteria met from 1 July → <strong>capitalise Rs.180</strong>. Nothing before 1 July is resurrected.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the wrong period.</strong> Capitalising from January (Rs.300) is the recurring error. The capitalisation clock starts on the date the criteria are <em>met</em> — 1 July here, not a day earlier.</div>
+<h3>Step 2 — Amortisation</h3>
+<ol><li>Amortisation starts when <em>available for use</em> (1 October), not when capitalisation started: 180 × 3/60 = <strong>Rs.9</strong>.</li></ol>
+<h3>Step 3 — The website</h3>
+<ol><li>An advertising-only website generates no probable future economic benefit beyond promotion → <strong>expense the Rs.40</strong> (it cannot be capitalised).</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the advertising website.</strong> "A website is an intangible asset, so capitalise it" fails the purpose test. Promotional sites are expensed; only sites that take orders / generate direct revenue can be capitalised.</div>
+<h3>Step 4 — Carrying amount</h3>
+<ol><li>180 − 9 = <strong>Rs.171</strong> at 31 December.</li></ol>
+<p class="lens"><strong>Examiner's lens:</strong> the 1 July cut-off stated and applied, the website purpose-tested, amortisation from availability.</p>`
+},
+{
+id:"ias37", chapter:"IAS 37 Provisions",
+title:"The Onerous Lease and the Restructure",
+marks:10, time:"16 min",
+scenario:`<p>Company S faces three issues at year-end:</p>
+<p>(a) A leased warehouse has <strong>2 years remaining</strong> at Rs.100 per year, unavoidable. It can be sublet for Rs.30 per year.<br>
+(b) The board has announced a restructuring with total expected costs of Rs.200 — but Rs.50 of this is staff retraining and future operating losses.<br>
+(c) S acquired a business during the year with contingent consideration of Rs.40 payable if profit targets are met.</p>
+<p><strong>Required:</strong> state the provision (if any) for each, with reasons.</p>`,
+solution:`
+<h3>Step 1 — The lease: onerous contract</h3>
+<ol><li>Unavoidable costs (2 × 100 = 200) exceed the economic benefits (2 × 30 = 60) → the lease is <strong>onerous</strong>.</li>
+<li>Provide for the lower of cost of fulfilling vs penalties for non-fulfilment: 200 − 60 = <strong>Rs.140</strong>.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — missing the onerous contract.</strong> Candidates see "a lease" and move on. The test is mechanical: unavoidable costs vs benefits — when costs win, provide.</div>
+<h3>Step 2 — The restructuring: avoidable costs excluded</h3>
+<ol><li>Provide <strong>Rs.150 only</strong> (200 − 50). Retraining and future operating losses are avoidable — no present obligation exists for them, so no provision.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — providing for avoidable costs.</strong> "The board announced it, so provide everything" is wrong. A provision needs a present obligation from a past event; future operating costs never qualify.</div>
+<h3>Step 3 — Contingent consideration</h3>
+<ol><li>This belongs to <strong>IFRS 3</strong> (measured at fair value as part of the business combination) — <strong>not</strong> IAS 37.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the wrong standard.</strong> Analysing contingent consideration under IAS 37's "present obligation" framework is a documented error. Acquisitions live in IFRS 3.</div>
+<p class="lens"><strong>Examiner's lens:</strong> unavoidable-vs-avoidable discipline, and the IFRS 3 boundary respected.</p>`
+},
+{
+id:"ifrs8", chapter:"IFRS 8 Segments",
+title:"Who Is Reportable?",
+marks:8, time:"14 min",
+scenario:`<p>Company T has four operating segments (Rs.000):</p>
+<table style="border-collapse:collapse;width:100%;font-size:.88rem;margin:.5rem 0">
+<tr><th style="border:1px solid #e5e7eb;padding:.35rem;text-align:left;background:#f1f5f9">Segment</th><th style="border:1px solid #e5e7eb;padding:.35rem;text-align:right;background:#f1f5f9">Revenue</th><th style="border:1px solid #e5e7eb;padding:.35rem;text-align:right;background:#f1f5f9">Profit/(loss)</th><th style="border:1px solid #e5e7eb;padding:.35rem;text-align:right;background:#f1f5f9">Assets</th></tr>
+<tr><td style="border:1px solid #e5e7eb;padding:.35rem">A</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">500</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">60</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">400</td></tr>
+<tr><td style="border:1px solid #e5e7eb;padding:.35rem">B</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">300</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">40</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">250</td></tr>
+<tr><td style="border:1px solid #e5e7eb;padding:.35rem">C</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">120</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">(15)</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">100</td></tr>
+<tr><td style="border:1px solid #e5e7eb;padding:.35rem">D</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">80</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">5</td><td style="border:1px solid #e5e7eb;padding:.35rem;text-align:right">60</td></tr></table>
+<p>Customer X accounts for Rs.150 of segment A's revenue.</p>
+<p><strong>Required:</strong> identify the reportable segments, apply the 75% revenue test, and state any major-customer disclosure.</p>`,
+solution:`
+<h3>Step 1 — The 10% thresholds</h3>
+<ol><li>Total revenue = 1,000 → threshold 100. Total profit of <em>profitable</em> segments = 105 → threshold 10.5 (use absolute values for the loss). Total assets = 810 → threshold 81.</li>
+<li><strong>A</strong>: passes all three. <strong>B</strong>: passes all three. <strong>C</strong>: revenue 120 ✓, |loss| 15 > 10.5 ✓, assets 100 ✓ → reportable. <strong>D</strong>: fails all → not reportable.</li></ol>
+<h3>Step 2 — The 75% test</h3>
+<ol><li>Reportable revenue = 500 + 300 + 120 = 920 → 92% of 1,000 ≥ 75%. <strong>No additional segments needed.</strong></li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — misapplying the 75% test.</strong> Candidates either add segment D "to be safe" or claim more segments are needed when the test is already met. The test is a floor check: at or above 75%, you stop.</div>
+<h3>Step 3 — Major customer</h3>
+<ol><li>Customer X = 150 ≥ 10% of total revenue (100) → <strong>disclose</strong>: the fact of the dependency, the amount, and the segment (A) it relates to.</li></ol>
+<p class="lens"><strong>Examiner's lens:</strong> each threshold tested explicitly, the 75% check done and stopped at, and the major-customer disclosure not forgotten.</p>`
+},
+{
+id:"ias10", chapter:"IAS 10 Events",
+title:"After the Year-End",
+marks:6, time:"10 min",
+scenario:`<p>Company U's year-end is <strong>31 December</strong>. Before the financial statements are authorised, four events occur:</p>
+<p>(a) 15 January: an inventory valuation confirms net realisable value was below cost <em>at 31 December</em>.<br>
+(b) 20 January: a fire destroys the main warehouse (fully insured).<br>
+(c) 10 February: a major customer goes into liquidation; the receivable was already doubtful at year-end.<br>
+(d) 25 January: the board declares a final dividend.</p>
+<p><strong>Required:</strong> classify each event as adjusting or non-adjusting, with the treatment.</p>`,
+solution:`
+<h3>The one test</h3>
+<ol><li>Ask only: <strong>did the condition exist at the reporting date?</strong></li></ol>
+<h3>Classification</h3>
+<table><tr><th>Event</th><th>Type</th><th>Treatment</th></tr>
+<tr><td>(a) Inventory NRV evidence</td><td><strong>Adjusting</strong></td><td>Write inventory down — the condition existed at 31 Dec; this is evidence of it</td></tr>
+<tr><td>(b) Fire</td><td><strong>Non-adjusting</strong></td><td>Do not adjust; disclose nature and financial effect (insurance recovery)</td></tr>
+<tr><td>(c) Customer liquidation</td><td><strong>Adjusting</strong></td><td>Increase the doubtful-debt allowance — confirms the year-end condition</td></tr>
+<tr><td>(d) Dividend declared</td><td><strong>Non-adjusting</strong></td><td>No liability at 31 Dec; disclose the dividend</td></tr></table>
+<div class="mz"><strong>⚠️ Mistake zone — classifying by drama, not by date.</strong> A fire feels "material" so candidates adjust for it; a dividend feels routine so they miss the disclosure. Materiality is irrelevant to the test — only whether the condition existed at 31 December.</div>
+<p class="lens"><strong>Examiner's lens:</strong> the "condition at reporting date" test stated once, then applied consistently to all four.</p>`
+},
+{
+id:"ias21", chapter:"IAS 21 FX",
+title:"The Advance and the Machine",
+marks:8, time:"14 min",
+scenario:`<p>Company V (functional currency Rs.):</p>
+<p>• <strong>1 October:</strong> pays an advance of USD 10,000 for a machine. Spot rate: Rs.280/USD.<br>
+• <strong>1 December:</strong> the machine arrives; invoice USD 40,000. Spot rate: Rs.285/USD.<br>
+• <strong>31 December</strong> (year-end): spot rate Rs.290/USD. The USD 30,000 balance is unpaid.</p>
+<p><strong>Required:</strong> compute the machine's cost, the year-end payable, and the exchange difference.</p>`,
+solution:`
+<h3>Step 1 — The advance is non-monetary</h3>
+<ol><li>Advance paid 1 Oct: 10,000 × 280 = <strong>Rs.2,800,000</strong>. It is <em>non-monetary</em> (it will become a machine, not cash) → it stays at the <strong>historical rate forever</strong>.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — retranslating the advance.</strong> Re-measuring the Rs.2.8m at the 285 or 290 rate is the documented error. Non-monetary items are never retranslated.</div>
+<h3>Step 2 — Machine cost</h3>
+<ol><li>Invoice USD 40,000 @ 285 (1 Dec) = Rs.11,400,000, but Rs.2,800,000 was already paid at 280.</li>
+<li>Machine cost = 2,800,000 + (30,000 × 285 = 8,550,000) = <strong>Rs.11,350,000</strong>.</li></ol>
+<h3>Step 3 — Year-end payable (monetary → retranslate)</h3>
+<ol><li>Payable at 31 Dec: 30,000 × 290 = <strong>Rs.8,700,000</strong>.</li>
+<li>Exchange loss = 8,700,000 − 8,550,000 = <strong>Rs.150,000</strong> to profit or loss.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the single rate.</strong> Using one rate (say 290) for the advance, the invoice, and the payable collapses the whole question. Split it: historical rate for the non-monetary advance, transaction rate for initial recognition, closing rate for the monetary payable.</div>
+<p class="lens"><strong>Examiner's lens:</strong> the monetary/non-monetary split made explicit before any number is translated.</p>`
+},
+{
+id:"ias8", chapter:"IAS 8 Errors",
+title:"The Prior-Year Error",
+marks:10, time:"16 min",
+scenario:`<p>Company W discovers that 2024 depreciation was understated by <strong>Rs.60</strong> due to a spreadsheet error (a prior-period error, not a change in estimate). The tax rate is 30%. 2024 profit as previously reported was Rs.500.</p>
+<p><strong>Required:</strong> show (a) the correction-of-error note, (b) the effect on the 2024 profit, (c) the retained earnings extract with comparatives.</p>`,
+solution:`
+<h3>Step 1 — Correction-of-error note</h3>
+<ol><li>"During the year it was discovered that 2024 depreciation was understated by Rs.60 due to a spreadsheet error. The error has been corrected by <strong>retrospective restatement</strong>."</li></ol>
+<h3>Step 2 — Effect on 2024</h3>
+<ol><li>Additional depreciation Rs.60 → profit down Rs.60; tax effect: deferred tax asset Rs.18 (60 × 30%).</li>
+<li>2024 profit <strong>restated</strong>: 500 − 42 = <strong>Rs.458</strong> (net of tax: 60 × 70% = 42).</li></ol>
+<h3>Step 3 — Retained earnings extract</h3>
+<table><tr><th></th><th>Rs.</th></tr>
+<tr><td>Retained earnings as previously reported (31 Dec 2024)</td><td>X</td></tr>
+<tr><td>Effect of correction of error (net of tax)</td><td>(42)</td></tr>
+<tr><td><strong>Retained earnings — restated</strong></td><td><strong>X − 42</strong></td></tr>
+<tr><td>Deferred tax asset recognised</td><td>18</td></tr></table>
+<div class="mz"><strong>⚠️ Mistake zone — the missing label.</strong> Restating the numbers but omitting the word <strong>"restated"</strong> on every affected line is a standalone mark-loser. The label itself carries marks — put it on the P&amp;L, the SFP lines, and the extract.</div>
+<p class="lens"><strong>Examiner's lens:</strong> note first, dual-year effects shown, and "restated" labelled everywhere it appears.</p>`
+},
+{
+id:"cosact", chapter:"Companies Act",
+title:"The Share Capital Note",
+marks:8, time:"14 min",
+scenario:`<p>Company X's records show:</p>
+<p>• Authorised: 1,000,000 ordinary shares of Rs.10 each.<br>
+• Issued: 400,000 shares fully paid in cash; 100,000 shares issued against plant and machinery; 200,000 shares issued as fully paid bonus shares.<br>
+• Share premium: Rs.500,000 (arising on 50,000 shares issued at Rs.20 each). General reserve: Rs.1,000,000. Unappropriated profit: Rs.2,300,000.<br>
+• Ordinary shares carry one vote each, rank equally for dividends, and rank behind creditors on winding up.</p>
+<p><strong>Required:</strong> prepare the share capital and reserves note.</p>`,
+solution:`
+<h3>The note (prepared, not described)</h3>
+<p><strong>Note X — Share capital</strong></p>
+<table><tr><th></th><th>Rs.</th></tr>
+<tr><td><strong>Authorised:</strong> 1,000,000 ordinary shares of Rs.10 each</td><td>10,000,000</td></tr>
+<tr><td><strong>Issued, subscribed and paid-up:</strong></td><td></td></tr>
+<tr><td>400,000 ordinary shares fully paid in cash</td><td>4,000,000</td></tr>
+<tr><td>100,000 ordinary shares issued for consideration other than cash (Note X.1)</td><td>1,000,000</td></tr>
+<tr><td>200,000 ordinary shares issued as fully paid bonus shares</td><td>2,000,000</td></tr>
+<tr><td></td><td><strong>7,000,000</strong></td></tr></table>
+<p><strong>X.1</strong> The 100,000 shares were issued against plant and machinery acquired during the year.<br>
+<strong>X.2</strong> Rights: one vote per share; equal dividend rights; residual claim on winding up after creditors.</p>
+<p><strong>Reserves:</strong> Capital — share premium Rs.500,000 (50,000 shares × Rs.10 premium). Revenue — general reserve Rs.1,000,000; unappropriated profit Rs.2,300,000.</p>
+<div class="mz"><strong>⚠️ Mistake zone — describing instead of preparing.</strong> Writing "the Fourth Schedule requires disclosure of…" instead of the note itself is why this question averages ~20%. Examiners want the formal note, with numbers in it.</div>
+<div class="mz"><strong>⚠️ Mistake zone — the missing authorised capital.</strong> Starting the note at "issued, subscribed and paid-up" and omitting the authorised line is the second classic fail. Authorised comes first, always.</div>
+<p class="lens"><strong>Examiner's lens:</strong> a real note — authorised first, the three-way split of issued capital, numbered sub-notes, then reserves.</p>`
+},
+{
+id:"ethics", chapter:"Ethics",
+title:"The Pushed Adjustment",
+marks:8, time:"14 min",
+scenario:`<p>You are a junior accountant. The finance director instructs you to <strong>capitalise Rs.25 of routine repair costs</strong> as "improvements" so the company meets its profit target for a loan covenant. When you hesitate, he says your probation review is next month.</p>
+<p><strong>Required:</strong> (a) identify any breaches of fundamental principles by the finance director, explaining <em>how</em> each is breached; (b) identify the threats to <em>your</em> compliance; (c) state the safeguards available to you, in order.</p>`,
+solution:`
+<h3>Part 1 — The finance director's breach</h3>
+<ol><li><strong>Professional competence and due care</strong> (one line: act diligently in accordance with applicable standards): deliberately misclassifying repairs as improvements violates IAS 16's recognition criteria — a competent professional would expense them. <em>This</em> is the tested principle.</li>
+<li><strong>Integrity</strong> (be straightforward and honest): knowingly misstating profit to satisfy a covenant is dishonest reporting.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — answering only on integrity.</strong> The documented trap is defaulting to integrity for every ethics scenario. Here the marking centres on <strong>professional competence and due care</strong> — naming the principle without explaining <em>how</em> the facts breach it earns almost nothing either way.</div>
+<h3>Part 2 — Threats to your compliance</h3>
+<ol><li><strong>Intimidation threat:</strong> the probation-review remark pressures you to comply.</li>
+<li><strong>Self-interest threat:</strong> your own job security biases you toward obeying.</li></ol>
+<h3>Part 3 — Safeguards, escalating</h3>
+<ol><li>Discuss with the finance director and persuade him to correct the treatment.</li>
+<li>If refused, escalate to higher authority (CEO / audit committee).</li>
+<li>Consult the company's ethics and whistleblowing policies.</li>
+<li>Refuse to be associated with the misstated financial statements.</li>
+<li>Resign as a last resort.</li></ol>
+<p class="lens"><strong>Examiner's lens:</strong> breach-explanation (not just identification), threats from <em>your</em> perspective, and safeguards in escalating order.</p>`
+},
+{
+id:"ias33", chapter:"IAS 33 EPS",
+title:"Bonus Issue and Options",
+marks:8, time:"14 min",
+scenario:`<p>Company Y reports profit attributable to ordinary shareholders of <strong>Rs.1,200,000</strong> for the year.</p>
+<p>2,000,000 ordinary shares were in issue throughout the year. On <strong>1 September</strong>, Y made a <strong>1-for-2 bonus issue</strong>.</p>
+<p>Y also has 200,000 share options outstanding all year, exercisable at Rs.6 when the average market price was Rs.10.</p>
+<p><strong>Required:</strong> compute basic and diluted EPS.</p>`,
+solution:`
+<h3>Step 1 — Basic EPS (restate for the bonus issue)</h3>
+<ol><li>A bonus issue is restated <strong>retrospectively</strong> — as if the new shares always existed: 2,000,000 × 3/2 = <strong>3,000,000</strong> weighted average shares.</li>
+<li>Basic EPS = 1,200,000 ÷ 3,000,000 = <strong>Rs.0.40</strong>.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — no restatement.</strong> Time-apportioning the bonus shares (2,000,000 × 8/12 + 3,000,000 × 4/12) treats a bonus issue like a cash issue. Bonus issues carry no new resources, so the whole year — and the comparatives — are restated.</div>
+<h3>Step 2 — Diluted EPS</h3>
+<ol><li>Bonus element in the options: 200,000 × (1 − 6/10) = <strong>80,000</strong> shares.</li>
+<li>Diluted shares = 3,000,000 + 80,000 = 3,080,000 → diluted EPS = 1,200,000 ÷ 3,080,000 = <strong>Rs.0.39</strong>.</li>
+<li>Present basic and diluted with equal prominence; restate the comparative EPS.</li></ol>
+<p class="lens"><strong>Examiner's lens:</strong> the retrospective restatement stated as a rule, then the options' bonus element computed — not the other way round.</p>`
+},
+{
+id:"ias36", chapter:"IAS 36 Impairment",
+title:"The CGU Test",
+marks:8, time:"14 min",
+scenario:`<p>Cash-generating unit Z has a carrying amount of <strong>Rs.560</strong>: goodwill Rs.100, plant Rs.400, patents Rs.60. Its recoverable amount is <strong>Rs.480</strong>.</p>
+<p><strong>Required:</strong> (a) perform the impairment test and allocate the loss; (b) state how the allocation would differ if the recoverable amount were Rs.410 instead.</p>`,
+solution:`
+<h3>Step 1 — The test</h3>
+<ol><li>Carrying 560 > recoverable 480 → impairment loss <strong>Rs.80</strong>.</li></ol>
+<h3>Step 2 — Allocate: goodwill first</h3>
+<ol><li>The full Rs.80 is allocated to <strong>goodwill</strong> (100 → 20). Plant and patents are untouched.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — pro-rating first.</strong> Spreading the loss across all assets, or skipping the test because "goodwill covers it", are both wrong. Goodwill absorbs impairment <em>before</em> any other asset.</div>
+<h3>Step 3 — If recoverable were Rs.410</h3>
+<ol><li>Loss = 150. Goodwill takes the first 100 → nil. Remaining 50 is pro-rated over plant and patents: plant 400/460 × 50 = <strong>43.5</strong>, patents 60/460 × 50 = <strong>6.5</strong> (each floored at its own recoverable amount).</li></ol>
+<p class="lens"><strong>Examiner's lens:</strong> the test performed (not assumed), goodwill first, pro-rata only for the remainder.</p>`
+},
+{
+id:"ias16", chapter:"IAS 16 PPE",
+title:"Revaluation and the Overhaul",
+marks:8, time:"14 min",
+scenario:`<p>Machine M cost Rs.500 with a 10-year useful life and no residual value. After 4 years of use (carrying amount Rs.300), it is revalued to <strong>Rs.420</strong>. Engineers reassess the remaining useful life at <strong>7 years</strong> following a major overhaul.</p>
+<p>During the overhaul, the old engine (carrying amount Rs.30) was replaced with a new engine costing Rs.80.</p>
+<p><strong>Required:</strong> show the revaluation, the new depreciation charge, and the engine replacement.</p>`,
+solution:`
+<h3>Step 1 — Revaluation</h3>
+<ol><li>Carrying 300 → fair value 420: revaluation surplus <strong>Rs.120</strong> to other comprehensive income (accumulated in equity).</li></ol>
+<h3>Step 2 — New depreciation</h3>
+<ol><li>Depreciate the revalued amount over the <strong>reassessed</strong> remaining life: 420 ÷ 7 = <strong>Rs.60</strong> per year.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — the old life.</strong> Using the original remaining life (10 − 4 = 6 years → Rs.70) ignores the engineers' reassessment. After a revaluation, the depreciation base <em>and</em> the life are both refreshed.</div>
+<h3>Step 3 — Component replacement</h3>
+<ol><li>Derecognise the old engine: <span class="journal">Dr Loss on disposal (P&amp;L) 30
+    Cr Plant and machinery 30</span></li>
+<li>Capitalise the new engine (Rs.80) as part of the machine — but note it was replaced <em>after</em> the revaluation point used above; in practice the Rs.80 is added to the revalued carrying amount going forward.</li></ol>
+<p class="lens"><strong>Examiner's lens:</strong> surplus to OCI, depreciation on the reassessed life, and the old component derecognised rather than left inside the asset.</p>`
+},
+{
+id:"ias24-40", chapter:"IAS 24 & IAS 40",
+title:"The Group Property",
+marks:8, time:"14 min",
+scenario:`<p>Parent P owns an office building and rents it to its 70%-owned subsidiary S for Rs.120 per year (Rs.10 outstanding at year-end). The building's fair value moved from Rs.1,000 to Rs.1,100 during the year.</p>
+<p><strong>Required:</strong> (a) state the correct property treatment in P's <em>separate</em> and in the <em>consolidated</em> financial statements; (b) state the related-party disclosures required.</p>`,
+solution:`
+<h3>Step 1 — Classification differs by set of statements</h3>
+<ol><li><strong>Separate financial statements:</strong> the building is rented out → <strong>investment property</strong>; P uses the fair value model: gain of Rs.100 (1,100 − 1,000) to <strong>profit or loss</strong>, rental income Rs.120 to profit or loss.</li>
+<li><strong>Consolidated financial statements:</strong> the group occupies its own building → <strong>owner-occupied (PPE)</strong>. No fair value gain is recognised on consolidation; the property stays at cost less depreciation.</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — one model everywhere.</strong> Applying the fair value model in the consolidated statements (and booking the Rs.100 gain there) is the documented error. The classification follows <em>use by the reporting entity</em> — and the group uses it itself.</div>
+<h3>Step 2 — Related-party disclosures (IAS 24)</h3>
+<ol><li>S is a related party (subsidiary). Disclose: the nature of the relationship, rental income of Rs.120, the terms of the lease, and the Rs.10 outstanding balance (terms and whether secured).</li></ol>
+<div class="mz"><strong>⚠️ Mistake zone — disclosure omissions.</strong> Stating "rent charged to subsidiary Rs.120" without the relationship, terms, and outstanding balance leaves most of the disclosure marks behind.</div>
+<p class="lens"><strong>Examiner's lens:</strong> separate-vs-consolidated treatment distinguished, and a complete disclosure package — relationship, amounts, terms, balances.</p>`
+}
+];
+
+var DODONT = [
+{topic:"Consolidation", do:"Number every working (W1, W2…) and reference it on the face statements.", dont:"Hand in one unlabelled lump of workings with no audit trail."},
+{topic:"Consolidation", do:"Present the parent/NCI profit split as the balancing figure — every time.", dont:"Skip the attribution or base it on unadjusted profits."},
+{topic:"Consolidation", do:"Eliminate unrealised profit using the intra-group margin (convert on-cost to on-sales first).", dont:"Apply the margin straight to the inventory value without converting."},
+{topic:"Consolidation", do:"Trace fair-value uplifts through to cost of sales when the inventory is sold.", dont:"Drop the uplift silently once it leaves the SFP."},
+{topic:"IAS 12 Tax", do:"Show the tax rate-change effect as its own reconciliation line (opening temporary differences × the change).", dont:"Bury the rate effect inside other lines or apply it to the wrong base."},
+{topic:"IAS 12 Tax", do:"Present the ROU-asset DTL and the lease-liability DTA as separate lines.", dont:"Net them into a single figure."},
+{topic:"IAS 12 Tax", do:"Keep initial direct costs inside the ROU carrying amount — they create the temporary difference.", dont:"Strip them out on 'tax-deductible' reasoning."},
+{topic:"IFRS 16 Leases", do:"Verify the discount rate first, then hold it constant in every period.", dont:"Escalate the rate year by year, or use the implicit rate the lessee never knew."},
+{topic:"IFRS 16 Leases", do:"In correction questions, compare recorded vs correct and book correcting journals for the differences.", dont:"Write a fresh set of journals as if nothing was recorded."},
+{topic:"IFRS 16 Leases", do:"Include reasonably-certain purchase options and guaranteed residuals in the lease PV.", dont:"Include a purchase option that is not reasonably certain."},
+{topic:"IFRS 15 Revenue", do:"Attach a timing reason to every journal ('control transferred when…').", dont:"Submit bare journals with no narrative."},
+{topic:"IFRS 15 Revenue", do:"Split out distinct performance obligations — bundled maintenance is usually distinct.", dont:"Recognise the whole contract price against a single obligation."},
+{topic:"IFRS 9", do:"Label every effect as P&L or OCI, exactly as the requirement asks.", dont:"Submit workings with no destination stated."},
+{topic:"IAS 37 Provisions", do:"Analyse contingent consideration under IFRS 3 at fair value.", dont:"Force it into the IAS 37 present-obligation framework."},
+{topic:"IAS 8 Errors", do:"Label every restated line 'restated' — the label itself carries marks.", dont:"Restate the numbers but forget the label."},
+{topic:"Companies Act", do:"Prepare the formal share-capital note, starting with authorised capital.", dont:"Write about disclosure requirements instead of preparing the note."},
+{topic:"Ethics", do:"Explain how the facts breach each principle — the explanation is where the marks sit.", dont:"Stop after listing threats and safeguards."},
+{topic:"Ethics", do:"Test which principle is really examined — often professional competence and due care.", dont:"Default to integrity for every scenario."},
+{topic:"IAS 21 FX", do:"Split the translation: historical rate for non-monetary items, closing rate for monetary ones.", dont:"Use one rate for everything, or retranslate a non-monetary advance."},
+{topic:"MCQs", do:"Write the serial number of the correct option only, then move on.", dont:"Reproduce the full wording of the option."},
+{topic:"Exam technique", do:"Budget consolidation time strictly — it sinks papers when it overruns.", dont:"Let the big question eat the clock."},
+{topic:"Exam technique", do:"Read the requirement twice and answer exactly what is asked.", dont:"Reproduce the question wording or add unrequired workings."}
+];
+
+var store = {
+  get: function(){ try{ return JSON.parse(localStorage.getItem("caf6practice.done.v1")||"{}"); }catch(e){ return {}; } },
+  set: function(d){ try{ localStorage.setItem("caf6practice.done.v1", JSON.stringify(d)); }catch(e){} }
+};
+
+var state = { view:"practice", chapter:0, qIndex:0, ddTopic:"All" };
+var done = store.get();
+
+function qsInChapter(ci){
+  var c = CHAPTERS[ci];
+  return QUESTIONS.map(function(q,i){ return {q:q, i:i}; }).filter(function(x){ return x.q.chapter===c; });
+}
+function esc(s){ return s; }
+
+function renderPills(){
+  var el = document.querySelector('[data-testid="chapter-pills"]');
+  el.innerHTML = "";
+  CHAPTERS.forEach(function(c, i){
+    var n = qsInChapter(i).length;
+    var b = document.createElement("button");
+    b.textContent = c + " (" + n + ")";
+    b.setAttribute("data-testid","chapter-pill");
+    if(i===state.chapter) b.className = "active";
+    b.onclick = function(){ state.chapter = i; state.qIndex = 0; renderQuestion(); renderPills(); };
+    el.appendChild(b);
+  });
+}
+function renderQuestion(){
+  var list = qsInChapter(state.chapter);
+  if(!list.length) return;
+  if(state.qIndex >= list.length) state.qIndex = 0;
+  var item = list[state.qIndex], q = item.q;
+  document.querySelector('[data-testid="q-chap"]').textContent = q.chapter;
+  document.querySelector('[data-testid="q-title"]').textContent = q.title;
+  var meta = document.querySelector('[data-testid="q-meta"]');
+  meta.innerHTML = "";
+  [["Suggested marks: "+q.marks],["Time: "+q.time]].forEach(function(t){
+    var s=document.createElement("span"); s.className="chip"; s.textContent=t[0]; meta.appendChild(s);
+  });
+  document.querySelector('[data-testid="q-scenario"]').innerHTML = q.scenario;
+  var sol = document.querySelector('[data-testid="solution"]');
+  sol.innerHTML = q.solution; sol.classList.remove("open");
+  var btn = document.querySelector('[data-testid="reveal-btn"]');
+  btn.textContent = "Reveal model solution"; btn.style.display = "";
+  var chk = document.querySelector('[data-testid="done-check"]');
+  chk.checked = !!done[q.id];
+  document.querySelector('[data-testid="prev-btn"]').disabled = (item.i===0);
+  document.querySelector('[data-testid="next-btn"]').disabled = (item.i===QUESTIONS.length-1);
+  renderProgress();
+}
+function renderProgress(){
+  var n = QUESTIONS.filter(function(q){ return done[q.id]; }).length;
+  document.querySelector('[data-testid="progress-text"]').textContent = n + " / " + QUESTIONS.length + " done";
+  document.querySelector('[data-testid="progress-fill"]').style.width = (100*n/QUESTIONS.length) + "%";
+}
+function renderDD(){
+  var sel = document.querySelector('[data-testid="dd-filter"]');
+  if(!sel.options.length){
+    var topics = ["All"].concat(DODONT.map(function(r){return r.topic;}).filter(function(t,i,a){return a.indexOf(t)===i;}));
+    topics.forEach(function(t){ var o=document.createElement("option"); o.textContent=t; sel.appendChild(o); });
+  }
+  var rows = DODONT.filter(function(r){ return state.ddTopic==="All" || r.topic===state.ddTopic; });
+  var list = document.querySelector('[data-testid="dd-list"]');
+  list.innerHTML = "";
+  rows.forEach(function(r){
+    var d = document.createElement("div");
+    d.className = "dd-row"; d.setAttribute("data-testid","dd-row");
+    d.innerHTML = '<div class="dd-cell do"><span class="tag">'+r.topic+' · do</span>✅ '+r.do+'</div>'+
+                  '<div class="dd-cell dont"><span class="tag">'+r.topic+' · don\'t</span>❌ '+r.dont+'</div>';
+    list.appendChild(d);
+  });
+  document.querySelector('[data-testid="dd-count"]').textContent = rows.length + " of " + DODONT.length;
+}
+function setView(v){
+  state.view = v;
+  document.querySelector('[data-testid="tab-practice"]').className = v==="practice" ? "active" : "";
+  document.querySelector('[data-testid="tab-dodont"]').className = v==="dodont" ? "active" : "";
+  document.querySelector('[data-testid="view-practice"]').style.display = v==="practice" ? "" : "none";
+  document.querySelector('[data-testid="view-dodont"]').style.display = v==="dodont" ? "" : "none";
+  if(v==="dodont") renderDD();
+}
+document.querySelector('[data-testid="tab-practice"]').onclick = function(){ setView("practice"); };
+document.querySelector('[data-testid="tab-dodont"]').onclick = function(){ setView("dodont"); };
+document.querySelector('[data-testid="reveal-btn"]').onclick = function(){
+  var sol = document.querySelector('[data-testid="solution"]');
+  var open = sol.classList.toggle("open");
+  this.textContent = open ? "Hide model solution" : "Reveal model solution";
+};
+document.querySelector('[data-testid="done-check"]').onchange = function(){
+  var list = qsInChapter(state.chapter);
+  var q = list[state.qIndex].q;
+  if(this.checked) done[q.id] = true; else delete done[q.id];
+  store.set(done); renderProgress();
+};
+document.querySelector('[data-testid="prev-btn"]').onclick = function(){
+  var list = qsInChapter(state.chapter);
+  var item = list[state.qIndex];
+  if(item.i>0){
+    var prev = QUESTIONS[item.i-1];
+    state.chapter = CHAPTERS.indexOf(prev.chapter);
+    state.qIndex = qsInChapter(state.chapter).findIndex(function(x){return x.q.id===prev.id;});
+    renderQuestion(); renderPills();
+  }
+};
+document.querySelector('[data-testid="next-btn"]').onclick = function(){
+  var list = qsInChapter(state.chapter);
+  var item = list[state.qIndex];
+  if(item.i<QUESTIONS.length-1){
+    var nxt = QUESTIONS[item.i+1];
+    state.chapter = CHAPTERS.indexOf(nxt.chapter);
+    state.qIndex = qsInChapter(state.chapter).findIndex(function(x){return x.q.id===nxt.id;});
+    renderQuestion(); renderPills();
+  }
+};
+document.querySelector('[data-testid="dd-filter"]').onchange = function(){ state.ddTopic = this.value; renderDD(); };
+
+renderPills(); renderQuestion(); renderProgress();
+window.__caf6 = { QUESTIONS:QUESTIONS, DODONT:DODONT, CHAPTERS:CHAPTERS, getDone:function(){return done;} };
+</script>
+</body>
+</html>
