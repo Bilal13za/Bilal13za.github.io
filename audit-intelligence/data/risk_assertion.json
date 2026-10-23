@@ -1,0 +1,686 @@
+[
+ {
+  "risk_id": "R-CSH-001",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "The recorded cash balance may include reconciling items that no longer exist - for example deposits in transit that never arrived - so the balance includes cash that does not exist.\n\nRelevant where outstanding items are aged or material; stale deposits in transit or long-unpresented cheques may not represent real amounts."
+ },
+ {
+  "risk_id": "R-CSH-001",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "Bank-originated transactions such as charges, interest and direct debits may never be recorded if the reconciliation that would surface them is not reviewed.\n\nRelevant where the entity has automatic bank transactions outside the purchase and sales ledgers (charges, interest, direct debits)."
+ },
+ {
+  "risk_id": "R-CSH-002",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Payments to fictitious or improper beneficiaries are recorded as genuine business transactions that did not occur as legitimate expenditure.\n\nCore assertion for this risk; tested by vouching payments to independent evidence of the underlying transaction."
+ },
+ {
+  "risk_id": "R-CSH-002",
+  "assertion_id": "TRN-CLS",
+  "mapping_type": "suggested",
+  "notes": "Improper payments may be deliberately misclassified - charged to vague expense accounts - to conceal their nature.\n\nRelevant where supporting documentation is weak or the account coding is unusual for the payee; tested by inspecting the accounts charged."
+ },
+ {
+  "risk_id": "R-CSH-003",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Transfers recorded on the receiving side before the value date, or on one side only at year-end, are recorded in the wrong period.\n\nCentral to this risk; tested by matching both sides of each year-end transfer to value dates."
+ },
+ {
+  "risk_id": "R-CSH-003",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "Cash recorded as received while still in transit is double-counted: the reported balance includes cash that does not exist in the form stated.\n\nRelevant where in-transit amounts are material; the specific concern is the same cash existing in two accounts at once."
+ },
+ {
+  "risk_id": "R-CSH-004",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "If cash has been removed without record, the recorded balance includes cash that no longer exists.\n\nThe primary assertion for cash on hand; tested by direct physical count."
+ },
+ {
+  "risk_id": "R-CSH-004",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "IOUs or concealed shortages included in the balance overstate its realisable amount; the balance is not fully recoverable as cash.\n\nRelevant only where IOUs, unreconciled shortages or other non-cash items are found in the cash balance."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Manipulative journals typically create or inflate recorded transactions that never occurred or did not occur as recorded.\n\nRelevant where journals record transactions or adjustments; fictitious entries overstate what occurred."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "assertion_id": "TRN-CLS",
+  "mapping_type": "suggested",
+  "notes": "Override often works through misclassification - moving amounts between accounts to hide losses, inflate revenue or bury expenses.\n\nRelevant where journals reclassify amounts to conceal the true nature of transactions."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Period-end journals are the classic mechanism for pulling results across the cut-off line.\n\nRelevant where journals are posted at or after period-end to shift results between periods."
+ },
+ {
+  "risk_id": "R-FRD-002",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "Misappropriated assets are gone but may still be carried in the books, or fictitious assets may be recorded to conceal the theft.\n\nRelevant where assets are recorded at amounts that include diverted funds or fictitious balances."
+ },
+ {
+  "risk_id": "R-FRD-002",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "Falsified records conceal the diversion; the corresponding loss, or amounts owed, may never be recorded.\n\nRelevant where concealment involves omitting the loss or the liability it created."
+ },
+ {
+  "risk_id": "R-FRD-002",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Stolen or diverted assets held at full carrying amount overstate the balance sheet until written down.\n\nRelevant where the carrying amount is not written down after the loss."
+ },
+ {
+  "risk_id": "R-FRD-003",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Fictitious revenue is, by definition, recorded transactions that did not occur.\n\nRelevant where sales are recorded without genuine underlying transactions."
+ },
+ {
+  "risk_id": "R-FRD-003",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Premature recognition records in this period transactions that belong in the next.\n\nRelevant where genuine sales are pulled forward into the current period."
+ },
+ {
+  "risk_id": "R-FRD-003",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Inflated or grossed-up amounts overstate revenue even when some underlying transaction exists.\n\nRelevant where amounts are inflated through side agreements or channel stuffing."
+ },
+ {
+  "risk_id": "R-FRD-004",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Biased assumptions directly determine carrying amounts - provisions, impairments, fair values and revenue estimates.\n\nRelevant wherever a significant estimate determines a carrying amount."
+ },
+ {
+  "risk_id": "R-FRD-004",
+  "assertion_id": "DIS-VAL",
+  "mapping_type": "suggested",
+  "notes": "Biased estimates are often accompanied by disclosures that present the assumptions as neutral; the disclosure itself may then be misleading.\n\nRelevant where the financial statements disclose the assumptions behind material estimates."
+ },
+ {
+  "risk_id": "R-FRD-004",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Systematic optimism in estimates misstates the amounts recognised in the period.\n\nRelevant where biased estimates flow through profit or loss (e.g. provisions, depreciation)."
+ },
+ {
+  "risk_id": "R-FRP-001",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "A journal without supporting documentation may not represent a genuine transaction or event; the occurrence assertion for the recorded entries is therefore at risk.\n\nRelevant where manual journals are material; occurrence is the primary assertion at risk when entries lack support."
+ },
+ {
+  "risk_id": "R-FRP-001",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Even where a journal reflects a genuine event, the absence of supporting calculations means the recorded amount may be inaccurate.\n\nRelevant where manual journals adjust material balances; the amounts must still be correctly calculated."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Management override most commonly manifests as fictitious or unsupported journal entries; the occurrence of recorded transactions and events is the assertion directly threatened.\n\nRelevant wherever override could be exercised through journal entries - which is the typical vehicle for override."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Override may also operate through biased assumptions in estimates and valuations, affecting the carrying amounts of assets and liabilities.\n\nRelevant where override could be used to manipulate estimates, valuations or impairment conclusions rather than journals alone."
+ },
+ {
+  "risk_id": "R-FRP-003",
+  "assertion_id": "DIS-COM",
+  "mapping_type": "suggested",
+  "notes": "A related-party transaction that is never identified can never be disclosed; completeness of related-party disclosures fails at the identification step.\n\nRelevant wherever related-party transactions have occurred; the disclosure population depends on identification."
+ },
+ {
+  "risk_id": "R-FRP-003",
+  "assertion_id": "DIS-OCC",
+  "mapping_type": "suggested",
+  "notes": "Undisclosed related-party involvement can also mean the stated counterparty to a transaction is not the real one - the occurrence and rights-and-obligations assertions for the disclosed transactions are affected.\n\nRelevant where related-party transactions are disclosed; the disclosures must reflect genuine transactions with genuine related parties."
+ },
+ {
+  "risk_id": "R-FRP-004",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "The measurement of a provision is driven by its assumptions; unsupported assumptions mean the recognised amount may not represent a best estimate.\n\nRelevant where significant provisions depend on judgmental assumptions."
+ },
+ {
+  "risk_id": "R-FRP-004",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "A process that does not support its assumptions may equally fail to recognise obligations at all; the population of provisions may be incomplete.\n\nRelevant where obligating events may exist that management has not provided for."
+ },
+ {
+  "risk_id": "R-FRP-005",
+  "assertion_id": "DIS-COM",
+  "mapping_type": "suggested",
+  "notes": "The risk is precisely that required disclosures are missing - completeness of presentation and disclosure is the assertion directly affected.\n\nRelevant to every set of financial statements; heightened where new standards or transactions apply."
+ },
+ {
+  "risk_id": "R-FRP-005",
+  "assertion_id": "DIS-CLS",
+  "mapping_type": "suggested",
+  "notes": "Even where information is disclosed, it may not be classified and presented understandably; incomplete processes also produce disclosures that confuse rather than inform.\n\nRelevant where disclosures exist but may be poorly organised, unclear or misclassified, particularly for new or complex matters."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Where override is exercised through journal entries - the combined scenario this rule addresses - the amounts recorded by those entries may be deliberately inaccurate, not merely fictitious.\n\nRelevant in the combined scenario where management override capability coincides with undocumented manual journals."
+ },
+ {
+  "risk_id": "R-TEL-001",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "A dismantling obligation that exists at the reporting date but is not recognised leaves the provision population incomplete.\n\nRelevant where lease or legal restoration obligations exist."
+ },
+ {
+  "risk_id": "R-TEL-001",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "The provision is measured using estimated future costs, timing and a discount rate - each an input that can be materially wrong.\n\nRelevant whenever a provision is recognised; measurement risk is the dominant risk."
+ },
+ {
+  "risk_id": "R-TEL-001",
+  "assertion_id": "DIS-COM",
+  "mapping_type": "suggested",
+  "notes": "Material uncertainties and assumptions behind decommissioning provisions require disclosure; omission hides the estimation uncertainty.\n\nRelevant where the provision is material."
+ },
+ {
+  "risk_id": "R-TEL-002",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Revenue is only accurate if consideration is allocated across bundle components on a supportable basis.\n\nRelevant for all bundled contracts."
+ },
+ {
+  "risk_id": "R-TEL-002",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Service revenue recognised before the service period elapses is a cut-off error.\n\nRelevant where service extends beyond the reporting date."
+ },
+ {
+  "risk_id": "R-TEL-002",
+  "assertion_id": "TRN-CLS",
+  "mapping_type": "suggested",
+  "notes": "Equipment revenue and service revenue are distinct lines; misallocation misclassifies them.\n\nRelevant where the financial statements disaggregate revenue."
+ },
+ {
+  "risk_id": "R-TEL-003",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Each rated transaction must reflect the correct tariff; a configuration error makes every affected transaction inaccurate.\n\nRelevant for all rated usage revenue."
+ },
+ {
+  "risk_id": "R-TEL-003",
+  "assertion_id": "TRN-COM",
+  "mapping_type": "suggested",
+  "notes": "Usage records dropped or rejected by the rating engine may never reach billing, leaving revenue incomplete.\n\nRelevant where rating exceptions and rejections occur."
+ },
+ {
+  "risk_id": "R-MFG-001",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "WIP carrying amount depends directly on the overhead absorbed; wrong rates or bases misstate valuation.\n\nRelevant wherever overhead absorption is material."
+ },
+ {
+  "risk_id": "R-MFG-001",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Production cost transfers (WIP movements) are only accurate if the absorbed amounts are.\n\nRelevant for the cost-of-production entries in the period."
+ },
+ {
+  "risk_id": "R-MFG-002",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Production and purchase transactions recorded at stale standards are not recorded at appropriate amounts.\n\nRelevant where standards are outdated."
+ },
+ {
+  "risk_id": "R-MFG-002",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Closing inventory valued at standard cost inherits any standard-to-actual gap.\n\nRelevant at the reporting date."
+ },
+ {
+  "risk_id": "R-MFG-003",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "Warranty obligations arising from past sales that are not provided for leave the liability incomplete.\n\nRelevant where warranties are offered."
+ },
+ {
+  "risk_id": "R-MFG-003",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "The provision must reflect expected future claims; wrong failure-rate or cost assumptions misstate it.\n\nRelevant whenever the provision is recognised."
+ },
+ {
+  "risk_id": "R-RTL-001",
+  "assertion_id": "TRN-COM",
+  "mapping_type": "suggested",
+  "notes": "Skimmed sales never enter the records at all - the recorded-sales population is incomplete.\n\nRelevant where cash handling controls are weak."
+ },
+ {
+  "risk_id": "R-RTL-001",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "Recorded cash balances may include takings already removed, so the cash that is recorded may not exist.\n\nRelevant where bankings lag till records."
+ },
+ {
+  "risk_id": "R-RTL-002",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Rebate income is only accurate if measured against agreed terms and achieved volumes.\n\nRelevant for all recognised rebate income."
+ },
+ {
+  "risk_id": "R-RTL-002",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Rebates recognised before qualifying volumes are achieved belong to a later period.\n\nRelevant for year-end accruals."
+ },
+ {
+  "risk_id": "R-RTL-003",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "Every unredeemed card and outstanding point is an obligation that must remain in deferred revenue until redeemed or expired.\n\nRelevant for the full outstanding population."
+ },
+ {
+  "risk_id": "R-RTL-003",
+  "assertion_id": "DIS-COM",
+  "mapping_type": "suggested",
+  "notes": "Breakage methods and significant judgments require disclosure.\n\nRelevant where breakage is material."
+ },
+ {
+  "risk_id": "R-BNK-001",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "The loan carrying amount is net of ECL; every model and staging judgment flows into valuation.\n\nRelevant for the entire loan book."
+ },
+ {
+  "risk_id": "R-BNK-001",
+  "assertion_id": "DIS-COM",
+  "mapping_type": "suggested",
+  "notes": "Credit risk exposures, staging movements and sensitivities require disclosure.\n\nRelevant where credit risk is material."
+ },
+ {
+  "risk_id": "R-BNK-002",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Interest is only accurately recorded if non-accrual policies are applied to doubtful loans.\n\nRelevant for interest on classified loans."
+ },
+ {
+  "risk_id": "R-BNK-002",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Accrued interest on doubtful loans requires provision; unprovided accruals overstate receivables.\n\nRelevant at the reporting date."
+ },
+ {
+  "risk_id": "R-BNK-003",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Model-driven valuations with unobservable inputs are the most uncertain measurements in the statements.\n\nRelevant for all fair-valued instruments."
+ },
+ {
+  "risk_id": "R-BNK-003",
+  "assertion_id": "BAL-CLS",
+  "mapping_type": "suggested",
+  "notes": "Classification determines whether an instrument is at fair value or amortised cost.\n\nRelevant at initial recognition and on any reclassification."
+ },
+ {
+  "risk_id": "R-BNK-003",
+  "assertion_id": "DIS-VAL",
+  "mapping_type": "suggested",
+  "notes": "Fair value hierarchies, sensitivities and valuation techniques must be disclosed.\n\nRelevant where fair value is material."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "If inventory has been stolen or removed without authorisation and the loss is not recorded, the quantities shown in the financial statements include goods that no longer exist.\n\nRelevant where recorded inventory quantities are material. Existence is the primary assertion affected by unrecorded physical loss."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "Losses, shortages and damage that have occurred may not be recorded at all - the population of inventory loss/adjustment entries may be incomplete.\n\nRelevant where the entity is expected to record shrinkage, damage or write-downs; completeness of the loss records is at risk, not completeness of the inventory balance itself."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Unrecorded shortages or damage affect the carrying amount: damaged or missing items may need write-down, and persistent shrinkage may indicate net realisable value or obsolescence issues.\n\nRelevant only where shortages or damage are identified or suspected; valuation adjustments follow from the physical findings, they are not assumed."
+ },
+ {
+  "risk_id": "R-PAY-001",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "If payments continue after termination, the recorded payroll transactions include payments that did not represent genuine employment costs - the transactions did not occur as bona fide payroll.\n\nRelevant where the payroll register is the primary record of wage expense; tested by vouching payees to current employment evidence."
+ },
+ {
+  "risk_id": "R-PAY-001",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "If ghost employees remain in the payroll master at the reporting date, accrued wages or payroll-related payables may include obligations that do not exist.\n\nRelevant only where payroll accruals or unpaid wages are material at the reporting date; otherwise the balance-sheet effect is through the cash outflow already recorded."
+ },
+ {
+  "risk_id": "R-PAY-002",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Fictitious employees, or payments diverted through manipulated bank details, are recorded as genuine payroll transactions that did not occur as legitimate employment costs.\n\nRelevant where the individual could create new payees; tested by vouching payees and master changes to independent employment evidence."
+ },
+ {
+  "risk_id": "R-PAY-002",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Inflated pay rates or altered payment details change the amounts paid, so recorded payroll amounts are inaccurate even for real employees.\n\nRelevant where the individual can amend rates or payment details; tested by recalculation and agreement of rates to authorised sources."
+ },
+ {
+  "risk_id": "R-PAY-003",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Overtime claimed but not worked, or not independently verified, means recorded overtime transactions did not occur as genuine labour cost.\n\nRelevant where overtime is claimed on self-reported timesheets without independent approval."
+ },
+ {
+  "risk_id": "R-PAY-003",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Inflated hours or incorrect premium rates make the recorded overtime amounts inaccurate.\n\nRelevant where premium overtime rates apply and hours are manually entered; tested by recalculation."
+ },
+ {
+  "risk_id": "R-PAY-004",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Incorrect rates, outdated tax tables or misconfigured deductions directly produce inaccurate recorded payroll amounts.\n\nCentral to this risk; tested by independent recalculation from authorised rates and current statutory tables."
+ },
+ {
+  "risk_id": "R-PAY-004",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Systematic calculation errors also misstate the related period-end accruals, since the accrual is derived from the same incorrect parameters.\n\nRelevant only where payroll-related accruals (unpaid wages, bonuses, tax payable) are material at the reporting date; calculation errors carry through to the accrual."
+ },
+ {
+  "risk_id": "R-PPE-001",
+  "assertion_id": "TRN-CLS",
+  "mapping_type": "suggested",
+  "notes": "Whether expenditure is a repair (expense) or an improvement (asset) is a classification decision in the transaction stream; incorrectly capitalised repairs misclassify revenue expenditure as capital expenditure.\n\nRelevant where repairs and maintenance expenditure is material and the capitalisation decision involves judgment."
+ },
+ {
+  "risk_id": "R-PPE-001",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Capitalised costs increase the asset's carrying amount and reduce the current period expense; inappropriate capitalisation therefore overstates the carrying amount of property, plant and equipment.\n\nRelevant where questioned capitalised amounts are material to the property, plant and equipment balance."
+ },
+ {
+  "risk_id": "R-PPE-002",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Depreciation rates, methods and useful lives determine accumulated depreciation and hence the carrying amount; inappropriate parameters misstate the carrying amount of property, plant and equipment.\n\nRelevant wherever property, plant and equipment is material; the carrying amount is the direct product of the depreciation parameters."
+ },
+ {
+  "risk_id": "R-PPE-002",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "The depreciation expense recognised in the period must be accurately calculated in accordance with the entity's policy; wrong rates or lives produce an inaccurate charge.\n\nRelevant where the depreciation charge is material to profit or loss."
+ },
+ {
+  "risk_id": "R-PPE-003",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "Assets that have been disposed of no longer exist at the reporting date; if they remain recognised, the existence assertion for the recorded balance is misstated.\n\nRelevant where disposals, scrapping or demolitions have occurred or are suspected."
+ },
+ {
+  "risk_id": "R-PPE-003",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "The carrying amount continues to include the net book value of assets that are gone, overstating property, plant and equipment.\n\nRelevant where the net book value of unrecorded disposals could be material, and no offsetting proceeds or losses have been recorded."
+ },
+ {
+  "risk_id": "R-PPE-004",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "If indicators of impairment exist and no impairment loss is recognised, the carrying amount may exceed the recoverable amount.\n\nRelevant where impairment indicators exist; the assertion is not assumed to be misstated merely because the assessment process is absent."
+ },
+ {
+  "risk_id": "R-PPE-004",
+  "assertion_id": "DIS-COM",
+  "mapping_type": "suggested",
+  "notes": "The judgments and assumptions underlying impairment conclusions, and the events giving rise to recognised losses, may require disclosure; an absent assessment process also means required disclosures may be missed.\n\nRelevant where impairment losses are recognised or where indicators were identified but no loss recognised; disclosure of the judgments made may be required."
+ },
+ {
+  "risk_id": "R-PPE-005",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "The replaced component no longer exists as part of the asset; if its carrying amount remains recognised, the existence assertion for that portion of the balance is misstated.\n\nRelevant where significant components have been replaced in the period."
+ },
+ {
+  "risk_id": "R-PPE-005",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "The carrying amount includes both the old component's remaining cost and the new component's cost - the same economic capacity counted twice - overstating property, plant and equipment.\n\nRelevant where the carrying amount of replaced components could be material."
+ },
+ {
+  "risk_id": "R-PUR-001",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Purchases recorded without evidence of receipt may not represent genuine purchases - the recorded transaction may not have occurred.\n\nRelevant for credit purchases where receipt should be evidenced."
+ },
+ {
+  "risk_id": "R-PUR-001",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Without matching, invoiced quantities and prices are not checked against what was ordered and received, so recorded amounts may be inaccurate.\n\nRelevant where prices or quantities vary, or where GRNs record actual quantities received."
+ },
+ {
+  "risk_id": "R-PUR-002",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Purchases belonging to the current period (goods received before year-end) may be recorded in the next period.\n\nRelevant around the reporting date."
+ },
+ {
+  "risk_id": "R-PUR-002",
+  "assertion_id": "TRN-COM",
+  "mapping_type": "suggested",
+  "notes": "The population of recorded purchases may be incomplete: goods received but not yet invoiced are missing from it.\n\nRelevant where suppliers invoice in arrears."
+ },
+ {
+  "risk_id": "R-PUR-002",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "The trade payables balance may be incomplete if liabilities for goods received are not accrued at the reporting date.\n\nRelevant at the reporting date where unmatched GRNs exist."
+ },
+ {
+  "risk_id": "R-PUR-003",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Payments or purchases recorded against fictitious or altered suppliers may not represent genuine business transactions.\n\nRelevant where master changes lack independent approval."
+ },
+ {
+  "risk_id": "R-PUR-003",
+  "assertion_id": "BAL-EXI",
+  "mapping_type": "suggested",
+  "notes": "Payable balances recorded as owed to suppliers may not represent genuine obligations if the supplier is fictitious or the details were altered.\n\nRelevant for balances owed to recently added or changed suppliers."
+ },
+ {
+  "risk_id": "R-PUR-004",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "A duplicate recording does not represent a second, separate purchase - the second entry did not occur as an economic event.\n\nRelevant where invoice uniqueness per supplier is not enforced."
+ },
+ {
+  "risk_id": "R-PUR-004",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Duplicate payments mean cash paid exceeds the genuine liability; the amounts recorded exceed what is actually owed.\n\nRelevant where duplicates have been paid rather than merely recorded."
+ },
+ {
+  "risk_id": "R-PUR-005",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Purchases must be recorded in the period the goods were received or the service performed, not the period the invoice was processed.\n\nRelevant at each period end."
+ },
+ {
+  "risk_id": "R-PUR-005",
+  "assertion_id": "TRN-COM",
+  "mapping_type": "suggested",
+  "notes": "Purchases of the current period that are processed late may be missing from the recorded population for that period.\n\nRelevant where processing lags receipt around the reporting date."
+ },
+ {
+  "risk_id": "R-REV-001",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Revenue recorded before recognition criteria are met may not represent a genuine earned sale in the period - the transaction as recorded (revenue earned) did not occur.\n\nRelevant for each revenue stream where recognition depends on delivery, acceptance or performance."
+ },
+ {
+  "risk_id": "R-REV-001",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Revenue that will only be earned in a later period is recorded in the current period, misstating both periods.\n\nRelevant around the reporting date and where billing is concentrated at period ends."
+ },
+ {
+  "risk_id": "R-REV-002",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Sales earned before the reporting date are recorded after it, so revenue falls in the wrong period.\n\nRelevant around the reporting date where dispatch precedes invoicing."
+ },
+ {
+  "risk_id": "R-REV-002",
+  "assertion_id": "TRN-COM",
+  "mapping_type": "suggested",
+  "notes": "The population of recorded sales may be incomplete: goods dispatched before year-end but invoiced after it are missing from current-period revenue.\n\nRelevant where invoicing backlogs occur or dispatch records are not reconciled to the sales ledger."
+ },
+ {
+  "risk_id": "R-REV-003",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Sales without dispatch or performance evidence may not represent genuine transactions at all - occurrence is the central doubt.\n\nRelevant for credit sales where a dispatch or performance event should leave evidence."
+ },
+ {
+  "risk_id": "R-REV-003",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Without matching to dispatch evidence, invoiced quantities and prices are not checked against what was actually delivered, so recorded amounts may be inaccurate.\n\nRelevant where quantities or prices vary and dispatch records capture actual delivery."
+ },
+ {
+  "risk_id": "R-REV-004",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Incentive-driven manipulation may create fictitious sales or inflate genuine ones, so recorded revenue may not have occurred as stated.\n\nRelevant where incentives are material and opportunity for manipulation exists (manual journals, side agreements)."
+ },
+ {
+  "risk_id": "R-REV-004",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "A common manipulation is pulling future revenue into the current period (or deferring it) to hit a target measurement date.\n\nRelevant around target measurement dates, typically the reporting date."
+ },
+ {
+  "risk_id": "R-REV-004",
+  "assertion_id": "TRN-ACC",
+  "mapping_type": "suggested",
+  "notes": "Manipulation may take the form of inflated amounts on genuine transactions rather than wholly fictitious sales.\n\nRelevant where amounts involve judgement, estimates or manual adjustments."
+ },
+ {
+  "risk_id": "R-REV-005",
+  "assertion_id": "TRN-OCC",
+  "mapping_type": "suggested",
+  "notes": "Unusual transactions may lack commercial substance: the recorded transaction may not represent a genuine exchange.\n\nRelevant for each non-routine transaction assessed on its own facts."
+ },
+ {
+  "risk_id": "R-REV-005",
+  "assertion_id": "TRN-CUT",
+  "mapping_type": "suggested",
+  "notes": "Year-end timing of unusual transactions may be chosen to affect the current period's reported results.\n\nRelevant where transactions cluster in the final days of the reporting period."
+ },
+ {
+  "risk_id": "R-REV-005",
+  "assertion_id": "TRN-CLS",
+  "mapping_type": "suggested",
+  "notes": "Unusual items may be misclassified to obscure their nature - for example, netted against unrelated items or buried within revenue.\n\nRelevant where the presentation of the transaction affects how users understand the financial statements."
+ },
+ {
+  "risk_id": "R-INVST-001",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-INVST-002",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-INVST-003",
+  "assertion_id": "BAL-CLS",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-INVST-003",
+  "assertion_id": "BAL-PRS",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-BOR-001",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-BOR-002",
+  "assertion_id": "BAL-CLS",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-BOR-002",
+  "assertion_id": "BAL-PRS",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-BOR-003",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-TAX-001",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-TAX-001",
+  "assertion_id": "BAL-COM",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-TAX-002",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-TAX-003",
+  "assertion_id": "BAL-VAL",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ }
+]

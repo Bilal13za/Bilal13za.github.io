@@ -1,0 +1,58 @@
+[
+ {
+  "id": 1,
+  "area": "standards",
+  "description": "ISA/ISQM/IFRS standard records not yet populated; standard_procedure mappings empty until Phase 3 verifies standard metadata against official sources.",
+  "impact": "No authoritative requirement may be cited from this DB until populated.",
+  "recorded_at": "2026-10-23",
+  "status": "resolved"
+ },
+ {
+  "id": 2,
+  "area": "regulations",
+  "description": "Pakistan regulatory records (Companies Act 2017, tax, SECP, SBP) not yet populated. Phase 3/6 work.",
+  "impact": "Pakistan-specific applicability answers unavailable.",
+  "recorded_at": "2026-10-23",
+  "status": "resolved"
+ },
+ {
+  "id": 3,
+  "area": "case_studies",
+  "description": "Case-study library empty. Phase 6 work.",
+  "impact": "No real-world cases retrievable yet.",
+  "recorded_at": "2026-10-23",
+  "status": "resolved"
+ },
+ {
+  "id": 4,
+  "area": "templates",
+  "description": "Working-paper templates not yet authored. Phase 5 work.",
+  "impact": "No templates retrievable yet.",
+  "recorded_at": "2026-10-23",
+  "status": "resolved"
+ },
+ {
+  "id": 5,
+  "area": "verification",
+  "description": "Seed content carries verification_status='internal_review' (reviewed during the source builds, Oct 2026) — NOT independently verified against authoritative standards. Treat as professional guidance, not requirements.",
+  "impact": "Must not be cited as ISA/IFRS requirements.",
+  "recorded_at": "2026-10-23",
+  "status": "open"
+ },
+ {
+  "id": 6,
+  "area": "coverage",
+  "description": "qa_sweep found CYC-INVST/CYC-BOR/CYC-TAX empty and CYC-PROV without procedures; filled by fill_coverage_gaps.py (2026-10-23).",
+  "impact": "All 11 areas now have risks and procedures.",
+  "recorded_at": "2026-10-23",
+  "status": "resolved"
+ },
+ {
+  "id": 7,
+  "area": "regulations",
+  "description": "ITO 2001 local copy is the 2015-amended text (historical). Banking Companies Ordinance 1962 has no verified official PDF. PSX Regulations URL failed to fetch.",
+  "impact": "Verify tax sections/rates against FBR's current text before any use; obtain BCO 1962 from SBP/gazette.",
+  "recorded_at": "2026-10-23",
+  "status": "open"
+ }
+]

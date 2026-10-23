@@ -1,0 +1,79 @@
+[
+ {
+  "id": "CYC-REV",
+  "code": "CYC-REV",
+  "name": "Revenue and receivables",
+  "description": "Order to cash: sales orders, dispatch, billing, credit notes, cash collection, trade receivables and related allowances.",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-PUR",
+  "code": "CYC-PUR",
+  "name": "Purchases and payables",
+  "description": "Procure to pay: supplier selection, purchase orders, goods receipt, invoice matching, payments, trade payables and accruals.",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-INV",
+  "code": "CYC-INV",
+  "name": "Inventory",
+  "description": "Inventory receipt, storage, movement, counting, valuation (including cost and net realisable value), and obsolescence.",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-PAY",
+  "code": "CYC-PAY",
+  "name": "Payroll",
+  "description": "Hiring, timekeeping, payroll calculation, payment, deductions, and related liabilities and disclosures.",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-CSH",
+  "code": "CYC-CSH",
+  "name": "Cash and bank",
+  "description": "Cash handling, bank accounts, receipts, payments, transfers, reconciliations and petty cash.",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-PPE",
+  "code": "CYC-PPE",
+  "name": "Property, plant and equipment",
+  "description": "Acquisition, capitalisation, depreciation, impairment, disposals and physical safeguarding of fixed assets.",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-INVST",
+  "code": "CYC-INVST",
+  "name": "Investments",
+  "description": "Acquisition, valuation, income recognition and disposal of investments. (Library content not yet populated.)",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-BOR",
+  "code": "CYC-BOR",
+  "name": "Borrowings",
+  "description": "Loan origination, drawdown, interest, covenants and repayment. (Library content not yet populated.)",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-PROV",
+  "code": "CYC-PROV",
+  "name": "Provisions and contingencies",
+  "description": "Recognition, measurement and disclosure of provisions, contingent liabilities and contingent assets.",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-FRP",
+  "code": "CYC-FRP",
+  "name": "Financial reporting and closing",
+  "description": "Period-end close, journal entries, consolidation, management estimates, related parties and financial statement disclosures.",
+  "domain_ref": "DOM-B"
+ },
+ {
+  "id": "CYC-TAX",
+  "code": "CYC-TAX",
+  "name": "Taxation",
+  "description": "Current and deferred tax computation, compliance and disclosure. (Library content not yet populated.)",
+  "domain_ref": "DOM-B"
+ }
+]

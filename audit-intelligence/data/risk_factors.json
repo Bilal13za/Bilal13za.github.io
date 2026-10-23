@@ -1,0 +1,394 @@
+[
+ {
+  "id": "F-CSH-001",
+  "title": "Bank reconciliations are not independently reviewed",
+  "description": "Bank reconciliations are prepared but no independent person reviews them, or reconciliations are not prepared regularly, so errors and irregularities in bank transactions go undetected.\n\nConditions relevant: Relevant where bank balances are material and reconciliations are the primary control over cash. Relevant whether reconciliations are missing, late, or prepared but never reviewed.\n\nWarning signs: Stale outstanding items carried for months; reconciliations prepared long after month-end; reconciling items without explanation; the preparer also handles cash receipts or payments.",
+  "audit_area_id": "CYC-CSH",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-CSH-002",
+  "title": "Unusual payments are made to unfamiliar beneficiaries",
+  "description": "Payments are made to beneficiaries that are not recognised suppliers or employees - including new payees, one-off recipients or round-sum transfers - without adequate scrutiny.\n\nConditions relevant: Relevant where payments are processed in volume or by electronic file, and where new beneficiaries can be added without independent verification.\n\nWarning signs: Payments to new beneficiaries with no purchase history; round-sum payments; payments just below approval thresholds; beneficiary names similar to known suppliers; payments to individuals rather than businesses.",
+  "audit_area_id": "CYC-CSH",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-CSH-003",
+  "title": "Bank transfers occur around year-end",
+  "description": "Material transfers between the entity's bank accounts occur in the days immediately before and after the reporting date.\n\nConditions relevant: Relevant where the entity operates multiple bank accounts and transfers between them around the reporting date are material.\n\nWarning signs: Large transfers on the last working day; transfers recorded on one side but not the other at year-end; in-transit items inflating cash; transfers reversed shortly after year-end.",
+  "audit_area_id": "CYC-CSH",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-CSH-004",
+  "title": "Cash balances are not physically verified where appropriate",
+  "description": "Cash on hand (petty cash, tills, undeposited receipts) is not counted independently or reconciled to records, so shortages go undetected.\n\nConditions relevant: Relevant where cash on hand (tills, petty cash, undeposited receipts) is material or cash transactions are significant.\n\nWarning signs: Petty cash never counted; IOUs held in the cash box; the cashier also keeps the cash records; frequent small shortages written off without investigation.",
+  "audit_area_id": "CYC-CSH",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRD-001",
+  "title": "Lack of segregation of duties",
+  "description": "The same individual can authorise transactions, record them in the books, and has physical or system custody of the related assets - with no independent review of their work.\n\nConditions relevant: Relevant in any entity where transaction volumes or staffing make segregation feasible. In very small entities, assess whether owner oversight genuinely compensates.\n\nWarning signs: One person controls ordering, receiving and payment; journal preparer also approves journals; reconciliations prepared and reviewed by the same person; prolonged absence of leave taken by key staff.\n\nFraud triangle: Opportunity",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRD-002",
+  "title": "Dominant management with aggressive earnings targets linked to bonuses",
+  "description": "A dominant chief executive or small management group sets aggressive earnings or revenue targets, and a material part of their remuneration - or their standing with the board and market - depends on achieving them.\n\nConditions relevant: Relevant where targets materially affect remuneration or reputation and are set at levels that stretch plausibility given the business outlook.\n\nWarning signs: Targets repeatedly set just above prior-year results; bonuses heavily weighted to a single metric; management dismisses missed forecasts as one-offs while celebrating narrow beats.\n\nFraud triangle: Incentive or pressure",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRD-003",
+  "title": "Complex or opaque related-party structures with no clear business purpose",
+  "description": "The entity uses complex, layered or opaque related-party structures, special-purpose vehicles, or circular transactions for which no clear business purpose is documented.\n\nConditions relevant: Relevant where the group structure includes entities or transactions whose commercial purpose is not evident from the documentation.\n\nWarning signs: Entities in low-transparency jurisdictions with no operational substance; transactions that net to little commercial effect; reluctance to explain structures; significant balances with undisclosed parties.\n\nFraud triangle: Opportunity",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRD-004",
+  "title": "Significant pressure to meet debt covenants or financing conditions",
+  "description": "The entity faces significant pressure to satisfy debt covenants, maintain credit ratings, or meet conditions for continued financing, where failure would trigger repayment, higher costs or loss of facilities.\n\nConditions relevant: Relevant where covenants are tested at or near the reporting date and headroom is thin.\n\nWarning signs: Covenant headroom shrinking over successive periods; last-minute waivers or renegotiations; financing conditional on reported ratios; management focus on covenant calculations near period-end.\n\nFraud triangle: Incentive or pressure",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRD-005",
+  "title": "High turnover in finance and key accounting personnel",
+  "description": "There is unusually high turnover, prolonged vacancies, or heavy reliance on temporary staff in finance and key accounting roles.\n\nConditions relevant: Relevant where turnover affects financial reporting, internal audit or key control operators.\n\nWarning signs: Key roles vacant at period-end; reconciliations long outstanding; new staff unable to explain prior-period balances; exit interviews citing pressure or ethical concerns.\n\nFraud triangle: Opportunity",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRD-006",
+  "title": "Management history of justifying aggressive accounting as 'industry practice'",
+  "description": "Management has a history of defending aggressive accounting positions by describing them as normal industry practice rather than by reference to the requirements of the financial reporting framework.\n\nConditions relevant: Relevant where management's accounting choices sit at the aggressive end of acceptable practice.\n\nWarning signs: Recurring disputes with auditors resolved in management's favour on thin reasoning; policies changed to the more aggressive permitted option; benchmarking against peers used to justify rather than to calibrate.\n\nFraud triangle: Rationalization",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRD-007",
+  "title": "Large volumes of cash transactions with weak oversight",
+  "description": "The entity handles large volumes of cash receipts or payments with weak oversight - cash not banked promptly, reconciliations not independent, and cash counts infrequent or predictable.\n\nConditions relevant: Relevant where cash receipts or payments are material and the business model does not inherently require cash intensity.\n\nWarning signs: Cash banked late or in round sums; cash reconciliations prepared by the cashier; predictable count dates; lifestyle inconsistent with known income among cash handlers.\n\nFraud triangle: Opportunity",
+  "audit_area_id": "CYC-CSH",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRD-008",
+  "title": "Whistleblowing channel absent or not trusted",
+  "description": "There is no whistleblowing or speak-up channel, or the channel that exists is not trusted by staff - for example reports go to the very managers whose conduct might be reported.\n\nConditions relevant: Relevant in any entity; particularly important where management is dominant and other detective controls are weak.\n\nWarning signs: No policy communicated to staff; channel administered by line management; no record of any report ever being made; staff survey or enquiry indicates fear of retaliation.\n\nFraud triangle: Opportunity",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRP-001",
+  "title": "Manual journal entries lack supporting documentation",
+  "description": "Manual (non-system-generated) journal entries are posted to the general ledger without supporting documentation being retained or made available - no calculations, agreements, correspondence or other evidence of the underlying transaction or event, and often no record of independent approval.\n\nConditions relevant: Relevant where manual journals are material, particularly period-end and post-closing adjustments. Less relevant where journals are few, routine and immaterial.\n\nWarning signs: Journals posted late at night, at weekends or after period close; round-sum amounts; vague descriptions such as adjustment or correction; journals posted directly by senior management; missing or bulk approval signatures.",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRP-002",
+  "title": "Management can override controls",
+  "description": "Management, or holders of privileged system access, can post or approve journals, adjust accounting records, or direct staff to bypass established controls, without effective independent challenge - for example through unrestricted super-user access, the ability to post directly to the ledger or into closed periods, or a culture in which challenge is discouraged.\n\nConditions relevant: Relevant to every audit as a background consideration; elevated to a specific concern where privileged access is broad, governance challenge is weak, or past breaches have occurred.\n\nWarning signs: Super-user access held by finance management; journals posted by senior staff outside the normal workflow; adjustments to closed periods; staff reporting instructions to bypass controls; dominant chief executive with weak board challenge.",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRP-003",
+  "title": "Related-party transactions are not identified",
+  "description": "The entity does not maintain a complete, current register of related parties, does not obtain declarations of interest from directors and key management, or has no process to identify transactions with related parties - so such transactions may occur without being flagged for appropriate measurement and disclosure.\n\nConditions relevant: Relevant where the entity has a group structure, significant shareholders, or directors with outside business interests. Lower relevance for a simple business with no external transactions, though owner transactions still require consideration.\n\nWarning signs: Transactions with unfamiliar counterparties on unusual terms; significant transactions just below approval thresholds; complex or opaque group structures; reluctance to provide a related-party list; transactions with entities sharing addresses, directors or advisers.",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRP-004",
+  "title": "Provisions are based on unsupported assumptions",
+  "description": "Significant provisions are recognised on the basis of assumptions that are not documented, not supported by evidence, or not subjected to independent challenge - for example, litigation provisions based on management's unsupported view of the likely outcome, or warranty provisions carried forward unchanged without analysis.\n\nConditions relevant: Relevant where significant provisions depend on judgmental assumptions - litigation, warranties, decommissioning, onerous contracts. Less relevant where provisions are formula-driven from reliable data.\n\nWarning signs: Provisions unchanged year on year despite changing circumstances; assumptions that always resolve in management's favour; absence of working papers behind significant estimates; reluctance to obtain external advice on material disputes.",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-FRP-005",
+  "title": "Financial statement disclosures are incomplete",
+  "description": "The financial reporting close process includes no disclosure checklist tied to the applicable financial reporting framework and no technical review of the notes - so required disclosures, particularly for new transactions, new standards or changed circumstances, may be omitted or left outdated.\n\nConditions relevant: Relevant to every set of financial statements; heightened where new standards apply, new transaction types occurred, or prior-year notes are rolled forward without updating.\n\nWarning signs: Prior-year notes carried forward verbatim; new transactions or standards with no corresponding new disclosure; disclosures that do not reconcile to the primary statements; no evidence of any disclosure review.",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-TEL-001",
+  "title": "Telecom towers and network sites carry dismantling and site-restoration (decommissioning) obligations",
+  "description": "The entity operates a telecom network with towers, masts, rooftop sites and related equipment installed on leased land or buildings, where lease or regulatory terms require dismantling and site restoration at the end of the arrangement.\n\nConditions relevant: Relevant where the operator has a large estate of leased sites and restoration obligations are enforceable. Consider materiality of the aggregate obligation.\n\nWarning signs: No decommissioning provision recognised despite a large leased site estate; restoration costs expensed only when incurred; site register does not track restoration clauses.",
+  "audit_area_id": "CYC-PROV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-TEL-002",
+  "title": "Multi-element customer contracts (handset plus service bundles)",
+  "description": "The entity sells bundled customer contracts combining equipment (handsets, routers) with service over a contract term, where the transaction price must be allocated across the bundle components and recognised as each is delivered.\n\nConditions relevant: Relevant where bundled offers are a material sales channel. Consider the complexity of tariff structures and frequency of new promotions.\n\nWarning signs: Upfront recognition of the full contract value on handset delivery; allocation keys that do not reflect stand-alone selling prices; frequent manual adjustments to allocation journals.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-TEL-003",
+  "title": "High-volume automated billing with complex rating and tariff logic",
+  "description": "Revenue is generated by rating millions of usage records (calls, data, SMS) through automated billing systems applying complex tariff rules, discounts and promotions.\n\nConditions relevant: Relevant where billing is substantially automated and tariffs change frequently. Consider reliance on IT controls.\n\nWarning signs: Recurring billing complaints or regulator fines; large credit-note volumes; rating exception reports not cleared; tariff changes applied without testing.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-MFG-001",
+  "title": "Work in progress with absorbed production overheads",
+  "description": "The entity manufactures goods and carries work in progress, with production overheads absorbed into inventory using predetermined rates and allocation bases.\n\nConditions relevant: Relevant where manufacturing is material and overhead absorption is significant. Consider seasonality and capacity utilisation.\n\nWarning signs: Overhead rates unchanged for years despite cost changes; abnormal idle capacity absorbed into inventory; WIP growing faster than production volumes.",
+  "audit_area_id": "CYC-INV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-MFG-002",
+  "title": "Standard costing with material variances not investigated",
+  "description": "The entity uses standard costs for inventory and production, generating material purchase-price, usage and overhead variances that are not routinely investigated.\n\nConditions relevant: Relevant where standard costing drives inventory valuation. Consider how often standards are updated.\n\nWarning signs: Large unexplained variances written off to cost of sales; standards unchanged for multiple years; variance reports not reviewed.",
+  "audit_area_id": "CYC-INV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-MFG-003",
+  "title": "Warranty obligations on goods sold",
+  "description": "The entity provides warranties on manufactured goods sold, creating an obligation for future repairs, replacements or refunds.\n\nConditions relevant: Relevant where warranties are offered and claims are material. Consider new product launches with no history.\n\nWarning signs: Falling warranty provision despite rising sales or new products; claims paid exceeding the provision; no tracking of claims by product cohort.",
+  "audit_area_id": "CYC-PROV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-RTL-001",
+  "title": "High-volume cash and card sales with shrinkage exposure",
+  "description": "The entity operates retail outlets with high volumes of cash and card sales, where takings pass through many hands and shrinkage (theft, error, damage) is a persistent exposure.\n\nConditions relevant: Relevant where cash sales are significant and outlets are numerous or geographically dispersed. Consider the strength of point-of-sale controls.\n\nWarning signs: Unexplained differences between till records and bankings; void and refund rates far above peers; weak segregation at tills; shrinkage provisions based on hope rather than counts.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-RTL-002",
+  "title": "Supplier rebates and promotional income",
+  "description": "The entity receives volume rebates, promotional funding and listing fees from suppliers, recognised by reference to purchase volumes and promotional activity over the period.\n\nConditions relevant: Relevant where rebates are material to margins. Consider the complexity of rebate agreements and whether terms are confirmed by suppliers.\n\nWarning signs: Rebate income recognised on forecast volumes not yet achieved; rebate agreements unsigned or disputed; year-end rebate accruals growing without support.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-RTL-003",
+  "title": "Gift cards sold and loyalty points outstanding",
+  "description": "The entity sells gift cards and operates loyalty schemes, creating deferred revenue released on redemption, with breakage (never-redeemed value) recognised as an estimate.\n\nConditions relevant: Relevant where gift card or loyalty balances are material. Consider the reliability of redemption data.\n\nWarning signs: Deferred revenue released without redemption evidence; breakage rates increased to meet targets; no reconciliation of card liabilities.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-BNK-001",
+  "title": "Loan book subject to expected credit losses",
+  "description": "The entity holds a material loan portfolio measured with an expected-credit-loss impairment model using staging, probability of default, loss given default and forward-looking scenarios.\n\nConditions relevant: Relevant wherever lending is material. Consider portfolio concentrations and economic volatility.\n\nWarning signs: Falling impairment charges while arrears rise; staging overrides concentrated in stage 1; model not revalidated after economic shifts; management adjustments (overlays) growing.",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-BNK-002",
+  "title": "Interest income recognised on non-performing loans",
+  "description": "The entity's systems continue to accrue interest on loans classified as non-performing or doubtful, where collectability is uncertain.\n\nConditions relevant: Relevant where non-performing exposures are material. Consider whether the policy suspends accrual on defined criteria.\n\nWarning signs: Interest income growing while the NPL ratio deteriorates; suspended-interest calculations done manually; policy thresholds not enforced by the system.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-BNK-003",
+  "title": "Complex treasury and financial instruments",
+  "description": "The entity holds derivatives, traded securities and other financial instruments measured using models with unobservable inputs, where classification determines the measurement basis.\n\nConditions relevant: Relevant where treasury activity is material. Consider the use of models with unobservable (level 3) inputs.\n\nWarning signs: Growing level 3 portfolios; valuations always at management's mark with no independent price verification; instruments reclassified near period-ends.",
+  "audit_area_id": "CYC-FRP",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-INV-001",
+  "title": "Inventory held in a warehouse with inadequate physical security",
+  "description": "Physical inventory is stored in a warehouse where access is not adequately restricted, monitored or logged. Doors, cages or high-value areas are left unsecured, and movements of goods in and out are not consistently recorded or supervised.\n\nConditions relevant: Relevant where the entity holds physical inventory that is material to the financial statements and the warehouse relies on physical access controls rather than (or in addition to) system controls.\n\nWarning signs: Unexplained shrinkage between counts; damaged or resealed packaging; inventory movements outside working hours; missing or incomplete goods movement logs; staff reporting unescorted visitors in storage areas.",
+  "audit_area_id": "CYC-INV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PAY-001",
+  "title": "Employees remain on the payroll after leaving employment",
+  "description": "Former employees (resigned, dismissed, retired or deceased) are not removed from the payroll master in a timely manner, so payroll continues to process payments against their records.\n\nConditions relevant: Relevant where payroll is material and leaver processing is manual or spread across HR and finance without a coordinated checklist. Relevant where bank payments are made by electronic file that is not reviewed payee-by-payee.\n\nWarning signs: Headcount per payroll register exceeds HR headcount; payroll cost trends upward while reported headcount is flat or falling; payments to employees with no current work location or supervisor; leaver paperwork filed but the payroll master unchanged.",
+  "audit_area_id": "CYC-PAY",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PAY-002",
+  "title": "Employee records and payroll payments are controlled by the same person",
+  "description": "One individual can add or amend employee master records (new starters, bank details, pay rates) and also process or release payroll payments, with no independent check.\n\nConditions relevant: Relevant where payroll master maintenance and payment processing are not segregated, whether in a manual system or through broad system access rights.\n\nWarning signs: A single user holds administrator access to the payroll system; master changes with no approval trail; payroll amendments processed close to pay run deadlines; the same person handles leavers, new starters and bank payments.",
+  "audit_area_id": "CYC-PAY",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PAY-003",
+  "title": "Overtime is not independently approved",
+  "description": "Overtime hours claimed by employees are paid without review or approval by a supervisor independent of the claimant.\n\nConditions relevant: Relevant where overtime is material or paid at premium rates, and where timesheets are self-reported rather than independently clocked.\n\nWarning signs: Overtime concentrated in a few employees; overtime spikes before period-end; overtime claims without corresponding production records; supervisors approving their own team's overtime without review.",
+  "audit_area_id": "CYC-PAY",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PAY-004",
+  "title": "Payroll calculations are incorrect",
+  "description": "Payroll is calculated using incorrect pay rates, tax tables or deduction parameters, whether through manual error, outdated tables or system configuration errors.\n\nConditions relevant: Relevant where payroll involves manual inputs, frequent rate changes, complex deductions, or a newly implemented or reconfigured payroll system.\n\nWarning signs: Employee complaints about pay; frequent correcting journals to payroll; tax filings inconsistent with payroll records; payroll processed under time pressure with manual adjustments.",
+  "audit_area_id": "CYC-PAY",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PPE-001",
+  "title": "Repairs and maintenance expenditure capitalised without adequate assessment",
+  "description": "Expenditure on repairs and maintenance is added to the cost of property, plant and equipment (or recognised as a separate asset or component) without a documented assessment of whether it meets the entity's capitalisation criteria - for example, whether it enhances future economic benefits beyond the asset's originally assessed standard of performance, or merely restores that performance.\n\nConditions relevant: Relevant where the entity incurs material repairs and maintenance expenditure and the accounting treatment involves judgment - for example major overhauls, refurbishments, or replaced parts. Less relevant where the entity's policy is to expense all repairs.\n\nWarning signs: Repairs and maintenance expense unusually low relative to the asset base or industry norms; large round-sum additions described as refurbishment or upgrades; additions capitalised near the year-end; inconsistent treatment of similar expenditure between periods.",
+  "audit_area_id": "CYC-PPE",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PPE-002",
+  "title": "Depreciation rates, methods or useful lives not reviewed or inappropriate",
+  "description": "Depreciation is charged using rates, methods or useful lives that have not been reviewed for continued appropriateness, or that do not reflect the actual pattern of consumption of the assets' future economic benefits - for example, rates carried forward unchanged for many years despite changes in usage, technology or asset condition.\n\nConditions relevant: Relevant where property, plant and equipment is material and depreciation significantly affects profit or carrying amounts. Less relevant for assets measured at revalued amounts with frequent valuations, or where useful lives are contractually fixed.\n\nWarning signs: Fully depreciated assets still in active use; depreciation charge inconsistent with the age profile of the asset base; useful lives markedly different from industry practice without explanation; no documented review of lives and residual values.",
+  "audit_area_id": "CYC-PPE",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PPE-003",
+  "title": "Disposed assets not removed from the accounting records",
+  "description": "Assets that have been sold, scrapped, demolished or otherwise disposed of remain on the fixed asset register and in the general ledger, because disposals are not communicated to finance or are processed without proper documentation.\n\nConditions relevant: Relevant where the entity regularly disposes of, scraps, demolishes or replaces assets. Less relevant where disposals are rare and individually significant, though the register should still be tested.\n\nWarning signs: Assets on the register that cannot be located; disposal proceeds banked with no matching derecognition entry; insurance schedules or tax filings listing fewer assets than the register; very old fully depreciated assets still carried.",
+  "audit_area_id": "CYC-PPE",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PPE-004",
+  "title": "Impairment indicators not identified or evaluated",
+  "description": "Management has no process to identify and evaluate indicators that an asset (or cash-generating unit) may be impaired - such as significant underperformance, physical damage, adverse market or technological changes, or assets that are idle or held for disposal.\n\nConditions relevant: Relevant wherever indicators of impairment could exist - loss-making operations, idle assets, physical damage, or adverse market or technological change. The absence of an assessment process is itself the gap.\n\nWarning signs: Loss-making operations or product lines; idle or mothballed assets; observable declines in market values; adverse regulatory or technological developments; carrying amounts above recent transaction prices for similar assets.",
+  "audit_area_id": "CYC-PPE",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PPE-005",
+  "title": "Replaced significant components not derecognised",
+  "description": "When a significant part of an asset (for example an engine, a roof, or a major liner) is replaced, the carrying amount of the replaced part is not removed from the asset's cost, so both the old and the new component remain reflected in the carrying amount.\n\nConditions relevant: Relevant where significant parts of assets are replaced - overhauls, refurbishments, major component swaps. Less relevant where assets have no separately significant components or replacements are immaterial.\n\nWarning signs: Major replacement or overhaul programmes with no corresponding derecognition entries; components not tracked separately in the register; additions capitalised where the replaced part's original cost was never separately identified.",
+  "audit_area_id": "CYC-PPE",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PUR-001",
+  "title": "Supplier invoices are not matched to goods received",
+  "description": "Supplier invoices are approved and paid without being matched to goods received notes (GRNs) or other evidence that the goods or services were actually received.\n\nConditions relevant: Relevant where purchases are made on credit and a goods-receipt process exists or should exist.\n\nWarning signs: Invoices approved for payment without GRN references; GRNs not sequentially controlled; staff unable to locate receiving evidence for sampled invoices.",
+  "audit_area_id": "CYC-PUR",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PUR-002",
+  "title": "Goods received before year-end are invoiced afterward",
+  "description": "Goods or services are received before the reporting date, but the supplier invoice arrives (or is recorded) after the reporting date, so the liability and the purchase may be omitted from the current period.\n\nConditions relevant: Relevant where suppliers invoice in arrears or where invoice processing backlogs occur at period end.\n\nWarning signs: GRNs dated before year-end with no matching invoice at the reporting date; post-year-end invoices relating to pre-year-end receipts; weak or absent accrual procedures for uninvoiced receipts.",
+  "audit_area_id": "CYC-PUR",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PUR-003",
+  "title": "Supplier master records can be changed without independent approval",
+  "description": "Additions and changes to supplier master data - including bank details - can be made by the same person who processes payments, without independent authorisation.\n\nConditions relevant: Relevant where supplier payments are significant and master data controls who gets paid and into which account.\n\nWarning signs: No log of master changes; the same user creates suppliers and processes payments; changes to bank details shortly before large payments.",
+  "audit_area_id": "CYC-PUR",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PUR-004",
+  "title": "Duplicate invoices are processed",
+  "description": "The purchase system or manual processes allow the same supplier invoice to be recorded and paid more than once - for example, where invoice numbers are not validated for uniqueness per supplier.\n\nConditions relevant: Relevant where invoice volumes are high, where invoices arrive through multiple channels (email, post, portal), or where no automated duplicate check exists.\n\nWarning signs: Supplier statements showing credit balances; duplicate invoice numbers in the purchase ledger; suppliers querying double payments.",
+  "audit_area_id": "CYC-PUR",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-PUR-005",
+  "title": "Purchases are recorded in an incorrect accounting period",
+  "description": "Purchases and the related payables are recorded by reference to the invoice date or processing date rather than the date the goods were received or the service performed, placing them in the wrong accounting period.\n\nConditions relevant: Relevant at every period end, and especially where invoice processing lags goods receipt.\n\nWarning signs: Large invoices processed just after period end relating to earlier receipts; month-end purchase spikes driven by processing dates; cut-off errors found in prior periods.",
+  "audit_area_id": "CYC-PUR",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-REV-001",
+  "title": "Revenue recorded before the applicable recognition criteria are satisfied",
+  "description": "Revenue is recorded (invoiced) before the entity has satisfied the applicable recognition criteria - for example, before goods have been delivered to or accepted by the customer, or before services have been performed. Includes bill-and-hold style arrangements without a genuine customer request and side agreements that change the stated terms of sale.\n\nConditions relevant: Relevant where revenue recognition depends on an event after invoicing, such as delivery, customer acceptance or performance over time, and where the billing process is not tied to evidence that the criteria have been met.\n\nWarning signs: Invoices dated before the related dispatch or acceptance dates; revenue concentrated in the final days of the period; credit notes or returns shortly after period end; customer complaints about early billing; side letters or verbal terms modifying standard sale terms.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-REV-002",
+  "title": "Goods dispatched before year-end but recorded after year-end",
+  "description": "Goods are physically dispatched, or services completed, before the reporting date, but the related sales are not recorded in the sales ledger until after the reporting date. This is a cut-off failure that understates the current period: revenue and the related receivable belong in the current period but appear in the next one.\n\nConditions relevant: Relevant where dispatch and billing are separate processes, where invoicing backlogs build up at period end, or where dispatch records are not reconciled to the sales ledger.\n\nWarning signs: Dispatch notes dated before year-end matched to invoices dated after year-end; a gap between the last dispatch number and the last invoiced dispatch; customers confirming receipt of goods before the recorded sale date.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-REV-003",
+  "title": "Sales recorded without supporting dispatch evidence",
+  "description": "Sales invoices are raised and recorded without a matching goods dispatch note, delivery record, proof of delivery or service completion evidence - or such evidence cannot be produced when the auditor asks for it.\n\nConditions relevant: Relevant wherever sales are made on credit and revenue depends on a dispatch or performance event that should leave documentary evidence.\n\nWarning signs: Invoices with no linked dispatch note; dispatch documentation not sequentially controlled; sales to customers with no delivery record; management unable to produce dispatch evidence for selected invoices.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-REV-004",
+  "title": "Management incentives tied to revenue targets",
+  "description": "Bonuses, commissions, performance evaluations or continued employment for management or sales staff depend significantly on achieving reported revenue targets or growth measures.\n\nConditions relevant: Relevant where incentives are material to the individuals concerned, where targets are difficult to achieve honestly, or where bonuses depend on revenue alone without profit or cash collection measures.\n\nWarning signs: Targets met or exceeded by narrow margins; bonuses based on revenue without reference to collectability; aggressive revenue practices discussed informally; pressure on finance staff near period end.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "F-REV-005",
+  "title": "Unusual transactions near year-end",
+  "description": "Large, complex or non-routine transactions are recorded close to the reporting date and fall outside the entity's normal business pattern - for example, round-sum sales, transactions with new or unfamiliar counterparties, or transactions reversed shortly after year-end.\n\nConditions relevant: Relevant where the entity records material non-routine transactions at any time, and especially where several such transactions cluster around the reporting date.\n\nWarning signs: Round-sum or just-below-threshold amounts; new counterparties with no trading history; transactions reversed or offset after year-end; vague or inconsistent business rationale.",
+  "audit_area_id": "CYC-REV",
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ }
+]

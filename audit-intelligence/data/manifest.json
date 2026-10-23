@@ -1,0 +1,354 @@
+{
+ "tables": {
+  "audit_areas": {
+   "rows": 11,
+   "columns": [
+    "id",
+    "code",
+    "name",
+    "description",
+    "domain_ref"
+   ]
+  },
+  "assertions": {
+   "rows": 15,
+   "columns": [
+    "id",
+    "code",
+    "name",
+    "category",
+    "description"
+   ]
+  },
+  "audit_risks": {
+   "rows": 54,
+   "columns": [
+    "id",
+    "title",
+    "description",
+    "causes",
+    "audit_area_id",
+    "level",
+    "misstatement_scenario",
+    "fraud_related",
+    "inherent_risk_factors",
+    "verification_status",
+    "source_ref"
+   ]
+  },
+  "risk_factors": {
+   "rows": 49,
+   "columns": [
+    "id",
+    "title",
+    "description",
+    "audit_area_id",
+    "verification_status",
+    "source_ref"
+   ]
+  },
+  "controls": {
+   "rows": 80,
+   "columns": [
+    "id",
+    "title",
+    "description",
+    "control_type",
+    "audit_area_id",
+    "verification_status",
+    "source_ref"
+   ]
+  },
+  "audit_procedures": {
+   "rows": 164,
+   "columns": [
+    "id",
+    "title",
+    "description",
+    "procedure_type",
+    "audit_area_id",
+    "verification_status",
+    "source_ref"
+   ]
+  },
+  "evidence_types": {
+   "rows": 126,
+   "columns": [
+    "id",
+    "name",
+    "description",
+    "source_ref"
+   ]
+  },
+  "industries": {
+   "rows": 8,
+   "columns": [
+    "id",
+    "name",
+    "business_model",
+    "revenue_streams",
+    "major_costs",
+    "key_assets_liabilities",
+    "common_accounting_issues",
+    "significant_inherent_risks",
+    "typical_controls",
+    "regulatory_requirements",
+    "notes",
+    "verification_status",
+    "source_ref"
+   ]
+  },
+  "standards": {
+   "rows": 45,
+   "columns": [
+    "id",
+    "code",
+    "title",
+    "standard_set",
+    "jurisdiction",
+    "status",
+    "effective_date",
+    "source_url",
+    "summary",
+    "verification_status",
+    "last_verified"
+   ]
+  },
+  "regulations": {
+   "rows": 5,
+   "columns": [
+    "id",
+    "title",
+    "jurisdiction",
+    "area",
+    "effective_date",
+    "source_url",
+    "summary",
+    "applicability_notes",
+    "verification_status",
+    "last_verified"
+   ]
+  },
+  "regulation_applicability": {
+   "rows": 7,
+   "columns": [
+    "regulation_id",
+    "engagement_type",
+    "jurisdiction",
+    "applicable",
+    "notes"
+   ]
+  },
+  "publishers": {
+   "rows": 9,
+   "columns": [
+    "id",
+    "name",
+    "publisher_type",
+    "jurisdiction",
+    "website",
+    "authority_class",
+    "notes"
+   ]
+  },
+  "case_studies": {
+   "rows": 6,
+   "columns": [
+    "id",
+    "title",
+    "industry",
+    "background",
+    "reporting_issue",
+    "what_went_wrong",
+    "lessons",
+    "relevant_standards",
+    "sources",
+    "facts_vs_allegations",
+    "verification_status"
+   ]
+  },
+  "fraud_patterns": {
+   "rows": 10,
+   "columns": [
+    "id",
+    "name",
+    "category",
+    "how_it_works",
+    "red_flags",
+    "assertions_affected",
+    "pressure",
+    "opportunity",
+    "rationalization",
+    "detection_procedure_ids",
+    "verification_status",
+    "source_ref"
+   ]
+  },
+  "knowledge_records": {
+   "rows": 176,
+   "columns": [
+    "id",
+    "title",
+    "record_type",
+    "description",
+    "jurisdiction",
+    "industry",
+    "audit_area_id",
+    "assertion_ids",
+    "risk_ids",
+    "standard_ids",
+    "regulation_id",
+    "section_ref",
+    "publication_date",
+    "effective_date",
+    "publisher_id",
+    "source_url",
+    "local_doc_ref",
+    "authority_class",
+    "verification_status",
+    "last_verified",
+    "engagement_types",
+    "related_ids",
+    "practical_application",
+    "limitations",
+    "licence"
+   ]
+  },
+  "audit_programmes": {
+   "rows": 6,
+   "columns": [
+    "id",
+    "title",
+    "audit_area_id",
+    "file_ref",
+    "summary",
+    "risk_ids",
+    "assertion_ids",
+    "control_ids",
+    "procedure_ids",
+    "standard_ids",
+    "verification_status",
+    "source_ref",
+    "updated_at"
+   ]
+  },
+  "working_paper_templates": {
+   "rows": 12,
+   "columns": [
+    "id",
+    "title",
+    "area",
+    "objective",
+    "structure_json",
+    "illustrative",
+    "file_ref",
+    "verification_status"
+   ]
+  },
+  "reasoning_rules": {
+   "rows": 50,
+   "columns": [
+    "id",
+    "name",
+    "rationale",
+    "definition_json",
+    "review_status",
+    "effective_date",
+    "source_ref"
+   ]
+  },
+  "study_resources": {
+   "rows": 148,
+   "columns": [
+    "id",
+    "title",
+    "resource_type",
+    "body_json",
+    "audit_area_id",
+    "verification_status",
+    "source_ref"
+   ]
+  },
+  "risk_assertion": {
+   "rows": 114,
+   "columns": [
+    "risk_id",
+    "assertion_id",
+    "mapping_type",
+    "notes"
+   ]
+  },
+  "risk_control": {
+   "rows": 83,
+   "columns": [
+    "risk_id",
+    "control_id",
+    "mapping_type",
+    "notes"
+   ]
+  },
+  "risk_procedure": {
+   "rows": 154,
+   "columns": [
+    "risk_id",
+    "procedure_id",
+    "mapping_type",
+    "notes"
+   ]
+  },
+  "factor_risk": {
+   "rows": 49,
+   "columns": [
+    "factor_id",
+    "risk_id"
+   ]
+  },
+  "industry_risk": {
+   "rows": 23,
+   "columns": [
+    "industry_id",
+    "risk_id",
+    "notes"
+   ]
+  },
+  "case_study_risk": {
+   "rows": 16,
+   "columns": [
+    "case_id",
+    "risk_id",
+    "relevance_note"
+   ]
+  },
+  "standard_procedure": {
+   "rows": 334,
+   "columns": [
+    "standard_id",
+    "procedure_id",
+    "mapping_type",
+    "notes"
+   ]
+  },
+  "procedure_evidence": {
+   "rows": 222,
+   "columns": [
+    "procedure_id",
+    "evidence_id",
+    "notes"
+   ]
+  },
+  "known_limitations": {
+   "rows": 7,
+   "columns": [
+    "id",
+    "area",
+    "description",
+    "impact",
+    "recorded_at",
+    "status"
+   ]
+  }
+ },
+ "total_rows": 1983,
+ "exported": "2026-10-23",
+ "notes": "Public web export. Excludes search_index and full source-document texts (see script header). knowledge_records ethics rows are structure summaries only."
+}

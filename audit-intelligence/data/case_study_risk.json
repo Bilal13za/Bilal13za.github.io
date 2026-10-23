@@ -1,0 +1,82 @@
+[
+ {
+  "case_id": "CS-ENR-01",
+  "risk_id": "R-FRD-004",
+  "relevance_note": "SPE structures used to manipulate reported results."
+ },
+ {
+  "case_id": "CS-ENR-01",
+  "risk_id": "R-REV-005",
+  "relevance_note": "Mark-to-market gains on unusual long-term contracts."
+ },
+ {
+  "case_id": "CS-ENR-01",
+  "risk_id": "R-FRP-005",
+  "relevance_note": "Consolidation-scope judgement exploited."
+ },
+ {
+  "case_id": "CS-WRC-01",
+  "risk_id": "R-CSH-001",
+  "relevance_note": "Cash held via third-party trustees never independently verified."
+ },
+ {
+  "case_id": "CS-WRC-01",
+  "risk_id": "R-FRD-003",
+  "relevance_note": "Fictitious balances to sustain a growth story."
+ },
+ {
+  "case_id": "CS-WRC-01",
+  "risk_id": "R-FRD-001",
+  "relevance_note": "Management override of verification processes."
+ },
+ {
+  "case_id": "CS-SAT-01",
+  "risk_id": "R-CSH-001",
+  "relevance_note": "Forged bank confirmations — the central failure."
+ },
+ {
+  "case_id": "CS-SAT-01",
+  "risk_id": "R-REV-003",
+  "relevance_note": "Fabricated revenues."
+ },
+ {
+  "case_id": "CS-SAT-01",
+  "risk_id": "R-PAY-001",
+  "relevance_note": "Ghost employees on the payroll."
+ },
+ {
+  "case_id": "CS-TSC-01",
+  "risk_id": "R-RTL-002",
+  "relevance_note": "Supplier rebate income recognised before qualifying terms met."
+ },
+ {
+  "case_id": "CS-TSC-01",
+  "risk_id": "R-REV-002",
+  "relevance_note": "Period-end pull-forward of income — cut-off failure."
+ },
+ {
+  "case_id": "CS-CAR-01",
+  "risk_id": "R-REV-001",
+  "relevance_note": "Over-optimistic progress measurement accelerating revenue."
+ },
+ {
+  "case_id": "CS-CAR-01",
+  "risk_id": "R-FRP-002",
+  "relevance_note": "Contract-margin estimates as the key judgement area."
+ },
+ {
+  "case_id": "CS-LCK-01",
+  "risk_id": "R-REV-003",
+  "relevance_note": "Fictitious sales at industrial scale."
+ },
+ {
+  "case_id": "CS-LCK-01",
+  "risk_id": "R-REV-004",
+  "relevance_note": "Growth-target pressure driving fabrication."
+ },
+ {
+  "case_id": "CS-LCK-01",
+  "risk_id": "R-FRD-002",
+  "relevance_note": "Related-party channels for fictitious transactions."
+ }
+]

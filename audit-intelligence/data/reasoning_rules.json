@@ -1,0 +1,452 @@
+[
+ {
+  "id": "RULE-CSH-001",
+  "name": "Bank reconciliations not independently reviewed -> undetected bank errors",
+  "rationale": "The bank reconciliation is the key detective control over cash; without independent review, errors and irregularities go unchallenged. The rule directs the auditor to test the review control, reperform the reconciliation, vouch aged items, and obtain direct bank confirmation.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-CSH-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-EXI\",\n      \"BAL-COM\"\n    ],\n    \"control_ids\": [\n      \"C-CSH-001\",\n      \"C-CSH-002\"\n    ],\n    \"missing_information\": [\n      \"Whether bank balances are material to the financial statements.\",\n      \"How often reconciliations are prepared, by whom, and whether any independent review exists.\",\n      \"The age profile of outstanding items in the latest reconciliation.\"\n    ],\n    \"note\": \"An unreviewed reconciliation cannot be relied upon; the cash balance must be corroborated independently through reperformance, vouching of outstanding items and bank confirmation.\",\n    \"procedure_ids\": [\n      \"P-CSH-001\",\n      \"P-CSH-002\",\n      \"P-CSH-003\",\n      \"P-CSH-004\"\n    ],\n    \"risk_ids\": [\n      \"R-CSH-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-CSH-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-CSH-002",
+  "name": "Unusual payments to unfamiliar beneficiaries -> improper payment risk",
+  "rationale": "Payments to unfamiliar beneficiaries bypass the implicit control of a known supplier relationship. The rule directs full-population beneficiary analysis, vouching of unusual payments to supporting documents, and tracing of new beneficiaries to verification evidence.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-CSH-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-CLS\"\n    ],\n    \"control_ids\": [\n      \"C-CSH-003\",\n      \"C-CSH-004\"\n    ],\n    \"missing_information\": [\n      \"The volume and value of payments to new or unfamiliar beneficiaries.\",\n      \"How new beneficiaries are verified before the first payment.\",\n      \"Payment approval thresholds and whether dual authorisation is enforced.\"\n    ],\n    \"note\": \"Unusual payments are indicators to investigate, not proof of fraud. Each anomaly is vouched to independent evidence of the underlying transaction before any conclusion is drawn.\",\n    \"procedure_ids\": [\n      \"P-CSH-005\",\n      \"P-CSH-006\",\n      \"P-CSH-007\",\n      \"P-CSH-008\"\n    ],\n    \"risk_ids\": [\n      \"R-CSH-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-CSH-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-CSH-003",
+  "name": "Year-end bank transfers -> cut-off and double-counting risk",
+  "rationale": "Transfers in transit at year-end can be double-counted or omitted, and may be used to window-dress liquidity. The rule directs cut-off testing that matches both sides of every material transfer to bank value dates and reperforms the in-transit position.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-CSH-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-CUT\",\n      \"BAL-EXI\"\n    ],\n    \"control_ids\": [\n      \"C-CSH-005\",\n      \"C-CSH-006\"\n    ],\n    \"missing_information\": [\n      \"The value and timing of transfers in the cut-off window around the reporting date.\",\n      \"Whether a transfer register is maintained and both sides are recorded in the same period.\",\n      \"Whether material transfers are reversed shortly after year-end.\"\n    ],\n    \"note\": \"Cut-off testing is performed on both sides of each transfer: the sending account and the receiving account. A transfer confirmed on one side only is an exception, not a timing difference.\",\n    \"procedure_ids\": [\n      \"P-CSH-009\",\n      \"P-CSH-010\",\n      \"P-CSH-011\"\n    ],\n    \"risk_ids\": [\n      \"R-CSH-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-CSH-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-CSH-004",
+  "name": "Cash not physically verified -> existence risk for cash on hand",
+  "rationale": "Cash is the most portable asset; without independent physical verification, shortages accumulate undetected. The rule directs surprise physical verification by the auditor, reconciliation of the count to records, and testing of the entity's own count controls.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-CSH-004\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-EXI\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-CSH-007\",\n      \"C-CSH-008\"\n    ],\n    \"missing_information\": [\n      \"Whether cash on hand is material, and where cash is held.\",\n      \"Who has custody of cash and whether any independent counts are performed.\",\n      \"The volume of cash transactions and how receipts are controlled.\"\n    ],\n    \"note\": \"Existence of cash is established by direct count, not by agreement of records. IOUs and other non-cash items found in the cash balance are not cash.\",\n    \"procedure_ids\": [\n      \"P-CSH-012\",\n      \"P-CSH-013\",\n      \"P-CSH-014\"\n    ],\n    \"risk_ids\": [\n      \"R-CSH-004\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-CSH-004\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRD-001",
+  "name": "Lack of segregation of duties -> misappropriation fraud risk",
+  "rationale": "Incompatible functions in one person's hands remove the independent check between a transaction and its concealment - the classic opportunity condition for asset misappropriation. Fraud rules run first (priority 5) so fraud-focused responses are planned before standard procedures.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRD-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-EXI\",\n      \"BAL-COM\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-FRD-002\",\n      \"C-FRD-003\"\n    ],\n    \"missing_information\": [\n      \"Which incompatible functions are combined in which roles.\",\n      \"Whether any compensating controls (e.g. independent review) operate and are evidenced.\",\n      \"Whether the entity's size genuinely prevents segregation.\"\n    ],\n    \"note\": \"Segregation weakness is an opportunity indicator, not evidence of fraud. Respond with extended asset-focused procedures and scepticism, not accusation.\",\n    \"procedure_ids\": [\n      \"P-FRD-001\",\n      \"P-FRD-002\",\n      \"P-FRD-005\"\n    ],\n    \"risk_ids\": [\n      \"R-FRD-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRD-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRD-002",
+  "name": "Aggressive earnings-linked incentives -> fictitious revenue fraud risk",
+  "rationale": "Material rewards tied to aggressive targets create the incentive condition for fraudulent revenue reporting. Fraud rules run first (priority 5) so fraud-focused responses are planned before standard procedures.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRD-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-CUT\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-FRD-005\",\n      \"C-FRD-002\"\n    ],\n    \"missing_information\": [\n      \"How targets are set and whether they are realistically achievable.\",\n      \"The proportion of remuneration tied to the targets.\",\n      \"Whether revenue is the targeted metric or a different measure.\"\n    ],\n    \"note\": \"Target pressure is an incentive indicator, not evidence of fraud. Extend revenue procedures with fraud-focused unpredictability and business-rationale testing.\",\n    \"procedure_ids\": [\n      \"P-FRD-001\",\n      \"P-FRD-002\",\n      \"P-FRD-004\",\n      \"P-FRD-006\"\n    ],\n    \"risk_ids\": [\n      \"R-FRD-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRD-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRD-003",
+  "name": "Opaque related-party structures -> journal manipulation fraud risk",
+  "rationale": "Undocumented related-party structures provide the channels through which manipulated journals and off-book arrangements flow. Fraud rules run first (priority 5).",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRD-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-CLS\",\n      \"TRN-CUT\"\n    ],\n    \"control_ids\": [\n      \"C-FRD-001\",\n      \"C-FRD-002\"\n    ],\n    \"missing_information\": [\n      \"The documented business purpose of each structure or vehicle.\",\n      \"The identity of counterparties and whether terms are arm's length.\",\n      \"Which related parties management has disclosed vs omitted.\"\n    ],\n    \"note\": \"Opacity is an opportunity indicator. Respond with journal testing and a related-party completeness search; do not assume the structures are shams.\",\n    \"procedure_ids\": [\n      \"P-FRD-001\",\n      \"P-FRD-004\",\n      \"P-FRD-006\"\n    ],\n    \"risk_ids\": [\n      \"R-FRD-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRD-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRD-004",
+  "name": "Covenant pressure -> estimate bias fraud risk",
+  "rationale": "Threatened loss of financing concentrates pressure on period-end balances and the estimates that determine them. Fraud rules run first (priority 5).",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRD-004\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-VAL\",\n      \"DIS-VAL\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-FRD-004\"\n    ],\n    \"missing_information\": [\n      \"Headroom under each covenant and the consequences of breach.\",\n      \"Timing of covenant tests relative to the reporting date.\",\n      \"Which estimates most affect the covenant ratios.\"\n    ],\n    \"note\": \"Covenant pressure is an incentive indicator. The retrospective estimate review is the key response: look for a pattern of favourable outcomes, not a single optimistic estimate.\",\n    \"procedure_ids\": [\n      \"P-FRD-003\",\n      \"P-FRD-001\"\n    ],\n    \"risk_ids\": [\n      \"R-FRD-004\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRD-004\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRD-005",
+  "name": "Finance turnover -> misappropriation fraud risk",
+  "rationale": "Instability in finance weakens review disciplines and creates gaps in which diversion and concealment go unchallenged. Fraud rules run first (priority 5).",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRD-005\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-EXI\",\n      \"BAL-COM\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-FRD-002\",\n      \"C-FRD-003\"\n    ],\n    \"missing_information\": [\n      \"Reasons for departures and length of vacancies.\",\n      \"Whether handovers were documented and cover is competent.\",\n      \"Which reconciliations and reviews lapsed during gaps.\"\n    ],\n    \"note\": \"Turnover is an opportunity indicator with innocent explanations. Focus extended procedures on periods with weak coverage.\",\n    \"procedure_ids\": [\n      \"P-FRD-001\",\n      \"P-FRD-002\",\n      \"P-FRD-005\"\n    ],\n    \"risk_ids\": [\n      \"R-FRD-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRD-005\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRD-006",
+  "name": "Rationalised aggressive accounting -> journal manipulation fraud risk",
+  "rationale": "A culture that normalises aggressive accounting blurs the boundary between aggressive and improper - the observable form of rationalization. Fraud rules run first (priority 5).",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRD-006\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-CLS\",\n      \"TRN-CUT\"\n    ],\n    \"control_ids\": [\n      \"C-FRD-001\",\n      \"C-FRD-002\"\n    ],\n    \"missing_information\": [\n      \"Specific examples of aggressive positions and their framework basis.\",\n      \"Whether those charged with governance challenged the positions.\",\n      \"Whether policies were changed toward the aggressive end.\"\n    ],\n    \"note\": \"Rationalization is an attitude indicator. Apply heightened scepticism to journals and estimates; an aggressive position is not itself fraud.\",\n    \"procedure_ids\": [\n      \"P-FRD-001\",\n      \"P-FRD-003\",\n      \"P-FRD-004\"\n    ],\n    \"risk_ids\": [\n      \"R-FRD-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRD-006\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRD-007",
+  "name": "Weak cash oversight -> misappropriation fraud risk",
+  "rationale": "Material cash volumes without independent oversight are a direct opportunity for diversion, and cash leaves little trail. Fraud rules run first (priority 5).",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRD-007\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-EXI\",\n      \"BAL-COM\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-FRD-003\",\n      \"C-FRD-002\"\n    ],\n    \"missing_information\": [\n      \"Business reasons for cash intensity and who handles cash.\",\n      \"Whether cash is banked promptly and reconciled independently.\",\n      \"When cash was last independently counted.\"\n    ],\n    \"note\": \"Cash opportunity is a direct misappropriation indicator. Surprise verification is the key response; predictable counts have limited value.\",\n    \"procedure_ids\": [\n      \"P-FRD-005\",\n      \"P-FRD-001\",\n      \"P-FRD-002\"\n    ],\n    \"risk_ids\": [\n      \"R-FRD-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRD-007\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRD-008",
+  "name": "No trusted whistleblowing channel -> journal manipulation fraud risk",
+  "rationale": "Without a safe reporting route, observed wrongdoing - especially involving management - goes unreported, removing a key deterrent and detection channel. Fraud rules run first (priority 5).",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRD-008\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-CLS\",\n      \"TRN-CUT\"\n    ],\n    \"control_ids\": [\n      \"C-FRD-002\",\n      \"C-FRD-001\"\n    ],\n    \"missing_information\": [\n      \"Whether a channel exists on paper and how reports are handled.\",\n      \"Staff perceptions of retaliation risk.\",\n      \"Whether any reports were ever made and investigated.\"\n    ],\n    \"note\": \"Absence of a channel is an opportunity indicator. The auditor compensates with extended procedures and direct enquiry, not with assumptions about management integrity.\",\n    \"procedure_ids\": [\n      \"P-FRD-001\",\n      \"P-FRD-004\",\n      \"P-FRD-006\"\n    ],\n    \"risk_ids\": [\n      \"R-FRD-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRD-008\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRP-001",
+  "name": "Undocumented manual journals -> occurrence and accuracy risk",
+  "rationale": "Supporting documentation is what allows a journal to be vouched to a genuine event; without it the auditor cannot distinguish valid adjustments from invented ones. The rule directs the auditor to vouch journals to support, test the approval control, and scan the full population for unusual entries - treating unsupported journals as exceptions to investigate, never as proof of misstatement or of fraud.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRP-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-FRP-001\",\n      \"C-FRP-002\"\n    ],\n    \"missing_information\": [\n      \"The volume and nature of manual journals, especially at period-end.\",\n      \"Who can post and approve journals, and whether support is filed or routinely missing.\",\n      \"Whether the journal population can be extracted completely from the system.\"\n    ],\n    \"note\": \"A cluster of unsupported period-end journals is a suspected fraud indicator: investigate thoroughly on evidence, but never conclude fraud from the absence of support alone.\",\n    \"procedure_ids\": [\n      \"P-FRP-001-001\",\n      \"P-FRP-001-002\",\n      \"P-FRP-001-003\"\n    ],\n    \"risk_ids\": [\n      \"R-FRP-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRP-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRP-002A",
+  "name": "Management override capability -> fraud risk responses",
+  "rationale": "Those who design and oversee controls can bypass them, so normal controls provide no protection against override. The rule directs the auditor to the specific responses override requires: targeted journal-entry testing, inquiries of those charged with governance, and evaluation of estimates for bias - while preserving the distinction between opportunity, suspected indicator and confirmed fraud. v2: excludes F-FRP-001 - when unsupported manual journals are also present, the narrower RULE-FRP-002B (priority 5) fires instead, adding the journal-testing battery without duplicating the override procedures.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRP-002A\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-FRP-003\",\n      \"C-FRP-004\"\n    ],\n    \"missing_information\": [\n      \"Who holds privileged system access and what it permits.\",\n      \"The governance structure and whether independent challenge of management is realistic.\",\n      \"Any past instances of override or control breaches.\"\n    ],\n    \"note\": \"This rule fires on the override factor alone. Where undocumented manual journals are also present, the narrower priority-5 rule (RULE-FRP-002B) takes precedence and adds intensified journal testing.\",\n    \"procedure_ids\": [\n      \"P-FRP-002-001\",\n      \"P-FRP-002-002\",\n      \"P-FRP-002-003\"\n    ],\n    \"risk_ids\": [\n      \"R-FRP-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRP-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": [\n      {\n        \"factor_id\": \"F-FRP-001\",\n        \"type\": \"factor_selected\"\n      }\n    ]\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRP-002B",
+  "name": "Override plus undocumented journals -> intensified journal testing",
+  "rationale": "Management override capability combined with a population of undocumented manual journals is the highest-risk combination in financial reporting: the means (override) and the vehicle (unsupported journals) are both present. The narrower rule takes precedence over the general override rule and adds the full journal-testing battery - vouching, approval testing and population scanning - to the override procedures.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRP-002B\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-FRP-001\",\n      \"C-FRP-003\"\n    ],\n    \"missing_information\": [\n      \"Whether the journal population can be extracted completely, including post-closing entries.\",\n      \"Which individuals posted and approved the unusual entries identified.\",\n      \"Whether governance is aware of the override indicators found.\"\n    ],\n    \"note\": \"Priority 5 makes this rule take precedence over RULE-FRP-002A when both factors are selected; its procedure set is the union of journal testing and override testing. Findings here are suspected fraud indicators to be investigated on evidence - never presumed to be fraud.\",\n    \"procedure_ids\": [\n      \"P-FRP-001-001\",\n      \"P-FRP-001-002\",\n      \"P-FRP-001-003\",\n      \"P-FRP-002-001\"\n    ],\n    \"risk_ids\": [\n      \"R-FRP-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRP-002\",\n        \"type\": \"factor_selected\"\n      },\n      {\n        \"factor_id\": \"F-FRP-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRP-003",
+  "name": "No related-party identification -> disclosure completeness risk",
+  "rationale": "A related-party transaction can only be correctly measured and disclosed if it is first recognised as related-party. The rule directs the auditor to inspect the claimed population, to independently search for what the entity's process missed, and to test the substance, measurement and disclosure of what is found.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRP-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"DIS-COM\",\n      \"DIS-OCC\"\n    ],\n    \"control_ids\": [\n      \"C-FRP-005\",\n      \"C-FRP-006\"\n    ],\n    \"missing_information\": [\n      \"The complexity of the group and ownership structure.\",\n      \"Whether declarations of interest are obtained and how current they are.\",\n      \"The volume of transactions with unfamiliar counterparties or non-standard terms.\"\n    ],\n    \"note\": \"The missing process is a control deficiency; any particular undisclosed transaction found is a potential misstatement to investigate, not an assumed fraud.\",\n    \"procedure_ids\": [\n      \"P-FRP-003-001\",\n      \"P-FRP-003-002\",\n      \"P-FRP-003-003\"\n    ],\n    \"risk_ids\": [\n      \"R-FRP-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRP-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRP-004",
+  "name": "Unsupported provision assumptions -> measurement and completeness risk",
+  "rationale": "A provision is only as good as its assumptions; undocumented assumptions cannot be distinguished from biased ones. The rule directs the auditor to challenge each key assumption against evidence, to recalculate and sensitivity-test the amounts, and to search for obligations never provided for - developing an independent expectation rather than accepting management's number.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRP-004\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-VAL\",\n      \"BAL-COM\"\n    ],\n    \"control_ids\": [\n      \"C-FRP-007\",\n      \"C-FRP-008\"\n    ],\n    \"missing_information\": [\n      \"Which provisions are significant and judgmental, and what assumptions drive them.\",\n      \"What supporting evidence exists for the key assumptions.\",\n      \"How sensitive each significant provision is to its assumptions.\"\n    ],\n    \"note\": \"Distinguish honest estimation uncertainty from bias: challenge the evidence, not the person. A one-sided pattern of assumptions is a fraud risk factor, not proof of fraud.\",\n    \"procedure_ids\": [\n      \"P-FRP-004-001\",\n      \"P-FRP-004-002\",\n      \"P-FRP-004-003\"\n    ],\n    \"risk_ids\": [\n      \"R-FRP-004\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRP-004\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-FRP-005",
+  "name": "No disclosure completeness process -> omitted disclosures risk",
+  "rationale": "Disclosures do not affect the trial balance, so they are missed without a disciplined process. The rule directs the auditor to act as the missing control: complete an independent disclosure checklist, trace disclosed amounts to the records, and assess novel transactions for disclosure implications.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-FRP-005\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"DIS-COM\",\n      \"DIS-CLS\"\n    ],\n    \"control_ids\": [\n      \"C-FRP-009\",\n      \"C-FRP-010\"\n    ],\n    \"missing_information\": [\n      \"The applicable financial reporting framework and any new or amended requirements.\",\n      \"Whether new or unusual transactions occurred in the period.\",\n      \"Who prepares and reviews the disclosures.\"\n    ],\n    \"note\": \"An omitted disclosure misstates the financial statements taken as a whole even though no account balance is wrong; materiality is judged on the needs of users.\",\n    \"procedure_ids\": [\n      \"P-FRP-005-001\",\n      \"P-FRP-005-002\",\n      \"P-FRP-005-003\"\n    ],\n    \"risk_ids\": [\n      \"R-FRP-005\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-FRP-005\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-TEL-001",
+  "name": "Telecom towers and network sites carry dismantling and site-restoration (decommissioning) obligations -> Decommissioning provision omitted or understated; related asset-retirement cost not capitalised",
+  "rationale": "A large, dispersed site estate makes decommissioning obligations easy to overlook, so the rule directs the auditor first to the completeness of the obligation population (contracts to register) and then to measurement.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-TEL-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-COM\",\n      \"BAL-VAL\",\n      \"DIS-COM\"\n    ],\n    \"control_ids\": [\n      \"C-TEL-001-1\",\n      \"C-TEL-001-2\"\n    ],\n    \"missing_information\": [\n      \"Whether restoration obligations are enforceable under the site contracts and local regulation.\",\n      \"The number of sites and the materiality of the aggregate obligation.\",\n      \"The discount rate and cost assumptions used, and who approved them.\"\n    ],\n    \"note\": \"The provision addresses obligations existing at the reporting date; future network expansion plans are not provided for.\",\n    \"procedure_ids\": [\n      \"P-TEL-001-1\",\n      \"P-TEL-001-2\"\n    ],\n    \"risk_ids\": [\n      \"R-TEL-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-TEL-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-TEL-002",
+  "name": "Multi-element customer contracts (handset plus service bundles) -> Incorrect allocation of consideration across bundle components and premature revenue recognition",
+  "rationale": "Allocation error is systematic rather than random, so the rule focuses on reperforming the allocation logic on new plans and testing the approval control that authorises the inputs.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-TEL-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-ACC\",\n      \"TRN-CUT\",\n      \"TRN-CLS\"\n    ],\n    \"control_ids\": [\n      \"C-TEL-002-1\",\n      \"C-TEL-002-2\"\n    ],\n    \"missing_information\": [\n      \"The stand-alone selling prices used and how they were determined.\",\n      \"Whether any manual journals adjust system-generated allocation.\",\n      \"The volume of bundled contracts and their revenue share.\"\n    ],\n    \"note\": \"Manual top-side adjustments to allocation are a separate fraud-relevant consideration.\",\n    \"procedure_ids\": [\n      \"P-TEL-002-1\",\n      \"P-TEL-002-2\"\n    ],\n    \"risk_ids\": [\n      \"R-TEL-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-TEL-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-TEL-003",
+  "name": "High-volume automated billing with complex rating and tariff logic -> Systematic billing errors from rating or tariff configuration",
+  "rationale": "Because one defect replicates across millions of transactions, the rule emphasises independent reperformance and exception follow-up over vouching individual bills.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-TEL-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-ACC\",\n      \"TRN-COM\"\n    ],\n    \"control_ids\": [\n      \"C-TEL-003-1\",\n      \"C-TEL-003-2\"\n    ],\n    \"missing_information\": [\n      \"Whether IT general controls over the billing system are effective.\",\n      \"The volume and ageing of unresolved rating exceptions.\",\n      \"How tariff changes are tested before deployment.\"\n    ],\n    \"note\": \"Findings here may indicate a need for IT audit specialist involvement.\",\n    \"procedure_ids\": [\n      \"P-TEL-003-1\",\n      \"P-TEL-003-2\"\n    ],\n    \"risk_ids\": [\n      \"R-TEL-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-TEL-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-MFG-001",
+  "name": "Work in progress with absorbed production overheads -> Misallocated overheads and misstated work in progress",
+  "rationale": "Overhead valuation fails at the rate-setting stage, so the rule leads with reperformance of the model and a physical reality check on WIP stages.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-MFG-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-VAL\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-MFG-001-1\",\n      \"C-MFG-001-2\"\n    ],\n    \"missing_information\": [\n      \"The normal-capacity level assumed and how it compares with actual utilisation.\",\n      \"Whether overhead rates were updated for the current budget.\",\n      \"The ageing of open WIP jobs.\"\n    ],\n    \"note\": \"Abnormal amounts of wasted material or idle time are expensed, not absorbed.\",\n    \"procedure_ids\": [\n      \"P-MFG-001-1\",\n      \"P-MFG-001-2\"\n    ],\n    \"risk_ids\": [\n      \"R-MFG-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-MFG-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-MFG-002",
+  "name": "Standard costing with material variances not investigated -> Variances buried rather than analysed, misstating inventory and cost of sales",
+  "rationale": "Variances are the costing system's built-in diagnostic, so the rule treats them as the primary evidence and tests both their investigation and their accounting.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-MFG-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-ACC\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-MFG-002-1\"\n    ],\n    \"missing_information\": [\n      \"When standards were last revised and for which inputs.\",\n      \"How material variances are currently disposed of.\",\n      \"Whether variance investigations are documented.\"\n    ],\n    \"note\": \"Persistent adverse variances may also signal operational issues beyond the financial statements.\",\n    \"procedure_ids\": [\n      \"P-MFG-002-1\",\n      \"P-MFG-002-2\"\n    ],\n    \"risk_ids\": [\n      \"R-MFG-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-MFG-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-MFG-003",
+  "name": "Warranty obligations on goods sold -> Understated warranty provision",
+  "rationale": "Warranty estimates live or die on claim experience, so the rule centres on back-testing and cohort analysis rather than accepting the model.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-MFG-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-COM\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-MFG-003-1\"\n    ],\n    \"missing_information\": [\n      \"The warranty terms offered and which products they cover.\",\n      \"Claims history by cohort, especially for new products.\",\n      \"How the provision has compared with actual claims in prior periods.\"\n    ],\n    \"note\": \"A falling provision alongside rising sales is an analytical red flag, not proof of error.\",\n    \"procedure_ids\": [\n      \"P-MFG-003-1\",\n      \"P-MFG-003-2\"\n    ],\n    \"risk_ids\": [\n      \"R-MFG-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-MFG-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-RTL-001",
+  "name": "High-volume cash and card sales with shrinkage exposure -> Unrecorded sales and theft of takings (shrinkage)",
+  "rationale": "Cash volume is the risk driver, so the rule focuses on the till-to-bank trail and outlet-level analytics rather than individual transaction vouching.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-RTL-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-COM\",\n      \"BAL-EXI\"\n    ],\n    \"control_ids\": [\n      \"C-RTL-001-1\",\n      \"C-RTL-001-2\"\n    ],\n    \"missing_information\": [\n      \"The proportion of cash versus card sales.\",\n      \"Void, refund and discount rates by outlet.\",\n      \"How shrinkage is measured and provided for.\"\n    ],\n    \"note\": \"Findings of systematic shortfalls are fraud indicators to investigate, never automatic conclusions.\",\n    \"procedure_ids\": [\n      \"P-RTL-001-1\",\n      \"P-RTL-001-2\"\n    ],\n    \"risk_ids\": [\n      \"R-RTL-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-RTL-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-RTL-002",
+  "name": "Supplier rebates and promotional income -> Premature or overstated recognition of supplier rebates",
+  "rationale": "Supplier agreement is the key uncertainty, so the rule emphasises vouching to signed terms and external confirmation.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-RTL-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-ACC\",\n      \"TRN-CUT\"\n    ],\n    \"control_ids\": [\n      \"C-RTL-002-1\"\n    ],\n    \"missing_information\": [\n      \"Which rebate streams are material and their agreement status.\",\n      \"Whether terms are confirmed in writing by suppliers.\",\n      \"The basis of year-end accruals - actual or forecast volumes.\"\n    ],\n    \"note\": \"Rebates netted against cost of sales versus presented as income is a presentation consideration.\",\n    \"procedure_ids\": [\n      \"P-RTL-002-1\",\n      \"P-RTL-002-2\"\n    ],\n    \"risk_ids\": [\n      \"R-RTL-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-RTL-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-RTL-003",
+  "name": "Gift cards sold and loyalty points outstanding -> Understated deferred revenue from unredeemed gift cards and loyalty points",
+  "rationale": "The liability is the risk, so the rule works from the liability population outward: reconcile it, then test releases and breakage.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-RTL-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-COM\",\n      \"DIS-COM\"\n    ],\n    \"control_ids\": [\n      \"C-RTL-003-1\"\n    ],\n    \"missing_information\": [\n      \"The size of outstanding gift card and loyalty balances.\",\n      \"The breakage rate assumed and its historical support.\",\n      \"Expiry terms and how consistently they are applied.\"\n    ],\n    \"note\": \"Changes in breakage methodology are a classic earnings-management lever.\",\n    \"procedure_ids\": [\n      \"P-RTL-003-1\",\n      \"P-RTL-003-2\"\n    ],\n    \"risk_ids\": [\n      \"R-RTL-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-RTL-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-BNK-001",
+  "name": "Loan book subject to expected credit losses -> Understated loan impairment (expected credit losses)",
+  "rationale": "ECL fails at staging and parameter judgments, so the rule targets borderline cases and overlays rather than re-running the whole model naively.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-BNK-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-VAL\",\n      \"DIS-COM\"\n    ],\n    \"control_ids\": [\n      \"C-BNK-001-1\"\n    ],\n    \"missing_information\": [\n      \"The staging criteria and the volume of overrides.\",\n      \"How forward-looking scenarios are weighted.\",\n      \"The size and direction of management overlays.\"\n    ],\n    \"note\": \"This is typically a significant risk requiring special audit consideration and possible expertise.\",\n    \"procedure_ids\": [\n      \"P-BNK-001-1\",\n      \"P-BNK-001-2\"\n    ],\n    \"risk_ids\": [\n      \"R-BNK-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-BNK-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-BNK-002",
+  "name": "Interest income recognised on non-performing loans -> Overstated interest income on non-performing loans",
+  "rationale": "Accrual is automatic and stopping it is the decision, so the rule tests the suspension boundary and the provision against continuing accruals.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-BNK-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-ACC\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-BNK-002-1\"\n    ],\n    \"missing_information\": [\n      \"The policy criteria for suspending interest accrual.\",\n      \"The ageing and size of the NPL book.\",\n      \"Whether suspended interest is tracked for disclosure.\"\n    ],\n    \"note\": \"Regulatory definitions of non-performance may differ from accounting ones - both matter.\",\n    \"procedure_ids\": [\n      \"P-BNK-002-1\"\n    ],\n    \"risk_ids\": [\n      \"R-BNK-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-BNK-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-BNK-003",
+  "name": "Complex treasury and financial instruments -> Misclassification and valuation error in financial instruments",
+  "rationale": "Information asymmetry is the core problem, so the rule prioritises independent challenge of inputs and classification over accepting model outputs.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-BNK-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-VAL\",\n      \"BAL-CLS\",\n      \"DIS-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-BNK-003-1\"\n    ],\n    \"missing_information\": [\n      \"The size of level 3 exposures.\",\n      \"How often independent price verification is performed and by whom.\",\n      \"Any period-end reclassifications and their rationale.\"\n    ],\n    \"note\": \"Valuation expertise beyond the core audit team is often needed here.\",\n    \"procedure_ids\": [\n      \"P-BNK-003-1\",\n      \"P-BNK-003-2\"\n    ],\n    \"risk_ids\": [\n      \"R-BNK-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-BNK-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-INV-001",
+  "name": "Inadequate warehouse security -> inventory loss risk",
+  "rationale": "Unrestricted physical access removes the main barrier to unauthorised removal of goods, so recorded quantities may exceed quantities actually held. The rule directs the auditor to existence-focused substantive procedures and to test the completeness of loss records, with explicit per-assertion reasoning.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-INV-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-EXI\",\n      \"BAL-COM\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-INV-001\",\n      \"C-INV-002\"\n    ],\n    \"missing_information\": [\n      \"Whether inventory is material to the financial statements.\",\n      \"Whether a physical count is performed at or near the reporting date, and whether the auditor can attend.\",\n      \"Whether perpetual inventory records are maintained.\"\n    ],\n    \"note\": \"Physical safeguarding is the primary preventive control over inventory existence; its absence elevates existence risk and requires direct substantive evidence (observation, test counts) rather than reliance on records.\",\n    \"procedure_ids\": [\n      \"P-INV-001\",\n      \"P-INV-002\",\n      \"P-INV-003\",\n      \"P-INV-004\",\n      \"P-INV-005\",\n      \"P-INV-006\",\n      \"P-INV-007\",\n      \"P-INV-008\"\n    ],\n    \"risk_ids\": [\n      \"R-INV-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-INV-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PAY-001",
+  "name": "Terminated employees remain on payroll -> ghost employee risk",
+  "rationale": "A lag between termination and removal from the payroll master, combined with bulk electronic payments, creates the opportunity for continued payments to non-employees. The rule directs occurrence-focused testing: analytical scans, tracing leavers, and vouching payees to employment evidence.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PAY-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"BAL-EXI\"\n    ],\n    \"control_ids\": [\n      \"C-PAY-001\",\n      \"C-PAY-002\"\n    ],\n    \"missing_information\": [\n      \"Whether payroll is material to the financial statements.\",\n      \"How leavers are communicated from HR to payroll, and the typical delay before removal.\",\n      \"Whether anyone reconciles the payroll master to HR employment records.\"\n    ],\n    \"note\": \"Ghost-employee testing starts from independent populations (HR leaver lists, headcount) rather than from the payroll register itself, which is the record under suspicion.\",\n    \"procedure_ids\": [\n      \"P-PAY-001\",\n      \"P-PAY-002\",\n      \"P-PAY-003\",\n      \"P-PAY-004\"\n    ],\n    \"risk_ids\": [\n      \"R-PAY-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PAY-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PAY-002",
+  "name": "No segregation of payroll duties -> fictitious payee risk",
+  "rationale": "Combined control of employee master records and payment processing removes the primary barrier to creating fictitious payees. The rule directs the auditor to test access rights, vouch master changes to independent approval, and scan for fictitious-employee indicators.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PAY-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-PAY-003\",\n      \"C-PAY-004\"\n    ],\n    \"missing_information\": [\n      \"Which users hold payroll master-change and payment-release rights.\",\n      \"Whether master changes require independent approval in the system or on paper.\",\n      \"Whether the payroll payment file is reviewed before release.\"\n    ],\n    \"note\": \"Access rights alone do not prove misstatement; they establish opportunity. Substantive testing of master changes and payments is required to determine whether the opportunity was exploited.\",\n    \"procedure_ids\": [\n      \"P-PAY-005\",\n      \"P-PAY-006\",\n      \"P-PAY-007\",\n      \"P-PAY-008\"\n    ],\n    \"risk_ids\": [\n      \"R-PAY-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PAY-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PAY-003",
+  "name": "Overtime not independently approved -> inflated overtime risk",
+  "rationale": "Without independent approval there is no check that overtime was worked or necessary, particularly where hours are self-reported. The rule directs vouching of overtime to approved timesheets corroborated by attendance records, plus analytical procedures to find concentrations.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PAY-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-PAY-005\",\n      \"C-PAY-006\"\n    ],\n    \"missing_information\": [\n      \"Whether overtime is material, and at what premium rates it is paid.\",\n      \"How overtime hours are recorded - self-reported timesheets or independent clocking.\",\n      \"Who approves overtime and whether approval is independent of the claimant.\"\n    ],\n    \"note\": \"A missing approval is a control deficiency, not proof the overtime was not worked. Unapproved claims require heavier substantive vouching, not automatic disallowance.\",\n    \"procedure_ids\": [\n      \"P-PAY-009\",\n      \"P-PAY-010\",\n      \"P-PAY-011\",\n      \"P-PAY-012\"\n    ],\n    \"risk_ids\": [\n      \"R-PAY-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PAY-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PAY-004",
+  "name": "Incorrect payroll calculations -> misstated wages and deductions",
+  "rationale": "Errors in rates, tax tables or deduction parameters flow systematically into pay and related liabilities. The rule directs independent recalculation from authorised sources, agreement of rates, and reconciliation of payroll to the ledger.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PAY-004\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-ACC\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-PAY-007\",\n      \"C-PAY-008\"\n    ],\n    \"missing_information\": [\n      \"Whether payroll is calculated manually, by system, or by an outsourced provider.\",\n      \"How rate and tax tables are updated, and whether changes are independently reviewed.\",\n      \"Whether the payroll summary is independently reviewed before payments are released.\"\n    ],\n    \"note\": \"Because calculation errors are often systematic, the auditor quantifies the aggregate effect on wages expense and statutory liabilities rather than treating each error as isolated.\",\n    \"procedure_ids\": [\n      \"P-PAY-013\",\n      \"P-PAY-014\",\n      \"P-PAY-015\",\n      \"P-PAY-016\"\n    ],\n    \"risk_ids\": [\n      \"R-PAY-004\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PAY-004\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PPE-001",
+  "name": "Repairs capitalised without assessment -> classification and valuation risk",
+  "rationale": "Capitalisation without documented assessment against clear criteria is a recognised source of misclassification between expense and asset. The rule directs the auditor to test the classification boundary substantively (vouching near-boundary items), to inspect the policy and approval controls, and to use analytical procedures to spot systematic shifts - with per-assertion reasoning explaining why classification and valuation are affected.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PPE-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-CLS\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-PPE-001\",\n      \"C-PPE-002\"\n    ],\n    \"missing_information\": [\n      \"The entity's capitalisation policy and how it is applied in practice.\",\n      \"The volume and nature of repairs and maintenance expenditure in the period.\",\n      \"Whether performance measures create pressure to report higher profits.\"\n    ],\n    \"note\": \"The factor is a risk indicator, not evidence of misstatement: each tested item must be judged against the criteria, and inconsistent treatment investigated rather than assumed to be intentional.\",\n    \"procedure_ids\": [\n      \"P-PPE-001-001\",\n      \"P-PPE-001-002\",\n      \"P-PPE-001-003\"\n    ],\n    \"risk_ids\": [\n      \"R-PPE-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PPE-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PPE-002",
+  "name": "Unreviewed depreciation parameters -> charge and carrying amount risk",
+  "rationale": "Depreciation parameters set in the past drift from economic reality without periodic review. The rule directs the auditor beyond arithmetical accuracy (recalculation) to the appropriateness of the parameters themselves (evaluation against usage, condition and industry practice), plus testing of change controls.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PPE-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-VAL\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-PPE-003\",\n      \"C-PPE-004\"\n    ],\n    \"missing_information\": [\n      \"The depreciation policy, rates and useful lives currently applied.\",\n      \"When the parameters were last reviewed, by whom, and with what conclusion.\",\n      \"Information on asset usage, condition and technological change.\"\n    ],\n    \"note\": \"Accurate application of inappropriate parameters still produces a misstatement: recalculation alone is insufficient without evaluating the parameters.\",\n    \"procedure_ids\": [\n      \"P-PPE-002-001\",\n      \"P-PPE-002-002\",\n      \"P-PPE-002-003\"\n    ],\n    \"risk_ids\": [\n      \"R-PPE-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PPE-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PPE-003",
+  "name": "Disposals not communicated -> existence risk for recorded assets",
+  "rationale": "When operations can dispose of assets without finance being informed, the register retains assets that no longer exist. The rule directs the auditor to direct existence testing (physical verification from the register), to test recorded disposals, and to actively search for unrecorded disposals.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PPE-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-EXI\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-PPE-005\",\n      \"C-PPE-006\"\n    ],\n    \"missing_information\": [\n      \"How disposals are currently communicated from operations to finance.\",\n      \"The volume and nature of disposals, scrapping and demolitions in the period.\",\n      \"The age profile and locations of assets on the register.\"\n    ],\n    \"note\": \"The factor is a control deficiency (missing communication), not proof of overstatement: each missing asset found must be investigated to establish what happened to it.\",\n    \"procedure_ids\": [\n      \"P-PPE-003-001\",\n      \"P-PPE-003-002\",\n      \"P-PPE-003-003\"\n    ],\n    \"risk_ids\": [\n      \"R-PPE-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PPE-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PPE-004",
+  "name": "No impairment indicator process -> unrecognised impairment risk",
+  "rationale": "Impairment is only recognised if indicators are first noticed; without a process to look for them, carrying amounts can remain overstated. The rule directs the auditor to evaluate management's assessment (or its absence), to independently identify indicators through analytical procedures, and to test measurement where indicators exist.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PPE-004\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-VAL\",\n      \"DIS-COM\"\n    ],\n    \"control_ids\": [\n      \"C-PPE-007\",\n      \"C-PPE-008\"\n    ],\n    \"missing_information\": [\n      \"Whether any assets, operations or markets show signs of underperformance, idleness, damage or adverse change.\",\n      \"How management currently considers impairment, if at all.\",\n      \"The definition and composition of cash-generating units.\"\n    ],\n    \"note\": \"The absence of an assessment process does not prove impairment exists; the auditor must form an independent view on indicators before concluding on measurement.\",\n    \"procedure_ids\": [\n      \"P-PPE-004-001\",\n      \"P-PPE-004-002\",\n      \"P-PPE-004-003\"\n    ],\n    \"risk_ids\": [\n      \"R-PPE-004\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PPE-004\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PPE-005",
+  "name": "Replaced components not derecognised -> double-counted carrying amount",
+  "rationale": "Capitalising a replacement without derecognising the replaced part counts the same economic capacity twice. The rule directs the auditor to trace replacement work orders to derecognition entries, to test componentisation, and to corroborate the work through observation.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PPE-005\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"BAL-EXI\",\n      \"BAL-VAL\"\n    ],\n    \"control_ids\": [\n      \"C-PPE-009\",\n      \"C-PPE-010\"\n    ],\n    \"missing_information\": [\n      \"The scale of replacement and overhaul programmes in the period.\",\n      \"Whether significant assets are componentised in the register.\",\n      \"How replacement work is described in work orders and communicated to finance.\"\n    ],\n    \"note\": \"Derecognition is the other half of the replacement entry: testing only the capitalised cost would miss the double-count.\",\n    \"procedure_ids\": [\n      \"P-PPE-005-001\",\n      \"P-PPE-005-002\",\n      \"P-PPE-005-003\"\n    ],\n    \"risk_ids\": [\n      \"R-PPE-005\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PPE-005\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PUR-001",
+  "name": "Unmatched supplier invoices -> invalid purchase risk",
+  "rationale": "Without matching to receipt evidence, nothing stops invoices for goods never delivered from being recorded and paid. The rule directs vouching to GRNs, a test of the matching control, and follow-up of the exception population most at risk.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PUR-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-PUR-001\",\n      \"C-PUR-002\"\n    ],\n    \"missing_information\": [\n      \"Whether any matching is performed at all, and by whom.\",\n      \"The volume and value of invoices approved without matches.\",\n      \"Whether segregation exists between receiving and payment approval.\"\n    ],\n    \"note\": \"An unmatched invoice is an exception to investigate, not a confirmed invalid purchase.\",\n    \"procedure_ids\": [\n      \"P-PUR-001\",\n      \"P-PUR-002\",\n      \"P-PUR-003\"\n    ],\n    \"risk_ids\": [\n      \"R-PUR-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PUR-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PUR-002",
+  "name": "Late supplier invoices -> unrecorded liabilities risk",
+  "rationale": "A liability exists on receipt, not on invoicing; late invoices therefore create unrecorded liabilities. The rule directs two-directional cut-off testing around GRNs and inspection of management's accrual, targeting completeness and cut-off.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PUR-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-CUT\",\n      \"TRN-COM\",\n      \"BAL-COM\"\n    ],\n    \"control_ids\": [\n      \"C-PUR-003\",\n      \"C-PUR-004\"\n    ],\n    \"missing_information\": [\n      \"Whether unmatched GRNs are accrued at period end.\",\n      \"The typical invoice lag by supplier.\",\n      \"The materiality of uninvoiced receipts.\"\n    ],\n    \"note\": \"Completeness of liabilities is tested by looking for what is missing: GRN-to-ledger tracing is the key procedure.\",\n    \"procedure_ids\": [\n      \"P-PUR-004\",\n      \"P-PUR-005\",\n      \"P-PUR-006\"\n    ],\n    \"risk_ids\": [\n      \"R-PUR-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PUR-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PUR-003",
+  "name": "Uncontrolled supplier master changes -> fictitious supplier risk",
+  "rationale": "Master data decides who gets paid and into which account, so uncontrolled changes create both error and fraud opportunity. The rule directs a test of the approval control, substantive vouching of payments to new or changed suppliers, and full-population analysis for fictitious-supplier indicators.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PUR-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"BAL-EXI\"\n    ],\n    \"control_ids\": [\n      \"C-PUR-005\",\n      \"C-PUR-006\"\n    ],\n    \"missing_information\": [\n      \"Who can change master data and who processes payments.\",\n      \"Whether a tamper-evident change log exists.\",\n      \"Whether bank-detail changes are verified independently.\"\n    ],\n    \"note\": \"An unapproved change is a control deviation to investigate - it is not proof that any payment was diverted or that fraud occurred.\",\n    \"procedure_ids\": [\n      \"P-PUR-007\",\n      \"P-PUR-008\",\n      \"P-PUR-009\"\n    ],\n    \"risk_ids\": [\n      \"R-PUR-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PUR-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PUR-004",
+  "name": "Duplicate invoice processing -> duplicate recording risk",
+  "rationale": "A second recording of the same invoice is not a second purchase, and a second payment is a cash loss. The rule directs full-population duplicate analysis, documentary resolution of each suspected duplicate, and a test of the paid-invoice control.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PUR-004\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-PUR-007\",\n      \"C-PUR-008\"\n    ],\n    \"missing_information\": [\n      \"Whether the system validates invoice number uniqueness per supplier.\",\n      \"How paid invoices are marked against reprocessing.\",\n      \"Whether manual journals bypass system checks.\"\n    ],\n    \"note\": \"A duplicate invoice number still requires investigation: the supplier may have genuinely reissued the invoice.\",\n    \"procedure_ids\": [\n      \"P-PUR-010\",\n      \"P-PUR-011\",\n      \"P-PUR-012\"\n    ],\n    \"risk_ids\": [\n      \"R-PUR-004\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PUR-004\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-PUR-005",
+  "name": "Wrong-period purchase recording -> cut-off risk",
+  "rationale": "The correct period for a purchase is determined by receipt, not by invoice processing. The rule directs two-directional cut-off testing, GRN tracing for completeness, and trend analysis to focus testing on the months most at risk.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-PUR-005\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-CUT\",\n      \"TRN-COM\"\n    ],\n    \"control_ids\": [\n      \"C-PUR-009\",\n      \"C-PUR-010\"\n    ],\n    \"missing_information\": [\n      \"How posting dates are determined (receipt date vs invoice date).\",\n      \"The lag between receipt and processing at period end.\",\n      \"Whether cut-off errors were found in prior periods.\"\n    ],\n    \"note\": \"Cut-off errors can fall in either direction and are often error rather than fraud; testing covers both directions.\",\n    \"procedure_ids\": [\n      \"P-PUR-013\",\n      \"P-PUR-014\",\n      \"P-PUR-015\"\n    ],\n    \"risk_ids\": [\n      \"R-PUR-005\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-PUR-005\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-REV-001",
+  "name": "Premature revenue recognition -> revenue overstatement risk",
+  "rationale": "Recording revenue before the recognition criteria are met breaks the link between the entry and the underlying event, so recorded revenue may be overstated (occurrence) and in the wrong period (cut-off). The rule directs the auditor to occurrence-focused vouching, contract inspection and cut-off testing, plus a test of the preventive matching control.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-REV-001\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-CUT\"\n    ],\n    \"control_ids\": [\n      \"C-REV-001\",\n      \"C-REV-002\"\n    ],\n    \"missing_information\": [\n      \"The entity's revenue recognition policy and when the criteria are deemed met.\",\n      \"Whether billing is linked to dispatch or acceptance evidence.\",\n      \"Whether revenue is material and concentrated at period ends.\"\n    ],\n    \"note\": \"Premature recognition is a presumed fraud risk area; the rule treats the factor as a risk indicator requiring testing, not as proof of misstatement.\",\n    \"procedure_ids\": [\n      \"P-REV-001\",\n      \"P-REV-002\",\n      \"P-REV-003\",\n      \"P-REV-004\"\n    ],\n    \"risk_ids\": [\n      \"R-REV-001\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-REV-001\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-REV-002",
+  "name": "Late-recorded dispatches -> revenue understatement (cut-off) risk",
+  "rationale": "When dispatch precedes invoicing across the reporting date, earned sales fall out of the current period. The rule directs two-directional cut-off testing and inspection of management's own reconciliation, targeting completeness and cut-off of revenue.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-REV-002\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-CUT\",\n      \"TRN-COM\"\n    ],\n    \"control_ids\": [\n      \"C-REV-003\",\n      \"C-REV-004\"\n    ],\n    \"missing_information\": [\n      \"Whether a dispatch-to-invoice reconciliation is performed at period end.\",\n      \"Whether unmatched dispatches are accrued, and how reliably.\",\n      \"The typical lag between dispatch and invoicing.\"\n    ],\n    \"note\": \"Understatement is often error rather than fraud, but systematic late recording warrants the same scepticism as premature recognition.\",\n    \"procedure_ids\": [\n      \"P-REV-005\",\n      \"P-REV-006\",\n      \"P-REV-007\"\n    ],\n    \"risk_ids\": [\n      \"R-REV-002\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-REV-002\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-REV-003",
+  "name": "Unsupported sales -> fictitious revenue risk",
+  "rationale": "Dispatch or performance evidence connects a recorded sale to a real event; without it the auditor cannot distinguish missing paperwork from a sale that never happened. The rule directs vouching to supporting evidence, analytical comparison with operational data, and external confirmation for independent corroboration.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-REV-003\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-REV-005\",\n      \"C-REV-006\"\n    ],\n    \"missing_information\": [\n      \"Which revenue streams lack dispatch evidence and why.\",\n      \"Whether alternative evidence of performance exists for those streams.\",\n      \"Whether the gap reflects missing documents or a missing control.\"\n    ],\n    \"note\": \"Missing evidence is a control deficiency and a risk indicator; an unsupported invoice is an exception to investigate, not a confirmed fictitious sale.\",\n    \"procedure_ids\": [\n      \"P-REV-008\",\n      \"P-REV-009\",\n      \"P-REV-010\"\n    ],\n    \"risk_ids\": [\n      \"R-REV-003\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-REV-003\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-REV-004",
+  "name": "Revenue-linked incentives -> fraud risk over revenue",
+  "rationale": "Material revenue-linked incentives give management a motive to manipulate revenue, and manual journals and period-end discretion provide the opportunity. The rule directs analytics tied to target mechanics, journal entry testing, and corroborated inquiry - with explicit warnings against presuming fraud.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-REV-004\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-CUT\",\n      \"TRN-ACC\"\n    ],\n    \"control_ids\": [\n      \"C-REV-007\",\n      \"C-REV-008\"\n    ],\n    \"missing_information\": [\n      \"The incentive plan terms, targets and measurement dates.\",\n      \"How material the payouts are to the individuals concerned.\",\n      \"The governance oversight of revenue judgements.\"\n    ],\n    \"note\": \"Incentives create pressure, one element of the fraud triangle; the factor is a fraud risk indicator only and proves nothing on its own.\",\n    \"procedure_ids\": [\n      \"P-REV-011\",\n      \"P-REV-012\",\n      \"P-REV-013\"\n    ],\n    \"risk_ids\": [\n      \"R-REV-004\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-REV-004\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "RULE-REV-005",
+  "name": "Unusual year-end transactions -> validity and cut-off risk",
+  "rationale": "Non-routine transactions bypass normal processing controls and their year-end timing can be chosen for effect. The rule directs the auditor to understand each transaction's substance, corroborate it with independent evidence, and scan the full population so unusual items are not missed.",
+  "definition_json": "{\n  \"rule_id\": \"RULE-REV-005\",\n  \"then\": {\n    \"assertion_ids\": [\n      \"TRN-OCC\",\n      \"TRN-CUT\",\n      \"TRN-CLS\"\n    ],\n    \"control_ids\": [\n      \"C-REV-009\",\n      \"C-REV-010\"\n    ],\n    \"missing_information\": [\n      \"The business rationale for each unusual transaction.\",\n      \"The counterparties involved and their relationship to the entity.\",\n      \"Whether the transactions were reversed after year-end.\"\n    ],\n    \"note\": \"Unusual does not mean misstated: each transaction is assessed on its own facts for substance, timing and classification.\",\n    \"procedure_ids\": [\n      \"P-REV-014\",\n      \"P-REV-015\",\n      \"P-REV-016\"\n    ],\n    \"risk_ids\": [\n      \"R-REV-005\"\n    ]\n  },\n  \"when\": {\n    \"all\": [\n      {\n        \"factor_id\": \"F-REV-005\",\n        \"type\": \"factor_selected\"\n      }\n    ],\n    \"any\": [],\n    \"exclude\": []\n  }\n}",
+  "review_status": "internal_review",
+  "effective_date": "2026-10-21",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ }
+]

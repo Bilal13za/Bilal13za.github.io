@@ -1,0 +1,758 @@
+[
+ {
+  "id": "E-CSH-001",
+  "name": "Bank reconciliation",
+  "description": "The entity's reconciliation of the cash book balance to the bank statement balance, listing outstanding items.\n\nSource: Internal\n\nReliability notes: Reliability depends on independent review and investigation of outstanding items. An unreviewed reconciliation is the record under test, not corroboration of the cash balance.\n\nLimitations: Internally prepared; proves arithmetic agreement, not that outstanding items are genuine.\n\nContradictory evidence: Bank statements or confirmations that disagree with the reconciled balance.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-002",
+  "name": "Bank statement",
+  "description": "The bank-issued statement of account transactions and balances for the period.\n\nSource: External\n\nReliability notes: Obtained directly from the bank it is strong independent evidence of movements and balances; a client-provided copy is less reliable and should be agreed to the confirmation where risk is high.\n\nLimitations: Shows bank movements only; does not explain their business purpose.\n\nContradictory evidence: Bank-originated transactions with no corresponding book entry.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-003",
+  "name": "Bank confirmation letter",
+  "description": "Direct written confirmation from the bank of account balances, facilities and related matters at the reporting date, obtained by the auditor.\n\nSource: External\n\nReliability notes: High reliability: obtained directly by the auditor from an independent third party, specifically for the audit purpose.\n\nLimitations: Confirms balances at a point in time only; does not address transactions during the period.\n\nContradictory evidence: Reconciliation balances that differ from the confirmed balance.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-004",
+  "name": "Outstanding items schedule",
+  "description": "Schedule of unpresented cheques, deposits in transit and other reconciling items with dates and amounts.\n\nSource: Internal\n\nReliability notes: Reliability comes from vouching items to subsequent bank statements and supporting documents; an aged, uninvestigated schedule is itself an indicator of weak controls.\n\nLimitations: A schedule proves items were listed, not that they are genuine.\n\nContradictory evidence: Outstanding items that remain uncleared long after the reporting date.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-005",
+  "name": "Payment register / bank payment listing",
+  "description": "The complete listing of payments made in the period, showing date, beneficiary, amount and supporting reference.\n\nSource: Internal\n\nReliability notes: System-generated listings are more reliable than manual ones. The register is the population under test for unusual payments, not corroboration of their validity.\n\nLimitations: Only records payments entered into the system; payments made outside the system leave no trace here.\n\nContradictory evidence: Payments with no entry in the payment register (off-book payments).",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-006",
+  "name": "Supporting documents for payments",
+  "description": "Invoices, contracts, purchase orders, expense claims or other documents presented as support for a payment.\n\nSource: Internal\n\nReliability notes: Reliability increases where documents are originals, independently approved, and corroborated to third-party evidence (e.g. supplier statements). A document alone does not prove the underlying transaction was genuine.\n\nLimitations: Documents can be fabricated; inspection assesses consistency, not authenticity, unless corroborated externally.\n\nContradictory evidence: Supporting documents that are inconsistent, photocopied without originals, or contradicted by third-party evidence.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-007",
+  "name": "Beneficiary verification records",
+  "description": "Records of the checks performed before adding a beneficiary: business registration, bank account verification, and approval.\n\nSource: Internal\n\nReliability notes: More reliable where verification used independent sources (e.g. direct bank confirmation of account ownership) rather than documents supplied by the beneficiary.\n\nLimitations: Verification is a point-in-time check; bank details may be changed afterwards.\n\nContradictory evidence: Beneficiaries paid with no verification record on file.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-008",
+  "name": "Inter-account transfer register",
+  "description": "Log of transfers between the entity's bank accounts, showing date, amount, sending and receiving accounts.\n\nSource: Internal\n\nReliability notes: Reliability depends on completeness of logging; corroboration comes from matching both sides to bank statements.\n\nLimitations: Only complete if all transfers are logged; deliberate omissions leave no trace.\n\nContradictory evidence: Transfers recorded on one side only at the reporting date.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-009",
+  "name": "Bank transfer advices",
+  "description": "Bank-issued advices or system confirmations for individual transfers around the reporting date.\n\nSource: External\n\nReliability notes: Bank-generated advices are independent evidence of the transfer; value dates are key for cut-off testing.\n\nLimitations: Proves the transfer instruction, not that both sides were recorded correctly.\n\nContradictory evidence: Transfer advices that do not agree with the bank statements.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-010",
+  "name": "Cash count sheets",
+  "description": "The entity's record of a cash count: denominations counted, total, counter identity and date.\n\nSource: Internal\n\nReliability notes: More reliable where the count was surprise and the counter independent of custody; weakened where the cashier counted their own cash.\n\nLimitations: Proves the count was recorded, not that it was performed properly or independently.\n\nContradictory evidence: Cash records exceeding the counted cash.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-011",
+  "name": "Petty cash records and vouchers",
+  "description": "Petty cash book, vouchers and receipts recording cash held and disbursed.\n\nSource: Internal\n\nReliability notes: Reliability depends on independent review and the discipline of supporting every disbursement with a receipt; IOUs recorded as cash overstate the balance.\n\nLimitations: Internally maintained; IOUs or unsupported vouchers may be included as cash.\n\nContradictory evidence: Petty cash vouchers without receipts or approval.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-CSH-012",
+  "name": "Auditor's cash count record",
+  "description": "The auditor's independent record of cash counted, by denomination, at the time of the count.\n\nSource: Auditor-generated\n\nReliability notes: High reliability for existence of the cash counted: obtained directly by the auditor through inspection.\n\nLimitations: Covers only the cash presented for counting; concealed cash is outside its scope.\n\nContradictory evidence: Entity count sheets showing a different total for the same cash.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRD-001",
+  "name": "Complete manual journal population extract",
+  "description": "A complete extract of all manual journal entries for the period, obtained directly from the system, including preparer, approver, date, time, accounts and amounts.\n\nSource: Auditor-generated\n\nReliability notes: High reliability for completeness when obtained directly by the auditor from the system and reconciled to the ledger; reliability falls if the auditor cannot verify the extract is complete.\n\nLimitations: Only covers journals in the system; top-side or off-system adjustments are not captured.\n\nContradictory evidence: Journal population that does not reconcile to the general ledger movement in the period.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRD-002",
+  "name": "Journal approval records and supporting documentation",
+  "description": "Approval records, supporting schedules and authorisation evidence for tested journal entries.\n\nSource: Internal\n\nReliability notes: Internally generated; reliability depends on the approver's independence and competence. Approval after posting is a deficiency, not evidence of control operation.\n\nLimitations: Approval may be perfunctory; the signature proves a control operated, not that it was effective.\n\nContradictory evidence: Journals posted without approval or with approval after the fact.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRD-003",
+  "name": "Prior-year estimate working papers and actual outcome data",
+  "description": "Prior-period estimate working papers alongside the actual outcomes when they became known.\n\nSource: Internal / Auditor-generated\n\nReliability notes: Working papers are internal and may reflect the bias under test; actual outcome data is more objective. The comparison itself is auditor-generated and therefore more reliable than either source alone.\n\nLimitations: A single-period difference proves nothing; bias is assessed from a pattern, and hindsight must not be confused with bias at the time.\n\nContradictory evidence: Actual outcomes consistently differing from estimates in the same direction.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRD-004",
+  "name": "Contracts and business correspondence for unusual transactions",
+  "description": "Contracts, correspondence, board approvals and commercial documentation supporting significant unusual transactions.\n\nSource: Internal / External\n\nReliability notes: External contracts are more reliable than internal memos; reliability increases with corroboration from independent sources (e.g. counterparty confirmation).\n\nLimitations: Documents can be fabricated to support a sham transaction; the auditor must remain sceptical of internally generated support.\n\nContradictory evidence: Transaction terms that make no commercial sense or counterparties that cannot be verified.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRD-005",
+  "name": "Surprise count records (cash and inventory)",
+  "description": "The auditor's independent record of cash counted and inventory test-counted without prior notice to the entity.\n\nSource: Auditor-generated\n\nReliability notes: High reliability: obtained directly by the auditor through observation and inspection, and the surprise element reduces the opportunity for concealment.\n\nLimitations: A point-in-time procedure; does not address misappropriation that occurred and was concealed before the count date.\n\nContradictory evidence: Count differences with no plausible explanation.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRD-006",
+  "name": "Related-party registers and governance records",
+  "description": "Shareholder registers, directorship records, board minutes and organisational charts used to identify related parties.\n\nSource: Internal\n\nReliability notes: Official registers are moderately reliable; board minutes are internal. Completeness of the related-party population is the key limitation - absence from these records does not prove a party is unrelated.\n\nLimitations: Deliberately concealed relationships may not appear in any of these sources.\n\nContradictory evidence: Transactions with parties later identified as related but undisclosed.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRD-007",
+  "name": "Bank statements and confirmations obtained directly",
+  "description": "Bank statements obtained directly from the bank and third-party confirmations of balances and arrangements.\n\nSource: External\n\nReliability notes: High reliability: external source, obtained directly by the auditor without passing through the entity.\n\nLimitations: Confirms the bank's records, not the entity's completeness; collusion with bank staff is possible but rare.\n\nContradictory evidence: Bank movements with no corresponding accounting entry.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRD-008",
+  "name": "HR and role records evidencing segregation (or its absence)",
+  "description": "HR records, role descriptions, leave records and organisation charts evidencing who performs incompatible functions.\n\nSource: Internal\n\nReliability notes: Internal records of moderate reliability; corroboration through observation of who actually performs the tasks increases reliability.\n\nLimitations: Documents describe the intended design; actual practice may differ (enquiry and observation needed).\n\nContradictory evidence: HR records showing the same person in incompatible roles with no compensating control.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-001",
+  "name": "Manual journal listing",
+  "description": "The complete population of manual (non-system-generated) journal entries for the period, showing journal number, date, preparer, accounts, amounts and description.\n\nSource: Internal\n\nReliability notes: The listing is the population under test, not corroboration of it. Its reliability for completeness depends on IT controls over journal numbering and on the auditor's own completeness checks.\n\nLimitations: The listing proves what was posted, not whether it should have been.\n\nContradictory evidence: Gaps in the sequence or journals in the listing that do not appear in the population tested.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-002",
+  "name": "Supporting documents for manual journals",
+  "description": "The calculations, agreements, correspondence or other documents cited as the basis for manual journals.\n\nSource: Internal\n\nReliability notes: Third-party or system-generated support is more reliable than internally prepared explanations. Given the factor (support often absent), missing support is itself a finding, not a neutral fact.\n\nLimitations: Documents can be created after the event to justify an entry; support proves a rationale existed, not that it was the genuine reason.\n\nContradictory evidence: Journals described as adjustments with no calculation or agreement behind them.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-003",
+  "name": "Journal approval records",
+  "description": "Records of who approved each manual journal and when, relative to posting.\n\nSource: Internal\n\nReliability notes: Reliability depends on the approver's independence, competence and the timing of approval; post-dated or self-approved journals weaken the evidence significantly.\n\nLimitations: An approval record proves a signature was obtained, not that the approver understood or challenged the entry.\n\nContradictory evidence: Approval stamps applied in bulk at period-end with no evidence of actual review.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-004",
+  "name": "Journal entries flagged for override indicators",
+  "description": "Manual journal entries selected or flagged because they exhibit override indicators: posted by senior management, outside normal hours, round amounts, vague descriptions, to seldom-used accounts, or at period-end.\n\nSource: Internal / Auditor-extracted\n\nReliability notes: System-extracted characteristics (timestamps, user IDs, amounts) are relatively reliable as facts about the entry; the inference that an indicator suggests override requires corroboration and must never be treated as proof of fraud.\n\nLimitations: Indicators are risk flags, not proof of impropriety; most flagged entries will have innocent explanations.\n\nContradictory evidence: A population that cannot be reconciled to the ledger, suggesting journals were excluded.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-005",
+  "name": "Governance meeting minutes",
+  "description": "Minutes of board and audit committee meetings covering the financial reporting process, significant judgments, and any concerns raised about override or fraud.\n\nSource: Internal\n\nReliability notes: Inquiry of those charged with governance, documented in minutes, is a required procedure but weak standalone evidence; reliability comes from consistency with other audit evidence and from the candour of the discussion.\n\nLimitations: Minutes record what was minuted; sensitive discussions may be omitted or summarised blandly.\n\nContradictory evidence: Minutes that record no discussion of judgments, estimates or unusual items.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-006",
+  "name": "Documentation of significant estimates",
+  "description": "Management's documentation of significant accounting estimates: the method, key assumptions, sensitivity, and how estimation uncertainty was addressed.\n\nSource: Internal\n\nReliability notes: The documentation is the item under test for bias, not corroboration of neutrality. Reliability for the audit conclusion comes from the auditor's independent challenge, sensitivity analysis and comparison with subsequent outcomes.\n\nLimitations: Management-prepared and inherently judgmental; documentation can rationalise a biased outcome.\n\nContradictory evidence: Estimate documentation that merely asserts a number with no workings.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-007",
+  "name": "Related-party register and declarations of interest",
+  "description": "The entity's register of related parties together with signed declarations of interest from directors and key management personnel.\n\nSource: Internal\n\nReliability notes: Internal and declaration-dependent, so weak as proof of completeness. The auditor corroborates with independent sources (corporate registries, board minutes, shareholder records) rather than relying on the register alone.\n\nLimitations: Only as complete as the declarations behind it; concealed relationships leave no trace here.\n\nContradictory evidence: Declarations contradicted by corporate registry or other public records.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-008",
+  "name": "Shareholder and corporate records",
+  "description": "Shareholder registers, corporate registry filings, directorship records and organisational charts used to corroborate the related-party register.\n\nSource: External\n\nReliability notes: More reliable than management declarations because independent of them; still limited to formal relationships, so the auditor remains alert to substance-over-form indicators.\n\nLimitations: Public records may be out of date or may not capture de facto control or close family connections.\n\nContradictory evidence: Corporate records showing ownership or directorships not in the register.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-009",
+  "name": "Related-party transaction documentation",
+  "description": "Contracts, invoices and correspondence for transactions identified as being with related parties.\n\nSource: Internal\n\nReliability notes: Third-party-style documentation (signed contracts) is moderately reliable evidence of the recorded terms; it does not by itself establish that the terms are arm's length or that the transaction has commercial substance.\n\nLimitations: Documents show the recorded terms; whether those terms are arm's length requires separate evaluation.\n\nContradictory evidence: Related-party contracts with unusual terms and no business rationale documented.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-010",
+  "name": "Provision calculation schedules",
+  "description": "Management's calculation schedules for significant provisions, showing the method, inputs, assumptions and mathematical workings.\n\nSource: Internal\n\nReliability notes: The schedule is the item under test. Reliability of the audit conclusion comes from the auditor's challenge of the assumptions and independent recalculation, not from the neatness of the schedule.\n\nLimitations: A schedule proves arithmetic, not the validity of the assumptions driving it.\n\nContradictory evidence: Calculations that change materially with small, plausible changes in assumptions.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-011",
+  "name": "Legal correspondence on claims and disputes",
+  "description": "Correspondence with legal advisers about claims, litigation and disputes underlying provisions or contingent liabilities.\n\nSource: External\n\nReliability notes: External legal advice is relatively reliable evidence about the status of a dispute; its use in measuring a provision still requires the auditor's evaluation of the assumptions drawn from it. Direct confirmation from legal counsel is stronger than management summaries.\n\nLimitations: Legal advice involves judgment and may be couched in cautious language; management may select which correspondence to share.\n\nContradictory evidence: Legal advice that contradicts the provision recognised (or not recognised).",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-012",
+  "name": "Subsequent-event evidence for provisions",
+  "description": "Information about events after the reporting date that sheds light on conditions existing at that date - for example, settlement of claims provided for.\n\nSource: External / Auditor-observed\n\nReliability notes: High reliability where it directly observes the outcome of the uncertainty (e.g. a claim settled); it is the closest thing to direct evidence of whether the provision was reasonable.\n\nLimitations: Only available for matters that resolve soon after the reporting date; absence of subsequent information proves nothing.\n\nContradictory evidence: Post-year-end events that contradict the assumptions used at the reporting date.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-013",
+  "name": "Disclosure checklist",
+  "description": "The auditor's (or the entity's, re-performed by the auditor) completed disclosure checklist cross-referenced to the financial statements.\n\nSource: Auditor-generated\n\nReliability notes: An independently completed checklist is reliable evidence that requirements were considered; whether each disclosure is adequate still requires the auditor's judgment on the underlying content.\n\nLimitations: A checklist confirms consideration, not the quality of the disclosure; mechanical completion misses judgment areas.\n\nContradictory evidence: A checklist marked complete with required disclosures missing from the statements.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-FRP-014",
+  "name": "Draft financial statements",
+  "description": "The draft financial statements including all notes and disclosures.\n\nSource: Internal\n\nReliability notes: The draft is what the auditor tests, not corroboration of it; reliability of the conclusion comes from tracing disclosures to underlying records and from the independent checklist.\n\nLimitations: The draft is the item under test, not evidence of its own correctness.\n\nContradictory evidence: Prior-year notes carried forward unchanged where the underlying position has changed.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-TEL-001-1",
+  "name": "Site leases and land agreements",
+  "description": "Lease contracts for towers, masts and rooftop sites, including dismantling and restoration clauses.\n\nSource: External\n\nReliability notes: High reliability for the existence of the obligation: executed contracts with third parties.\n\nLimitations: Side letters or verbal amendments may not be in the file.\n\nContradictory evidence: Clauses disclaiming restoration that contradict the register flag.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-TEL-001-2",
+  "name": "Decommissioning provision calculation schedule",
+  "description": "Management's model of per-site costs, timing, discounting and unwinding.\n\nSource: Internal\n\nReliability notes: Low reliability as evidence of the correct amount - it is the item under test; useful as the population recalculated.\n\nLimitations: Reflects management's own assumptions.\n\nContradictory evidence: Contractor quotes materially below assumed dismantling costs.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-TEL-002-1",
+  "name": "Customer contracts and tariff plan terms",
+  "description": "Executed customer agreements and the published tariff plan detailing bundle components and prices.\n\nSource: Internal\n\nReliability notes: Contracts are the primary evidence of what was promised; system-generated plan terms are reliable where change-controlled.\n\nLimitations: Oral promises by sales agents are not captured.\n\nContradictory evidence: Marketing material promising terms absent from the contract.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-TEL-002-2",
+  "name": "Revenue allocation schedules",
+  "description": "System or spreadsheet schedules allocating the transaction price across bundle components per contract.\n\nSource: Internal\n\nReliability notes: The item under test for accuracy; reliable as the population for reperformance, not as proof of correctness.\n\nLimitations: Reflects the system's own logic.\n\nContradictory evidence: Reperformance differences indicating systematic misallocation.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-TEL-003-1",
+  "name": "Usage records (CDRs) and rating logs",
+  "description": "System-generated records of subscriber usage and the rating applied.\n\nSource: Internal\n\nReliability notes: System-generated and reliable as the population, provided IT general controls are effective; not proof the rating was correct.\n\nLimitations: Completeness of the underlying network feed is assumed.\n\nContradictory evidence: Network traffic statistics materially exceeding rated records.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-TEL-003-2",
+  "name": "Rating exception and rejection reports",
+  "description": "Logs of usage records rejected or flagged by the rating engine.\n\nSource: Internal\n\nReliability notes: Useful for completeness testing; reliability of resolution evidence depends on reviewer independence.\n\nLimitations: Only captures exceptions the engine detects.\n\nContradictory evidence: Aged unresolved exceptions written off without investigation.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-MFG-001-1",
+  "name": "Overhead absorption model and rate-setting papers",
+  "description": "The calculation of absorption rates, overhead pools and the normal-capacity basis.\n\nSource: Internal\n\nReliability notes: The item under test; reliable as the population recalculated, not as proof of correctness.\n\nLimitations: Built on budgeted inputs.\n\nContradictory evidence: Actual overheads materially below absorbed amounts with no true-up.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-MFG-001-2",
+  "name": "Job cards and production records",
+  "description": "Per-job records of materials, labour and overhead applied and stage of completion.\n\nSource: Internal\n\nReliability notes: Operational records; more reliable where independently reviewed at count.\n\nLimitations: Stage assessments are judgmental.\n\nContradictory evidence: Jobs showing no activity for months still carried at full cost.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-MFG-002-1",
+  "name": "Variance reports",
+  "description": "Periodic reports of purchase-price, usage and overhead variances by cost centre.\n\nSource: Internal\n\nReliability notes: System-generated and reliable as the population for analysis, where the costing system is stable.\n\nLimitations: Only as granular as the standard-cost setup.\n\nContradictory evidence: Manual adjustments to variance accounts outside the system.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-MFG-002-2",
+  "name": "Standard cost master and revision history",
+  "description": "The standard costs in use and when each was last revised.\n\nSource: Internal\n\nReliability notes: Useful for assessing staleness; changes should be authorised.\n\nLimitations: Does not show why a standard was not revised.\n\nContradictory evidence: Key input prices moved materially with no standard revision.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-MFG-003-1",
+  "name": "Warranty claims register",
+  "description": "Record of claims received, by product, cohort and cost of remedy.\n\nSource: Internal\n\nReliability notes: Operational data; reliable where claims handling is separate from the provision preparer.\n\nLimitations: May understate where claims are discouraged or mishandled.\n\nContradictory evidence: Customer complaints indicating claims not logged.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-MFG-003-2",
+  "name": "Warranty provision model",
+  "description": "Management's calculation of expected future claims by cohort.\n\nSource: Internal\n\nReliability notes: The item under test; useful as the recalculated population.\n\nLimitations: Assumption-driven.\n\nContradictory evidence: Back-testing showing consistent under-provisioning.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-RTL-001-1",
+  "name": "Till Z-readings and daily sales summaries",
+  "description": "Point-of-sale totals per till per day.\n\nSource: Internal\n\nReliability notes: System-generated where POS controls are effective; vulnerable where staff can manipulate the till.\n\nLimitations: Skimmed sales never reach the till record.\n\nContradictory evidence: Bankings consistently below till totals.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-RTL-001-2",
+  "name": "Banking slips and bank statements",
+  "description": "Evidence of cash actually banked.\n\nSource: External\n\nReliability notes: External bank records are highly reliable for amounts actually deposited.\n\nLimitations: Proves deposit, not completeness of takings.\n\nContradictory evidence: Bankings exceeding recorded sales (may indicate prior-period skimming now banked).",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-RTL-002-1",
+  "name": "Supplier rebate agreements",
+  "description": "Contracts setting out rebate tiers, qualifying volumes and payment terms.\n\nSource: External\n\nReliability notes: Signed agreements are strong evidence of terms; drafts are not.\n\nLimitations: Side letters may alter terms.\n\nContradictory evidence: Supplier correspondence disputing the claimed terms.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-RTL-002-2",
+  "name": "Supplier confirmations of rebate balances",
+  "description": "Direct written confirmation of amounts due from suppliers.\n\nSource: External\n\nReliability notes: High reliability: independent, direct to the auditor.\n\nLimitations: Non-responses require alternative procedures.\n\nContradictory evidence: Confirmed amounts below the recognised accrual.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-RTL-003-1",
+  "name": "Loyalty/POS liability reports",
+  "description": "System reports of outstanding gift card values and loyalty points.\n\nSource: Internal\n\nReliability notes: System-generated; reliable as the population where IT controls are effective.\n\nLimitations: Does not validate breakage.\n\nContradictory evidence: Liability reports that do not reconcile to the ledger.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-RTL-003-2",
+  "name": "Historical redemption analyses",
+  "description": "Analyses of redemption and breakage patterns by cohort.\n\nSource: Internal\n\nReliability notes: The evidential basis for breakage; reliability depends on data completeness.\n\nLimitations: Past patterns may not predict future behaviour.\n\nContradictory evidence: Falling redemption rates contradicting increased breakage.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-BNK-001-1",
+  "name": "ECL model documentation and validation reports",
+  "description": "Model methodology, validation results and staging criteria.\n\nSource: Internal\n\nReliability notes: Useful for understanding; validation by an independent function adds weight, but it remains management's model.\n\nLimitations: Validates design, not the period's inputs.\n\nContradictory evidence: Validation findings not remediated.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-BNK-001-2",
+  "name": "Loan-level arrears and staging data",
+  "description": "Delinquency, forbearance and staging flags per facility.\n\nSource: Internal\n\nReliability notes: System-generated; reliable as the population where lending-system controls are effective.\n\nLimitations: Staging flags reflect judgments.\n\nContradictory evidence: Facilities 90+ days past due still in stage 1.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-BNK-002-1",
+  "name": "NPL register with accrual status",
+  "description": "List of non-performing facilities and whether interest accrual is suspended.\n\nSource: Internal\n\nReliability notes: System-generated; reliable as the population where credit-system controls hold.\n\nLimitations: Classification judgments sit underneath.\n\nContradictory evidence: Accrual continuing on flagged NPLs.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-BNK-002-2",
+  "name": "Interest suspension calculations",
+  "description": "Computations of interest suspended or provided against.\n\nSource: Internal\n\nReliability notes: The item under test; auditor reperformance is the evidence.\n\nLimitations: Manual calculations are error-prone.\n\nContradictory evidence: Reperformance differences indicating systematic under-suspension.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-BNK-003-1",
+  "name": "Independent price verification reports",
+  "description": "Comparison of desk valuations with independent market sources or models.\n\nSource: Internal\n\nReliability notes: Stronger where the verification function is truly independent of trading.\n\nLimitations: No independent source exists for some level 3 instruments.\n\nContradictory evidence: Persistent uninvestigated differences.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-BNK-003-2",
+  "name": "Valuation model documentation",
+  "description": "Model methodology, inputs and calibration for fair-valued instruments.\n\nSource: Internal\n\nReliability notes: Necessary to understand; not evidence the valuation is right.\n\nLimitations: Complexity may obscure weak inputs.\n\nContradictory evidence: Broker quotes materially below model values.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-INV-001",
+  "name": "Inventory listing (detailed inventory records)",
+  "description": "The detailed listing of inventory quantities (and values) by item and location as at the reporting date.\n\nSource: Internal\n\nReliability notes: Reliability depends on the effectiveness of inventory record-keeping controls. Because the factor indicates weak physical controls, the listing is treated as the item under test rather than as corroboration of existence.\n\nLimitations: Internally generated; does not by itself prove existence or condition.\n\nContradictory evidence: Physical count sheets or test counts that disagree with listed quantities.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-INV-002",
+  "name": "General ledger reconciliation",
+  "description": "Reconciliation of the inventory listing total to the general ledger inventory balance, with supporting detail for reconciling items.\n\nSource: Internal\n\nReliability notes: Auditor-performed footing and agreement increases reliability; reconciling items still require vouching.\n\nLimitations: Agreement proves arithmetic consistency, not existence.\n\nContradictory evidence: Unreconciled differences or stale unexplained items.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-INV-003",
+  "name": "Physical count sheets",
+  "description": "The entity's count sheets recording quantities counted, counters' identities, and count dates/locations.\n\nSource: Internal\n\nReliability notes: More reliable where counters were independent of custody and sheets show evidence of review; weakened where the security factor suggests poor count discipline.\n\nLimitations: Does not prove the count was performed properly; auditor attendance or reperformance addresses this.\n\nContradictory evidence: Auditor test counts that differ materially.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-INV-004",
+  "name": "Auditor test-count records",
+  "description": "The auditor's independent record of items and quantities test-counted in both directions.\n\nSource: Auditor-generated\n\nReliability notes: High reliability for existence/completeness of the items tested: obtained directly by the auditor through observation and inspection.\n\nLimitations: Covers only the items tested; projection to the population requires appropriate sampling discipline.\n\nContradictory evidence: Entity count sheets showing different quantities for the same items.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-INV-005",
+  "name": "Inventory movement reports (goods received / dispatch notes)",
+  "description": "Documents evidencing movements of inventory into and out of the warehouse around the count date and year-end.\n\nSource: Internal\n\nReliability notes: Pre-numbered, sequentially controlled documents are more reliable; reliability falls if movements can occur without documentation - which the security factor makes more likely.\n\nLimitations: Only proves recorded movements; unrecorded movements are the residual risk.\n\nContradictory evidence: Access logs showing movements with no corresponding movement document.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-INV-006",
+  "name": "Adjustment journals for shortages and losses",
+  "description": "Journal entries recording inventory shortages, damage, shrinkage and related write-downs, with supporting schedules.\n\nSource: Internal\n\nReliability notes: Reliability depends on independent approval and supporting evidence; unsupported journals are a fraud risk indicator, not proof of loss.\n\nLimitations: A journal proves an entry was made, not that the underlying loss occurred.\n\nContradictory evidence: Material count differences with no corresponding adjustment.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-INV-007",
+  "name": "Warehouse access records",
+  "description": "Access logs, key/card registers or entry records showing who entered storage areas and when.\n\nSource: Internal\n\nReliability notes: System-generated logs are more reliable than manual sign-in sheets; any log can be incomplete if access can bypass the logging point.\n\nLimitations: Proves recorded access only; tailgating or unlogged entry points leave no trace.\n\nContradictory evidence: Movement documents for times with no corresponding access record.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-INV-008",
+  "name": "Explanations and supporting documents for discrepancies",
+  "description": "Management explanations for count differences and the corroborating documents obtained for them.\n\nSource: Internal / Auditor-documented\n\nReliability notes: Inquiry alone is weak evidence; reliability comes from corroboration with independent or documentary evidence.\n\nLimitations: Explanations without corroboration do not resolve a difference.\n\nContradictory evidence: Documents that contradict the explanation given.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-001",
+  "name": "Payroll register (payroll summary)",
+  "description": "The detailed payroll listing per pay period showing each payee, gross pay, deductions and net pay, reconciled to the bank payment file.\n\nSource: Internal\n\nReliability notes: Reliability depends on payroll controls. Where leaver or segregation controls are weak, the register is the population under test rather than corroboration of occurrence.\n\nLimitations: Internally generated; proves what was paid, not that each payee was a genuine employee.\n\nContradictory evidence: HR leaver lists or vouching results identifying payees who are not current employees.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-002",
+  "name": "HR leavers list (termination register)",
+  "description": "The HR-maintained list of employees who left employment in the period, with last working dates.\n\nSource: Internal\n\nReliability notes: More reliable where HR is independent of payroll processing and leaver paperwork is filed promptly; weakened where notification is informal or delayed.\n\nLimitations: Incomplete if HR is not notified of all departures; can be manipulated if HR colludes with payroll.\n\nContradictory evidence: Payroll master still showing a listed leaver as active after the termination date.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-003",
+  "name": "Employment records (HR files)",
+  "description": "HR files evidencing current employment: appointment letters, contracts, identification, and recent attendance or appraisal records.\n\nSource: Internal\n\nReliability notes: Contracts and identification documents are more persuasive than informal records. Reliability increases when files are maintained by HR independent of payroll and show a history consistent with the claimed employment.\n\nLimitations: Files can be fabricated; inspection looks for internal consistency but cannot prove authenticity alone.\n\nContradictory evidence: Employment files that are thin, inconsistent, or created after the audit inquiry.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-004",
+  "name": "Payroll master change audit trail",
+  "description": "System-generated log of all additions and amendments to the payroll master (new starters, leavers, rate and bank detail changes), showing who made each change and when.\n\nSource: Internal\n\nReliability notes: System-generated trails are more reliable than manual logs, provided privileged users cannot alter them. Reliability is highest where the auditor extracts the trail directly.\n\nLimitations: Only records changes made through the system; privileged users may be able to alter or delete the trail.\n\nContradictory evidence: Change requests approved only by the person who entered the change.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-005",
+  "name": "User access rights report",
+  "description": "Report of system users and their payroll permissions, showing who can maintain master data and who can process or release payments.\n\nSource: Internal\n\nReliability notes: More reliable where extracted by the auditor directly from the system. A point-in-time report cannot prove segregation held throughout the period, so it is combined with change-trail testing.\n\nLimitations: Reflects a point in time only; does not show historical access during the period under audit.\n\nContradictory evidence: Actual system permissions differing from the report (e.g. shared administrator logins).",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-006",
+  "name": "Approved payroll change requests",
+  "description": "Documented requests to change payroll master data, with independent approval signatures or workflow approvals.\n\nSource: Internal\n\nReliability notes: Reliability depends on the independence of the approver from the requester and on evidence that approval preceded the change.\n\nLimitations: An approval signature proves a step was performed, not that the approver genuinely reviewed the change.\n\nContradictory evidence: Master changes with no matching approved request.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-007",
+  "name": "Overtime claim forms / timesheets",
+  "description": "Employee overtime claim forms or timesheets showing hours claimed, with supervisor approval.\n\nSource: Internal\n\nReliability notes: Inquiry-level evidence on its own; reliability comes from independent approval and corroboration to attendance or production records.\n\nLimitations: Self-reported hours; approval may be perfunctory.\n\nContradictory evidence: Attendance records or production logs contradicting the claimed overtime hours.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-008",
+  "name": "Attendance / production records",
+  "description": "Independent records of attendance (clocking data, shift rosters) or production output that can corroborate hours worked.\n\nSource: Internal\n\nReliability notes: More reliable where maintained independently of the claimant (e.g. electronic clocking). Corroborates the occurrence of overtime but not its operational necessity.\n\nLimitations: System-generated clocking data can be manipulated by buddy-punching; production records may not map neatly to hours.\n\nContradictory evidence: Overtime claims for days the employee was recorded absent.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-009",
+  "name": "Overtime exception report",
+  "description": "System or manual report highlighting overtime above thresholds, by employee and department.\n\nSource: Internal\n\nReliability notes: Reliability depends on complete input data and evidence of genuine review; an unreviewed report is not evidence of control operation.\n\nLimitations: Only flags what exceeds the threshold; systematic small-scale inflation may not appear.\n\nContradictory evidence: Exception report showing the same employees flagged repeatedly with no investigation.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-010",
+  "name": "Authorised pay rates and statutory tables",
+  "description": "Authoritative sources for pay: employment contracts, approved salary schedules, and statutory tax and deduction tables in force for the period.\n\nSource: Internal\n\nReliability notes: External statutory tables are highly reliable for the correct parameters; internal salary schedules are reliable only where independently approved.\n\nLimitations: A contract proves the agreed rate, not that the rate was entered correctly into the payroll system.\n\nContradictory evidence: Contracts or salary schedules showing different rates from those used in the payroll run.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PAY-011",
+  "name": "General ledger payroll accounts",
+  "description": "Payroll-related general ledger accounts (wages expense, tax payable, other deductions payable) for the period.\n\nSource: Internal\n\nReliability notes: Auditor-performed reconciliation increases reliability for completeness of posting; does not address calculation accuracy.\n\nLimitations: Agreement proves the payroll was posted, not that it was calculated correctly.\n\nContradictory evidence: General ledger payroll balances that do not agree with the payroll register.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-001",
+  "name": "Capitalisation policy",
+  "description": "The entity's written policy stating the criteria for capitalising expenditure as property, plant and equipment, including the treatment of repairs, replacements and major maintenance.\n\nSource: Internal\n\nReliability notes: Reliability as audit evidence of actual accounting treatment is limited: it describes what should happen, not what did. It is corroborative only when combined with tests of application.\n\nLimitations: A policy proves intent, not compliance; consistent application must still be tested.\n\nContradictory evidence: Capital expenditure request forms that cite no criteria or show approval after the asset was recognised.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-002",
+  "name": "Repairs and maintenance ledger and supporting invoices",
+  "description": "The repairs and maintenance expense ledger with supporting supplier invoices, work descriptions and amounts for the period.\n\nSource: Internal\n\nReliability notes: Source documents from third-party suppliers are more reliable than internal descriptions alone; reliability falls where descriptions are vague, as judgment is then required about the nature of the work.\n\nLimitations: Internally processed; descriptions on invoices may be vague or misleading.\n\nContradictory evidence: Invoices describing work that is clearly capital in nature within the expense accounts, or vice versa.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-003",
+  "name": "Capital expenditure approval records",
+  "description": "Capital expenditure approval forms showing the nature of the expenditure, the capitalisation criteria considered, and independent authorisation.\n\nSource: Internal\n\nReliability notes: More reliable where the approver is independent and the form requires explicit consideration of the criteria; a signed form alone does not prove the judgment was correct.\n\nLimitations: Approval evidences authorisation, not the correctness of the accounting judgment.\n\nContradictory evidence: Additions recognised without any approval form, or approvals signed by the requestor.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-004",
+  "name": "Fixed asset register",
+  "description": "The detailed fixed asset register showing cost, accumulated depreciation, depreciation rate/method, useful life and net book value by asset or component.\n\nSource: Internal\n\nReliability notes: The register is the item under test, not corroboration of it; reliability for audit purposes comes from the auditor's independent recalculation and inspection, not from the register itself.\n\nLimitations: Internally maintained; reflects the entity's own judgments about lives and methods.\n\nContradictory evidence: Physical assets that cannot be matched to register entries, or register entries with no supporting acquisition record.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-005",
+  "name": "Auditor's depreciation recalculation",
+  "description": "The auditor's independent recalculation of the depreciation charge for sampled assets, based on cost, rate, method and useful life.\n\nSource: Auditor-generated\n\nReliability notes: High reliability for accuracy of the calculation: generated directly by the auditor from source inputs. Reliability of the conclusion still depends on the appropriateness of the underlying lives and methods.\n\nLimitations: Proves arithmetic accuracy only; does not address whether the lives and methods themselves are appropriate.\n\nContradictory evidence: Recalculation differences that management cannot explain.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-006",
+  "name": "Management's useful-life review documentation",
+  "description": "Management's documented annual review of depreciation rates, methods, useful lives and residual values, with supporting analysis.\n\nSource: Internal\n\nReliability notes: Inquiry and inspection of this document alone is weak evidence; reliability increases only where the auditor corroborates the conclusions with independent evidence (usage data, condition, industry practice).\n\nLimitations: Management-prepared; may lack genuine challenge, particularly where longer lives flatter profit.\n\nContradictory evidence: Review memoranda that merely assert lives are unchanged with no supporting analysis.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-007",
+  "name": "Asset disposal authorisation forms",
+  "description": "Disposal authorisation forms recording the asset disposed of, the method and date of disposal, and authorising signatures.\n\nSource: Internal\n\nReliability notes: More reliable where authorisation is independent and forms are sequentially controlled; cannot provide evidence about disposals that bypassed the process.\n\nLimitations: Only evidences disposals that were documented; undocumented disposals leave no form.\n\nContradictory evidence: Disposal forms completed after the asset has already left the premises, or proceeds banked with no disposal form.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-008",
+  "name": "Disposal proceeds records",
+  "description": "Records of proceeds from sale or scrap of assets: sales invoices, weighbridge tickets, bank receipts.\n\nSource: Internal / External\n\nReliability notes: Bank receipts and third-party buyer documentation are relatively reliable evidence that a disposal occurred; the accounting for the disposal still requires separate testing.\n\nLimitations: External proceeds evidence (bank receipt) is stronger than internal sales records; proceeds alone do not prove the correct gain or loss was calculated.\n\nContradictory evidence: Proceeds with no matching derecognition entry, indicating the asset may still be on the register.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-009",
+  "name": "Auditor's physical verification notes",
+  "description": "The auditor's record of assets selected from the register and physically located (or not), with identifying details and condition notes.\n\nSource: Auditor-generated\n\nReliability notes: High reliability for existence of the assets inspected: obtained directly by the auditor through observation. A missing asset is an exception to investigate, not proof of a particular cause.\n\nLimitations: Covers only the assets inspected; absence of a selected asset requires follow-up, not automatic conclusion.\n\nContradictory evidence: Verification sheets signed off without any differences ever being reported, suggesting the exercise was perfunctory.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-010",
+  "name": "Impairment indicator assessment",
+  "description": "Management's documented assessment of impairment indicators at the reporting date, including the conclusion and its basis.\n\nSource: Internal\n\nReliability notes: Weak as standalone evidence because it reflects management's own judgment; reliability depends on the auditor's independent corroboration of the indicators considered and those omitted.\n\nLimitations: Management-prepared and judgmental; may omit inconvenient indicators.\n\nContradictory evidence: Adverse indicators (idle assets, losses) with no documented consideration.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-011",
+  "name": "Management forecasts and budgets",
+  "description": "Management's budgets, forecasts and business plans for the assets or cash-generating units under review.\n\nSource: Internal\n\nReliability notes: Reliability depends on the track record of forecasting accuracy and the degree of independent challenge; the auditor treats forecasts as assumptions to be tested, not as facts.\n\nLimitations: Forward-looking and inherently uncertain; susceptible to management bias.\n\nContradictory evidence: Forecasts that are consistently optimistic compared with actual outcomes.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-012",
+  "name": "External market or valuation data",
+  "description": "External data relevant to recoverable amount: market prices for similar assets, industry reports, valuer reports.\n\nSource: External\n\nReliability notes: Generally more reliable than internal estimates because it is independent of management; reliability still depends on relevance, comparability and the competence of the source.\n\nLimitations: May not be directly comparable; external valuers' work must itself be evaluated.\n\nContradictory evidence: Market data that contradicts management's recoverable amount conclusions.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-013",
+  "name": "Major maintenance and replacement work orders",
+  "description": "Maintenance and replacement work orders describing the work performed, the component replaced, dates and costs.\n\nSource: Internal\n\nReliability notes: More reliable where work orders are prepared by operational staff at the time of the work and independently of the accounting decision; reliability for the accounting conclusion still requires linkage to the register.\n\nLimitations: Internally prepared; may not identify the replaced component with enough precision to quantify derecognition.\n\nContradictory evidence: Replacement work with no corresponding derecognition entry in the register.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PPE-014",
+  "name": "Component register detail",
+  "description": "Component-level detail in the fixed asset register for significant assets, showing separately identified major parts and their useful lives.\n\nSource: Internal\n\nReliability notes: The register detail is the item under test; its reliability for the audit conclusion comes from the auditor's testing of the underlying judgments, not from the record itself.\n\nLimitations: Reflects the entity's own judgments about significance and lives.\n\nContradictory evidence: Significant assets recorded as single lines with no component breakdown.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-001",
+  "name": "Supplier invoices",
+  "description": "Supplier invoices recorded in the period, with purchase order references where available.\n\nSource: Internal\n\nReliability notes: Received documents, but reliability as evidence of a genuine purchase depends on matching to independent receipt evidence. An invoice proves a claim was made, not that goods were received.\n\nLimitations: Does not by itself prove receipt or correct timing.\n\nContradictory evidence: GRNs showing different quantities; supplier statements disputing the invoice.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-002",
+  "name": "Goods received notes",
+  "description": "Goods received notes recording quantities received, dates and receiving staff.\n\nSource: Internal\n\nReliability notes: More reliable where GRNs are sequentially controlled and prepared by staff independent of purchasing and payables; the GRN is the primary evidence that receipt occurred.\n\nLimitations: Only evidences recorded receipts; collusion at the receiving point undermines reliability.\n\nContradictory evidence: Invoices for quantities exceeding the GRN; GRNs dated after the invoice without explanation.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-003",
+  "name": "Purchase orders and matching records",
+  "description": "Approved purchase orders and the matching records showing order, GRN and invoice agreement before payment.\n\nSource: Internal\n\nReliability notes: Purchase orders evidence authorisation; matching records show the control operated. Reliability depends on segregation between ordering, receiving and payment functions.\n\nLimitations: An order proves authorisation, not receipt; matching records can be completed perfunctorily.\n\nContradictory evidence: Payments released without a complete match.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-004",
+  "name": "Goods received notes around year-end",
+  "description": "Sequential GRN register for the period straddling the reporting date.\n\nSource: Internal\n\nReliability notes: Reliability depends on sequential control of the GRN register; the register is the population for completeness testing of liabilities.\n\nLimitations: Goods received without a GRN being raised leave no trace.\n\nContradictory evidence: Gaps in sequence; GRNs with no matching purchase or accrual.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-005",
+  "name": "Purchase ledger extracts after year-end",
+  "description": "Purchase ledger extracts for the weeks following the reporting date.\n\nSource: Internal\n\nReliability notes: System-generated extracts are reliable as to what was recorded and when; they cannot show liabilities that were omitted.\n\nLimitations: Recording date may differ from the receipt date that determines the correct period.\n\nContradictory evidence: GRN dates contradicting the recorded period.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-006",
+  "name": "Year-end accrual schedules for unmatched GRNs",
+  "description": "Management's schedule accruing liabilities for goods received but not invoiced at the reporting date.\n\nSource: Internal\n\nReliability notes: Reliability depends on the completeness of the GRN population used and the reasonableness of pricing; auditor reperformance of the schedule increases assurance.\n\nLimitations: A schedule proves arithmetic, not completeness of inputs.\n\nContradictory evidence: Accrued items without GRN support; GRNs omitted from the schedule.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-007",
+  "name": "Supplier master change log",
+  "description": "System log of additions and changes to supplier master data, including bank details, with user and timestamp.\n\nSource: Internal\n\nReliability notes: System-generated logs are more reliable than manual records; reliability depends on restricted access to the master file and on the log being tamper-evident.\n\nLimitations: Shows that a change was made, not whether it was legitimate.\n\nContradictory evidence: Changes with no approval record; changes by users who also process payments.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-008",
+  "name": "Approval records for supplier master changes",
+  "description": "Documented independent approvals for supplier master additions and changes, with supporting verification.\n\nSource: Internal\n\nReliability notes: Evidences that an approval step occurred; reliability as evidence of legitimacy depends on whether the approver verified the change independently.\n\nLimitations: Does not prove the approver checked the underlying supplier details.\n\nContradictory evidence: Approvals by the requestor; missing verification documents.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-009",
+  "name": "Supplier verification documents and payment records",
+  "description": "Independent evidence of supplier legitimacy (business registration, verified contact and bank details) and the related payment records.\n\nSource: Internal / External\n\nReliability notes: Independent verification, such as a business register extract or bank-confirmed account details, is more reliable than documents supplied by the payee. Payment records show where the money actually went.\n\nLimitations: Verification is point-in-time; details may change after verification.\n\nContradictory evidence: Payments to accounts differing from verified details; unverifiable suppliers.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-010",
+  "name": "Purchase ledger data extracts",
+  "description": "Complete purchase ledger data for the period, used for duplicate analysis.\n\nSource: Internal\n\nReliability notes: Complete system extracts are reliable for data analysis; the analysis is only as good as the underlying data.\n\nLimitations: Analysis finds patterns, not conclusions; each flagged item needs investigation.\n\nContradictory evidence: Control totals that do not reconcile to the general ledger.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-011",
+  "name": "Supplier invoice copies and payment records",
+  "description": "Copies of supplier invoices for suspected duplicates and the related payment records showing what was paid and when.\n\nSource: Internal / External\n\nReliability notes: Invoice copies obtained from the supplier corroborate the recorded invoice; payment records establish whether duplicates were actually paid, which determines the financial effect.\n\nLimitations: A supplier may reissue an invoice legitimately; copies alone do not distinguish this from double recording.\n\nContradictory evidence: Two payments for one invoice; credit notes not recorded.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-012",
+  "name": "Duplicate detection exception reports",
+  "description": "System reports of blocked or flagged potential duplicate invoices.\n\nSource: Internal\n\nReliability notes: System-generated reports are reliable as to what the system flagged; the auditor must still assess what the system's logic cannot flag, such as altered invoice numbers.\n\nLimitations: Only as good as the detection logic; manual journals may bypass it.\n\nContradictory evidence: Confirmed duplicates that the system did not flag.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-013",
+  "name": "Purchase invoices with posting and receipt dates",
+  "description": "Purchase invoices around the reporting date showing both the invoice date and the related goods receipt date.\n\nSource: Internal\n\nReliability notes: Comparison of invoice dates with GRN dates is the core cut-off evidence; reliability depends on both dates being genuine and independently recorded.\n\nLimitations: Either date can be manipulated; corroboration across documents matters.\n\nContradictory evidence: GRN dates in a different period from the posting date.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-014",
+  "name": "Period-end cut-off working papers",
+  "description": "Management's cut-off checklist and the auditor's cut-off testing working papers.\n\nSource: Internal / Auditor-generated\n\nReliability notes: Auditor-prepared working papers documenting cut-off testing are highly reliable as evidence of the work performed; a client checklist evidences that a process was followed, not its outcome.\n\nLimitations: A completed checklist does not prove the underlying testing was effective.\n\nContradictory evidence: Cut-off errors found despite a completed checklist.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-PUR-015",
+  "name": "Monthly purchase reports and budgets",
+  "description": "Monthly purchase reports compared with budgets and prior periods.\n\nSource: Internal\n\nReliability notes: Useful for identifying anomalies that direct testing; reliability as audit evidence is limited - trends support risk assessment rather than proving individual transactions.\n\nLimitations: Not evidence of individual transactions; budgets may be unreliable.\n\nContradictory evidence: Unexplained variances that management cannot corroborate.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-001",
+  "name": "Sales invoices and billing reports",
+  "description": "Sales invoices raised in the period and billing system reports listing invoices by date, customer and amount.\n\nSource: Internal\n\nReliability notes: Internally generated, so reliability depends on the effectiveness of billing controls; the invoice proves a sale was recorded, not that it was earned. Reliability increases when invoices are matched to independent dispatch evidence.\n\nLimitations: Does not by itself prove occurrence or correct timing.\n\nContradictory evidence: Dispatch records dated after the invoice; customer disputes of the invoice.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-002",
+  "name": "Dispatch notes, delivery records and customer acceptance",
+  "description": "Goods dispatch notes, proof-of-delivery documents, service completion records and customer acceptance confirmations.\n\nSource: Internal\n\nReliability notes: More reliable where documents are pre-numbered, sequentially controlled and signed by the customer or carrier; reliability falls where dispatch records can be created or backdated without independent involvement.\n\nLimitations: Only evidences recorded dispatches; collusion or backdating undermines reliability.\n\nContradictory evidence: Invoices dated before the dispatch they relate to; gaps in sequence.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-003",
+  "name": "Sales contracts, orders and terms of sale",
+  "description": "Customer contracts, purchase orders and standard terms setting out performance obligations, delivery and acceptance conditions.\n\nSource: Internal / External\n\nReliability notes: Signed contracts with customers carry more weight than internal order summaries; reliability depends on whether side agreements exist outside the documented terms.\n\nLimitations: May not reflect the full arrangement if side letters exist.\n\nContradictory evidence: Side letters or correspondence modifying the stated terms.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-004",
+  "name": "Goods dispatch register around year-end",
+  "description": "Sequential register of dispatch notes for the period straddling the reporting date.\n\nSource: Internal\n\nReliability notes: Reliability depends on sequential control and independence of the dispatch function from billing; the register is the population for completeness testing.\n\nLimitations: Unrecorded dispatches leave no trace in the register.\n\nContradictory evidence: Gaps in sequence; dispatch dates inconsistent with carrier records.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-005",
+  "name": "Sales daybook and ledger extracts",
+  "description": "Sales daybook and sales ledger extracts for the periods before and after the reporting date.\n\nSource: Internal\n\nReliability notes: System-generated extracts are reliable as to what was recorded and when; they cannot show what was omitted.\n\nLimitations: Recording date may differ from the underlying event date.\n\nContradictory evidence: Dispatch evidence contradicting the recorded dates.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-006",
+  "name": "Period-end cut-off reconciliation and accrual schedules",
+  "description": "Management's reconciliation of dispatch records to recorded sales at the reporting date, with accrual journals for unmatched dispatches.\n\nSource: Internal\n\nReliability notes: Reliability depends on the completeness of the dispatch population used and on independent review; auditor reperformance increases assurance.\n\nLimitations: A reconciliation proves arithmetic, not completeness of inputs.\n\nContradictory evidence: Unmatched dispatches with no accrual; stale unexplained items.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-007",
+  "name": "Sales invoices selected for vouching",
+  "description": "Individual sales invoices selected by the auditor, with the related customer order attached.\n\nSource: Internal\n\nReliability notes: The invoice is the recorded claim; its reliability as evidence of a genuine sale comes from corroboration with dispatch and order evidence, not from the document itself.\n\nLimitations: A valid-looking invoice can still relate to a fictitious sale.\n\nContradictory evidence: No matching order or dispatch evidence; customer denial.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-008",
+  "name": "Dispatch and delivery evidence for sampled sales",
+  "description": "Dispatch notes, carrier records and proof-of-delivery documents obtained for the sampled invoices.\n\nSource: Internal / External\n\nReliability notes: Carrier or customer-signed documents are more reliable than internally prepared notes alone; corroboration across documents strengthens reliability.\n\nLimitations: Documents can be fabricated; backdating is possible without independent controls.\n\nContradictory evidence: Delivery dates after the invoice date; unsigned or uncontrolled documents.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-009",
+  "name": "Customer confirmations and correspondence",
+  "description": "Direct written confirmations from customers of balances or specific transactions, and related correspondence.\n\nSource: External\n\nReliability notes: External evidence obtained directly by the auditor is among the most reliable forms of evidence; reliability is reduced if the confirmation process is not controlled by the auditor or if the respondent is not independent.\n\nLimitations: Non-responses require alternative procedures; colluding customers may confirm falsely.\n\nContradictory evidence: Customer disputes; significant non-responses.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-010",
+  "name": "Incentive and bonus plan documents",
+  "description": "Board-approved incentive schemes, bonus calculations and performance targets for the period.\n\nSource: Internal\n\nReliability notes: Board-approved documents reliably describe the scheme's design; they do not show how the scheme influenced behaviour - that requires analytical and substantive testing.\n\nLimitations: Describes incentives, not actions taken because of them.\n\nContradictory evidence: Undocumented bonus arrangements; targets changed retrospectively.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-011",
+  "name": "Manual journal entries affecting revenue",
+  "description": "Manual journals posted to revenue accounts, particularly near the period end, with supporting schedules.\n\nSource: Internal\n\nReliability notes: Journals are internally generated; reliability comes from independent approval and supporting documentation, not from the journal itself. Unapproved or vague journals are fraud risk indicators.\n\nLimitations: A journal proves an entry was made, not that it was appropriate.\n\nContradictory evidence: Missing approval; vague or missing supporting rationale.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-012",
+  "name": "Board minutes and performance reports",
+  "description": "Minutes of board and audit committee meetings and management reports comparing performance against targets.\n\nSource: Internal\n\nReliability notes: Minutes reliably record what was discussed at governance level; they may not capture informal pressures or undocumented arrangements.\n\nLimitations: Formal record only; sensitive matters may be discussed off-minutes.\n\nContradictory evidence: Absence of any discussion of revenue despite missed or narrowly met targets.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-013",
+  "name": "Manual journal entries and supporting schedules for unusual transactions",
+  "description": "Journal entries recording non-routine transactions with their supporting schedules and calculations.\n\nSource: Internal\n\nReliability notes: As with all journals, reliability depends on approval and corroborating evidence; complex schedules require the auditor to understand and reperform key calculations.\n\nLimitations: Schedules prepared by management may embed optimistic assumptions.\n\nContradictory evidence: Unsupported assumptions; calculations that do not reperform.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-014",
+  "name": "Contracts and agreements for unusual transactions",
+  "description": "Contracts, side letters and agreements underlying non-routine transactions.\n\nSource: Internal / External\n\nReliability notes: Executed agreements with independent counterparties are more reliable than drafts or internal summaries; the auditor must remain alert to undisclosed side agreements.\n\nLimitations: The complete agreement may not be documented in one place.\n\nContradictory evidence: Side letters contradicting the main agreement; unsigned or undated documents.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-REV-015",
+  "name": "Counterparty correspondence and documented management explanations",
+  "description": "Correspondence with counterparties and the auditor's documented record of management explanations for unusual transactions.\n\nSource: Internal / External / Auditor-documented\n\nReliability notes: Third-party correspondence corroborates management's account; inquiry of management alone is weak evidence and must be corroborated.\n\nLimitations: Correspondence can be selective; explanations without corroboration do not resolve the matter.\n\nContradictory evidence: Counterparty accounts that differ from management's explanation.",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "E-INVST-001",
+  "name": "Published market prices / valuations for investments",
+  "description": "Evidence type for Phase 8 QA gap-fill procedures.",
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+ },
+ {
+  "id": "E-INVST-002",
+  "name": "Investment holding statements and custodian confirmations",
+  "description": "Evidence type for Phase 8 QA gap-fill procedures.",
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+ },
+ {
+  "id": "E-BOR-001",
+  "name": "Loan agreements, facility letters and lender confirmations",
+  "description": "Evidence type for Phase 8 QA gap-fill procedures.",
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+ },
+ {
+  "id": "E-BOR-002",
+  "name": "Covenant compliance calculations and certificates",
+  "description": "Evidence type for Phase 8 QA gap-fill procedures.",
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+ },
+ {
+  "id": "E-TAX-001",
+  "name": "Tax computations, returns and authority correspondence",
+  "description": "Evidence type for Phase 8 QA gap-fill procedures.",
+  "source_ref": "Phase 8 QA gap-fill (2026-10-23)"
+ }
+]

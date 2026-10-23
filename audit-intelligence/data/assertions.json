@@ -1,0 +1,107 @@
+[
+ {
+  "id": "TRN-OCC",
+  "code": "TRN-OCC",
+  "name": "Occurrence",
+  "category": "Transactions and events",
+  "description": "Transactions and events that have been recorded have occurred and pertain to the entity.\n\nFramework note: Assertions about classes of transactions and events."
+ },
+ {
+  "id": "TRN-COM",
+  "code": "TRN-COM",
+  "name": "Completeness",
+  "category": "Transactions and events",
+  "description": "All transactions and events that should have been recorded have been recorded.\n\nFramework note: Assertions about classes of transactions and events."
+ },
+ {
+  "id": "TRN-ACC",
+  "code": "TRN-ACC",
+  "name": "Accuracy",
+  "category": "Transactions and events",
+  "description": "Amounts and other data relating to recorded transactions and events have been recorded appropriately.\n\nFramework note: Assertions about classes of transactions and events."
+ },
+ {
+  "id": "TRN-CUT",
+  "code": "TRN-CUT",
+  "name": "Cut-off",
+  "category": "Transactions and events",
+  "description": "Transactions and events have been recorded in the correct accounting period.\n\nFramework note: Assertions about classes of transactions and events."
+ },
+ {
+  "id": "TRN-CLS",
+  "code": "TRN-CLS",
+  "name": "Classification",
+  "category": "Transactions and events",
+  "description": "Transactions and events have been recorded in the proper accounts.\n\nFramework note: Assertions about classes of transactions and events."
+ },
+ {
+  "id": "BAL-EXI",
+  "code": "BAL-EXI",
+  "name": "Existence",
+  "category": "Account balances",
+  "description": "Assets, liabilities and equity interests exist.\n\nFramework note: Assertions about account balances at period end."
+ },
+ {
+  "id": "BAL-RGT",
+  "code": "BAL-RGT",
+  "name": "Rights and obligations",
+  "category": "Account balances",
+  "description": "The entity holds or controls the rights to assets, and liabilities are the obligations of the entity.\n\nFramework note: Assertions about account balances at period end."
+ },
+ {
+  "id": "BAL-COM",
+  "code": "BAL-COM",
+  "name": "Completeness",
+  "category": "Account balances",
+  "description": "All assets, liabilities and equity interests that should have been recorded have been recorded.\n\nFramework note: Assertions about account balances at period end."
+ },
+ {
+  "id": "BAL-VAL",
+  "code": "BAL-VAL",
+  "name": "Accuracy, valuation and allocation",
+  "category": "Account balances",
+  "description": "Assets, liabilities and equity interests have been included in the financial statements at appropriate amounts and any resulting valuation or allocation adjustments have been appropriately recorded.\n\nFramework note: Assertions about account balances at period end."
+ },
+ {
+  "id": "BAL-CLS",
+  "code": "BAL-CLS",
+  "name": "Classification",
+  "category": "Account balances",
+  "description": "Assets, liabilities and equity interests have been recorded in the proper accounts.\n\nFramework note: Assertions about account balances at period end."
+ },
+ {
+  "id": "BAL-PRS",
+  "code": "BAL-PRS",
+  "name": "Presentation",
+  "category": "Account balances",
+  "description": "Assets, liabilities and equity interests are appropriately aggregated or disaggregated and clearly described, and related disclosures are relevant and understandable.\n\nFramework note: Assertions about account balances at period end."
+ },
+ {
+  "id": "DIS-OCC",
+  "code": "DIS-OCC",
+  "name": "Occurrence and rights and obligations",
+  "category": "Presentation and disclosure",
+  "description": "Disclosed events, transactions and other matters have occurred and pertain to the entity.\n\nFramework note: Assertions about presentation and disclosure."
+ },
+ {
+  "id": "DIS-COM",
+  "code": "DIS-COM",
+  "name": "Completeness",
+  "category": "Presentation and disclosure",
+  "description": "All disclosures that should have been included in the financial statements have been included.\n\nFramework note: Assertions about presentation and disclosure."
+ },
+ {
+  "id": "DIS-CLS",
+  "code": "DIS-CLS",
+  "name": "Classification and understandability",
+  "category": "Presentation and disclosure",
+  "description": "Financial information is appropriately presented and described, and disclosures are clearly expressed.\n\nFramework note: Assertions about presentation and disclosure."
+ },
+ {
+  "id": "DIS-VAL",
+  "code": "DIS-VAL",
+  "name": "Accuracy and valuation",
+  "category": "Presentation and disclosure",
+  "description": "Financial and other information is disclosed fairly and at appropriate amounts.\n\nFramework note: Assertions about presentation and disclosure."
+ }
+]

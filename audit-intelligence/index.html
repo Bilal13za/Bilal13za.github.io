@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CA Audit Intelligence — Interactive Knowledge Base</title>
+<meta name="description" content="An interactive, offline-first audit knowledge base: risks, procedures, standards, industries, case studies and fraud patterns — every record traceable to its source.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1d31'/%3E%3Cpath d='M9 22V10l7 8 7-8v12' stroke='%23c19a2e' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#app">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-in">
+    <a class="brand" href="#/" aria-label="CA Audit Intelligence home">
+      <span class="brand-mark" aria-hidden="true">◈</span>
+      <span class="brand-text"><strong>CA Audit Intelligence</strong><small>Interactive knowledge base</small></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/search" data-nav="search">Search</a>
+      <a href="#/browse" data-nav="browse">Browse</a>
+      <a href="#/library" data-nav="library">Library</a>
+      <a href="#/about" data-nav="about">About</a>
+    </nav>
+    <button class="search-trigger" id="searchTrigger" aria-label="Open search (press /)">
+      <span aria-hidden="true">⌕</span><span class="st-label">Search</span><kbd>/</kbd>
+    </button>
+  </div>
+</header>
+<main id="app" class="wrap" tabindex="-1" aria-live="off"></main>
+<footer class="site-footer">
+  <div class="wrap footer-in">
+    <p><strong>CA Audit Intelligence</strong> — a personal study and professional reference system.
+    Content is guidance for a CA student/trainee, not a firm's methodology and not a substitute for the ISAs.</p>
+    <p class="foot-meta">Offline-first · No account · No tracking · Built from a verified SQLite knowledge base</p>
+  </div>
+</footer>
+<div id="loader" class="loader" role="status" aria-live="polite">
+  <div class="loader-card">
+    <div class="loader-mark" aria-hidden="true">◈</div>
+    <p>Loading knowledge base…</p>
+    <div class="loader-bar"><span id="loaderFill"></span></div>
+    <p class="loader-count" id="loaderCount"></p>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

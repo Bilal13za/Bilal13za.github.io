@@ -1,0 +1,926 @@
+[
+ {
+  "risk_id": "R-CSH-001",
+  "procedure_id": "P-CSH-001",
+  "mapping_type": "suggested",
+  "notes": "Tests whether the review control the factor says is missing actually operates."
+ },
+ {
+  "risk_id": "R-CSH-001",
+  "procedure_id": "P-CSH-002",
+  "mapping_type": "suggested",
+  "notes": "Independent reperformance establishes whether the reported cash balance reconciles."
+ },
+ {
+  "risk_id": "R-CSH-001",
+  "procedure_id": "P-CSH-003",
+  "mapping_type": "suggested",
+  "notes": "Aged outstanding items are where concealed differences hide; each must clear or be explained."
+ },
+ {
+  "risk_id": "R-CSH-001",
+  "procedure_id": "P-CSH-004",
+  "mapping_type": "suggested",
+  "notes": "Direct bank confirmation provides independent evidence of the balance, bypassing the unreviewed reconciliation."
+ },
+ {
+  "risk_id": "R-CSH-002",
+  "procedure_id": "P-CSH-005",
+  "mapping_type": "suggested",
+  "notes": "Vouching unusual payments to supporting documents is the primary occurrence test."
+ },
+ {
+  "risk_id": "R-CSH-002",
+  "procedure_id": "P-CSH-006",
+  "mapping_type": "suggested",
+  "notes": "Full-population analysis finds anomalous beneficiaries that sampling might miss."
+ },
+ {
+  "risk_id": "R-CSH-002",
+  "procedure_id": "P-CSH-007",
+  "mapping_type": "suggested",
+  "notes": "Directly tests the factor: whether new beneficiaries were verified before payment."
+ },
+ {
+  "risk_id": "R-CSH-002",
+  "procedure_id": "P-CSH-008",
+  "mapping_type": "suggested",
+  "notes": "Tests whether authorisation controls operated over the payments under suspicion."
+ },
+ {
+  "risk_id": "R-CSH-003",
+  "procedure_id": "P-CSH-009",
+  "mapping_type": "suggested",
+  "notes": "Matching both sides to value dates is the definitive cut-off test for transfers."
+ },
+ {
+  "risk_id": "R-CSH-003",
+  "procedure_id": "P-CSH-010",
+  "mapping_type": "suggested",
+  "notes": "Bank-issued advices corroborate the transfers independently of the entity's records."
+ },
+ {
+  "risk_id": "R-CSH-003",
+  "procedure_id": "P-CSH-011",
+  "mapping_type": "suggested",
+  "notes": "Reperformance of the in-transit position proves the cash balance is not double-counted."
+ },
+ {
+  "risk_id": "R-CSH-004",
+  "procedure_id": "P-CSH-012",
+  "mapping_type": "suggested",
+  "notes": "Direct physical count is the primary existence test for cash on hand."
+ },
+ {
+  "risk_id": "R-CSH-004",
+  "procedure_id": "P-CSH-013",
+  "mapping_type": "suggested",
+  "notes": "Reconciliation of the count to records identifies shortages and improper inclusions such as IOUs."
+ },
+ {
+  "risk_id": "R-CSH-004",
+  "procedure_id": "P-CSH-014",
+  "mapping_type": "suggested",
+  "notes": "Tests whether the entity's own count controls operate, determining reliance."
+ },
+ {
+  "risk_id": "R-FRD-003",
+  "procedure_id": "P-FRD-002",
+  "mapping_type": "suggested",
+  "notes": "Unpredictable procedures counter management's ability to anticipate revenue testing and hide fictitious sales in untested areas."
+ },
+ {
+  "risk_id": "R-FRD-004",
+  "procedure_id": "P-FRD-001",
+  "mapping_type": "suggested",
+  "notes": "Biased estimates are often implemented through manual journals (e.g. provision top-ups); journal testing targets the mechanism."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "procedure_id": "P-FRD-001",
+  "mapping_type": "suggested",
+  "notes": "Journals are the primary mechanism for both override and concealment of misappropriation."
+ },
+ {
+  "risk_id": "R-FRD-002",
+  "procedure_id": "P-FRD-001",
+  "mapping_type": "suggested",
+  "notes": "Misappropriation is routinely concealed with falsified journals."
+ },
+ {
+  "risk_id": "R-FRD-003",
+  "procedure_id": "P-FRD-001",
+  "mapping_type": "suggested",
+  "notes": "Fictitious and premature revenue is frequently created through period-end journals."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "procedure_id": "P-FRD-002",
+  "mapping_type": "suggested",
+  "notes": "Unpredictability counters management's ability to anticipate and circumvent planned procedures."
+ },
+ {
+  "risk_id": "R-FRD-002",
+  "procedure_id": "P-FRD-002",
+  "mapping_type": "suggested",
+  "notes": "Unannounced selections reduce the opportunity to conceal diverted assets."
+ },
+ {
+  "risk_id": "R-FRD-004",
+  "procedure_id": "P-FRD-003",
+  "mapping_type": "suggested",
+  "notes": "A pattern of optimistic outcomes is the observable footprint of systematic bias."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "procedure_id": "P-FRD-003",
+  "mapping_type": "suggested",
+  "notes": "Retrospective review can also reveal bias introduced through override journals affecting estimates."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "procedure_id": "P-FRD-004",
+  "mapping_type": "suggested",
+  "notes": "Unusual transactions are a classic vehicle for fraudulent reporting, including round-tripping."
+ },
+ {
+  "risk_id": "R-FRD-003",
+  "procedure_id": "P-FRD-004",
+  "mapping_type": "suggested",
+  "notes": "Fictitious revenue is often structured as unusual transactions with accommodating counterparties."
+ },
+ {
+  "risk_id": "R-FRD-002",
+  "procedure_id": "P-FRD-005",
+  "mapping_type": "suggested",
+  "notes": "Direct verification without warning is the strongest response to suspected diversion of physical assets and cash."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "procedure_id": "P-FRD-006",
+  "mapping_type": "suggested",
+  "notes": "Undisclosed related parties are a common channel for fraudulent reporting structures."
+ },
+ {
+  "risk_id": "R-FRD-003",
+  "procedure_id": "P-FRD-006",
+  "mapping_type": "suggested",
+  "notes": "Fictitious revenue frequently involves undisclosed related counterparties."
+ },
+ {
+  "risk_id": "R-FRP-001",
+  "procedure_id": "P-FRP-001-001",
+  "mapping_type": "suggested",
+  "notes": "Core test: vouches journals to the support the factor says is missing."
+ },
+ {
+  "risk_id": "R-FRP-001",
+  "procedure_id": "P-FRP-001-002",
+  "mapping_type": "suggested",
+  "notes": "Tests whether the approval control that should compensate for weak support operated."
+ },
+ {
+  "risk_id": "R-FRP-001",
+  "procedure_id": "P-FRP-001-003",
+  "mapping_type": "suggested",
+  "notes": "Full-population scan to find the unusual entries most likely to be problematic."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "procedure_id": "P-FRP-002-001",
+  "mapping_type": "suggested",
+  "notes": "The standard, required response to an assessed override risk: targeted journal testing."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "procedure_id": "P-FRP-002-002",
+  "mapping_type": "suggested",
+  "notes": "Obtains the governance perspective on override and fraud, as required where the risk is assessed."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "procedure_id": "P-FRP-002-003",
+  "mapping_type": "suggested",
+  "notes": "Addresses the non-journal channel of override: bias in significant estimates."
+ },
+ {
+  "risk_id": "R-FRP-003",
+  "procedure_id": "P-FRP-003-001",
+  "mapping_type": "suggested",
+  "notes": "Establishes the claimed population of related parties."
+ },
+ {
+  "risk_id": "R-FRP-003",
+  "procedure_id": "P-FRP-003-002",
+  "mapping_type": "suggested",
+  "notes": "Independently tests the completeness the entity's process cannot assure."
+ },
+ {
+  "risk_id": "R-FRP-003",
+  "procedure_id": "P-FRP-003-003",
+  "mapping_type": "suggested",
+  "notes": "Tests measurement and disclosure for the transactions identified."
+ },
+ {
+  "risk_id": "R-FRP-004",
+  "procedure_id": "P-FRP-004-001",
+  "mapping_type": "suggested",
+  "notes": "Directly challenges the unsupported assumptions at the heart of the risk."
+ },
+ {
+  "risk_id": "R-FRP-004",
+  "procedure_id": "P-FRP-004-002",
+  "mapping_type": "suggested",
+  "notes": "Tests arithmetic and establishes how much the answer depends on the assumptions."
+ },
+ {
+  "risk_id": "R-FRP-004",
+  "procedure_id": "P-FRP-004-003",
+  "mapping_type": "suggested",
+  "notes": "Tests the completeness assertion: obligations never provided for."
+ },
+ {
+  "risk_id": "R-FRP-005",
+  "procedure_id": "P-FRP-005-001",
+  "mapping_type": "suggested",
+  "notes": "The auditor's independent substitute for the missing checklist control."
+ },
+ {
+  "risk_id": "R-FRP-005",
+  "procedure_id": "P-FRP-005-002",
+  "mapping_type": "suggested",
+  "notes": "Tests that what is disclosed is accurate and consistent."
+ },
+ {
+  "risk_id": "R-FRP-005",
+  "procedure_id": "P-FRP-005-003",
+  "mapping_type": "suggested",
+  "notes": "Catches disclosure implications of novel transactions the checklist might miss."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "procedure_id": "P-FRP-001-001",
+  "mapping_type": "suggested",
+  "notes": "Relevant to override risk specifically in the combined scenario (RULE-FRP-002B): where override capability coincides with undocumented journals, vouching journals to support is a direct override response."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "procedure_id": "P-FRP-001-002",
+  "mapping_type": "suggested",
+  "notes": "Relevant to override risk in the combined scenario (RULE-FRP-002B): testing whether journal approval operated is part of the intensified journal testing override demands."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "procedure_id": "P-FRP-001-003",
+  "mapping_type": "suggested",
+  "notes": "Relevant to override risk in the combined scenario (RULE-FRP-002B): scanning the full journal population for unusual entries targets the entries most susceptible to override."
+ },
+ {
+  "risk_id": "R-TEL-001",
+  "procedure_id": "P-TEL-001-1",
+  "mapping_type": "suggested",
+  "notes": "Tests completeness of the obligation population at its source."
+ },
+ {
+  "risk_id": "R-TEL-001",
+  "procedure_id": "P-TEL-001-2",
+  "mapping_type": "suggested",
+  "notes": "Directly tests the valuation assertion, the dominant risk for provisions."
+ },
+ {
+  "risk_id": "R-TEL-002",
+  "procedure_id": "P-TEL-002-1",
+  "mapping_type": "suggested",
+  "notes": "Directly tests the two assertions at risk."
+ },
+ {
+  "risk_id": "R-TEL-002",
+  "procedure_id": "P-TEL-002-2",
+  "mapping_type": "suggested",
+  "notes": "Tests the preventive control over allocation inputs."
+ },
+ {
+  "risk_id": "R-TEL-003",
+  "procedure_id": "P-TEL-003-1",
+  "mapping_type": "suggested",
+  "notes": "Independent reperformance is the strongest test of rating accuracy."
+ },
+ {
+  "risk_id": "R-TEL-003",
+  "procedure_id": "P-TEL-003-2",
+  "mapping_type": "suggested",
+  "notes": "Exceptions are where completeness leaks out of automated billing."
+ },
+ {
+  "risk_id": "R-MFG-001",
+  "procedure_id": "P-MFG-001-1",
+  "mapping_type": "suggested",
+  "notes": "Independent reperformance of the valuation mechanics."
+ },
+ {
+  "risk_id": "R-MFG-001",
+  "procedure_id": "P-MFG-001-2",
+  "mapping_type": "suggested",
+  "notes": "Physical reality check on the most judgmental inventory category."
+ },
+ {
+  "risk_id": "R-MFG-002",
+  "procedure_id": "P-MFG-002-1",
+  "mapping_type": "suggested",
+  "notes": "Variances are the direct evidence of standard-cost accuracy."
+ },
+ {
+  "risk_id": "R-MFG-002",
+  "procedure_id": "P-MFG-002-2",
+  "mapping_type": "suggested",
+  "notes": "Tests that the accounting for variances does not distort inventory valuation."
+ },
+ {
+  "risk_id": "R-MFG-003",
+  "procedure_id": "P-MFG-003-1",
+  "mapping_type": "suggested",
+  "notes": "Back-testing is the most direct evidence for a claims-driven estimate."
+ },
+ {
+  "risk_id": "R-MFG-003",
+  "procedure_id": "P-MFG-003-2",
+  "mapping_type": "suggested",
+  "notes": "Tests the completeness boundary of the obligation."
+ },
+ {
+  "risk_id": "R-RTL-001",
+  "procedure_id": "P-RTL-001-1",
+  "mapping_type": "suggested",
+  "notes": "The till-to-bank trail is where skimming shows up."
+ },
+ {
+  "risk_id": "R-RTL-001",
+  "procedure_id": "P-RTL-001-2",
+  "mapping_type": "suggested",
+  "notes": "Analytics directs scarce testing effort to the riskiest outlets."
+ },
+ {
+  "risk_id": "R-RTL-002",
+  "procedure_id": "P-RTL-002-1",
+  "mapping_type": "suggested",
+  "notes": "External confirmation addresses the agreement uncertainty directly."
+ },
+ {
+  "risk_id": "R-RTL-002",
+  "procedure_id": "P-RTL-002-2",
+  "mapping_type": "suggested",
+  "notes": "Year-end is where premature recognition concentrates."
+ },
+ {
+  "risk_id": "R-RTL-003",
+  "procedure_id": "P-RTL-003-1",
+  "mapping_type": "suggested",
+  "notes": "Completeness of the liability is the primary risk."
+ },
+ {
+  "risk_id": "R-RTL-003",
+  "procedure_id": "P-RTL-003-2",
+  "mapping_type": "suggested",
+  "notes": "Premature release is the mechanism of understatement."
+ },
+ {
+  "risk_id": "R-BNK-001",
+  "procedure_id": "P-BNK-001-1",
+  "mapping_type": "suggested",
+  "notes": "Staging and parameters are the levers of ECL measurement."
+ },
+ {
+  "risk_id": "R-BNK-001",
+  "procedure_id": "P-BNK-001-2",
+  "mapping_type": "suggested",
+  "notes": "ECL disclosures are where estimation uncertainty must be visible."
+ },
+ {
+  "risk_id": "R-BNK-002",
+  "procedure_id": "P-BNK-002-1",
+  "mapping_type": "suggested",
+  "notes": "Tests both the income accuracy and the receivable valuation."
+ },
+ {
+  "risk_id": "R-BNK-003",
+  "procedure_id": "P-BNK-003-1",
+  "mapping_type": "suggested",
+  "notes": "Classification and valuation are the two decisions at risk."
+ },
+ {
+  "risk_id": "R-BNK-003",
+  "procedure_id": "P-BNK-003-2",
+  "mapping_type": "suggested",
+  "notes": "Disclosure is where valuation uncertainty must be transparent."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "procedure_id": "P-INV-001",
+  "mapping_type": "suggested",
+  "notes": "Establishes the baseline: the detailed records that will be tested against physical reality must first agree with the ledger."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "procedure_id": "P-INV-002",
+  "mapping_type": "suggested",
+  "notes": "Direct observation of existence and condition at the count date."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "procedure_id": "P-INV-003",
+  "mapping_type": "suggested",
+  "notes": "Two-directional testing covers both existence (recorded items exist) and completeness (physical items are recorded)."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "procedure_id": "P-INV-004",
+  "mapping_type": "suggested",
+  "notes": "Differences are where unrecorded losses hide; each material difference must be explained with evidence."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "procedure_id": "P-INV-005",
+  "mapping_type": "suggested",
+  "notes": "Roll-forward/back reliability depends on complete movement records around the count date."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "procedure_id": "P-INV-006",
+  "mapping_type": "suggested",
+  "notes": "Tests that recorded losses are genuine and correctly treated - the completeness assertion for loss records."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "procedure_id": "P-INV-007",
+  "mapping_type": "suggested",
+  "notes": "Directly targets the factor: whether access was controlled and movements authorised."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "procedure_id": "P-INV-008",
+  "mapping_type": "suggested",
+  "notes": "Concluding step: aggregates findings and tests whether the risk assessment still holds."
+ },
+ {
+  "risk_id": "R-PAY-001",
+  "procedure_id": "P-PAY-001",
+  "mapping_type": "suggested",
+  "notes": "Analytical scan to identify departments or periods where cost is inconsistent with headcount - the first indicator of ghost payees."
+ },
+ {
+  "risk_id": "R-PAY-001",
+  "procedure_id": "P-PAY-002",
+  "mapping_type": "suggested",
+  "notes": "Directly tests whether leavers stop being paid, tracing from the independent HR population."
+ },
+ {
+  "risk_id": "R-PAY-001",
+  "procedure_id": "P-PAY-003",
+  "mapping_type": "suggested",
+  "notes": "Vouching payees to employment evidence is the primary occurrence test for ghost employees."
+ },
+ {
+  "risk_id": "R-PAY-001",
+  "procedure_id": "P-PAY-004",
+  "mapping_type": "suggested",
+  "notes": "Tests whether the leaver removal control operates, to determine the extent of substantive work needed."
+ },
+ {
+  "risk_id": "R-PAY-002",
+  "procedure_id": "P-PAY-005",
+  "mapping_type": "suggested",
+  "notes": "Directly tests the factor: whether access rights allow one person to combine the incompatible duties."
+ },
+ {
+  "risk_id": "R-PAY-002",
+  "procedure_id": "P-PAY-006",
+  "mapping_type": "suggested",
+  "notes": "Tests whether master changes - the mechanism for creating fictitious payees - are independently authorised."
+ },
+ {
+  "risk_id": "R-PAY-002",
+  "procedure_id": "P-PAY-007",
+  "mapping_type": "suggested",
+  "notes": "Recalculation detects inflated rates or manipulated payment details."
+ },
+ {
+  "risk_id": "R-PAY-002",
+  "procedure_id": "P-PAY-008",
+  "mapping_type": "suggested",
+  "notes": "Anomaly analysis targets the classic indicators of fictitious employees: shared bank accounts and incomplete files."
+ },
+ {
+  "risk_id": "R-PAY-003",
+  "procedure_id": "P-PAY-009",
+  "mapping_type": "suggested",
+  "notes": "Vouching overtime to approved timesheets and attendance records is the primary occurrence test."
+ },
+ {
+  "risk_id": "R-PAY-003",
+  "procedure_id": "P-PAY-010",
+  "mapping_type": "suggested",
+  "notes": "Analytical procedures identify concentrations and spikes that individual vouching might miss."
+ },
+ {
+  "risk_id": "R-PAY-003",
+  "procedure_id": "P-PAY-011",
+  "mapping_type": "suggested",
+  "notes": "Recalculation verifies the accuracy of overtime at premium rates."
+ },
+ {
+  "risk_id": "R-PAY-003",
+  "procedure_id": "P-PAY-012",
+  "mapping_type": "suggested",
+  "notes": "Tests whether the approval control the factor says is missing actually operates."
+ },
+ {
+  "risk_id": "R-PAY-004",
+  "procedure_id": "P-PAY-013",
+  "mapping_type": "suggested",
+  "notes": "Independent recalculation is the direct test of calculation accuracy."
+ },
+ {
+  "risk_id": "R-PAY-004",
+  "procedure_id": "P-PAY-014",
+  "mapping_type": "suggested",
+  "notes": "Verifies the rates feeding the calculation are authorised."
+ },
+ {
+  "risk_id": "R-PAY-004",
+  "procedure_id": "P-PAY-015",
+  "mapping_type": "suggested",
+  "notes": "Confirms calculated payroll is completely and accurately posted, including year-end accruals."
+ },
+ {
+  "risk_id": "R-PAY-004",
+  "procedure_id": "P-PAY-016",
+  "mapping_type": "suggested",
+  "notes": "Analytical review corroborates overall payroll reasonableness and highlights systematic errors."
+ },
+ {
+  "risk_id": "R-PPE-001",
+  "procedure_id": "P-PPE-001-001",
+  "mapping_type": "suggested",
+  "notes": "Directly tests the classification decision at the heart of the risk."
+ },
+ {
+  "risk_id": "R-PPE-001",
+  "procedure_id": "P-PPE-001-002",
+  "mapping_type": "suggested",
+  "notes": "Establishes the criteria and tests whether the approval control operated."
+ },
+ {
+  "risk_id": "R-PPE-001",
+  "procedure_id": "P-PPE-001-003",
+  "mapping_type": "suggested",
+  "notes": "Analytical procedures highlight unusual patterns suggesting systematic misclassification."
+ },
+ {
+  "risk_id": "R-PPE-002",
+  "procedure_id": "P-PPE-002-001",
+  "mapping_type": "suggested",
+  "notes": "Verifies the charge is accurately calculated from the approved parameters."
+ },
+ {
+  "risk_id": "R-PPE-002",
+  "procedure_id": "P-PPE-002-002",
+  "mapping_type": "suggested",
+  "notes": "Addresses the core of the risk: whether the parameters themselves are appropriate."
+ },
+ {
+  "risk_id": "R-PPE-002",
+  "procedure_id": "P-PPE-002-003",
+  "mapping_type": "suggested",
+  "notes": "Tests whether changes to parameters are controlled."
+ },
+ {
+  "risk_id": "R-PPE-003",
+  "procedure_id": "P-PPE-003-001",
+  "mapping_type": "suggested",
+  "notes": "Direct evidence of existence for recorded assets."
+ },
+ {
+  "risk_id": "R-PPE-003",
+  "procedure_id": "P-PPE-003-002",
+  "mapping_type": "suggested",
+  "notes": "Tests that recorded disposals are genuine and correctly accounted for."
+ },
+ {
+  "risk_id": "R-PPE-003",
+  "procedure_id": "P-PPE-003-003",
+  "mapping_type": "suggested",
+  "notes": "Searches for the unrecorded disposals the factor makes possible."
+ },
+ {
+  "risk_id": "R-PPE-004",
+  "procedure_id": "P-PPE-004-001",
+  "mapping_type": "suggested",
+  "notes": "Evaluates the assessment process whose absence is the factor."
+ },
+ {
+  "risk_id": "R-PPE-004",
+  "procedure_id": "P-PPE-004-002",
+  "mapping_type": "suggested",
+  "notes": "Provides the auditor's independent identification of indicators."
+ },
+ {
+  "risk_id": "R-PPE-004",
+  "procedure_id": "P-PPE-004-003",
+  "mapping_type": "suggested",
+  "notes": "Tests measurement where indicators exist."
+ },
+ {
+  "risk_id": "R-PPE-005",
+  "procedure_id": "P-PPE-005-001",
+  "mapping_type": "suggested",
+  "notes": "Directly tests whether replaced parts were derecognised."
+ },
+ {
+  "risk_id": "R-PPE-005",
+  "procedure_id": "P-PPE-005-002",
+  "mapping_type": "suggested",
+  "notes": "Tests the componentisation that makes derecognition practicable."
+ },
+ {
+  "risk_id": "R-PPE-005",
+  "procedure_id": "P-PPE-005-003",
+  "mapping_type": "suggested",
+  "notes": "Corroborates the nature of replacement work through observation."
+ },
+ {
+  "risk_id": "R-PUR-001",
+  "procedure_id": "P-PUR-001",
+  "mapping_type": "suggested",
+  "notes": "Core validity test: ties each recorded purchase to evidence of receipt."
+ },
+ {
+  "risk_id": "R-PUR-001",
+  "procedure_id": "P-PUR-002",
+  "mapping_type": "suggested",
+  "notes": "Tests the three-way match control directly; failure redirects to extended vouching."
+ },
+ {
+  "risk_id": "R-PUR-001",
+  "procedure_id": "P-PUR-003",
+  "mapping_type": "suggested",
+  "notes": "Follows up the population most at risk: invoices paid without matching evidence."
+ },
+ {
+  "risk_id": "R-PUR-002",
+  "procedure_id": "P-PUR-004",
+  "mapping_type": "suggested",
+  "notes": "GRN-to-ledger tracing is the completeness direction for unrecorded liabilities."
+ },
+ {
+  "risk_id": "R-PUR-002",
+  "procedure_id": "P-PUR-005",
+  "mapping_type": "suggested",
+  "notes": "Post-year-end invoices are where pre-year-end liabilities hide."
+ },
+ {
+  "risk_id": "R-PUR-002",
+  "procedure_id": "P-PUR-006",
+  "mapping_type": "suggested",
+  "notes": "Tests management's own accrual before relying on it."
+ },
+ {
+  "risk_id": "R-PUR-003",
+  "procedure_id": "P-PUR-007",
+  "mapping_type": "suggested",
+  "notes": "Tests the independent-approval control over master changes directly."
+ },
+ {
+  "risk_id": "R-PUR-003",
+  "procedure_id": "P-PUR-008",
+  "mapping_type": "suggested",
+  "notes": "Payments to new or changed suppliers are the highest-risk disbursements."
+ },
+ {
+  "risk_id": "R-PUR-003",
+  "procedure_id": "P-PUR-009",
+  "mapping_type": "suggested",
+  "notes": "Full-population analysis catches fictitious suppliers that targeted testing might miss."
+ },
+ {
+  "risk_id": "R-PUR-004",
+  "procedure_id": "P-PUR-010",
+  "mapping_type": "suggested",
+  "notes": "Data analysis across the full ledger is the efficient way to find duplicates."
+ },
+ {
+  "risk_id": "R-PUR-004",
+  "procedure_id": "P-PUR-011",
+  "mapping_type": "suggested",
+  "notes": "Resolves each suspected duplicate with documentary evidence."
+ },
+ {
+  "risk_id": "R-PUR-004",
+  "procedure_id": "P-PUR-012",
+  "mapping_type": "suggested",
+  "notes": "Tests the preventive control against reprocessing paid invoices."
+ },
+ {
+  "risk_id": "R-PUR-005",
+  "procedure_id": "P-PUR-013",
+  "mapping_type": "suggested",
+  "notes": "Two-directional cut-off testing catches misstatements in either direction."
+ },
+ {
+  "risk_id": "R-PUR-005",
+  "procedure_id": "P-PUR-014",
+  "mapping_type": "suggested",
+  "notes": "GRN tracing tests completeness of the purchase population."
+ },
+ {
+  "risk_id": "R-PUR-005",
+  "procedure_id": "P-PUR-015",
+  "mapping_type": "suggested",
+  "notes": "Trend analysis directs cut-off testing to the months most at risk."
+ },
+ {
+  "risk_id": "R-REV-001",
+  "procedure_id": "P-REV-001",
+  "mapping_type": "suggested",
+  "notes": "Core occurrence test: ties each recorded sale to evidence the criteria were met."
+ },
+ {
+  "risk_id": "R-REV-001",
+  "procedure_id": "P-REV-002",
+  "mapping_type": "suggested",
+  "notes": "Contractual terms define when criteria are met; side agreements hide here."
+ },
+ {
+  "risk_id": "R-REV-001",
+  "procedure_id": "P-REV-003",
+  "mapping_type": "suggested",
+  "notes": "Cut-off testing catches revenue pulled across the reporting date."
+ },
+ {
+  "risk_id": "R-REV-001",
+  "procedure_id": "P-REV-004",
+  "mapping_type": "suggested",
+  "notes": "Tests the preventive control directly; failure redirects to extended substantive work."
+ },
+ {
+  "risk_id": "R-REV-002",
+  "procedure_id": "P-REV-005",
+  "mapping_type": "suggested",
+  "notes": "Dispatch-to-ledger tracing is the completeness direction for late-recorded sales."
+ },
+ {
+  "risk_id": "R-REV-002",
+  "procedure_id": "P-REV-006",
+  "mapping_type": "suggested",
+  "notes": "Post-year-end invoices are where pre-year-end dispatches hide."
+ },
+ {
+  "risk_id": "R-REV-002",
+  "procedure_id": "P-REV-007",
+  "mapping_type": "suggested",
+  "notes": "Tests management's own cut-off control before relying on it."
+ },
+ {
+  "risk_id": "R-REV-003",
+  "procedure_id": "P-REV-008",
+  "mapping_type": "suggested",
+  "notes": "Vouching to dispatch evidence is the direct test of whether sales occurred."
+ },
+ {
+  "risk_id": "R-REV-003",
+  "procedure_id": "P-REV-009",
+  "mapping_type": "suggested",
+  "notes": "Analytics flag revenue disconnected from operational activity for targeted follow-up."
+ },
+ {
+  "risk_id": "R-REV-003",
+  "procedure_id": "P-REV-010",
+  "mapping_type": "suggested",
+  "notes": "External confirmation provides independent evidence of validity."
+ },
+ {
+  "risk_id": "R-REV-004",
+  "procedure_id": "P-REV-011",
+  "mapping_type": "suggested",
+  "notes": "Links revenue patterns to the incentive mechanics to focus testing."
+ },
+ {
+  "risk_id": "R-REV-004",
+  "procedure_id": "P-REV-012",
+  "mapping_type": "suggested",
+  "notes": "Manual journals are the primary tool for incentive-driven manipulation."
+ },
+ {
+  "risk_id": "R-REV-004",
+  "procedure_id": "P-REV-013",
+  "mapping_type": "suggested",
+  "notes": "Builds the fraud risk assessment; responses must be corroborated, not relied upon alone."
+ },
+ {
+  "risk_id": "R-REV-005",
+  "procedure_id": "P-REV-014",
+  "mapping_type": "suggested",
+  "notes": "Each unusual transaction must be understood on its own facts."
+ },
+ {
+  "risk_id": "R-REV-005",
+  "procedure_id": "P-REV-015",
+  "mapping_type": "suggested",
+  "notes": "Independent corroboration is required where management representations are insufficient."
+ },
+ {
+  "risk_id": "R-REV-005",
+  "procedure_id": "P-REV-016",
+  "mapping_type": "suggested",
+  "notes": "Full-population scans catch unusual items that targeted selection might miss."
+ },
+ {
+  "risk_id": "R-INVST-001",
+  "procedure_id": "P-INVST-001",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-INVST-001",
+  "procedure_id": "P-INVST-002",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-INVST-002",
+  "procedure_id": "P-INVST-003",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-INVST-003",
+  "procedure_id": "P-INVST-004",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-BOR-001",
+  "procedure_id": "P-BOR-001",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-BOR-002",
+  "procedure_id": "P-BOR-002",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-BOR-003",
+  "procedure_id": "P-BOR-003",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-BOR-001",
+  "procedure_id": "P-BOR-004",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-TEL-001",
+  "procedure_id": "P-PROV-001",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-MFG-003",
+  "procedure_id": "P-PROV-002",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-TEL-001",
+  "procedure_id": "P-PROV-003",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-MFG-003",
+  "procedure_id": "P-PROV-004",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-TAX-003",
+  "procedure_id": "P-TAX-001",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-TAX-001",
+  "procedure_id": "P-TAX-002",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ },
+ {
+  "risk_id": "R-TAX-002",
+  "procedure_id": "P-TAX-003",
+  "mapping_type": "suggested",
+  "notes": "Phase 8 QA gap-fill mapping."
+ }
+]

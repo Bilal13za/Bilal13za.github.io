@@ -1,0 +1,51 @@
+[
+ {
+  "regulation_id": "REG-CA2017",
+  "engagement_type": "statutory_audit",
+  "jurisdiction": "PK",
+  "applicable": "yes",
+  "notes": "Statutory audit and financial-statement requirements for companies."
+ },
+ {
+  "regulation_id": "REG-CA2017",
+  "engagement_type": "reporting",
+  "jurisdiction": "PK",
+  "applicable": "yes",
+  "notes": "Financial statements, directors' report, filing obligations."
+ },
+ {
+  "regulation_id": "REG-ITO2001",
+  "engagement_type": "tax",
+  "jurisdiction": "PK",
+  "applicable": "yes",
+  "notes": "Income tax computation, withholding, filing."
+ },
+ {
+  "regulation_id": "REG-ITO2001",
+  "engagement_type": "statutory_audit",
+  "jurisdiction": "PK",
+  "applicable": "conditional",
+  "notes": "Relevant to tax balances, provisions, and disclosures in audited statements."
+ },
+ {
+  "regulation_id": "REG-BCO1962",
+  "engagement_type": "statutory_audit",
+  "jurisdiction": "PK",
+  "applicable": "conditional",
+  "notes": "Applies to audits of banking companies."
+ },
+ {
+  "regulation_id": "REG-PSXREG",
+  "engagement_type": "statutory_audit",
+  "jurisdiction": "PK",
+  "applicable": "conditional",
+  "notes": "Applies to listed-company audits (continuing obligations, disclosures)."
+ },
+ {
+  "regulation_id": "REG-SECP-PO2017",
+  "engagement_type": "statutory_audit",
+  "jurisdiction": "PK",
+  "applicable": "conditional",
+  "notes": "Applies where a public offering is involved."
+ }
+]

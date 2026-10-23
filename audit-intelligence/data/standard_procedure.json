@@ -1,0 +1,2006 @@
+[
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-CSH-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-CSH-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-CSH-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-CSH-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-CSH-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-CSH-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-CSH-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-CSH-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-CSH-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-CSH-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-011",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-012",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-CSH-013",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-CSH-014",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRD-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-FRD-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-260R",
+  "procedure_id": "P-FRD-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRD-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRD-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-FRD-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRD-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRD-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-FRD-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-FRD-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-260R",
+  "procedure_id": "P-FRD-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRD-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRD-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-FRD-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-550",
+  "procedure_id": "P-FRD-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-260R",
+  "procedure_id": "P-FRD-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRD-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRD-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRD-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRD-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-550",
+  "procedure_id": "P-FRD-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-260R",
+  "procedure_id": "P-FRD-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRD-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRP-001-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-FRP-001-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-001-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-FRP-001-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRP-001-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-FRP-001-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-320",
+  "procedure_id": "P-FRP-001-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-001-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRP-002-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-260R",
+  "procedure_id": "P-FRP-002-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-002-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRP-002-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-260R",
+  "procedure_id": "P-FRP-002-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-002-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRP-002-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-FRP-002-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-FRP-002-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-002-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-550",
+  "procedure_id": "P-FRP-003-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-003-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-FRP-003-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-FRP-003-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-003-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-FRP-003-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-003-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-FRP-004-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-620",
+  "procedure_id": "P-FRP-004-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-004-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-FRP-004-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-004-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-004-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-320",
+  "procedure_id": "P-FRP-005-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-005-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-005-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-FRP-005-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-TEL-001-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-TEL-001-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-TEL-001-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-530",
+  "procedure_id": "P-TEL-002-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-TEL-002-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-TEL-002-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-530",
+  "procedure_id": "P-TEL-003-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-TEL-003-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-TEL-003-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-TEL-003-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-MFG-001-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-MFG-001-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-MFG-001-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-MFG-002-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-MFG-002-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-MFG-002-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-MFG-003-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-MFG-003-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-MFG-003-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-MFG-003-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-MFG-003-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-RTL-001-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-RTL-001-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-RTL-001-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-RTL-001-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-RTL-002-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-RTL-002-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-RTL-002-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-RTL-002-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-RTL-003-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-RTL-003-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-RTL-003-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-BNK-001-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-BNK-001-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-BNK-001-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-BNK-002-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-620",
+  "procedure_id": "P-BNK-003-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-BNK-003-1",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-BNK-003-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-BNK-003-2",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-INV-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INV-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INV-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INV-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-INV-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-320",
+  "procedure_id": "P-INV-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INV-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-INV-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INV-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INV-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-INV-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-INV-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INV-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-INV-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-INV-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-320",
+  "procedure_id": "P-INV-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INV-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-PAY-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PAY-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PAY-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-PAY-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PAY-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-530",
+  "procedure_id": "P-PAY-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-PAY-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-PAY-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-PAY-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-530",
+  "procedure_id": "P-PAY-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-PAY-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PAY-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PAY-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-011",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-PAY-012",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-530",
+  "procedure_id": "P-PAY-013",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-013",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-014",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PAY-015",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-015",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PAY-016",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PAY-016",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-001-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-PPE-001-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PPE-001-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-320",
+  "procedure_id": "P-PPE-001-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-001-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-530",
+  "procedure_id": "P-PPE-002-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-002-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PPE-002-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-PPE-002-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-002-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PPE-002-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-PPE-002-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PPE-003-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-530",
+  "procedure_id": "P-PPE-003-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-003-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PPE-003-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-003-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-003-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PPE-004-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-004-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PPE-004-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-320",
+  "procedure_id": "P-PPE-004-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-004-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-PPE-004-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-320",
+  "procedure_id": "P-PPE-004-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-004-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "P-PPE-005-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-005-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PPE-005-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-005-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PPE-005-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-PUR-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-PUR-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-PUR-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-PUR-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-PUR-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-620",
+  "procedure_id": "P-PUR-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-PUR-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PUR-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PUR-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PUR-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PUR-011",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-011",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-PUR-012",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-PUR-013",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-013",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-014",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-PUR-015",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-PUR-015",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PUR-015",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-REV-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-REV-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-REV-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-REV-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-REV-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-REV-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-330",
+  "procedure_id": "P-REV-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-005",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-REV-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-006",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-REV-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-007",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-REV-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-008",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-REV-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-REV-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-009",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-REV-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-REV-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-010",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-REV-011",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "P-REV-011",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-011",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-REV-012",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-012",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-REV-013",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-260R",
+  "procedure_id": "P-REV-013",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-013",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-320",
+  "procedure_id": "P-REV-014",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-014",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-REV-015",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-580",
+  "procedure_id": "P-REV-015",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-015",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "P-REV-016",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "P-REV-016",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-REV-016",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "AP-REV-101",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-REV-101",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "AP-REV-101",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-REV-101",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-REV-102",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-REV-102",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "AP-REV-103",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-REV-103",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-REV-103",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-REV-201",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-REV-201",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-REV-202",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-REV-202",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-REV-203",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-540R",
+  "procedure_id": "AP-REV-203",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-REV-203",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-INV-301",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-INV-301",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-INV-302",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-INV-302",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-INV-303",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-INV-303",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-PUR-401",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-PUR-401",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-PUR-402",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-501",
+  "procedure_id": "AP-PUR-402",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-PUR-402",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-PUR-403",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-PUR-403",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-PAY-501",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-PAY-501",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-PAY-502",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-PAY-502",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-PAY-503",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-PAY-503",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-PPE-601",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-PPE-601",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "AP-PPE-602",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-PPE-602",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-PPE-602",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-PPE-603",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-PPE-603",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "AP-CSH-701",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-CSH-701",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-CSH-701",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "AP-CSH-702",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-CSH-702",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-CSH-702",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-240",
+  "procedure_id": "AP-CSH-703",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-520",
+  "procedure_id": "AP-CSH-703",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "AP-CSH-703",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INVST-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INVST-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INVST-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-INVST-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-BOR-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-BOR-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-BOR-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-BOR-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-BOR-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PROV-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PROV-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PROV-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-505",
+  "procedure_id": "P-PROV-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-560",
+  "procedure_id": "P-PROV-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PROV-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-PROV-004",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-TAX-001",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-TAX-002",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ },
+ {
+  "standard_id": "ISA-500",
+  "procedure_id": "P-TAX-003",
+  "mapping_type": "suggested",
+  "notes": "Keyword/technique-derived suggested association (Phase 4 mapping rules); review against the standard text before citing."
+ }
+]

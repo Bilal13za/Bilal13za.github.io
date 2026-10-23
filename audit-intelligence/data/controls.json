@@ -1,0 +1,722 @@
+[
+ {
+  "id": "C-CSH-001",
+  "title": "Ensure bank errors and irregularities are detected and investigated promptly.",
+  "description": "Bank reconciliations are prepared promptly each month and reviewed and signed off by a person independent of cash handling, who investigates aged or unusual items.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly\n\nResponsible: Finance manager, independent of cash handling\n\nEvidence of operation: Signed reconciliations with review notes and documented follow-up of outstanding items.\n\nLimitations: Review may be superficial; will not detect items omitted from both the bank statement and the books.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-CSH-002",
+  "title": "Prevent stale items from permanently distorting the reported cash balance.",
+  "description": "Aged outstanding items (unpresented cheques, deposits in transit) are investigated and cleared or written back within a defined timeframe.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly\n\nResponsible: Finance manager\n\nEvidence of operation: Aged items listing with investigation notes and resolution.\n\nLimitations: Depends on the reviewer genuinely investigating rather than carrying items forward.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-CSH-003",
+  "title": "Prevent payments to fictitious or improper beneficiaries.",
+  "description": "New beneficiaries are independently verified (business existence, bank account ownership) before the first payment is made.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Each new beneficiary\n\nResponsible: Finance / procurement, independent of payment processing\n\nEvidence of operation: Beneficiary verification checklist with supporting documents.\n\nLimitations: Verification documents can be forged; does not prevent subsequent diversion of payments to changed bank details.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-CSH-004",
+  "title": "Ensure only genuine, properly supported payments are released.",
+  "description": "Payments above defined thresholds require dual authorisation, and supporting documents are matched to the payment before release.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Each payment run\n\nResponsible: Authorised signatories (two)\n\nEvidence of operation: Authorised payment batches with matched supporting documents.\n\nLimitations: Can be overridden by management; authorisers may approve without examining supporting documents.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-CSH-005",
+  "title": "Ensure inter-account transfers are completely and accurately recorded on both sides.",
+  "description": "All transfers between the entity's bank accounts are logged in a transfer register and matched on both the sending and receiving sides before period-end close.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Each transfer / at period-end\n\nResponsible: Treasury / finance\n\nEvidence of operation: Transfer register with both-side matching evidence and sign-off.\n\nLimitations: Will not detect transfers deliberately excluded from the register; depends on completeness of the log.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-CSH-006",
+  "title": "Prevent cut-off errors and window dressing through year-end transfers.",
+  "description": "Year-end bank cut-off procedures require transfers in transit at the reporting date to be identified, listed and correctly presented (not double-counted).\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Year-end\n\nResponsible: Finance manager\n\nEvidence of operation: Year-end in-transit schedule agreed to bank statements on both sides.\n\nLimitations: Only as complete as the transfer register and the statements obtained; post year-end reversals may not be visible.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-CSH-007",
+  "title": "Detect shortages or misappropriation of cash on hand.",
+  "description": "Independent surprise cash counts are performed, reconciled to the cash records, and differences investigated and approved.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Periodic, unannounced\n\nResponsible: Finance / internal audit, independent of cash custody\n\nEvidence of operation: Count sheets signed by the counter, reconciliation to records, investigation of differences.\n\nLimitations: Only proves the position at the count date; ineffective if the counter colludes with the cashier.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-CSH-008",
+  "title": "Prevent unauthorised removal of physical cash.",
+  "description": "Cash on hand is held under dual custody, all receipts are issued pre-numbered receipts, and takings are banked promptly and intact.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Ongoing\n\nResponsible: Cashier / supervisor\n\nEvidence of operation: Receipt books, banking slips, dual-control logs.\n\nLimitations: Dual custody can be defeated by collusion; does not prevent theft before receipting.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRD-001",
+  "title": "Prevent unauthorised or unsupported manual journals, the primary vehicle for management override.",
+  "description": "All manual journal entries above a defined threshold require approval by a person independent of the preparer before posting; approval is evidenced by signature or system workflow.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per journal entry\n\nResponsible: Finance manager / financial controller\n\nEvidence of operation: Journal approval log or workflow audit trail showing preparer, approver and timestamps.\n\nLimitations: Does not prevent collusion between preparer and approver; management override can bypass it.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRD-002",
+  "title": "Detect fraud and override by giving staff a safe route to report concerns.",
+  "description": "A whistleblowing policy with a reporting channel independent of line management, communicated to all staff, with reports logged, investigated and reported to those charged with governance.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Ongoing\n\nResponsible: Those charged with governance / ethics officer\n\nEvidence of operation: Policy document, communication records, log of reports received and investigation outcomes.\n\nLimitations: Ineffective if staff do not trust the channel or fear retaliation; absence of reports does not prove absence of fraud.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRD-003",
+  "title": "Increase the chance that concealed misappropriation is exposed when someone else performs the role.",
+  "description": "Staff in cash-handling, payment and recording roles are required to take periodic uninterrupted leave, with their duties performed by others during absence; key roles are rotated where feasible.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Periodic\n\nResponsible: Human resources / line management\n\nEvidence of operation: Leave records, handover notes, rotation schedule.\n\nLimitations: Disruptive to operations; does not detect frauds that do not require the perpetrator's continuous presence.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRD-004",
+  "title": "Detect and deter systematic management bias in estimates.",
+  "description": "Significant accounting estimates are independently reviewed and challenged by someone without responsibility for preparing them, with the challenge documented, before the financial statements are finalised.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Per reporting period\n\nResponsible: CFO / audit committee\n\nEvidence of operation: Review checklist or memo documenting assumptions challenged and conclusions reached.\n\nLimitations: A reviewer who defers to management adds no assurance; challenge must be genuine and evidenced.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRD-005",
+  "title": "Prevent premature or fictitious revenue recognition driven by target pressure.",
+  "description": "Revenue cut-off and recognition for material or unusual transactions are reviewed by a function independent of sales, with supporting dispatch and acceptance evidence inspected before revenue is recorded.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per reporting period\n\nResponsible: Finance, independent of sales\n\nEvidence of operation: Cut-off checklist, review sign-off, matched dispatch/delivery evidence.\n\nLimitations: Does not address fictitious sales supported by fabricated dispatch documents; depends on the reviewer's scepticism.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-001",
+  "title": "Ensure manual journals are valid, supported and independently checked before they affect the ledger.",
+  "description": "All manual journals above a defined threshold require documented supporting evidence and independent approval before posting; the preparer cannot approve their own journal.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per journal\n\nResponsible: Finance manager\n\nEvidence of operation: Journal approval records showing preparer, independent approver, date, and attached support.\n\nLimitations: Approval may be perfunctory; approvers under time pressure at period-end may sign without review; collusion defeats segregation.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-002",
+  "title": "Detect unusual or potentially inappropriate manual journals after posting.",
+  "description": "A complete, sequentially controlled listing of manual journals is reviewed periodically for unusual entries - round amounts, postings outside normal hours, vague descriptions, entries by senior staff, or entries to seldom-used accounts.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly\n\nResponsible: Financial controller\n\nEvidence of operation: Review working papers with follow-up notes on items investigated.\n\nLimitations: Only as good as the reviewer's skepticism and knowledge of what is unusual; a reviewer who does not understand the business will miss subtle indicators.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-003",
+  "title": "Provide independent oversight that deters and detects management override.",
+  "description": "Those charged with governance (for example an audit committee) oversee the financial reporting process, review significant judgments and unusual journals, and maintain a channel through which concerns about override or fraud can be raised.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Quarterly\n\nResponsible: Audit committee / board\n\nEvidence of operation: Meeting minutes evidencing challenge of judgments and review of unusual items; records of concerns raised and how they were addressed.\n\nLimitations: Governance oversight is periodic and high-level; it cannot prevent a determined override between meetings, and its effectiveness depends on the independence and competence of those involved.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-004",
+  "title": "Restrict and make visible the system-level actions through which override is typically exercised.",
+  "description": "Privileged and administrator access to the accounting system is restricted to those who need it, all privileged actions are logged, logs are reviewed, and direct posting to closed periods is technically blocked.\n\nType: Preventive\n\nManual/automated: Automated\n\nFrequency: Ongoing\n\nResponsible: IT / system administrator\n\nEvidence of operation: Access-right listings, privileged-action logs and evidence of periodic log review.\n\nLimitations: A privileged user can potentially alter or delete logs; the control reduces opportunity but cannot eliminate override by those who administer the system itself.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-005",
+  "title": "Ensure related-party relationships are known so transactions with them can be identified.",
+  "description": "A register of related parties is maintained and kept current for changes in directors, key management, significant shareholders and their close family members and controlled entities; declarations of interest are obtained periodically.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Periodic (and on change)\n\nResponsible: Company secretary / finance\n\nEvidence of operation: The related-party register with update history and signed declarations of interest.\n\nLimitations: Relies on individuals declaring their interests honestly and completely; complex or concealed structures may not be declared.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-006",
+  "title": "Identify related-party transactions at the point of approval.",
+  "description": "Transactions above a defined threshold are screened against the related-party register before approval, and identified related-party transactions are flagged for appropriate measurement and disclosure.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per transaction\n\nResponsible: Finance / budget holder\n\nEvidence of operation: Approval records showing the related-party check and flagging of identified transactions.\n\nLimitations: Screening is only as complete as the register; transactions structured to avoid thresholds escape the check.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-007",
+  "title": "Ensure provisions are based on supportable assumptions that have been independently challenged.",
+  "description": "Provision calculations, including all key assumptions, are prepared with supporting evidence and are reviewed and challenged by someone independent of the preparer before the financial statements are finalised.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: At each reporting date\n\nResponsible: Finance director\n\nEvidence of operation: Provision working papers showing preparer, independent reviewer, challenge points and how they were resolved.\n\nLimitations: A reviewer without the expertise or the willingness to challenge adds little; management bias can survive a polite review.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-008",
+  "title": "Detect patterns of optimistic or pessimistic bias in provisioning.",
+  "description": "Significant estimates are compared with subsequent actual outcomes (look-back review); systematic differences are investigated for bias.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Annual\n\nResponsible: Finance\n\nEvidence of operation: Look-back analyses with investigation notes on significant variances.\n\nLimitations: Backward-looking; detects bias only after the event, and a single year's variance may have innocent explanations.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-009",
+  "title": "Ensure all required disclosures are considered and included.",
+  "description": "A disclosure checklist based on the applicable financial reporting framework is completed for each set of financial statements and reviewed by a technically competent person independent of the preparer.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: At each reporting date\n\nResponsible: Financial reporting manager / technical reviewer\n\nEvidence of operation: Completed and reviewed disclosure checklist cross-referenced to the financial statements.\n\nLimitations: A checklist completed mechanically, or one not updated for new standards and transactions, gives false comfort.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-FRP-010",
+  "title": "Catch disclosure requirements arising from transactions the checklist alone might miss.",
+  "description": "New, unusual or complex transactions are assessed for disclosure implications during the close process, and the assessment is documented.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: At each reporting date\n\nResponsible: Financial reporting manager\n\nEvidence of operation: Close file notes assessing disclosure implications of new transactions.\n\nLimitations: Relies on preparers recognising that a transaction is new or unusual; routine carry-forward thinking misses novel items.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-TEL-001-1",
+  "title": "Ensure all sites with restoration obligations are identified.",
+  "description": "A complete register of network sites is maintained, capturing lease terms and restoration/dismantling clauses, and is reconciled to the lease portfolio annually.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Annual\n\nResponsible: Network operations / finance\n\nEvidence of operation: Reconciled site register with restoration-clause flags; review sign-off.\n\nLimitations: Only as good as the underlying lease data; new sites may be missed.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-TEL-001-2",
+  "title": "Ensure the provision is measured on supportable assumptions.",
+  "description": "The decommissioning provision model (cost estimates, timing, discount rate, unwinding) is reviewed and approved by management each reporting date.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Annual\n\nResponsible: Financial controller\n\nEvidence of operation: Approved provision calculation with assumption support.\n\nLimitations: Management review may lack challenge where assumptions are highly technical.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-TEL-002-1",
+  "title": "Prevent unsupported allocation keys entering the billing system.",
+  "description": "New tariff plans and bundle structures are independently reviewed and approved, including the stand-alone selling prices used for allocation, before launch.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per new plan\n\nResponsible: Product / finance\n\nEvidence of operation: Tariff approval forms with allocation basis documented.\n\nLimitations: Review may be a formality under launch pressure.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-TEL-002-2",
+  "title": "Ensure allocation is applied consistently to all contracts.",
+  "description": "The billing and revenue system automatically allocates consideration per the approved configuration, with changes to allocation logic restricted and logged.\n\nType: Preventive\n\nManual/automated: Automated\n\nFrequency: Ongoing\n\nResponsible: IT / revenue assurance\n\nEvidence of operation: Change logs and restricted access rights.\n\nLimitations: An automated control faithfully applies a wrong configuration.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-TEL-003-1",
+  "title": "Detect unrated or misrated usage before billing.",
+  "description": "Rating exception and rejection reports are reviewed daily and rejected usage records are investigated and reprocessed or resolved.\n\nType: Detective\n\nManual/automated: IT-dependent manual\n\nFrequency: Daily\n\nResponsible: Revenue assurance\n\nEvidence of operation: Reviewed exception logs with resolution notes.\n\nLimitations: Reviewers may clear exceptions without proper investigation under volume pressure.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-TEL-003-2",
+  "title": "Prevent defective rating logic reaching production.",
+  "description": "Tariff and rating configuration changes are tested in a non-production environment and independently approved before deployment.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per change\n\nResponsible: Billing IT / finance\n\nEvidence of operation: Test results and deployment approvals.\n\nLimitations: Testing may not cover all tariff combinations.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-MFG-001-1",
+  "title": "Keep absorption rates current and capacity assumptions realistic.",
+  "description": "Overhead absorption rates and the normal-capacity assumption are set from approved budgets and reviewed when budgets change or capacity shifts materially.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Annual / on budget change\n\nResponsible: Cost accounting / finance\n\nEvidence of operation: Approved rate-setting papers with budget support.\n\nLimitations: Budgets themselves may be optimistic.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-MFG-001-2",
+  "title": "Prevent capitalisation of abnormal production costs.",
+  "description": "Abnormal idle-capacity costs are identified and expensed rather than absorbed into inventory.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly\n\nResponsible: Plant finance\n\nEvidence of operation: Capacity utilisation reports with idle-cost analysis.\n\nLimitations: The normal/abnormal boundary is judgmental.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-MFG-002-1",
+  "title": "Ensure variances are understood and standards stay current.",
+  "description": "Material cost variances are investigated monthly, with findings documented and standards updated where the variance reflects a permanent cost change.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly\n\nResponsible: Cost accounting\n\nEvidence of operation: Variance investigation reports with conclusions.\n\nLimitations: Investigations may conclude too readily that variances are 'timing'.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-MFG-003-1",
+  "title": "Keep the provision aligned with emerging claims data.",
+  "description": "Warranty claims are tracked by product cohort and the provision model is updated for actual claim experience each reporting date.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Quarterly / annual\n\nResponsible: Finance / after-sales\n\nEvidence of operation: Cohort claim analyses feeding the provision model.\n\nLimitations: New products have no history to track.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-RTL-001-1",
+  "title": "Detect missing takings promptly.",
+  "description": "Daily till reconciliations are performed, independently reviewed, and differences investigated; bankings agree to till records.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Daily\n\nResponsible: Store supervisor / finance\n\nEvidence of operation: Signed till sheets, banking slips, investigation notes.\n\nLimitations: Collusion between till operator and reviewer defeats it.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-RTL-001-2",
+  "title": "Prevent fictitious voids/refunds as a skimming method.",
+  "description": "Voids, refunds and discounts require supervisor authorisation with reason codes, and are reviewed for unusual patterns.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Ongoing\n\nResponsible: Store supervisor\n\nEvidence of operation: Authorised void/refund logs.\n\nLimitations: Supervisor may be the perpetrator.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-RTL-002-1",
+  "title": "Ensure income is recognised only on agreed terms.",
+  "description": "Rebate agreements are documented, with tiered terms captured in a rebate schedule reviewed by finance before income is recognised.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per agreement\n\nResponsible: Commercial finance\n\nEvidence of operation: Signed agreements and approved rebate schedules.\n\nLimitations: Informal side deals may bypass documentation.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-RTL-003-1",
+  "title": "Ensure the liability is complete and breakage is authorised.",
+  "description": "Gift card and loyalty liabilities are reconciled between the POS/loyalty system and the general ledger each period, with breakage assumptions approved.\n\nType: Detective\n\nManual/automated: IT-dependent manual\n\nFrequency: Monthly\n\nResponsible: Finance\n\nEvidence of operation: Reconciliations with approval; breakage papers.\n\nLimitations: Reconciliation proves arithmetic, not correct breakage.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-BNK-001-1",
+  "title": "Ensure the impairment estimate is controlled and challenged.",
+  "description": "The ECL model is independently validated, staging criteria are documented, and significant staging decisions and overlays are approved with documented rationale.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Annual / quarterly\n\nResponsible: Risk / finance\n\nEvidence of operation: Validation reports; staging committee minutes; overlay approvals.\n\nLimitations: Validation may lag model changes.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-BNK-002-1",
+  "title": "Prevent accrual of uncollectible interest.",
+  "description": "Interest accrual is automatically suspended when a loan meets defined non-performance criteria, with any exception requiring documented approval.\n\nType: Preventive\n\nManual/automated: Automated\n\nFrequency: Ongoing\n\nResponsible: Credit operations / IT\n\nEvidence of operation: System configuration; exception approvals.\n\nLimitations: Criteria may be set too leniently.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-BNK-003-1",
+  "title": "Ensure valuations and classifications are not set by the front office alone.",
+  "description": "Independent price verification is performed on treasury valuations, with model inputs and classifications reviewed by a function independent of the trading desk.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly\n\nResponsible: Risk / product control\n\nEvidence of operation: IPV reports with investigation of differences.\n\nLimitations: Independent sources may not exist for level 3 instruments.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-INV-001",
+  "title": "Prevent unauthorised removal of inventory.",
+  "description": "Physical access to warehouse and high-value storage areas is restricted to authorised personnel, with access rights reviewed periodically.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Ongoing\n\nResponsible: Warehouse manager\n\nEvidence of operation: Access authorisation lists; key/card issuance logs; periodic access-right reviews signed off by management.\n\nLimitations: Does not detect theft by authorised personnel; can be overridden by collusion or management override.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-INV-002",
+  "title": "Detect unrecorded inventory losses and ensure records agree with physical quantities.",
+  "description": "Independent physical inventory counts are performed periodically and differences between counted quantities and inventory records are investigated and approved before adjustment.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Periodic (e.g. cycle counts or annual full count)\n\nResponsible: Finance / internal audit, independent of warehouse custody\n\nEvidence of operation: Count sheets, reconciliation of counts to records, investigation notes and approved adjustment journals.\n\nLimitations: Only detects losses at the count date; ineffective if counters are not independent or differences are written off without investigation.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PAY-001",
+  "title": "Ensure terminated employees are removed promptly so no further payments are processed.",
+  "description": "HR issues a leaver notification to payroll on or before the employee's last working day, and payroll confirms removal from the payroll master before the next pay run.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Each termination\n\nResponsible: HR officer / payroll officer\n\nEvidence of operation: Signed leaver checklist; payroll master change log showing the removal date.\n\nLimitations: Can be bypassed by collusion between HR and payroll; ineffective if the notification step is skipped under time pressure.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PAY-002",
+  "title": "Detect ghost or terminated employees remaining on the payroll.",
+  "description": "An independent person reconciles the payroll master headcount to HR employment records each pay period and investigates differences.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Each pay period\n\nResponsible: Finance manager, independent of payroll processing\n\nEvidence of operation: Signed reconciliation with documented follow-up of differences.\n\nLimitations: Only as good as the HR records it is compared against; will not detect collusion that falsifies both sides.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PAY-003",
+  "title": "Prevent unauthorised or fictitious changes to employee master data.",
+  "description": "Payroll master changes (new starters, leavers, pay rate and bank detail changes) require independent approval before they take effect.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Each master change\n\nResponsible: HR manager / finance manager, independent of payroll processing\n\nEvidence of operation: Approved change request forms or system workflow approvals; audit trail of changes.\n\nLimitations: Can be overridden by management; ineffective against collusion between the requester and the approver.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PAY-004",
+  "title": "Prevent one person from both creating a payee and paying them.",
+  "description": "System access rights segregate payroll master maintenance from payroll payment processing and release, and access rights are reviewed periodically.\n\nType: Preventive\n\nManual/automated: Automated\n\nFrequency: Ongoing, with periodic review\n\nResponsible: IT / finance management\n\nEvidence of operation: User access rights report; periodic access review signed off by management.\n\nLimitations: Access reviews may be perfunctory; privileged IT users may bypass application-level controls.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PAY-005",
+  "title": "Ensure only genuine, necessary overtime is paid.",
+  "description": "Overtime is approved in advance (or promptly afterwards) by a supervisor independent of the claimant, based on operational need.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Each overtime claim\n\nResponsible: Line supervisor\n\nEvidence of operation: Approved overtime claim forms or system approval records.\n\nLimitations: Supervisors may approve routinely without real scrutiny; does not detect collusion between claimant and supervisor.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PAY-006",
+  "title": "Detect excessive or anomalous overtime claims.",
+  "description": "An exception report of overtime by employee and department is reviewed periodically and unusual patterns are investigated.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly\n\nResponsible: Finance / HR manager\n\nEvidence of operation: Reviewed exception report with investigation notes and sign-off.\n\nLimitations: Review may be high-level; effectiveness depends on defined thresholds and genuine follow-up.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PAY-007",
+  "title": "Ensure payroll is calculated from correct, current rates and parameters.",
+  "description": "Payroll rate tables, tax tables and deduction parameters are updated from authoritative sources, and changes are independently reviewed before the pay run.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Each update / each pay period\n\nResponsible: Payroll manager / finance manager\n\nEvidence of operation: Updated parameter tables with reviewer sign-off; change log.\n\nLimitations: Reviewer may not verify the source of the parameters; configuration errors in the payroll system may not be visible in the tables.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PAY-008",
+  "title": "Detect calculation errors and ensure payroll agrees with the accounting records.",
+  "description": "The payroll summary is independently reviewed and reconciled to the general ledger before payments are released.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Each pay period\n\nResponsible: Finance manager, independent of payroll processing\n\nEvidence of operation: Reviewed and signed payroll summary; payroll-to-GL reconciliation.\n\nLimitations: A high-level review may not detect systematic calculation errors affecting all employees equally.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-001",
+  "title": "Ensure only expenditure meeting the capitalisation criteria is recognised as property, plant and equipment.",
+  "description": "Capital expenditure, including the capitalisation of repairs and major maintenance, requires documented approval against the entity's capitalisation criteria before the amount is recognised as an asset.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per transaction\n\nResponsible: Finance manager / budget holder\n\nEvidence of operation: Approved capital expenditure request forms with a completed capitalisation-criteria checklist and authorising signature.\n\nLimitations: The approver may not fully understand the accounting criteria; the control can be bypassed by miscoding expenditure or by collusion.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-002",
+  "title": "Detect misclassification between repairs expense and capital additions.",
+  "description": "Finance reviews the repairs and maintenance expense accounts each period for items that appear capital in nature, and reviews capital additions for items that appear to be repairs, investigating and correcting anomalies.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly or quarterly\n\nResponsible: Financial accountant\n\nEvidence of operation: Periodic review working papers with follow-up notes and correcting entries where applicable.\n\nLimitations: A review detects only what the reviewer notices; subtle misclassifications near the capitalisation boundary may pass unchallenged.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-003",
+  "title": "Ensure depreciation reflects the expected pattern of consumption of future economic benefits.",
+  "description": "Management reviews depreciation rates, methods, useful lives and residual values at least annually, approves any changes, and documents the rationale for the conclusions reached.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Annual\n\nResponsible: Finance director\n\nEvidence of operation: Signed annual review memorandum with supporting analysis of asset usage, condition and technological change.\n\nLimitations: The review is only as good as the information and challenge applied; management may retain favourable lives to flatter profit.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-004",
+  "title": "Prevent unauthorised or undocumented changes to depreciation parameters.",
+  "description": "The fixed asset system calculates depreciation automatically from approved asset master data; any change to a depreciation rate, method or useful life requires independent authorisation and is logged.\n\nType: Preventive\n\nManual/automated: Automated\n\nFrequency: On change\n\nResponsible: System administrator / finance\n\nEvidence of operation: System change logs and authorisation records for master-data amendments.\n\nLimitations: Does not address whether the approved lives are appropriate; an authorised but inappropriate life will still be applied consistently.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-005",
+  "title": "Ensure every disposal is authorised and removed from the accounting records.",
+  "description": "All disposals of property, plant and equipment require prior written authorisation and completion of a disposal form, which is forwarded to finance so the asset is removed from the register and the ledger.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per disposal\n\nResponsible: Operations manager\n\nEvidence of operation: Authorised disposal forms filed with derecognition entries; sequential control over disposal forms.\n\nLimitations: Ineffective if operations staff dispose of assets without completing the form, or if forms are not forwarded to finance.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-006",
+  "title": "Detect assets that no longer exist but remain on the register.",
+  "description": "Physical verification of fixed assets is performed periodically by persons independent of custody; differences between the physical assets located and the register are investigated and the register corrected.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Periodic (e.g. annual or rolling cycle)\n\nResponsible: Internal audit / finance, independent of custody\n\nEvidence of operation: Verification sheets, investigation notes and approved register adjustments.\n\nLimitations: Detects missing assets only at the verification date; cannot identify exactly when an asset was disposed of.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-007",
+  "title": "Ensure impairment indicators are identified so that impairment testing is performed when required.",
+  "description": "Management performs an assessment of impairment indicators for each asset or cash-generating unit at each reporting date and documents the conclusion, including the basis for concluding that no formal impairment test is required.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Annual (at each reporting date)\n\nResponsible: Finance director / management\n\nEvidence of operation: Impairment indicator checklist or memorandum, signed off and dated.\n\nLimitations: Management may overlook or downplay indicators, particularly where an impairment charge would be unwelcome; the assessment needs genuine challenge.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-008",
+  "title": "Provide timely warning of underperformance that may indicate impairment.",
+  "description": "Operating and financial performance of significant assets or cash-generating units is monitored against budgets and forecasts, and adverse variances are investigated for possible impairment indicators.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly or quarterly\n\nResponsible: Management / finance\n\nEvidence of operation: Management accounts with variance commentary; investigation notes for adverse variances.\n\nLimitations: Performance information may be prepared on a basis that obscures asset-level underperformance; investigation quality varies.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-009",
+  "title": "Ensure replaced significant parts are removed from the carrying amount.",
+  "description": "Major maintenance and replacement work orders identify the component replaced and are routed to finance so the carrying amount of the replaced part can be derecognised when the new part is capitalised.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per work order\n\nResponsible: Maintenance manager\n\nEvidence of operation: Work orders cross-referenced to derecognition entries in the fixed asset register.\n\nLimitations: Relies on maintenance staff correctly identifying replaced components and on the information reaching finance.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PPE-010",
+  "title": "Enable separate depreciation and derecognition of significant parts.",
+  "description": "Significant assets are componentised in the fixed asset register, with major parts recorded separately and depreciated over their own useful lives.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: On recognition of the asset\n\nResponsible: Financial accountant\n\nEvidence of operation: Fixed asset register showing component-level records for significant assets.\n\nLimitations: Componentisation at initial recognition requires judgment about which parts are significant; retrospective componentisation of old assets may be impracticable.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-001",
+  "title": "Prevent payment for goods not received.",
+  "description": "Supplier invoices are matched to the purchase order and goods received note (three-way match) before approval for payment.\n\nType: Preventive\n\nManual/automated: Manual / Automated\n\nFrequency: Per invoice\n\nResponsible: Accounts payable staff, independent of receiving\n\nEvidence of operation: Matched invoice packs; exception reports of invoices approved without a match.\n\nLimitations: Collusion between receiving and payables staff defeats the match; does not detect overpricing agreed with a genuine supplier.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-002",
+  "title": "Detect invoices paid without evidence of receipt.",
+  "description": "An exception report of invoices approved without matching GRNs is reviewed independently each month.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Monthly\n\nResponsible: Finance manager\n\nEvidence of operation: Exception report with review sign-off and follow-up actions documented.\n\nLimitations: Detective only - payment may already have been made; relies on the completeness of the matching data.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-003",
+  "title": "Ensure liabilities for goods received are recorded at the reporting date.",
+  "description": "Goods received notes are sequentially controlled; at period end, unmatched GRNs are accrued as liabilities.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: At each period end\n\nResponsible: Finance staff\n\nEvidence of operation: Sequential GRN register; accrual journals with supporting GRN listings; review sign-off.\n\nLimitations: Does not detect goods received without a GRN being raised.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-004",
+  "title": "Record purchases in the correct accounting period.",
+  "description": "Purchases are recorded by reference to the goods receipt date, enforced by system posting rules or a period-end cut-off checklist.\n\nType: Preventive\n\nManual/automated: Manual / Automated\n\nFrequency: Per transaction and at period end\n\nResponsible: Accounts payable staff\n\nEvidence of operation: Completed cut-off checklist; system configuration showing posting-date derivation.\n\nLimitations: Manual checklists can be skipped; system rules can be overridden by privileged users.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-005",
+  "title": "Prevent unauthorised or fictitious suppliers entering the payment process.",
+  "description": "All additions and changes to supplier master data, including bank details, require independent approval before taking effect.\n\nType: Preventive\n\nManual/automated: Manual / Automated\n\nFrequency: Per change\n\nResponsible: Independent approver (not the requestor)\n\nEvidence of operation: Change log showing requestor, approver and timestamps; supporting supplier verification documents.\n\nLimitations: The approver may not verify the change independently; does not prevent changes by privileged system users.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-006",
+  "title": "Detect fictitious or inappropriate suppliers in the master data.",
+  "description": "The supplier master file is independently reviewed periodically for duplicate, dormant or suspicious entries.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Quarterly\n\nResponsible: Finance manager / internal audit\n\nEvidence of operation: Review working papers with conclusions and follow-up on flagged suppliers.\n\nLimitations: Judgemental; may not identify well-concealed fictitious suppliers.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-007",
+  "title": "Prevent the same invoice being recorded twice.",
+  "description": "The purchase system rejects or flags duplicate invoice numbers for the same supplier automatically.\n\nType: Preventive\n\nManual/automated: Automated\n\nFrequency: Per invoice\n\nResponsible: System (configured by IT / finance)\n\nEvidence of operation: System configuration; exception reports of blocked or flagged duplicates.\n\nLimitations: Only checks invoice number per supplier - the same economic invoice with an altered number passes; manual journals may bypass the check.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-008",
+  "title": "Prevent paid invoices re-entering the payment process.",
+  "description": "Paid invoices are physically or systemically marked as paid and filed to prevent reprocessing.\n\nType: Preventive\n\nManual/automated: Manual / Automated\n\nFrequency: Per payment\n\nResponsible: Accounts payable staff\n\nEvidence of operation: Marked invoice copies or system paid flags; controlled filing.\n\nLimitations: Manual marking can be missed under volume pressure.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-009",
+  "title": "Ensure purchases are recorded in the correct period.",
+  "description": "A period-end cut-off checklist requires payables staff to record purchases by goods receipt date and to review post-period invoices for pre-period receipts.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: At each period end\n\nResponsible: Accounts payable supervisor\n\nEvidence of operation: Completed checklist with sign-off.\n\nLimitations: Checklist compliance is not self-proving; time pressure at period end reduces effectiveness.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-PUR-010",
+  "title": "Detect cut-off errors in purchases after the reporting date.",
+  "description": "Finance reviews supplier invoices recorded after the reporting date to identify goods received before year-end.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: At each period end\n\nResponsible: Financial controller\n\nEvidence of operation: Review working papers listing post-year-end invoices checked against GRN dates.\n\nLimitations: Only covers invoiced items; uninvoiced receipts still depend on the GRN accrual.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-001",
+  "title": "Prevent revenue being recorded before recognition criteria are met.",
+  "description": "Billing is only raised against matched evidence of delivery or performance (for example, a signed delivery note or service completion record) before the sales invoice is generated.\n\nType: Preventive\n\nManual/automated: Manual / Automated\n\nFrequency: Per transaction\n\nResponsible: Billing and dispatch staff\n\nEvidence of operation: Matched invoice-dispatch packs; system exception reports listing invoices raised without dispatch evidence.\n\nLimitations: Can be overridden by management or bypassed with backdated dispatch evidence; ineffective if matching is performed without genuine checking.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-002",
+  "title": "Detect premature revenue recognition around the period end.",
+  "description": "The finance manager independently reviews revenue transactions recorded in the final days of the period, and credit notes issued shortly after, for evidence that recognition criteria were met.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: At each period end\n\nResponsible: Finance manager\n\nEvidence of operation: Review checklist with sign-off; supporting dispatch evidence attached to reviewed items.\n\nLimitations: Judgement-based; only as effective as the evidence inspected; cannot detect side agreements the reviewer never sees.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-003",
+  "title": "Detect sales earned but not recorded at the reporting date.",
+  "description": "Dispatch notes are sequentially controlled and reconciled to sales invoices at each period end; unmatched dispatches are accrued as revenue.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: At each period end\n\nResponsible: Finance / sales ledger staff\n\nEvidence of operation: Sequential dispatch register; period-end reconciliation with sign-off; accrual journals for unmatched dispatches.\n\nLimitations: Does not detect dispatches never recorded in the register; relies on the completeness of the dispatch records themselves.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-004",
+  "title": "Ensure sales are recorded in the correct accounting period.",
+  "description": "Sales are recorded by reference to the dispatch or completion date, enforced by the billing system or a documented period-end cut-off checklist.\n\nType: Preventive\n\nManual/automated: Manual / Automated\n\nFrequency: Per transaction and at period end\n\nResponsible: Billing staff\n\nEvidence of operation: Completed cut-off checklist; system configuration showing posting-date derivation.\n\nLimitations: Manual checklists can be skipped under time pressure; system dates can be overridden by privileged users.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-005",
+  "title": "Prevent sales being recorded without evidence of dispatch or performance.",
+  "description": "A three-way match of sales order, dispatch note and invoice is required before a credit sale is released for billing.\n\nType: Preventive\n\nManual/automated: Manual / Automated\n\nFrequency: Per transaction\n\nResponsible: Billing staff, independent of dispatch\n\nEvidence of operation: Matched order-dispatch-invoice packs; exception reports of invoices released without a match.\n\nLimitations: Collusion between billing and dispatch staff defeats the match; does not validate the genuineness of the customer.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-006",
+  "title": "Detect unsupported sales promptly.",
+  "description": "An exception report of invoices raised without matching dispatch evidence is reviewed independently and cleared with documented follow-up.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Weekly / monthly\n\nResponsible: Finance manager\n\nEvidence of operation: Exception report with review sign-off and follow-up notes for each item.\n\nLimitations: Detective only; only as good as the underlying matching data; review may be perfunctory under time pressure.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-007",
+  "title": "Provide independent oversight of revenue susceptible to manipulation.",
+  "description": "Those charged with governance, or an independent senior manager, review significant revenue judgements and the achievement of incentive-linked targets.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: Quarterly / at year end\n\nResponsible: Audit committee / board\n\nEvidence of operation: Meeting minutes recording the review and challenge of revenue judgements.\n\nLimitations: Non-executive reviewers rely on management information; review may be high-level and miss detailed manipulation.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-008",
+  "title": "Prevent unauthorised or unsupported manual adjustments to revenue.",
+  "description": "Manual journal entries affecting revenue above a defined threshold require independent approval with supporting documentation.\n\nType: Preventive\n\nManual/automated: Manual / Automated\n\nFrequency: Per journal\n\nResponsible: Finance manager / controller\n\nEvidence of operation: Approved journals with supporting schedules attached; approval audit trail.\n\nLimitations: Thresholds can be circumvented by splitting entries; an approver under time pressure may not check substance.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-009",
+  "title": "Ensure unusual transactions have genuine commercial substance before they are recorded.",
+  "description": "Non-routine and individually material transactions require a documented business rationale and authorisation by senior management before recording.\n\nType: Preventive\n\nManual/automated: Manual\n\nFrequency: Per transaction\n\nResponsible: Senior management\n\nEvidence of operation: Authorisation forms with the business rationale attached.\n\nLimitations: Authorisers may not understand complex structures; the rationale may be prepared after the event to justify the accounting.",
+  "control_type": "preventive",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ },
+ {
+  "id": "C-REV-010",
+  "title": "Detect year-end transactions recorded without substance or in the wrong period.",
+  "description": "Finance reviews all material transactions recorded in the final days of the reporting period, including the supporting contracts.\n\nType: Detective\n\nManual/automated: Manual\n\nFrequency: At each period end\n\nResponsible: Financial controller\n\nEvidence of operation: Review working papers with conclusions documented for each item reviewed.\n\nLimitations: Review is judgemental and time-pressured at year end; cannot detect documents deliberately concealed from the reviewer.",
+  "control_type": "detective",
+  "audit_area_id": null,
+  "verification_status": "internal_review",
+  "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md"
+ }
+]

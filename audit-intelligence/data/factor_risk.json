@@ -1,0 +1,198 @@
+[
+ {
+  "factor_id": "F-CSH-001",
+  "risk_id": "R-CSH-001"
+ },
+ {
+  "factor_id": "F-CSH-002",
+  "risk_id": "R-CSH-002"
+ },
+ {
+  "factor_id": "F-CSH-003",
+  "risk_id": "R-CSH-003"
+ },
+ {
+  "factor_id": "F-CSH-004",
+  "risk_id": "R-CSH-004"
+ },
+ {
+  "factor_id": "F-FRD-001",
+  "risk_id": "R-FRD-002"
+ },
+ {
+  "factor_id": "F-FRD-002",
+  "risk_id": "R-FRD-003"
+ },
+ {
+  "factor_id": "F-FRD-003",
+  "risk_id": "R-FRD-001"
+ },
+ {
+  "factor_id": "F-FRD-004",
+  "risk_id": "R-FRD-004"
+ },
+ {
+  "factor_id": "F-FRD-005",
+  "risk_id": "R-FRD-002"
+ },
+ {
+  "factor_id": "F-FRD-006",
+  "risk_id": "R-FRD-001"
+ },
+ {
+  "factor_id": "F-FRD-007",
+  "risk_id": "R-FRD-002"
+ },
+ {
+  "factor_id": "F-FRD-008",
+  "risk_id": "R-FRD-001"
+ },
+ {
+  "factor_id": "F-FRP-001",
+  "risk_id": "R-FRP-001"
+ },
+ {
+  "factor_id": "F-FRP-002",
+  "risk_id": "R-FRP-002"
+ },
+ {
+  "factor_id": "F-FRP-003",
+  "risk_id": "R-FRP-003"
+ },
+ {
+  "factor_id": "F-FRP-004",
+  "risk_id": "R-FRP-004"
+ },
+ {
+  "factor_id": "F-FRP-005",
+  "risk_id": "R-FRP-005"
+ },
+ {
+  "factor_id": "F-TEL-001",
+  "risk_id": "R-TEL-001"
+ },
+ {
+  "factor_id": "F-TEL-002",
+  "risk_id": "R-TEL-002"
+ },
+ {
+  "factor_id": "F-TEL-003",
+  "risk_id": "R-TEL-003"
+ },
+ {
+  "factor_id": "F-MFG-001",
+  "risk_id": "R-MFG-001"
+ },
+ {
+  "factor_id": "F-MFG-002",
+  "risk_id": "R-MFG-002"
+ },
+ {
+  "factor_id": "F-MFG-003",
+  "risk_id": "R-MFG-003"
+ },
+ {
+  "factor_id": "F-RTL-001",
+  "risk_id": "R-RTL-001"
+ },
+ {
+  "factor_id": "F-RTL-002",
+  "risk_id": "R-RTL-002"
+ },
+ {
+  "factor_id": "F-RTL-003",
+  "risk_id": "R-RTL-003"
+ },
+ {
+  "factor_id": "F-BNK-001",
+  "risk_id": "R-BNK-001"
+ },
+ {
+  "factor_id": "F-BNK-002",
+  "risk_id": "R-BNK-002"
+ },
+ {
+  "factor_id": "F-BNK-003",
+  "risk_id": "R-BNK-003"
+ },
+ {
+  "factor_id": "F-INV-001",
+  "risk_id": "R-INV-001"
+ },
+ {
+  "factor_id": "F-PAY-001",
+  "risk_id": "R-PAY-001"
+ },
+ {
+  "factor_id": "F-PAY-002",
+  "risk_id": "R-PAY-002"
+ },
+ {
+  "factor_id": "F-PAY-003",
+  "risk_id": "R-PAY-003"
+ },
+ {
+  "factor_id": "F-PAY-004",
+  "risk_id": "R-PAY-004"
+ },
+ {
+  "factor_id": "F-PPE-001",
+  "risk_id": "R-PPE-001"
+ },
+ {
+  "factor_id": "F-PPE-002",
+  "risk_id": "R-PPE-002"
+ },
+ {
+  "factor_id": "F-PPE-003",
+  "risk_id": "R-PPE-003"
+ },
+ {
+  "factor_id": "F-PPE-004",
+  "risk_id": "R-PPE-004"
+ },
+ {
+  "factor_id": "F-PPE-005",
+  "risk_id": "R-PPE-005"
+ },
+ {
+  "factor_id": "F-PUR-001",
+  "risk_id": "R-PUR-001"
+ },
+ {
+  "factor_id": "F-PUR-002",
+  "risk_id": "R-PUR-002"
+ },
+ {
+  "factor_id": "F-PUR-003",
+  "risk_id": "R-PUR-003"
+ },
+ {
+  "factor_id": "F-PUR-004",
+  "risk_id": "R-PUR-004"
+ },
+ {
+  "factor_id": "F-PUR-005",
+  "risk_id": "R-PUR-005"
+ },
+ {
+  "factor_id": "F-REV-001",
+  "risk_id": "R-REV-001"
+ },
+ {
+  "factor_id": "F-REV-002",
+  "risk_id": "R-REV-002"
+ },
+ {
+  "factor_id": "F-REV-003",
+  "risk_id": "R-REV-003"
+ },
+ {
+  "factor_id": "F-REV-004",
+  "risk_id": "R-REV-004"
+ },
+ {
+  "factor_id": "F-REV-005",
+  "risk_id": "R-REV-005"
+ }
+]

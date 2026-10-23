@@ -1,0 +1,62 @@
+[
+ {
+  "id": "REG-CA2017",
+  "title": "The Companies Act, 2017",
+  "jurisdiction": "PK",
+  "area": "corporate_law",
+  "effective_date": "2017-05-30",
+  "source_url": "https://www.secp.gov.pk/document/the-companies-act-2017-updated-18-aug-2022/?wpdmdl=45422&refresh=68363d5479e431748385108",
+  "summary": "Pakistan's company law: incorporation, governance, accounts, audit, distributions. 515 sections, 8 schedules; replaces Companies Ordinance, 1984.",
+  "applicability_notes": "Use the amended (18 Aug 2022) text; verify further amendments before citing.",
+  "verification_status": "official_guidance",
+  "last_verified": "2026-10-23"
+ },
+ {
+  "id": "REG-ITO2001",
+  "title": "Income Tax Ordinance, 2001",
+  "jurisdiction": "PK",
+  "area": "tax",
+  "effective_date": "2001",
+  "source_url": "https://download1.fbr.gov.pk/Docs/2015102212102839390IncomeTaxOrdinance,2001latestcoorected16.10.15(updatedJune,2015).pdf",
+  "summary": "Federal income tax law. Local copy is the 2015-amended text (historical); current text amended to 30 Jun 2026.",
+  "applicability_notes": "Rates, thresholds and sections change yearly — always verify against FBR's current text.",
+  "verification_status": "official_guidance",
+  "last_verified": "2026-10-23"
+ },
+ {
+  "id": "REG-BCO1962",
+  "title": "The Banking Companies Ordinance, 1962 (LVII of 1962)",
+  "jurisdiction": "PK",
+  "area": "banking",
+  "effective_date": "1962-06-07",
+  "source_url": null,
+  "summary": "Law relating to banking companies; SBP licensing, business restrictions, returns.",
+  "applicability_notes": "No official PDF located; obtain from SBP or official gazette.",
+  "verification_status": "official_guidance",
+  "last_verified": "2026-10-23"
+ },
+ {
+  "id": "REG-PSXREG",
+  "title": "PSX Regulations (Rule Book)",
+  "jurisdiction": "PK",
+  "area": "securities",
+  "effective_date": null,
+  "source_url": "https://www.psx.com.pk/psx/themes/psx/uploads/PSX-RegulationsFebruary-09-2026.pdf",
+  "summary": "Listing, trading, and continuing obligations for PSX-listed companies.",
+  "applicability_notes": "Recorded URL failed to fetch (404-style page) — re-verify on psx.com.pk.",
+  "verification_status": "official_guidance",
+  "last_verified": "2026-10-23"
+ },
+ {
+  "id": "REG-SECP-PO2017",
+  "title": "Public Offering Regulations, 2017",
+  "jurisdiction": "PK",
+  "area": "securities",
+  "effective_date": "2017",
+  "source_url": "https://www.secp.gov.pk/document/publicofferingregulations2017-updatedaugust-6-2025/?wpdmdl=61673&refresh=6984133c13ec91770263356",
+  "summary": "SECP regulations for public offerings of securities.",
+  "applicability_notes": "Updated 6 Aug 2025 per captured URL; fetch and verify before citing.",
+  "verification_status": "official_guidance",
+  "last_verified": "2026-10-23"
+ }
+]

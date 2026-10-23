@@ -1,0 +1,80 @@
+[
+ {
+  "id": "CS-ENR-01",
+  "title": "Enron — special purpose entities and hidden debt (2001)",
+  "industry": "Energy trading",
+  "background": "US energy company that grew into energy trading and broadband. Used hundreds of special purpose entities (SPEs), some run by its own CFO, to keep debt off the balance sheet and book gains. Filed for Chapter 11 bankruptcy in December 2001 — then the largest US bankruptcy.",
+  "reporting_issue": "Debt concealed through unconsolidated SPEs; profits inflated via mark-to-market accounting on long-term contracts.",
+  "what_went_wrong": "SPEs that should have been consolidated were not, hiding billions in debt. Mark-to-market gains were booked on 20-year energy contracts at signing. Auditor Arthur Andersen was compromised by consulting fees and destroyed audit documents; the firm collapsed. Executives were convicted of fraud and conspiracy.",
+  "lessons": "Consolidation analysis must look at substance over form (ISA 550/IFRS 10 thinking). Auditor independence matters — fee dependence and advocacy destroy scepticism. Related-party structures controlled by management are a fraud red flag (ISA 240/550).",
+  "relevant_standards": "[\"ISA-240\", \"ISA-550\", \"ISA-600R\"]",
+  "sources": "US SEC filings and enforcement releases; US Department of Justice prosecutions; Congressional hearings; administrator reports.",
+  "facts_vs_allegations": "FACT (convictions, bankruptcy filings, Andersen obstruction conviction): SPEs hid debt; documents were shredded. CONTEXT: precise dollar figures vary across sources — the mechanism, not any single number, is the lesson.",
+  "verification_status": "public_record"
+ },
+ {
+  "id": "CS-WRC-01",
+  "title": "Wirecard — the missing €1.9 billion (2020)",
+  "industry": "Fintech / payment processing",
+  "background": "German payment processor, DAX-listed. In June 2020 it disclosed that €1.9 billion of cash supposedly held in escrow by third-party trustees in Asia 'probably never existed'. Filed for insolvency days later. CEO Markus Braun was arrested on fraud charges.",
+  "reporting_issue": "Fictitious cash balances and inflated profits routed through opaque third-party acquirers.",
+  "what_went_wrong": "EY, the auditor, accepted trustee confirmations without independently verifying the underlying accounts for years. Journalistic and short-seller warnings were dismissed. German regulator BaFin initially investigated the journalists, not the company.",
+  "lessons": "Cash is not low-risk when it sits with third parties — verify directly with the bank (ISA 505/500). Escalate when confirmations are obstructed. Professional scepticism applies to client explanations of complex structures, however prestigious the client.",
+  "relevant_standards": "[\"ISA-500\", \"ISA-505\", \"ISA-240\"]",
+  "sources": "Company insolvency filings; German parliamentary inquiry (Wirecard Untersuchungsausschuss); EY public statements; press investigations.",
+  "facts_vs_allegations": "FACT: the €1.9bn could not be located; insolvency filed June 2020; criminal charges brought. ALLEGATION (not established as fact here): the full extent of earlier-year fabrication — treat figures with care.",
+  "verification_status": "public_record"
+ },
+ {
+  "id": "CS-SAT-01",
+  "title": "Satyam — India's Enron: fabricated cash and revenues (2009)",
+  "industry": "IT services",
+  "background": "Indian IT services company. In January 2009 founder-chairman Ramalinga Raju confessed in a public letter that cash and bank balances were inflated by about Rs 5,040 crore (roughly USD 1 billion at the time) and revenues fabricated over several years.",
+  "reporting_issue": "Fictitious cash/bank balances, inflated revenues and debtors, ghost employees inflating payroll.",
+  "what_went_wrong": "Bank confirmations were forged or not properly controlled. Thousands of ghost employees siphoned payroll. The board and auditors failed to detect a fraud the chairman later described as riding 'a tiger'. Raju and others were convicted in 2015.",
+  "lessons": "Auditor control of the confirmation process is non-negotiable (ISA 505). Ghost-employee testing and payroll analytics are substantive, not optional. A dominant founder-CEO is a fraud risk factor (ISA 240). Especially relevant for Pakistani/Indian trainees: this happened in our region's corporate environment, under familiar governance patterns.",
+  "relevant_standards": "[\"ISA-240\", \"ISA-505\", \"ISA-500\"]",
+  "sources": "Raju's public confession letter (Jan 2009); SEBI investigation orders; Indian court judgements (2015 convictions); CBI reports.",
+  "facts_vs_allegations": "FACT (confession + convictions): inflated cash ~Rs 5,040 crore; ghost employees; 2015 convictions. FIGURES: totals vary slightly across sources — the confession letter is the primary reference.",
+  "verification_status": "public_record"
+ },
+ {
+  "id": "CS-TSC-01",
+  "title": "Tesco — £263m profit overstatement via supplier income (2014)",
+  "industry": "Retail",
+  "background": "UK supermarket group. In September 2014 Tesco announced its half-year profit forecast was overstated by £263 million because commercial income from suppliers was recognised too early / aggressively. The FCA fined Tesco £129m under a 2017 deferred prosecution agreement.",
+  "reporting_issue": "Supplier rebates and commercial income pulled forward — cut-off and recognition abuse.",
+  "what_went_wrong": "Income was recognised before supplier agreements were finalised or qualifying volumes achieved. Three executives were tried for fraud and false accounting; all were acquitted — the overstatement itself, however, was admitted by the company.",
+  "lessons": "Supplier income is revenue-recognition risk by another name: agree to signed contracts, test cut-off, challenge accruals. An acquittal does not erase the accounting failure — distinguish legal outcomes from audit lessons (hence facts_vs_allegations).",
+  "relevant_standards": "[\"ISA-500\", \"ISA-501\"]",
+  "sources": "Tesco stock-exchange announcements (2014); FCA final notice and DPA (2017); Serious Fraud Office trial reporting.",
+  "facts_vs_allegations": "FACT (admitted by Tesco; FCA DPA): £263m overstatement from supplier-income recognition. ALLEGATION (not proven — acquittals): that named executives committed fraud. The audit lesson stands regardless.",
+  "verification_status": "public_record"
+ },
+ {
+  "id": "CS-CAR-01",
+  "title": "Carillion — construction collapse on optimistic contracts (2018)",
+  "industry": "Construction and support services",
+  "background": "UK construction and facilities group. Collapsed into liquidation in January 2018 with liabilities over £1.5 billion, after writing down contract values by £845m in 2017. Thousands of jobs lost; pension deficit around £580m.",
+  "reporting_issue": "Aggressive revenue recognition and over-optimistic cost-to-complete forecasts on long-term contracts; going-concern warning came too late.",
+  "what_went_wrong": "Management recognised profits on contracts that later proved loss-making. The FRC fined KPMG £21m (2023) for audit failures including insufficient challenge of contract estimates. Parliamentary inquiry called it a failure of auditors, directors and regulators.",
+  "lessons": "Contract estimates are THE audit area in construction — challenge cost-to-complete with independent evidence (ISA 540R). Going-concern assessment must be forward-looking, not a tick-box (ISA 570R). Dividend payments while pensions went underfunded raised professional-scepticism questions about management bias.",
+  "relevant_standards": "[\"ISA-540R\", \"ISA-570R\", \"ISA-500\"]",
+  "sources": "UK Parliamentary joint inquiry report (2018); FRC sanctions against KPMG (2023); company administrator reports.",
+  "facts_vs_allegations": "FACT (inquiry + FRC sanctions): £845m contract writedowns; KPMG fined £21m for audit failures. INQUIRY FINDINGS (not criminal convictions): directors' conduct criticised — treat as findings, not verdicts.",
+  "verification_status": "public_record"
+ },
+ {
+  "id": "CS-LCK-01",
+  "title": "Luckin Coffee — fabricated sales (2020)",
+  "industry": "Retail / food & beverage",
+  "background": "Chinese coffee chain, Nasdaq-listed. In April 2020 it disclosed an internal investigation found ~RMB 2.2 billion of sales fabricated in 2019 — roughly 40% of reported revenue. Delisted from Nasdaq; settled with the US SEC for USD 180m.",
+  "reporting_issue": "Fictitious transactions fabricated at scale, including through related parties.",
+  "what_went_wrong": "COO Jian Liu and staff fabricated transactions using vouchers and related entities. Controls over revenue were bypassed. The fraud was exposed by short-sellers and admitted after internal investigation.",
+  "lessons": "Hypergrowth + related-party transactions + weak controls = maximum fraud risk (ISA 240/550). Revenue analytics (per-store trends, voucher redemption patterns) would have flagged impossible growth. Related-party completeness procedures are substantive (ISA 550).",
+  "relevant_standards": "[\"ISA-240\", \"ISA-550\", \"ISA-520\"]",
+  "sources": "Company 6-K filings and internal investigation announcement (Apr 2020); US SEC settlement order (Dec 2020).",
+  "facts_vs_allegations": "FACT (admitted + SEC settlement): ~RMB 2.2bn fabricated 2019 sales; USD 180m SEC penalty. No ambiguity on the core facts — admitted by the company.",
+  "verification_status": "public_record"
+ }
+]

@@ -1,0 +1,83 @@
+[
+ {
+  "id": "PUB-ICAP",
+  "name": "Institute of Chartered Accountants of Pakistan",
+  "publisher_type": "professional_body",
+  "jurisdiction": "PK",
+  "website": "https://www.icap.org.pk",
+  "authority_class": "A1",
+  "notes": "Adopts ISAs/ISQMs and the IESBA-based Code of Ethics for Pakistan."
+ },
+ {
+  "id": "PUB-IAASB",
+  "name": "International Auditing and Assurance Standards Board",
+  "publisher_type": "standard_setter",
+  "jurisdiction": "INTL",
+  "website": "https://www.iaasb.org",
+  "authority_class": "A1",
+  "notes": "Sets ISAs, ISQMs, ISREs, ISAEs, ISRSs."
+ },
+ {
+  "id": "PUB-IESBA",
+  "name": "International Ethics Standards Board for Accountants",
+  "publisher_type": "standard_setter",
+  "jurisdiction": "INTL",
+  "website": "https://www.ethicsboard.org",
+  "authority_class": "A1",
+  "notes": "Sets the International Code of Ethics."
+ },
+ {
+  "id": "PUB-IFRS",
+  "name": "IFRS Foundation / International Accounting Standards Board",
+  "publisher_type": "standard_setter",
+  "jurisdiction": "INTL",
+  "website": "https://www.ifrs.org",
+  "authority_class": "A1",
+  "notes": "Sets IFRS Accounting Standards."
+ },
+ {
+  "id": "PUB-SECP",
+  "name": "Securities and Exchange Commission of Pakistan",
+  "publisher_type": "regulator",
+  "jurisdiction": "PK",
+  "website": "https://www.secp.gov.pk",
+  "authority_class": "A1",
+  "notes": "Corporate-sector and capital-market regulator."
+ },
+ {
+  "id": "PUB-FBR",
+  "name": "Federal Board of Revenue",
+  "publisher_type": "regulator",
+  "jurisdiction": "PK",
+  "website": "https://www.fbr.gov.pk",
+  "authority_class": "A1",
+  "notes": "Federal tax administration."
+ },
+ {
+  "id": "PUB-SBP",
+  "name": "State Bank of Pakistan",
+  "publisher_type": "regulator",
+  "jurisdiction": "PK",
+  "website": "https://www.sbp.org.pk",
+  "authority_class": "A1",
+  "notes": "Central bank; banking regulator."
+ },
+ {
+  "id": "PUB-PSX",
+  "name": "Pakistan Stock Exchange",
+  "publisher_type": "regulator",
+  "jurisdiction": "PK",
+  "website": "https://www.psx.com.pk",
+  "authority_class": "A1",
+  "notes": "Securities exchange; listing regulations."
+ },
+ {
+  "id": "PUB-IFAC",
+  "name": "International Federation of Accountants",
+  "publisher_type": "professional_body",
+  "jurisdiction": "INTL",
+  "website": "https://www.ifac.org",
+  "authority_class": "A2",
+  "notes": "Global accountancy body; hosts IAASB/IESBA material."
+ }
+]

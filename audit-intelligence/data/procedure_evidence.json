@@ -1,0 +1,1112 @@
+[
+ {
+  "procedure_id": "P-CSH-001",
+  "evidence_id": "E-CSH-001",
+  "notes": "Reconciliations are the documents inspected."
+ },
+ {
+  "procedure_id": "P-CSH-002",
+  "evidence_id": "E-CSH-001",
+  "notes": "Reconciliation is reperformed."
+ },
+ {
+  "procedure_id": "P-CSH-002",
+  "evidence_id": "E-CSH-002",
+  "notes": "Bank statement is the independent source agreed to."
+ },
+ {
+  "procedure_id": "P-CSH-003",
+  "evidence_id": "E-CSH-004",
+  "notes": "Outstanding items are the population vouched."
+ },
+ {
+  "procedure_id": "P-CSH-003",
+  "evidence_id": "E-CSH-002",
+  "notes": "Subsequent statements corroborate clearance."
+ },
+ {
+  "procedure_id": "P-CSH-004",
+  "evidence_id": "E-CSH-003",
+  "notes": "Confirmation is obtained and agreed to the reconciled balance."
+ },
+ {
+  "procedure_id": "P-CSH-005",
+  "evidence_id": "E-CSH-005",
+  "notes": "Payment register is the population sampled."
+ },
+ {
+  "procedure_id": "P-CSH-005",
+  "evidence_id": "E-CSH-006",
+  "notes": "Supporting documents are vouched to."
+ },
+ {
+  "procedure_id": "P-CSH-006",
+  "evidence_id": "E-CSH-005",
+  "notes": "Payment data is analysed by beneficiary."
+ },
+ {
+  "procedure_id": "P-CSH-006",
+  "evidence_id": "E-CSH-007",
+  "notes": "Verification records corroborate beneficiary legitimacy."
+ },
+ {
+  "procedure_id": "P-CSH-007",
+  "evidence_id": "E-CSH-007",
+  "notes": "Verification records are traced to for new beneficiaries."
+ },
+ {
+  "procedure_id": "P-CSH-007",
+  "evidence_id": "E-CSH-005",
+  "notes": "New beneficiaries are extracted from the payment data."
+ },
+ {
+  "procedure_id": "P-CSH-008",
+  "evidence_id": "E-CSH-005",
+  "notes": "Payment batches are inspected for approval evidence."
+ },
+ {
+  "procedure_id": "P-CSH-008",
+  "evidence_id": "E-CSH-006",
+  "notes": "Supporting documents are checked as matched."
+ },
+ {
+  "procedure_id": "P-CSH-009",
+  "evidence_id": "E-CSH-008",
+  "notes": "Transfer register provides the population of year-end transfers."
+ },
+ {
+  "procedure_id": "P-CSH-009",
+  "evidence_id": "E-CSH-002",
+  "notes": "Both sides are matched to bank statements."
+ },
+ {
+  "procedure_id": "P-CSH-010",
+  "evidence_id": "E-CSH-009",
+  "notes": "Advices corroborate value dates and amounts."
+ },
+ {
+  "procedure_id": "P-CSH-011",
+  "evidence_id": "E-CSH-008",
+  "notes": "In-transit schedule is reperformed from the register."
+ },
+ {
+  "procedure_id": "P-CSH-011",
+  "evidence_id": "E-CSH-002",
+  "notes": "Both sides are agreed to bank statements."
+ },
+ {
+  "procedure_id": "P-CSH-012",
+  "evidence_id": "E-CSH-012",
+  "notes": "Auditor's count record is the primary output."
+ },
+ {
+  "procedure_id": "P-CSH-012",
+  "evidence_id": "E-CSH-010",
+  "notes": "Entity count sheets are compared where they exist."
+ },
+ {
+  "procedure_id": "P-CSH-013",
+  "evidence_id": "E-CSH-010",
+  "notes": "Count sheets are reconciled."
+ },
+ {
+  "procedure_id": "P-CSH-013",
+  "evidence_id": "E-CSH-011",
+  "notes": "Petty cash records are the other side of the reconciliation."
+ },
+ {
+  "procedure_id": "P-CSH-014",
+  "evidence_id": "E-CSH-010",
+  "notes": "The count observed is the evidence inspected."
+ },
+ {
+  "procedure_id": "P-FRD-001",
+  "evidence_id": "E-FRD-001",
+  "notes": "Population extract is the starting point for stratification."
+ },
+ {
+  "procedure_id": "P-FRD-001",
+  "evidence_id": "E-FRD-002",
+  "notes": "Approval records and support are inspected for the selected entries."
+ },
+ {
+  "procedure_id": "P-FRD-002",
+  "evidence_id": "E-FRD-005",
+  "notes": "Surprise counts are one form of unpredictable procedure."
+ },
+ {
+  "procedure_id": "P-FRD-002",
+  "evidence_id": "E-FRD-007",
+  "notes": "Direct bank confirmations at an unexpected date are another form."
+ },
+ {
+  "procedure_id": "P-FRD-003",
+  "evidence_id": "E-FRD-003",
+  "notes": "Working papers and outcome data are the core evidence."
+ },
+ {
+  "procedure_id": "P-FRD-004",
+  "evidence_id": "E-FRD-004",
+  "notes": "Contracts and correspondence are inspected for commercial substance."
+ },
+ {
+  "procedure_id": "P-FRD-004",
+  "evidence_id": "E-FRD-006",
+  "notes": "Registers and minutes support the completeness search."
+ },
+ {
+  "procedure_id": "P-FRD-005",
+  "evidence_id": "E-FRD-005",
+  "notes": "Count records are the primary output."
+ },
+ {
+  "procedure_id": "P-FRD-005",
+  "evidence_id": "E-FRD-007",
+  "notes": "Direct bank evidence corroborates the cash position."
+ },
+ {
+  "procedure_id": "P-FRD-006",
+  "evidence_id": "E-FRD-006",
+  "notes": "Registers, minutes and charts are searched for undisclosed parties."
+ },
+ {
+  "procedure_id": "P-FRD-006",
+  "evidence_id": "E-FRD-004",
+  "notes": "Transaction documentation is scanned for related-party indicators."
+ },
+ {
+  "procedure_id": "P-FRP-001-001",
+  "evidence_id": "E-FRP-001",
+  "notes": "Listing is the population the sample is drawn from."
+ },
+ {
+  "procedure_id": "P-FRP-001-001",
+  "evidence_id": "E-FRP-002",
+  "notes": "Support is what is vouched to."
+ },
+ {
+  "procedure_id": "P-FRP-001-002",
+  "evidence_id": "E-FRP-003",
+  "notes": "Approval records evidence the control tested."
+ },
+ {
+  "procedure_id": "P-FRP-001-003",
+  "evidence_id": "E-FRP-001",
+  "notes": "Listing is the population scanned."
+ },
+ {
+  "procedure_id": "P-FRP-001-003",
+  "evidence_id": "E-FRP-004",
+  "notes": "Flagged entries are the output of the scan."
+ },
+ {
+  "procedure_id": "P-FRP-002-001",
+  "evidence_id": "E-FRP-004",
+  "notes": "Flagged entries are the population tested."
+ },
+ {
+  "procedure_id": "P-FRP-002-001",
+  "evidence_id": "E-FRP-002",
+  "notes": "Support (or its absence) is investigated for each flagged entry."
+ },
+ {
+  "procedure_id": "P-FRP-002-002",
+  "evidence_id": "E-FRP-005",
+  "notes": "Minutes document the inquiries and responses."
+ },
+ {
+  "procedure_id": "P-FRP-002-003",
+  "evidence_id": "E-FRP-006",
+  "notes": "Estimate documentation is the subject of the bias evaluation."
+ },
+ {
+  "procedure_id": "P-FRP-003-001",
+  "evidence_id": "E-FRP-007",
+  "notes": "Register and declarations are directly inspected."
+ },
+ {
+  "procedure_id": "P-FRP-003-002",
+  "evidence_id": "E-FRP-008",
+  "notes": "Independent records corroborate or contradict the register."
+ },
+ {
+  "procedure_id": "P-FRP-003-002",
+  "evidence_id": "E-FRP-007",
+  "notes": "The register defines the population of identified related parties."
+ },
+ {
+  "procedure_id": "P-FRP-003-003",
+  "evidence_id": "E-FRP-009",
+  "notes": "Transaction documentation is inspected for terms and rationale."
+ },
+ {
+  "procedure_id": "P-FRP-004-001",
+  "evidence_id": "E-FRP-010",
+  "notes": "Calculation schedules are the subject of the challenge."
+ },
+ {
+  "procedure_id": "P-FRP-004-001",
+  "evidence_id": "E-FRP-011",
+  "notes": "Legal correspondence corroborates or contradicts the assumptions."
+ },
+ {
+  "procedure_id": "P-FRP-004-002",
+  "evidence_id": "E-FRP-010",
+  "notes": "Schedules provide the inputs for recalculation."
+ },
+ {
+  "procedure_id": "P-FRP-004-002",
+  "evidence_id": "E-FRP-012",
+  "notes": "Subsequent outcomes test the reasonableness of the provision."
+ },
+ {
+  "procedure_id": "P-FRP-004-003",
+  "evidence_id": "E-FRP-011",
+  "notes": "Legal correspondence is a source for identifying unrecorded obligations."
+ },
+ {
+  "procedure_id": "P-FRP-005-001",
+  "evidence_id": "E-FRP-013",
+  "notes": "The checklist is the primary output of this procedure."
+ },
+ {
+  "procedure_id": "P-FRP-005-001",
+  "evidence_id": "E-FRP-014",
+  "notes": "The draft statements are what the checklist is applied to."
+ },
+ {
+  "procedure_id": "P-FRP-005-002",
+  "evidence_id": "E-FRP-014",
+  "notes": "Draft disclosures are traced to these records."
+ },
+ {
+  "procedure_id": "P-FRP-005-003",
+  "evidence_id": "E-FRP-013",
+  "notes": "New transactions are checked against the checklist requirements."
+ },
+ {
+  "procedure_id": "P-TEL-001-1",
+  "evidence_id": "E-TEL-001-1",
+  "notes": "Evidence supporting P-TEL-001-1."
+ },
+ {
+  "procedure_id": "P-TEL-001-2",
+  "evidence_id": "E-TEL-001-2",
+  "notes": "Evidence supporting P-TEL-001-2."
+ },
+ {
+  "procedure_id": "P-TEL-002-1",
+  "evidence_id": "E-TEL-002-1",
+  "notes": "Evidence supporting P-TEL-002-1."
+ },
+ {
+  "procedure_id": "P-TEL-002-2",
+  "evidence_id": "E-TEL-002-2",
+  "notes": "Evidence supporting P-TEL-002-2."
+ },
+ {
+  "procedure_id": "P-TEL-003-1",
+  "evidence_id": "E-TEL-003-1",
+  "notes": "Evidence supporting P-TEL-003-1."
+ },
+ {
+  "procedure_id": "P-TEL-003-2",
+  "evidence_id": "E-TEL-003-2",
+  "notes": "Evidence supporting P-TEL-003-2."
+ },
+ {
+  "procedure_id": "P-MFG-001-1",
+  "evidence_id": "E-MFG-001-1",
+  "notes": "Evidence supporting P-MFG-001-1."
+ },
+ {
+  "procedure_id": "P-MFG-001-2",
+  "evidence_id": "E-MFG-001-2",
+  "notes": "Evidence supporting P-MFG-001-2."
+ },
+ {
+  "procedure_id": "P-MFG-002-1",
+  "evidence_id": "E-MFG-002-1",
+  "notes": "Evidence supporting P-MFG-002-1."
+ },
+ {
+  "procedure_id": "P-MFG-002-2",
+  "evidence_id": "E-MFG-002-2",
+  "notes": "Evidence supporting P-MFG-002-2."
+ },
+ {
+  "procedure_id": "P-MFG-003-1",
+  "evidence_id": "E-MFG-003-1",
+  "notes": "Evidence supporting P-MFG-003-1."
+ },
+ {
+  "procedure_id": "P-MFG-003-2",
+  "evidence_id": "E-MFG-003-2",
+  "notes": "Evidence supporting P-MFG-003-2."
+ },
+ {
+  "procedure_id": "P-RTL-001-1",
+  "evidence_id": "E-RTL-001-1",
+  "notes": "Evidence supporting P-RTL-001-1."
+ },
+ {
+  "procedure_id": "P-RTL-001-2",
+  "evidence_id": "E-RTL-001-2",
+  "notes": "Evidence supporting P-RTL-001-2."
+ },
+ {
+  "procedure_id": "P-RTL-002-1",
+  "evidence_id": "E-RTL-002-1",
+  "notes": "Evidence supporting P-RTL-002-1."
+ },
+ {
+  "procedure_id": "P-RTL-002-2",
+  "evidence_id": "E-RTL-002-2",
+  "notes": "Evidence supporting P-RTL-002-2."
+ },
+ {
+  "procedure_id": "P-RTL-003-1",
+  "evidence_id": "E-RTL-003-1",
+  "notes": "Evidence supporting P-RTL-003-1."
+ },
+ {
+  "procedure_id": "P-RTL-003-2",
+  "evidence_id": "E-RTL-003-2",
+  "notes": "Evidence supporting P-RTL-003-2."
+ },
+ {
+  "procedure_id": "P-BNK-001-1",
+  "evidence_id": "E-BNK-001-1",
+  "notes": "Evidence supporting P-BNK-001-1."
+ },
+ {
+  "procedure_id": "P-BNK-001-2",
+  "evidence_id": "E-BNK-001-2",
+  "notes": "Evidence supporting P-BNK-001-2."
+ },
+ {
+  "procedure_id": "P-BNK-002-1",
+  "evidence_id": "E-BNK-002-1",
+  "notes": "Evidence supporting P-BNK-002-1."
+ },
+ {
+  "procedure_id": "P-BNK-002-1",
+  "evidence_id": "E-BNK-002-2",
+  "notes": "Evidence supporting P-BNK-002-1."
+ },
+ {
+  "procedure_id": "P-BNK-003-1",
+  "evidence_id": "E-BNK-003-1",
+  "notes": "Evidence supporting P-BNK-003-1."
+ },
+ {
+  "procedure_id": "P-BNK-003-2",
+  "evidence_id": "E-BNK-003-2",
+  "notes": "Evidence supporting P-BNK-003-2."
+ },
+ {
+  "procedure_id": "P-INV-001",
+  "evidence_id": "E-INV-001",
+  "notes": "Listing is the population reconciled."
+ },
+ {
+  "procedure_id": "P-INV-001",
+  "evidence_id": "E-INV-002",
+  "notes": "Reconciliation is the output of this procedure."
+ },
+ {
+  "procedure_id": "P-INV-002",
+  "evidence_id": "E-INV-003",
+  "notes": "Count sheets identify what was counted and by whom."
+ },
+ {
+  "procedure_id": "P-INV-002",
+  "evidence_id": "E-INV-004",
+  "notes": "Auditor's own record of items inspected."
+ },
+ {
+  "procedure_id": "P-INV-003",
+  "evidence_id": "E-INV-001",
+  "notes": "Listing is the starting point for listing-to-floor tests."
+ },
+ {
+  "procedure_id": "P-INV-003",
+  "evidence_id": "E-INV-004",
+  "notes": "Test-count records are the primary output."
+ },
+ {
+  "procedure_id": "P-INV-004",
+  "evidence_id": "E-INV-008",
+  "notes": "Explanations and their corroboration are the evidence for resolved differences."
+ },
+ {
+  "procedure_id": "P-INV-004",
+  "evidence_id": "E-INV-005",
+  "notes": "Movement documents corroborate timing explanations."
+ },
+ {
+  "procedure_id": "P-INV-005",
+  "evidence_id": "E-INV-005",
+  "notes": "Movement reports are directly inspected."
+ },
+ {
+  "procedure_id": "P-INV-006",
+  "evidence_id": "E-INV-006",
+  "notes": "Adjustment journals are the population vouched."
+ },
+ {
+  "procedure_id": "P-INV-006",
+  "evidence_id": "E-INV-003",
+  "notes": "Count sheets support the quantities adjusted."
+ },
+ {
+  "procedure_id": "P-INV-007",
+  "evidence_id": "E-INV-007",
+  "notes": "Access records are directly inspected."
+ },
+ {
+  "procedure_id": "P-INV-007",
+  "evidence_id": "E-INV-005",
+  "notes": "Movement documents corroborate whether access related to valid movements."
+ },
+ {
+  "procedure_id": "P-INV-008",
+  "evidence_id": "E-INV-008",
+  "notes": "Aggregated findings and conclusions are documented here."
+ },
+ {
+  "procedure_id": "P-PAY-001",
+  "evidence_id": "E-PAY-001",
+  "notes": "Payroll summaries are the data analysed."
+ },
+ {
+  "procedure_id": "P-PAY-001",
+  "evidence_id": "E-PAY-002",
+  "notes": "HR headcount is the independent comparator."
+ },
+ {
+  "procedure_id": "P-PAY-002",
+  "evidence_id": "E-PAY-002",
+  "notes": "Leavers list is the starting population."
+ },
+ {
+  "procedure_id": "P-PAY-002",
+  "evidence_id": "E-PAY-001",
+  "notes": "Payroll register confirms whether the leaver was paid after termination."
+ },
+ {
+  "procedure_id": "P-PAY-003",
+  "evidence_id": "E-PAY-001",
+  "notes": "Payees are selected from the payroll register."
+ },
+ {
+  "procedure_id": "P-PAY-003",
+  "evidence_id": "E-PAY-003",
+  "notes": "Employment files are the evidence vouched to."
+ },
+ {
+  "procedure_id": "P-PAY-004",
+  "evidence_id": "E-PAY-002",
+  "notes": "Leaver checklists are inspected for the control test."
+ },
+ {
+  "procedure_id": "P-PAY-005",
+  "evidence_id": "E-PAY-005",
+  "notes": "Access report is directly inspected."
+ },
+ {
+  "procedure_id": "P-PAY-006",
+  "evidence_id": "E-PAY-004",
+  "notes": "Change trail is the population sampled."
+ },
+ {
+  "procedure_id": "P-PAY-006",
+  "evidence_id": "E-PAY-006",
+  "notes": "Change requests are the approval evidence vouched to."
+ },
+ {
+  "procedure_id": "P-PAY-007",
+  "evidence_id": "E-PAY-001",
+  "notes": "Register provides the recorded amounts recalculated."
+ },
+ {
+  "procedure_id": "P-PAY-007",
+  "evidence_id": "E-PAY-010",
+  "notes": "Authorised rates are the independent inputs to the recalculation."
+ },
+ {
+  "procedure_id": "P-PAY-008",
+  "evidence_id": "E-PAY-001",
+  "notes": "New starters and bank changes are extracted from payroll data."
+ },
+ {
+  "procedure_id": "P-PAY-008",
+  "evidence_id": "E-PAY-003",
+  "notes": "Employment files corroborate that new starters are genuine."
+ },
+ {
+  "procedure_id": "P-PAY-009",
+  "evidence_id": "E-PAY-007",
+  "notes": "Timesheets are the documents vouched."
+ },
+ {
+  "procedure_id": "P-PAY-009",
+  "evidence_id": "E-PAY-008",
+  "notes": "Attendance records corroborate hours claimed."
+ },
+ {
+  "procedure_id": "P-PAY-010",
+  "evidence_id": "E-PAY-001",
+  "notes": "Overtime cost data is analysed."
+ },
+ {
+  "procedure_id": "P-PAY-010",
+  "evidence_id": "E-PAY-009",
+  "notes": "Exception report is the focus of the analysis."
+ },
+ {
+  "procedure_id": "P-PAY-011",
+  "evidence_id": "E-PAY-007",
+  "notes": "Approved hours are the recalculation input."
+ },
+ {
+  "procedure_id": "P-PAY-011",
+  "evidence_id": "E-PAY-010",
+  "notes": "Authorised overtime rates are the recalculation input."
+ },
+ {
+  "procedure_id": "P-PAY-012",
+  "evidence_id": "E-PAY-007",
+  "notes": "Approval signatures are inspected on the claim forms."
+ },
+ {
+  "procedure_id": "P-PAY-013",
+  "evidence_id": "E-PAY-001",
+  "notes": "Register provides the recorded net pay recalculated."
+ },
+ {
+  "procedure_id": "P-PAY-013",
+  "evidence_id": "E-PAY-010",
+  "notes": "Authorised rates and tables are the independent inputs."
+ },
+ {
+  "procedure_id": "P-PAY-014",
+  "evidence_id": "E-PAY-010",
+  "notes": "Contracts and schedules are the authorised sources agreed to."
+ },
+ {
+  "procedure_id": "P-PAY-015",
+  "evidence_id": "E-PAY-001",
+  "notes": "Payroll register is reconciled to the ledger."
+ },
+ {
+  "procedure_id": "P-PAY-015",
+  "evidence_id": "E-PAY-011",
+  "notes": "GL accounts are the other side of the reconciliation."
+ },
+ {
+  "procedure_id": "P-PAY-016",
+  "evidence_id": "E-PAY-001",
+  "notes": "Payroll cost and headcount data are analysed."
+ },
+ {
+  "procedure_id": "P-PPE-001-001",
+  "evidence_id": "E-PPE-001",
+  "notes": "Policy sets the criteria the tested items are judged against."
+ },
+ {
+  "procedure_id": "P-PPE-001-001",
+  "evidence_id": "E-PPE-002",
+  "notes": "Ledger and invoices are the population vouched."
+ },
+ {
+  "procedure_id": "P-PPE-001-002",
+  "evidence_id": "E-PPE-003",
+  "notes": "Approval records evidence the control operation tested."
+ },
+ {
+  "procedure_id": "P-PPE-001-002",
+  "evidence_id": "E-PPE-001",
+  "notes": "Policy is inspected for clarity and consistent application."
+ },
+ {
+  "procedure_id": "P-PPE-001-003",
+  "evidence_id": "E-PPE-002",
+  "notes": "Expense trends are the subject of the analytical procedure."
+ },
+ {
+  "procedure_id": "P-PPE-002-001",
+  "evidence_id": "E-PPE-004",
+  "notes": "Register provides the inputs (cost, rate, life) for recalculation."
+ },
+ {
+  "procedure_id": "P-PPE-002-001",
+  "evidence_id": "E-PPE-005",
+  "notes": "Recalculation workpaper is the output and primary evidence."
+ },
+ {
+  "procedure_id": "P-PPE-002-002",
+  "evidence_id": "E-PPE-006",
+  "notes": "Management's review is inspected and challenged."
+ },
+ {
+  "procedure_id": "P-PPE-002-002",
+  "evidence_id": "E-PPE-004",
+  "notes": "Lives and methods in the register are evaluated for reasonableness."
+ },
+ {
+  "procedure_id": "P-PPE-002-003",
+  "evidence_id": "E-PPE-004",
+  "notes": "Change logs in the register evidence authorisation of amendments."
+ },
+ {
+  "procedure_id": "P-PPE-003-001",
+  "evidence_id": "E-PPE-009",
+  "notes": "Verification notes are the primary output of this procedure."
+ },
+ {
+  "procedure_id": "P-PPE-003-001",
+  "evidence_id": "E-PPE-004",
+  "notes": "Register is the population selected from."
+ },
+ {
+  "procedure_id": "P-PPE-003-002",
+  "evidence_id": "E-PPE-007",
+  "notes": "Disposal forms are inspected for authorisation and completeness."
+ },
+ {
+  "procedure_id": "P-PPE-003-002",
+  "evidence_id": "E-PPE-008",
+  "notes": "Proceeds records corroborate that disposals occurred."
+ },
+ {
+  "procedure_id": "P-PPE-003-003",
+  "evidence_id": "E-PPE-007",
+  "notes": "Absence of forms for known disposals is itself a finding."
+ },
+ {
+  "procedure_id": "P-PPE-003-003",
+  "evidence_id": "E-PPE-008",
+  "notes": "Proceeds without derecognition indicate unrecorded disposals."
+ },
+ {
+  "procedure_id": "P-PPE-004-001",
+  "evidence_id": "E-PPE-010",
+  "notes": "Management's assessment is inspected for completeness."
+ },
+ {
+  "procedure_id": "P-PPE-004-002",
+  "evidence_id": "E-PPE-011",
+  "notes": "Forecasts are inspected for signs of underperformance."
+ },
+ {
+  "procedure_id": "P-PPE-004-002",
+  "evidence_id": "E-PPE-012",
+  "notes": "External data corroborates or contradicts management's view."
+ },
+ {
+  "procedure_id": "P-PPE-004-003",
+  "evidence_id": "E-PPE-010",
+  "notes": "The assessment identifies which assets require testing."
+ },
+ {
+  "procedure_id": "P-PPE-004-003",
+  "evidence_id": "E-PPE-011",
+  "notes": "Forecast assumptions are the inputs challenged."
+ },
+ {
+  "procedure_id": "P-PPE-004-003",
+  "evidence_id": "E-PPE-012",
+  "notes": "External data provides independent challenge to assumptions."
+ },
+ {
+  "procedure_id": "P-PPE-005-001",
+  "evidence_id": "E-PPE-013",
+  "notes": "Work orders are the population inspected for derecognition."
+ },
+ {
+  "procedure_id": "P-PPE-005-001",
+  "evidence_id": "E-PPE-014",
+  "notes": "Component detail shows whether the old part was separately identified."
+ },
+ {
+  "procedure_id": "P-PPE-005-002",
+  "evidence_id": "E-PPE-014",
+  "notes": "Componentisation is directly inspected."
+ },
+ {
+  "procedure_id": "P-PPE-005-003",
+  "evidence_id": "E-PPE-013",
+  "notes": "Work orders corroborate which components were replaced."
+ },
+ {
+  "procedure_id": "P-PUR-001",
+  "evidence_id": "E-PUR-001",
+  "notes": "Invoices are the population vouched."
+ },
+ {
+  "procedure_id": "P-PUR-001",
+  "evidence_id": "E-PUR-002",
+  "notes": "GRNs are inspected for each sampled invoice."
+ },
+ {
+  "procedure_id": "P-PUR-002",
+  "evidence_id": "E-PUR-003",
+  "notes": "Matching records are what the control is reperformed on."
+ },
+ {
+  "procedure_id": "P-PUR-003",
+  "evidence_id": "E-PUR-003",
+  "notes": "Exception items are followed up to alternative receipt evidence."
+ },
+ {
+  "procedure_id": "P-PUR-004",
+  "evidence_id": "E-PUR-004",
+  "notes": "GRN register is the population traced."
+ },
+ {
+  "procedure_id": "P-PUR-004",
+  "evidence_id": "E-PUR-006",
+  "notes": "Accrual journals are traced to for unmatched GRNs."
+ },
+ {
+  "procedure_id": "P-PUR-005",
+  "evidence_id": "E-PUR-005",
+  "notes": "Post-year-end invoices are the population tested."
+ },
+ {
+  "procedure_id": "P-PUR-005",
+  "evidence_id": "E-PUR-004",
+  "notes": "GRN dates establish the true receipt period."
+ },
+ {
+  "procedure_id": "P-PUR-006",
+  "evidence_id": "E-PUR-006",
+  "notes": "The accrual schedule is directly inspected."
+ },
+ {
+  "procedure_id": "P-PUR-006",
+  "evidence_id": "E-PUR-004",
+  "notes": "GRN register tests the schedule's input completeness."
+ },
+ {
+  "procedure_id": "P-PUR-007",
+  "evidence_id": "E-PUR-007",
+  "notes": "Change log is the population inspected."
+ },
+ {
+  "procedure_id": "P-PUR-007",
+  "evidence_id": "E-PUR-008",
+  "notes": "Approval records evidence the control."
+ },
+ {
+  "procedure_id": "P-PUR-008",
+  "evidence_id": "E-PUR-009",
+  "notes": "Verification documents and payment records are the core evidence."
+ },
+ {
+  "procedure_id": "P-PUR-008",
+  "evidence_id": "E-PUR-002",
+  "notes": "GRNs support the genuineness of the underlying purchase."
+ },
+ {
+  "procedure_id": "P-PUR-009",
+  "evidence_id": "E-PUR-007",
+  "notes": "Change log and master data are analysed."
+ },
+ {
+  "procedure_id": "P-PUR-010",
+  "evidence_id": "E-PUR-010",
+  "notes": "Ledger extracts are the analysed population."
+ },
+ {
+  "procedure_id": "P-PUR-010",
+  "evidence_id": "E-PUR-012",
+  "notes": "System flags are compared with the auditor's analysis."
+ },
+ {
+  "procedure_id": "P-PUR-011",
+  "evidence_id": "E-PUR-011",
+  "notes": "Invoice copies and payment records resolve each suspected duplicate."
+ },
+ {
+  "procedure_id": "P-PUR-012",
+  "evidence_id": "E-PUR-001",
+  "notes": "Paid invoices are inspected for paid markings."
+ },
+ {
+  "procedure_id": "P-PUR-013",
+  "evidence_id": "E-PUR-013",
+  "notes": "Invoice and receipt dates are compared."
+ },
+ {
+  "procedure_id": "P-PUR-013",
+  "evidence_id": "E-PUR-014",
+  "notes": "Cut-off working papers document the testing."
+ },
+ {
+  "procedure_id": "P-PUR-014",
+  "evidence_id": "E-PUR-002",
+  "notes": "GRNs are the population traced."
+ },
+ {
+  "procedure_id": "P-PUR-015",
+  "evidence_id": "E-PUR-015",
+  "notes": "Monthly reports provide the trend data."
+ },
+ {
+  "procedure_id": "P-REV-001",
+  "evidence_id": "E-REV-001",
+  "notes": "Invoices are the population vouched."
+ },
+ {
+  "procedure_id": "P-REV-001",
+  "evidence_id": "E-REV-002",
+  "notes": "Dispatch evidence is inspected for each sampled invoice."
+ },
+ {
+  "procedure_id": "P-REV-002",
+  "evidence_id": "E-REV-003",
+  "notes": "Contracts define the recognition criteria tested."
+ },
+ {
+  "procedure_id": "P-REV-003",
+  "evidence_id": "E-REV-001",
+  "notes": "Invoices are the starting point for the ledger-to-dispatch direction."
+ },
+ {
+  "procedure_id": "P-REV-003",
+  "evidence_id": "E-REV-002",
+  "notes": "Dispatch notes are the starting point for the dispatch-to-ledger direction."
+ },
+ {
+  "procedure_id": "P-REV-004",
+  "evidence_id": "E-REV-001",
+  "notes": "Sampled invoices are the items the control is reperformed on."
+ },
+ {
+  "procedure_id": "P-REV-004",
+  "evidence_id": "E-REV-002",
+  "notes": "Dispatch evidence is what the control should have matched."
+ },
+ {
+  "procedure_id": "P-REV-005",
+  "evidence_id": "E-REV-004",
+  "notes": "Dispatch register is the population traced."
+ },
+ {
+  "procedure_id": "P-REV-005",
+  "evidence_id": "E-REV-005",
+  "notes": "Sales ledger is traced to."
+ },
+ {
+  "procedure_id": "P-REV-006",
+  "evidence_id": "E-REV-005",
+  "notes": "Post-year-end invoices are the population tested."
+ },
+ {
+  "procedure_id": "P-REV-006",
+  "evidence_id": "E-REV-004",
+  "notes": "Dispatch evidence establishes the true event date."
+ },
+ {
+  "procedure_id": "P-REV-007",
+  "evidence_id": "E-REV-006",
+  "notes": "The reconciliation is directly inspected."
+ },
+ {
+  "procedure_id": "P-REV-007",
+  "evidence_id": "E-REV-004",
+  "notes": "Dispatch register tests the reconciliation's input completeness."
+ },
+ {
+  "procedure_id": "P-REV-008",
+  "evidence_id": "E-REV-007",
+  "notes": "Sampled invoices are vouched."
+ },
+ {
+  "procedure_id": "P-REV-008",
+  "evidence_id": "E-REV-008",
+  "notes": "Dispatch evidence corroborates each invoice."
+ },
+ {
+  "procedure_id": "P-REV-009",
+  "evidence_id": "E-REV-001",
+  "notes": "Billing reports provide the revenue trend data."
+ },
+ {
+  "procedure_id": "P-REV-009",
+  "evidence_id": "E-REV-002",
+  "notes": "Dispatch volumes are the operational comparator."
+ },
+ {
+  "procedure_id": "P-REV-010",
+  "evidence_id": "E-REV-009",
+  "notes": "Confirmations are the primary output of this procedure."
+ },
+ {
+  "procedure_id": "P-REV-011",
+  "evidence_id": "E-REV-010",
+  "notes": "Incentive terms define the targets analysed."
+ },
+ {
+  "procedure_id": "P-REV-011",
+  "evidence_id": "E-REV-012",
+  "notes": "Performance reports provide the achievement data."
+ },
+ {
+  "procedure_id": "P-REV-012",
+  "evidence_id": "E-REV-011",
+  "notes": "Manual journals are the population inspected."
+ },
+ {
+  "procedure_id": "P-REV-013",
+  "evidence_id": "E-REV-010",
+  "notes": "Incentive documents focus the inquiries."
+ },
+ {
+  "procedure_id": "P-REV-013",
+  "evidence_id": "E-REV-012",
+  "notes": "Minutes evidence governance oversight."
+ },
+ {
+  "procedure_id": "P-REV-014",
+  "evidence_id": "E-REV-013",
+  "notes": "Journals and schedules are inspected."
+ },
+ {
+  "procedure_id": "P-REV-014",
+  "evidence_id": "E-REV-014",
+  "notes": "Contracts establish the transaction terms."
+ },
+ {
+  "procedure_id": "P-REV-015",
+  "evidence_id": "E-REV-014",
+  "notes": "Contracts are vouched to third-party evidence."
+ },
+ {
+  "procedure_id": "P-REV-015",
+  "evidence_id": "E-REV-015",
+  "notes": "Correspondence corroborates management's account."
+ },
+ {
+  "procedure_id": "P-REV-016",
+  "evidence_id": "E-REV-013",
+  "notes": "Journal listings are the population scanned."
+ },
+ {
+  "procedure_id": "P-INVST-001",
+  "evidence_id": "E-INVST-001",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-INVST-002",
+  "evidence_id": "E-INVST-002",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-INVST-002",
+  "evidence_id": "E-FRP-006",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-INVST-003",
+  "evidence_id": "E-INVST-002",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-INVST-004",
+  "evidence_id": "E-FRP-013",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-INVST-004",
+  "evidence_id": "E-FRP-014",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-BOR-001",
+  "evidence_id": "E-BOR-001",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-BOR-002",
+  "evidence_id": "E-BOR-002",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-BOR-002",
+  "evidence_id": "E-BOR-001",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-BOR-003",
+  "evidence_id": "E-BOR-001",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-BOR-003",
+  "evidence_id": "E-PPE-005",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-BOR-004",
+  "evidence_id": "E-FRP-005",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-BOR-004",
+  "evidence_id": "E-FRD-007",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-PROV-001",
+  "evidence_id": "E-FRP-011",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-PROV-002",
+  "evidence_id": "E-FRP-010",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-PROV-002",
+  "evidence_id": "E-FRP-006",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-PROV-003",
+  "evidence_id": "E-FRP-012",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-PROV-004",
+  "evidence_id": "E-FRP-005",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-PROV-004",
+  "evidence_id": "E-FRP-011",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-TAX-001",
+  "evidence_id": "E-TAX-001",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-TAX-002",
+  "evidence_id": "E-TAX-001",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-TAX-003",
+  "evidence_id": "E-FRP-006",
+  "notes": null
+ },
+ {
+  "procedure_id": "P-TAX-003",
+  "evidence_id": "E-TAX-001",
+  "notes": null
+ }
+]

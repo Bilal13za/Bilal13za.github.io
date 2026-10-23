@@ -1,0 +1,117 @@
+[
+ {
+  "industry_id": "IND-BNK",
+  "risk_id": "R-BNK-001",
+  "notes": "Banks carry loan books whose impairment depends on forward-looking expected-credit-loss models - the single largest estimate in most bank audits."
+ },
+ {
+  "industry_id": "IND-BNK",
+  "risk_id": "R-BNK-002",
+  "notes": "Interest on non-performing loans may continue to accrue in the system even where collection is doubtful - a direct overstatement channel."
+ },
+ {
+  "industry_id": "IND-BNK",
+  "risk_id": "R-BNK-003",
+  "notes": "Banks hold derivatives and traded instruments whose classification drives measurement - and whose valuation models are opaque to non-specialists."
+ },
+ {
+  "industry_id": "IND-MFG",
+  "risk_id": "R-MFG-001",
+  "notes": "Manufacturers carry work in progress valued with absorbed overheads - an area where allocation bases and rates are easily manipulated or simply stale."
+ },
+ {
+  "industry_id": "IND-MFG",
+  "risk_id": "R-MFG-002",
+  "notes": "Standard costing systems generate purchase-price and usage variances that should be investigated - but are often posted away without analysis, hiding real cost problems."
+ },
+ {
+  "industry_id": "IND-MFG",
+  "risk_id": "R-MFG-003",
+  "notes": "Manufacturers warrant their products, creating an obligation whose measurement depends on failure rates and claim patterns that shift with product changes."
+ },
+ {
+  "industry_id": "IND-RTL",
+  "risk_id": "R-RTL-001",
+  "notes": "Retailers process huge volumes of small cash and card transactions across many outlets - the classic environment for skimming and shrinkage."
+ },
+ {
+  "industry_id": "IND-RTL",
+  "risk_id": "R-RTL-002",
+  "notes": "Retailers earn significant supplier rebates and promotional income whose recognition depends on purchase volumes and conditions that are only confirmed later."
+ },
+ {
+  "industry_id": "IND-RTL",
+  "risk_id": "R-RTL-003",
+  "notes": "Gift cards and loyalty points create deferred revenue that is only released on redemption - and breakage estimates add further judgment."
+ },
+ {
+  "industry_id": "IND-TEL",
+  "risk_id": "R-TEL-001",
+  "notes": "Telecom operators install thousands of towers and network sites on leased land, almost always under contracts requiring the site to be restored when the lease ends."
+ },
+ {
+  "industry_id": "IND-TEL",
+  "risk_id": "R-TEL-002",
+  "notes": "Telecom operators routinely sell bundled contracts (handset plus service over 12-24 months) where consideration must be split between distinct goods and services."
+ },
+ {
+  "industry_id": "IND-TEL",
+  "risk_id": "R-TEL-003",
+  "notes": "Telecom billing runs millions of call/data records through automated rating engines applying complex, frequently changing tariffs - a classic systematic-error environment."
+ },
+ {
+  "industry_id": "IND-INS",
+  "risk_id": "R-FRP-004",
+  "notes": "Insurance-style long-tail liabilities: reserve estimates dominate, as with IBNR."
+ },
+ {
+  "industry_id": "IND-INS",
+  "risk_id": "R-REV-002",
+  "notes": "Premium cut-off errors mirror revenue cut-off risk."
+ },
+ {
+  "industry_id": "IND-CON",
+  "risk_id": "R-REV-001",
+  "notes": "Over-optimistic progress measurement accelerates revenue — same mechanism as premature recognition."
+ },
+ {
+  "industry_id": "IND-CON",
+  "risk_id": "R-FRP-003",
+  "notes": "Unapproved variations mirror unsupported-revenue risk."
+ },
+ {
+  "industry_id": "IND-CON",
+  "risk_id": "R-PUR-005",
+  "notes": "Subcontractor cost cut-off affects both costs and progress measurement."
+ },
+ {
+  "industry_id": "IND-PHR",
+  "risk_id": "R-REV-001",
+  "notes": "Under-accrued deductions = revenue overstatement by another name."
+ },
+ {
+  "industry_id": "IND-PHR",
+  "risk_id": "R-INV-001",
+  "notes": "Expiry-driven NRV risk for inventory."
+ },
+ {
+  "industry_id": "IND-PHR",
+  "risk_id": "R-FRP-002",
+  "notes": "Development-cost capitalisation is an estimate/judgement risk."
+ },
+ {
+  "industry_id": "IND-ENR",
+  "risk_id": "R-REV-003",
+  "notes": "Disputed tariff claims booked as revenue mirror unsupported-sales risk."
+ },
+ {
+  "industry_id": "IND-ENR",
+  "risk_id": "R-PPE-004",
+  "notes": "Decommissioning provisions are long-horizon estimate risks."
+ },
+ {
+  "industry_id": "IND-ENR",
+  "risk_id": "R-BNK-002",
+  "notes": "Doubtful offtaker receivables parallel non-performing-loan interest accrual."
+ }
+]

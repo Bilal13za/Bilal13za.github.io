@@ -1,0 +1,500 @@
+[
+ {
+  "risk_id": "R-CSH-001",
+  "control_id": "C-CSH-001",
+  "mapping_type": "suggested",
+  "notes": "Independent review is the control the factor says is missing; it is the primary detective control over bank transactions."
+ },
+ {
+  "risk_id": "R-CSH-001",
+  "control_id": "C-CSH-002",
+  "mapping_type": "suggested",
+  "notes": "Prevents stale items from permanently distorting the balance - the specific failure mode of an unreviewed reconciliation."
+ },
+ {
+  "risk_id": "R-CSH-002",
+  "control_id": "C-CSH-003",
+  "mapping_type": "suggested",
+  "notes": "Directly addresses the factor by establishing beneficiary legitimacy before money moves."
+ },
+ {
+  "risk_id": "R-CSH-002",
+  "control_id": "C-CSH-004",
+  "mapping_type": "suggested",
+  "notes": "Dual authorisation with matched documents is the last barrier before funds leave the entity."
+ },
+ {
+  "risk_id": "R-CSH-003",
+  "control_id": "C-CSH-005",
+  "mapping_type": "suggested",
+  "notes": "The transfer register is the population the auditor tests; matching both sides prevents one-sided recording."
+ },
+ {
+  "risk_id": "R-CSH-003",
+  "control_id": "C-CSH-006",
+  "mapping_type": "suggested",
+  "notes": "Year-end cut-off procedures specifically address the double-counting and window-dressing risk."
+ },
+ {
+  "risk_id": "R-CSH-004",
+  "control_id": "C-CSH-007",
+  "mapping_type": "suggested",
+  "notes": "Independent counts are the direct detective control over cash on hand."
+ },
+ {
+  "risk_id": "R-CSH-004",
+  "control_id": "C-CSH-008",
+  "mapping_type": "suggested",
+  "notes": "Dual custody and prompt banking reduce the opportunity for removal before recording."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "control_id": "C-FRD-001",
+  "mapping_type": "suggested",
+  "notes": "Independent journal approval is the primary preventive control over the manipulation mechanism."
+ },
+ {
+  "risk_id": "R-FRD-001",
+  "control_id": "C-FRD-002",
+  "mapping_type": "suggested",
+  "notes": "A trusted reporting channel is often how override is first detected."
+ },
+ {
+  "risk_id": "R-FRD-002",
+  "control_id": "C-FRD-002",
+  "mapping_type": "suggested",
+  "notes": "Tips are the most common detection route for asset misappropriation."
+ },
+ {
+  "risk_id": "R-FRD-002",
+  "control_id": "C-FRD-003",
+  "mapping_type": "suggested",
+  "notes": "Rotation and mandatory leave expose concealed diversions that depend on the perpetrator's continuous presence."
+ },
+ {
+  "risk_id": "R-FRD-003",
+  "control_id": "C-FRD-005",
+  "mapping_type": "suggested",
+  "notes": "Independent cut-off review directly addresses premature and fictitious revenue."
+ },
+ {
+  "risk_id": "R-FRD-003",
+  "control_id": "C-FRD-002",
+  "mapping_type": "suggested",
+  "notes": "Staff may observe pressure to manipulate revenue before the auditor does."
+ },
+ {
+  "risk_id": "R-FRD-004",
+  "control_id": "C-FRD-004",
+  "mapping_type": "suggested",
+  "notes": "Genuine independent challenge is the direct control over estimate bias."
+ },
+ {
+  "risk_id": "R-FRP-001",
+  "control_id": "C-FRP-001",
+  "mapping_type": "suggested",
+  "notes": "Directly addresses the factor by requiring the support and approval whose absence is the finding."
+ },
+ {
+  "risk_id": "R-FRP-001",
+  "control_id": "C-FRP-002",
+  "mapping_type": "suggested",
+  "notes": "Detects unusual journals that slipped through, or where, the approval control - the backstop the factor removes."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "control_id": "C-FRP-003",
+  "mapping_type": "suggested",
+  "notes": "Independent governance oversight is the primary deterrent and detection mechanism for override."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "control_id": "C-FRP-004",
+  "mapping_type": "suggested",
+  "notes": "Restricts the technical means (privileged access, closed-period posting) through which override is typically exercised."
+ },
+ {
+  "risk_id": "R-FRP-003",
+  "control_id": "C-FRP-005",
+  "mapping_type": "suggested",
+  "notes": "The register and declarations are the identification process the factor says is missing."
+ },
+ {
+  "risk_id": "R-FRP-003",
+  "control_id": "C-FRP-006",
+  "mapping_type": "suggested",
+  "notes": "Screens transactions so identified related parties actually trigger the right accounting treatment."
+ },
+ {
+  "risk_id": "R-FRP-004",
+  "control_id": "C-FRP-007",
+  "mapping_type": "suggested",
+  "notes": "Independent challenge is the control that would force assumptions to be supported."
+ },
+ {
+  "risk_id": "R-FRP-004",
+  "control_id": "C-FRP-008",
+  "mapping_type": "suggested",
+  "notes": "Look-back analysis detects the pattern of bias that unsupported assumptions can conceal."
+ },
+ {
+  "risk_id": "R-FRP-005",
+  "control_id": "C-FRP-009",
+  "mapping_type": "suggested",
+  "notes": "The checklist-and-review control is the process whose absence is the factor."
+ },
+ {
+  "risk_id": "R-FRP-005",
+  "control_id": "C-FRP-010",
+  "mapping_type": "suggested",
+  "notes": "Catches the novel items a checklist alone might miss."
+ },
+ {
+  "risk_id": "R-FRP-002",
+  "control_id": "C-FRP-001",
+  "mapping_type": "suggested",
+  "notes": "Relevant to override risk in the combined scenario (RULE-FRP-002B): supported, independently approved journals narrow the channel through which override is exercised."
+ },
+ {
+  "risk_id": "R-TEL-001",
+  "control_id": "C-TEL-001-1",
+  "mapping_type": "suggested",
+  "notes": "Completeness of the obligation population starts with a complete site register."
+ },
+ {
+  "risk_id": "R-TEL-001",
+  "control_id": "C-TEL-001-2",
+  "mapping_type": "suggested",
+  "notes": "Directly addresses the measurement (valuation) risk."
+ },
+ {
+  "risk_id": "R-TEL-002",
+  "control_id": "C-TEL-002-1",
+  "mapping_type": "suggested",
+  "notes": "Targets the source of allocation error: the approved selling prices."
+ },
+ {
+  "risk_id": "R-TEL-002",
+  "control_id": "C-TEL-002-2",
+  "mapping_type": "suggested",
+  "notes": "Consistency of application across high volumes."
+ },
+ {
+  "risk_id": "R-TEL-003",
+  "control_id": "C-TEL-003-1",
+  "mapping_type": "suggested",
+  "notes": "The main detective control over completeness and accuracy of rated revenue."
+ },
+ {
+  "risk_id": "R-TEL-003",
+  "control_id": "C-TEL-003-2",
+  "mapping_type": "suggested",
+  "notes": "Addresses the systematic-error source directly."
+ },
+ {
+  "risk_id": "R-MFG-001",
+  "control_id": "C-MFG-001-1",
+  "mapping_type": "suggested",
+  "notes": "Rate-setting is the root input to the valuation."
+ },
+ {
+  "risk_id": "R-MFG-001",
+  "control_id": "C-MFG-001-2",
+  "mapping_type": "suggested",
+  "notes": "Directly addresses the idle-capacity valuation risk."
+ },
+ {
+  "risk_id": "R-MFG-002",
+  "control_id": "C-MFG-002-1",
+  "mapping_type": "suggested",
+  "notes": "The missing detective control this factor describes."
+ },
+ {
+  "risk_id": "R-MFG-003",
+  "control_id": "C-MFG-003-1",
+  "mapping_type": "suggested",
+  "notes": "Connects actual experience to the estimate - the key detective control."
+ },
+ {
+  "risk_id": "R-RTL-001",
+  "control_id": "C-RTL-001-1",
+  "mapping_type": "suggested",
+  "notes": "The frontline detective control over takings."
+ },
+ {
+  "risk_id": "R-RTL-001",
+  "control_id": "C-RTL-001-2",
+  "mapping_type": "suggested",
+  "notes": "Voids and refunds are the classic skimming channel."
+ },
+ {
+  "risk_id": "R-RTL-002",
+  "control_id": "C-RTL-002-1",
+  "mapping_type": "suggested",
+  "notes": "The agreed terms are the foundation of accurate measurement."
+ },
+ {
+  "risk_id": "R-RTL-003",
+  "control_id": "C-RTL-003-1",
+  "mapping_type": "suggested",
+  "notes": "Completeness of the liability population."
+ },
+ {
+  "risk_id": "R-BNK-001",
+  "control_id": "C-BNK-001-1",
+  "mapping_type": "suggested",
+  "notes": "The governance control over the key estimate."
+ },
+ {
+  "risk_id": "R-BNK-002",
+  "control_id": "C-BNK-002-1",
+  "mapping_type": "suggested",
+  "notes": "The preventive control at the source of the risk."
+ },
+ {
+  "risk_id": "R-BNK-003",
+  "control_id": "C-BNK-003-1",
+  "mapping_type": "suggested",
+  "notes": "Segregation between valuation and trading addresses the information asymmetry."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "control_id": "C-INV-001",
+  "mapping_type": "suggested",
+  "notes": "Directly addresses the factor: restricting and monitoring access reduces the opportunity for unauthorised removal."
+ },
+ {
+  "risk_id": "R-INV-001",
+  "control_id": "C-INV-002",
+  "mapping_type": "suggested",
+  "notes": "Detects losses that preventive controls failed to stop; the investigation step is what converts a count difference into a recorded adjustment."
+ },
+ {
+  "risk_id": "R-PAY-001",
+  "control_id": "C-PAY-001",
+  "mapping_type": "suggested",
+  "notes": "Directly addresses the factor by closing the gap between termination and removal from the payroll master."
+ },
+ {
+  "risk_id": "R-PAY-001",
+  "control_id": "C-PAY-002",
+  "mapping_type": "suggested",
+  "notes": "Detects ghost or terminated employees that the preventive control missed, by comparing two independent populations."
+ },
+ {
+  "risk_id": "R-PAY-002",
+  "control_id": "C-PAY-003",
+  "mapping_type": "suggested",
+  "notes": "Removes the single-person opportunity by requiring a second person to authorise master changes."
+ },
+ {
+  "risk_id": "R-PAY-002",
+  "control_id": "C-PAY-004",
+  "mapping_type": "suggested",
+  "notes": "System-enforced segregation prevents one user from holding both sides of the incompatible duties."
+ },
+ {
+  "risk_id": "R-PAY-003",
+  "control_id": "C-PAY-005",
+  "mapping_type": "suggested",
+  "notes": "Independent approval is the primary check that overtime was worked and necessary."
+ },
+ {
+  "risk_id": "R-PAY-003",
+  "control_id": "C-PAY-006",
+  "mapping_type": "suggested",
+  "notes": "Detects patterns of inflated overtime that individual approvals might miss."
+ },
+ {
+  "risk_id": "R-PAY-004",
+  "control_id": "C-PAY-007",
+  "mapping_type": "suggested",
+  "notes": "Ensures the parameters feeding the calculation are correct and current."
+ },
+ {
+  "risk_id": "R-PAY-004",
+  "control_id": "C-PAY-008",
+  "mapping_type": "suggested",
+  "notes": "Independent review of the payroll summary before payment provides a last chance to detect calculation errors."
+ },
+ {
+  "risk_id": "R-PPE-001",
+  "control_id": "C-PPE-001",
+  "mapping_type": "suggested",
+  "notes": "Directly addresses the factor by requiring the capitalisation criteria to be considered and evidenced before recognition."
+ },
+ {
+  "risk_id": "R-PPE-001",
+  "control_id": "C-PPE-002",
+  "mapping_type": "suggested",
+  "notes": "Detects misclassifications that the approval control missed, on both sides of the repairs/capital boundary."
+ },
+ {
+  "risk_id": "R-PPE-002",
+  "control_id": "C-PPE-003",
+  "mapping_type": "suggested",
+  "notes": "The periodic review is the control that should keep depreciation parameters current; its absence is the factor."
+ },
+ {
+  "risk_id": "R-PPE-002",
+  "control_id": "C-PPE-004",
+  "mapping_type": "suggested",
+  "notes": "Prevents unauthorised changes to parameters, though it does not address whether authorised parameters are appropriate."
+ },
+ {
+  "risk_id": "R-PPE-003",
+  "control_id": "C-PPE-005",
+  "mapping_type": "suggested",
+  "notes": "Directly addresses the factor by creating the communication channel from operations to finance that is currently missing."
+ },
+ {
+  "risk_id": "R-PPE-003",
+  "control_id": "C-PPE-006",
+  "mapping_type": "suggested",
+  "notes": "Detects assets that have disappeared without being recorded as disposals."
+ },
+ {
+  "risk_id": "R-PPE-004",
+  "control_id": "C-PPE-007",
+  "mapping_type": "suggested",
+  "notes": "The indicator assessment is the missing process described by the factor."
+ },
+ {
+  "risk_id": "R-PPE-004",
+  "control_id": "C-PPE-008",
+  "mapping_type": "suggested",
+  "notes": "Performance monitoring provides the information on which an indicator assessment depends."
+ },
+ {
+  "risk_id": "R-PPE-005",
+  "control_id": "C-PPE-009",
+  "mapping_type": "suggested",
+  "notes": "Creates the information flow from maintenance to finance that the factor says is missing."
+ },
+ {
+  "risk_id": "R-PPE-005",
+  "control_id": "C-PPE-010",
+  "mapping_type": "suggested",
+  "notes": "Componentisation makes derecognition of the replaced part practicable by separately identifying its carrying amount."
+ },
+ {
+  "risk_id": "R-PUR-001",
+  "control_id": "C-PUR-001",
+  "mapping_type": "suggested",
+  "notes": "The three-way match is the direct preventive control: no receipt evidence, no payment."
+ },
+ {
+  "risk_id": "R-PUR-001",
+  "control_id": "C-PUR-002",
+  "mapping_type": "suggested",
+  "notes": "Detects invoices that bypassed the matching control so they can be investigated."
+ },
+ {
+  "risk_id": "R-PUR-002",
+  "control_id": "C-PUR-003",
+  "mapping_type": "suggested",
+  "notes": "The unmatched-GRN accrual is designed to capture exactly this exposure at period end."
+ },
+ {
+  "risk_id": "R-PUR-002",
+  "control_id": "C-PUR-004",
+  "mapping_type": "suggested",
+  "notes": "Recording by receipt date removes the timing mismatch at source."
+ },
+ {
+  "risk_id": "R-PUR-003",
+  "control_id": "C-PUR-005",
+  "mapping_type": "suggested",
+  "notes": "Independent approval directly addresses the factor: changes cannot take effect unilaterally."
+ },
+ {
+  "risk_id": "R-PUR-003",
+  "control_id": "C-PUR-006",
+  "mapping_type": "suggested",
+  "notes": "Periodic review detects fictitious or suspicious suppliers that the approval control missed."
+ },
+ {
+  "risk_id": "R-PUR-004",
+  "control_id": "C-PUR-007",
+  "mapping_type": "suggested",
+  "notes": "Automated duplicate detection prevents the same invoice number being recorded twice per supplier."
+ },
+ {
+  "risk_id": "R-PUR-004",
+  "control_id": "C-PUR-008",
+  "mapping_type": "suggested",
+  "notes": "Marking invoices as paid stops them re-entering the payment process."
+ },
+ {
+  "risk_id": "R-PUR-005",
+  "control_id": "C-PUR-009",
+  "mapping_type": "suggested",
+  "notes": "The cut-off checklist enforces receipt-date recording at the highest-risk point: period end."
+ },
+ {
+  "risk_id": "R-PUR-005",
+  "control_id": "C-PUR-010",
+  "mapping_type": "suggested",
+  "notes": "Post-year-end invoice review detects cut-off errors that the checklist missed."
+ },
+ {
+  "risk_id": "R-REV-001",
+  "control_id": "C-REV-001",
+  "mapping_type": "suggested",
+  "notes": "Directly addresses the factor: billing cannot proceed until delivery or performance evidence exists."
+ },
+ {
+  "risk_id": "R-REV-001",
+  "control_id": "C-REV-002",
+  "mapping_type": "suggested",
+  "notes": "Detects premature recognition that the preventive control missed, focused on the highest-risk period-end window."
+ },
+ {
+  "risk_id": "R-REV-002",
+  "control_id": "C-REV-003",
+  "mapping_type": "suggested",
+  "notes": "The dispatch-to-invoice reconciliation is designed to catch exactly this gap: dispatches without invoices at period end."
+ },
+ {
+  "risk_id": "R-REV-002",
+  "control_id": "C-REV-004",
+  "mapping_type": "suggested",
+  "notes": "Recording by dispatch date removes the timing mismatch at source."
+ },
+ {
+  "risk_id": "R-REV-003",
+  "control_id": "C-REV-005",
+  "mapping_type": "suggested",
+  "notes": "The three-way match prevents an invoice being raised where no dispatch evidence exists."
+ },
+ {
+  "risk_id": "R-REV-003",
+  "control_id": "C-REV-006",
+  "mapping_type": "suggested",
+  "notes": "Detects unsupported invoices that bypassed or predated the matching control."
+ },
+ {
+  "risk_id": "R-REV-004",
+  "control_id": "C-REV-007",
+  "mapping_type": "suggested",
+  "notes": "Independent governance oversight counters the pressure element of the fraud triangle."
+ },
+ {
+  "risk_id": "R-REV-004",
+  "control_id": "C-REV-008",
+  "mapping_type": "suggested",
+  "notes": "Restricts the main opportunity for manipulation: unsupported manual journals to revenue."
+ },
+ {
+  "risk_id": "R-REV-005",
+  "control_id": "C-REV-009",
+  "mapping_type": "suggested",
+  "notes": "Forces a documented business rationale and authorisation before unusual transactions are recorded."
+ },
+ {
+  "risk_id": "R-REV-005",
+  "control_id": "C-REV-010",
+  "mapping_type": "suggested",
+  "notes": "Detects unusual year-end transactions that were recorded without proper authorisation or substance."
+ }
+]
