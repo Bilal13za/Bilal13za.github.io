@@ -60,7 +60,9 @@ kbd{background:var(--paper2);border:1px solid var(--line);border-bottom-width:2p
 
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:34px 0}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;text-align:center;box-shadow:var(--shadow)}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;text-align:center;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:block;transition:transform .15s ease,box-shadow .15s ease}
+a.stat:hover{transform:translateY(-3px);box-shadow:0 6px 18px rgba(15,29,49,.1),0 18px 40px rgba(15,29,49,.1)}
+a.stat:hover b{color:var(--gold-deep)}
 .stat b{display:block;font-family:var(--font-d);font-size:32px;color:var(--ink)}
 .stat span{font-size:12.5px;color:var(--muted);letter-spacing:.04em}
 

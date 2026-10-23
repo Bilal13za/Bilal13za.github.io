@@ -173,9 +173,14 @@ function linksFor(type,id){
 /* ---------- router ---------- */
 const app = $("#app");
 function nav(){ $$(".site-nav a").forEach(a=>a.removeAttribute("aria-current"));
-  const h=location.hash||"#/";
-  const m={"#/":"home","#/search":"search","#/browse":"browse","#/library":"library","#/about":"about"}[h.split("?")[0]];
-  if(m){ const a=$(`.site-nav a[data-nav="${m}"]`); if(a) a.setAttribute("aria-current","page"); } }
+  const h=(location.hash||"#/").split("?")[0];
+  let m="home";
+  if(h.startsWith("#/search")) m="search";
+  else if(h.startsWith("#/browse")) m="browse";
+  else if(h.startsWith("#/library")) m="library";
+  else if(h.startsWith("#/about")) m="about";
+  const a=$(`.site-nav a[data-nav="${m}"]`);
+  if(a) a.setAttribute("aria-current","page"); }
 function route(){
   nav();
   const h=(location.hash||"#/").slice(2);
@@ -212,9 +217,9 @@ const COLLECTIONS=[
 ];
 function vHome(){
   const counts=Object.fromEntries(COLLECTIONS.map(c=>[c.k,(DB[c.table]||[]).length]));
-  const stats=[["audit_risks","risks"],["audit_procedures","procedures"],["standards","standards"],
-    ["industries","industries"],["case_studies","case studies"],["fraud_patterns","fraud patterns"]]
-    .map(([t,l])=>`<div class="stat"><b data-count="${DB[t].length}">0</b><span>${l}</span></div>`).join("");
+  const stats=[["audit_risks","risks","risk"],["audit_procedures","procedures","procedure"],["standards","standards","standard"],
+    ["industries","industries","industry"],["case_studies","case studies","case"],["fraud_patterns","fraud patterns","fraud"]]
+    .map(([t,l,k])=>`<a class="stat" href="#/browse/${k}" aria-label="Browse ${l}"><b data-count="${DB[t].length}">0</b><span>${l}</span></a>`).join("");
   app.innerHTML=`
   <section class="hero" aria-labelledby="hero-h">
     <p class="eyebrow">CA Audit Intelligence · Interactive knowledge base</p>
