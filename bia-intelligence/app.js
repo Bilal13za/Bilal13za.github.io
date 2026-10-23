@@ -5,7 +5,7 @@ const $$ = (s, el) => Array.from((el || document).querySelectorAll(s));
 const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
 /* ---------- data ---------- */
-const TABLES = ["questions_a","questions_b","observations","cards","mistake_guides","generated","topic_notes","syllabus","manifest"];
+const TABLES = ["questions_a","questions_b","observations","cards","mistake_guides","generated","topic_notes","topic_summaries","syllabus","manifest"];
 const DB = {};
 const Q_TABLES = ["questions_a","questions_b"]; // merged into DB.questions on load
 const TYPES = {
@@ -237,6 +237,18 @@ function vHome(){
 }
 
 /* ---------- views: syllabus ---------- */
+function summaryCard(topicId){
+  const s = (DB.topic_summaries||[]).find(x=>x.topic_id===topicId);
+  if(!s) return "";
+  return `<section class="sumcard" aria-label="Topic summary">
+    <h2>Topic summary</h2>
+    <p>${esc(s.summary)}</p>
+    <h3>Key points</h3>
+    <ul>${(s.key_points||[]).map(k=>`<li>${esc(k)}</li>`).join("")}</ul>
+    <p class="sumhow"><strong>How it&rsquo;s examined:</strong> ${esc(s.how_examined)}</p>
+    <p class="sumsrc"><span class="badge b-review">&#9679; own teaching</span></p>
+  </section>`;
+}
 function vSyllabus(){
   setNav("syllabus");
   const areas = (DB.syllabus&&DB.syllabus.areas)||[];
@@ -275,6 +287,7 @@ function vArea(id){
     <h1>${esc(a.name)}</h1>
     <p class="page-sub">Weightage ${esc(a.weight)}% · ${esc(a.hours)} teaching hours · ${qs.length} practice questions</p>
   </div>
+  ${summaryCard("CAF7-TOP-"+a.id)}
   <div class="section-head"><h2>Learning outcomes</h2></div>
   <ul class="results">
     ${a.los.map(l=>`<li class="result">
@@ -475,6 +488,7 @@ function vRevision(params){
   app().innerHTML = `
   <h2 class="page-title">Revision</h2>
   <p class="page-sub">Topic notes at three depths plus ${due} flashcards due — <a href="#/revision/cards">open the deck</a>.</p>
+  ${summaryCard(topic)}
   <div class="deck-tools" role="group" aria-label="Choose topic">
     <label>Topic <select class="fselect" id="revTopic">${topics.map(t=>`<option value="${t}"${t===topic?" selected":""}>${esc(AREA_NAME[topicArea(t)]||t)}</option>`).join("")}</select></label>
   </div>

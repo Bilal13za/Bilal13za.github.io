@@ -1,0 +1,77 @@
+[
+ {
+  "topic_id": "CAF7-TOP-A",
+  "title": "Managerial Analysis",
+  "summary": "Managerial Analysis is the biggest slice of the paper (30–40% of marks) and asks a single practical question: what is happening inside and around the business, and what should it do about it? It splits into three parts. External analysis (A.a) looks outward — the political, legal and social setting, technological disruption, the economic climate, and competitive forces through Porter's Five Forces. Internal analysis (A.b) looks inward — the firm's resources and capabilities using SWOT discipline, plus the business-model and value-chain breakdown that is new in the 2025 syllabus. Ethical decision-making (A.c) applies a structured model — Tucker or the AAA framework — to a scenario dilemma. The golden rule across all three: start from the scenario facts, classify each fact with the framework, interpret what it means for this specific business, and only then conclude. Generic textbook paragraphs with no scenario anchoring earn nothing.",
+  "key_points": [
+   "External analysis: sort every scenario fact into political/legal/social, technological, economic, or a Porter force — then say what each fact implies.",
+   "Internal analysis: keep SWOT disciplined (strengths/weaknesses are internal; opportunities/threats external); map the value chain into primary vs support activities.",
+   "BCG matrix: always use the market-growth cut-offs given in the scenario — never assume standard ones, and check the numbers before declaring a star.",
+   "Ethics: pick Tucker or AAA, work the steps, and cite only the Code principles actually at stake — not a list of all of them.",
+   "Never criticize the model instead of using it; examiners mark application, not model reviews.",
+   "New in 2025: business-model/value-chain analysis (A.b.2). The old A.b.2 (data-systems adequacy) is removed — do not revise it."
+  ],
+  "how_examined": "The heaviest area: around 90 question records, roughly a third of them 1-mark MCQs in Question 1; the rest are 3–11 mark constructed questions. Porter, BCG and ethics scenarios recur; 69 examiner observations — the most of any area.",
+  "source": "own-teaching"
+ },
+ {
+  "topic_id": "CAF7-TOP-B",
+  "title": "Risk Management",
+  "summary": "Risk Management is the most numerical area of the syllabus (20–30% of marks): how a business funds itself, what that funding costs, how market risk is priced, and how financial risks are managed. It has four learning outcomes. B.1 covers sources of finance — equity, debt and Islamic finance — and their trade-offs, mostly at discussion level. B.2 covers the cost of equity, cost of debt and WACC; note this is now tested at application depth, so expect workings rather than definitions. B.3 is CAPM: expected return as a function of systematic risk, where beta measures market risk only. B.4 merges the old general and financial risk-management topics: identify and assess risks, then choose to avoid, reduce, transfer or accept them, using instruments like futures, options, forwards and money-market hedges. Across the area, the marking battleground is mechanics — small slips in rates, weights or contract sizes cost marks.",
+  "key_points": [
+   "WACC: use market-value weights; cost of debt after tax; preference-share cost is NOT tax-adjusted.",
+   "CAPM: Ke = Rf + β(Rm − Rf). Beta captures systematic risk only — diversifiable risk is irrelevant to pricing.",
+   "B.2 is now application depth (T2): practise full WACC workings under time, not definitions.",
+   "Risk process (ISO 31000): establish context → identify → analyse → evaluate → treat → monitor, with communication throughout.",
+   "Hedges: futures are standardized and exchange-traded; forwards are OTC and tailored; options give a right, not an obligation (premium paid); money-market hedge suits certain FX receipts.",
+   "Traps: round partial futures contracts up; match borrow/deposit and buy/sell rates to the direction; hedge-efficiency measurement is excluded from the syllabus."
+  ],
+  "how_examined": "The most MCQ-heavy area (about 56 of ~91 question records are 1-mark MCQs); constructed questions run 5–12 marks on WACC, CAPM and hedging workings. 52 examiner observations — mechanics decide marks.",
+  "source": "own-teaching"
+ },
+ {
+  "topic_id": "CAF7-TOP-C",
+  "title": "Financial Analysis",
+  "summary": "Financial Analysis turns data into decisions (25–30% of marks) and carries the heaviest past-paper evidence of any area. It has three learning outcomes. C.1 is about getting data decision-ready — preparation, metrics, targets and technology — then budgeting, where the sales budget drives everything and flexible budgets must be built before comparing with actuals. C.2 covers cash flow and working capital, now explicitly including debtors and creditors management: every proposed action needs a substantive risk attached, discussed against computed numbers. C.3 appraises investments with NPV, IRR and payback, plus two knowledge references new in 2025: capital rationing and the asset-replacement cycle. It is the second-most numerical area after B, and cash-flow construction is where candidates most often lose marks. Across all three LOs, the examiner rewards numbers that are interpreted, not just computed.",
+  "key_points": [
+   "Budgeting: sales budget first; always flex the budget before any variance comparison.",
+   "Cash operating cycle = inventory days + receivable days − payable days; pair every working-capital proposal with a real risk.",
+   "NPV > 0 means accept (the best decision measure); IRR > hurdle means accept but watch its reinvestment assumption; payback only shows liquidity.",
+   "Capital rationing: rank divisible projects by profitability index (NPV ÷ outlay); test combinations for indivisible ones; distinguish hard vs soft rationing.",
+   "Asset replacement: convert each option's NPV into an equivalent annual annuity and compare the annuities.",
+   "Traps: sunk vs opportunity costs, nominal/real rate consistency, tax on disposal, and ratio formula slips."
+  ],
+  "how_examined": "Constructed questions up to 15–17 marks (full investment appraisals); roughly 18 of ~43 records are MCQs. 65 examiner observations — cash-flow construction is the marking battleground.",
+  "source": "own-teaching"
+ },
+ {
+  "topic_id": "CAF7-TOP-D",
+  "title": "Introduction to Sustainability",
+  "summary": "Introduction to Sustainability is entirely new in the 2025 syllabus (10–15% of marks), so there is no pre-2025 past-paper history — the study text is the main source. All three learning outcomes are tested at discuss level, with no numerical work. D.1 covers sustainability concepts and stakeholders, treating the environment itself as a stakeholder. D.2 covers the three pillars — environmental, social, and economic/governance — and crucially how they interconnect. D.3 covers measures of sustainability and the role of ESG factors in decisions such as investment and lending. The only examiner evidence (three Spring 2026 observations) is consistent: classify each issue under an explicit pillar, justify greenwashing verdicts across all three pillars, and align recommendations with a recognized framework such as GRI or ISSB S1/S2.",
+  "key_points": [
+   "D.1: sustainability means meeting present needs without harming future generations; map stakeholders including the environment itself.",
+   "D.2: know the three pillars AND their interconnections — issues rarely sit in one pillar.",
+   "D.3: pillar-wise measures; ESG factors feed into investment and lending decisions.",
+   "Greenwashing test: test every claim against all three pillars, not just the environmental one.",
+   "Examiner rule: explicit classification scores; identification alone scores nothing.",
+   "Recommend actions aligned with a recognized framework (GRI, ISSB S1/S2) — generic 'be greener' advice doesn't."
+  ],
+  "how_examined": "Short 3–6 mark discussion questions; only ~7 mapped records, all from the Spring 2026 paper — classification, greenwashing verdicts and framework-aligned recommendations.",
+  "source": "own-teaching"
+ },
+ {
+  "topic_id": "CAF7-TOP-KR",
+  "title": "Specific Examinable Knowledge Reference",
+  "summary": "The Knowledge Reference is not a fifth exam section — it is a list of 13 named models and techniques the examiner may require you to use, and it carries no weightage of its own. The tools span strategy (SWOT, Porter's Five Forces, product life cycle, BCG matrix), ethics (Tucker's five-question model, the AAA seven-step model), risk (ISO 31000, CAPM), the two 2025 additions (capital rationing, asset-replacement cycle), and hedging instruments for interest rates, foreign exchange and commodities. They are examined as tools inside scenario questions across areas A, B and C — never as standalone theory essays. The method is always the same: name the tool, feed it the scenario facts, read what it tells you, and answer the actual requirement. Marks come from correct application, not from describing the model.",
+  "key_points": [
+   "KR1–4: strategy tools (SWOT, Porter, PLC, BCG) — used inside area A scenarios.",
+   "KR5–6: ethics models (Tucker, AAA) — work the steps, cite only relevant principles.",
+   "KR7–8: ISO 31000 risk process and CAPM — used inside area B scenarios.",
+   "KR9–10 (new 2025): capital rationing via profitability index; asset replacement via equivalent annual annuity.",
+   "KR11–13: hedging instruments — futures (standardized, exchange) vs forwards (OTC) vs options (premium, right not obligation); money-market hedge for FX.",
+   "Excluded everywhere: hedge-efficiency measurement. Traps: BCG cut-offs, beta = systematic risk only."
+  ],
+  "how_examined": "Never standalone — embedded in scenario questions across areas A–C (the ~3 direct mappings are 15–16 mark case questions); no examiner observations tag KR directly, so evidence lives in the area notes.",
+  "source": "own-teaching"
+ }
+]

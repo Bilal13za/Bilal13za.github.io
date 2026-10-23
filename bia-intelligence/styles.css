@@ -138,6 +138,16 @@ select.fselect{border:1.5px solid var(--line);background:#fff;border-radius:10px
 .btn-ghost{background:#fff;color:var(--ink)}
 .btn-ghost:hover{background:var(--paper2)}
 .notice{background:var(--copper-soft);border:1px solid #e3c795;border-radius:var(--radius);padding:16px 20px;font-size:14.5px;margin:20px 0}
+
+/* topic summary card */
+.sumcard{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--copper);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 24px;margin:0 0 26px;max-width:46em}
+.sumcard h2{font-size:20px;margin:0 0 10px}
+.sumcard h3{font-size:16px;margin:18px 0 8px}
+.sumcard p{margin:0 0 12px}
+.sumcard ul{margin:0 0 12px;padding-left:22px}
+.sumcard li{margin-bottom:6px}
+.sumcard .sumhow{font-size:15px}
+.sumcard .sumsrc{margin:0}
 .about-list{margin:0 0 16px;padding-left:22px;max-width:46em}
 .about-list li{margin-bottom:8px}
 h2.page-title{font-size:clamp(28px,4.4vw,40px);margin:34px 0 8px}
