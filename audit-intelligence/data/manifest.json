@@ -346,9 +346,26 @@
     "recorded_at",
     "status"
    ]
+  },
+  "practice_dilemmas": {
+   "rows": 15,
+   "columns": [
+    "id",
+    "title",
+    "category",
+    "situation",
+    "principles_at_stake",
+    "code_reference",
+    "red_flags",
+    "what_to_do",
+    "what_not_to_do",
+    "related_ids",
+    "verification_status",
+    "source_ref"
+   ]
   }
  },
- "total_rows": 1983,
+ "total_rows": 1998,
  "exported": "2026-10-23",
  "notes": "Public web export. Excludes search_index and full source-document texts (see script header). knowledge_records ethics rows are structure summaries only."
 }

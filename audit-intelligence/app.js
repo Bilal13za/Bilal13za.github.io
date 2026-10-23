@@ -9,7 +9,7 @@ const TABLES = ["audit_areas","assertions","audit_risks","risk_factors","control
   "evidence_types","industries","standards","regulations","publishers","case_studies","fraud_patterns",
   "knowledge_records","audit_programmes","working_paper_templates","reasoning_rules","study_resources",
   "risk_assertion","risk_control","risk_procedure","factor_risk","industry_risk","case_study_risk",
-  "standard_procedure","procedure_evidence","known_limitations"];
+  "standard_procedure","procedure_evidence","known_limitations","practice_dilemmas"];
 const DB = {};
 const BYID = {};   // type -> Map(id -> row)
 
@@ -31,6 +31,7 @@ const TYPES = {
   factor:{table:"risk_factors",label:"Risk factor",t:"title",b:["description"]},
   rule:{table:"reasoning_rules",label:"Reasoning rule",t:"name",b:["rationale"]},
   study:{table:"study_resources",label:"Study",t:"title",b:[]},
+  dilemma:{table:"practice_dilemmas",label:"Dilemma",t:"title",b:["situation","principles_at_stake","what_to_do","what_not_to_do"]},
 };
 const titleOf = (type,row)=>{const c=TYPES[type];return row[c.t]||row.title||row.name||row.id;};
 const bodyOf = (type,row)=>{const c=TYPES[type];return c.b.map(f=>row[f]).filter(Boolean).join("\n\n");};
@@ -42,6 +43,7 @@ const SYN = {receivables:["debtors"],debtors:["receivables"],inventory:["stock"]
 /* inverted index: token -> Set("type:id") */
 const INDEX = new Map();
 const DOCS = new Map(); // "type:id" -> {type,id,title,text}
+const ID2TYPE = {};     // record id -> type (for cross-type related links)
 const tok = s => (String(s||"").toLowerCase().match(/[a-z0-9]+(?:-[a-z0-9]+)*/g)||[]);
 function buildIndex(){
   for(const [type,c] of Object.entries(TYPES)){
@@ -166,6 +168,13 @@ function linksFor(type,id){
     const kr=(DB.knowledge_records||[]).find(r=>r.id===id);
     let sids=[]; try{ sids=JSON.parse(kr.standard_ids||"[]"); }catch(e){}
     link("Standards", sids.map(s=>({row:byId("standard").get(s),t:"standard",rid:s})));
+  } else if(type==="dilemma"){
+    const dl=(DB.practice_dilemmas||[]).find(r=>r.id===id);
+    let rids=[]; try{rids=JSON.parse(dl.related_ids||"[]");}catch(e){}
+    link("Related records", rids.filter(rid=>ID2TYPE[rid]).map(rid=>{
+      const t=ID2TYPE[rid]; const m=new Map(); for(const r of DB[TYPES[t].table]||[]) m.set(r.id,r);
+      return {row:m.get(rid),t,rid};
+    }));
   }
   return L.map(s=>({...s, rows:s.rows.filter(r=>r.row)}));
 }
@@ -211,6 +220,7 @@ const COLLECTIONS=[
   {k:"industry",t:"Industries",d:"Sector risk profiles with Pakistan regulation.",table:"industries"},
   {k:"case",t:"Case studies",d:"Real audit failures — facts separated from allegations.",table:"case_studies"},
   {k:"fraud",t:"Fraud patterns",d:"How schemes work, red flags, how to detect them.",table:"fraud_patterns"},
+  {k:"dilemma",t:"Dilemmas",d:"Ethical dilemmas for trainees, auditors, TCWG and regulators.",table:"practice_dilemmas"},
   {k:"knowledge",t:"Knowledge",d:"Companies Act provisions, ethics structure, tax index.",table:"knowledge_records"},
   {k:"programme",t:"Programmes",d:"Full audit programmes per cycle.",table:"audit_programmes"},
   {k:"template",t:"Templates",d:"Working-paper templates, ready to adapt.",table:"working_paper_templates"},
@@ -218,7 +228,8 @@ const COLLECTIONS=[
 function vHome(){
   const counts=Object.fromEntries(COLLECTIONS.map(c=>[c.k,(DB[c.table]||[]).length]));
   const stats=[["audit_risks","risks","risk"],["audit_procedures","procedures","procedure"],["standards","standards","standard"],
-    ["industries","industries","industry"],["case_studies","case studies","case"],["fraud_patterns","fraud patterns","fraud"]]
+    ["industries","industries","industry"],["case_studies","case studies","case"],["fraud_patterns","fraud patterns","fraud"],
+    ["practice_dilemmas","dilemmas","dilemma"]]
     .map(([t,l,k])=>`<a class="stat" href="#/browse/${k}" aria-label="Browse ${l}"><b data-count="${DB[t].length}">0</b><span>${l}</span></a>`).join("");
   app.innerHTML=`
   <section class="hero" aria-labelledby="hero-h">
@@ -344,6 +355,11 @@ function sectionsFor(type,row){
     sec("How it works",row.how_it_works); list("Red flags",row.red_flags);
     sec("Pressure",row.pressure); sec("Opportunity",row.opportunity); sec("Rationalization",row.rationalization);
   }
+  else if(type==="dilemma"){
+    sec("Situation",row.situation); sec("Principles at stake",row.principles_at_stake);
+    sec("What the Code says",row.code_reference); list("Red flags",row.red_flags);
+    sec("What to do",row.what_to_do); sec("What NOT to do",row.what_not_to_do);
+  }
   else if(type==="knowledge"){
     sec("Summary",row.description); sec("Practical application",row.practical_application); sec("Limitations",row.limitations);
   }
@@ -396,6 +412,7 @@ function vRecord(type,id){
 }
 
 /* ---------- views: browse ---------- */
+const DILEMMA_CATS={trainee:"For trainees",management:"From management",tcwg:"From TCWG",regulator:"From regulators"};
 function vBrowse(key){
   const col=COLLECTIONS.find(c=>c.k===key);
   if(!col){ // index of collections
@@ -406,6 +423,8 @@ function vBrowse(key){
   const rows=[...(DB[col.table]||[])];
   const hasArea=rows.length&&rows[0].audit_area_id!==undefined;
   const areas=[...new Set(rows.map(r=>r.audit_area_id).filter(Boolean))];
+  const hasCat=rows.length&&rows[0].category!==undefined;
+  const cats=[...new Set(rows.map(r=>r.category).filter(Boolean))];
   app.innerHTML=`
   <nav class="crumb" aria-label="Breadcrumb"><a href="#/">Home</a> › <a href="#/browse">Browse</a> › ${esc(col.t)}</nav>
   <h2 class="page-title">${esc(col.t)}</h2>
@@ -413,10 +432,13 @@ function vBrowse(key){
   ${hasArea&&areas.length>1?`<div class="fchips" role="group" aria-label="Filter by audit area">
     <button data-a="" aria-pressed="true">All areas</button>
     ${areas.map(a=>`<button data-a="${esc(a)}" aria-pressed="false">${esc(areaName(a))}</button>`).join("")}</div>`:""}
+  ${hasCat&&cats.length>1?`<div class="fchips" role="group" aria-label="Filter by who faces it">
+    <button data-a="" aria-pressed="true">All</button>
+    ${cats.map(c=>`<button data-a="${esc(c)}" aria-pressed="false">${esc(DILEMMA_CATS[c]||c)}</button>`).join("")}</div>`:""}
   <div class="kicker-grid" id="browseGrid"></div>`;
   const grid=$("#browseGrid");
   const paint=(f)=>{
-    const list=rows.filter(r=>!f||r.audit_area_id===f);
+    const list=rows.filter(r=>!f||(hasCat?r.category===f:r.audit_area_id===f));
     grid.innerHTML=list.map(r=>`
       <a class="card" href="#/r/${col.k}/${encodeURIComponent(r.id)}">
         <h3>${esc(titleOf(col.k,r))}</h3>
@@ -512,6 +534,7 @@ async function boot(){
   try{ await Promise.all(jobs); }
   catch(e){ count.textContent="Failed to load data: "+e.message; return; }
   buildIndex();
+  for(const [type,c] of Object.entries(TYPES)) for(const r of DB[c.table]||[]) ID2TYPE[r.id]=type;
   $("#loader").classList.add("done");
   setTimeout(()=>$("#loader").remove(),500);
   route();
