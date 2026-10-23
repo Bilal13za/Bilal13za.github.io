@@ -858,12 +858,14 @@ function route(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0, total=1;
-  const load=t=>fetch("data/"+t+".json?v=20261023b").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const load=t=>fetch("data/"+t+".json?v=20261023c").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/total*100)+"%";count.textContent=done+" / "+total+" collections";});
   try{
-    const mresp = await fetch("data/manifest.json?v=20261023b");
+    const mresp = await fetch("data/manifest.json?v=20261023c");
     if(!mresp.ok) throw new Error("manifest "+mresp.status);
     DB.manifest = await mresp.json();
+    // Normalize shard names: manifest may list "questions_a.json"; loader appends ".json" itself.
+    if(Array.isArray(DB.manifest.question_shards)) DB.manifest.question_shards = DB.manifest.question_shards.map(s=>String(s).replace(/\.json$/,""));
     const shards = (DB.manifest&&DB.manifest.question_shards)||["questions_a","questions_b"];
     const tables = [...shards, ...BASE_TABLES];
     total = tables.length + 1; done = 1;
