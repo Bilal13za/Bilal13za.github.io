@@ -214,6 +214,16 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Escape"&&document.activeElement&&/input/i.test(document.activeElement.tagName))document.activeElement.blur();
 });
 $("#searchTrigger").addEventListener("click",()=>{location.hash="#/search";setTimeout(()=>{const i=$("#q");if(i)i.focus();},80);});
+/* mobile nav toggle */
+const navToggle=$("#navToggle"), siteHeader=document.querySelector(".site-header");
+function closeNav(){siteHeader.classList.remove("nav-open");navToggle.setAttribute("aria-expanded","false");navToggle.setAttribute("aria-label","Open menu");}
+navToggle.addEventListener("click",()=>{
+  const open=siteHeader.classList.toggle("nav-open");
+  navToggle.setAttribute("aria-expanded",String(open));
+  navToggle.setAttribute("aria-label",open?"Close menu":"Open menu");
+});
+window.addEventListener("hashchange",closeNav);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeNav();});
 
 /* ---------- views: home ---------- */
 const COLLECTIONS=[
@@ -271,8 +281,12 @@ function vHome(){
 }
 
 /* ---------- views: search ---------- */
-const TYPE_FILTERS=[["","All"],["risk","Risks"],["procedure","Procedures"],["standard","Standards"],
-  ["knowledge","Knowledge"],["case","Cases"],["fraud","Fraud"],["industry","Industries"],["control","Controls"],["evidence","Evidence"]];
+const TYPE_FILTERS=[["","All"],["risk","Risks"],["procedure","Procedures"],["control","Controls"],
+  ["analytical","Analytics"],["evidence","Evidence"],["standard","Standards"],["dilemma","Dilemmas"],
+  ["fraud","Fraud"],["case","Cases"],["industry","Industries"],["knowledge","Knowledge"],
+  ["programme","Programmes"],["template","Templates"],["assertion","Assertions"],
+  ["factor","Risk factors"],["regulation","Regulations"],["study","Studies"],
+  ["area","Audit areas"],["rule","Rules"]];
 function snippet(text,q){
   const terms=tok(q).filter(t=>t.length>2);
   let s=text.replace(/\s+/g," ").trim();
@@ -469,6 +483,31 @@ function vRecord(type,id){
     try{await navigator.clipboard.writeText(cite);e.target.textContent="✓ Copied";}
     catch(err){e.target.textContent="Copy failed — select manually";}
   });
+  /* table of contents from the record's own sections */
+  const heads=[...document.querySelectorAll("article .prose h2")];
+  if(heads.length>2){
+    heads.forEach((h,i)=>{h.id="sec-"+i;});
+    const mt=document.querySelector(".meta-table");
+    if(mt) mt.insertAdjacentHTML("afterend",
+      `<nav class="toc" aria-label="On this page"><strong>On this page</strong><ul>${
+        heads.map((h,i)=>`<li><button class="toc-link" data-sec="${i}">${esc(h.textContent)}</button></li>`).join("")
+      }</ul></nav>`);
+    const smooth=!matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelectorAll(".toc-link").forEach(b=>b.addEventListener("click",()=>{
+      const t=document.getElementById("sec-"+b.dataset.sec);
+      if(t) t.scrollIntoView({behavior:smooth?"smooth":"auto",block:"start"});
+    }));
+  }
+  /* prev / next within the collection */
+  const allRows=(DB[c.table]||[]), ridx=allRows.findIndex(r=>String(r.id)===id);
+  const prevR=ridx>0?allRows[ridx-1]:null, nextR=ridx>=0&&ridx<allRows.length-1?allRows[ridx+1]:null;
+  if(prevR||nextR){
+    const pn=document.createElement("nav");
+    pn.className="prevnext"; pn.setAttribute("aria-label","More in this collection");
+    pn.innerHTML=`${prevR?`<a href="#/r/${type}/${encodeURIComponent(prevR.id)}"><span>← Previous</span><b>${esc(titleOf(type,prevR))}</b></a>`:`<span></span>`}
+      ${nextR?`<a href="#/r/${type}/${encodeURIComponent(nextR.id)}"><span>Next →</span><b>${esc(titleOf(type,nextR))}</b></a>`:""}`;
+    app.querySelector("article").appendChild(pn);
+  }
   document.title=title+" — CA Audit Intelligence";
 }
 
@@ -490,6 +529,15 @@ function vBrowse(key){
   <nav class="crumb" aria-label="Breadcrumb"><a href="#/">Home</a> › <a href="#/browse">Browse</a> › ${esc(col.t)}</nav>
   <h2 class="page-title">${esc(col.t)}</h2>
   <p class="page-sub">${esc(col.d)} · ${rows.length} records</p>
+  <div class="browse-tools">
+    <input type="search" id="bq" placeholder="Filter ${esc(col.t.toLowerCase())}…" aria-label="Filter ${esc(col.t)} by text" autocomplete="off">
+    <select id="bsort" aria-label="Sort records">
+      <option value="">Default order</option>
+      <option value="az">A–Z</option>
+      <option value="za">Z–A</option>
+    </select>
+  </div>
+  <p class="page-sub" id="browseCount" role="status"></p>
   ${hasArea&&areas.length>1?`<div class="fchips" role="group" aria-label="Filter by audit area">
     <button data-a="" aria-pressed="true">All areas</button>
     ${areas.map(a=>`<button data-a="${esc(a)}" aria-pressed="false">${esc(areaName(a))}</button>`).join("")}</div>`:""}
@@ -497,20 +545,28 @@ function vBrowse(key){
     <button data-a="" aria-pressed="true">All</button>
     ${cats.map(c=>`<button data-a="${esc(c)}" aria-pressed="false">${esc(DILEMMA_CATS[c]||c)}</button>`).join("")}</div>`:""}
   <div class="kicker-grid" id="browseGrid"></div>`;
-  const grid=$("#browseGrid");
-  const paint=(f)=>{
-    const list=rows.filter(r=>!f||(hasCat?r.category===f:r.audit_area_id===f));
+  const grid=$("#browseGrid"), bq=$("#bq"), bsort=$("#bsort"), bcount=$("#browseCount");
+  let areaF="";
+  const textOf=r=>(titleOf(col.k,r)+" "+(bodyOf(col.k,r)||"")).toLowerCase();
+  const paint=()=>{
+    const q=bq.value.trim().toLowerCase();
+    let list=rows.filter(r=>(!areaF||(hasCat?r.category===areaF:r.audit_area_id===areaF))&&(!q||textOf(r).includes(q)));
+    if(bsort.value==="az")list=[...list].sort((a,b)=>titleOf(col.k,a).localeCompare(titleOf(col.k,b)));
+    else if(bsort.value==="za")list=[...list].sort((a,b)=>titleOf(col.k,b).localeCompare(titleOf(col.k,a)));
+    bcount.textContent=`Showing ${list.length} of ${rows.length} ${col.t.toLowerCase()}`;
     grid.innerHTML=list.map(r=>`
       <a class="card" href="#/r/${col.k}/${encodeURIComponent(r.id)}">
         <h3>${esc(titleOf(col.k,r))}</h3>
         <p>${esc((bodyOf(col.k,r)||"").slice(0,140))}${(bodyOf(col.k,r)||"").length>140?"…":""}</p>
-        <span style="display:flex;gap:8px;flex-wrap:wrap">${VS_BADGE(r.verification_status)}<span class="badge b-id">${esc(r.id)}</span></span>
-      </a>`).join("")||`<p class="page-sub">No records in this area.</p>`;
+        <span style="display:flex;gap:8px;flex-wrap:wrap">${VS_BADGE(r.verification_status)}${r.audit_area_id?`<span class="badge b-area">${esc(areaName(r.audit_area_id))}</span>`:""}<span class="badge b-id">${esc(r.id)}</span></span>
+      </a>`).join("")||`<p class="page-sub">No records match these filters.</p>`;
   };
-  paint("");
+  paint();
+  let bdeb; bq.addEventListener("input",()=>{clearTimeout(bdeb);bdeb=setTimeout(paint,150);});
+  bsort.addEventListener("change",paint);
   $$(".fchips button").forEach(b=>b.addEventListener("click",()=>{
     $$(".fchips button").forEach(x=>x.setAttribute("aria-pressed","false"));
-    b.setAttribute("aria-pressed","true");paint(b.dataset.a);
+    b.setAttribute("aria-pressed","true");areaF=b.dataset.a;paint();
   }));
   document.title=col.t+" — CA Audit Intelligence";
 }
@@ -590,7 +646,7 @@ function vAbout(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0;
-  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023i").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023j").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/TABLES.length*100)+"%";count.textContent=done+" / "+TABLES.length+" collections";}));
   try{ await Promise.all(jobs); }
   catch(e){ count.textContent="Failed to load data: "+e.message; return; }
