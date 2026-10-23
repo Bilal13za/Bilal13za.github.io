@@ -7,7 +7,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select bank reconciliations for several months spread across the period. Inspect for preparer and independent reviewer sign-off, verify the reviewer is independent of cash handling, re-perform one reconciliation, and inspect the investigation of aged or unusual items.",
+  "test_of_controls": "[{\"title\": \"Independent review of monthly reconciliations\", \"detail\": \"Select bank reconciliations for several months spread across the period; inspect for preparer and independent reviewer sign-off, and verify the reviewer is independent of cash handling.\"}, {\"title\": \"Re-performance of one reconciliation\", \"detail\": \"Re-perform one month's bank reconciliation from the bank statement to the ledger.\"}, {\"title\": \"Investigation of aged and unusual items\", \"detail\": \"Select aged or unusual reconciling items and inspect evidence that they were investigated and resolved.\"}]",
   "test_title": "Monthly bank reconciliations with independent review"
  },
  {
@@ -18,7 +18,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the aged outstanding-items report at two dates. Verify items beyond the defined timeframe were investigated and cleared or written back with approval, and trace a sample of clearances to supporting evidence.",
+  "test_of_controls": "[{\"title\": \"Ageing and clearance of outstanding items\", \"detail\": \"Inspect the aged outstanding-items report at two dates; verify items beyond the defined timeframe were investigated and cleared or written back with approval.\"}, {\"title\": \"Clearances traced to evidence\", \"detail\": \"Select a sample of cleared or written-back items and trace them to supporting evidence.\"}]",
   "test_title": "Clearance of aged outstanding items"
  },
  {
@@ -29,7 +29,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of new beneficiaries added during the period. Inspect verification evidence (business existence, bank account ownership) dated before the first payment, and verify no payment preceded verification.",
+  "test_of_controls": "[{\"title\": \"Verification before first payment\", \"detail\": \"Select a sample of new beneficiaries added during the period; inspect verification evidence (business existence, bank account ownership) and confirm it predates the first payment.\"}, {\"title\": \"Payments blocked until verified\", \"detail\": \"Verify the system or manual control prevents payments to beneficiaries added without verification (inspect the prevention or test with a controlled attempt).\"}]",
   "test_title": "Independent verification of new beneficiaries"
  },
  {
@@ -40,7 +40,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of payments above the threshold. Inspect for dual authorisation and matched supporting documents, and verify the authorisers are independent of the payment requester. Verify the system enforces dual authorisation (inspect configuration or test with a controlled attempt).",
+  "test_of_controls": "[{\"title\": \"Dual authorisation on a sample of payments\", \"detail\": \"Select a sample of payments above the threshold; inspect for two independent authorisations and verify the authorisers are independent of the payment requester.\"}, {\"title\": \"Document matching before release\", \"detail\": \"For the same sample, verify supporting documents were matched to the payment before release.\"}, {\"title\": \"System enforcement of dual authorisation\", \"detail\": \"Verify the system enforces dual authorisation \\u2014 inspect the configuration or attempt a controlled payment release with a single authorisation.\"}]",
   "test_title": "Dual authorisation and document matching on payments"
  },
  {
@@ -51,7 +51,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of inter-account transfers. Trace each to the transfer register and agree both the sending and receiving sides, and inspect the period-end matching performed before close.",
+  "test_of_controls": "[{\"title\": \"Two-sided agreement of transfers\", \"detail\": \"Select a sample of inter-account transfers; trace each to the transfer register and agree both the sending and receiving sides.\"}, {\"title\": \"Period-end matching\", \"detail\": \"Inspect the matching of all transfers on both sides performed before the period-end close.\"}]",
   "test_title": "Two-sided matching of inter-account transfers"
  },
  {
@@ -62,7 +62,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the year-end listing of transfers in transit. Verify each item is recognised on only one side (not double-counted) and re-perform the cut-off check for the reporting date.",
+  "test_of_controls": "[{\"title\": \"Transfers-in-transit listing\", \"detail\": \"Inspect the year-end listing of transfers in transit and verify each item is recognised on only one side (not double-counted).\"}, {\"title\": \"Re-performance of the cut-off check\", \"detail\": \"Re-perform the bank cut-off check for the reporting date, agreeing transfers to bank statements on both sides.\"}]",
   "test_title": "Year-end cut-off control over transfers in transit"
  },
  {
@@ -73,7 +73,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the records of surprise cash counts during the period. Verify the counts were unannounced and performed by someone independent of cash custody, verify differences were investigated and approved, and observe one count.",
+  "test_of_controls": "[{\"title\": \"Surprise count records\", \"detail\": \"Inspect the records of surprise cash counts during the period; verify the counts were unannounced and performed by someone independent of cash custody, and that differences were investigated and approved.\"}, {\"title\": \"Observation of a cash count\", \"detail\": \"Attend and observe one surprise cash count, verifying the count procedure and agreement to the cash records.\"}]",
   "test_title": "Independent surprise cash counts"
  },
  {
@@ -84,7 +84,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Observe cash handling: dual custody in operation and pre-numbered receipts issued. Select a sample of days and agree takings to bankings, verifying banking was prompt and intact.",
+  "test_of_controls": "[{\"title\": \"Observation of cash-handling controls\", \"detail\": \"Observe cash handling in operation: dual custody maintained and pre-numbered receipts issued for all takings.\"}, {\"title\": \"Prompt and intact banking\", \"detail\": \"Select a sample of days and agree takings per the receipt records to bankings, verifying banking was prompt and intact.\"}]",
   "test_title": "Dual custody, pre-numbered receipts and prompt banking"
  },
  {
@@ -95,7 +95,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of manual journals above the threshold. Inspect for independent approval before posting (signature or workflow timestamp) and verify the approver differs from the preparer.",
+  "test_of_controls": "[{\"title\": \"Independent approval of manual journals\", \"detail\": \"Select a sample of manual journals above the threshold; inspect for independent approval before posting, evidenced by signature or workflow timestamp.\"}, {\"title\": \"Preparer and approver segregation\", \"detail\": \"For the same sample, verify the approver differs from the preparer in every case.\"}]",
   "test_title": "Independent approval of manual journals"
  },
  {
@@ -106,7 +106,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the whistleblowing policy and evidence of its communication to staff. Inspect the log of reports, investigation records and reporting to those charged with governance, and confirm the reporting channel is operational.",
+  "test_of_controls": "[{\"title\": \"Policy, communication and report log\", \"detail\": \"Inspect the whistleblowing policy and evidence of its communication to all staff; inspect the log of reports received.\"}, {\"title\": \"Investigation and TCWG reporting\", \"detail\": \"Select logged reports and inspect investigation records and reporting to those charged with governance.\"}, {\"title\": \"Channel is operational\", \"detail\": \"Confirm the reporting channel is operational (for example the hotline or portal is live and monitored).\"}]",
   "test_title": "Whistleblowing channel operation and follow-up"
  },
  {
@@ -117,7 +117,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of staff in covered roles. Verify periodic uninterrupted leave was taken per policy, verify duties were performed by others during the absence, and inspect rotation records where applicable.",
+  "test_of_controls": "[{\"title\": \"Mandatory leave taken\", \"detail\": \"Select a sample of staff in covered roles; verify periodic uninterrupted leave was taken in line with policy.\"}, {\"title\": \"Duties performed by others during leave\", \"detail\": \"For the leave periods selected, verify the staff member's duties were performed by others and system access was suspended or monitored.\"}, {\"title\": \"Role rotation records\", \"detail\": \"Inspect rotation records for key roles where rotation is required.\"}]",
   "test_title": "Mandatory leave and role rotation"
  },
  {
@@ -128,7 +128,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select significant accounting estimates. Inspect the documented independent challenge, including the challenger's conclusions, and verify the challenger had no responsibility for preparing the estimate.",
+  "test_of_controls": "[{\"title\": \"Documented independent challenge\", \"detail\": \"Select significant accounting estimates; inspect the documented challenge by someone without responsibility for preparing them, including the challenger's conclusions.\"}, {\"title\": \"Challenger independence and competence\", \"detail\": \"Verify the challenger was independent of the preparer and suitably qualified to challenge the estimate.\"}]",
   "test_title": "Independent challenge of significant estimates"
  },
  {
@@ -139,7 +139,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select material or unusual revenue transactions. Inspect evidence of review by a function independent of sales, including the dispatch and acceptance evidence inspected before revenue was recorded.",
+  "test_of_controls": "[{\"title\": \"Independent review of material and unusual revenue\", \"detail\": \"Select material or unusual revenue transactions; inspect evidence of review by a function independent of sales before revenue was recorded.\"}, {\"title\": \"Dispatch and acceptance evidence inspected\", \"detail\": \"For the same sample, verify the reviewer inspected the underlying dispatch and acceptance evidence, not just the invoice.\"}]",
   "test_title": "Independent review of material and unusual revenue"
  },
  {
@@ -150,7 +150,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of manual journals above the threshold. Inspect supporting evidence and independent pre-posting approval, and verify segregation between preparer and approver.",
+  "test_of_controls": "[{\"title\": \"Support and independent approval\", \"detail\": \"Select a sample of manual journals above the threshold; inspect supporting evidence and independent pre-posting approval.\"}, {\"title\": \"Preparer cannot approve own journal\", \"detail\": \"Verify the preparer cannot approve their own journal \\u2014 inspect the sample for segregation and the system enforcement.\"}]",
   "test_title": "Support and independent approval of manual journals"
  },
  {
@@ -161,7 +161,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the periodic reviews of the complete manual-journal listing. Verify the review covered the full population (sequential control), select unusual entries flagged and inspect the follow-up.",
+  "test_of_controls": "[{\"title\": \"Periodic review performed\", \"detail\": \"Inspect the periodic reviews of the complete manual-journal listing, including review dates and reviewer identity.\"}, {\"title\": \"Full population covered\", \"detail\": \"Verify the review covered the full population through the sequential control (no gaps in journal numbers).\"}, {\"title\": \"Follow-up of flagged entries\", \"detail\": \"Select unusual entries flagged in the review (round amounts, out-of-hours postings, senior staff entries) and inspect the follow-up.\"}]",
   "test_title": "Periodic review of the manual journal listing"
  },
  {
@@ -172,7 +172,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect audit committee minutes for review of significant judgements and unusual journals, and verify the concerns channel to those charged with governance exists and was communicated.",
+  "test_of_controls": "[{\"title\": \"Audit committee minutes\", \"detail\": \"Inspect audit committee minutes for review of significant judgements and unusual journals during the period.\"}, {\"title\": \"Concerns channel to TCWG\", \"detail\": \"Verify the channel for reporting concerns to those charged with governance exists, was communicated, and is usable.\"}]",
   "test_title": "Audit committee oversight of judgements and journals"
  },
  {
@@ -183,7 +183,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the privileged-access listing and verify access is restricted to those who need it. Inspect the reviews of privileged-action logs, and verify direct posting to closed periods is technically blocked (inspect configuration or test).",
+  "test_of_controls": "[{\"title\": \"Privileged-access listing\", \"detail\": \"Inspect the listing of privileged and administrator access; verify access is restricted to those who need it.\"}, {\"title\": \"Reviews of privileged-action logs\", \"detail\": \"Inspect the periodic reviews of privileged-action logs and the follow-up of unusual actions.\"}, {\"title\": \"Closed-period protection\", \"detail\": \"Verify direct posting to closed periods is technically blocked \\u2014 inspect the configuration or attempt a controlled posting.\"}]",
   "test_title": "Restriction and logging of privileged system access"
  },
  {
@@ -194,7 +194,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the related-party register and verify it was updated for changes in directors, key management and significant shareholders during the period. Select a sample of declarations and agree them to the register.",
+  "test_of_controls": "[{\"title\": \"Register completeness\", \"detail\": \"Inspect the related-party register and verify it was updated for changes in directors, key management and significant shareholders during the period.\"}, {\"title\": \"Declarations agreed to the register\", \"detail\": \"Select a sample of director and key management declarations and agree them to the register.\"}]",
   "test_title": "Currency of the related-party register"
  },
  {
@@ -205,7 +205,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of transactions above the threshold. Verify each was screened against the related-party register before approval, and for identified related-party transactions verify flagging for appropriate measurement and disclosure.",
+  "test_of_controls": "[{\"title\": \"Screening before approval\", \"detail\": \"Select a sample of transactions above the threshold; verify each was screened against the related-party register before approval.\"}, {\"title\": \"Flagging of identified transactions\", \"detail\": \"For identified related-party transactions, verify they were flagged for appropriate measurement and disclosure.\"}]",
   "test_title": "Screening transactions against the related-party register"
  },
  {
@@ -216,7 +216,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select provisions. Inspect the supporting evidence for key assumptions and the documented independent challenge performed before the financial statements were finalised.",
+  "test_of_controls": "[{\"title\": \"Supporting evidence for assumptions\", \"detail\": \"Select provisions; inspect the supporting evidence for each key assumption.\"}, {\"title\": \"Independent challenge before finalisation\", \"detail\": \"Verify the provision calculations were reviewed and challenged by someone independent of the preparer before the financial statements were finalised.\"}]",
   "test_title": "Independent challenge of provision assumptions"
  },
  {
@@ -227,7 +227,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the look-back comparison of prior estimates to actual outcomes. Verify systematic differences were investigated for bias and that conclusions were reported.",
+  "test_of_controls": "[{\"title\": \"Look-back comparison\", \"detail\": \"Inspect the comparison of prior-period significant estimates to subsequent actual outcomes.\"}, {\"title\": \"Investigation of systematic differences\", \"detail\": \"Where systematic differences were found, verify they were investigated for bias and the conclusions reported.\"}]",
   "test_title": "Look-back review for estimation bias"
  },
  {
@@ -238,7 +238,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the completed disclosure checklist. Verify it reflects the applicable financial reporting framework and was independently reviewed by a technically competent person, and trace a sample of disclosures to the checklist.",
+  "test_of_controls": "[{\"title\": \"Completed checklist\", \"detail\": \"Inspect the completed disclosure checklist and verify it reflects the applicable financial reporting framework.\"}, {\"title\": \"Independent technical review\", \"detail\": \"Verify the checklist was reviewed by a technically competent person independent of the preparer.\"}, {\"title\": \"Disclosures traced to the checklist\", \"detail\": \"Select a sample of disclosures in the financial statements and trace them to the checklist.\"}]",
   "test_title": "Disclosure checklist with independent technical review"
  },
  {
@@ -249,7 +249,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select new, unusual or complex transactions during the period. Verify each had a documented disclosure assessment during the close process and that conclusions were reviewed.",
+  "test_of_controls": "[{\"title\": \"Disclosure assessment for new transactions\", \"detail\": \"Select new, unusual or complex transactions during the period; verify each had a documented disclosure assessment during the close process.\"}, {\"title\": \"Review of conclusions\", \"detail\": \"Verify the disclosure conclusions were reviewed by an appropriate person.\"}]",
   "test_title": "Disclosure assessment for new and unusual transactions"
  },
  {
@@ -260,7 +260,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the network site register and verify restoration and dismantling clauses are captured. Verify the annual reconciliation to the lease portfolio, and select sites to agree clauses to the underlying leases.",
+  "test_of_controls": "[{\"title\": \"Register completeness\", \"detail\": \"Inspect the network site register and verify restoration and dismantling clauses are captured for all sites.\"}, {\"title\": \"Annual reconciliation to leases\", \"detail\": \"Verify the annual reconciliation of the register to the lease portfolio.\"}, {\"title\": \"Clauses agreed to leases\", \"detail\": \"Select sites and agree the captured clauses to the underlying lease agreements.\"}]",
   "test_title": "Complete site register reconciled to leases"
  },
  {
@@ -271,7 +271,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect management's review of the decommissioning provision model (cost estimates, timing, discount rate, unwinding) at the reporting date. Verify approval and re-perform key inputs.",
+  "test_of_controls": "[{\"title\": \"Management's model review\", \"detail\": \"Inspect management's review of the decommissioning provision model \\u2014 cost estimates, timing, discount rate and unwinding \\u2014 at the reporting date, with evidence of approval.\"}, {\"title\": \"Re-performance of key inputs\", \"detail\": \"Re-perform key model inputs for a sample of sites.\"}]",
   "test_title": "Management review of the decommissioning model"
  },
  {
@@ -282,7 +282,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select new tariff plans and bundle structures launched. Verify independent review and approval, including the stand-alone selling prices used for allocation, before launch.",
+  "test_of_controls": "[{\"title\": \"Pre-launch independent review\", \"detail\": \"Select new tariff plans and bundle structures launched; verify independent review and approval before launch.\"}, {\"title\": \"Stand-alone selling prices verified\", \"detail\": \"For the same sample, verify the stand-alone selling prices used for allocation were reviewed and approved.\"}]",
   "test_title": "Independent review of tariff and bundle structures pre-launch"
  },
  {
@@ -293,7 +293,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the allocation-logic change log. Verify changes to allocation logic were restricted and logged, and re-perform the allocation for a sample of contracts.",
+  "test_of_controls": "[{\"title\": \"Change log inspected\", \"detail\": \"Inspect the allocation-logic change log; verify changes were restricted to authorised persons and logged.\"}, {\"title\": \"Re-performance of allocation\", \"detail\": \"Re-perform the consideration allocation for a sample of contracts.\"}]",
   "test_title": "Restricted, logged changes to allocation logic"
  },
  {
@@ -304,7 +304,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select days and inspect the rating exception and rejection reports with review evidence. Select rejected usage records and verify investigation and reprocessing or resolution.",
+  "test_of_controls": "[{\"title\": \"Daily review of exception reports\", \"detail\": \"Select days and inspect the rating exception and rejection reports with evidence of review.\"}, {\"title\": \"Resolution of rejected records\", \"detail\": \"Select rejected usage records and verify investigation and reprocessing or resolution.\"}]",
   "test_title": "Daily review of rating exception reports"
  },
  {
@@ -315,7 +315,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select tariff and rating configuration changes deployed. Verify testing in a non-production environment and independent approval before deployment.",
+  "test_of_controls": "[{\"title\": \"Testing in non-production\", \"detail\": \"Select tariff and rating configuration changes deployed; verify testing in a non-production environment.\"}, {\"title\": \"Independent approval before deployment\", \"detail\": \"Verify independent approval was obtained before each change was deployed to production.\"}]",
   "test_title": "Testing and approval of rating changes pre-deployment"
  },
  {
@@ -326,7 +326,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the approved budgets supporting the overhead absorption rates. Verify rates were updated when budgets changed or capacity shifted materially, and re-perform the rate calculation for one period.",
+  "test_of_controls": "[{\"title\": \"Rates agreed to approved budgets\", \"detail\": \"Inspect the approved budgets supporting the overhead absorption rates and the normal-capacity assumption.\"}, {\"title\": \"Rates updated for changes\", \"detail\": \"Verify rates were updated when budgets changed or capacity shifted materially.\"}, {\"title\": \"Re-performance of the rate calculation\", \"detail\": \"Re-perform the absorption-rate calculation for one period.\"}]",
   "test_title": "Overhead absorption rates from approved budgets"
  },
  {
@@ -337,7 +337,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select months and inspect the identification of abnormal idle-capacity costs. Verify they were expensed rather than absorbed into inventory, and trace them to profit or loss.",
+  "test_of_controls": "[{\"title\": \"Identification of abnormal costs\", \"detail\": \"Select months and inspect the identification of abnormal idle-capacity costs.\"}, {\"title\": \"Abnormal costs expensed, not absorbed\", \"detail\": \"Verify the identified abnormal costs were expensed in profit or loss and not absorbed into inventory; trace them to the ledger.\"}]",
   "test_title": "Expensing of abnormal idle-capacity costs"
  },
  {
@@ -348,7 +348,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select months and inspect the documented investigation of material cost variances. Where standards were updated, verify the update reflected a permanent cost change and was approved.",
+  "test_of_controls": "[{\"title\": \"Monthly variance investigation\", \"detail\": \"Select months and inspect the documented investigation of material cost variances.\"}, {\"title\": \"Standards updated where appropriate\", \"detail\": \"Where standards were updated, verify the update reflected a permanent cost change and was approved.\"}]",
   "test_title": "Monthly investigation of cost variances"
  },
  {
@@ -359,7 +359,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect warranty claims tracking by product cohort. Verify the provision model was updated for actual claim experience at the reporting date, and re-perform the model inputs for one cohort.",
+  "test_of_controls": "[{\"title\": \"Claims tracking by cohort\", \"detail\": \"Inspect warranty claims tracking by product cohort.\"}, {\"title\": \"Model updated at the reporting date\", \"detail\": \"Verify the provision model was updated for actual claim experience at the reporting date.\"}, {\"title\": \"Re-performance of model inputs\", \"detail\": \"Re-perform the model inputs for one cohort.\"}]",
   "test_title": "Warranty provision updated for claims experience"
  },
  {
@@ -370,7 +370,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select days and inspect till reconciliations with independent review. Verify differences were investigated, and agree bankings to till records.",
+  "test_of_controls": "[{\"title\": \"Daily reconciliations and independent review\", \"detail\": \"Select days and inspect till reconciliations with evidence of independent review.\"}, {\"title\": \"Investigation of differences\", \"detail\": \"Select differences found and verify investigation.\"}, {\"title\": \"Bankings agreed to till records\", \"detail\": \"Agree bankings to till records for the sampled days.\"}]",
   "test_title": "Daily till reconciliations with independent review"
  },
  {
@@ -381,7 +381,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select voids, refunds and discounts. Verify supervisor authorisation with reason codes, and inspect the pattern review for unusual activity.",
+  "test_of_controls": "[{\"title\": \"Supervisor authorisation\", \"detail\": \"Select voids, refunds and discounts; verify supervisor authorisation with reason codes.\"}, {\"title\": \"Pattern review\", \"detail\": \"Inspect the review of voids, refunds and discounts for unusual patterns.\"}]",
   "test_title": "Authorised voids, refunds and discounts with pattern review"
  },
  {
@@ -392,7 +392,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select rebate agreements. Verify documented terms and finance's review of the rebate schedule before income was recognised, and re-perform one rebate calculation.",
+  "test_of_controls": "[{\"title\": \"Agreements documented and schedule reviewed\", \"detail\": \"Select rebate agreements; verify documented terms and finance's review of the rebate schedule before income was recognised.\"}, {\"title\": \"Re-performance of a rebate calculation\", \"detail\": \"Re-perform one rebate calculation from the agreement terms.\"}]",
   "test_title": "Documented rebate agreements reviewed before recognition"
  },
  {
@@ -403,7 +403,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select periods and inspect the reconciliation of gift card and loyalty liabilities between the POS/loyalty system and the general ledger. Verify breakage assumptions were approved, and re-perform the reconciliation.",
+  "test_of_controls": "[{\"title\": \"POS-to-GL reconciliation\", \"detail\": \"Select periods and inspect the reconciliation of gift card and loyalty liabilities between the POS or loyalty system and the general ledger.\"}, {\"title\": \"Breakage assumptions approved\", \"detail\": \"Verify breakage assumptions were approved by an appropriate person.\"}, {\"title\": \"Re-performance of the reconciliation\", \"detail\": \"Re-perform the liability reconciliation for one period.\"}]",
   "test_title": "Reconciliation of gift card and loyalty liabilities"
  },
  {
@@ -414,7 +414,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the independent validation report on the ECL model. Select a sample of significant staging decisions and overlays; inspect the documented rationale and evidence of approval, and verify the approver is independent of the modelling team.",
+  "test_of_controls": "[{\"title\": \"Independent validation of the ECL model\", \"detail\": \"Inspect the independent validation report on the ECL model, covering methodology, staging criteria and overlays, and confirm it was completed before the models were used.\"}, {\"title\": \"Approval of significant staging decisions\", \"detail\": \"Select a sample of significant staging decisions and overlays; inspect the documented rationale and evidence of approval, and verify the approver is independent of the modelling team.\"}]",
   "test_title": "Independent validation and approval of the ECL model"
  },
  {
@@ -425,7 +425,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the system configuration for the automatic interest-suspension rule. Select a sample of loans meeting the defined non-performance criteria and verify interest accrual stopped; for any exception, inspect the documented approval.",
+  "test_of_controls": "[{\"title\": \"Auto-suspension rule configuration\", \"detail\": \"Inspect the system configuration for the automatic interest-suspension rule and confirm it triggers on the defined non-performance criteria.\"}, {\"title\": \"Suspension on non-performing loans\", \"detail\": \"Select a sample of loans meeting the non-performance criteria and verify interest accrual stopped from the correct date.\"}, {\"title\": \"Exception approvals\", \"detail\": \"For any loan where accrual continued despite meeting the criteria, inspect the documented approval for the exception.\"}]",
   "test_title": "Automatic suspension of interest on non-performing loans"
  },
  {
@@ -436,7 +436,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of treasury valuations; inspect the independent price verification evidence and verify the reviewer is independent of the trading desk. Re-perform one IPV check.",
+  "test_of_controls": "[{\"title\": \"Independent price verification\", \"detail\": \"Select a sample of treasury valuations; inspect the independent price verification evidence and verify the reviewer is independent of the trading desk.\"}, {\"title\": \"Re-performance of one IPV check\", \"detail\": \"Independently re-price one instrument using an external source and compare to the recorded valuation.\"}]",
   "test_title": "Independent price verification of treasury valuations"
  },
  {
@@ -447,7 +447,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Observe physical access controls at the warehouse and high-value storage. Inspect the authorised-personnel list, verify access rights were reviewed periodically, and inspect access logs for anomalies.",
+  "test_of_controls": "[{\"title\": \"Observation of physical access controls\", \"detail\": \"Observe physical access controls at the warehouse and high-value storage areas in operation.\"}, {\"title\": \"Authorised-personnel list and reviews\", \"detail\": \"Inspect the list of authorised personnel and verify access rights were reviewed periodically.\"}, {\"title\": \"Access logs\", \"detail\": \"Inspect access logs for anomalies or unauthorised attempts.\"}]",
   "test_title": "Restricted physical access to inventory"
  },
  {
@@ -458,7 +458,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Attend or observe one physical count. Inspect count records for other periods, select differences between counted quantities and records, and verify investigation and approval before adjustment.",
+  "test_of_controls": "[{\"title\": \"Observation of a count\", \"detail\": \"Attend and observe one physical inventory count, verifying count procedures and the independence of counters.\"}, {\"title\": \"Follow-up of count differences\", \"detail\": \"Inspect count records for other periods; select differences between counted quantities and records and verify investigation and approval before adjustment.\"}]",
   "test_title": "Independent physical inventory counts"
  },
  {
@@ -469,7 +469,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of leavers. Verify the HR leaver notification was on or before the last working day, and verify removal from the payroll master before the next pay run (no payment after leaving).",
+  "test_of_controls": "[{\"title\": \"Timeliness of leaver notifications\", \"detail\": \"Select a sample of leavers; verify the HR leaver notification was issued on or before the last working day.\"}, {\"title\": \"Removal before the next pay run\", \"detail\": \"For the same sample, verify removal from the payroll master before the next pay run \\u2014 confirm no payment was made after leaving.\"}]",
   "test_title": "Prompt removal of leavers from payroll"
  },
  {
@@ -480,7 +480,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select pay periods and inspect the independent reconciliation of payroll headcount to HR employment records. Verify differences were investigated, and re-perform one reconciliation.",
+  "test_of_controls": "[{\"title\": \"Independent headcount reconciliation\", \"detail\": \"Select pay periods and inspect the independent reconciliation of payroll headcount to HR employment records, including investigation of differences.\"}, {\"title\": \"Re-performance of one reconciliation\", \"detail\": \"Re-perform the headcount reconciliation for one pay period.\"}]",
   "test_title": "Payroll-to-HR headcount reconciliation"
  },
  {
@@ -491,7 +491,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of master changes (new starters, leavers, pay-rate and bank-detail changes). Inspect independent approval before effect, and verify no change took effect unapproved by comparing effective dates to approval dates.",
+  "test_of_controls": "[{\"title\": \"Independent approval of changes\", \"detail\": \"Select a sample of master changes (new starters, leavers, pay-rate and bank-detail changes); inspect independent approval before effect.\"}, {\"title\": \"No unapproved changes took effect\", \"detail\": \"Compare effective dates to approval dates for the sample to verify no change took effect unapproved.\"}]",
   "test_title": "Independent approval of payroll master changes"
  },
  {
@@ -502,7 +502,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect system access rights and verify no user holds both payroll-master-maintenance and payment-release rights. Inspect the periodic review of access rights.",
+  "test_of_controls": "[{\"title\": \"System access rights\", \"detail\": \"Inspect system access rights and verify no user holds both payroll-master-maintenance and payment-release rights.\"}, {\"title\": \"Periodic access review\", \"detail\": \"Inspect the periodic review of payroll access rights and the follow-up of conflicts found.\"}]",
   "test_title": "Segregation of payroll master maintenance and payment"
  },
  {
@@ -513,7 +513,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of overtime claims. Inspect approval in advance (or promptly afterwards) by a supervisor independent of the claimant, and verify operational need was documented.",
+  "test_of_controls": "[{\"title\": \"Independent approval of claims\", \"detail\": \"Select a sample of overtime claims; inspect approval in advance (or promptly afterwards) by a supervisor independent of the claimant.\"}, {\"title\": \"Operational need documented\", \"detail\": \"For the same sample, verify the operational need for the overtime was documented.\"}]",
   "test_title": "Independent approval of overtime claims"
  },
  {
@@ -524,7 +524,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select months and inspect the overtime exception report with review evidence. Select unusual patterns flagged and verify investigation.",
+  "test_of_controls": "[{\"title\": \"Reviewed exception report\", \"detail\": \"Select months and inspect the overtime exception report with evidence of review.\"}, {\"title\": \"Investigation of unusual patterns\", \"detail\": \"Select unusual patterns flagged and verify investigation and resolution.\"}]",
   "test_title": "Review of the overtime exception report"
  },
  {
@@ -535,7 +535,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect updates to payroll rate, tax and deduction tables. Verify the source is authoritative and changes were independently reviewed before the pay run, and re-perform one employee's calculation.",
+  "test_of_controls": "[{\"title\": \"Authoritative sources and review\", \"detail\": \"Inspect updates to payroll rate, tax and deduction tables; verify the source is authoritative and changes were independently reviewed before the pay run.\"}, {\"title\": \"Re-performance of a calculation\", \"detail\": \"Re-perform one employee's pay calculation using the updated tables.\"}]",
   "test_title": "Authoritative, reviewed payroll rate and tax tables"
  },
  {
@@ -546,7 +546,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select pay periods. Inspect the independent review of the payroll summary and its reconciliation to the general ledger, and verify differences were resolved before payments were released.",
+  "test_of_controls": "[{\"title\": \"Independent review and GL agreement\", \"detail\": \"Select pay periods; inspect the independent review of the payroll summary and its reconciliation to the general ledger.\"}, {\"title\": \"Differences resolved before release\", \"detail\": \"Verify reconciling differences were resolved before payments were released.\"}]",
   "test_title": "Independent review of payroll summary and GL agreement"
  },
  {
@@ -557,7 +557,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of capital additions. Inspect documented approval against the entity's capitalisation criteria before recognition, and verify the approver assessed the criteria (not just the budget).",
+  "test_of_controls": "[{\"title\": \"Approval against capitalisation criteria\", \"detail\": \"Select a sample of capital additions; inspect documented approval against the entity's capitalisation criteria before recognition.\"}, {\"title\": \"Criteria actually assessed\", \"detail\": \"Verify the approver assessed the capitalisation criteria \\u2014 not merely the budget \\u2014 for the sampled items.\"}]",
   "test_title": "Capex approval against capitalisation criteria"
  },
  {
@@ -568,7 +568,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select periods and inspect finance's review of the repairs and maintenance accounts for capital items, and of capital additions for repairs items. Select items investigated and verify the conclusions.",
+  "test_of_controls": "[{\"title\": \"Review of repairs expense\", \"detail\": \"Select periods and inspect finance's review of the repairs and maintenance accounts for items capital in nature.\"}, {\"title\": \"Review of capital additions\", \"detail\": \"For the same periods, inspect the review of capital additions for items that are repairs in nature; select items investigated and verify conclusions.\"}]",
   "test_title": "Finance review of repairs vs capital classification"
  },
  {
@@ -579,7 +579,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the annual review of depreciation rates, methods, useful lives and residual values. Verify changes were approved with documented rationale, and verify estimate changes were applied prospectively.",
+  "test_of_controls": "[{\"title\": \"Annual review performed\", \"detail\": \"Inspect the annual review of depreciation rates, methods, useful lives and residual values, including the documented rationale.\"}, {\"title\": \"Approval and prospective application\", \"detail\": \"Verify changes were approved, and verify estimate changes were applied prospectively, not retrospectively.\"}]",
   "test_title": "Annual review of depreciation parameters"
  },
  {
@@ -590,7 +590,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the asset-master change log. Select changes to depreciation parameters and verify independent authorisation, and verify the log is complete (no unauthorised changes).",
+  "test_of_controls": "[{\"title\": \"Change log completeness\", \"detail\": \"Inspect the asset-master change log and verify it is complete \\u2014 no changes outside the log.\"}, {\"title\": \"Independent authorisation\", \"detail\": \"Select changes to depreciation parameters and verify independent authorisation for each.\"}]",
   "test_title": "Authorised, logged changes to depreciation parameters"
  },
  {
@@ -601,7 +601,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of disposals. Inspect prior written authorisation and the completed disposal form, and verify the asset was removed from the register and the ledger.",
+  "test_of_controls": "[{\"title\": \"Authorisation and disposal form\", \"detail\": \"Select a sample of disposals; inspect prior written authorisation and the completed disposal form.\"}, {\"title\": \"Removal from records\", \"detail\": \"For the same sample, verify the asset was removed from the fixed asset register and the ledger, and the gain or loss recorded.\"}]",
   "test_title": "Authorised disposals removed from the register"
  },
  {
@@ -612,7 +612,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Observe or inspect one physical verification of fixed assets. Verify the verifiers were independent of custody, select differences found and verify investigation and correction of the register.",
+  "test_of_controls": "[{\"title\": \"Observation or inspection of a verification\", \"detail\": \"Observe or inspect one physical verification of fixed assets, confirming the verifiers were independent of custody.\"}, {\"title\": \"Follow-up of differences\", \"detail\": \"Select differences found and verify investigation and correction of the register.\"}]",
   "test_title": "Independent physical verification of fixed assets"
  },
  {
@@ -623,7 +623,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the impairment-indicator assessment at the reporting date. Verify it covers each asset or cash-generating unit, and where no indicator was concluded verify the basis is documented.",
+  "test_of_controls": "[{\"title\": \"Assessment coverage\", \"detail\": \"Inspect the impairment-indicator assessment at the reporting date and verify it covers each asset or cash-generating unit.\"}, {\"title\": \"Documented basis for 'no indicator'\", \"detail\": \"Where no indicator was concluded, verify the basis for the conclusion is documented.\"}]",
   "test_title": "Impairment indicator assessment each reporting date"
  },
  {
@@ -634,7 +634,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select periods and inspect the monitoring of significant assets or cash-generating units against budgets and forecasts. Select adverse variances and verify investigation for impairment indicators.",
+  "test_of_controls": "[{\"title\": \"Monitoring against budgets\", \"detail\": \"Select periods and inspect the monitoring of significant assets or cash-generating units against budgets and forecasts.\"}, {\"title\": \"Investigation of adverse variances\", \"detail\": \"Select adverse variances and verify investigation for possible impairment indicators.\"}]",
   "test_title": "Monitoring of asset performance against budgets"
  },
  {
@@ -645,7 +645,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select major maintenance and replacement work orders. Verify the replaced component was identified and routed to finance, and verify derecognition of the replaced part.",
+  "test_of_controls": "[{\"title\": \"Work orders routed to finance\", \"detail\": \"Select major maintenance and replacement work orders; verify the replaced component was identified and routed to finance.\"}, {\"title\": \"Derecognition verified\", \"detail\": \"For the same sample, verify derecognition of the replaced part's carrying amount.\"}]",
   "test_title": "Derecognition of replaced components"
  },
  {
@@ -656,7 +656,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the fixed asset register for componentisation of significant assets. Select assets and verify major parts are recorded separately with their own useful lives.",
+  "test_of_controls": "[{\"title\": \"Register inspected for componentisation\", \"detail\": \"Inspect the fixed asset register and verify significant assets are componentised.\"}, {\"title\": \"Separate useful lives tested\", \"detail\": \"Select assets and verify major parts are recorded separately with their own useful lives.\"}]",
   "test_title": "Componentisation of significant assets"
  },
  {
@@ -667,7 +667,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of payments. Verify the invoice was matched to the purchase order and goods received note before approval for payment, and verify the matcher is independent of ordering and receiving.",
+  "test_of_controls": "[{\"title\": \"Three-way match on a sample\", \"detail\": \"Select a sample of payments; verify the invoice was matched to the purchase order and goods received note before approval.\"}, {\"title\": \"Independence of the matcher\", \"detail\": \"Verify the person performing the match is independent of ordering and receiving.\"}]",
   "test_title": "Three-way match before payment"
  },
  {
@@ -678,7 +678,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select months and inspect the exception report of invoices approved without matching GRNs. Verify independent review each month, and select cleared items to verify follow-up.",
+  "test_of_controls": "[{\"title\": \"Monthly independent review\", \"detail\": \"Select months and inspect the exception report of invoices approved without matching GRNs, with evidence of independent review.\"}, {\"title\": \"Follow-up of cleared items\", \"detail\": \"Select cleared items and verify the follow-up performed.\"}]",
   "test_title": "Monthly review of invoices without GRNs"
  },
  {
@@ -689,7 +689,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the sequential control over goods received notes. At the period end, select unmatched GRNs and verify accrual as liabilities, and re-perform the unmatched-GRN listing.",
+  "test_of_controls": "[{\"title\": \"GRN sequential control\", \"detail\": \"Inspect the sequential control over goods received notes, including follow-up of missing numbers.\"}, {\"title\": \"Period-end accrual of unmatched GRNs\", \"detail\": \"At the period end, select unmatched GRNs and verify accrual as liabilities; re-perform the unmatched-GRN listing.\"}]",
   "test_title": "Sequential GRNs with period-end accrual"
  },
  {
@@ -700,7 +700,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select purchases around the period end. Verify recording by goods receipt date, and inspect the system posting rules or cut-off checklist that enforces it.",
+  "test_of_controls": "[{\"title\": \"Recording by receipt date\", \"detail\": \"Select purchases around the period end and verify recording by goods receipt date.\"}, {\"title\": \"Enforcement inspected\", \"detail\": \"Inspect the system posting rules or cut-off checklist that enforces receipt-date recording.\"}]",
   "test_title": "Recording purchases by goods receipt date"
  },
  {
@@ -711,7 +711,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of supplier master additions and changes, including bank-detail changes. Inspect independent approval before effect, and verify no change took effect unapproved.",
+  "test_of_controls": "[{\"title\": \"Independent approval of changes\", \"detail\": \"Select a sample of supplier master additions and changes, including bank-detail changes; inspect independent approval before effect.\"}, {\"title\": \"No unapproved changes\", \"detail\": \"Compare effective dates to approval dates to verify no change took effect unapproved.\"}]",
   "test_title": "Independent approval of supplier master changes"
  },
  {
@@ -722,7 +722,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the periodic independent review of the supplier master file. Select duplicate, dormant or suspicious entries identified and verify resolution.",
+  "test_of_controls": "[{\"title\": \"Periodic independent review\", \"detail\": \"Inspect the periodic independent review of the supplier master file.\"}, {\"title\": \"Resolution of flagged entries\", \"detail\": \"Select duplicate, dormant or suspicious entries identified and verify resolution.\"}]",
   "test_title": "Periodic review of the supplier master file"
  },
  {
@@ -733,7 +733,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Test the duplicate-invoice control with a controlled attempt (or inspect system configuration and rejection logs). Verify duplicate invoice numbers for the same supplier are rejected or flagged and that the control operated during the period.",
+  "test_of_controls": "[{\"title\": \"Controlled duplicate attempt\", \"detail\": \"Test the control with a controlled attempt to enter a duplicate invoice number for a supplier.\"}, {\"title\": \"Configuration and logs\", \"detail\": \"Inspect the system configuration and rejection or flag logs to confirm the control operated during the period.\"}]",
   "test_title": "System rejection of duplicate invoices"
  },
  {
@@ -744,7 +744,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of paid invoices. Verify each is marked as paid and filed to prevent reprocessing (physical or systemic), and verify the marking cannot be removed without detection.",
+  "test_of_controls": "[{\"title\": \"Paid marking on a sample\", \"detail\": \"Select a sample of paid invoices; verify each is marked as paid and filed to prevent reprocessing.\"}, {\"title\": \"Markings cannot be removed undetected\", \"detail\": \"Verify paid markings cannot be removed or altered without detection (system restriction or filing control).\"}]",
   "test_title": "Paid invoices marked to prevent reprocessing"
  },
  {
@@ -755,7 +755,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the completed period-end cut-off checklist. Select post-period invoices reviewed under it and verify pre-period receipts were captured in the correct period.",
+  "test_of_controls": "[{\"title\": \"Completed checklist\", \"detail\": \"Inspect the completed period-end cut-off checklist for purchases.\"}, {\"title\": \"Pre-period receipts captured\", \"detail\": \"Select post-period invoices reviewed under the checklist and verify pre-period receipts were captured in the correct period.\"}]",
   "test_title": "Period-end cut-off checklist for purchases"
  },
  {
@@ -766,7 +766,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select supplier invoices recorded after the reporting date. Verify each was reviewed for goods received before year-end, and verify accruals were proposed where needed.",
+  "test_of_controls": "[{\"title\": \"Review of post-period invoices\", \"detail\": \"Select supplier invoices recorded after the reporting date; verify each was reviewed for goods received before year-end.\"}, {\"title\": \"Accruals proposed\", \"detail\": \"Where pre-year-end receipts were found, verify accruals were proposed.\"}]",
   "test_title": "Post-period invoice review for unrecorded liabilities"
  },
  {
@@ -777,7 +777,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of sales invoices. Verify matched evidence of delivery or performance exists dated before the invoice, and verify billing cannot be raised without it (or inspect the manual check performed).",
+  "test_of_controls": "[{\"title\": \"Delivery evidence on a sample\", \"detail\": \"Select a sample of sales invoices; verify matched evidence of delivery or performance exists dated before the invoice.\"}, {\"title\": \"Billing cannot precede evidence\", \"detail\": \"Verify billing cannot be raised without delivery evidence \\u2014 inspect the system prevention or the manual check performed.\"}]",
   "test_title": "Billing only against delivery evidence"
  },
  {
@@ -788,7 +788,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the finance manager's independent review of revenue recorded in the final days of the period. Select credit notes issued shortly after period end and verify the original revenue met the recognition criteria.",
+  "test_of_controls": "[{\"title\": \"Independent review of final-days revenue\", \"detail\": \"Inspect the finance manager's independent review of revenue recorded in the final days of the period.\"}, {\"title\": \"Post-period credit notes tested\", \"detail\": \"Select credit notes issued shortly after period end and verify the original revenue met the recognition criteria.\"}]",
   "test_title": "Independent review of final-days revenue"
  },
  {
@@ -799,7 +799,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the sequential control over dispatch notes and the period-end reconciliation to sales invoices. Select unmatched dispatches and verify revenue accrual, and re-perform the reconciliation.",
+  "test_of_controls": "[{\"title\": \"Sequential control and reconciliation\", \"detail\": \"Inspect the sequential control over dispatch notes and the period-end reconciliation to sales invoices.\"}, {\"title\": \"Accrual of unmatched dispatches\", \"detail\": \"Select unmatched dispatches at period end and verify revenue accrual; re-perform the reconciliation.\"}]",
   "test_title": "Sequential dispatch notes reconciled; unmatched accrued"
  },
  {
@@ -810,7 +810,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select sales around the period end. Verify recording by dispatch or completion date, and inspect the billing-system enforcement or cut-off checklist.",
+  "test_of_controls": "[{\"title\": \"Recording by dispatch date\", \"detail\": \"Select sales around the period end and verify recording by dispatch or completion date.\"}, {\"title\": \"Enforcement inspected\", \"detail\": \"Inspect the billing-system enforcement or cut-off checklist.\"}]",
   "test_title": "Recording sales by dispatch/completion date"
  },
  {
@@ -821,7 +821,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select a sample of credit sales. Verify the sales order, dispatch note and invoice were matched before the sale was released for billing.",
+  "test_of_controls": "[{\"title\": \"Three-way match on a sample\", \"detail\": \"Select a sample of credit sales; verify the sales order, dispatch note and invoice were matched before the sale was released for billing.\"}, {\"title\": \"No billing without a complete match\", \"detail\": \"Verify the system or manual process prevents billing release where the three-way match is incomplete.\"}]",
   "test_title": "Three-way match before billing"
  },
  {
@@ -832,7 +832,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select weeks and inspect the exception report of invoices raised without matching dispatch evidence. Verify independent review and documented clearance of each item.",
+  "test_of_controls": "[{\"title\": \"Weekly independent review\", \"detail\": \"Select weeks and inspect the exception report of invoices raised without matching dispatch evidence, with evidence of independent review.\"}, {\"title\": \"Documented clearance\", \"detail\": \"Select cleared items and verify the documented follow-up.\"}]",
   "test_title": "Weekly review of invoices without dispatch evidence"
  },
  {
@@ -843,7 +843,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect the minutes or records of the independent review of significant revenue judgements and incentive-linked target achievement. Verify challenge was documented, not just noted.",
+  "test_of_controls": "[{\"title\": \"Independent review records\", \"detail\": \"Inspect the minutes or records of the independent review of significant revenue judgements and incentive-linked target achievement.\"}, {\"title\": \"Challenge documented\", \"detail\": \"Verify the challenge was substantive and documented \\u2014 not merely noted as reviewed.\"}]",
   "test_title": "Independent oversight of revenue judgements and targets"
  },
  {
@@ -854,7 +854,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select manual journal entries affecting revenue above the threshold. Inspect independent approval with supporting documentation before posting.",
+  "test_of_controls": "[{\"title\": \"Independent approval of revenue journals\", \"detail\": \"Select manual journal entries affecting revenue above the threshold; inspect independent approval with supporting documentation before posting.\"}, {\"title\": \"Approval predates posting\", \"detail\": \"Verify approval timestamps predate the posting for the sample.\"}]",
   "test_title": "Independent approval of manual revenue journals"
  },
  {
@@ -865,7 +865,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Select non-routine and individually material transactions. Verify a documented business rationale and senior management authorisation exist dated before recording.",
+  "test_of_controls": "[{\"title\": \"Business rationale inspected\", \"detail\": \"Select non-routine and individually material transactions; verify a documented business rationale exists.\"}, {\"title\": \"Senior authorisation before recording\", \"detail\": \"Verify senior management authorisation dated before the transaction was recorded.\"}]",
   "test_title": "Business rationale and authorisation for non-routine transactions"
  },
  {
@@ -876,7 +876,7 @@
   "audit_area_id": null,
   "verification_status": "internal_review",
   "source_ref": "audit-risk-library v1.2 (2026-10-22); Professional practice guidance; standards references unverified - see docs/REFERENCES.md",
-  "test_of_controls": "Inspect finance's review of all material transactions recorded in the final days of the reporting period. Select transactions and verify the supporting contracts were inspected and conclusions documented.",
+  "test_of_controls": "[{\"title\": \"Finance's review of final-days transactions\", \"detail\": \"Inspect finance's review of all material transactions recorded in the final days of the reporting period.\"}, {\"title\": \"Contracts inspected\", \"detail\": \"Select transactions from the review and verify the supporting contracts were inspected and conclusions documented.\"}]",
   "test_title": "Finance review of final-days material transactions"
  }
 ]

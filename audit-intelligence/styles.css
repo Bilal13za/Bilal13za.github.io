@@ -207,3 +207,9 @@ ol.steps li::marker{font-weight:700;color:var(--gold-deep)}
 
 /* test-of-controls title lead */
 .test-title{font-weight:700;font-size:1.02rem;margin-bottom:6px}
+
+/* control spec list: bold terms, carded rows */
+.speclist{margin:12px 0 18px;display:grid;gap:10px}
+.speclist>div{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.speclist dt{font-weight:700;margin-bottom:2px}
+.speclist dd{margin:0}

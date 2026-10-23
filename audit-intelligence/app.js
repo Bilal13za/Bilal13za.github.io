@@ -16,7 +16,7 @@ const BYID = {};   // type -> Map(id -> row)
 const TYPES = {
   risk:{table:"audit_risks",label:"Risk",t:"title",b:["description"]},
   procedure:{table:"audit_procedures",label:"Procedure",t:"title",b:["description"]},
-  control:{table:"controls",label:"Control",t:"title",b:["description","test_title","test_of_controls"]},
+  control:{table:"controls",label:"Control",t:"title",b:["description"]},
   evidence:{table:"evidence_types",label:"Evidence",t:"name",b:["description"]},
   assertion:{table:"assertions",label:"Assertion",t:"name",b:["description"]},
   area:{table:"audit_areas",label:"Audit area",t:"name",b:["description"]},
@@ -50,7 +50,8 @@ function buildIndex(){
   for(const [type,c] of Object.entries(TYPES)){
     for(const row of DB[c.table]||[]){
       const key = type+":"+row.id;
-      const text = titleOf(type,row)+" "+bodyOf(type,row);
+      let text = titleOf(type,row)+" "+bodyOf(type,row);
+      if(type==="control") text += " "+controlTests(row).map(t=>t.title+" "+t.detail).join(" ");
       DOCS.set(key,{type,id:row.id,title:titleOf(type,row),text});
       for(const t of new Set(tok(text))){
         if(!INDEX.has(t)) INDEX.set(t,new Set());
@@ -349,6 +350,25 @@ function entriesBlock(row){
 /* procedure descriptions carry inline "Label:" sections — parse into headed
    sections, with Steps rendered as a numbered list */
 const PROC_LABELS=["Objective","Technique","Steps","Population","Sampling notes","Expected result","Exception criteria","Follow-up"];
+/* control tests: JSON list of {title, detail} */
+function controlTests(row){
+  try{const t=JSON.parse(row.test_of_controls||"[]");return Array.isArray(t)?t:[];}catch(e){return [];}
+}
+/* control descriptions carry a leading paragraph plus "Label:" spec lines —
+   render as intro prose + definition list with bold terms */
+const CTRL_LABELS=["Type","Manual/automated","Frequency","Responsible","Evidence of operation","Limitations"];
+function controlDesc(desc){
+  const re=new RegExp("^("+CTRL_LABELS.join("|")+"):","gm");
+  let m,segs=[],last=0,cur=null,intro="";
+  while((m=re.exec(desc))){
+    if(cur===null) intro=desc.slice(0,m.index).trim();
+    else segs.push([cur,desc.slice(last,m.index).trim()]);
+    cur=m[1]; last=m.index+m[0].length;
+  }
+  if(cur!==null) segs.push([cur,desc.slice(last).trim()]);
+  if(!segs.length) return `<p>${esc(desc).replace(/\n\n/g,"</p><p>")}</p>`;
+  return `${intro?`<p>${esc(intro).replace(/\n\n/g,"</p><p>")}</p>`:""}<dl class="speclist">${segs.map(([h,v])=>`<div><dt>${esc(h)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>`;
+}
 function procSections(desc){
   const re=new RegExp("^("+PROC_LABELS.join("|")+"):","gm");
   let m,segs=[],last=0,cur=null;
@@ -402,9 +422,9 @@ function sectionsFor(type,row){
   else if(type==="regulation"){ sec("Summary",row.summary); sec("Applicability",row.applicability_notes); }
   else if(type==="rule"){ sec("Rationale",row.rationale); }
   else if(type==="control"){
-    sec("Description",row.description); sec("Control type",row.control_type);
-    if(row.test_title||row.test_of_controls)
-      S.push(`<h2>Test of controls</h2>${row.test_title?`<p class="test-title">${esc(row.test_title)}</p>`:""}${row.test_of_controls?`<p>${esc(row.test_of_controls)}</p>`:""}`);
+    S.push(`<h2>Description</h2>`+controlDesc(row.description));
+    const ctests=controlTests(row);
+    if(ctests.length) S.push(`<h2>Tests of controls</h2><ol class="steps">${ctests.map(t=>`<li><strong>${esc(t.title)}</strong><br>${esc(t.detail)}</li>`).join("")}</ol>`);
   }
   else { sec("Detail",bodyOf(type,row)); }
   return S.join("");
@@ -570,7 +590,7 @@ function vAbout(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0;
-  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023h").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const jobs=TABLES.map(t=>fetch("data/"+t+".json?v=20261023i").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/TABLES.length*100)+"%";count.textContent=done+" / "+TABLES.length+" collections";}));
   try{ await Promise.all(jobs); }
   catch(e){ count.textContent="Failed to load data: "+e.message; return; }
