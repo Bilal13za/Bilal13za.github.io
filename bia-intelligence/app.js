@@ -8,6 +8,8 @@ const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp
 const BASE_TABLES = ["observations","cards","mistake_guides","generated","topic_notes","topic_summaries","syllabus"];
 /* CAF-2 Taxation tables (paraphrase-only throughout — no verbatim ICAP text). */
 const TAX_TABLES = ["tax_syllabus","tax_topics","tax_questions","tax_observations","tax_legislation","tax_practice"];
+/* BIA chapter guide (own-teaching summaries only — no verbatim study-text extracts). */
+const CHAPTER_TABLES = ["bia_chapters"];
 const DB = {};
 const TYPES = {
   question:   {table:"questions",      label:"Question"},
@@ -1269,6 +1271,51 @@ function vTaxYear(){
 }
 
 /* ---------- router ---------- */
+/* ---------- views: chapters (BIA study-text chapter guide) ----------
+   Own-teaching summaries only — no verbatim study-text extracts. */
+const CHAPTER_LABELS = {
+  learn: "Learn deeply",
+  understand: "Understand",
+  read: "Read only",
+};
+function vChapters(params){
+  setNav("chapters");
+  const f = params.get("label")||"";
+  const all = DB.bia_chapters||[];
+  const list = all.filter(ch=>!f||ch.label===f);
+  const opt = (v,t,sel)=>`<option value="${esc(v)}"${v===sel?" selected":""}>${esc(t)}</option>`;
+  const counts = {};
+  for(const ch of all) counts[ch.label]=(counts[ch.label]||0)+1;
+  app().innerHTML = `
+  <p class="crumb"><a href="#/">Home</a> › Chapters</p>
+  <h2 class="page-title">Chapter guide — study text</h2>
+  <p class="page-sub">${all.length} chapters from the official CAF-7 study text (528 pages), each with a study-intensity label grounded in syllabus weight, banked questions and examiner observations.</p>
+  <div class="notice"><strong>How to read the labels.</strong> “Learn deeply” means core examinable material — master it and practise it. “Understand” means grasp the concepts and logic. “Read only” means background awareness. <strong>No chapter is marked Read only</strong> — every chapter maps to examinable syllabus content, so the lightest chapters are marked Understand instead.</div>
+  <form class="filters" id="chf" aria-label="Filter chapters by study intensity">
+    <label>Study intensity <select class="fselect" name="label" id="chLabelF">${opt("","All chapters")}${Object.entries(CHAPTER_LABELS).map(([k,t])=>opt(k,`${t} (${counts[k]||0})`)).join("")}</select></label>
+  </form>
+  <p role="status" aria-live="polite" class="src">${list.length} chapter${list.length===1?"":"s"} shown</p>
+  <div class="card-grid" id="chGrid">
+    ${list.map(ch=>`<details class="card ch-card">
+      <summary>
+        <span class="k">Chapter ${ch.number} · Study-text pp. ${esc(ch.pages)} · Area ${esc(ch.area)}</span>
+        <span class="ch-title">${esc(ch.title)}</span>
+        <span class="badge ${ch.label==="learn"?"b-id":ch.label==="understand"?"b-type":"b-review"}">${esc(ch.label_text)}</span>
+      </summary>
+      <p>${esc(ch.summary)}</p>
+      <p><strong>Key points:</strong> ${(ch.key_points||[]).map(esc).join(" · ")}</p>
+      <p class="src"><strong>Why this label:</strong> ${esc(ch.evidence)}</p>
+      <p class="src">${ch.questions_mapped} banked questions map to this chapter's subtopics (${ch.questions_2025} in the 2025 BIA papers) · Syllabus: ${esc(ch.area_name)}</p>
+    </details>`).join("") || `<p class="noresults">No chapters in this tier.</p>`}
+  </div>`;
+  document.title = "Chapter guide — BIA Intelligence";
+  $("#chf").addEventListener("change", ()=>{
+    const fd = new FormData($("#chf"));
+    const v = fd.get("label")||"";
+    location.hash = "#/chapters" + (v ? "?label="+v : "");
+  });
+}
+
 function route(){
   clearMockTimer();
   const h = location.hash || "#/";
@@ -1279,6 +1326,7 @@ function route(){
   const seg0 = path[0]||"";
   if(seg0==="") vHome();
   else if(seg0==="syllabus") path[1] ? vArea(path[1]) : vSyllabus();
+  else if(seg0==="chapters") vChapters(params);
   else if(seg0==="questions") vQuestions(params);
   else if(seg0==="q" && path[1]) vQuestion(path[1]);
   else if(seg0==="examiner") vExaminer(params);
@@ -1311,16 +1359,16 @@ function route(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0, total=1;
-  const load=t=>fetch("data/"+t+".json?v=20261023e").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const load=t=>fetch("data/"+t+".json?v=20261024a").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/total*100)+"%";count.textContent=done+" / "+total+" collections";});
   try{
-    const mresp = await fetch("data/manifest.json?v=20261023e");
+    const mresp = await fetch("data/manifest.json?v=20261024a");
     if(!mresp.ok) throw new Error("manifest "+mresp.status);
     DB.manifest = await mresp.json();
     // Normalize shard names: manifest may list "questions_a.json"; loader appends ".json" itself.
     if(Array.isArray(DB.manifest.question_shards)) DB.manifest.question_shards = DB.manifest.question_shards.map(s=>String(s).replace(/\.json$/,""));
     const shards = (DB.manifest&&DB.manifest.question_shards)||["questions_a","questions_b"];
-    const tables = [...shards, ...BASE_TABLES, ...TAX_TABLES];
+    const tables = [...shards, ...BASE_TABLES, ...TAX_TABLES, ...CHAPTER_TABLES];
     total = tables.length + 1; done = 1;
     fill.style.width=Math.round(done/total*100)+"%";count.textContent=done+" / "+total+" collections";
     await Promise.all(tables.map(load));
