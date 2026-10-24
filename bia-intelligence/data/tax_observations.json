@@ -1,0 +1,2141 @@
+[
+ {
+  "id": "TAX-OBS-2026S-001",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "General",
+  "topics": [],
+  "category": "knowledge",
+  "observation": "Overall pass rate fell from 35% to 31%; question 1 (MCQs) scored below expectations with only 26% of examinees passing it, and questions 3 and 4 were relatively weak.",
+  "what_went_wrong": "Examinees treated the MCQs as an easy scoring section and under-prepared basic concepts and their practical application.",
+  "stronger_answer": "Give MCQs the same disciplined preparation as long questions; drill the core provisions until their application is automatic.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-002",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q1 (i), (ii), (vi)",
+  "topics": [
+   "CAF2-TOP-Ba",
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "MCQ items (i), (ii) and (vi) were the least well-answered in question 1.",
+  "what_went_wrong": null,
+  "stronger_answer": null,
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-003",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q2",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "calculation",
+  "observation": "Salary was computed for 12 months instead of the 11 months the facts supported.",
+  "what_went_wrong": "Candidates defaulted to a full year without reading the employment period in the question.",
+  "stronger_answer": "State the chargeable period first, then pro-rate every time-based component to it.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-004",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q2",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The 45%-of-basic-salary component of furnished accommodation was ignored, and the maintenance reimbursement was deducted instead of added to taxable income.",
+  "what_went_wrong": "Candidates knew a perquisite existed but mishandled its two moving parts: the statutory percentage and the direction of the reimbursement.",
+  "stronger_answer": "Compute the accommodation benefit as the statutory percentage of basic salary, then add reimbursements received - never net them off.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-005",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q2",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The employer's provident-fund contribution was valued incorrectly, the fund interest was miscomputed, and the notice-period adjustment was left out of taxable salary; the accumulated fund balance was not treated as exempt.",
+  "what_went_wrong": "Candidates applied the PF rules mechanically without separating the contribution, the interest and the terminal payout.",
+  "stronger_answer": "Handle the three PF events separately: contribution (perquisite rules), interest (accrual rules), payout (exemption rules).",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-006",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q2",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "The employee share scheme was not charged under salary even though the shares became transferable during the year, and the capital gain was not measured as the disposal value minus the value when the sale restriction was lifted.",
+  "what_went_wrong": "Candidates either ignored the scheme or lumped the whole benefit into capital gains.",
+  "stronger_answer": "Split the benefit: salary at the point restrictions lift, capital gain on the later disposal measured from that lifted-restriction value.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-007",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q2",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The tax credit was skipped or miscomputed, and tax on capital gains - a separate block - was wrongly folded into the credit computation; the capital-gains tax rate itself was also wrong.",
+  "what_went_wrong": "Candidates treated the credit as an afterthought and mixed separate blocks into normal taxable income.",
+  "stronger_answer": "Compute the credit only on the qualifying amount, keep separate blocks out of it, and verify the block's own rate before finalising tax.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-008",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q3(a)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "Statutory filing dates and deadlines in the given cases were not correctly identified; the last five points were particularly weak.",
+  "what_went_wrong": "Candidates guessed dates or left them blank instead of applying the statutory timetable.",
+  "stronger_answer": "Learn the filing calendar as a fixed framework, then map each case's facts onto it - never guess a deadline.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-009",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q3(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "analysis",
+  "observation": "It was not identified that a filed return constitutes a deemed assessment order, and the assessment-validity timeframes (five years from assessment, one year from amended assessment) were not applied, so the limitation dates of 30 June 2025 and 30 June 2026 were missed.",
+  "what_went_wrong": "Candidates discussed validity in the abstract without anchoring it to the limitation clock.",
+  "stronger_answer": "Start from the assessment event, add the statutory limitation period, and state the resulting cut-off date explicitly.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-010",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q3(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "The appellate forums - Commissioner Appeals, and the Appellate Tribunal where the right of appeal before the Commissioner was surrendered - were not identified.",
+  "what_went_wrong": "Candidates named a forum without checking which one the facts pointed to.",
+  "stronger_answer": "Trace the appeal path step by step: which forum first, and what changes if a right is surrendered.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-011",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q4(i)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "The office premises were not recognised as a depreciable asset disposed of when business use ceased, so no disposal gain was computed; where a gain was computed, the fair-market-value-as-cost rule for immovable property was missed.",
+  "what_went_wrong": "Candidates saw 'premises no longer used' and stopped at depreciation, missing the deemed disposal.",
+  "stronger_answer": "Ask on every asset that leaves business use: is this a disposal, and what is the deemed cost?",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-012",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q4(i)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The rent chargeable to tax and the related repair allowance were either not computed or computed incorrectly.",
+  "what_went_wrong": "Candidates jumped to the answer without the two-step property computation.",
+  "stronger_answer": "Compute chargeable rent first, then apply the repair allowance as a separate deduction - show both workings.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-013",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q4(ii)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Depreciation, including initial allowance, was not deducted in arriving at the written-down value of the machines, despite the tax-exemption period running to tax year 2025.",
+  "what_went_wrong": "Candidates assumed an exemption period means no depreciation mechanics at all.",
+  "stronger_answer": "An exemption period changes taxability, not the WDV mechanics - still deduct depreciation and initial allowance to reach WDV.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-014",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q4(iii)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "It was not recognised that no depreciation is allowable on the delivery vehicle (fair market value above Rs. 1 million, paid by cash <redacted> and that the same amount cannot form the asset's cost for any disposal gain.",
+  "what_went_wrong": "Candidates applied normal depreciation and cost rules to a transaction the law specifically restricts.",
+  "stronger_answer": "Flag any cash payment for a high-value vehicle: test the depreciation bar and the cost restriction together.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-015",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q5(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Residential status was decided on day-count alone: Gohar's 122 days were taken to mean non-resident, so his interest income was wrongly treated as exempt.",
+  "what_went_wrong": "The 183-day shortcut crowded out the other prescribed criteria.",
+  "stronger_answer": "Work through every residence criterion in order; only conclude after the full checklist, then apply the consequence to the income.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-016",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q5(b)(ii)",
+  "topics": [
+   "CAF2-TOP-Ac"
+  ],
+  "category": "presentation",
+  "observation": "Reasons for the evasion/avoidance classifications were missing or poorly explained.",
+  "what_went_wrong": "Candidates gave the classification as the whole answer.",
+  "stronger_answer": "For 'discuss' requirements, the conclusion is half the mark - the reasoning is the other half.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-017",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q5(c)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "Answers stayed on further tax and skipped the other distinguishing points between supplies to registered and unregistered persons.",
+  "what_went_wrong": "Candidates answered the part of the question they were most comfortable with.",
+  "stronger_answer": "List every distinguishing implication the question asks for before writing; tick them off as you go.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-018",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The technical advisory fee paid to Marjan was treated as admissible, and the minimum turnover tax was ignored in the AOP's liability.",
+  "what_went_wrong": "Candidates computed normal tax and stopped, missing the minimum-tax comparison entirely.",
+  "stronger_answer": "After computing normal tax, always run the section 113 minimum-tax comparison before finalising liability.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-019",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The AOP's share loss was not ignored in Yakoot's taxable income, the rental share was not taken net (or was taxed as the AOP's income), and each member's AOP share was miscomputed or skipped.",
+  "what_went_wrong": "Candidates mixed the AOP's income with the members' personal income.",
+  "stronger_answer": "Keep three computations strictly separate: the AOP's, then each member's, with the profit share entering only for rate purposes.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-020",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "calculation",
+  "observation": "Profit on debt was not grossed up at the tax rate, Zakat was deducted from total income instead of from the profit on debt, and Marjan's rate-purpose income and rate were not computed.",
+  "what_went_wrong": "Candidates handled the Zakat credit as a generic deduction.",
+  "stronger_answer": "Gross up the profit on debt first, apply Zakat against it, then compute rate-purpose income before the final rate.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-021",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q7",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "No adjustment was considered for cash sales under Rs. 200,000, and the 10% disallowance on meat bought from wholesalers without NTN was missed; stamp duty on unimproved land was deducted instead of capitalised.",
+  "what_went_wrong": "Candidates adjusted everything mechanically without testing each item against its specific rule.",
+  "stronger_answer": "For each expense line, ask: is there a special rule (threshold, withholding, capitalisation) before the general one?",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-022",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q7",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Sublease rent was classified under property income instead of other sources; tax depreciation and amortisation were claimed before the brought-forward TY2024 business losses; TY2019 losses were not treated as lapsed; and the unabsorbed-depreciation cap was applied as 50% of the depreciation amount instead of 50% of taxable income.",
+  "what_went_wrong": "Candidates applied the pieces in the wrong order and misread the cap.",
+  "stronger_answer": "Follow the statutory order: current-year computation, then brought-forward losses (checking lapse), then unabsorbed depreciation capped at 50% of taxable income.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-023",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q7",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Capital gains were taxed at the wrong rate and the surcharge was omitted or computed at 9%.",
+  "what_went_wrong": "Candidates rushed the final tax steps.",
+  "stronger_answer": "Verify the separate-block rate and the surcharge slab as the last two lines of every computation.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-024",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q8",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "Third-schedule goods were not valued at retail price; tax on office equipment was treated as admissible; and imported third-schedule goods were not valued at 130% of the customs-assessed value.",
+  "what_went_wrong": "Candidates applied the standard value-of-supply rule to goods the law values specially.",
+  "stronger_answer": "Memorise the special valuation rules (third schedule, imports) and test every supply against them first.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-025",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q8",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "analysis",
+  "observation": "Input tax was not reversed on payments made after 180 days, unclaimed October 2025 tax was ignored, the Italy-bound flight supply was not zero-rated, the EPZ factory supply was wrongly zero-rated, and input apportionment was done although the question did not require it.",
+  "what_went_wrong": "Candidates applied every adjustment they knew instead of the ones the facts triggered.",
+  "stronger_answer": "Work from the facts outward: list the events, then attach only the rules those events trigger.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2026S-026",
+  "session": "Spring 2026",
+  "scheme": "CAF-2 TPC (2025 scheme)",
+  "question": "Q8",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "The wholesaler's advance was not treated as taxable, the local-government supply was wrongly exempted (and misvalued when taxed), gift vouchers were charged with output tax, and further tax was missed on unregistered wholesalers while its non-applicability to local government was missed.",
+  "what_went_wrong": "Candidates confused the timing and person-based rules for output tax.",
+  "stronger_answer": "For each supply, fix three things: when it is taxed, at what value, and whether further tax attaches to the buyer.",
+  "source": "Spring 2026 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-001",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "General",
+  "topics": [],
+  "category": "knowledge",
+  "observation": "Overall pass rate fell from 43% to 33% on weak Q3, Q5 and Q6; examinees struggled with fundamental concepts - for example, not recognising a gifted coin collection as a disposal, and wrongly treating a personal-use executive table as a capital asset.",
+  "what_went_wrong": "Candidates attempted computations without secure definitions of 'disposal' and 'capital asset'.",
+  "stronger_answer": "Master the precise statutory definitions first; every computational step depends on them.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-002",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1(a)(i)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Recovered bad debts were adjusted at the wrong amount, the energy derivative loss was not classified as a speculation loss (and was set against non-speculation income), and office furniture moved to a residence was not treated as a disposal.",
+  "what_went_wrong": "Candidates skipped the classification step and went straight to the numbers.",
+  "stronger_answer": "Classify each item first - speculation or not, disposal or not - then apply the set-off and computation rules that follow from the classification.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-003",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1(a)(ii)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The AOP profit share was left out of rate-purpose income, the non-adjustable deposit escaped property income, the share cost was taken as Rs. 45 instead of Rs. 120, the gain was taxed as a separate block instead of NTR, and the foreign tax credit was ignored or not capped at the lower of foreign and Pakistan tax.",
+  "what_went_wrong": "Candidates computed each head in isolation and forgot the cross-cutting adjustments.",
+  "stronger_answer": "After the head-wise computation, run a final checklist: rate-purpose income, deposits, cost base, block vs NTR, and the FTC cap.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-004",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "presentation",
+  "observation": "The alternative royalty-taxation option was discussed half-heartedly.",
+  "what_went_wrong": "Candidates gave a conclusion without the supporting discussion.",
+  "stronger_answer": "For 'discuss' requirements, state the option, its conditions and its effect - the conclusion alone earns little.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-005",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The waived loan balance, the laptop's fair-value-minus-WDV benefit and the farewell watch were ignored or offered at wrong amounts.",
+  "what_went_wrong": "Candidates taxed the obvious salary items and missed the less obvious benefits.",
+  "stronger_answer": "List every benefit in the facts - cash or in kind - and test each against the salary perquisite rules.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-006",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "For the unrecognised provident fund the entire contribution was taxed instead of only the employer's, and for the unapproved gratuity the lower-of-Rs.-75,000-or-50% exemption was missed.",
+  "what_went_wrong": "Candidates applied one blunt rule to both funds.",
+  "stronger_answer": "Keep the fund types distinct: unrecognised PF taxes the employer's contribution; unapproved gratuity exempts the lower of the two caps.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-007",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Arshad's 92-day stay was not read as non-resident for tax year 2024, and Chang Li's special calendar tax year - which made him resident - was overlooked.",
+  "what_went_wrong": "Candidates counted days against the normal tax year for both persons.",
+  "stronger_answer": "Check each person's tax year first; a special year changes the counting window completely.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-008",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "presentation",
+  "observation": "Explanations of the taxpayer's position on agreeing or disagreeing with the Committee's modification were half-hearted.",
+  "what_went_wrong": "Candidates stated the outcome without the reasoning.",
+  "stronger_answer": "Explain the consequence of each fork - agree or disagree - with the procedural basis.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-009",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "The bungalow gain used FBR-determined values instead of actual consideration and cost, the gifted coins were not treated as a disposal, the antiques' higher fair market values were not taken as consideration, and the personal-use table was wrongly treated as a capital asset.",
+  "what_went_wrong": "Candidates reached for official valuations and skipped the disposal and personal-asset tests.",
+  "stronger_answer": "For each asset: is it a capital asset, was there a disposal, and what is the correct consideration - actual, or FMV where the law requires it?",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-010",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "Only one or two of the required capital-gains records were listed.",
+  "what_went_wrong": "Candidates wrote general record-keeping points instead of the specific documents the law requires.",
+  "stronger_answer": "Learn the statutory record list for capital gains as a closed set, not as examples.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-011",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(a)",
+  "topics": [
+   "CAF2-TOP-Bb",
+   "CAF2-TOP-Ca"
+  ],
+  "category": "analysis",
+  "observation": "The minor's income was not clubbed with the higher-income parent, and the return-filing position for Usman was answered incorrectly.",
+  "what_went_wrong": "Candidates analysed the minor as an independent taxpayer.",
+  "stronger_answer": "Apply the clubbing rule first - the minor's income is the parent's income - then decide filing on that basis.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-012",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The Syrian branch's net foreign loss was not carried forward, and the Kuwait foreign tax credit was not discussed.",
+  "what_went_wrong": "Candidates tried to set the foreign loss against Pakistan income and stopped there.",
+  "stronger_answer": "Foreign losses carry forward - they do not shelter domestic income; then compute the FTC capped at the lower of the two taxes.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-013",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(c)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Properties that should have been taxed were excluded and vice versa, with incorrect reasons given for the exclusions.",
+  "what_went_wrong": "Candidates guessed the exclusions without the property-by-property test.",
+  "stronger_answer": "Take each property in turn: apply the exclusion conditions, state the reason, then compute - never batch the conclusion.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-014",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(a)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "analysis",
+  "observation": "Activities were misclassified as taxable or non-taxable, with incorrect reasoning.",
+  "what_went_wrong": "Candidates classified by gut feel instead of the taxable-activity definition.",
+  "stronger_answer": "Test each activity against the statutory definition and its exclusions; the reason is as mark-bearing as the classification.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-015",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(b)(i)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "The joint and several liability of buyer and supplier for the unpaid tax was not mentioned.",
+  "what_went_wrong": "Candidates discussed the supplier's default without addressing who else is liable.",
+  "stronger_answer": "When tax goes unpaid, always ask who the law makes liable alongside the supplier.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-016",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(b)(ii)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "The Rs. 10 million threshold for supplies to unregistered persons - beyond which input tax is disallowed - was not specified.",
+  "what_went_wrong": "Candidates knew a restriction existed but not its number.",
+  "stronger_answer": "Thresholds are mark-bearing facts: state the figure, then apply it.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-017",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(c)",
+  "topics": [
+   "CAF2-TOP-Db"
+  ],
+  "category": "knowledge",
+  "observation": "Only one or two of the four bases for suspension without notice were offered.",
+  "what_went_wrong": "Candidates wrote what they remembered and stopped.",
+  "stronger_answer": "For 'list four' requirements, count your points before moving on.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-018",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "Cash discounts escaped tax, machine input was wrongly pulled into the 90%-of-output cap, third-schedule values were not at retail, machine input was apportioned despite exclusive taxable use, further tax was charged on cottage-industry supplies, and cottage-industry purchases were taxed.",
+  "what_went_wrong": "Candidates applied adjustments from memory rather than from each person's stated facts.",
+  "stronger_answer": "For each registered person, work strictly from their facts: discounts, schedules, use of assets, and buyer category each drive a specific adjustment.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-019",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(a)",
+  "topics": [
+   "CAF2-TOP-Ac"
+  ],
+  "category": "analysis",
+  "observation": "Only one scenario was addressed - candidates missed either the material or the immaterial case, and safeguards for immaterial work were overlooked.",
+  "what_went_wrong": "Candidates answered the ethics question as a single yes/no.",
+  "stronger_answer": "Split ethics scenarios on materiality: state the rule for each fork, then the safeguards.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024S-020",
+  "session": "Spring 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(b)",
+  "topics": [
+   "CAF2-TOP-Aa"
+  ],
+  "category": "knowledge",
+  "observation": "Points were written about revenue collection although the question asked for taxation's roles beyond revenue.",
+  "what_went_wrong": "Candidates did not read the requirement's scope limiter.",
+  "stronger_answer": "Underline the scope words in the requirement ('beyond revenue') and check every point against them.",
+  "source": "Spring 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-001",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "General",
+  "topics": [],
+  "category": "knowledge",
+  "observation": "Fundamental concepts stayed weak: the wealth statement was confused with the wealth reconciliation statement, a gray parrot was not recognised as a personal asset, and depreciation was again deducted before brought-forward losses despite repeated past testing.",
+  "what_went_wrong": "Candidates keep re-attempting computations without fixing the underlying concepts.",
+  "stronger_answer": "Treat repeated examiner criticisms as a personal checklist - if it was flagged before, it will be tested again.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-002",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Salary was computed for 12 months instead of 11, the medical allowance exemption used 10% of gross salary instead of basic, the Rs. 100,000 car-perquisite deduction was missed, and share-rights proceeds were reduced by the exercise price and classified under capital gains instead of salary.",
+  "what_went_wrong": "Candidates applied familiar salary adjustments without checking each one's base and head.",
+  "stronger_answer": "For every salary component, verify three things: the period, the base (basic vs gross), and the correct head.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-003",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "presentation",
+  "observation": "No reason was given for excluding the former employer's pension from the computation.",
+  "what_went_wrong": "Candidates excluded items silently, costing the reasoning marks.",
+  "stronger_answer": "Every exclusion needs its stated basis - write the reason, not just the omission.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-004",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Residence was decided by counting days in each country and applying the 183-day test alone, ignoring the other prescribed criteria.",
+  "what_went_wrong": "The day-count shortcut again crowded out the full criteria.",
+  "stronger_answer": "Never conclude residence from day-count alone; run the complete statutory checklist every time.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-005",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "The wealth statement and the wealth reconciliation statement were not distinguished; shares were taken at market value, the loan repayment was not reflected, and the Rs. 1.2 million price differential was left out of liabilities.",
+  "what_went_wrong": "Candidates merged two different statements into one.",
+  "stronger_answer": "Learn what each statement shows: the wealth statement is a position, the reconciliation explains its movement - then place each item in the right one.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-006",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Depreciation was charged on the packaging machine although it served only FTR-taxed income; the cutting machine's consideration was not taken as its cost; the vases used fair market value instead of the insurance receipt; the gray parrot was taxed; and Garlic Ltd shares used Rs. 45 instead of Rs. 48 as cost.",
+  "what_went_wrong": "Candidates computed gains without testing each asset's special conditions first.",
+  "stronger_answer": "Before computing any disposal gain, clear the asset-specific hurdles: FTR-only use, deemed consideration, personal-asset exclusion, and the correct cost base.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-007",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "presentation",
+  "observation": "Reasons for the packaging-machine treatment were missing or inappropriate.",
+  "what_went_wrong": "Candidates gave the treatment without its basis.",
+  "stronger_answer": "'Explain your treatment' is a reasoning requirement - state why the rule applies, not just the result.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-008",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The foreign salary was not exempted - a tax credit was computed instead; property income used actual rent rather than the higher of actual and market rent, skipped the repair allowance, allowed full collection charges instead of the lower of actual and 4%, and missed property tax and mortgage interest.",
+  "what_went_wrong": "Candidates defaulted to credit mechanics and skipped the exemption, then applied property rules loosely.",
+  "stronger_answer": "Test exemption before credit for foreign income; for property, run the full statutory computation - higher-of rent, repair allowance, capped charges, allowable expenses.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-009",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The foreign property loss was set off against Pakistan-source income, and the pre-let factory renovation depreciation was never charged under other sources.",
+  "what_went_wrong": "Candidates treated foreign and domestic income as one pool.",
+  "stronger_answer": "Keep the foreign/domestic boundary firm: foreign losses do not shelter Pakistan income, and pre-commencement costs have their own head.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-010",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "It was not realised that an earlier job start leaves the TY2024 computation unchanged.",
+  "what_went_wrong": "Candidates re-ran the whole analysis on a fact that did not change the year in question.",
+  "stronger_answer": "Anchor every computation to the tax year asked; test whether a changed fact actually touches that year before redoing anything.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-011",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The advance was not excluded from profit, the NRV write-down was added back instead of deducted, the advance-tax penalty and personal loan interest were allowed, and software amortisation was not pro-rated to days in use.",
+  "what_went_wrong": "Candidates adjusted profit by instinct rather than by rule.",
+  "stronger_answer": "For each P&L line, decide: exclude, add back, or allow - and show the direction of the adjustment explicitly.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-012",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Tax depreciation was claimed before the TY2020 brought-forward losses, the disability-ramps depreciation was missed, the Pakistan speculation loss was not set against foreign speculation income while speculation losses were set against non-speculation income, and Sky Ltd proceeds were treated as the gain itself.",
+  "what_went_wrong": "Candidates ignored the ordering rules and the speculation ring-fence.",
+  "stronger_answer": "Apply the statutory order - current year, brought-forward losses, then depreciation - and keep speculation losses inside their fence.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-013",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The time-barred listed-securities loss was set against the current gain, the bearer-cheque loan was ignored or misclassified, and wrong rates were applied to separate blocks.",
+  "what_went_wrong": "Candidates forgot that capital losses have expiry dates and that loan form affects classification.",
+  "stronger_answer": "Check every loss's carry-forward window before using it, and classify receipts by their legal form.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-014",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "Input was claimed on exempt-use raw material; detergent and imported shampoo were not valued at retail (and shampoo at 18% instead of 25%); the machine was misvalued; and input on the 180-day-unpaid shaving kits was not reversed.",
+  "what_went_wrong": "Candidates applied one input rule to all purchases.",
+  "stronger_answer": "Test each purchase: is its use taxable, what is its special valuation, and has the payment clock expired?",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-015",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "EPZ staff-consumption soap was zero-rated while in-flight kits were not; debt-settlement goods were taken at Rs. 350,000 instead of Rs. 325,000; the Asaasa supply was taken at 90%; all input was apportioned; and further tax was charged on third-schedule and end-consumer supplies.",
+  "what_went_wrong": "Candidates mixed up which supplies the zero-rating and further tax actually attach to.",
+  "stronger_answer": "Zero-rating follows the nature and destination of the supply - staff consumption in an EPZ is not an export; further tax follows the buyer, not the goods.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-016",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7(a)(i)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "The nil-return filing duty and its penalty were missed; instead the contents of a return were described.",
+  "what_went_wrong": "Candidates answered a different question from the one asked.",
+  "stronger_answer": "Read the requirement first and answer it - here the point was the obligation, not the return's contents.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-017",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7(a)(ii)",
+  "topics": [
+   "CAF2-TOP-Db"
+  ],
+  "category": "knowledge",
+  "observation": "The Commissioner's deregistration powers were missed; a bare notice to file was suggested instead.",
+  "what_went_wrong": "Candidates offered the mildest action rather than the statutory power.",
+  "stronger_answer": "For non-compliant persons, state the Commissioner's actual powers, not just the first step.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-018",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7(b)",
+  "topics": [
+   "CAF2-TOP-Dc"
+  ],
+  "category": "presentation",
+  "observation": "The debit/credit-note table was answered descriptively, ignoring the required format, and the 180-day note limit was missed.",
+  "what_went_wrong": "Candidates wrote essays where a table was required.",
+  "stronger_answer": "When the question gives a format, use it - and respect the time limits on notes.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-019",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(a)",
+  "topics": [
+   "CAF2-TOP-Ac"
+  ],
+  "category": "knowledge",
+  "observation": "Only one or two threat-evaluation factors were listed.",
+  "what_went_wrong": "Candidates stopped after the first factors they remembered.",
+  "stronger_answer": "For Code-of-Ethics factors, work through the full framework before writing.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2024A-020",
+  "session": "Autumn 2024",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(b)",
+  "topics": [
+   "CAF2-TOP-Aa"
+  ],
+  "category": "presentation",
+  "observation": "Indirect taxes were named without description, and some discussed direct taxes instead.",
+  "what_went_wrong": "Candidates treated naming as the whole answer.",
+  "stronger_answer": "'Describe' means explain each levy - name, base and a line on how it works.",
+  "source": "Autumn 2024 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-001",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "General",
+  "topics": [],
+  "category": "knowledge",
+  "observation": "Basic concepts stayed weak: permanent establishment was confused with residential status, and in Q7(a) the input-tax entitlement of AE was answered as if it were BE's.",
+  "what_went_wrong": "Candidates neither secured the definitions nor read whose tax position the question asked about.",
+  "stronger_answer": "Define the concept, then check whose position the requirement targets before computing.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-002",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Sales tax was not stripped from profit, a trade discount was computed although the sales figure was stated net, the damaged machinery was treated as depreciable, claim-lodging costs were not added back, and the mixer was added back at the wrong amount with customs duty wrongly in its base.",
+  "what_went_wrong": "Candidates adjusted profit without respecting what the question had already told them.",
+  "stronger_answer": "Take the question's stated facts as given - net means net - and test each asset's nature before depreciating it.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-003",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Bearer-cheque payments, deposits and personal outlays were not disallowed; the bank-loan interest was misclassified as a business expense; property income was not excluded from business income; and the section 113 minimum tax and the brought-forward minimum-tax credit were mishandled.",
+  "what_went_wrong": "Candidates computed normal tax and stopped, missing the minimum-tax regime entirely.",
+  "stronger_answer": "After the normal computation, always run the section 113 comparison and adjust any brought-forward minimum-tax credit.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-004",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The 20% withholding-default disallowance was missed, Adeeb's rent was wrongly treated as inadmissible, the FTR dividend was not grossed up correctly, brokerage was missed from Manzoor's gain, the wrong capital-gains rate was used, and the wrong AOP share entered rate-purpose income.",
+  "what_went_wrong": "Candidates knew the adjustments existed but applied them loosely.",
+  "stronger_answer": "For AOP questions, run a fixed checklist: withholding, member payments, FTR gross-up, gain bases, rates, and the rate-purpose share.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-005",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Medical allowance and reimbursement were swapped, the accommodation benefit used the lower of fair value and 45% of basic, self-hired property income was mishandled, the unapproved-gratuity cap was miscalculated, and the share cost was wrong.",
+  "what_went_wrong": "Candidates mixed up which item the exemption or cap belongs to.",
+  "stronger_answer": "Label each salary item, then apply its own rule - exemptions and caps are item-specific, never interchangeable.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-006",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(a)",
+  "topics": [],
+  "category": "analysis",
+  "observation": "A liaison office was wrongly held to be a permanent establishment, services through employees were wrongly held not to be one, and many answers drifted into residential status - a separate concept.",
+  "what_went_wrong": "Candidates could not separate PE from residence.",
+  "stronger_answer": "Keep the concepts in their own lanes: PE is about business presence, residence is about the person - test each on its own criteria.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-007",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "The public-company tests were missed: listing on the last day of the tax year, and 50% government ownership (so the foreign-government-held company failed the test).",
+  "what_went_wrong": "Candidates applied a rough sense of 'public' instead of the statutory tests.",
+  "stronger_answer": "Apply the public-company tests literally: the listing date and the ownership percentage are both decisive.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-008",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(a)(i)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Total and taxable income were not computed separately; relevant income was omitted and irrelevant income included.",
+  "what_went_wrong": "Candidates produced one blended figure.",
+  "stronger_answer": "Always arrive at total income first, then apply the loss and deduction rules to reach taxable income - two distinct figures.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-009",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(a)(ii)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Private- and public-company share losses were set off and carried forward incorrectly; the other-sources loss was not set against the jewellery gain and was wrongly carried forward; and the UAE business loss drew irrelevant speculation-business commentary.",
+  "what_went_wrong": "Candidates applied loss rules from the wrong category to each loss.",
+  "stronger_answer": "Match each loss to its own set-off and carry-forward rule - share losses, other-sources losses and foreign losses each have their own.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-010",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "Only two or three of the asset-ownership filing triggers were listed.",
+  "what_went_wrong": "Candidates wrote the obvious triggers and stopped.",
+  "stronger_answer": "For trigger lists, keep going until the statutory set is complete - count your points.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-011",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "The returning-expatriate exemption was missed: although resident from TY2024, the foreign-source income stayed exempt for 2024 and 2025.",
+  "what_went_wrong": "Candidates saw 'resident' and taxed everything.",
+  "stronger_answer": "Residence is only step one - then test whether a special status exempts the foreign income anyway.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-012",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "The exemption conclusion was right but the rationale was wrong, and the attached conditions were overlooked.",
+  "what_went_wrong": "Candidates guessed the answer and skipped the reasoning.",
+  "stronger_answer": "A right conclusion with the wrong basis still loses marks - state the correct provision and its conditions.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-013",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(c)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "The section 7E deemed-income implications were not identified - answers discussed depreciation and agricultural exemptions instead - and the ATL vs non-ATL scenarios were not distinguished.",
+  "what_went_wrong": "Candidates answered the property question they expected, not the 7E question asked.",
+  "stronger_answer": "When the facts give ATL status variants, the question is testing the deemed-income charge - apply it scenario by scenario.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-014",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "Input was claimed on CREST-flagged, suspended-supplier and head-office building purchases, while input on the February-available Roshan Enterprise goods was missed; the associate's discounted supply was misvalued; and output was missed on the surrendered insurance claim, the advance, the bank-auctioned goods and the CEO's residence goods.",
+  "what_went_wrong": "Candidates did not test supplier status before claiming input, and missed deemed supplies on the output side.",
+  "stronger_answer": "Check the supplier's status before every input claim, and scan for deemed supplies - surrenders, advances, auctions, personal use.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-015",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "Input was not apportioned correctly between taxable and zero-rated supplies (including the machine), further tax was charged on cottage-industry supplies, and the 4% further tax was merged into the 18% output tax instead of computed separately.",
+  "what_went_wrong": "Candidates treated further tax as part of output tax.",
+  "stronger_answer": "Keep further tax as its own line - computed separately at its own rate - and apportion input across the supply streams.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-016",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7(a)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "The Rs. 10 million input restriction for the unregistered buyer was missed, and the Tier-1 vs non-Tier-1 retailer distinction was not drawn.",
+  "what_went_wrong": "Candidates answered about the wrong person's input entitlement.",
+  "stronger_answer": "First identify whose input tax the question asks about, then apply that person's thresholds and categories.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-017",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "Best-judgment assessment was not addressed; instead suspension, SIM blocking and other unrelated CIR actions were discussed.",
+  "what_went_wrong": "Candidates listed every CIR power they knew.",
+  "stronger_answer": "Match the action to the facts: a notice ignored and no return filed points to best-judgment assessment - discuss that and the remedy.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-018",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(a)",
+  "topics": [
+   "CAF2-TOP-Aa"
+  ],
+  "category": "presentation",
+  "observation": "Levy principles were listed but not discussed.",
+  "what_went_wrong": "Candidates treated headings as the answer.",
+  "stronger_answer": "'Discuss' means name plus explanation - half a mark for each, so headings alone earn half.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025S-019",
+  "session": "Spring 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(b)",
+  "topics": [
+   "CAF2-TOP-Ac"
+  ],
+  "category": "presentation",
+  "observation": "The pillars of tax administration were identified but not described.",
+  "what_went_wrong": "Same heading-only habit as Q8(a).",
+  "stronger_answer": "For every pillar named, add what it requires in practice.",
+  "source": "Spring 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-001",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "General",
+  "topics": [],
+  "category": "time_management",
+  "observation": "Income-tax computation stayed weak with frequent basic-adjustment errors, and long irrelevant answers in Q3/Q4 showed poor time management and unfocused requirements.",
+  "what_went_wrong": "Candidates wrote everything they knew instead of what was asked.",
+  "stronger_answer": "Answer the requirement as written - irrelevant material wastes the time the computation needs.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-002",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The withholding-default disallowance was miscomputed, office-space and software capex was not added back, the TDR interest was deducted net (Rs. 6.8m) instead of gross (Rs. 8m) and not placed under other sources, the ministerial award was wrongly exempted, and the supplier-advance bad debt was allowed.",
+  "what_went_wrong": "Candidates netted and classified by habit rather than by rule.",
+  "stronger_answer": "Gross up income items before deducting, place each receipt in its correct head, and add back every capital outlay.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-003",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The waived rent was misclassified under property or other sources, the new car's cost was not capped at Rs. 7.5 million and initial allowance was wrongly claimed on it.",
+  "what_went_wrong": "Candidates applied normal asset rules to items with special restrictions.",
+  "stronger_answer": "Flag restricted items - waived amounts, capped vehicles - and apply their special rules before the general ones.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-004",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "calculation",
+  "observation": "The vehicle's tax loss used market value as consideration, was not apportioned by the 7.5m/10m cost-restriction ratio, and used a wrong or missing tax WDV; the TDR interest was then not taxed under NTR.",
+  "what_went_wrong": "Candidates skipped the apportionment the cost cap demands.",
+  "stronger_answer": "When cost is capped, every later computation - consideration, WDV, loss - must be apportioned by the same ratio.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-005",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "House rent was computed for 12 months instead of 6, the non-adjustable amount was ignored, the flat was taxed on actual rather than fair rental value (with the deposit's fair value also taxed), and repair allowance was claimed on an open plot.",
+  "what_went_wrong": "Candidates applied the property computation without its period and constructed-property limits.",
+  "stronger_answer": "Fix the let period first, use fair rental value where required, and claim repair allowance only on constructed property.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-006",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Repair charges reimbursed to the tenant were netted off although a 20% repair allowance was already claimed, collection charges were not capped at the lower of 4% and actual, the generator's loss used Rs. 8.5m instead of its Rs. 8m cost, the generator was not treated as a capital asset, its rent was misclassified, and the house gain used the wrong rate.",
+  "what_went_wrong": "Candidates double-counted deductions and skipped the classification tests.",
+  "stronger_answer": "One deduction per expense - if repair allowance is claimed, actual repairs are out; and test every asset for capital-asset status before computing gains.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-007",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(b)",
+  "topics": [
+   "CAF2-TOP-Ba"
+  ],
+  "category": "knowledge",
+  "observation": "The speculation-business definition was reproduced without its specified exclusions, and the point that non-speculation losses can shelter certain other heads was missed.",
+  "what_went_wrong": "Candidates memorised the definition's core and dropped its edges.",
+  "stronger_answer": "Learn definitions with their exclusions - the exclusions are where the marks (and the traps) live.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-008",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(a)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "The FBR's power to issue an Income Tax General Order and its preconditions were not explained; some discussed general penalties despite the instruction to ignore them.",
+  "what_went_wrong": "Candidates ignored the question's explicit scope limiter.",
+  "stronger_answer": "Obey scope instructions - 'ignore penalties' means penalties earn nothing; answer the power and its preconditions.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-009",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(b)(i)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Olivia's foreign-source taxability was not grounded in her residential status - clear from the facts - and some wrongly treated her as a short-term resident.",
+  "what_went_wrong": "Candidates jumped to the income without establishing the person's status.",
+  "stronger_answer": "Establish residential status from the facts first; the taxability of foreign income follows from it.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-010",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(b)(ii)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "The exemption requirements were missed; instead the short-term-resident provisions were discussed, which did not apply.",
+  "what_went_wrong": "Candidates applied the provisions they remembered rather than the ones the facts called for.",
+  "stronger_answer": "Match the provision to the facts - a wrong-but-related provision still misses the requirement.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-011",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(c)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "presentation",
+  "observation": "Filing answers were bare yes/no without discussing the income threshold, and sales-tax categories (Tier-1 vs non-Tier-1) were not identified.",
+  "what_went_wrong": "Candidates gave conclusions without the basis.",
+  "stronger_answer": "For each person, state the test (threshold, category) and then the conclusion it produces.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-012",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "presentation",
+  "observation": "All three transactions were correctly held not to be dividends, but the supporting explanations were missing.",
+  "what_went_wrong": "Candidates treated the conclusion as the whole answer.",
+  "stronger_answer": "Each 'not a dividend' conclusion needs its basis - liquidation distributions, taxed branch remittances and arm's-length loans each fail the dividend test for a different reason.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-013",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Five loss-rule statements were mishandled: Pakistan-source losses can shelter foreign income (the reverse is not barred), other-sources losses set off but do not carry forward, no private/public share-loss barrier exists, public-securities losses carry three years not six, and AOP members cannot use the AOP's loss.",
+  "what_went_wrong": "Candidates applied one blended loss rule to all five statements.",
+  "stronger_answer": "Test each statement against its own rule - direction of set-off, carry-forward availability and period, and who may use the loss.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-014",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The bonus set against the loan was left out of salary, the school-fee reimbursement was miscomputed or wrongly put under section 60D, the waiver and benchmark-rate interest were miscomputed, surcharge was ignored above Rs. 10 million, and the employer-borne tax used the wrong gross-up rate.",
+  "what_went_wrong": "Candidates missed the less obvious salary items and the final tax steps.",
+  "stronger_answer": "Sweep the facts for every benefit, then finish with surcharge and a full reciprocal gross-up.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-015",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "An uncle was wrongly placed outside the relative definition (so the in-kind gift was taxed), a father's cash gift was wrongly exempted, and the taxing head was not specified.",
+  "what_went_wrong": "Candidates applied a social sense of 'relative' instead of the statutory one, and mixed up cash vs in-kind gift rules.",
+  "stronger_answer": "Apply the statutory relative definition, keep cash and in-kind gifts separate, and always state the head.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-016",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "AJK input was wrongly denied while cottage-industry input was wrongly allowed; third-schedule goods were not at retail; destroyed-goods input was not reversed; exempt-use raw-material input was claimed; and the debit note was mishandled.",
+  "what_went_wrong": "Candidates did not test supplier and use before claiming input.",
+  "stronger_answer": "For each input line, verify the supplier's status and the goods' use before allowing anything.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-017",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "The domestic flight supply was wrongly zero-rated, free samples were treated as exempt, advances and personal-use goods were treated as not taxable, and warranty replacements were wrongly taxed.",
+  "what_went_wrong": "Candidates confused zero-rating, exemption and deemed supplies.",
+  "stronger_answer": "Keep the three concepts apart: zero-rated is taxable at 0%, exempt is outside tax, and deemed supplies (samples, personal use) are taxable.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-018",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "The non-applicability of further tax to unregistered end consumers was overlooked.",
+  "what_went_wrong": "Candidates charged further tax by default.",
+  "stronger_answer": "Further tax follows the buyer category - check whether it applies before adding it.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-019",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7",
+  "topics": [
+   "CAF2-TOP-Db"
+  ],
+  "category": "knowledge",
+  "observation": "Temporary registration was answered half-heartedly: grant circumstances, validity conditions, issuance, restrictions and compliance duties were incomplete.",
+  "what_went_wrong": "Candidates wrote the bits they remembered.",
+  "stronger_answer": "For a regime question, cover it end to end: when granted, how long it lasts, how it is issued, its restrictions, and its duties.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-020",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(a)",
+  "topics": [
+   "CAF2-TOP-Aa"
+  ],
+  "category": "presentation",
+  "observation": "Tax-system characteristics were stated generally without linking explanations to them, and the required justification of incorrect statements was missed.",
+  "what_went_wrong": "Candidates described instead of justifying.",
+  "stronger_answer": "Where the requirement is to justify incorrectness, tie each explanation to the characteristic it violates.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2025A-021",
+  "session": "Autumn 2025",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(b)",
+  "topics": [
+   "CAF2-TOP-Ac"
+  ],
+  "category": "knowledge",
+  "observation": "The Code of Ethics was discussed instead of the tax authorities' ethical responsibilities, and answers were one-word headings.",
+  "what_went_wrong": "Candidates answered the ethics topic they knew.",
+  "stronger_answer": "Check whose ethics the question asks about - the authorities', not the accountants' - and write full statements.",
+  "source": "Autumn 2025 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-001",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "General",
+  "topics": [],
+  "category": "application",
+  "observation": "Theory was not transferred to practice: brought-forward losses were known as a concept but not adjusted, set and carried correctly in the computation.",
+  "what_went_wrong": "Candidates could state the loss rules but not operate them.",
+  "stronger_answer": "Practise loss adjustments as workings - set-off, carry-forward, maximum periods - not as theory notes.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-002",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The medical allowance was fully taxed instead of exempted up to 10% of basic, the company car was valued at fair value instead of cost without a duration adjustment, and gratuity was fully exempted instead of capped at Rs. 75,000.",
+  "what_went_wrong": "Candidates applied exemptions and caps loosely.",
+  "stronger_answer": "Every exemption has a base and a cap - verify both before applying.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-003",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "A loan repayment was not taxed, benchmark-rate interest was neither taxed under salary nor deducted under property, foreign business-share and dividend income were taken net of tax, and the foreign tax credit was ignored.",
+  "what_went_wrong": "Candidates missed the gross-up and credit mechanics on foreign items.",
+  "stronger_answer": "Gross up foreign income, compute the credit capped at the lower tax, and place each item in its head.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-004",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "FTR income was headed as 'other sources' and its related expenses were marked admissible.",
+  "what_went_wrong": "Candidates did not grasp what the final tax regime implies.",
+  "stronger_answer": "FTR income is taxed finally at source - it takes no head allocation and no expense deductions.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-005",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The machinery lost in shipment was not put under capital gains, the bad-debt recovery shortfall was not allowed, tax depreciation was claimed before brought-forward losses, the unabsorbed-depreciation cap was applied to the wrong base, time-barred listed-securities losses were used, and separate-block rates and forex-adjusted plant cost were wrong.",
+  "what_went_wrong": "Candidates ignored the ordering and time rules that govern losses and depreciation.",
+  "stronger_answer": "Losses and depreciation follow a strict order with expiry dates - apply them in sequence and check every window.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-006",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(a)",
+  "topics": [
+   "CAF2-TOP-Ba"
+  ],
+  "category": "analysis",
+  "observation": "A contract specifically excluded from the speculation-business definition was nevertheless treated as speculation business.",
+  "what_went_wrong": "Candidates applied the speculation rules without checking the exclusions.",
+  "stronger_answer": "Read the definition's exclusions before classifying - an excluded contract is never speculation business.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-007",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "The new business's return-filing obligation and the minimum threshold for filing and payment were not addressed.",
+  "what_went_wrong": "Candidates were unsure when a new business must file.",
+  "stronger_answer": "Learn the filing triggers for new businesses as a fixed rule, including the threshold.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-008",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(a)",
+  "topics": [],
+  "category": "knowledge",
+  "observation": "The cases eligible for ADR settlement and the committee's composition were not stated.",
+  "what_went_wrong": "Candidates had only a vague sense of the ADR mechanism.",
+  "stronger_answer": "For any statutory mechanism, learn its eligibility and its composition as closed lists.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-009",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "The provisions for filing a revised return were incompletely stated.",
+  "what_went_wrong": "Candidates gave partial provisions.",
+  "stronger_answer": "Revised-return rules are a closed set - state all of them.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-010",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(c)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "The particulars for the foreign income and assets statement were incompletely listed.",
+  "what_went_wrong": "Candidates listed the obvious particulars and stopped.",
+  "stronger_answer": "Count the required particulars against the statutory list.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-011",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(a)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "presentation",
+  "observation": "The time (month) of supply was identified but the reasons were not stated.",
+  "what_went_wrong": "Candidates gave conclusions without bases.",
+  "stronger_answer": "Time-of-supply answers need the rule behind the month - state both.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-012",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "The procedure for recovering short-paid sales tax was not stated.",
+  "what_went_wrong": "Candidates did not know the recovery mechanics.",
+  "stronger_answer": "Learn the recovery procedure as a step-by-step process.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-013",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7(a)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "Wires and cables escaped tax while engineer-issued raw material was taxed; purchase returns were not adjusted; warranty supplies were taxed; owner withdrawals and cottage-industry sales escaped tax; an old undeclared invoice was not picked up (the 180-day bar does not apply where output tax increases); and further tax was wrongly charged on cottage-industry sales.",
+  "what_went_wrong": "Candidates applied adjustments selectively and misread the time bars.",
+  "stronger_answer": "For each transaction, decide taxability on its own facts, respect the note time limits, and remember the 180-day bar does not block increased output tax.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-014",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7(b)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "presentation",
+  "observation": "Reasons for the exemptions, exclusions and disallowances were not given.",
+  "what_went_wrong": "Candidates showed workings without justification.",
+  "stronger_answer": "Every adjustment in a sales-tax computation needs its stated reason.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023S-015",
+  "session": "Spring 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8",
+  "topics": [
+   "CAF2-TOP-Ac"
+  ],
+  "category": "knowledge",
+  "observation": "Avoidance and evasion were not clearly differentiated, and some gave definitions instead of what the question required.",
+  "what_went_wrong": "Candidates answered from memory of the terms rather than the requirement.",
+  "stronger_answer": "Read what the question asks about the terms - differentiation, not definition - and answer that.",
+  "source": "Spring 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-001",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "General",
+  "topics": [],
+  "category": "presentation",
+  "observation": "Theory questions were answered poorly, showing weak writing skills, and requirements were not read - for example, residence was debated although the question stated the persons were resident.",
+  "what_went_wrong": "Candidates wrote before reading.",
+  "stronger_answer": "Read the requirement and the stated facts first; never re-litigate what the question has fixed.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-002",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The 20% cap on withholding-default purchases was ignored, lease rentals did not restrict the car cost to Rs. 2.5 million, the NRV write-down on damaged goods was missed, and software amortisation ignored the available-for-use day rule and pro-rating.",
+  "what_went_wrong": "Candidates applied the general rules without the caps and day-count refinements.",
+  "stronger_answer": "Caps and day-counts are part of the rule - apply the 20% cap, the cost restriction, and pro-rate by days available for use.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-003",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The exchange machine's cost kept sales tax in, ignored the old machine's fair market value (or used book value), missed the initial allowance, treated an AOP member's commission as admissible, and ignored the section 113 minimum tax.",
+  "what_went_wrong": "Candidates built the asset cost from the wrong components.",
+  "stronger_answer": "Strip sales tax out of asset cost, use fair market value for part-exchange, claim initial allowance, and always run the minimum-tax comparison.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-004",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "The scholarship's exemption - on the basis that the employer-employee relationship was not an associate relationship - was not identified.",
+  "what_went_wrong": "Candidates missed the associate test that drives the exemption.",
+  "stronger_answer": "For exemptions turning on relationships, test the relationship first.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-005",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "Medical allowance was exempted although insurance was provided, work-from-home costs were allowed, parents' cash gifts were exempted, donation credit was claimed on cash donations, and the pension-fund credit ignored the 20% of taxable income limit.",
+  "what_went_wrong": "Candidates applied exemptions and credits without their conditions.",
+  "stronger_answer": "Every exemption and credit has conditions - insurance cover, mode of payment, percentage caps - check them all.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-006",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "The residential-house provision was analysed from the employee's viewpoint instead of the employer's.",
+  "what_went_wrong": "Candidates answered the wrong person's tax position.",
+  "stronger_answer": "Identify whose tax the requirement asks about before analysing.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-007",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Public unlisted shares used cash consideration instead of the higher fair market value, jewellery gains were not taxed, and no correct reason was given for ignoring the personal-car gain.",
+  "what_went_wrong": "Candidates skipped the deemed-consideration and personal-asset tests.",
+  "stronger_answer": "Take the higher of consideration and FMV where required, tax the jewellery gain, and state why personal assets are out.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-008",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "The forfeited deposit was not taxed (and the 1/5 repair allowance was not deducted where it was), agricultural-land rent was not exempted, the full bungalow gain was taxed instead of 25%, and factory repair used 1/5 of rent instead of actual expense.",
+  "what_went_wrong": "Candidates mixed up which property rule belongs to which asset.",
+  "stronger_answer": "Apply each property's own rule: deposits, repair allowance, agricultural exemption, and the bungalow's fractional charge.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-009",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Li was not identified as a short-term resident, so the relevant provisions were never produced.",
+  "what_went_wrong": "Candidates missed the status that unlocks the whole answer.",
+  "stronger_answer": "Status identification is the gateway - get it right before reaching for provisions.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-010",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Omar was not identified as a returning expatriate, so the relevant provisions were never produced.",
+  "what_went_wrong": "Same gateway error as Q4(a).",
+  "stronger_answer": "Test every individual against the special statuses - short-term resident, returning expatriate - before the general rules.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-011",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(c)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Sidra's foreign salary was treated as exempt on the ground that she stayed outside Pakistan, although the facts said she returned on 20 December 2021 and stayed.",
+  "what_went_wrong": "Candidates used a remembered fact pattern instead of the given one.",
+  "stronger_answer": "Apply the facts as stated - a return date in the facts overrides any assumed pattern.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-012",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(a)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "Best-judgment assessment instances were incompletely covered, the final-return period was not elaborated, and general documents were listed instead of the additional documents required.",
+  "what_went_wrong": "Candidates gave partial and off-target answers.",
+  "stronger_answer": "Answer the specific requirement - instances, periods, additional documents - not the general topic.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-013",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "Only two or three of the final-tax-regime rules were stated.",
+  "what_went_wrong": "Candidates stopped early on list requirements.",
+  "stronger_answer": "FTR rules form a closed set - state all of them.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-014",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(a)",
+  "topics": [
+   "CAF2-TOP-Db"
+  ],
+  "category": "knowledge",
+  "observation": "The cottage-industry conditions beyond the manufacturer case were not mentioned.",
+  "what_went_wrong": "Candidates covered one case and stopped.",
+  "stronger_answer": "For registration requirements, cover every person-category the law lists.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-015",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(b)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "Only one or two exceptions were given.",
+  "what_went_wrong": "Same incomplete-list habit.",
+  "stronger_answer": "Count your exceptions against the requirement before moving on.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-016",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7 input",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "An old purchase invoice and the cash gas bill were ignored, landlord-billed electricity input was claimed, a debit note was ignored or added to input instead of deducted, provincial sales tax on the transporter was not claimed, and input was claimed on an advance payment.",
+  "what_went_wrong": "Candidates mishandled the direction and timing of input adjustments.",
+  "stronger_answer": "Debit notes reduce input, advances do not create it, and bills must be in the claimant's name.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-017",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7 output",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "EPZ further-manufacturing supplies were not zero-rated, a credit note issued after 180 days was still adjusted, and owner-withdrawn garments were not taxed.",
+  "what_went_wrong": "Candidates missed the destination, time and deemed-supply rules.",
+  "stronger_answer": "Zero-rating follows the supply's destination, notes have a 180-day life, and owner withdrawals are taxable supplies.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2022A-018",
+  "session": "Autumn 2022",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(a)",
+  "topics": [
+   "CAF2-TOP-Ac"
+  ],
+  "category": "analysis",
+  "observation": "The self-review threat was not detected, so the threat-significance factors and safeguards were never discussed.",
+  "what_went_wrong": "Candidates missed the threat that unlocks the analysis.",
+  "stronger_answer": "Identify the threat first - the factors and safeguards follow from it.",
+  "source": "Autumn 2022 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-001",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "General",
+  "topics": [],
+  "category": "presentation",
+  "observation": "Time was wasted on unrequired material, and the verb 'discuss' was not honoured - it demands the conclusion plus its basis, not the conclusion alone.",
+  "what_went_wrong": "Candidates wrote what they knew rather than what 'discuss' asks for.",
+  "stronger_answer": "For 'discuss', every conclusion travels with its reason.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-002",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q1",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Duty meals and staff discounts were mishandled, interest was taken net of withholding instead of gross, PF amounts were wrong, the share scheme used grant-date FMV instead of exercise-date FMV, and health insurance was taxed.",
+  "what_went_wrong": "Candidates applied salary rules approximately.",
+  "stronger_answer": "Gross up before including, use the correct valuation date for share schemes, and verify each exemption's conditions.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-003",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q2",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "A non-adjustable deposit was ignored or mismeasured, and security and electricity charges were put under property income instead of other sources.",
+  "what_went_wrong": "Candidates forced every receipt into property income.",
+  "stronger_answer": "Test each receipt against the property-income definition; charges for services belong under other sources.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-004",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(a)",
+  "topics": [
+   "CAF2-TOP-Ba",
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "Stock applied to personal use was not treated as a disposal, the furniture's cost was not allowed against its consideration, the disposal income was not put under business income, and the antique's loss was wrongly recognised.",
+  "what_went_wrong": "Candidates missed the disposal triggers and the loss-recognition limits.",
+  "stronger_answer": "Personal application of business assets is a disposal; losses on certain assets are not recognised - check both.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-005",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q3(b)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "Only one or two valid exceptions were given, the rest being incorrect or half-hearted.",
+  "what_went_wrong": "Candidates padded incomplete knowledge.",
+  "stronger_answer": "Give only the exceptions you can state correctly - wrong ones cost credibility as well as marks.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-006",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "application",
+  "observation": "Rental income was not excluded from business income, POS depreciation was claimed alongside the POS tax credit, agricultural rent was not exempted, the 20% withholding cap was applied to the wrong base, van depreciation used Rs. 6 million, app amortisation was claimed before availability, and the eggs' market value was not recognised.",
+  "what_went_wrong": "Candidates double-counted benefits and misapplied bases.",
+  "stronger_answer": "One benefit per item - credit or depreciation, not both; and verify every base and timing rule before computing.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-007",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q4(b)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "knowledge",
+  "observation": "The start-up tax credit's conditions were missed: it is for start-ups only, and with not all partners being women the firm was ineligible.",
+  "what_went_wrong": "Candidates claimed the credit without testing eligibility.",
+  "stronger_answer": "Test every credit's eligibility conditions before computing it.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-008",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "With only 7% passing this part, Akbar was classed non-resident on the 183-day shortcut and his foreign salary was held not chargeable, without any analysis of the other residence criteria.",
+  "what_went_wrong": "The day-count shortcut again displaced the full analysis.",
+  "stronger_answer": "Residence analysis is never a single test - run all the criteria, then decide the foreign salary's chargeability.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-009",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(b)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "presentation",
+  "observation": "The basis for each person's return-filing position was not given.",
+  "what_went_wrong": "Conclusions without bases again.",
+  "stronger_answer": "State the test, apply it to the person, then conclude.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-010",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q5(c)",
+  "topics": [
+   "CAF2-TOP-Ca"
+  ],
+  "category": "knowledge",
+  "observation": "Only the original assessment's timeframe was given; the amended assessment's period was ignored.",
+  "what_went_wrong": "Candidates answered half the requirement.",
+  "stronger_answer": "Where two timeframes are asked for, state both.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-011",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(a)",
+  "topics": [
+   "CAF2-TOP-Bb"
+  ],
+  "category": "analysis",
+  "observation": "No valid reason was offered for whether the persons were associates.",
+  "what_went_wrong": "Candidates concluded without reasoning.",
+  "stronger_answer": "Associate determinations need the definitional test applied to each person.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-012",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q6(b)",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "knowledge",
+  "observation": "Income-tax return due dates were given instead of sales-tax return due dates, and the coverage was incomplete.",
+  "what_went_wrong": "Candidates answered the wrong statute's timetable.",
+  "stronger_answer": "Check which Act the question asks about before writing any dates.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-013",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q7",
+  "topics": [
+   "CAF2-TOP-Da"
+  ],
+  "category": "application",
+  "observation": "Free glass bottles and promotional perfumes escaped tax, 60% of the machine cost was taxed, sales and purchase returns were timed to the wrong month (notes issued in September, 180 days lapsed), omitted purchases were not claimed, and input was not apportioned between local supplies and exports.",
+  "what_went_wrong": "Candidates mistimed adjustments and skipped apportionment.",
+  "stronger_answer": "Time adjustments to the note date, respect the 180-day limit, and apportion input across supply streams.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-014",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(a)",
+  "topics": [
+   "CAF2-TOP-Aa"
+  ],
+  "category": "presentation",
+  "observation": "Principles were stated without explanation, and explanations did not match their headings.",
+  "what_went_wrong": "Candidates wrote headings and mismatched text.",
+  "stronger_answer": "Each principle needs its own explanation, aligned under its heading.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ },
+ {
+  "id": "TAX-OBS-2023A-015",
+  "session": "Autumn 2023",
+  "scheme": "CAF-2 Tax Practices (predecessor, 2021 scheme)",
+  "question": "Q8(b)",
+  "topics": [
+   "CAF2-TOP-Ac"
+  ],
+  "category": "presentation",
+  "observation": "The fundamental principles were listed without describing the two required.",
+  "what_went_wrong": "Candidates listed instead of describing.",
+  "stronger_answer": "When the requirement says describe two, describe two - fully.",
+  "source": "Autumn 2023 examiner comments (paraphrased)"
+ }
+]
