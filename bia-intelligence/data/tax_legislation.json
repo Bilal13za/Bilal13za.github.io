@@ -1,0 +1,2421 @@
+{
+ "provisions": [
+  {
+   "id": "FA-1989",
+   "category": "finance_act",
+   "identifier": "Finance Act 1989",
+   "reference": "Finance Act, 1989",
+   "description": "Mentioned in CAF2-TPC-2025-Question-Bank-2026.pdf; amendments made by this Act may affect the rates/provisions discussed.",
+   "applicable_period": "Tax year 1989",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 126"
+  },
+  {
+   "id": "FA-1989",
+   "category": "finance_act",
+   "identifier": "Finance Act 1989",
+   "reference": "Finance Act, 1989",
+   "description": "Mentioned in CAF2-TPC-2025-Study-Text-2026.pdf; amendments made by this Act may affect the rates/provisions discussed.",
+   "applicable_period": "Tax year 1989",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 21"
+  },
+  {
+   "id": "FA-2025",
+   "category": "finance_act",
+   "identifier": "Finance Act 2025",
+   "reference": "Finance Act, 2025",
+   "description": "Mentioned in CAF2-TPC-2025-Study-Text-2026.pdf; amendments made by this Act may affect the rates/provisions discussed.",
+   "applicable_period": "Tax year 2025",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 77"
+  },
+  {
+   "id": "FA-2026",
+   "category": "finance_act",
+   "identifier": "Finance Act 2026",
+   "reference": "Finance Act, 2026",
+   "description": "Mentioned in CAF2-TPC-2025-Study-Text-2026.pdf; amendments made by this Act may affect the rates/provisions discussed.",
+   "applicable_period": "Tax year 2026",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 164"
+  },
+  {
+   "id": "ITR-SEC-236",
+   "category": "rules",
+   "identifier": "Rule 2(36)",
+   "reference": "Income Tax Rules, 2002 Rule 2(36)",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a rule under the Income Tax Rules.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 191"
+  },
+  {
+   "id": "ITR-SEC-61",
+   "category": "rules",
+   "identifier": "Rule 61",
+   "reference": "Income Tax Rules, 2002 Rule 61",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a rule under the Income Tax Rules.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 191"
+  },
+  {
+   "id": "ITR-SEC-82",
+   "category": "rules",
+   "identifier": "Rule 82",
+   "reference": "Income Tax Rules, 2002 Rule 82",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a rule under the Income Tax Rules.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 48"
+  },
+  {
+   "id": "SCHED-EIGHTH",
+   "category": "schedule",
+   "identifier": "Eighth Schedule",
+   "reference": "Eighth Schedule",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 262"
+  },
+  {
+   "id": "SCHED-EIGHTH",
+   "category": "schedule",
+   "identifier": "Eighth Schedule",
+   "reference": "Eighth Schedule",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 141"
+  },
+  {
+   "id": "SCHED-ELEVENTH",
+   "category": "schedule",
+   "identifier": "Eleventh Schedule",
+   "reference": "Eleventh Schedule",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 247"
+  },
+  {
+   "id": "SCHED-FIFTH",
+   "category": "schedule",
+   "identifier": "Fifth Schedule",
+   "reference": "Fifth Schedule",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 245"
+  },
+  {
+   "id": "SCHED-FIFTH",
+   "category": "schedule",
+   "identifier": "Fifth Schedule",
+   "reference": "Fifth Schedule",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 117"
+  },
+  {
+   "id": "SCHED-FIRST",
+   "category": "schedule",
+   "identifier": "First Schedule",
+   "reference": "First Schedule",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 18"
+  },
+  {
+   "id": "SCHED-FIRST",
+   "category": "schedule",
+   "identifier": "First Schedule",
+   "reference": "First Schedule",
+   "description": "Cited in CAF2-TP-2021-Spring2023-Suggested.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2023-Suggested.pdf, p. 4"
+  },
+  {
+   "id": "SCHED-FIRST",
+   "category": "schedule",
+   "identifier": "First Schedule",
+   "reference": "First Schedule",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 262"
+  },
+  {
+   "id": "SCHED-FIRST",
+   "category": "schedule",
+   "identifier": "First Schedule",
+   "reference": "First Schedule",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 40"
+  },
+  {
+   "id": "SCHED-FOURTH",
+   "category": "schedule",
+   "identifier": "Fourth Schedule",
+   "reference": "Fourth Schedule",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "SCHED-FOURTH",
+   "category": "schedule",
+   "identifier": "Fourth Schedule",
+   "reference": "Fourth Schedule",
+   "description": "Cited in CAF2-TPC-2025-Autumn2026-Suggested.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Suggested.pdf, p. 3"
+  },
+  {
+   "id": "SCHED-SECOND",
+   "category": "schedule",
+   "identifier": "Second Schedule",
+   "reference": "Second Schedule",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 58"
+  },
+  {
+   "id": "SCHED-SIXTH",
+   "category": "schedule",
+   "identifier": "Sixth Schedule",
+   "reference": "Sixth Schedule",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 243"
+  },
+  {
+   "id": "SCHED-SIXTH",
+   "category": "schedule",
+   "identifier": "Sixth Schedule",
+   "reference": "Sixth Schedule",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 77"
+  },
+  {
+   "id": "SCHED-TENTH",
+   "category": "schedule",
+   "identifier": "Tenth Schedule",
+   "reference": "Tenth Schedule",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 245"
+  },
+  {
+   "id": "SCHED-THIRD",
+   "category": "schedule",
+   "identifier": "Third Schedule",
+   "reference": "Third Schedule",
+   "description": "Cited in CAF2-TP-2021-Autumn2025-Paper.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2025-Paper.pdf, p. 5"
+  },
+  {
+   "id": "SCHED-THIRD",
+   "category": "schedule",
+   "identifier": "Third Schedule",
+   "reference": "Third Schedule",
+   "description": "Cited in CAF2-TP-2021-Spring2024-Paper.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2024-Paper.pdf, p. 5"
+  },
+  {
+   "id": "SCHED-THIRD",
+   "category": "schedule",
+   "identifier": "Third Schedule",
+   "reference": "Third Schedule",
+   "description": "Cited in CAF2-TPC-2025-Autumn2026-Paper.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Paper.pdf, p. 1"
+  },
+  {
+   "id": "SCHED-THIRD",
+   "category": "schedule",
+   "identifier": "Third Schedule",
+   "reference": "Third Schedule",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 78"
+  },
+  {
+   "id": "SCHED-THIRD",
+   "category": "schedule",
+   "identifier": "Third Schedule",
+   "reference": "Third Schedule",
+   "description": "Cited in CAF2-TPC-2025-Spring2026-Examiner-Comments.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Examiner-Comments.pdf, p. 4"
+  },
+  {
+   "id": "SCHED-THIRD",
+   "category": "schedule",
+   "identifier": "Third Schedule",
+   "reference": "Third Schedule",
+   "description": "Cited in CAF2-TPC-2025-Spring2026-Paper.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Paper.pdf, p. 7"
+  },
+  {
+   "id": "SCHED-THIRD",
+   "category": "schedule",
+   "identifier": "Third Schedule",
+   "reference": "Third Schedule",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 100"
+  },
+  {
+   "id": "SCHED-THIRTEENTH",
+   "category": "schedule",
+   "identifier": "Thirteenth Schedule",
+   "reference": "Thirteenth Schedule",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a Schedule to the tax statute referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 30"
+  },
+  {
+   "id": "SRO-297(I)-2023",
+   "category": "sro",
+   "identifier": "SRO 297(I)/2023",
+   "reference": "SRO 297(I)/2023",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a statutory regulatory order referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 244"
+  },
+  {
+   "id": "SRO-494(I)-2015",
+   "category": "sro",
+   "identifier": "SRO 494(I)/2015",
+   "reference": "SRO 494(I)/2015",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a statutory regulatory order referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 257"
+  },
+  {
+   "id": "SRO-776(I)-2023",
+   "category": "sro",
+   "identifier": "SRO 776(I)/2023",
+   "reference": "SRO 776(I)/2023",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a statutory regulatory order referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 137"
+  },
+  {
+   "id": "SRO-791(I)-2015",
+   "category": "sro",
+   "identifier": "SRO 791(I)/2015",
+   "reference": "SRO 791(I)/2015",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a statutory regulatory order referenced in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 195"
+  },
+  {
+   "id": "STA-SEC-1",
+   "category": "statute_section",
+   "identifier": "Section 1",
+   "reference": "Sales Tax Act, 1990 Section 1",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 231"
+  },
+  {
+   "id": "ITO-SEC-111",
+   "category": "statute_section",
+   "identifier": "Section 111",
+   "reference": "Income Tax Ordinance, 2001 Section 111",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 203"
+  },
+  {
+   "id": "ITO-SEC-113",
+   "category": "statute_section",
+   "identifier": "Section 113",
+   "reference": "Income Tax Ordinance, 2001 Section 113",
+   "description": "Cited in CAF2-TP-2021-Autumn2024-Paper.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2024-Paper.pdf, p. 4"
+  },
+  {
+   "id": "ITO-SEC-113",
+   "category": "statute_section",
+   "identifier": "Section 113",
+   "reference": "Income Tax Ordinance, 2001 Section 113",
+   "description": "Cited in CAF2-TP-2021-Autumn2025-Paper.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2025-Paper.pdf, p. 2"
+  },
+  {
+   "id": "ITO-SEC-113",
+   "category": "statute_section",
+   "identifier": "Section 113",
+   "reference": "Income Tax Ordinance, 2001 Section 113",
+   "description": "Cited in CAF2-TP-2021-Spring2024-Paper.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2024-Paper.pdf, p. 2"
+  },
+  {
+   "id": "ITO-SEC-113",
+   "category": "statute_section",
+   "identifier": "Section 113",
+   "reference": "Income Tax Ordinance, 2001 Section 113",
+   "description": "Cited in CAF2-TP-2021-Spring2025-Paper.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2025-Paper.pdf, p. 2"
+  },
+  {
+   "id": "ITO-SEC-113",
+   "category": "statute_section",
+   "identifier": "Section 113",
+   "reference": "Income Tax Ordinance, 2001 Section 113",
+   "description": "Cited in CAF2-TPC-2025-Autumn2026-Paper.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Paper.pdf, p. 6"
+  },
+  {
+   "id": "ITO-SEC-113",
+   "category": "statute_section",
+   "identifier": "Section 113",
+   "reference": "Income Tax Ordinance, 2001 Section 113",
+   "description": "Cited in CAF2-TPC-2025-Model-Paper.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Model-Paper.pdf, p. 3"
+  },
+  {
+   "id": "ITO-SEC-113",
+   "category": "statute_section",
+   "identifier": "Section 113",
+   "reference": "Income Tax Ordinance, 2001 Section 113",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 39"
+  },
+  {
+   "id": "ITO-SEC-113",
+   "category": "statute_section",
+   "identifier": "Section 113",
+   "reference": "Income Tax Ordinance, 2001 Section 113",
+   "description": "Cited in CAF2-TPC-2025-Spring2026-Paper.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Paper.pdf, p. 6"
+  },
+  {
+   "id": "ITO-SEC-113",
+   "category": "statute_section",
+   "identifier": "Section 113",
+   "reference": "Income Tax Ordinance, 2001 Section 113",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 56"
+  },
+  {
+   "id": "STA-SEC-11H",
+   "category": "statute_section",
+   "identifier": "Section 11H",
+   "reference": "Sales Tax Act, 1990 Section 11H",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 273"
+  },
+  {
+   "id": "ITO-SEC-120",
+   "category": "statute_section",
+   "identifier": "Section 120",
+   "reference": "Income Tax Ordinance, 2001 Section 120",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 203"
+  },
+  {
+   "id": "ITO-SEC-1202A",
+   "category": "statute_section",
+   "identifier": "Section 120(2A)",
+   "reference": "Income Tax Ordinance, 2001 Section 120(2A)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 203"
+  },
+  {
+   "id": "ITO-SEC-121",
+   "category": "statute_section",
+   "identifier": "Section 121",
+   "reference": "Income Tax Ordinance, 2001 Section 121",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 238"
+  },
+  {
+   "id": "ITO-SEC-122",
+   "category": "statute_section",
+   "identifier": "Section 122",
+   "reference": "Income Tax Ordinance, 2001 Section 122",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 211"
+  },
+  {
+   "id": "ITO-SEC-1225A",
+   "category": "statute_section",
+   "identifier": "Section 122(5A)",
+   "reference": "Income Tax Ordinance, 2001 Section 122(5A)",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 86"
+  },
+  {
+   "id": "ITO-SEC-122E",
+   "category": "statute_section",
+   "identifier": "Section 122E",
+   "reference": "Income Tax Ordinance, 2001 Section 122E",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 203"
+  },
+  {
+   "id": "ITO-SEC-124A",
+   "category": "statute_section",
+   "identifier": "Section 124A",
+   "reference": "Income Tax Ordinance, 2001 Section 124A",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 210"
+  },
+  {
+   "id": "ITO-SEC-129A",
+   "category": "statute_section",
+   "identifier": "Section 129A",
+   "reference": "Income Tax Ordinance, 2001 Section 129A",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 218"
+  },
+  {
+   "id": "STA-SEC-13",
+   "category": "statute_section",
+   "identifier": "Section 13",
+   "reference": "Sales Tax Act, 1990 Section 13",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 232"
+  },
+  {
+   "id": "ITO-SEC-148",
+   "category": "statute_section",
+   "identifier": "Section 148",
+   "reference": "Income Tax Ordinance, 2001 Section 148",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 56"
+  },
+  {
+   "id": "ITO-SEC-1487",
+   "category": "statute_section",
+   "identifier": "Section 148(7)",
+   "reference": "Income Tax Ordinance, 2001 Section 148(7)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 56"
+  },
+  {
+   "id": "ITO-SEC-155",
+   "category": "statute_section",
+   "identifier": "Section 15(5)",
+   "reference": "Income Tax Ordinance, 2001 Section 15(5)",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "ITO-SEC-153",
+   "category": "statute_section",
+   "identifier": "Section 153",
+   "reference": "Income Tax Ordinance, 2001 Section 153",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 136"
+  },
+  {
+   "id": "ITO-SEC-153",
+   "category": "statute_section",
+   "identifier": "Section 153",
+   "reference": "Income Tax Ordinance, 2001 Section 153",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 56"
+  },
+  {
+   "id": "ITO-SEC-154",
+   "category": "statute_section",
+   "identifier": "Section 154",
+   "reference": "Income Tax Ordinance, 2001 Section 154",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 56"
+  },
+  {
+   "id": "ITO-SEC-156",
+   "category": "statute_section",
+   "identifier": "Section 156",
+   "reference": "Income Tax Ordinance, 2001 Section 156",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 55"
+  },
+  {
+   "id": "ITO-SEC-161",
+   "category": "statute_section",
+   "identifier": "Section 161",
+   "reference": "Income Tax Ordinance, 2001 Section 161",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 100"
+  },
+  {
+   "id": "ITO-SEC-162",
+   "category": "statute_section",
+   "identifier": "Section 162",
+   "reference": "Income Tax Ordinance, 2001 Section 162",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 100"
+  },
+  {
+   "id": "ITO-SEC-177",
+   "category": "statute_section",
+   "identifier": "Section 177",
+   "reference": "Income Tax Ordinance, 2001 Section 177",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 203"
+  },
+  {
+   "id": "ITO-SEC-2",
+   "category": "statute_section",
+   "identifier": "Section 2",
+   "reference": "Income Tax Ordinance, 2001 Section 2",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "STA-SEC-2",
+   "category": "statute_section",
+   "identifier": "Section 2",
+   "reference": "Sales Tax Act, 1990 Section 2",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 11"
+  },
+  {
+   "id": "STA-SEC-212",
+   "category": "statute_section",
+   "identifier": "Section 2(12)",
+   "reference": "Sales Tax Act, 1990 Section 2(12)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 232"
+  },
+  {
+   "id": "STA-SEC-222A",
+   "category": "statute_section",
+   "identifier": "Section 2(22A)",
+   "reference": "Sales Tax Act, 1990 Section 2(22A)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 240"
+  },
+  {
+   "id": "ITO-SEC-225",
+   "category": "statute_section",
+   "identifier": "Section 2(25)",
+   "reference": "Income Tax Ordinance, 2001 Section 2(25)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 235"
+  },
+  {
+   "id": "STA-SEC-248",
+   "category": "statute_section",
+   "identifier": "Section 2(48)",
+   "reference": "Sales Tax Act, 1990 Section 2(48)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 233"
+  },
+  {
+   "id": "STA-SEC-29",
+   "category": "statute_section",
+   "identifier": "Section 2(9)",
+   "reference": "Sales Tax Act, 1990 Section 2(9)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 240"
+  },
+  {
+   "id": "ITO-SEC-21",
+   "category": "statute_section",
+   "identifier": "Section 21",
+   "reference": "Income Tax Ordinance, 2001 Section 21",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 105"
+  },
+  {
+   "id": "ITO-SEC-22",
+   "category": "statute_section",
+   "identifier": "Section 22",
+   "reference": "Income Tax Ordinance, 2001 Section 22",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 158"
+  },
+  {
+   "id": "ITO-SEC-228",
+   "category": "statute_section",
+   "identifier": "Section 22(8)",
+   "reference": "Income Tax Ordinance, 2001 Section 22(8)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 98"
+  },
+  {
+   "id": "ITO-SEC-235",
+   "category": "statute_section",
+   "identifier": "Section 235",
+   "reference": "Income Tax Ordinance, 2001 Section 235",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 136"
+  },
+  {
+   "id": "ITO-SEC-235",
+   "category": "statute_section",
+   "identifier": "Section 235",
+   "reference": "Income Tax Ordinance, 2001 Section 235",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 56"
+  },
+  {
+   "id": "ITO-SEC-236G",
+   "category": "statute_section",
+   "identifier": "Section 236G",
+   "reference": "Income Tax Ordinance, 2001 Section 236G",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 272"
+  },
+  {
+   "id": "ITO-SEC-293",
+   "category": "statute_section",
+   "identifier": "Section 29(3)",
+   "reference": "Income Tax Ordinance, 2001 Section 29(3)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 98"
+  },
+  {
+   "id": "STA-SEC-3",
+   "category": "statute_section",
+   "identifier": "Section 3",
+   "reference": "Sales Tax Act, 1990 Section 3",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 249"
+  },
+  {
+   "id": "STA-SEC-37",
+   "category": "statute_section",
+   "identifier": "Section 3(7)",
+   "reference": "Sales Tax Act, 1990 Section 3(7)",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 11"
+  },
+  {
+   "id": "ITO-SEC-37",
+   "category": "statute_section",
+   "identifier": "Section 37",
+   "reference": "Income Tax Ordinance, 2001 Section 37",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 133"
+  },
+  {
+   "id": "STA-SEC-4",
+   "category": "statute_section",
+   "identifier": "Section 4",
+   "reference": "Sales Tax Act, 1990 Section 4",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 233"
+  },
+  {
+   "id": "ITO-SEC-48",
+   "category": "statute_section",
+   "identifier": "Section 48",
+   "reference": "Income Tax Ordinance, 2001 Section 48",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 274"
+  },
+  {
+   "id": "ITO-SEC-4B",
+   "category": "statute_section",
+   "identifier": "Section 4B",
+   "reference": "Income Tax Ordinance, 2001 Section 4B",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "ITO-SEC-51",
+   "category": "statute_section",
+   "identifier": "Section 51",
+   "reference": "Income Tax Ordinance, 2001 Section 51",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 184"
+  },
+  {
+   "id": "ITO-SEC-5A",
+   "category": "statute_section",
+   "identifier": "Section 5A",
+   "reference": "Income Tax Ordinance, 2001 Section 5A",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 135"
+  },
+  {
+   "id": "ITO-SEC-6",
+   "category": "statute_section",
+   "identifier": "Section 6",
+   "reference": "Income Tax Ordinance, 2001 Section 6",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "ITO-SEC-60",
+   "category": "statute_section",
+   "identifier": "Section 60",
+   "reference": "Income Tax Ordinance, 2001 Section 60",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 161"
+  },
+  {
+   "id": "ITO-SEC-61",
+   "category": "statute_section",
+   "identifier": "Section 61",
+   "reference": "Income Tax Ordinance, 2001 Section 61",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 191"
+  },
+  {
+   "id": "ITO-SEC-614",
+   "category": "statute_section",
+   "identifier": "Section 61(4)",
+   "reference": "Income Tax Ordinance, 2001 Section 61(4)",
+   "description": "Cited in CAF2-TPC-2025-Question-Bank-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 191"
+  },
+  {
+   "id": "ITO-SEC-68",
+   "category": "statute_section",
+   "identifier": "Section 68",
+   "reference": "Income Tax Ordinance, 2001 Section 68",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 128"
+  },
+  {
+   "id": "ITO-SEC-69",
+   "category": "statute_section",
+   "identifier": "Section 69",
+   "reference": "Income Tax Ordinance, 2001 Section 69",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 61"
+  },
+  {
+   "id": "ITO-SEC-7",
+   "category": "statute_section",
+   "identifier": "Section 7",
+   "reference": "Income Tax Ordinance, 2001 Section 7",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 264"
+  },
+  {
+   "id": "STA-SEC-7",
+   "category": "statute_section",
+   "identifier": "Section 7",
+   "reference": "Sales Tax Act, 1990 Section 7",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 267"
+  },
+  {
+   "id": "ITO-SEC-70",
+   "category": "statute_section",
+   "identifier": "Section 70",
+   "reference": "Income Tax Ordinance, 2001 Section 70",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 98"
+  },
+  {
+   "id": "STA-SEC-73",
+   "category": "statute_section",
+   "identifier": "Section 73",
+   "reference": "Sales Tax Act, 1990 Section 73",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 11"
+  },
+  {
+   "id": "ITO-SEC-78",
+   "category": "statute_section",
+   "identifier": "Section 78",
+   "reference": "Income Tax Ordinance, 2001 Section 78",
+   "description": "Appears in the ICAP Specific Examinable Knowledge Reference (examinable list or its stated exclusions — confirm exclusion status in the syllabus text).",
+   "applicable_period": "per exam session of source",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "STA-SEC-79",
+   "category": "statute_section",
+   "identifier": "Section 79",
+   "reference": "Sales Tax Act, 1990 Section 79",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 267"
+  },
+  {
+   "id": "STA-SEC-86",
+   "category": "statute_section",
+   "identifier": "Section 8(6)",
+   "reference": "Sales Tax Act, 1990 Section 8(6)",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 232"
+  },
+  {
+   "id": "STA-SEC-83C",
+   "category": "statute_section",
+   "identifier": "Section 83C",
+   "reference": "Sales Tax Act, 1990 Section 83C",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Sales Tax Act, 1990 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 283"
+  },
+  {
+   "id": "ITO-SEC-85",
+   "category": "statute_section",
+   "identifier": "Section 85",
+   "reference": "Income Tax Ordinance, 2001 Section 85",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 237"
+  },
+  {
+   "id": "ITO-SEC-9",
+   "category": "statute_section",
+   "identifier": "Section 9",
+   "reference": "Income Tax Ordinance, 2001 Section 9",
+   "description": "Cited in CAF2-TPC-2025-Study-Text-2026.pdf: a section of the Income Tax Ordinance, 2001 discussed or applied in the material.",
+   "applicable_period": "per exam session of source",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 264"
+  },
+  {
+   "id": "TY-2021",
+   "category": "tax_year",
+   "identifier": "Tax Year 2021",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2021",
+   "description": "Referenced in CAF2-TPC-2025-Autumn2026-Suggested.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2021",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Suggested.pdf, p. 5"
+  },
+  {
+   "id": "TY-2022",
+   "category": "tax_year",
+   "identifier": "Tax Year 2022",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2022",
+   "description": "Referenced in CAF2-TP-2021-Autumn2024-Examiner-Comments.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2022",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2024-Examiner-Comments.pdf, p. 1"
+  },
+  {
+   "id": "TY-2022",
+   "category": "tax_year",
+   "identifier": "Tax Year 2022",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2022",
+   "description": "Referenced in CAF2-TPC-2025-Spring2026-Suggested.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2022",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Suggested.pdf, p. 4"
+  },
+  {
+   "id": "TY-2023",
+   "category": "tax_year",
+   "identifier": "Tax Year 2023",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2023",
+   "description": "Referenced in CAF2-TPC-2025-Question-Bank-2026.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2023",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 231"
+  },
+  {
+   "id": "TY-2023",
+   "category": "tax_year",
+   "identifier": "Tax Year 2023",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2023",
+   "description": "Referenced in CAF2-TPC-2025-Study-Text-2026.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2023",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 144"
+  },
+  {
+   "id": "TY-2024",
+   "category": "tax_year",
+   "identifier": "Tax Year 2024",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2024",
+   "description": "Referenced in CAF2-TP-2021-Autumn2024-Suggested.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2024",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2024-Suggested.pdf, p. 4"
+  },
+  {
+   "id": "TY-2025",
+   "category": "tax_year",
+   "identifier": "Tax Year 2025",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2025",
+   "description": "Referenced in CAF2-TP-2021-Autumn2025-Suggested.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2025",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2025-Suggested.pdf, p. 2"
+  },
+  {
+   "id": "TY-2025",
+   "category": "tax_year",
+   "identifier": "Tax Year 2025",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2025",
+   "description": "Referenced in CAF2-TPC-2025-Autumn2026-Suggested.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2025",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Suggested.pdf, p. 5"
+  },
+  {
+   "id": "TY-2025",
+   "category": "tax_year",
+   "identifier": "Tax Year 2025",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2025",
+   "description": "Referenced in CAF2-TPC-2025-Question-Bank-2026.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2025",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 145"
+  },
+  {
+   "id": "TY-2025",
+   "category": "tax_year",
+   "identifier": "Tax Year 2025",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2025",
+   "description": "Referenced in CAF2-TPC-2025-Spring2026-Suggested.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2025",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Suggested.pdf, p. 4"
+  },
+  {
+   "id": "TY-2025",
+   "category": "tax_year",
+   "identifier": "Tax Year 2025",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2025",
+   "description": "Referenced in CAF2-TPC-2025-Study-Text-2026.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2025",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 82"
+  },
+  {
+   "id": "TY-2026",
+   "category": "tax_year",
+   "identifier": "Tax Year 2026",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2026",
+   "description": "Referenced in CAF2-TPC-2025-Autumn2026-Suggested.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2026",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Suggested.pdf, p. 1"
+  },
+  {
+   "id": "TY-2026",
+   "category": "tax_year",
+   "identifier": "Tax Year 2026",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2026",
+   "description": "Referenced in CAF2-TPC-2025-Question-Bank-2026.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2026",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 145"
+  },
+  {
+   "id": "TY-2026",
+   "category": "tax_year",
+   "identifier": "Tax Year 2026",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2026",
+   "description": "Referenced in CAF2-TPC-2025-Spring2026-Suggested.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2026",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Suggested.pdf, p. 1"
+  },
+  {
+   "id": "TY-2026",
+   "category": "tax_year",
+   "identifier": "Tax Year 2026",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2026",
+   "description": "Referenced in CAF2-TPC-2025-Study-Text-2026.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2026",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 82"
+  },
+  {
+   "id": "TY-2027",
+   "category": "tax_year",
+   "identifier": "Tax Year 2027",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2027",
+   "description": "Referenced in CAF2-TPC-2025-Question-Bank-2026.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2027",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Question-Bank-2026.pdf, p. 24"
+  },
+  {
+   "id": "TY-2027",
+   "category": "tax_year",
+   "identifier": "Tax Year 2027",
+   "reference": "Income Tax Ordinance, 2001 — Tax Year 2027",
+   "description": "Referenced in CAF2-TPC-2025-Study-Text-2026.pdf: the tax year to which computations or provisions relate.",
+   "applicable_period": "TY 2027",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Study-Text-2026.pdf, p. 68"
+  },
+  {
+   "id": "KR-CONST-78-88",
+   "category": "knowledge_reference",
+   "identifier": "Constitution of Pakistan, Articles 78 to 88",
+   "reference": "Constitution of Pakistan, Articles 78-88",
+   "description": "Federal financial-procedure provisions (Consolidated Fund, money bills, etc.) — examinable knowledge for Area A.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-CONST-118-127",
+   "category": "knowledge_reference",
+   "identifier": "Constitution of Pakistan, Articles 118 to 127",
+   "reference": "Constitution of Pakistan, Articles 118-127",
+   "description": "Provincial financial-procedure provisions — examinable knowledge for Area A.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-CONST-4SCH-43-53",
+   "category": "knowledge_reference",
+   "identifier": "Fourth Schedule to the Constitution, Sections 43 to 53",
+   "reference": "Constitution of Pakistan, Fourth Schedule, Sections 43-53",
+   "description": "Federal vs provincial legislative lists for taxation — examinable knowledge for Area A.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ETHICS-604",
+   "category": "knowledge_reference",
+   "identifier": "Code of Ethics for Chartered Accountants (Revised 2024), Sections 604.1 to 604.10",
+   "reference": "Code of Ethics for Chartered Accountants (Revised 2024), 604.1-604.10",
+   "description": "Ethics provisions on tax practice referenced by the syllabus (Area A ethics).",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-S2-DEFS",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — Section 2 definitions",
+   "reference": "Income Tax Ordinance, 2001, Section 2",
+   "description": "Examinable definition clauses: 38 items (nos. 1-68 with gaps; full list in the ICAP syllabus/material) (plus definitions under relevant sections)",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-CH2",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — Chapter II (charge of tax)",
+   "reference": "Income Tax Ordinance, 2001, Chapter II",
+   "description": "Examinable except Sections 4B, 5A, 5AA, 6, 7, 7A, 7C, 7D.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-CH3",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — Chapter III (heads of income)",
+   "reference": "Income Tax Ordinance, 2001, Chapter III",
+   "description": "Examinable except Sections 15(5), 21(la), 23B, 29A, 30, 31, 36, 44A, 49, 56A, 57A, 59AA, 59B, 64B, 65B, 65E, 65G.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-CH4",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — Chapter IV (common provisions)",
+   "reference": "Income Tax Ordinance, 2001, Chapter IV",
+   "description": "Examinable except Sections 78 and 79.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-CH5",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — Chapter V (deductions/credits)",
+   "reference": "Income Tax Ordinance, 2001, Chapter V",
+   "description": "Examinable except Part II Division III and Parts IV and V.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-CH7-P2",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — Chapter VII, Part II",
+   "reference": "Income Tax Ordinance, 2001, Chapter VII Part II",
+   "description": "Examinable part on collection/recovery-related provisions.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-CH8",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — Chapter VIII, Sections 108B and 110",
+   "reference": "Income Tax Ordinance, 2001, Sections 108B, 110",
+   "description": "Only these two sections examinable.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-CH9-S113",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — Section 113 (minimum tax)",
+   "reference": "Income Tax Ordinance, 2001, Section 113",
+   "description": "Minimum tax on turnover; the only examinable section of Chapter IX.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-CH10",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — Chapter X (procedure)",
+   "reference": "Income Tax Ordinance, 2001, Chapter X (scoped)",
+   "description": "Part I except 114(1A); Part II except 120B; all of Part III; Part V Division III only 149, 150, 151, 155, 156; Part VIII only 174 and 177.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITO-SCHEDS",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Ordinance, 2001 — First, Second, Third and Sixth Schedules",
+   "reference": "Income Tax Ordinance, 2001, Schedules 1, 2, 3, 6",
+   "description": "Relevant parts of these schedules are examinable.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-ITR-RULES",
+   "category": "knowledge_reference",
+   "identifier": "Income Tax Rules, 2002 — specified rules",
+   "reference": "Income Tax Rules, 2002",
+   "description": "Rules 3-6, 10, 11, 13A, 13B, 13D, 13L(1)(d), 13N(4)-(6), 13N(8), 14, 33, 231E, 231G.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-STA-S2-DEFS",
+   "category": "knowledge_reference",
+   "identifier": "Sales Tax Act, 1990 — Section 2 definitions",
+   "reference": "Sales Tax Act, 1990, Section 2",
+   "description": "Examinable definition clauses: 34 items (nos. 1-48 with gaps; full list in the ICAP syllabus/material)",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-STA-CH2-5",
+   "category": "knowledge_reference",
+   "identifier": "Sales Tax Act, 1990 — Chapters II, III, IV and V",
+   "reference": "Sales Tax Act, 1990, Chapters II-V (scoped)",
+   "description": "Examinable except Sections 3(7), 3(9AA), 6(1A), 8(5), 11F, 25AA.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-STA-S73",
+   "category": "knowledge_reference",
+   "identifier": "Sales Tax Act, 1990 — Section 73",
+   "reference": "Sales Tax Act, 1990, Section 73",
+   "description": "The only examinable section of Chapter X.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-STA-SCHEDS",
+   "category": "knowledge_reference",
+   "identifier": "Sales Tax Act, 1990 — 3rd, 5th, 6th and 8th Schedules (concepts only)",
+   "reference": "Sales Tax Act, 1990, Schedules 3, 5, 6, 8",
+   "description": "Basic concepts only; item-wise lists excluded. Schedule-specific issues (e.g. minimum production under 13th Schedule, withholding under 11th Schedule) are not tested.",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  },
+  {
+   "id": "KR-STR-RULES",
+   "category": "knowledge_reference",
+   "identifier": "Sales Tax Rules, 2006 — specified rules",
+   "reference": "Sales Tax Rules, 2006",
+   "description": "Rule 2(1)(xlvii) and Chapters I, II, III, IV and XVII, excluding the provisos to Rule 14(1) and Rule 18(9).",
+   "applicable_period": "Spring 2027 attempt",
+   "verification": "authoritative",
+   "badge": {
+    "class": "b-auth",
+    "label": "authoritative — ICAP syllabus"
+   },
+   "source": "CAF-Syllabus-2025-Spring2027.pdf, p. 10"
+  }
+ ],
+ "rate_tables": [
+  {
+   "id": "RT-MODEL-SLAB-NONSAL",
+   "category": "rate_table",
+   "identifier": "Non-salaried individual & AOP slab (6 rows)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Rows: 0% to Rs 600,000; 15% of excess over 600,000 to 1,200,000; Rs 90,000 + 20% of excess over 1,200,000 to 1,600,000; Rs 170,000 + 30% of excess over 1,600,000 to 3,200,000; Rs 650,000 + 40% of excess over 3,200,000 to 5,600,000; Rs 1,610,000 + 45% of excess over 5,600,000.",
+   "applicable_period": "Model paper (undated)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Model-Paper.pdf, p. 7"
+  },
+  {
+   "id": "RT-MODEL-CG-SEC",
+   "category": "rate_table",
+   "identifier": "Capital gains on disposal of securities",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Acquired 1 Jul 2022–30 Jun 2024: 15/12.5/10/7.5/5/2.5/0% by holding period (<=1yr … >6yr); PMEX future commodity contracts 5%. Acquired on/after 1 Jul 2024: 15% for ATL persons, slab rates for non-ATL (floor 15%). Proviso: 12.5% for acquisitions 1 Jul 2013–30 Jun 2022; 0% for pre-1 Jul 2013.",
+   "applicable_period": "Model paper (undated)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Model-Paper.pdf, p. 7"
+  },
+  {
+   "id": "RT-MODEL-DIV",
+   "category": "rate_table",
+   "identifier": "Dividend tax rates",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "(a) 7.5% IPP pass-through dividends; (b) 15% mutual funds/REITs/others; (ba) 25%/15% for mutual funds per debt/equity mix (29% debt component if corporate recipient); (c) 0% REIT scheme from SPV, 35% others from SPV; (d) 25% where the distributing company pays no tax due to exemption/loss carry-forward/credits.",
+   "applicable_period": "Model paper (undated)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Model-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-MODEL-DEP",
+   "category": "rate_table",
+   "identifier": "Depreciation and initial allowance",
+   "reference": "Third Schedule / Section 23, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Building 10%; plant and machinery 15%; initial allowance 25% for plant and machinery.",
+   "applicable_period": "Model paper (undated)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Model-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-MODEL-MINTAX",
+   "category": "rate_table",
+   "identifier": "Minimum tax under section 113",
+   "reference": "Income Tax Ordinance, 2001, Section 113 (as printed on paper)",
+   "description": "1.25% of the person's turnover for the year.",
+   "applicable_period": "Model paper (undated)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Model-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-S26-SLAB-NONSAL-TRUNC",
+   "category": "rate_table",
+   "identifier": "Non-salaried individual & AOP slab — rows 4–6 only (truncated print)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Printed extract shows only rows 4–6 (same figures as model paper). Rows 1–3 not printed on this paper's last page.",
+   "applicable_period": "Spring 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-S26-SLAB-SAL-TRUNC",
+   "category": "rate_table",
+   "identifier": "Salaried individual slab — rows 4–6 only (truncated print)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Rows 4–6: Rs 116,000 + 23% of excess over 2,200,000 to 3,200,000; Rs 346,000 + 30% of excess over 3,200,000 to 4,100,000; Rs 616,000 + 35% of excess over 4,100,000.",
+   "applicable_period": "Spring 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-S26-CG-SEC",
+   "category": "rate_table",
+   "identifier": "Capital gains on disposal of securities",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Rows 1–7 as model paper (15% down to 0% by holding period for 1 Jul 2022–30 Jun 2024 acquisitions); 15% for ATL persons on post-1 Jul 2024 acquisitions; proviso: 12.5% for 1 Jul 2013–30 Jun 2022 acquisitions.",
+   "applicable_period": "Spring 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-S26-DEP",
+   "category": "rate_table",
+   "identifier": "Depreciation and initial allowance",
+   "reference": "Third Schedule / Section 23, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Building (all types) 10%; furniture/fittings, machinery & plant (not otherwise specified), motor vehicles (all types) 15%; disability-access ramp up to Rs 250,000 each 100%; initial allowance 25% plant and machinery.",
+   "applicable_period": "Spring 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-S26-PROFIT-DEBT-20",
+   "category": "rate_table",
+   "identifier": "Profit on debt — 20%",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Printed extract states the tax rate for profit on debt is 20%. NOTE: Autumn 2026 paper prints 15% for the same item — discrepancy flagged, see inferences.",
+   "applicable_period": "Spring 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-S26-MINTAX",
+   "category": "rate_table",
+   "identifier": "Minimum tax under section 113",
+   "reference": "Income Tax Ordinance, 2001, Section 113 (as printed on paper)",
+   "description": "1.25% of the person's turnover for the year.",
+   "applicable_period": "Spring 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Spring2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-A26-SLAB-NONSAL-TRUNC",
+   "category": "rate_table",
+   "identifier": "Non-salaried individual & AOP slab — rows 4–6 only (truncated print)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Same rows 4–6 as Spring 2026/model paper.",
+   "applicable_period": "Autumn 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-A26-SLAB-SAL-TRUNC",
+   "category": "rate_table",
+   "identifier": "Salaried individual slab — rows 4–6 only (truncated print)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Same rows 4–6 as Spring 2026 paper.",
+   "applicable_period": "Autumn 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-A26-CG-SEC-TRUNC",
+   "category": "rate_table",
+   "identifier": "Capital gains on disposal of securities — rows 1–4 printed",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Printed extract shows rows 1–4 (15/12.5/10/7.5%) and the ATL 15% rule for post-1 Jul 2024 acquisitions.",
+   "applicable_period": "Autumn 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-A26-DEP",
+   "category": "rate_table",
+   "identifier": "Depreciation and initial allowance",
+   "reference": "Third Schedule / Section 23, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Initial allowance 25% for plant and machinery; depreciation 15% on plant and machinery and motor vehicles.",
+   "applicable_period": "Autumn 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-A26-DIV-15",
+   "category": "rate_table",
+   "identifier": "Dividend tax — 15%",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Printed extract states the tax rate for dividend shall be 15%.",
+   "applicable_period": "Autumn 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-A26-PROFIT-DEBT-15",
+   "category": "rate_table",
+   "identifier": "Profit on debt — 15%",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Printed extract states the tax rate for profit on debt shall be 15%. NOTE: Spring 2026 paper prints 20% — discrepancy flagged, see inferences.",
+   "applicable_period": "Autumn 2026 attempt",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TPC-2025-Autumn2026-Paper.pdf, p. 8"
+  },
+  {
+   "id": "RT-TP25-SLAB-NONSAL",
+   "category": "rate_table",
+   "identifier": "Non-salaried individual & AOP slab (6 rows, full)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Full 6-row slab, identical figures to model paper.",
+   "applicable_period": "Autumn 2025 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2025-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TP25-SLAB-SAL",
+   "category": "rate_table",
+   "identifier": "Salaried individual slab (6 rows, full)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "0% to 600,000; 5% of excess over 600,000 to 1,200,000; Rs 30,000 + 15% of excess over 1,200,000 to 2,200,000; Rs 180,000 + 25% of excess over 2,200,000 to 3,200,000; Rs 430,000 + 30% of excess over 3,200,000 to 4,100,000; Rs 700,000 + 35% of excess over 4,100,000.",
+   "applicable_period": "Autumn 2025 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2025-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TP25-PROFIT-DEBT-15",
+   "category": "rate_table",
+   "identifier": "Profit on debt — 15%",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Printed extract states 15%.",
+   "applicable_period": "Autumn 2025 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2025-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TP25-CG-IMMOV",
+   "category": "rate_table",
+   "identifier": "Capital gain on sale of immovable property",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Open plots: 15/12.5/10/7.5/5/2.5/0% by holding period (<=1yr to >6yr). Constructed property: 15/10/7.5/5/0% (>4yr 0%). Flats: 15/7.5/0% (>2yr 0%).",
+   "applicable_period": "Autumn 2025 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2025-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TP25-DEP",
+   "category": "rate_table",
+   "identifier": "Initial allowance and depreciation",
+   "reference": "Third Schedule / Section 23, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Initial allowance 25% plant and machinery; depreciation 15% motor vehicle and plant and machinery.",
+   "applicable_period": "Autumn 2025 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2025-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TPS25-SLAB-NONSAL",
+   "category": "rate_table",
+   "identifier": "Non-salaried individual & AOP slab (6 rows, full)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Full 6-row slab, identical figures to model paper.",
+   "applicable_period": "Spring 2025 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2025-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TPS25-CG-SEC",
+   "category": "rate_table",
+   "identifier": "Capital gains on disposal of securities (full 8-row table)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Same full table as model paper including PMEX 5% row and the three provisos.",
+   "applicable_period": "Spring 2025 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2025-Paper.pdf, p. 7"
+  },
+  {
+   "id": "RT-TPS25-DEP",
+   "category": "rate_table",
+   "identifier": "Initial allowance",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "25% for plant and machinery.",
+   "applicable_period": "Spring 2025 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2025-Paper.pdf, p. 7"
+  },
+  {
+   "id": "RT-TP24-SLAB-NONSAL-OLD",
+   "category": "rate_table",
+   "identifier": "Non-salaried individual & AOP slab — OLD 7-row structure",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "0% to 600,000; 7.5% of excess over 600,000 to 800,000; Rs 15,000 + 15% of excess over 800,000 to 1,200,000; Rs 75,000 + 20% of excess over 1,200,000 to 2,400,000; Rs 315,000 + 25% of excess over 2,400,000 to 3,000,000; Rs 465,000 + 30% of excess over 3,000,000 to 4,000,000; Rs 765,000 + 35% of excess over 4,000,000. Superseded by the 6-row slab from Spring 2025 papers onward.",
+   "applicable_period": "Spring 2024 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2024-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TP24-DEP-FURN",
+   "category": "rate_table",
+   "identifier": "Depreciation — furniture 15%",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Printed extract states the depreciation rate for furniture is 15%.",
+   "applicable_period": "Spring 2024 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2024-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TP24-CG-IMMOV",
+   "category": "rate_table",
+   "identifier": "Capital gain on sale of immovable property",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Same table as Autumn 2025 paper.",
+   "applicable_period": "Spring 2024 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Spring2024-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TPA24-SLAB-NONSAL-OLD",
+   "category": "rate_table",
+   "identifier": "Non-salaried individual & AOP slab — OLD 7-row structure",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Same old 7-row slab as Spring 2024 paper.",
+   "applicable_period": "Autumn 2024 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2024-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TPA24-CG-SEC",
+   "category": "rate_table",
+   "identifier": "Capital gains on disposal of securities (8-row table)",
+   "reference": "First Schedule, Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Single-rate column version: 15/12.5/10/7.5/5/2.5/0% by holding period, PMEX 5%; provisos as model paper.",
+   "applicable_period": "Autumn 2024 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2024-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TPA24-CG-IMMOV",
+   "category": "rate_table",
+   "identifier": "Capital gain on sale of immovable property",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "Same table as other 2021-scheme papers.",
+   "applicable_period": "Autumn 2024 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2024-Paper.pdf, p. 6"
+  },
+  {
+   "id": "RT-TPA24-DEP",
+   "category": "rate_table",
+   "identifier": "Initial allowance",
+   "reference": "Income Tax Ordinance, 2001 (as printed on paper)",
+   "description": "25% for plant and machinery (tail of extract).",
+   "applicable_period": "Autumn 2024 attempt (2021 scheme)",
+   "verification": "official_guidance",
+   "badge": {
+    "class": "b-public",
+    "label": "official guidance — ICAP materials"
+   },
+   "source": "CAF2-TP-2021-Autumn2024-Paper.pdf, p. 6"
+  }
+ ],
+ "verification_key": {
+  "authoritative": "Stated by ICAP in the syllabus / examinable knowledge reference.",
+  "official_guidance": "Printed or stated by ICAP in exam papers, suggested answers, marking plans, or study material — exam-session specific.",
+  "inference": "Inferred from the materials, not stated as fact by ICAP. Never presented as fact.",
+  "unverified": "Seen in materials but not yet checked."
+ },
+ "note": "Provision names, section references and rates are facts. Descriptions are own-wording summaries, never verbatim ICAP text."
+}
