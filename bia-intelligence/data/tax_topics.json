@@ -1,0 +1,202 @@
+[
+ {
+  "id": "TAX-T-A1",
+  "code": "A.a",
+  "title": "Basic Concepts of Taxation and Constitutional Provisions",
+  "area": "A",
+  "area_title": "Objective, System, Constitutional Provisions and Ethics",
+  "area_weightage": "5-10",
+  "summary": "Taxes fall into two broad families: direct taxes, levied on a person's income or wealth, and indirect taxes, levied on consumption and transactions such as sales tax. The distinction matters because direct taxes are generally progressive while indirect taxes are regressive, which shapes debates about fairness and who really bears the burden. In Pakistan the power to impose each kind of tax is divided between the Federation and the provinces by the Fourth Schedule to the Constitution (sections 43-53).",
+  "key_points": [
+   "Direct tax: charged on a person's income or wealth (e.g. income tax); generally progressive.",
+   "Indirect tax: charged on goods, services and transactions (e.g. sales tax); generally regressive.",
+   "Progressive vs regressive incidence decides the fairness debate - a favourite MCQ angle.",
+   "Constitutional division: Fourth Schedule sections 43-53 list what Parliament versus provincial assemblies may tax.",
+   "In practice the Federation taxes income and sales tax on goods; provinces tax services and agricultural income."
+  ],
+  "how_examined": "T1 knowledge area (all of Area A is only 5-10 marks): usually 1-2 MCQs in Q1 on direct vs indirect tax, or on which legislature may impose a given tax.",
+  "legislation_refs": [
+   "Constitution of Pakistan - Fourth Schedule, sections 43 to 53"
+  ],
+  "source": "own-teaching"
+ },
+ {
+  "id": "TAX-T-A2",
+  "code": "A.b",
+  "title": "Federal and Provincial Financial Procedures",
+  "area": "A",
+  "area_title": "Objective, System, Constitutional Provisions and Ethics",
+  "area_weightage": "5-10",
+  "summary": "Articles 78-88 of the Constitution set the federal money rules: federal revenues flow into the Federal Consolidated Fund, certain receipts into the Public Account, and no money may be spent or borrowed without parliamentary authority, with tax and spending proposals passing through the annual budget and the money-bill procedure. Articles 118-127 mirror the same machinery for each province with the Provincial Consolidated Fund. The examinable point is not memorising article numbers in isolation but knowing which fund, which legislature, and the money-bill route.",
+  "key_points": [
+   "Federal Consolidated Fund vs Public Account: general revenues versus earmarked receipts (Arts 78-88).",
+   "No expenditure or borrowing without the authority of Parliament; money bills follow a special procedure.",
+   "Provincial mirror: the Provincial Consolidated Fund and Public Account (Arts 118-127).",
+   "Link to taxation: a tax is valid only if imposed by the legislature empowered to impose it.",
+   "The annual budget statement ties proposed taxation to authorised spending."
+  ],
+  "how_examined": "T1: typically 1-mark MCQs ('which fund receives X?') or a short note asking the candidate to outline federal or provincial financial procedure.",
+  "legislation_refs": [
+   "Constitution of Pakistan - Articles 78 to 88 (federal financial procedure)",
+   "Constitution of Pakistan - Articles 118 to 127 (provincial financial procedure)"
+  ],
+  "source": "own-teaching"
+ },
+ {
+  "id": "TAX-T-A3",
+  "code": "A.c",
+  "title": "Ethics",
+  "area": "A",
+  "area_title": "Objective, System, Constitutional Provisions and Ethics",
+  "area_weightage": "5-10",
+  "summary": "The state levies tax to fund public services, but that power has limits: taxation must be lawful, fair and accountable, administered through the four pillars of fairness, transparency, equity and accountability. Tax evasion - breaking the law to escape tax - is illegal; tax avoidance - arranging affairs within the law to pay less - is legal but crosses ethical lines when the arrangement is artificial. Tax practitioners must follow the Code of Ethics (Revised 2024, sections 604.1-604.10) on tax services, and tax authorities hold coercive legal powers balanced by ethical duties toward taxpayers.",
+  "key_points": [
+   "Purpose and limits of taxation: the state may tax to raise revenue, but only lawfully and within constitutional bounds.",
+   "Four pillars of tax administration: fairness, transparency, equity, accountability.",
+   "Evasion (illegal) versus avoidance (legal planning; artificial schemes are the ethical danger zone).",
+   "Practitioner ethics: Code of Ethics (Revised 2024), sections 604.1-604.10 on providing tax services.",
+   "Tax authorities have legal enforcement powers but also ethical responsibilities toward taxpayers."
+  ],
+  "how_examined": "T1: short theory questions - distinguish evasion from avoidance, or discuss the four pillars; often 2-4 marks inside a theory question.",
+  "legislation_refs": [
+   "Code of Ethics for Chartered Accountants (Revised 2024), sections 604.1 to 604.10"
+  ],
+  "source": "own-teaching"
+ },
+ {
+  "id": "TAX-T-B1",
+  "code": "B.a",
+  "title": "Central Concepts",
+  "area": "B",
+  "area_title": "Income Tax Laws - Chargeability",
+  "area_weightage": "50-60",
+  "summary": "Income tax is charged on a person's total income for the tax year, and 'income' is defined widely: anything that increases a person's capacity to spend or save can fall inside the charge unless the Ordinance excludes it. The central concepts are who is taxed (a 'person', resident versus non-resident), what is taxed (income under the five heads), and when (the tax year). The charge sits in Chapter II of the Income Tax Ordinance, 2001, and the Section 2 definitions are the vocabulary the whole paper runs on.",
+  "key_points": [
+   "Charge of tax: on the total income of a person for the tax year (ITO 2001, Chapter II).",
+   "Person, resident vs non-resident: residence decides whether worldwide or only Pakistan-source income is taxed.",
+   "Five heads of income: salary, income from property, income from business, capital gains, income from other sources.",
+   "Section 2 definitions are examinable vocabulary - learn each definition as you meet its chapter.",
+   "Exclusions are examinable knowledge too: e.g. sections 4B, 5A, 5AA, 6, 7, 7A, 7C, 7D are NOT in the syllabus."
+  ],
+  "how_examined": "T2: examined inside computations rather than alone - but Q1 MCQs test definitions (resident, person, tax year) and the scope of the charge.",
+  "legislation_refs": [
+   "Income Tax Ordinance, 2001 - Chapter II (excluding sections 4B, 5A, 5AA, 6, 7, 7A, 7C, 7D)",
+   "Income Tax Ordinance, 2001 - Section 2 definitions (listed clauses)"
+  ],
+  "source": "own-teaching"
+ },
+ {
+  "id": "TAX-T-B2",
+  "code": "B.b",
+  "title": "Chargeability and Computation of Income and Tax",
+  "area": "B",
+  "area_title": "Income Tax Laws - Chargeability",
+  "area_weightage": "50-60",
+  "summary": "This is the heart of CAF-2: take a person's facts, slot each receipt into one of the five heads, apply the head-specific deductions, then aggregate, set off losses, apply deductible allowances and tax credits, and finally compute tax on taxable income using the First Schedule slab printed on the paper. Along the way you meet minimum tax (section 113), the withholding and collection regimes, loss carry-forward rules and exemptions/concessions. It is mechanical work - the marks go to candidates who show every step and cite the section behind each adjustment.",
+  "key_points": [
+   "Five heads computed separately - salary, property, business, capital gains, other sources - each with its own deduction rules.",
+   "Aggregate, then set off losses (within and across heads) and carry forward unabsorbed losses per the rules.",
+   "Deductible allowances and tax credits reduce taxable income and tax payable - apply them in the right order.",
+   "Tax on taxable income comes from the First Schedule slab printed on the paper; minimum tax (s.113) can override the normal computation.",
+   "Withholding tax collected at source (sections 149, 150, 151, 155, 156) is creditable or adjustable against the liability.",
+   "Cite the section for every adjustment - examiner comments reward section references and punish bare numbers."
+  ],
+  "how_examined": "T2 and the biggest mark-earner (Area B is 50-60 marks): multi-part scenario questions. Spring 2026 Q2 was a salary computation - the examiner flagged the 12-month error, the 45%-of-basic-salary furnished-accommodation rule, and provident-fund treatment. Expect salary plus at least one more head every sitting.",
+  "legislation_refs": [
+   "Income Tax Ordinance, 2001 - Chapter III (heads of income), Chapter IV (common provisions), Chapter V (deductions), Chapter VII Part II, Chapter VIII (ss 108B, 110), Chapter IX (s.113 only)",
+   "Income Tax Ordinance, 2001 - First, Second, Third and Sixth Schedules (relevant parts)",
+   "Income Tax Rules, 2002 (specified rules)"
+  ],
+  "source": "own-teaching"
+ },
+ {
+  "id": "TAX-T-C1",
+  "code": "C.a",
+  "title": "Returns, Assessments, Appeals and Records",
+  "area": "C",
+  "area_title": "Income Tax Laws - Administration and Compliance",
+  "area_weightage": "10-15",
+  "summary": "Once tax is computed it must be reported and can be challenged: prescribed persons file a return of income and a wealth statement - with a reconciliation between the two - by the due date, with rules for revision and extension. The Commissioner may then assess - self-assessment, best-judgment assessment, or amended assessment - and may audit a person's affairs, while records must be kept for the statutory period. If the taxpayer disagrees, the appeal route runs from the Commissioner (Appeals) to the Appellate Tribunal and then to the High Court, with alternative dispute resolution also available.",
+  "key_points": [
+   "Who files: return of income plus wealth statement; know the filer categories and the reconciliation between the two.",
+   "Due dates, revision of returns, and the extension procedure - a classic short-question cluster.",
+   "Types of assessment: self-assessment, best-judgment assessment, amended assessment; know what triggers each.",
+   "Audit of income-tax affairs and the record-retention period.",
+   "Appeal ladder: Commissioner (Appeals) to Appellate Tribunal to High Court; alternative dispute resolution as an alternative.",
+   "Withholding agents' statements and collection rules (sections 149, 150, 151, 155, 156) sit in this area."
+  ],
+  "how_examined": "T2: the Spring 2026 examiner comments flagged weak performance on 'administrative aspects' - expect 1-2 short scenario questions (e.g. 'which assessment applies here?', 'is the appeal in time?') plus MCQs on due dates and the appeal route.",
+  "legislation_refs": [
+   "Income Tax Ordinance, 2001 - Chapter X (Part I excluding s.114(1A); Part II excluding s.120B; Part III; Part V Division III: ss 149, 150, 151, 155, 156; Part VIII: ss 174, 177)"
+  ],
+  "source": "own-teaching"
+ },
+ {
+  "id": "TAX-T-D1",
+  "code": "D.a",
+  "title": "Scope and Payment of Tax",
+  "area": "D",
+  "area_title": "Sales Tax Laws",
+  "area_weightage": "20-30",
+  "summary": "Sales tax is charged on taxable supplies at each stage of the supply chain: the registered person collects output tax on sales and claims input tax paid on purchases, remitting only the difference. Some supplies are zero-rated (taxable but at 0%, so input tax stays claimable) and some are exempt (no output tax, and the input tax is lost) - the distinction drives most exam questions. Liability arises at the time of supply and is discharged through the monthly return, with input-tax apportionment where a person makes both taxable and exempt supplies, and carry-forward or refund of excess input tax.",
+  "key_points": [
+   "A taxable supply is the charging event; output tax minus input tax is what you remit.",
+   "Zero-rated vs exempt: zero-rated keeps the input-tax credit; exempt supplies lose it - the core exam distinction.",
+   "Time of supply fixes when the liability arises; payment follows through the return.",
+   "Apportion input tax between taxable and exempt supplies; carry forward or claim a refund of the excess.",
+   "Know the Chapter II-V structure (with the syllabus exclusions) and the section 2 definitions as vocabulary."
+  ],
+  "how_examined": "T2 (Area D is 20-30 marks): output/input-tax computations, zero-rated vs exempt scenarios, and input-tax apportionment - usually a full question plus MCQs.",
+  "legislation_refs": [
+   "Sales Tax Act, 1990 - Chapters II, III, IV, V (excluding ss 3(7), 3(9AA), 6(1A), 8(5), 11F, 25AA); section 2 definitions (listed clauses)",
+   "Sales Tax Act, 1990 - 3rd, 5th, 6th and 8th Schedules (basic concepts)",
+   "Sales Tax Rules, 2006 (specified rules)"
+  ],
+  "source": "own-teaching"
+ },
+ {
+  "id": "TAX-T-D2",
+  "code": "D.b",
+  "title": "Registration",
+  "area": "D",
+  "area_title": "Sales Tax Laws",
+  "area_weightage": "20-30",
+  "summary": "A person who makes taxable supplies above the threshold - or who must register for other prescribed reasons - has to obtain sales tax registration; registration can also be voluntary, and it can be suspended or cancelled. The procedures cover the application, the registration certificate, changes in particulars, de-registration, and the return-filing cycle that follows. Registration matters because only a registered person can charge output tax and claim input tax - it is the gateway to the whole sales-tax system.",
+  "key_points": [
+   "Who must register: makers of taxable supplies (threshold) plus prescribed categories; voluntary registration exists.",
+   "Procedure: application, issuance of the registration certificate, updating particulars.",
+   "De-registration and suspension: when and how registration ends.",
+   "Only a registered person charges output tax and claims input tax - unregistered persons sit outside the credit chain.",
+   "Returns follow registration: monthly filing is the compliance heartbeat."
+  ],
+  "how_examined": "T1: usually MCQs or a short note - 'who is required to register?', the registration procedure steps, and the consequences of non-registration.",
+  "legislation_refs": [
+   "Sales Tax Act, 1990 - Chapters II to V (registration provisions)",
+   "Sales Tax Rules, 2006 - Chapters I, II, III, IV and XVII"
+  ],
+  "source": "own-teaching"
+ },
+ {
+  "id": "TAX-T-D3",
+  "code": "D.c",
+  "title": "Book Keeping and Invoicing Requirements",
+  "area": "D",
+  "area_title": "Sales Tax Laws",
+  "area_weightage": "20-30",
+  "summary": "Every registered person must maintain prescribed records - purchase and sales records, stock records, and the tax invoices behind them - and keep them for the statutory retention period. The tax invoice, with debit and credit notes for adjustments, is the document that lets a buyer claim input tax, so its contents are prescribed in detail. The law also provides for audit of records and a specific procedure for destruction of goods, where input tax already claimed may need to be adjusted.",
+  "key_points": [
+   "Maintain prescribed records: sales, purchases, stock, and the supporting documents.",
+   "Retention period for records - a one-mark favourite.",
+   "Tax invoice: prescribed contents; it is the buyer's evidence for claiming input-tax credit.",
+   "Debit notes and credit notes adjust invoices (returns, discounts, errors).",
+   "Destruction of goods: follow the prescribed procedure and adjust input tax already claimed.",
+   "Audit of records: the department can inspect and call for records."
+  ],
+  "how_examined": "Mixed T2/T1: invoice contents and record-retention appear as short questions; the destruction-of-goods procedure as a small scenario.",
+  "legislation_refs": [
+   "Sales Tax Act, 1990 - section 73 (Chapter X); Chapters II to V",
+   "Sales Tax Rules, 2006"
+  ],
+  "source": "own-teaching"
+ }
+]

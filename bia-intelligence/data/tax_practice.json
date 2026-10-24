@@ -1,0 +1,1600 @@
+[
+ {
+  "id": "TAX-PQ-001",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 10,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 18,
+  "question_text": "Mr. Kamran runs a trading business as a sole proprietor. His profit and loss account for the year ended 30 June 2026 shows a net profit of Rs 4,500,000. The following further information is available: (i) depreciation charged in the accounts Rs 600,000, while tax depreciation for the year (at the rate given on the paper) is Rs 300,000; (ii) Rs 150,000 of personal household drawings were debited to the profit and loss account; (iii) a penalty of Rs 80,000 paid to a regulator for late filing was debited; (iv) a provision for doubtful debts of Rs 200,000 was created, but no debts were actually written off during the year. Required: Compute Mr. Kamran's taxable income under the head 'income from business' for Tax Year 2026, showing your workings and stating the treatment of each item.",
+  "model_notes": "Start from accounting profit; add back the four inadmissible debits (accounting depreciation, personal drawings, penalty, provision not yet written off); deduct tax depreciation. Taxable income Rs 5,230,000.",
+  "steps": [
+   {
+    "formula": "input.profit",
+    "key": "s1",
+    "key_terms": [
+     "profit",
+     "accounts",
+     "4,500,000"
+    ],
+    "label": "Profit per accounts"
+   },
+   {
+    "condition_terms": [
+     "accounting depreciation"
+    ],
+    "expected_treatment": [
+     "not deductible"
+    ],
+    "formula": "input.acct_depr",
+    "key": "s2",
+    "key_terms": [
+     "depreciation",
+     "accounts",
+     "add"
+    ],
+    "label": "Add: accounting depreciation"
+   },
+   {
+    "expected_treatment": [
+     "not deductible"
+    ],
+    "formula": "input.personal",
+    "key": "s3",
+    "key_terms": [
+     "personal",
+     "drawings",
+     "household"
+    ],
+    "label": "Add: personal household drawings"
+   },
+   {
+    "expected_treatment": [
+     "not deductible"
+    ],
+    "formula": "input.penalty",
+    "key": "s4",
+    "key_terms": [
+     "penalty",
+     "regulator",
+     "late filing"
+    ],
+    "label": "Add: regulatory penalty"
+   },
+   {
+    "condition_terms": [
+     "written off"
+    ],
+    "expected_treatment": [
+     "not deductible"
+    ],
+    "formula": "input.provision",
+    "key": "s5",
+    "key_terms": [
+     "provision",
+     "doubtful",
+     "debts"
+    ],
+    "label": "Add: provision for doubtful debts"
+   },
+   {
+    "expected_treatment": [
+     "deductible"
+    ],
+    "formula": "input.tax_depr",
+    "key": "s6",
+    "key_terms": [
+     "tax depreciation",
+     "less"
+    ],
+    "label": "Less: tax depreciation"
+   },
+   {
+    "classification_check": {
+     "conflicting": [
+      "salary",
+      "property",
+      "capital"
+     ],
+     "expected": [
+      "business"
+     ]
+    },
+    "formula": "s1 + s2 + s3 + s4 + s5 - s6",
+    "key": "s7",
+    "key_terms": [
+     "taxable",
+     "business",
+     "income"
+    ],
+    "label": "Taxable income - business"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify each of the six items that adjust the accounting profit.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Classification (head of income)",
+    "guidance": "Classify the income under the correct head: income from business.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "Correctly treat each item: accounting depreciation, personal drawings, penalty and provision added back; tax depreciation deducted.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Apply the conditions: provision deductible only when debts are actually written off; tax depreciation replaces accounting depreciation.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Present ordered workings: start from profit per accounts, add back inadmissibles, deduct tax depreciation.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Each working line arithmetically correct.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct taxable business income of Rs 5,230,000.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "All six items addressed; nothing omitted.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-002",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 10,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 3,
+  "time_minutes": 18,
+  "question_text": "Ms. Hina is employed by a company. For the year ended 30 June 2026 she received: basic salary Rs 1,800,000; annual bonus Rs 300,000; medical allowance Rs 180,000. She was also provided with company-maintained accommodation, valued for tax purposes at Rs 240,000 under the valuation rules given on the paper, and a car used partly for personal purposes (cost Rs 2,000,000), which the paper values at 5% of cost. The paper states that medical allowance is exempt up to 10% of basic salary where the employer provides no free medical facility; assume no free medical facility was provided. Required: Compute Ms. Hina's taxable salary for Tax Year 2026, showing your workings.",
+  "model_notes": "Tax cash salary and bonus in full; add the accommodation and car perquisites at their valued amounts; medical allowance of Rs 180,000 is within the 10%-of-basic limit so fully exempt. Taxable salary Rs 2,440,000.",
+  "steps": [
+   {
+    "formula": "input.basic",
+    "key": "s1",
+    "key_terms": [
+     "basic",
+     "salary"
+    ],
+    "label": "Basic salary"
+   },
+   {
+    "formula": "input.bonus",
+    "key": "s2",
+    "key_terms": [
+     "bonus"
+    ],
+    "label": "Annual bonus"
+   },
+   {
+    "condition_terms": [
+     "valuation"
+    ],
+    "formula": "input.accommodation",
+    "key": "s3",
+    "key_terms": [
+     "accommodation",
+     "benefit"
+    ],
+    "label": "Accommodation benefit"
+   },
+   {
+    "condition_terms": [
+     "5% of cost"
+    ],
+    "formula": "0.05 * input.car_cost",
+    "key": "s4",
+    "key_terms": [
+     "car",
+     "5%",
+     "personal"
+    ],
+    "label": "Car benefit (5% of cost)"
+   },
+   {
+    "condition_terms": [
+     "10% of basic"
+    ],
+    "expected_treatment": [
+     "exempt"
+    ],
+    "formula": "0.10 * input.basic",
+    "key": "s5",
+    "key_terms": [
+     "medical",
+     "10%",
+     "exempt"
+    ],
+    "label": "Medical allowance exemption limit"
+   },
+   {
+    "formula": "input.medical - s5",
+    "key": "s6",
+    "key_terms": [
+     "medical",
+     "taxable"
+    ],
+    "label": "Taxable medical allowance"
+   },
+   {
+    "classification_check": {
+     "conflicting": [
+      "business",
+      "property"
+     ],
+     "expected": [
+      "salary"
+     ]
+    },
+    "formula": "s1 + s2 + s3 + s4 + s6",
+    "key": "s7",
+    "key_terms": [
+     "taxable salary"
+    ],
+    "label": "Taxable salary"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify all five salary components including the two perquisites.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Classification (head of income)",
+    "guidance": "Classify everything under the head 'salary'.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "Treat cash salary and bonus as taxable; value the perquisites; apply the medical allowance exemption.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Apply the 5%-of-cost car rule and the 10%-of-basic medical exemption limit (no free facility).",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Ordered workings for each component, then the total.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Each working line arithmetically correct.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct taxable salary of Rs 2,440,000 (medical allowance fully exempt).",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "All components addressed; nothing omitted.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-003",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 8,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 14,
+  "question_text": "Mr. Danish earned rental income of Rs 1,200,000 for the year ended 30 June 2026 from a commercial building he owns. During the year he paid: insurance premium Rs 40,000; ground rent Rs 25,000; property tax Rs 60,000. The paper states that a deduction of one-fifth of the rent is allowed for repairs. Required: Compute Mr. Danish's taxable income under the head 'income from property' for Tax Year 2026, showing your workings.",
+  "model_notes": "Rent Rs 1,200,000 less repairs allowance Rs 240,000 (one-fifth), insurance Rs 40,000, ground rent Rs 25,000 and property tax Rs 60,000. Taxable property income Rs 835,000.",
+  "steps": [
+   {
+    "formula": "input.rent",
+    "key": "s1",
+    "key_terms": [
+     "rent",
+     "rental"
+    ],
+    "label": "Rent received"
+   },
+   {
+    "condition_terms": [
+     "one-fifth of rent"
+    ],
+    "formula": "input.rent / 5",
+    "key": "s2",
+    "key_terms": [
+     "repairs",
+     "one-fifth"
+    ],
+    "label": "Less: repairs (one-fifth of rent)"
+   },
+   {
+    "expected_treatment": [
+     "deductible"
+    ],
+    "formula": "input.insurance",
+    "key": "s3",
+    "key_terms": [
+     "insurance"
+    ],
+    "label": "Less: insurance premium"
+   },
+   {
+    "expected_treatment": [
+     "deductible"
+    ],
+    "formula": "input.ground_rent",
+    "key": "s4",
+    "key_terms": [
+     "ground rent"
+    ],
+    "label": "Less: ground rent"
+   },
+   {
+    "expected_treatment": [
+     "deductible"
+    ],
+    "formula": "input.property_tax",
+    "key": "s5",
+    "key_terms": [
+     "property tax"
+    ],
+    "label": "Less: property tax"
+   },
+   {
+    "classification_check": {
+     "conflicting": [
+      "business",
+      "salary"
+     ],
+     "expected": [
+      "property"
+     ]
+    },
+    "formula": "s1 - s2 - s3 - s4 - s5",
+    "key": "s6",
+    "key_terms": [
+     "taxable",
+     "property"
+    ],
+    "label": "Taxable income - property"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify the rent and each of the four deductions.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Classification (head of income)",
+    "guidance": "Classify under the head 'income from property'.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "Deduct the repairs allowance and the three paid outgoings.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Apply the one-fifth-of-rent repairs allowance.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Ordered workings: rent less each deduction.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Each working line arithmetically correct.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct taxable property income of Rs 835,000.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "All items addressed; nothing omitted.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-004",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 6,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 11,
+  "question_text": "Mr. Faisal bought listed shares in March 2019 for Rs 500,000 and sold them in May 2026 for Rs 900,000. The paper's rate sheet states that capital gains on listed securities held for more than four years are taxed at 12.5% as a separate block of income. Required: Compute the taxable capital gain and the tax payable for Tax Year 2026, and state how the gain is treated in the tax computation.",
+  "model_notes": "Gain = Rs 900,000 - Rs 500,000 = Rs 400,000, held over four years, taxed as a separate block at 12.5% = Rs 50,000.",
+  "steps": [
+   {
+    "formula": "input.sale",
+    "key": "s1",
+    "key_terms": [
+     "sale",
+     "sold",
+     "consideration"
+    ],
+    "label": "Sale consideration"
+   },
+   {
+    "formula": "input.cost",
+    "key": "s2",
+    "key_terms": [
+     "cost",
+     "acquisition",
+     "bought"
+    ],
+    "label": "Less: cost of acquisition"
+   },
+   {
+    "classification_check": {
+     "conflicting": [
+      "business",
+      "normal"
+     ],
+     "expected": [
+      "capital gains",
+      "separate block"
+     ]
+    },
+    "formula": "s1 - s2",
+    "key": "s3",
+    "key_terms": [
+     "capital gain"
+    ],
+    "label": "Taxable capital gain"
+   },
+   {
+    "condition_terms": [
+     "more than four years",
+     "12.5%"
+    ],
+    "expected_treatment": [
+     "separate block"
+    ],
+    "formula": "0.125 * s3",
+    "key": "s4",
+    "key_terms": [
+     "tax",
+     "12.5%"
+    ],
+    "label": "Tax at 12.5% (separate block)"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify sale consideration and cost.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Classification (head / block)",
+    "guidance": "Classify as capital gains taxed as a separate block, not in the normal computation.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "Treat the gain as a separate block of income.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Confirm the holding period exceeds four years so the 12.5% rate applies.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Ordered workings: consideration less cost, then tax.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Each working line arithmetically correct.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct gain Rs 400,000 and tax Rs 50,000.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "All parts addressed.",
+    "max_marks": 0.0
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-005",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 4,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 1,
+  "time_minutes": 7,
+  "question_text": "Ms. Ayesha received a cash dividend of Rs 200,000 during the year ended 30 June 2026. The paper states that dividends are subject to final tax at 15% collected through withholding, and that income subject to final tax is excluded from the normal tax computation. Required: State the tax treatment of the dividend and compute the final tax for Tax Year 2026.",
+  "model_notes": "Dividend Rs 200,000 subject to final tax at 15% = Rs 30,000, collected through withholding; excluded from the normal tax computation.",
+  "steps": [
+   {
+    "formula": "input.dividend",
+    "key": "s1",
+    "key_terms": [
+     "dividend"
+    ],
+    "label": "Dividend received"
+   },
+   {
+    "classification_check": {
+     "conflicting": [
+      "normal tax",
+      "adjustable"
+     ],
+     "expected": [
+      "final tax"
+     ]
+    },
+    "condition_terms": [
+     "15%",
+     "withholding"
+    ],
+    "expected_treatment": [
+     "final tax"
+    ],
+    "formula": "0.15 * s1",
+    "key": "s2",
+    "key_terms": [
+     "final tax",
+     "15%"
+    ],
+    "label": "Final tax at 15%"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify the dividend receipt.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Classification (regime)",
+    "guidance": "Classify the dividend under the final tax regime.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "State that the dividend is subject to final tax and excluded from the normal computation.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Apply the stated 15% final tax rate.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Show the computation clearly.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Arithmetic correct.",
+    "max_marks": 0.25
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct final tax of Rs 30,000.",
+    "max_marks": 0.25
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "Both parts (treatment and computation) addressed.",
+    "max_marks": 0.0
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-006",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 5,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 9,
+  "question_text": "Mr. Bilal, a consultant, received Rs 1,140,000 during the year ended 30 June 2026, which is the amount net of 5% withholding tax deducted from his professional fee under the payments-for-services rules. The paper states that this withholding tax is adjustable against normal tax. Required: Compute the gross professional fee and the tax withheld, and state the treatment of the withheld amount for Tax Year 2026.",
+  "model_notes": "Gross fee = Rs 1,140,000 / 0.95 = Rs 1,200,000; tax withheld Rs 60,000, adjustable against normal tax.",
+  "steps": [
+   {
+    "condition_terms": [
+     "5%"
+    ],
+    "formula": "input.net / 0.95",
+    "key": "s1",
+    "key_terms": [
+     "gross",
+     "fee"
+    ],
+    "label": "Gross professional fee"
+   },
+   {
+    "classification_check": {
+     "conflicting": [
+      "final tax"
+     ],
+     "expected": [
+      "adjustable"
+     ]
+    },
+    "expected_treatment": [
+     "adjustable"
+    ],
+    "formula": "s1 - input.net",
+    "key": "s2",
+    "key_terms": [
+     "withheld",
+     "deducted"
+    ],
+    "label": "Tax withheld (adjustable)"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify the net receipt and the withholding.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Classification (regime)",
+    "guidance": "Classify the withholding as adjustable, not final.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "State the withheld amount is adjustable against normal tax.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Gross up the net receipt at 5%.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Show the gross-up working.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Arithmetic correct.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct gross fee Rs 1,200,000 and tax withheld Rs 60,000.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "All parts addressed.",
+    "max_marks": 0.0
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-007",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 8,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 3,
+  "time_minutes": 14,
+  "question_text": "A resident company has turnover of Rs 80,000,000 and taxable income of Rs 2,000,000 for Tax Year 2026. The paper states: the normal tax rate for companies is 29%, and minimum tax on turnover is 1.25% where it exceeds the normal tax. Required: Compute the company's tax liability for Tax Year 2026, showing your workings.",
+  "model_notes": "Normal tax Rs 580,000 (29% of Rs 2,000,000); minimum tax Rs 1,000,000 (1.25% of Rs 80,000,000). Tax payable is the higher: Rs 1,000,000.",
+  "steps": [
+   {
+    "condition_terms": [
+     "29%"
+    ],
+    "formula": "0.29 * input.taxable",
+    "key": "s1",
+    "key_terms": [
+     "normal tax",
+     "29%"
+    ],
+    "label": "Normal tax at 29%"
+   },
+   {
+    "condition_terms": [
+     "1.25% of turnover"
+    ],
+    "expected_treatment": [
+     "minimum tax"
+    ],
+    "formula": "0.0125 * input.turnover",
+    "key": "s2",
+    "key_terms": [
+     "minimum tax",
+     "turnover",
+     "1.25%"
+    ],
+    "label": "Minimum tax at 1.25% of turnover"
+   },
+   {
+    "condition_terms": [
+     "higher of"
+    ],
+    "formula": "max(s1, s2)",
+    "key": "s3",
+    "key_terms": [
+     "payable",
+     "higher"
+    ],
+    "label": "Tax payable (higher of the two)"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify turnover and taxable income as the two bases.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Classification (regime)",
+    "guidance": "Distinguish the normal tax computation from the minimum tax computation.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "Apply the minimum tax where it exceeds normal tax.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Apply the 29% and 1.25% rates and take the higher amount.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Compute both taxes, then compare.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Each working line arithmetically correct.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct tax payable Rs 1,000,000 (minimum tax exceeds normal tax of Rs 580,000).",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "Both computations and the comparison shown.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-008",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 10,
+  "topic_code": "D.a",
+  "topic_title": "Scope and Payment of Tax",
+  "tax_year": "TY2026",
+  "difficulty": 3,
+  "time_minutes": 18,
+  "question_text": "A registered manufacturer made taxable supplies of Rs 2,000,000 and zero-rated supplies of Rs 500,000 during the tax period. Input tax on purchases was Rs 270,000, of which Rs 30,000 relates to exempt supplies and is stated on the paper as inadmissible. The standard sales tax rate given on the paper is 18%. Required: Compute the output tax, the admissible input tax, and the net sales tax payable for the period, showing your workings.",
+  "model_notes": "Output tax Rs 360,000 on taxable supplies (zero-rated supplies bear no output tax); admissible input tax Rs 240,000 after disallowing Rs 30,000 on exempt supplies; net payable Rs 120,000.",
+  "steps": [
+   {
+    "condition_terms": [
+     "18%"
+    ],
+    "formula": "0.18 * input.taxable_supplies",
+    "key": "s1",
+    "key_terms": [
+     "output tax",
+     "18%"
+    ],
+    "label": "Output tax on taxable supplies"
+   },
+   {
+    "condition_terms": [
+     "zero-rated"
+    ],
+    "formula": "0",
+    "key": "s2",
+    "key_terms": [
+     "zero-rated",
+     "zero rated"
+    ],
+    "label": "Output tax on zero-rated supplies"
+   },
+   {
+    "condition_terms": [
+     "exempt"
+    ],
+    "expected_treatment": [
+     "admissible"
+    ],
+    "formula": "input.input_tax - input.inadmissible",
+    "key": "s3",
+    "key_terms": [
+     "input tax",
+     "admissible"
+    ],
+    "label": "Admissible input tax"
+   },
+   {
+    "formula": "s1 + s2 - s3",
+    "key": "s4",
+    "key_terms": [
+     "net",
+     "payable"
+    ],
+    "label": "Net sales tax payable"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify taxable, zero-rated and exempt-linked amounts.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Classification (supply type)",
+    "guidance": "Distinguish taxable, zero-rated and exempt treatment.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "Charge output tax on taxable supplies only; disallow input tax on exempt supplies.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Apply the 18% rate, the zero rate on zero-rated supplies, and the exempt-supply input disallowance.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Ordered workings: output tax, admissible input tax, net payable.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Each working line arithmetically correct.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct net sales tax payable Rs 120,000 (output Rs 360,000 less admissible input Rs 240,000).",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "All three required figures computed.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-009",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 8,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 3,
+  "time_minutes": 14,
+  "question_text": "For Tax Year 2026 Mr. Tariq has: income from business Rs 900,000; a loss of Rs 250,000 under the head 'income from property'; and a brought-forward assessed business loss of Rs 200,000 from Tax Year 2025. The paper states: a loss under one head (other than speculation business) may be set off against income under another head in the same tax year, and unabsorbed business loss may be carried forward for up to six tax years. Required: Compute Mr. Tariq's taxable income for Tax Year 2026, showing your workings.",
+  "model_notes": "Rs 900,000 less property loss set off Rs 250,000 = Rs 650,000; less brought-forward business loss Rs 200,000 = taxable income Rs 450,000.",
+  "steps": [
+   {
+    "formula": "input.business",
+    "key": "s1",
+    "key_terms": [
+     "business",
+     "income"
+    ],
+    "label": "Income from business"
+   },
+   {
+    "condition_terms": [
+     "set off",
+     "same year"
+    ],
+    "expected_treatment": [
+     "deductible"
+    ],
+    "formula": "s1 - input.property_loss",
+    "key": "s2",
+    "key_terms": [
+     "set off",
+     "property loss"
+    ],
+    "label": "Less: property loss set off"
+   },
+   {
+    "condition_terms": [
+     "carried forward",
+     "six"
+    ],
+    "formula": "s2 - input.bforward",
+    "key": "s3",
+    "key_terms": [
+     "carried forward",
+     "brought forward"
+    ],
+    "label": "Less: brought-forward business loss"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify the three amounts.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Classification (head of income)",
+    "guidance": "Keep business income and property loss under their own heads before set-off.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "Set off the current-year property loss, then the brought-forward business loss.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Apply same-year set-off across heads and the six-year carry-forward limit.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Set off in the right order: current-year loss first, then brought-forward loss.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Each working line arithmetically correct.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct taxable income Rs 450,000.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "All parts addressed.",
+    "max_marks": 0.0
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-010",
+  "type": "computational",
+  "type_label": "Computation",
+  "marks": 6,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 11,
+  "question_text": "Mr. Ahmed's taxable income for Tax Year 2026 is Rs 2,000,000 and the tax on it per the rate sheet is Rs 180,000. During the year he contributed Rs 300,000 to an approved pension fund. The paper states that a tax credit is allowed at 20% of the contribution, limited to 20% of the tax payable. Required: Compute the tax credit and the net tax payable for Tax Year 2026, showing your workings.",
+  "model_notes": "Credit at 20% of Rs 300,000 = Rs 60,000, capped at 20% of tax payable = Rs 36,000; allowable credit Rs 36,000; net tax payable Rs 144,000.",
+  "steps": [
+   {
+    "condition_terms": [
+     "20% of contribution"
+    ],
+    "formula": "0.20 * input.contribution",
+    "key": "s1",
+    "key_terms": [
+     "credit",
+     "20%",
+     "contribution"
+    ],
+    "label": "Credit at 20% of contribution"
+   },
+   {
+    "condition_terms": [
+     "20% of tax payable"
+    ],
+    "formula": "0.20 * input.tax",
+    "key": "s2",
+    "key_terms": [
+     "cap",
+     "limited",
+     "20% of tax"
+    ],
+    "label": "Cap at 20% of tax payable"
+   },
+   {
+    "condition_terms": [
+     "lower of"
+    ],
+    "formula": "min(s1, s2)",
+    "key": "s3",
+    "key_terms": [
+     "allowable",
+     "lower"
+    ],
+    "label": "Allowable tax credit (lower of the two)"
+   },
+   {
+    "formula": "input.tax - s3",
+    "key": "s4",
+    "key_terms": [
+     "net tax",
+     "payable"
+    ],
+    "label": "Net tax payable"
+   }
+  ],
+  "rubric": [
+   {
+    "dimension": "Item identification",
+    "guidance": "Identify the tax payable and the contribution.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Classification (credit vs deduction)",
+    "guidance": "Treat the amount as a tax credit (against tax payable), not a deduction from income.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Legal treatment",
+    "guidance": "Compute the credit and cap it as stated.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Statutory conditions applied",
+    "guidance": "Apply both 20% tests and take the lower.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Workings sequence",
+    "guidance": "Ordered workings: credit, cap, allowable credit, net tax.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Arithmetic accuracy",
+    "guidance": "Each working line arithmetically correct.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Final result",
+    "guidance": "Correct credit Rs 36,000 and net tax payable Rs 144,000.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Completeness",
+    "guidance": "Both required figures computed.",
+    "max_marks": 0.0
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-011",
+  "type": "conceptual",
+  "type_label": "Concept",
+  "marks": 5,
+  "topic_code": "A.a",
+  "topic_title": "Basic Concepts of Taxation and Constitutional Provisions",
+  "tax_year": "TY2026",
+  "difficulty": 1,
+  "time_minutes": 9,
+  "question_text": "Explain the distinction between direct and indirect taxation. Give two examples of each, and explain why the distinction matters in practice — for example, who ultimately bears the tax.",
+  "model_notes": "Direct tax: levied on and borne by the same person (e.g. income tax); cannot be shifted. Indirect tax: levied on one person but shifted to another (e.g. sales tax passed to the consumer). The distinction matters for incidence analysis, fairness, and how the tax affects behaviour.",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "Explain that direct tax is levied on the person who bears it, while indirect tax can be shifted to someone else.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Give two valid examples of each (e.g. income tax / wealth-type levies vs sales tax / customs duty).",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Note borderline cases, e.g. withholding taxes that look direct but are collected from someone else.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Reason about tax incidence: who ultimately bears the burden and why it matters for fairness and policy.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "Definition, examples of each, and the practical significance all covered.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-012",
+  "type": "conceptual",
+  "type_label": "Concept",
+  "marks": 6,
+  "topic_code": "A.c",
+  "topic_title": "Ethics",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 11,
+  "question_text": "Distinguish between tax evasion and tax avoidance. Give one example of each, and discuss the moral case for taxpayers and tax practitioners complying with tax law even where avoidance is technically legal.",
+  "model_notes": "Evasion = illegal non-payment (e.g. suppressing sales); avoidance = legal minimisation (e.g. timing a disposal to use a relief). Even legal avoidance can be criticised where it is aggressive; the moral case rests on fairness, funding of public services, and professional integrity.",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "Define evasion as illegal (concealment, misstatement) and avoidance as using legal means to reduce tax.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Give one concrete example of each.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Note the grey area of aggressive avoidance that stays within the letter but not the spirit of the law.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Build the moral case: taxes fund public goods; compliance sustains fairness and the rule of law.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "Distinction, examples, and the moral discussion all covered.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-013",
+  "type": "legislative_application",
+  "type_label": "Legislative application",
+  "marks": 5,
+  "topic_code": "A.b",
+  "topic_title": "Federal and Provincial Financial Procedures",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 9,
+  "question_text": "The syllabus lists the Constitution's financial-procedure provisions and the Fourth Schedule as examinable knowledge. Scenario: Parliament wishes to levy income tax, while a provincial assembly wishes to levy sales tax on services. Explain, with reference to the constitutional scheme, which level of government may impose each tax and where the tax collected is accounted for (the Consolidated Fund).",
+  "model_notes": "Under the constitutional scheme, income tax is within federal competence (Parliament) while sales tax on services is within provincial competence. Federal taxes flow into the Federal Consolidated Fund (Articles 78-88) and provincial taxes into the Provincial Consolidated Fund (Articles 118-127).",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "Explain the division of taxing powers between the federation and the provinces.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Provisions cited",
+    "guidance": "Cite the Fourth Schedule (legislative lists) and the financial-procedure articles on the Consolidated Funds.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Apply to the scenario: income tax is a federal levy; sales tax on services falls to the provinces.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Note any shared or overlapping areas honestly, without inventing detail.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Reason from the constitutional text to the conclusion.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "Both taxes placed correctly and the Fund accounting stated.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-014",
+  "type": "legislative_application",
+  "type_label": "Legislative application",
+  "marks": 6,
+  "topic_code": "B.a",
+  "topic_title": "Central Concepts",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 11,
+  "question_text": "The paper states the residence rule for individuals: an individual is resident if present in Pakistan for 183 days or more in the tax year. Scenario: Ms. Sana, a Pakistani national working abroad, was present in Pakistan for 120 days between 1 July 2025 and 30 June 2026, but she was present for 200 days in the preceding tax year. Required: Explain the residence test, apply it to Ms. Sana for Tax Year 2026, and state why the preceding year's presence does not change the answer.",
+  "model_notes": "Residence is tested per tax year on presence of 183+ days (s.82). Ms. Sana's 120 days in TY 2026 is below the threshold, so she is non-resident for TY 2026; the 200 days in the preceding year is irrelevant to this year's test.",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "State the 183-day presence test for the tax year in question.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Provisions cited",
+    "guidance": "Cite the residence provision for individuals.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Apply the test to Ms. Sana's 120 days in TY 2026: below 183, so non-resident.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Explain that residence is tested separately for each tax year.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Reason from the day count to the conclusion.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "Test stated, applied, and the preceding-year point addressed.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-015",
+  "type": "conceptual",
+  "type_label": "Concept",
+  "marks": 8,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 14,
+  "question_text": "Income tax in Pakistan is charged under three regimes: normal tax, minimum tax, and final tax. Explain each regime, when each one bites, and give one example of income or a taxpayer falling under each. Conclude by explaining which amount is actually payable when more than one regime could apply.",
+  "model_notes": "Normal tax: on taxable income at the applicable rates. Minimum tax: on turnover where it exceeds normal tax (e.g. a low-margin company). Final tax: collected through withholding and treated as the final liability, excluded from the normal computation (e.g. dividends). Payable = normal tax, or minimum tax if higher; final-taxed amounts stand apart.",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "Explain all three regimes accurately.",
+    "max_marks": 3.0
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Give one valid example for each regime.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Note that final-taxed income is excluded from the normal computation, and minimum tax applies only where it exceeds normal tax.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Reason about which amount is payable when regimes overlap.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "All three regimes explained with examples and the overlap rule stated.",
+    "max_marks": 1.0
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-016",
+  "type": "legislative_application",
+  "type_label": "Legislative application",
+  "marks": 6,
+  "topic_code": "B.b",
+  "topic_title": "Chargeability and Computation of Income and Tax",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 11,
+  "question_text": "The paper states: tax withheld from payments for services is adjustable against normal tax, while tax withheld from dividends is final tax. Scenario: (a) a company pays Rs 500,000 to a consultant after deducting withholding tax on services; (b) the same company pays a Rs 500,000 dividend after deducting withholding tax. Required: For each payment, state whether the withholding is adjustable or final, explain what that means for the recipient's tax computation, and cite the relevant provisions.",
+  "model_notes": "Services withholding (s.153) is adjustable: the consultant includes the gross fee in normal income and claims the withheld tax as a credit. Dividend withholding (s.150) is final tax: the dividend is excluded from the normal computation and no further tax is due on it.",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "Explain the difference between adjustable and final withholding.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Provisions cited",
+    "guidance": "Cite the services-withholding and dividend-withholding provisions.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Apply to both payments: services withholding adjustable; dividend withholding final.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Note the adjustable amount is credited while final-taxed income is excluded from normal computation.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Reason about how each amount enters the recipient's computation.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "Both payments treated with provisions cited.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-017",
+  "type": "legislative_application",
+  "type_label": "Legislative application",
+  "marks": 6,
+  "topic_code": "C.a",
+  "topic_title": "Returns, Assessments, Appeals and Records",
+  "tax_year": "TY2026",
+  "difficulty": 2,
+  "time_minutes": 11,
+  "question_text": "The paper gives the statutory time limits for appeals. Scenario: the tax department amends Mr. Javed's assessment and he disagrees with the amended order. Required: Describe the appeal route available to him — Commissioner (Appeals), the Appellate Tribunal, and the High Court — stating the order in which they are approached, what each forum decides, and the time limit for each step as given on the paper.",
+  "model_notes": "First appeal to the Commissioner (Appeals) (s.127) within the stated days of the order; then to the Appellate Tribunal (s.131) within the stated days; then a reference to the High Court (s.133) on a question of law within the stated days. Each stage must be exhausted in order.",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "Describe the three-tier appeal route in order.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Provisions cited",
+    "guidance": "Cite the provisions for each appeal stage.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Apply the route to Mr. Javed's amended assessment.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Note that the High Court stage is a reference on a question of law.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Explain why the stages must be approached in order.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "All three stages with time limits covered.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-018",
+  "type": "legislative_application",
+  "type_label": "Legislative application",
+  "marks": 5,
+  "topic_code": "D.b",
+  "topic_title": "Registration",
+  "tax_year": "TY2026",
+  "difficulty": 1,
+  "time_minutes": 9,
+  "question_text": "The paper states the turnover threshold above which a manufacturer must register for sales tax. Scenario: Mr. Imran starts manufacturing taxable goods and his turnover in the first six months reaches Rs 6,000,000, above the threshold given on the paper. Required: Explain whether he must register, what registration obliges him to do (charge tax, file returns, keep records), and what happens if he does not register.",
+  "model_notes": "A manufacturer crossing the turnover threshold must register (s.14). Registration obliges him to charge sales tax on taxable supplies, file returns, and maintain prescribed records; failure to register attracts penalties and the department may register him compulsorily.",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "Explain mandatory registration once the threshold is crossed.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Provisions cited",
+    "guidance": "Cite the registration provision.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Apply to Mr. Imran: turnover above threshold means he must register.",
+    "max_marks": 1.5
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Note voluntary registration and that exempt-only suppliers are treated differently.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Reason about the obligations registration creates.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "Registration duty, obligations, and consequences all covered.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-019",
+  "type": "legislative_application",
+  "type_label": "Legislative application",
+  "marks": 7,
+  "topic_code": "D.a",
+  "topic_title": "Scope and Payment of Tax",
+  "tax_year": "TY2026",
+  "difficulty": 3,
+  "time_minutes": 13,
+  "question_text": "The paper states the rule that input tax attributable to exempt supplies is inadmissible, and that where inputs are used for both taxable and exempt supplies the input tax must be apportioned. Scenario: a registered person makes taxable supplies of Rs 3,000,000 and exempt supplies of Rs 1,000,000 in a tax period, and incurred input tax of Rs 200,000 on common inputs. Required: Explain the apportionment rule, apply it to the scenario to find the admissible input tax, and state the treatment of any disallowed amount.",
+  "model_notes": "Common input tax is apportioned by the ratio of taxable supplies to total supplies: 3,000,000 / 4,000,000 = 3/4, so Rs 150,000 is admissible and Rs 50,000 (attributable to exempt supplies) is inadmissible and forms part of cost.",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "Explain apportionment of common input tax between taxable and exempt supplies.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Provisions cited",
+    "guidance": "Cite the input-tax disallowance provision.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Apportion: taxable share 3/4 of Rs 200,000 = Rs 150,000 admissible; Rs 50,000 disallowed.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Distinguish directly-attributable input tax from common input tax.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Reason through the ratio computation.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "Rule explained, applied, and the disallowed amount's treatment stated.",
+    "max_marks": 1.0
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ },
+ {
+  "id": "TAX-PQ-020",
+  "type": "conceptual",
+  "type_label": "Concept",
+  "marks": 5,
+  "topic_code": "A.c",
+  "topic_title": "Ethics",
+  "tax_year": "TY2026",
+  "difficulty": 1,
+  "time_minutes": 9,
+  "question_text": "The syllabus names fairness, transparency, equity and accountability as the four pillars of tax administration, and contrasts the legal powers of tax authorities with their ethical responsibilities. Required: Explain what each pillar means in practice for how taxes are administered, and discuss one ethical responsibility of tax authorities that goes beyond their strict legal powers.",
+  "model_notes": "Fairness: like cases treated alike. Transparency: rules and decisions open to scrutiny. Equity: burdens aligned with ability to pay. Accountability: officials answerable for their actions. Beyond legal powers, authorities owe taxpayers respectful, unbiased treatment — e.g. not using audit powers punitively — because trust drives voluntary compliance.",
+  "steps": [],
+  "rubric": [
+   {
+    "dimension": "Technical understanding",
+    "guidance": "Explain each of the four pillars in practical terms.",
+    "max_marks": 2.0
+   },
+   {
+    "dimension": "Application to scenario",
+    "guidance": "Ground each pillar in a practical example.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Exceptions handled",
+    "guidance": "Note tensions, e.g. between efficient collection and fair treatment.",
+    "max_marks": 0.5
+   },
+   {
+    "dimension": "Reasoning",
+    "guidance": "Reason about why ethical administration supports voluntary compliance.",
+    "max_marks": 1.0
+   },
+   {
+    "dimension": "Completeness & relevance",
+    "guidance": "All four pillars plus the beyond-legal-powers discussion covered.",
+    "max_marks": 0.5
+   }
+  ],
+  "kind": "generated",
+  "origin_label": "Practice question — generated for this project, NOT an ICAP question"
+ }
+]

@@ -1,0 +1,273 @@
+{
+ "subject": "CAF-2 Taxation: Principles and Compliance",
+ "exam_session": "Spring 2027",
+ "study_text_edition": "Sep-26",
+ "finance_act_note": "The Examinable Editions notice names only the Sep-26 study-text edition; no Finance Act is named. Treat 'Finance Act 2026 amendments incorporated' as INFERENCE, not fact.",
+ "exam": {
+  "marks": 100,
+  "questions": 8,
+  "compulsory": true,
+  "duration": "3h15m (incl. 15-min reading)",
+  "section_a": "MCQs, 60–70 marks"
+ },
+ "areas": [
+  {
+   "code": "A",
+   "title": "Objective, System, Constitutional Provisions and Ethics",
+   "weightage": "5-10",
+   "hours": "10-15",
+   "topics": [
+    {
+     "code": "A.a",
+     "title": "Basic Concepts of Taxation and Constitutional Provisions",
+     "los": [
+      {
+       "code": "A.a.1",
+       "paraphrase": "Talk through what direct versus indirect taxation means in practice and why the distinction matters.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      }
+     ]
+    },
+    {
+     "code": "A.b",
+     "title": "Federal and Provincial Financial Procedures",
+     "los": [
+      {
+       "code": "A.b.1",
+       "paraphrase": "Outline what the Federal Consolidated Fund and the Public Account are.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      },
+      {
+       "code": "A.b.2",
+       "paraphrase": "Outline what the Provincial Consolidated Fund and the Public Account are.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      },
+      {
+       "code": "A.b.3",
+       "paraphrase": "Explain which taxes Parliament is empowered to impose.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      },
+      {
+       "code": "A.b.4",
+       "paraphrase": "Explain the tax-raising powers available to provincial assemblies.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      }
+     ]
+    },
+    {
+     "code": "A.c",
+     "title": "Ethics",
+     "los": [
+      {
+       "code": "A.c.1",
+       "paraphrase": "Discuss why the state may levy taxes and the limits on that right, leaving out the classic canons of taxation.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      },
+      {
+       "code": "A.c.2",
+       "paraphrase": "Discuss the moral case for taxpayers and tax practitioners complying with tax law.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      },
+      {
+       "code": "A.c.3",
+       "paraphrase": "Contrast the legal powers of tax authorities with their ethical responsibilities.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      },
+      {
+       "code": "A.c.4",
+       "paraphrase": "Explain the four pillars of tax administration: fairness, transparency, equity and accountability.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      },
+      {
+       "code": "A.c.5",
+       "paraphrase": "Draw the basic line between tax evasion and tax avoidance.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "B",
+   "title": "Income Tax Laws – Chargeability",
+   "weightage": "50-60",
+   "hours": "55-65",
+   "topics": [
+    {
+     "code": "B.a",
+     "title": "Central Concepts",
+     "los": [
+      {
+       "code": "B.a.1",
+       "paraphrase": "Describe the core concepts of income and how far the income-tax charge reaches.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      }
+     ]
+    },
+    {
+     "code": "B.b",
+     "title": "Chargeability and Computation of Income and Tax",
+     "los": [
+      {
+       "code": "B.b.1",
+       "paraphrase": "Work out income, taxable income and the tax on it under each head — salary, property, business, capital gains and other sources — for non-corporate taxpayers.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "B.b.2",
+       "paraphrase": "Apply the rules on loss carry-forward, deductible allowances, set-off of losses, tax credits and exemptions/concessions.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "C",
+   "title": "Income Tax Laws – Administration and Compliance",
+   "weightage": "10-15",
+   "hours": "15-20",
+   "topics": [
+    {
+     "code": "C.a",
+     "title": "Returns, Assessments, Appeals and Records",
+     "los": [
+      {
+       "code": "C.a.1",
+       "paraphrase": "Explain the main tax-compliance duties and the filings they require.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "C.a.2",
+       "paraphrase": "Identify who has to file an income-tax return and a wealth statement.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "C.a.3",
+       "paraphrase": "Explain how returns/statements are filed and revised, the due dates, and how extensions work.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "C.a.4",
+       "paraphrase": "Draft a return of income and a wealth statement, including the reconciliation between them.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "C.a.5",
+       "paraphrase": "Explain the different types of assessment under the law.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "C.a.6",
+       "paraphrase": "Cover the audit of a person's income-tax affairs and how long records must be kept.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "C.a.7",
+       "paraphrase": "Describe the appeal route: Commissioner (Appeals), Appellate Tribunal and the High Court.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "C.a.8",
+       "paraphrase": "State the law on alternative dispute resolution.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "D",
+   "title": "Sales Tax Laws",
+   "weightage": "20-30",
+   "hours": "30-35",
+   "topics": [
+    {
+     "code": "D.a",
+     "title": "Scope and Payment of Tax",
+     "los": [
+      {
+       "code": "D.a.1",
+       "paraphrase": "Compute output and input sales tax on taxable supplies, including zero-rated and exempt supplies.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "D.a.2",
+       "paraphrase": "Explain when sales-tax liability arises and how it is paid.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "D.a.3",
+       "paraphrase": "Apportion input tax and work out carry-forward and refunds.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      }
+     ]
+    },
+    {
+     "code": "D.b",
+     "title": "Registration",
+     "los": [
+      {
+       "code": "D.b.1",
+       "paraphrase": "Describe the types of registration, the requirements, and the procedures for registering, de-registering and filing returns.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      }
+     ]
+    },
+    {
+     "code": "D.c",
+     "title": "Book Keeping and Invoicing Requirements",
+     "los": [
+      {
+       "code": "D.c.1",
+       "paraphrase": "List the records a registered person must maintain, the retention rules, and the audit procedures around them.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      },
+      {
+       "code": "D.c.2",
+       "paraphrase": "Explain why tax invoices, debit notes and credit notes matter and what the rules require of them.",
+       "proficiency": "P1",
+       "testing_level": "T1"
+      },
+      {
+       "code": "D.c.3",
+       "paraphrase": "Explain the procedure for destruction of goods.",
+       "proficiency": "P2",
+       "testing_level": "T2"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "total_weightage": 100,
+ "total_hours": "110-135",
+ "total_los": 28,
+ "note": "Question summaries on this site are paraphrased; wording is never verbatim from ICAP papers."
+}
