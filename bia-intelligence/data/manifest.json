@@ -7,6 +7,14 @@
   "questions_c.json",
   "questions_d.json"
  ],
+ "tax_files": [
+  "tax_legislation.json",
+  "tax_observations.json",
+  "tax_practice.json",
+  "tax_questions.json",
+  "tax_syllabus.json",
+  "tax_topics.json"
+ ],
  "counts": {
   "observations.json": 221,
   "cards.json": 85,
@@ -18,7 +26,13 @@
   "questions_a.json": 80,
   "questions_b.json": 72,
   "questions_c.json": 68,
-  "questions_d.json": 25
+  "questions_d.json": 25,
+  "tax_syllabus.json": 4,
+  "tax_topics.json": 9,
+  "tax_questions.json": 130,
+  "tax_observations.json": 154,
+  "tax_legislation.json": 172,
+  "tax_practice.json": 20
  },
- "data_policy": "Question wording is verbatim from the official papers (Bilal's direction 2026-10-23; past papers are public on ICAP's own site). Suggested answers, examiner comments and study text are paraphrased only \u2014 they sit behind ICAP's student login and are never published verbatim here."
+ "data_policy": "Question wording is verbatim from the official papers (Bilal's direction 2026-10-23; past papers are public on ICAP's own site). Suggested answers, examiner comments and study text are paraphrased only \u2014 they sit behind ICAP's student login and are never published verbatim here. CAF-2 Taxation web data is paraphrase-only throughout: no verbatim ICAP text of any kind appears in tax_*.json."
 }

@@ -6,6 +6,8 @@ const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp
 
 /* ---------- data ---------- */
 const BASE_TABLES = ["observations","cards","mistake_guides","generated","topic_notes","topic_summaries","syllabus"];
+/* CAF-2 Taxation tables (paraphrase-only throughout — no verbatim ICAP text). */
+const TAX_TABLES = ["tax_syllabus","tax_topics","tax_questions","tax_observations","tax_legislation","tax_practice"];
 const DB = {};
 const TYPES = {
   question:   {table:"questions",      label:"Question"},
@@ -14,6 +16,10 @@ const TYPES = {
   guide:      {table:"mistake_guides", label:"Mistake guide"},
   generated:  {table:"generated",      label:"Practice question"},
   note:       {table:"topic_notes",    label:"Revision note"},
+  taxquestion:{table:"tax_questions",  label:"Tax question summary"},
+  taxobs:     {table:"tax_observations", label:"Tax examiner note"},
+  taxpractice:{table:"tax_practice",   label:"Generated tax practice"},
+  taxtopic:   {table:"tax_topics",     label:"Tax topic"},
 };
 const titleOf = (type, row) => {
   if (type === "question") return `Q${row.number} · ${row.session} (${row.marks==null?"?":row.marks} marks)`;
@@ -22,6 +28,10 @@ const titleOf = (type, row) => {
   if (type === "guide") return row.title;
   if (type === "generated") return row.id + " · generated practice";
   if (type === "note") return row.title;
+  if (type === "taxquestion") return `Q${row.number} · ${row.session} (${row.marks==null?"?":row.marks} marks)`;
+  if (type === "taxobs") return row.id + " · " + row.session;
+  if (type === "taxpractice") return row.id + " · generated practice";
+  if (type === "taxtopic") return row.title;
   return row.id;
 };
 const bodyOf = (type, row) => {
@@ -31,6 +41,10 @@ const bodyOf = (type, row) => {
   if (type === "guide") return [row.title, row.description||"", row.why||""].join(" ");
   if (type === "generated") return row.prompt + " " + (row.skills||"");
   if (type === "note") return [row.title, row.overview||"", row.key_concepts||""].join(" ");
+  if (type === "taxquestion") return [row.summary, (row.topic_codes||[]).join(" "), (row.legislation_refs||[]).join(" "), row.type_label||""].join(" ");
+  if (type === "taxobs") return [row.observation, row.what_went_wrong||"", row.stronger_answer||""].join(" ");
+  if (type === "taxpractice") return [row.question_text, row.topic_title||"", row.type_label||""].join(" ");
+  if (type === "taxtopic") return [row.summary, (row.key_points||[]).join(" ")].join(" ");
   return "";
 };
 const SYN = {
@@ -41,6 +55,8 @@ const SYN = {
   fx:["foreign exchange","currency"], hedging:["hedge"],
   application:["apply","applied"], evaluation:["evaluate","evaluated"],
   analysis:["analyse","analyze"],
+  tax:["taxation"], ito:["income tax ordinance"], sta:["sales tax act"],
+  wht:["withholding tax"], fbr:["federal board of revenue"],
 };
 
 /* inverted index */
@@ -97,7 +113,12 @@ function searchDocs(q, typeFilter, limit){
   return scored.slice(0,limit||24);
 }
 const routeFor = (type,id) => type==="question" ? "#/q/"+id
-  : type==="guide" ? "#/g/"+id : "#/search?q="+encodeURIComponent(id);
+  : type==="guide" ? "#/g/"+id
+  : type==="taxquestion" ? "#/tax/questions/"+id
+  : type==="taxobs" ? "#/tax/examiner"
+  : type==="taxpractice" ? "#/tax/practice/"+id
+  : type==="taxtopic" ? "#/tax/topic/"+id
+  : "#/search?q="+encodeURIComponent(id);
 
 /* ---------- small markdown renderer ---------- */
 function md(src){
@@ -126,6 +147,9 @@ let S = {attempted:{}, checks:{}, sm2:{}, mocks:{active:null, history:[]}};
 try { const raw = localStorage.getItem(LS); if(raw) S = Object.assign(S, JSON.parse(raw)); } catch(e){}
 if(!S.mocks || typeof S.mocks !== "object") S.mocks = {active:null, history:[]};
 if(!Array.isArray(S.mocks.history)) S.mocks.history = [];
+/* Taxation progress lives under S.tax so BIA keys are never touched. */
+if(!S.tax || typeof S.tax !== "object") S.tax = {attempted:{}};
+if(!S.tax.attempted || typeof S.tax.attempted !== "object") S.tax.attempted = {};
 const save = () => { try{ localStorage.setItem(LS, JSON.stringify(S)); }catch(e){} };
 
 /* SM-2 */
@@ -212,6 +236,9 @@ function vHome(){
     <h2>What to study next</h2>
     <ul>${next.join("")}</ul>
   </div>
+  <div class="notice"><strong>Studying CAF-2 as well?</strong>
+  <a href="#/tax">Taxation: Principles and Compliance</a> — 9 topics, paraphrased question summaries,
+  a legislation browser and generated practice questions. All tax content is paraphrase-only.</div>
   <div class="notice"><strong>Predecessor note:</strong> questions before 2025 come from
   <strong>CAF-6 Managerial and Financial Analysis</strong>, the renamed predecessor of CAF-7 BIA —
   each one mapped to current-syllabus topics; removed topics are excluded from practice.</div>
@@ -826,6 +853,421 @@ function vMockReview(){
   });
 }
 
+/* ---------- views: tax (CAF-2 Taxation: Principles and Compliance) ----------
+   Paraphrase-only throughout: no verbatim ICAP wording appears in any tax view. */
+const taxSyllabus = () => DB.tax_syllabus || {areas:[], exam:{}};
+const taxTopicById = id => (DB.tax_topics||[]).find(t=>t.id===id);
+const taxQById = id => (DB.tax_questions||[]).find(q=>q.id===id);
+const taxPracticeById = id => (DB.tax_practice||[]).find(p=>p.id===id);
+const taxQB = q => [
+  badge("b-type", q.type_label||q.type||"?"),
+  badge("b-id", (q.marks==null?"?":q.marks) + (q.marks===1?" mark":" marks")),
+  q.predecessor ? badge("b-pred","2021 predecessor") : badge("b-auth","2025 scheme"),
+  `<span class="badge b-sugg" title="Wording is paraphrased, never verbatim ICAP text">● paraphrased</span>`,
+].join("");
+const taxObsRow = o => `<li class="result">
+    <p class="snip" style="margin-top:0">${esc(o.observation)}</p>
+    ${o.what_went_wrong?`<p class="snip"><strong>Went wrong:</strong> ${esc(o.what_went_wrong)}</p>`:""}
+    ${o.stronger_answer?`<p class="snip"><strong>Stronger answer:</strong> ${esc(o.stronger_answer)}</p>`:""}
+    <div class="meta"><span class="src">${esc(o.source)}</span>${o.question?`<span class="badge b-id">${esc(o.question)}</span>`:""}<span class="badge b-sugg">${esc(o.category||"")}</span></div>
+  </li>`;
+const taxPracticeCard = p => `<a class="card" href="#/tax/practice/${esc(p.id)}">
+    <span class="k">${esc(p.id)} · ${esc(p.type_label||"")}</span>
+    <h3>${esc(p.topic_title||"")}</h3>
+    <p>${esc((p.question_text||"").slice(0,120))}…</p>
+    <span class="count">${p.marks==null?"?":p.marks} marks</span></a>`;
+
+function vTax(){
+  setNav("tax");
+  const syl = taxSyllabus();
+  const areas = syl.areas||[];
+  const leg = DB.tax_legislation||{provisions:[],rate_tables:[]};
+  const nQ = (DB.tax_questions||[]).filter(q=>!q.excluded).length;
+  const stats = [
+    [nQ, "paraphrased question summaries", "#/tax/questions"],
+    [(DB.tax_observations||[]).length, "examiner observations", "#/tax/examiner"],
+    [(leg.provisions||[]).length + (leg.rate_tables||[]).length, "legislation entries", "#/tax/legislation"],
+    [(DB.tax_practice||[]).length, "generated practice questions", "#/tax/practice"],
+  ];
+  app().innerHTML = `
+  <div class="hero">
+    <p class="eyebrow">ICAP CAF-2 · Taxation: Principles and Compliance</p>
+    <h1>Study <em>smarter</em> for Taxation.</h1>
+    <p class="lede">Nine topics, ${nQ} paraphrased question summaries and ${(DB.tax_observations||[]).length}
+    examiner observations — every item mapped to the 2025 syllabus for the Spring 2027 attempt.</p>
+  </div>
+  <div class="stats" role="list">
+    ${stats.map(s=>`<a class="stat" role="listitem" href="${s[2]}"><b>${s[0]}</b><span>${s[1]}</span></a>`).join("")}
+  </div>
+  <div class="section-head"><h2>Syllabus areas</h2><p>2025 scheme · ${esc(syl.total_weightage||100)} marks · ${esc(syl.total_los||"")} learning outcomes</p></div>
+  <div class="card-grid">
+    ${areas.map(a=>`<a class="card" href="#/tax/topics?area=${esc(a.code)}">
+      <span class="k">Area ${esc(a.code)} · ${esc(a.weightage)}% weight</span>
+      <h3>${esc(a.title)}</h3>
+      <p>${esc(a.hours)} teaching hours · ${a.topics.length} topics</p>
+      <span class="count">${a.topics.reduce((t,x)=>t+(x.los||[]).length,0)} LOs</span></a>`).join("")}
+  </div>
+  <div class="section-head"><h2>Explore</h2></div>
+  <div class="card-grid">
+    <a class="card" href="#/tax/topics"><span class="k">Library</span><h3>Topic library</h3><p>9 topics — summaries, key points and how each is examined.</p></a>
+    <a class="card" href="#/tax/questions"><span class="k">Practice</span><h3>Question summaries</h3><p>Paraphrased summaries of past-paper questions — never verbatim wording.</p></a>
+    <a class="card" href="#/tax/legislation"><span class="k">Reference</span><h3>Legislation browser</h3><p>Provisions, schedules and rate tables with verification badges.</p></a>
+    <a class="card" href="#/tax/examiner"><span class="k">Examiner</span><h3>Examiner intelligence</h3><p>Paraphrased examiner observations, grouped by mistake category.</p></a>
+    <a class="card" href="#/tax/practice"><span class="k">Drills</span><h3>Generated practice</h3><p>20 project-authored questions with model notes — labeled, not ICAP papers.</p></a>
+    <a class="card" href="#/tax/tax-year"><span class="k">Concept</span><h3>Tax-year explainer</h3><p>Historical vs current law, and what counts as examinable for Spring 2027.</p></a>
+  </div>
+  <div class="notice"><strong>Examinable edition:</strong> ICAP's notice names the
+  <strong>Sep-26 study-text edition</strong> for the Spring 2027 attempt — no Finance Act is named.
+  Treat "Finance Act 2026 amendments incorporated" as inference, not fact.
+  <a href="#/tax/tax-year">Read the tax-year explainer</a>.</div>
+  <div class="notice"><strong>Paraphrase-only.</strong> Everything in the Taxation section is paraphrased or
+  project-authored. No verbatim ICAP question wording, suggested solutions, examiner comments or
+  study-text extracts appear anywhere here — the desktop app holds the full local archive.</div>`;
+  document.title = "CAF-2 Taxation — BIA Intelligence";
+}
+
+function vTaxTopics(params){
+  setNav("tax");
+  const area = params.get("area")||"";
+  const areas = (taxSyllabus().areas||[]).filter(a=>!area||a.code===area);
+  app().innerHTML = `
+  <p class="crumb"><a href="#/tax">Taxation</a> › Topic library</p>
+  <h2 class="page-title">Topic library</h2>
+  <p class="page-sub">9 topics · summaries and key points are project-authored teaching.</p>
+  <div class="deck-tools" role="group" aria-label="Filter by area">
+    <label>Area <select class="fselect" id="taxAreaF">
+      <option value="">All areas</option>
+      ${(taxSyllabus().areas||[]).map(a=>`<option value="${esc(a.code)}"${a.code===area?" selected":""}>Area ${esc(a.code)} — ${esc(a.title)}</option>`).join("")}
+    </select></label>
+  </div>
+  ${areas.map(a=>`
+  <div class="section-head"><h2>Area ${esc(a.code)} — ${esc(a.title)}</h2><p>${esc(a.weightage)}% weight</p></div>
+  <div class="card-grid">
+    ${(DB.tax_topics||[]).filter(t=>t.area===a.code).map(t=>`
+    <a class="card" href="#/tax/topic/${esc(t.id)}">
+      <span class="k">${esc(t.code)}</span>
+      <h3>${esc(t.title)}</h3>
+      <p>${esc((t.summary||"").slice(0,140))}…</p>
+      <span class="count">${(t.key_points||[]).length} key points</span>
+    </a>`).join("")}
+  </div>`).join("")}
+  <p class="src" style="margin-top:8px"><span class="badge b-review">● own teaching</span> all summaries and key points</p>`;
+  document.title = "Topic library — CAF-2 Taxation";
+  $("#taxAreaF").addEventListener("change",e=>{
+    location.hash = "#/tax/topics"+(e.target.value?`?area=${e.target.value}`:"");
+  });
+}
+
+function vTaxTopic(id){
+  setNav("tax");
+  const t = taxTopicById(id);
+  if(!t){ location.hash="#/tax/topics"; return; }
+  const qs = (DB.tax_questions||[]).filter(q=>!q.excluded && (q.topic_codes||[]).includes(t.code));
+  const pr = (DB.tax_practice||[]).filter(p=>p.topic_code===t.code);
+  const ob = (DB.tax_observations||[]).filter(o=>(o.topics||[]).includes(t.code)).slice(0,4);
+  app().innerHTML = `
+  <p class="crumb"><a href="#/tax">Taxation</a> › <a href="#/tax/topics">Topics</a> › ${esc(t.code)}</p>
+  <div class="record-head">
+    <div class="badges"><span class="badge b-type">Area ${esc(t.area)}</span><span class="badge b-id">${esc(t.code)}</span><span class="badge b-review">● own teaching</span></div>
+    <h1>${esc(t.title)}</h1>
+    <p class="page-sub">${esc(t.area_title)} · area weight ${esc(t.area_weightage)}%</p>
+  </div>
+  <section class="sumcard" aria-label="Topic summary">
+    <h2>Topic summary</h2>
+    <p>${esc(t.summary)}</p>
+    <h3>Key points</h3>
+    <ul>${(t.key_points||[]).map(k=>`<li>${esc(k)}</li>`).join("")}</ul>
+    <p class="sumhow"><strong>How it&rsquo;s examined:</strong> ${esc(t.how_examined)}</p>
+    ${(t.legislation_refs||[]).length?`<p class="sumhow"><strong>Legislation:</strong> ${t.legislation_refs.map(esc).join("; ")}</p>`:""}
+  </section>
+  ${qs.length?`<div class="section-head"><h2>Question summaries</h2><p>${qs.length} paraphrased</p></div>
+  <ul class="results">${qs.map(q=>`<li class="result">
+    <a class="rt" href="#/tax/questions/${esc(q.id)}">Q${esc(q.number)} — ${esc(q.session)}</a>
+    <p class="snip">${esc(q.summary||"")}</p>
+    <div class="meta">${taxQB(q)}</div>
+  </li>`).join("")}</ul>`:""}
+  ${pr.length?`<div class="section-head"><h2>Generated practice</h2><p>project-authored</p></div>
+  <div class="card-grid">${pr.map(taxPracticeCard).join("")}</div>`:""}
+  ${ob.length?`<div class="section-head"><h2>Examiner notes</h2><p>paraphrased</p></div>
+  <ul class="results">${ob.map(taxObsRow).join("")}</ul>`:""}
+  <div class="actions"><a class="btn btn-ghost" href="#/tax/topics">Back to topic library</a></div>`;
+  document.title = `${t.title} — CAF-2 Taxation`;
+}
+
+function vTaxQuestions(params){
+  setNav("tax");
+  const all = DB.tax_questions||[];
+  const sessions = [...new Set(all.map(q=>q.session))]
+    .sort((a,b)=>((all.find(q=>q.session===a)||{}).session_order||0)-((all.find(q=>q.session===b)||{}).session_order||0));
+  const types = [...new Set(all.map(q=>q.type_label).filter(Boolean))];
+  const areas = taxSyllabus().areas||[];
+  const f = {
+    session: params.get("session")||"",
+    type: params.get("type")||"",
+    area: params.get("area")||"",
+    att: params.get("att")||"",
+  };
+  const attd = ((S.tax||{}).attempted)||{};
+  const list = all.filter(q=>{
+    if(q.excluded) return false;
+    if(f.session && q.session!==f.session) return false;
+    if(f.type && q.type_label!==f.type) return false;
+    if(f.area && !((q.topic_codes||[]).some(c=>(c||"")[0]===f.area))) return false;
+    if(f.att==="done" && !attd[q.id]) return false;
+    if(f.att==="todo" && attd[q.id]) return false;
+    return true;
+  }).sort((a,b)=>(a.session_order-b.session_order)||String(a.number).localeCompare(String(b.number)));
+  const opt = (v,t,sel)=>`<option value="${esc(v)}"${v===sel?" selected":""}>${esc(t)}</option>`;
+  app().innerHTML = `
+  <p class="crumb"><a href="#/tax">Taxation</a> › Questions</p>
+  <h2 class="page-title">Question summaries</h2>
+  <p class="page-sub">${list.length} paraphrased summaries · wording is never verbatim from ICAP papers.</p>
+  <form class="filters" id="taxqf" aria-label="Filter tax questions">
+    <label>Session <select class="fselect" name="session">${opt("","All sessions")}${sessions.map(s=>opt(s,s)).join("")}</select></label>
+    <label>Type <select class="fselect" name="type">${opt("","All types")}${types.map(t=>opt(t,t)).join("")}</select></label>
+    <label>Area <select class="fselect" name="area">${opt("","All areas")}${areas.map(a=>opt(a.code,"Area "+a.code)).join("")}</select></label>
+    <label>Progress <select class="fselect" name="att">${opt("","All")}${opt("todo","Not attempted")}${opt("done","Attempted")}</select></label>
+  </form>
+  <p role="status" aria-live="polite" class="src">${list.length} summar${list.length===1?"y":"ies"} match</p>
+  <ul class="results" id="taxQGrid">
+    ${list.map(q=>`<li class="result">
+      <a class="rt" href="#/tax/questions/${esc(q.id)}">Q${esc(q.number)} — ${esc(q.session)}</a>
+      <p class="snip">${esc(q.summary||"")}</p>
+      <div class="meta">${taxQB(q)}${attd[q.id]?`<span class="badge b-review">✓ attempted</span>`:""}</div>
+    </li>`).join("") || `<li class="noresults"><h2>No summaries match</h2><p>Loosen a filter.</p></li>`}
+  </ul>`;
+  document.title = "Question summaries — CAF-2 Taxation";
+  $("#taxqf").addEventListener("change", ()=>{
+    const fd = new FormData($("#taxqf"));
+    const p = new URLSearchParams();
+    for(const [k,v] of fd.entries()) if(v) p.set(k,v);
+    location.hash = "#/tax/questions" + (p.toString() ? "?"+p.toString() : "");
+  });
+}
+
+function vTaxQuestion(id){
+  setNav("tax");
+  const q = taxQById(id);
+  if(!q){ location.hash="#/tax/questions"; return; }
+  const att = (((S.tax||{}).attempted)||{})[id];
+  const related = (DB.tax_observations||[])
+    .filter(o=>(o.topics||[]).some(t=>(q.topic_codes||[]).includes(t))).slice(0,3);
+  app().innerHTML = `
+  <p class="crumb"><a href="#/tax">Taxation</a> › <a href="#/tax/questions">Questions</a> › ${esc(q.id)}</p>
+  <div class="record-head">
+    <div class="badges">${taxQB(q)}</div>
+    <h1>Q${esc(q.number)} — ${esc(q.session)}</h1>
+    <p class="page-sub">${esc(q.summary||"")}</p>
+  </div>
+  <div class="meta-table"><dl>
+    <dt>Session</dt><dd>${esc(q.session)}${q.predecessor?' <span class="badge b-pred">2021 predecessor</span>':""}</dd>
+    <dt>Source ref</dt><dd>${esc(q.source||"—")}</dd>
+    <dt>Paper section</dt><dd>${esc(q.section||"—")}</dd>
+    <dt>Type</dt><dd>${esc(q.type_label||q.type||"—")}</dd>
+    <dt>Tax year</dt><dd>${esc(q.tax_year||"—")}</dd>
+    <dt>Topics</dt><dd>${(q.topic_codes||[]).map(esc).join(", ")||"—"}</dd>
+    <dt>Legislation</dt><dd>${(q.legislation_refs||[]).map(esc).join(", ")||"—"}</dd>
+    <dt>LO refs</dt><dd>${(q.lo_refs||[]).map(esc).join(", ")||"—"}</dd>
+    <dt>Difficulty</dt><dd>${esc(q.difficulty)} <span class="src">(estimate — ${esc(q.difficulty_basis||"not validated")})</span></dd>
+  </dl></div>
+  ${related.length?`<div class="section-head"><h2>Examiner notes</h2><p>paraphrased</p></div>
+  <ul class="results">${related.map(taxObsRow).join("")}</ul>`:""}
+  <div class="actions">
+    <button class="btn ${att?"btn-ghost":"btn-primary"}" id="taxAttBtn">${att?"✓ Attempted — undo":"Mark as attempted"}</button>
+    <a class="btn btn-ghost" href="#/tax/questions">Back to questions</a>
+  </div>
+  <div class="notice"><strong>Data note:</strong> the summary above is paraphrased — it is not the official
+  question wording. Work the question from the summary, then check yourself against the official paper
+  and suggested answer in your own materials.</div>`;
+  document.title = `Q${q.number} ${q.session} — CAF-2 Taxation`;
+  $("#taxAttBtn").addEventListener("click",()=>{
+    S.tax = S.tax||{attempted:{}}; S.tax.attempted = S.tax.attempted||{};
+    if(S.tax.attempted[id]) delete S.tax.attempted[id]; else S.tax.attempted[id]=Date.now();
+    save(); vTaxQuestion(id);
+  });
+}
+
+function vTaxLegislation(params){
+  setNav("tax");
+  const leg = DB.tax_legislation||{provisions:[],rate_tables:[],verification_key:{}};
+  const tab = params.get("tab")||"provisions";
+  const cat = params.get("cat")||"", ver = params.get("ver")||"";
+  const cats = [...new Set((leg.provisions||[]).map(p=>p.category).filter(Boolean))].sort();
+  const vers = [...new Set((leg.provisions||[]).map(p=>p.verification).filter(Boolean))].sort();
+  const list = (leg.provisions||[]).filter(p=>
+    (!cat || p.category===cat) && (!ver || p.verification===ver));
+  const catLabel = c => ({"statute_section":"Statute section","schedule":"Schedule","tax_year":"Tax year",
+    "finance_act":"Finance Act","sro":"SRO","rules":"Rules",
+    "knowledge_reference":"Knowledge reference","rate_table":"Rate table"}[c]||c);
+  const provRow = p => `<li class="result">
+      <p style="margin:0"><strong>${esc(p.identifier||"")}</strong></p>
+      ${p.reference?`<p class="snip">${esc(p.reference)}</p>`:""}
+      ${p.description?`<p class="snip">${esc(p.description)}</p>`:""}
+      <div class="meta">
+        <span class="badge ${esc((p.badge||{}).class||"b-diff")}">● ${esc((p.badge||{}).label||p.verification||"")}</span>
+        ${p.category?`<span class="badge b-id">${esc(catLabel(p.category))}</span>`:""}
+        ${p.applicable_period?`<span class="src">${esc(p.applicable_period)}</span>`:""}
+        ${p.source?`<span class="src">${esc(p.source)}</span>`:""}
+      </div>
+    </li>`;
+  app().innerHTML = `
+  <p class="crumb"><a href="#/tax">Taxation</a> › Legislation</p>
+  <h2 class="page-title">Legislation browser</h2>
+  <p class="page-sub">${(leg.provisions||[]).length} provisions and knowledge references · ${(leg.rate_tables||[]).length} rate tables. Names, section refs and rates are facts; descriptions are own-wording.</p>
+  <div class="dtabs" role="group" aria-label="Browse legislation">
+    <button data-tab="provisions" aria-pressed="${tab==="provisions"}">Provisions</button>
+    <button data-tab="rates" aria-pressed="${tab==="rates"}">Rate tables</button>
+  </div>
+  ${tab==="provisions"?`
+  <form class="filters" id="legF" aria-label="Filter provisions">
+    <label>Category <select class="fselect" name="cat"><option value="">All</option>${cats.map(c=>`<option value="${esc(c)}"${c===cat?" selected":""}>${esc(catLabel(c))}</option>`).join("")}</select></label>
+    <label>Verification <select class="fselect" name="ver"><option value="">All</option>${vers.map(v=>`<option value="${esc(v)}"${v===ver?" selected":""}>${esc(v.replace(/_/g," "))}</option>`).join("")}</select></label>
+  </form>
+  <p role="status" aria-live="polite" class="src">${list.length} entries</p>
+  <ul class="results">
+    ${list.map(provRow).join("") || `<li class="noresults"><h2>No entries match</h2><p>Loosen a filter.</p></li>`}
+  </ul>`:`<ul class="results">
+    ${(leg.rate_tables||[]).map(provRow).join("")}
+  </ul>`}
+  <div class="section-head"><h2>Verification key</h2></div>
+  <ul class="about-list">
+    ${Object.entries(leg.verification_key||{}).map(([k,v])=>`<li><strong>${esc(k.replace(/_/g," "))}</strong> — ${esc(v)}</li>`).join("")}
+  </ul>
+  <div class="notice">${esc(leg.note||"")}</div>`;
+  document.title = "Legislation — CAF-2 Taxation";
+  $$(".dtabs button").forEach(b=>b.addEventListener("click",()=>{
+    location.hash = "#/tax/legislation"+(b.dataset.tab==="rates"?"?tab=rates":"");
+  }));
+  const lf = $("#legF");
+  if(lf) lf.addEventListener("change",()=>{
+    const fd = new FormData(lf);
+    const p = new URLSearchParams();
+    for(const [k,v] of fd.entries()) if(v) p.set(k,v);
+    location.hash = "#/tax/legislation"+(p.toString()?"?"+p.toString():"");
+  });
+}
+
+function vTaxExaminer(params){
+  setNav("tax");
+  const q = params.get("q")||"";
+  const cat = params.get("cat")||"";
+  const cats = [...new Set((DB.tax_observations||[]).map(o=>o.category).filter(Boolean))];
+  let results = [];
+  if(q){
+    results = searchDocs(q, "taxobs", 30).map(r=>r.d);
+    if(cat) results = results.filter(o=>o.category===cat);
+  } else if(cat){
+    results = (DB.tax_observations||[]).filter(o=>o.category===cat);
+  }
+  const showResults = q || cat;
+  const byCat = {};
+  for(const o of DB.tax_observations||[]){ (byCat[o.category||"other"]=byCat[o.category||"other"]||[]).push(o); }
+  app().innerHTML = `
+  <p class="crumb"><a href="#/tax">Taxation</a> › Examiner</p>
+  <h2 class="page-title">Examiner intelligence</h2>
+  <p class="page-sub">${(DB.tax_observations||[]).length} paraphrased examiner observations — what went wrong and what a stronger answer does.</p>
+  <form class="searchbar" id="taxExForm" role="search" style="position:static;border:0;padding:0">
+    <div class="row"><input id="q" type="search" value="${esc(q)}" placeholder="Search examiner observations…" aria-label="Search tax examiner observations"></div>
+    <div class="fchips" role="group" aria-label="Filter by category">
+      ${["",...cats].map(c=>`<button type="button" data-cat="${esc(c)}" aria-pressed="${c===cat}">${c||"all"}</button>`).join("")}
+    </div>
+  </form>
+  ${showResults?`<p role="status" aria-live="polite" class="src">${results.length} observations match${cat?` in “${esc(cat)}”`:""}</p>
+  <ul class="results">
+    ${results.map(taxObsRow).join("") || `<li class="noresults"><h2>No observations match</h2></li>`}
+  </ul>`
+  :Object.entries(byCat).map(([c,os])=>`
+  <div class="section-head"><h2 style="text-transform:capitalize">${esc(c)}</h2><p>${os.length} observations</p></div>
+  <ul class="results">${os.slice(0,4).map(taxObsRow).join("")}</ul>
+  ${os.length>4?`<p class="src"><a href="#/tax/examiner?cat=${encodeURIComponent(c)}">View all ${os.length} ${esc(c)} observations</a></p>`:""}`).join("")}
+  <div class="notice"><strong>Paraphrased.</strong> These are own-wording summaries of ICAP examiner comments — never verbatim.</div>`;
+  document.title = "Examiner intelligence — CAF-2 Taxation";
+  const go = ()=>{ const v=$("#q").value.trim();
+    location.hash = "#/tax/examiner"+(v||cat ? "?"+new URLSearchParams(Object.assign({}, v?{q:v}:{}, cat?{cat}:{})).toString() : ""); };
+  $("#taxExForm").addEventListener("submit",e=>{e.preventDefault();go();});
+  let t; $("#q").addEventListener("input",()=>{clearTimeout(t);t=setTimeout(go,700);});
+  $$("#taxExForm [data-cat]").forEach(b=>b.addEventListener("click",()=>{
+    const c=b.dataset.cat, v=$("#q").value.trim();
+    location.hash="#/tax/examiner"+(v||c?"?"+new URLSearchParams(Object.assign({},v?{q:v}:{},c?{cat:c}:{})).toString():"");
+  }));
+}
+
+function vTaxPractice(){
+  setNav("tax");
+  const list = DB.tax_practice||[];
+  app().innerHTML = `
+  <p class="crumb"><a href="#/tax">Taxation</a> › Practice</p>
+  <h2 class="page-title">Generated practice questions</h2>
+  <p class="page-sub">${list.length} project-authored questions with model notes and marking rubrics.</p>
+  <div class="notice"><strong>Not ICAP questions.</strong> Every question here was written for this project —
+  none is taken from an ICAP paper. Rates and treatment rules used in computations are stated inside each
+  question, the way the exam paper's rate sheet states them.</div>
+  <div class="card-grid">${list.map(taxPracticeCard).join("")}</div>`;
+  document.title = "Practice — CAF-2 Taxation";
+}
+
+function vTaxPracticeQ(id){
+  setNav("tax");
+  const p = taxPracticeById(id);
+  if(!p){ location.hash="#/tax/practice"; return; }
+  app().innerHTML = `
+  <p class="crumb"><a href="#/tax">Taxation</a> › <a href="#/tax/practice">Practice</a> › ${esc(p.id)}</p>
+  <div class="record-head">
+    <div class="badges">
+      <span class="badge b-new">● generated — not an ICAP question</span>
+      <span class="badge b-type">${esc(p.type_label||"")}</span>
+      <span class="badge b-id">${p.marks==null?"?":p.marks}${p.marks===1?" mark":" marks"}</span>
+      ${p.time_minutes?`<span class="badge b-id">~${esc(p.time_minutes)} min</span>`:""}
+    </div>
+    <h1>${esc(p.id)} — ${esc(p.topic_title||"")}</h1>
+    <p class="page-sub">Topic ${esc(p.topic_code||"")} · difficulty ${p.difficulty==null?"?":esc(p.difficulty)}/5 (project estimate) · tax year ${esc(p.tax_year||"—")}</p>
+  </div>
+  <div class="section-head"><h2>Question</h2></div>
+  <div class="prose"><p>${esc(p.question_text||"")}</p></div>
+  ${(p.steps||[]).length?`<div class="section-head"><h2>Suggested working order</h2></div>
+  <div class="prose"><ol>${p.steps.map(s=>`<li>${esc(s.label||s.key||"")}</li>`).join("")}</ol></div>`:""}
+  <div class="section-head"><h2>Model approach</h2><p>compare after attempting</p></div>
+  <div class="prose"><p>${esc(p.model_notes||"")}</p></div>
+  ${(p.rubric||[]).length?`<div class="section-head"><h2>Marking rubric</h2></div>
+  <div class="prose"><table><thead><tr><th>Dimension</th><th>What earns it</th><th>Marks</th></tr></thead>
+  <tbody>${p.rubric.map(r=>`<tr><td><strong>${esc(r.dimension||"")}</strong></td><td>${esc(r.guidance||"")}</td><td>${r.max_marks==null?"—":esc(r.max_marks)}</td></tr>`).join("")}</tbody></table></div>`:""}
+  <div class="actions"><a class="btn btn-ghost" href="#/tax/practice">Back to practice</a></div>`;
+  document.title = `${p.id} — practice — CAF-2 Taxation`;
+}
+
+function vTaxYear(){
+  setNav("tax");
+  app().innerHTML = `
+  <p class="crumb"><a href="#/tax">Taxation</a> › Tax-year explainer</p>
+  <h2 class="page-title">Tax years &amp; historical vs current law</h2>
+  <p class="page-sub">Why a 2022 paper and the Spring 2027 exam don't run on the same law.</p>
+  <div class="prose">
+  <h2>Tax year, in one paragraph</h2>
+  <p>Pakistan taxes income on a July-to-June cycle: the <strong>income year</strong> is the twelve months in
+  which the income is earned (e.g. 1 July 2025 – 30 June 2026), and the <strong>tax year</strong> is the year in
+  which that income is assessed (Tax Year 2026). Every question summary on this site carries the tax year it was
+  set in — treat its rates and provisions as belonging to that year.</p>
+  <h2>Historical vs current law</h2>
+  <p>Tax law moves every year through Finance Acts. A question from Autumn 2022 was examined on the law as it
+  stood then; some of those provisions and rates have since been amended. Use older sessions for
+  <em>technique</em> — how to structure a computation, which adjustments examiners reward — and learn the
+  <em>current</em> rates and provisions from the Sep-26 study-text edition.</p>
+  <h2>What is examinable for Spring 2027</h2>
+  <p>ICAP's Examinable Editions notice names the <strong>Sep-26 edition of the study text</strong> — it names no
+  Finance Act directly. "Finance Act 2026 amendments incorporated" is therefore an <strong>inference</strong>,
+  not a fact ICAP has stated; this site flags it as such wherever it matters. In the exam itself, the paper
+  prints the rates you need — always use the paper's figures over memory.</p>
+  <h2>How this site labels law-sensitive content</h2>
+  <ul class="about-list">
+    <li><span class="badge b-auth">● authoritative — ICAP syllabus</span> — stated by ICAP in the syllabus or examinable knowledge references.</li>
+    <li><span class="badge b-public">● official guidance — ICAP materials</span> — printed or stated by ICAP in papers, suggested answers, marking plans or study material; exam-session specific.</li>
+    <li><span class="badge b-review">● inference — not stated by ICAP</span> — inferred from the materials; never presented as fact.</li>
+  </ul>
+  </div>
+  <div class="actions"><a class="btn btn-ghost" href="#/tax">Back to Taxation home</a></div>`;
+  document.title = "Tax-year explainer — CAF-2 Taxation";
+}
+
 /* ---------- router ---------- */
 function route(){
   clearMockTimer();
@@ -849,6 +1291,17 @@ function route(){
     else vMocks();
   }
   else if(seg0==="about") vAbout();
+  else if(seg0==="tax"){
+    const t1 = path[1]||"";
+    if(t1==="topics") vTaxTopics(params);
+    else if(t1==="topic" && path[2]) vTaxTopic(path[2]);
+    else if(t1==="questions") path[2] ? vTaxQuestion(path[2]) : vTaxQuestions(params);
+    else if(t1==="legislation") vTaxLegislation(params);
+    else if(t1==="examiner") vTaxExaminer(params);
+    else if(t1==="practice") path[2] ? vTaxPracticeQ(path[2]) : vTaxPractice();
+    else if(t1==="tax-year") vTaxYear();
+    else vTax();
+  }
   else if(seg0==="search") vSearch(params.get("q")||"");
   else vHome();
   window.scrollTo(0,0);
@@ -858,16 +1311,16 @@ function route(){
 async function boot(){
   const fill=$("#loaderFill"), count=$("#loaderCount");
   let done=0, total=1;
-  const load=t=>fetch("data/"+t+".json?v=20261023c").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
+  const load=t=>fetch("data/"+t+".json?v=20261023e").then(r=>{if(!r.ok)throw new Error(t+" "+r.status);return r.json();})
     .then(j=>{DB[t]=j;done++;fill.style.width=Math.round(done/total*100)+"%";count.textContent=done+" / "+total+" collections";});
   try{
-    const mresp = await fetch("data/manifest.json?v=20261023c");
+    const mresp = await fetch("data/manifest.json?v=20261023e");
     if(!mresp.ok) throw new Error("manifest "+mresp.status);
     DB.manifest = await mresp.json();
     // Normalize shard names: manifest may list "questions_a.json"; loader appends ".json" itself.
     if(Array.isArray(DB.manifest.question_shards)) DB.manifest.question_shards = DB.manifest.question_shards.map(s=>String(s).replace(/\.json$/,""));
     const shards = (DB.manifest&&DB.manifest.question_shards)||["questions_a","questions_b"];
-    const tables = [...shards, ...BASE_TABLES];
+    const tables = [...shards, ...BASE_TABLES, ...TAX_TABLES];
     total = tables.length + 1; done = 1;
     fill.style.width=Math.round(done/total*100)+"%";count.textContent=done+" / "+total+" collections";
     await Promise.all(tables.map(load));
